@@ -12,3 +12,12 @@ nav:
         {% endfor %}
     {% endif %}
 </div>
+
+
+   {% if site.nav %}
+    <ul class="link">
+        {% for link in site.nav %}
+          <li>{{ link[1] }}</li>
+        {% endfor %}
+     </ul>
+     {% endif %}
