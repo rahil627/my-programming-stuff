@@ -1,0 +1,10 @@
+i made this file in terminal!
+this
+has
+man
+y
+lines
+
+sudo add-apt-repository ppa:jonathonf/vim
+
+
