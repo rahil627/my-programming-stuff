@@ -33,6 +33,7 @@ Plug 'jdonaldson/vaxe'
 set autowrite
 
 " fuzzy finder diretory tree (like NERDTree)
+" this next line didn't work...? :/
 "export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -50,7 +51,8 @@ endif
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete=1
 
-" from https://breuer.dev/blog/top-neovim-plugins
+" a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
+" but should look at https://vimawesome.com for the most popular stuff
 
 " the CoC autocomplete takes a bit of time to use with haxe
 " see https://github.com/vshaxe/vshaxe/issues/328
