@@ -1,24 +1,45 @@
+
+" automated installation of vimplug if not installed
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
+endif
+
+
+
+
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins.
 
 " themes
+"bg=dark/light
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'NLKNguyen/papercolor-theme'
 "Plug ‘sainnhe/everforest’
+Plug https://github.com/sainnhe/everforest.git
 "Plug ‘sainnhe/gruvbox-material’
+Plug https://github.com/sainnhe/gruvbox-material.git
+Plug https://github.com/sainnhe/sonokai.git
 "Plug ‘romainl/flattened’
+Plug https://github.com/romainl/flattened.git
+"colorscheme flattened_light/dark
 
-" Haxe Plugin
+" haxe
 Plug 'jdonaldson/vaxe'
 set autowrite
 
+" fuzzy finder diretory tree (like NERDTree)
+export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
+map ; :Files<CR>
 
-
-"autocomplete
+" autocomplete
 if has('nvim')
 	  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -29,6 +50,28 @@ endif
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete=1
 
+" from https://breuer.dev/blog/top-neovim-plugins
+
+" the CoC autocomplete takes a bit of time to use with haxe
+" see https://github.com/vshaxe/vshaxe/issues/328
+" which conluced with https://github.com/vshaxe/haxe-language-server#usage-with-neovim
+
+" pair opening 'n closing symbols
+Plug 'jiangmiao/auto-pairs'
+
+" shortcuts for text within symbols
+Plug 'machakann/vim-sandwich'
+
+" comment stuff from the default mode
+Plug 'preservim/nerdcommenter'
+
+" auto-detect-and-set tabs
+Plug 'tpope/vim-sleuth'
+
+" git magic, choose one
+Plug 'airblade/vim-gitgutter'
+"Plug 'tpope/vim-fugitive'
+
 
 
 call plug#end()
@@ -37,16 +80,37 @@ call plug#end()
 "set config stuff here
 "colorscheme seoul256
 colorscheme onehalfdark
-set tabstop=4
-set shiftwidth=4
+"set tabstop=4
+"set shiftwidth=4
 
 
 
+" not proper plugins, but still a plugin
+
+" moving around windows: c+h/j/k/l
+function! WinMove(key)
+    let t:curwin = winnr()
+    exec "wincmd ".a:key
+    if (t:curwin == winnr())
+        if (match(a:key,'[jk]'))
+            wincmd v
+        else
+            wincmd s
+        endif
+        exec "wincmd ".a:key
+    endif
+endfunction
+
+nnoremap <silent> <C-h> :call WinMove('h')<CR>
+nnoremap <silent> <C-j> :call WinMove('j')<CR>
+nnoremap <silent> <C-k> :call WinMove('k')<CR>
+nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
 
 
+" config plugins
 
-"set deoplete (autocomplete)
+" config deoplete (autocomplete)
 call deoplete#custom#var('omni', 'functions', {
 	\ 'haxe': ['vaxe#HaxeComplete'] 		   
 	\})
