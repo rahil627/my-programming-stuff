@@ -55,6 +55,13 @@ Plug 'machakann/vim-sandwich'
 " comment stuff from the default mode
 Plug 'preservim/nerdcommenter'
 
+" auto-detect-and-set tabs
+Plug 'tpope/vim-sleuth'
+
+" git magic, choose one
+Plug 'airblade/vim-gitgutter'
+"Plug 'tpope/vim-fugitive'
+
 
 
 call plug#end()
@@ -63,8 +70,8 @@ call plug#end()
 "set config stuff here
 "colorscheme seoul256
 colorscheme onehalfdark
-set tabstop=4
-set shiftwidth=4
+"set tabstop=4
+"set shiftwidth=4
 
 
 
