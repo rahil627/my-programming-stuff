@@ -28,12 +28,19 @@ Plug 'https://github.com/sainnhe/sonokai.git'
 Plug 'https://github.com/romainl/flattened.git'
 "colorscheme flattened_light/dark
 
-""sensible configs that everyone can agree on"
-Plug 'https://github.com/tpope/vim-sensible.git'
 
+" language-related stuff
 " haxe
 Plug 'jdonaldson/vaxe'
 set autowrite
+
+
+" main list
+" see https://vimawesome.com for a list of pop plugins
+" data gathered from actual vim configs on github! :o
+
+""sensible configs that everyone can agree on"
+Plug 'https://github.com/tpope/vim-sensible.git'
 
 " fuzzy finder diretory tree (like NERDTree)
 " this next line didn't work...? :/
@@ -49,7 +56,6 @@ map ; :Files<CR>
 " but i couldn't get this one to "make"... :/ https://github.com/universal-ctags/ctags
 "Plug 'https://github.com/preservim/tagbar.git'
 
-
 " autocomplete
 if has('nvim')
 	  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -61,8 +67,8 @@ endif
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete=1
 
+
 " a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
-" but should look at https://vimawesome.com for the most popular stuff
 
 " the CoC autocomplete takes a bit of time to use with haxe
 " see https://github.com/vshaxe/vshaxe/issues/328
