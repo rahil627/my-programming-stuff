@@ -92,18 +92,24 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'tpope/vim-fugitive'
 
 
-
-
 call plug#end()
 
 
+
+
 "set config stuff here
+
 "colorscheme seoul256
 colorscheme onehalfdark
 
 "don't need with automatic plugin
 set tabstop=4
 set shiftwidth=4
+
+
+"map caps lock to escape
+au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
