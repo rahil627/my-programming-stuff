@@ -46,6 +46,10 @@ let g:deoplete#auto_complete=1
 
 " from https://breuer.dev/blog/top-neovim-plugins
 
+" the CoC autocomplete takes a bit of time to use with haxe
+" see https://github.com/vshaxe/vshaxe/issues/328
+" which conluced with https://github.com/vshaxe/haxe-language-server#usage-with-neovim
+
 " pair opening 'n closing symbols
 Plug 'jiangmiao/auto-pairs'
 
