@@ -19,8 +19,12 @@ Plug 'junegunn/seoul256.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'NLKNguyen/papercolor-theme'
 "Plug ‘sainnhe/everforest’
+Plug https://github.com/sainnhe/everforest.git
 "Plug ‘sainnhe/gruvbox-material’
+Plug https://github.com/sainnhe/gruvbox-material.git
+Plug https://github.com/sainnhe/sonokai.git
 "Plug ‘romainl/flattened’
+Plug https://github.com/romainl/flattened.git
 
 " haxe
 Plug 'jdonaldson/vaxe'
