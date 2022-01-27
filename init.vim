@@ -45,7 +45,9 @@ Plug 'junegunn/fzf.vim'
 map ; :Files<CR>
 
 " data structure tree
-Plug 'https://github.com/preservim/tagbar.git'
+" need ctags installed
+" but i couldn't get this one to "make"... :/ https://github.com/universal-ctags/ctags
+"Plug 'https://github.com/preservim/tagbar.git'
 
 
 " autocomplete
