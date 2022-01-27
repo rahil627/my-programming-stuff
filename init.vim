@@ -14,6 +14,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Declare the list of plugins.
 
 " themes
+"bg=dark/light
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
@@ -25,6 +26,7 @@ Plug https://github.com/sainnhe/gruvbox-material.git
 Plug https://github.com/sainnhe/sonokai.git
 "Plug ‘romainl/flattened’
 Plug https://github.com/romainl/flattened.git
+"colorscheme flattened_light/dark
 
 " haxe
 Plug 'jdonaldson/vaxe'
