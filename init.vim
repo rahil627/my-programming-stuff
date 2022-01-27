@@ -28,6 +28,9 @@ Plug 'https://github.com/sainnhe/sonokai.git'
 Plug 'https://github.com/romainl/flattened.git'
 "colorscheme flattened_light/dark
 
+""sensible configs that everyone can agree on"
+Plug 'https://github.com/tpope/vim-sensible.git'
+
 " haxe
 Plug 'jdonaldson/vaxe'
 set autowrite
@@ -38,7 +41,12 @@ set autowrite
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" accident?
 map ; :Files<CR>
+
+" data structure tree
+Plug 'https://github.com/preservim/tagbar.git'
+
 
 " autocomplete
 if has('nvim')
@@ -72,7 +80,9 @@ Plug 'tpope/vim-sleuth'
 
 " git magic, choose one
 Plug 'airblade/vim-gitgutter'
+" more heavy, but most popular
 "Plug 'tpope/vim-fugitive'
+
 
 
 
@@ -109,7 +119,6 @@ nnoremap <silent> <C-h> :call WinMove('h')<CR>
 nnoremap <silent> <C-j> :call WinMove('j')<CR>
 nnoremap <silent> <C-k> :call WinMove('k')<CR>
 nnoremap <silent> <C-l> :call WinMove('l')<CR>
-
 
 
 " config plugins
