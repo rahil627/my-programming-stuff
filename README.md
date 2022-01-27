@@ -1,6 +1,9 @@
-# snippets
-can put snippets from all kinds of languages in here
+# my programming-related stuff
+includes:  
+ - code editor themes, fonts
+ - vim configs, etc.
+ - code snippets
+ - server configs ("dot files"
+ - shell scripts
 
-and:  
-# configs
-can also put my config files here, my "dot files"
+i found some from my first job... wowww
