@@ -19,20 +19,13 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'NLKNguyen/papercolor-theme'
-"Plug ‘sainnhe/everforest’
 Plug 'https://github.com/sainnhe/everforest.git'
-"Plug ‘sainnhe/gruvbox-material’
 Plug 'https://github.com/sainnhe/gruvbox-material.git'
 Plug 'https://github.com/sainnhe/sonokai.git'
-"Plug ‘romainl/flattened’
 Plug 'https://github.com/romainl/flattened.git'
 "colorscheme flattened_light/dark
 
 
-" language-related stuff
-" haxe
-Plug 'jdonaldson/vaxe'
-set autowrite
 
 
 " main list
@@ -42,14 +35,40 @@ set autowrite
 ""sensible configs that everyone can agree on"
 Plug 'https://github.com/tpope/vim-sensible.git'
 
+" status bar replacement
+Plug 'https://github.com/vim-airline/vim-airline'
+
+" a good selection of themes that match the status bar
+Plug 'https://github.com/vim-airline/vim-airline-themes'
+
+
+" press tab to trigger omnicomplete (vim's autocomplete) 
+Plug 'ervandew/supertab'
+
+" make omni-complete the default
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
+" ensure it has precedence
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabClosePreviewOnPopupClose = 1
+
+
+filetype plugin on
+"set omnifunc=syntaxcomplete#Complete
+set omnifunc=vaxe#HaxeComplete
+
+
+" fuzzy finder diretory tree (like NERDTree)
 " fuzzy finder diretory tree (like NERDTree)
 " this next line didn't work...? :/
 "export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" accident?
+" map key to open the fzf window
 map ; :Files<CR>
+
+
 
 " data structure tree
 " need ctags installed
@@ -57,15 +76,25 @@ map ; :Files<CR>
 "Plug 'https://github.com/preservim/tagbar.git'
 
 " autocomplete
-if has('nvim')
-	  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-	    Plug 'Shougo/deoplete.nvim'
-	      Plug 'roxma/nvim-yarp'
-	        Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete=1
+"if has('nvim')
+"	  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+"	    Plug 'Shougo/deoplete.nvim'
+"	      Plug 'roxma/nvim-yarp'
+"	        Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#auto_complete=1
+
+
+
+" language-related stuff
+" haxe
+" this interacts with many other plugins such as airline and tag bar
+" so put it last
+Plug 'jdonaldson/vaxe'
+set autowrite
+let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 
 " a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
@@ -216,12 +245,13 @@ endif
 "nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
 
+
 " config plugins
 
 " config deoplete (autocomplete)
-call deoplete#custom#var('omni', 'functions', {
-	\ 'haxe': ['vaxe#HaxeComplete'] 		   
-	\})
+"call deoplete#custom#var('omni', 'functions', {
+"	\ 'haxe': ['vaxe#HaxeComplete'] 		   
+"	\})
 
 
 " this one didn't work for me...
@@ -229,10 +259,11 @@ call deoplete#custom#var('omni', 'functions', {
 "		    \ 'haxe': '[^. *\t]\.\w*'
 "		    \})
 
-" so...
-call deoplete#custom#option('omni_patterns', {
-      \ 'haxe': '[^. *\t]\.\w*'
-	  \})
+" but i found this one in a github issues thread
+" ..and it works!!
+"call deoplete#custom#option('omni_patterns', {
+"      \ 'haxe': '[^. *\t]\.\w*'
+"	  \})
 
 
 
@@ -259,11 +290,12 @@ call deoplete#custom#option('omni_patterns', {
 "         \ 'disabled_syntaxes': ['Comment']
 "             \ })
 "
+" THIS ONE IS USEFUL
 " Ignore certain sources, because they only cause nosie most of the time
 "            " around, buffer, tag
-                    call deoplete#custom#option('ignore_sources', {
-                    \ '_': ['around', 'buffer', 'tag'],
-                    \ })
+"                    call deoplete#custom#option('ignore_sources', {
+"                    \ '_': ['around', 'buffer', 'tag'],
+"                    \ })
 "
 "                   " Candidate list item number limit
 "                   call deoplete#custom#option('max_list', 30)
