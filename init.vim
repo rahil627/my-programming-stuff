@@ -95,7 +95,7 @@ Plug 'https://github.com/preservim/tagbar.git'
 " this interacts with many other plugins such as airline and tag bar
 " so put it last
 " for ctags, be sure to copy the ctags code from the github repo
-" and put it in (. or ~)/.ctags.d/something.ctags
+" and put it in (. or ~)/.ctags.d/something.ctags (NOT ~/.ctags)
 Plug 'jdonaldson/vaxe'
 set autowrite
 let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
