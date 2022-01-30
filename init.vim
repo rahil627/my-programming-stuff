@@ -76,6 +76,13 @@ map ; :Files<CR>
 " just apt install universal-ctags
 " then, you must run 'ctags -R' in the source directory
 Plug 'https://github.com/preservim/tagbar.git'
+let g:tagbar_width = max([25, winwidth(0) / 5])
+"nmap <F8> :TagbarToggle<CR>
+" it seemsl ike the blackslash is a modifier key because it waits
+"nmap <Bslash> :TagbarToggle<CR>
+"alt+number is also good
+" hopefully . is okay?
+nmap . :TagbarToggle<CR>
 
 " autocomplete
 "if has('nvim')
@@ -140,7 +147,8 @@ set tabstop=4
 set shiftwidth=4
 
 
-"map caps lock to escape
+" map caps lock to escape
+" TODO: this doesn't work
 au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
