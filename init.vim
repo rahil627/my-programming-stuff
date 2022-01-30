@@ -72,8 +72,10 @@ map ; :Files<CR>
 
 " data structure tree
 " need ctags installed
-" but i couldn't get this one to "make"... :/ https://github.com/universal-ctags/ctags
-"Plug 'https://github.com/preservim/tagbar.git'
+" universal ctags has a monopoly on this:  https://github.com/universal-ctags/ctags
+" just apt install universal-ctags
+" then, you must run 'ctags -R' in the source directory
+Plug 'https://github.com/preservim/tagbar.git'
 
 " autocomplete
 "if has('nvim')
@@ -92,6 +94,8 @@ map ; :Files<CR>
 " haxe
 " this interacts with many other plugins such as airline and tag bar
 " so put it last
+" for ctags, be sure to copy the ctags code from the github repo
+" and put it in (. or ~)/.ctags.d/something.ctags
 Plug 'jdonaldson/vaxe'
 set autowrite
 let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
