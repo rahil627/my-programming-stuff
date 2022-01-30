@@ -1,3 +1,7 @@
+" consult https://vim.fandom.com/wiki/Unused_keys for keys to map
+
+
+
 
 " automated installation of vimplug if not installed
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -75,6 +79,9 @@ map ; :Files<CR>
 " universal ctags has a monopoly on this:  https://github.com/universal-ctags/ctags
 " just apt install universal-ctags
 " then, you must run 'ctags -R' in the source directory
+"  a good 'n simple how-to-use: https://andrew.stwrt.ca/posts/vim-ctags/
+" for ctags, be sure to copy the ctags language regex code from the vaxe github repo
+" and put it in (. or ~)/.ctags.d/something.ctags (NOT ~/.ctags)
 Plug 'https://github.com/preservim/tagbar.git'
 let g:tagbar_width = max([25, winwidth(0) / 5])
 "nmap <F8> :TagbarToggle<CR>
@@ -101,7 +108,7 @@ nmap . :TagbarToggle<CR>
 " haxe
 " this interacts with many other plugins such as airline and tag bar
 " so put it last
-" for ctags, be sure to copy the ctags code from the github repo
+" for ctags, be sure to copy the ctags language regex code from the vaxe github repo
 " and put it in (. or ~)/.ctags.d/something.ctags (NOT ~/.ctags)
 Plug 'jdonaldson/vaxe'
 set autowrite
