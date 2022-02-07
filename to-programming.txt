@@ -1,0 +1,4 @@
+
+difference between pointer and reference (in C)
+  - https://stackoverflow.com/questions/4995899/difference-between-pointer-and-reference-in-c
+    - a very very good answer!
