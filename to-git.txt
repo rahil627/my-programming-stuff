@@ -1,0 +1,7 @@
+use the import web page to copy a repo
+  - https://github.com/new/import
+  - useful when you need to fork/copy your own repo
+  - also when you need to actually import it from somewhere other than github
+  
+  
+  
