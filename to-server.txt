@@ -1,9 +1,11 @@
-i made this file in terminal!
-this
-has
-man
-y
-lines
+
+
+to linux:
+etc/environments
+  - contains paths to stuff
+  - told me local/bin, which contains a few things i installed
+
+
 
 sudo add-apt-repository ppa:jonathonf/vim
 
