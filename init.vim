@@ -26,8 +26,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'https://github.com/sainnhe/everforest.git'
 Plug 'https://github.com/sainnhe/gruvbox-material.git'
 Plug 'https://github.com/sainnhe/sonokai.git'
-Plug 'https://github.com/romainl/flattened.git'
-"colorscheme flattened_light/dark
+Plug 'chriskempson/base16-vim'
 
 
 

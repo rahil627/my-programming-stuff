@@ -1,0 +1,6 @@
+
+difference between pointer and reference (in C)
+  - https://stackoverflow.com/questions/4995899/difference-between-pointer-and-reference-in-c
+    - a very very good answer!
+    - basically: reference is like a goto, there is no memory allocated for it
+    - pointer is actual data, and has memory allocated for it ("dereferencing" it leads to whatever it's pointing at)
