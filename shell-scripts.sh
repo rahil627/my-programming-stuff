@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# i will never understand linux's file structre, wtf!!
+# NOTHING is standardized!!! ahhhhhh
+cp init.vim ~/.config/nvim/init.vim
+
+
 # remove files that are listed in the .gitignore but still on the repository
 # https://stackoverflow.com/questions/13541615/how-to-remove-files-that-are-listed-in-the-gitignore-but-still-on-the-repositor 
 git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
