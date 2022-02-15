@@ -28,8 +28,8 @@ Plug 'https://github.com/sainnhe/gruvbox-material.git'
 Plug 'https://github.com/sainnhe/sonokai.git'
 "Plug 'chriskempson/base16-vim'
 " not working...
-
-
+"Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
+" need to manually install this one :/
 
 " main list
 " see https://vimawesome.com for a list of pop plugins
