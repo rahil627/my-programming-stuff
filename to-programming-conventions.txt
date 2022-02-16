@@ -1,0 +1,79 @@
+extracted from:
+  - https://snowkit.github.io/snow/guide/code.html
+
+Code design
+Code is designed for portability, maintainability and clarity.
+Naming should be clear and concise, not overly verbose.
+
+Code conventions
+General conventions to follow.
+
+code is for humans ONLY. write it that way. YES
+always always use braces. no exceptions. HMMM
+egyption style braces (same line open, close inline) YES
+closing brace comments when size of scope is more than a few lines SURE
+closing brace comments on functions, classes, typedefs etc (as, these grow) SURE
+single line code is not good. use multiple lines, they are free. YES
+try to comment WHY not what, code should be self describing OKAY, THX
+always descriptive names, a, b, c are not names. EVEN IN MATH?
+function example() {
+
+        //bad. no braces, single line code. YES
+    if(true) return;
+
+        //good YES, BUT I LIKE IT WITHOUT BRACES HERE ;(
+    if(true) {
+        return;
+    }
+
+} //example
+Classes
+public variables always first YES
+after public variables, group properties together YES
+private variables next YES
+methods - constructor/init first, then destroy/cleanup YES
+methods - public facing api higher up YES
+methods - internal api next YES
+methods - private/internal/utility functions last YES
+
+class format guidelines
+two lines gap
+between imports and package MEH, 1 IS FINE
+between imports and class declaration MEH, 1 IS FINE
+between class declaration and member declaration MEH, 1 IS FINE
+between member declaration and functions YES
+between last function and close brace YES
+one line gap at the end of the file YES
+
+package example;
+
+
+import things;
+import more;
+
+
+class Example {
+
+
+    public var one : Int;
+    public var two : Bool;
+
+    public var property (get,set) : String;
+
+    var three : String;
+
+
+    public function new() {
+
+    } //new
+
+    public function destroy() {
+
+    } //destroy
+
+    function internal() {
+
+    } //internal
+
+
+} //Example
