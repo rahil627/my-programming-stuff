@@ -1,5 +1,8 @@
+https://dinghy.xyz/posts/experts-and-beginners/
+  - although only a few posts on this site, has very good ideas on making a creative-oriented game framework
+
 https://snowkit.github.io/snow/guide/code.html
-  - coding conventions
+  - coding conventions by snowkit (which included the luxe guy)
 
 difference between pointer and reference (in C)
   - https://stackoverflow.com/questions/4995899/difference-between-pointer-and-reference-in-c
