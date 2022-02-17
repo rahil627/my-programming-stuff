@@ -1,3 +1,6 @@
+http://www.craftinginterpreters.com/a-map-of-the-territory.html
+  - this chapter lays out the all of the concepts about *how programming languages work* very simply and lightly
+
 https://dinghy.xyz/posts/experts-and-beginners/
   - although only a few posts on this site, has very good ideas on making a creative-oriented game framework
 
