@@ -1,0 +1,60 @@
+# https://github.com/lluchs/territory
+[user]
+	name = ra
+	email = rahil627@gmail.com
+
+[core]
+	editor = nvim
+
+[alias]
+	s = status
+	c = commit
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+#[push]
+#	default = upstream
+
+#[sendemail]
+#	smtpencryption = tls
+#	smtpserver = smtp.migadu.com
+#	smtpuser = lukas@lwrl.de
+#	smtpserverport = 587
+#	annotate = yes
+
+#[merge]
+#	defaultToUpstream = 1
+#	tool = diffconflicts
+
+[mergetool "splice"]
+	cmd = "nvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+	trustExitCode = true
+
+#[rerere]
+	enabled = true
+
+#[filter "lfs"]
+#	clean = git-lfs clean %f
+#	smudge = git-lfs smudge %f
+#	required = true
+#[http "https://gopkg.in"]
+#	followRedirects = true
+#[credential]
+#	helper = libsecret
+[diff]
+	colorMoved = default
+	colorMovedWS = ignore-all-space
+[commit]
+	verbose = 1
+#[pull]
+#	ff = only
+#[mergetool "diffconflicts"]
+#	cmd = vim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+#	trustExitCode = true
+#[mergetool]
+#	keepBackup = false
