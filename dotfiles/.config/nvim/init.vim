@@ -18,7 +18,10 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Declare the list of plugins.
 
 " themes
-"bg=dark/light
+" use the following command to change between light 'n dark themes
+" set bg=dark/light
+" see the wiki of gruvbox on setting up colors in terminals
+" https://github.com/morhetz/gruvbox/wiki/Terminal-specific
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
