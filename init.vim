@@ -112,6 +112,9 @@ Plug 'jdonaldson/vaxe'
 set autowrite
 let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
+" wren
+Plug 'lluchs/vim-wren'
+
 
 " a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
 
