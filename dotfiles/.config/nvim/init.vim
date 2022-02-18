@@ -26,10 +26,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'https://github.com/sainnhe/everforest.git'
 Plug 'https://github.com/sainnhe/gruvbox-material.git'
 Plug 'https://github.com/sainnhe/sonokai.git'
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
 " not working...
-" try installing this to fix terminal colors:
-" https://github.com/chriskempson/base16-shell
 "Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
 
 " main list
@@ -113,9 +111,6 @@ nmap . :TagbarToggle<CR>
 Plug 'jdonaldson/vaxe'
 set autowrite
 let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
-
-" wren
-Plug 'lluchs/vim-wren'
 
 
 " a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
