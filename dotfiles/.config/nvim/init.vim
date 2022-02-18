@@ -28,6 +28,11 @@ Plug 'https://github.com/sainnhe/gruvbox-material.git'
 Plug 'https://github.com/sainnhe/sonokai.git'
 "Plug 'chriskempson/base16-vim'
 " not working...
+
+    if filereadable(expand("~/.vimrc_background"))
+      let base16colorspace=256
+      source ~/.vimrc_background
+    endif
 "Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
 
 " main list
