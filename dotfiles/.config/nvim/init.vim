@@ -26,13 +26,9 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'https://github.com/sainnhe/everforest.git'
 Plug 'https://github.com/sainnhe/gruvbox-material.git'
 Plug 'https://github.com/sainnhe/sonokai.git'
+" not working... :(
 "Plug 'chriskempson/base16-vim'
-" not working...
-
-    if filereadable(expand("~/.vimrc_background"))
-      let base16colorspace=256
-      source ~/.vimrc_background
-    endif
+" just themes for the airline status bar on the bottom, not themes for the whole app
 "Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
 
 " main list
@@ -65,7 +61,6 @@ filetype plugin on
 set omnifunc=vaxe#HaxeComplete
 
 
-" fuzzy finder diretory tree (like NERDTree)
 " fuzzy finder diretory tree (like NERDTree)
 " this next line didn't work...? :/
 "export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
