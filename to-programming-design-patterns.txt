@@ -1,0 +1,8 @@
+https://gameprogrammingpatterns.com/contents.html
+  - Bob's book, online version
+
+https://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html
+  - lists patterns along with his own very strong contemporary opinions on them
+  
+https://trello.com/b/Z6cDRyis/good-coding-practices-in-unity-unofficial
+  - trello board full of treasures to help make stuff in Unity, often talking about patterns
