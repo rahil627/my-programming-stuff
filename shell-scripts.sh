@@ -1,5 +1,19 @@
 #!/bin/sh
 
+# update swap file
+
+# check size and name of swap file
+swapon -s
+
+# change size of swap file
+# /swapfile is a file-path
+swapoff /swapfile
+fallocate -l 2G /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+
+
 # i will never understand linux's file structre, wtf!!
 # NOTHING is standardized!!! ahhhhhh
 cp init.vim ~/.config/nvim/init.vim
