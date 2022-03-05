@@ -1,5 +1,11 @@
 
 
+to web-servers:
+Plesk ended up eating quite a lot of memory running apache2, mysql for a single Wordpress site. In addition, fail2ban was taking up memory too, perhaps a problem with logs(?). Then, it was impossible to delete on Ubuntu 20.04: Plesk said it's a "bug" ;(. It was a pain to unsinstall, looking for scripts on GitHub gists, and using aptitude to delete packages. Thus, stick to static sites, and let them be hosted by either GitHub or DigitalOcean's new App ("PaaS") service. Later on, if needed, can host it myself using nginx, *without web host control panel software*. ...and now i have to re-install the server because it left such a mess! :( But at least i'm now down to 250mb memory / virtual memory! :)
+
+
+
+
 to ubuntu desktop:
 
 startup and sessions (application)
