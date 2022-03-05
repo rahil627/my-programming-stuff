@@ -5,7 +5,13 @@
 # check size and name of swap file
 swapon -s
 
-# change size of swap file
+# create a new swapfile
+dd if=/dev/zero of=/tempswap bs=1M count=1024 #1GB file
+mkswap /tempswap
+swapon /tempswap
+
+
+# update size of swap file
 # /swapfile is a file-path
 swapoff /swapfile
 fallocate -l 2G /swapfile
