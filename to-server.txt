@@ -1,5 +1,32 @@
 
 
+
+
+apt
+  - apt install [software name]
+  - apt remove [software name]
+  - apt purge [software name]
+    - this removes config files
+
+
+
+htop
+  - sort view then sort-by column, or tree view (no auto-sorting)
+  - virtual memory can have crazy numbers, don't worry
+  - kill only kills processes 1 by 1, it's better to use killall process-name
+  
+kill [process id]
+killall [process name]
+
+
+programs:
+aptitude
+   - a gui for apt
+
+
+
+
+
 to linux:
 etc/environments
   - contains paths to stuff
