@@ -1,6 +1,13 @@
 
 
+to ubuntu desktop:
 
+startup and sessions (application)
+  - can de/select startup services, and see which services are currently running
+
+
+
+to cli:
 
 apt
   - apt install [software name]
