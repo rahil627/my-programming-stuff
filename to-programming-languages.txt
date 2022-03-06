@@ -96,17 +96,33 @@ https://www.atatus.com/blog/rust-vs-golang/
 
 
 # the fastest languages
-tier 1
-C = Go
-C++ = Crystal
+tier 1 (manual memory management) for crazy people
+Rust (borrow-checker)
+C++
+C
+Go (manual?)
+Chapel (manual?)
+Swift (reference counting)
 
-tier 2
+#tier 2 (garbage collected) for me! :)
+Dart
+
+C#
+Java
+
+Crystal
 Nim
 pypy
-Lua
-Haxe (somewhere here..?)
-Rust
-Java
+Lua (LuaJIT)
+Haxe (HashLink)
+
+
+tier 4 (interpreted) *not for games!!*
+Ruby - ~5x slower
+Lua - ~5-15x slower (not LuaJIT?)
+Python - ~10-15x slower
+
+Perl - ~20+ slower
 
 
 # "server-side", "scripting" languages:
