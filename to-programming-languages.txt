@@ -14,7 +14,18 @@ as far as i know, only Haxe fits all of the above requirements... i'm not sure h
 
 
 
+# the fastest languages
+tier 1
+C = Go
+C++ = Crystal
 
+tier 2
+Nim
+pypy
+Lua
+Haxe
+Rust
+Java
 
 
 # "server-side", "scripting" languages:
@@ -50,8 +61,9 @@ python
   - most popular and most loved
   - can interop with C/C++
   - dynamic
-  - pretty slow, though faster than ruby
-    - also can be compiled via C-Python?, down to bytecode, run in a VM like Java
+  - very slow
+    - also can be compiled via C-Python?, down to bytecode, run in a VM like Java, and it'll still be 2x slower than ruby!
+  - **pypy**, is an especially fast implmentation putting it at Lua speeds
   
 java
   - similar to C++ but without memory management (pointers)
