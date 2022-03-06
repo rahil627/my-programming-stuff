@@ -4,7 +4,8 @@ https://blog.back4app.com/server-side-programming-languages/
 server-side languages:
 usually have an interpreter so that you can run it via CLI with single commands or scripts
 
-haxe
+# the standards
+**haxe**
   - compiled, static-typed
   - runs on front-end and back-end
   - can interop with C(/C++?)
@@ -14,18 +15,48 @@ haxe
 
 ruby
   - like Haxe, seems to have a nice cult community of hackers :)
+    - this alone makes it much more appealing to me than the other pop general languages
   - also like Haxe, whereas Haxe devs tend to write object-oriented programs, Ruby in itself *is* object-oriented
-    - these two points make it my personal choice
     
 python
   - most popular and most loved
   - can interop with C/C++
+  - dynamic
   
+java
+  - similar to C++ but without memory management (pointers)
+  - similar to Haxe in that it is converted down to bytecode and then run through a VM (JVM)
+  
+ 
+# not sure
+C#
+  - todo: i'm not sure... can it be used server-side? and if so, why isn't this the most popular??
+  - through .NET becomes cross-platform?
+  - todo: i think it can be used with Windows servers (IIS), but can it be used with Linux servers through Mono?
+  
+kotlin
+  - Google replaced java with this for their Android devices
+  - i'm guessing it interops/embeds with java
+  - i don't know anymore about it..
+  
+  
+# others
 perl
-  - i've always thought this was a terse, perplexing langauge, like regex
+  - i've always viewed this as a terse, perplexing langauge, like regex
+  - seems to have the reputation that only old veteran hackers have ever mastered it
   - embeds/interops with C/C++?
+  
+scala
+  - allows for both object-oriented paradign and functional paradigm, thus making it less popular compared to solely object-oriented languages
+  - uses java's VM: JVM, thus making it work seamlessly alongisde java?
 
 javascript
   - an old dynamic front-end rather mundane language that has over time become used for everything because of the abundance of web devs, including server-side
   - through Node.js, Express.js, etc. 'middle-ware" frameworks, it can then be used server-side
   - dynamic typing, retarded manual type checking (===, NaN, etc.)
+
+PHP
+  - perhaps the only thing worse than javascript
+  - have you ever seen WordPress?.. :sob:
+  
+  
