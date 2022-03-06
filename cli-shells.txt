@@ -25,8 +25,9 @@ csh, tcsh, one other one = c shell, improved c shell, ane one other one
 fish
   - a beginner-friendly shell with highlighting for errors, spell-checking, etc., although, because it's different from bash, it might not really be so useful..?
   
-  
-in addition to shells, many languages come with an "interpreter" which feels similiar to the bash interpreter(?), in that you sorta can write a command, or a set of commands (a script), and it will run it for you:
+
+"server-side" programming languages:
+in addition to shells, many languages come with an "interpreter" which makes it feel similiar to the bash cli, in that you can send a command through the terminal/console, or a set of commands (a script, or a program), and it will run it for you:
 python
 ruby
 haxe
