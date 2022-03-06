@@ -96,25 +96,31 @@ https://www.atatus.com/blog/rust-vs-golang/
 
 
 # the fastest languages
-tier 1 (manual memory management) for crazy people
-Rust (borrow-checker)
+tier 1 (manual memory management) *for crazy game engine people only*
+**Rust** (borrow-checker)
 C++
 C
 Go (manual?)
 Chapel (manual?)
-Swift (reference counting)
 
 #tier 2 (garbage collected) for me! :)
-Dart
-
-C#
+**Crystal**
+  - Ruby but as fast as C++??
+**Dart**
 Java
+  - these three are somehow comparable to Rust/C++ speeds
 
-Crystal
+Scala
+**C#**
+Lua (LuaJIT -j)
+**Haxe**
+
+Kotlin
+Swift (manual? reference counting)
+
 Nim
-pypy
-Lua (LuaJIT)
-Haxe (HashLink)
+Python (pypy)
+Elixer
 
 
 tier 4 (interpreted) *not for games!!*
