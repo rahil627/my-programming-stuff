@@ -56,7 +56,6 @@ javascript
   - dynamic typing, retarded manual type checking (===, NaN, etc.)
 
 PHP
-  - perhaps the only thing worse than javascript
+  - perhaps the only thing worse than javascript, and perhaps closest to the horror that is objective-c
   - have you ever seen WordPress?.. :sob:
-  
   
