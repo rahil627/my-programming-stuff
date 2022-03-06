@@ -24,7 +24,7 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 # a few contemporary languages
 
 ## old classics
-C#
+**C#**
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library, and the .NET library
   - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (MonoGame)
@@ -32,14 +32,14 @@ C#
   - Microsoft, and very much feels like Microsoft: heavy, big dev environment
   - after using this, it feels like there's really no reason to use anything else! (todo: hmmmmm)
   
-Haxe
+*Haxe**
   - my fave :)
 
 
 ## newer stuff
-Crystal
-  - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!** :o
-  - object-oriented, just as ruby was
+**Crystal**
+  - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!?!?** :o :O
+  - **object-oriented**, just as ruby was
   - macros and ASTs like Haxe
   - concurrency like Go
   - uses ruby's (or jekyll's?) simple yaml config (build?) file to fetch dependencies, making it very simple get dependencies from git/github
@@ -95,30 +95,35 @@ Pony
 https://www.atatus.com/blog/rust-vs-golang/
 
 
-# the fastest languages
-tier 1 (manual memory management) *for crazy game engine people only*
+# language compilation speed
+just a very very very broad gut feeling, lol
+
+tier 1 (manual memory management) *for crazy game engine people only*:
 **Rust** (borrow-checker)
 C++
 C
 Go (manual?)
 Chapel (manual?)
 
-#tier 2 (garbage collected) for me! :)
+tier 1 (garbage collected) for me! :)
+  - these are somehow comparable to Rust/C++ speeds... :o
 **Crystal**
-  - Ruby but as fast as C++??
-**Dart**
+  - Ruby syntax but as fast as C++?? wtf
 Java
-  - these three are somehow comparable to Rust/C++ speeds
-
-Scala
-**C#**
-Lua (LuaJIT -j)
-**Haxe**
-
+  - why on earth have people suffered all these years using C++ instead of Java??
+**Dart**
 Kotlin
 Swift (manual? reference counting)
 
-Nim
+tier 3:
+  - these add features but come at the cost of being a few times slower
+Scala
+**C#**
+**Haxe**
+**Nim**
+Lua (LuaJIT -j)
+
+
 Python (pypy)
 Elixer
 
