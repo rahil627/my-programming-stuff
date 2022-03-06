@@ -25,15 +25,26 @@ java
   - similar to Haxe in that it is converted down to bytecode and then run through a VM (JVM)
   
  
-# not sure
+# not really server-side, but it's possible to build web apps!
 C#
-  - todo: i'm not sure... can it be used server-side? and if so, why isn't this the most popular??
-  - through .NET becomes cross-platform?
-  - todo: i think it can be used with Windows servers (IIS), but can it be used with Linux servers through Mono?
+  - **through ASP.NET Core, can build cross-platform apps (including web** via WebAssembly)
+    - this makes it a great choice, competing with not just web apps, but Google's Flutter, and even simple game-like apps.
+    - also see Avalonia and Uno frameworks
+  - for a long time this only worked with Windows servers (IIS), thus making it less popular, but since ASP.NET *Core* in around 2015, it has since then become open-source, cross-platform (along with VS Code!), making MicroSoft look much better to the dev communities than both Google and Apple!
+  - the con of this is that you need a solid development environment: the current version of Visual Studio (not VS Code), probably a Windows IIS server(??), and still need to compile the code, build it, then deploy it, making the entire build process far more cumbersome compared to the common server-side langugaes, where you can just go in with a terminal, edit some code, 'n run it all via CLI
+  - however, **for big, serious projects, it's worth the powerful language (C#), framework (.NET), and environment (VS), all of which are perhaps considered some of the best**
+  - C# also has one of the biggest dev communities
+  
+dart
+  - Google's Haxe
+  - used for the cross-platform (including web) Flutter framework
+  - i personally don't trust Google in general, as they never work with the dev communities, never update their software, and often abandon their own software, making very strange one-off products
+  - is it even open-source!?!?
+
   
   
 # contemporary
-i'm not sure if any of these could be used for server-side stuff..
+i'm not sure if any of these are good for server-side stuff..
 
 Nim
   - basically supports all programming paradigms
@@ -46,10 +57,6 @@ Pony
   
   
 # others
-dart
-  - Google's Haxe, used with Flutter
-  - i personally don't trust Google in general, as they never work with the dev communities
-  
 kotlin
   - Google replaced java with this for their Android devices
   - i'm guessing it interops/embeds with java
