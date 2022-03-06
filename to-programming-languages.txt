@@ -14,7 +14,22 @@ as far as i know, only Haxe fits all of the above requirements... i'm not sure h
 
 
 
+# important changes in dev tech
+with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run native apps (machine code?) in the web-browser :o :O luckily, i've never cared about web-targets, but now it's finally really dead! :) No Flash. No HTML5/WebGl. *Long live native dev.*
+
+.NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, but now, C#/.NET can truly be used to make *everything*! *The C#/.NET stock is rising...* Thus, app frameworks like **Avalonia** and **Uno** can compete with Google's Flutter, and the game framework **MonoGame** is still *the king of indie game engines*. Microsoft is doing well. All that, alongside VS Code. Microsoft has always been closer to games than both Google and Apple have ever have been.
+
+
+
 # a few contemporary languages
+C#
+  - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
+  - *incredible feature-set* for the language, the standard library, and the .NET library
+  - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (MonoGame)
+  - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big app devs away from the horrendous javascript/electron/html5 web-dev world
+  - Microsoft, and very much feels like Microsoft: heavy, big dev environment
+  - after using this, it feels like there's really no reason to use anything else! (todo: hmmmmm)
+
 Crystal
   - like a static-typed ruby, along with *much* faster, in fact, **at C++ speeds!** :o
   - object-oriented, just as ruby was
@@ -35,7 +50,7 @@ Nim
   - basically supports all programming paradigms
   - interface with C/C++/Objective-C and compiles to javascript
   - made for embedded systems?
-  - macros, etc. contemporary features
+  - macros, etc. many contemporary features
   - todo: i don't really know much more about it..
 
 Odin
@@ -69,7 +84,7 @@ tier 2
 Nim
 pypy
 Lua
-Haxe
+Haxe (somewhere here..?)
 Rust
 Java
 
