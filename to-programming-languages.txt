@@ -30,7 +30,8 @@ C#
   - Microsoft, and very much feels like Microsoft: heavy, big dev environment
   - after using this, it feels like there's really no reason to use anything else! (todo: hmmmmm)
   
-  
+Haxe
+  - my fave :)
 
 Crystal
   - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!** :o
@@ -42,7 +43,7 @@ Crystal
   - this language is the one that **appeals to me the most**, as i've missed the whole ruby generation, but maybe can join it late with this :) ...but it seems to offer very little over Haxe, which already has most of these features
   
 Rust
-  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++
+  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++, **no garbage collector**, you *must* use this system and handle the memory yourself
   - performance-oriented, allowing for many kinds of optimizations and implementations (compiles, static-typed)
   - composition > inheritance
   - also like Go, in that it has concurrency/threading features too
@@ -53,7 +54,8 @@ Rust
   - Mozilla, and as always, open-source
 
 Nim
-  - performance-oriented, allowing for many kinds of optimizations and implementations (compiled, static-typed)
+  - performance-oriented, allowing for many kinds of optimizations and implementations (compiled, static-typed), but still
+  - **garbage collected**, making this the biggest difference between this and Rust, though, you can do some manual memory management to change the way it is collected, it's still garbage collected
   - composition > inheritance  
   - python-like tab-delimited style
   - basically supports all programming paradigms
