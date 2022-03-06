@@ -1,5 +1,13 @@
 #!/bin/sh
 
+
+# add a folder-path to the $PATH environment var
+# so that programs ("binaries") in it can be invoked via command line
+echo $PATH
+export PATH=$PATH:/usr/local/bin
+
+
+
 # update swap file
 
 # check size and name of swap file
