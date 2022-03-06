@@ -1,11 +1,18 @@
-#!/bin/sh
+#!/bin/bash
+
+
+# get file-path of shell
+which zsh
+
+# change shell, will send you a prompt
+chsh
+
 
 
 # append a folder-path to the $PATH environment var
 # so that programs ("binaries") in it can be invoked via command line
 echo $PATH
-export PATH = $PATH:/path/to/bin
-
+export PATH = $PATH:/path/to/bi
 
 
 # update swap file
