@@ -1,0 +1,25 @@
+
+
+
+all OSs:
+create different partitions for different OSs and select which one to boot into
+
+VMs:
+VMware
+  - one of the standards, complete VM solution
+Parallels
+  - one of the standards, complete VM solution
+VirtualBox
+  - super simple, easy to add, delete, test, etc., often runs as an application *within* another OS, great for when you only need to use a select few apps from another OS
+RHEL (Red Hat Enterprise L?)
+  - used by my DigitalOcean server, probably more for "enterprise" industial use
+
+
+Windows:
+https://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/
+  - Windows Sub-system Linux (WSL) is a feature in Windows 10 that allows you to install Linux CLI, and perhaps in the future, Linux GUI too (it already kinda works?)  
+
+Mac OS X:
+generally requires specific hardware, so be sure to check "hackintosh" for the right parts before buying a computer, but ever since Mac OS X hardware switched to Intel, it's been pretty easy to find compatible laptops that make great hackintoshes
+BootCamp
+  - a native application to handle installing and booting into Windows (or any OS?)
