@@ -24,3 +24,8 @@ fish
   - a beginner-friendly shell with highlighting for errors, spell-checking, etc., although, because it's different from bash, it might not really be so useful..?
   
   
+# get file-path of shell
+which [shell name]
+
+# change shell, will send you a prompt
+chsh
