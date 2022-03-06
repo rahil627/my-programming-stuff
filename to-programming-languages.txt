@@ -15,33 +15,42 @@ as far as i know, only Haxe fits all of the above requirements... i'm not sure h
 
 
 # a few contemporary languages
-**Go**
-  - seems to be like a contemporary C, and a good alternative to C++'s much hated development path
-  - at the speed of C :o
-  - used by a ton of huge web companies
-  - todo: i wonder why this isn't used for games... is it not possible to manage memory??
-  
 Crystal
-  - like a static-typed ruby, but
-  - *much* faster, in fact, at C++ speeds! :o
+  - like a static-typed ruby, along with *much* faster, in fact, **at C++ speeds!** :o
   - object-oriented, just as ruby was
-
-Odin
-  - from the hand-made network
-  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!*
+  - this language is the one that **appeals to me the most**, as i've missed the whole ruby generation, but maybe can join it late with this :)
   
+Rust
+  - **like C/C++ but safe**, using a specific memory management system, wherein you can have fine control of memory, but apparently it's not as bad as C/C++
+  - also like Go, in that it has concurrency/threading features too
+  - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
+  - Mozilla, and as always, open-source
+
 Nim
   - basically supports all programming paradigms
   - interface with C and compiles to javascript
-  - todo: i don't really know much more about it..
+  - todo: i don't really know much more about it..  
+
+Go
+  - seems to be like a contemporary C, and a good alternative to C++'s much hated development path
+  - **at the speed of C :o**
+  - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
+  - simple, straight-forward, procedural style
+  - no memory management??
+  - Google, but open-source
   
-Rust
-  - like C++ but safe, using a specific memory management system
-  - people seem to really quite like this one, maybe even more than Go
+Odin
+  - from the hand-made network
+  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!*
+  - influenced by Go
+  
   
 Pony
   - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
 
+
+
+https://www.atatus.com/blog/rust-vs-golang/
 
 
 # the fastest languages
