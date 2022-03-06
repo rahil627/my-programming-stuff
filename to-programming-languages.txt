@@ -142,6 +142,9 @@ usually have an interpreter so that you can run it ("in run-time") via CLI with 
 
 see https://stackoverflow.com/questions/17253545/scripting-language-vs-programming-language
 
+https://softwareengineering.stackexchange.com/questions/53624/can-c-be-used-as-a-server-side-web-development-language
+  - *any* langugage can be used server-side?
+
 
 ## the standards
 **haxe**
