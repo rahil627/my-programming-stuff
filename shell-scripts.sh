@@ -4,7 +4,8 @@
 # get file-path of shell
 which zsh
 
-# change shell, will send you a prompt
+# change default shell used when you login
+# it will then prompt you asking for the file-path of the shell
 chsh
 
 
