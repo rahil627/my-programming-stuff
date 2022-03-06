@@ -17,8 +17,14 @@ as far as i know, only Haxe fits all of the above requirements... i'm not sure h
 
 
 
-# server-side languages:
-usually have an interpreter so that you can run it ("in run-time") via CLI with single commands or scripts, as opposed to having to be compiled *and then* ran
+# "server-side", "scripting" languages:
+usually have an interpreter so that you can run it ("in run-time") via CLI with single commands or scripts, as opposed to having to be compiled *and then* ran ...although, nowadays, this dividing line is quite blurry
+
+see https://stackoverflow.com/questions/17253545/scripting-language-vs-programming-language
+
+
+
+
 
 ## the standards
 **haxe**
@@ -37,6 +43,7 @@ ruby
     - this alone makes it much more appealing to me than the other pop general languages
   - also like Haxe, whereas Haxe devs tend to write object-oriented programs, Ruby in itself *is* object-oriented
   - quite slow :(
+    - also can be compiled via C-ruby?
   - made by one Japanese guy
     
 python
@@ -44,6 +51,7 @@ python
   - can interop with C/C++
   - dynamic
   - pretty slow, though faster than ruby
+    - also can be compiled via C-Python?, down to bytecode, run in a VM like Java
   
 java
   - similar to C++ but without memory management (pointers)
@@ -103,6 +111,7 @@ javascript
   - an old dynamic front-end rather mundane language that has over time become used for everything because of the abundance of web devs, including server-side
   - through Node.js, Express.js, etc. 'middle-ware" frameworks, it can then be used server-side
   - dynamic typing, retarded manual type checking (===, NaN, etc.)
+  - Google's v8 engine compiles javascript into machine code, instead of using the normal interpreter method, thus single-handedly causing this entire mess
 
 PHP
   - perhaps the only thing worse than javascript, and perhaps closest to the horror that is objective-c
