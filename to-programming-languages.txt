@@ -1,0 +1,15 @@
+
+
+server-side languages:
+ruby
+  - like Haxe, seems to have a nice cult community of hackers :)
+  - also like Haxe, whereas Haxe devs tend to write object-oriented programs, Ruby in itself *is* object-oriented
+    - these two points make it my personal choice
+    
+python
+  - most popular and most loved
+
+javascript
+  - an old dynamic front-end rather mundane language that has over time become used for everything because of the abundance of web devs, including server-side
+  - through Node.js, Express.js, etc. 'middle-ware" frameworks, it can then be used server-side
+  - dynamic typing, retarded manual type checking (===, NaN, etc.)
