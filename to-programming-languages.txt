@@ -14,6 +14,36 @@ as far as i know, only Haxe fits all of the above requirements... i'm not sure h
 
 
 
+# a few contemporary languages
+**Go**
+  - seems to be like a contemporary C, and a good alternative to C++'s much hated development path
+  - at the speed of C :o
+  - used by a ton of huge web companies
+  - todo: i wonder why this isn't used for games... is it not possible to manage memory??
+  
+Crystal
+  - like a static-typed ruby, but
+  - *much* faster, in fact, at C++ speeds! :o
+  - object-oriented, just as ruby was
+
+Odin
+  - from the hand-made network
+  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!*
+  
+Nim
+  - basically supports all programming paradigms
+  - interface with C and compiles to javascript
+  - todo: i don't really know much more about it..
+  
+Rust
+  - like C++ but safe, using a specific memory management system
+  - people seem to really quite like this one, maybe even more than Go
+  
+Pony
+  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
+
+
+
 # the fastest languages
 tier 1
 C = Go
@@ -32,9 +62,6 @@ Java
 usually have an interpreter so that you can run it ("in run-time") via CLI with single commands or scripts, as opposed to having to be compiled *and then* ran ...although, nowadays, this dividing line is quite blurry
 
 see https://stackoverflow.com/questions/17253545/scripting-language-vs-programming-language
-
-
-
 
 
 ## the standards
@@ -88,21 +115,7 @@ dart
   - used for the cross-platform (including web) Flutter framework
   - i personally don't trust Google in general, as they never work with the dev communities, never update their software, and often abandon their own software, making very strange one-off products
   - is it even open-source!?!?
-
-  
-  
-## contemporary
-i'm not sure if any of these are good for server-side stuff..
-
-Nim
-  - basically supports all programming paradigms
-  - interface with C and compiles to javascript
-Rust
-  - like C++ but safe
-Pony
-  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
-  
-  
+    
   
 # others
 kotlin
