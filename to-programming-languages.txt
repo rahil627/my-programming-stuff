@@ -22,6 +22,8 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 
 
 # a few contemporary languages
+
+## old classics
 C#
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library, and the .NET library
@@ -33,6 +35,8 @@ C#
 Haxe
   - my fave :)
 
+
+## newer stuff
 Crystal
   - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!** :o
   - object-oriented, just as ruby was
@@ -42,20 +46,9 @@ Crystal
   - makes writing C-bindings easy! and perhaps generatable? :)
   - this language is the one that **appeals to me the most**, as i've missed the whole ruby generation, but maybe can join it late with this :) ...but it seems to offer very little over Haxe, which already has most of these features
   
-Rust
-  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++, **no garbage collector**, you *must* use this system and handle the memory yourself
-  - performance-oriented, allowing for many kinds of optimizations and implementations (compiles, static-typed)
-  - composition > inheritance
-  - also like Go, in that it has concurrency/threading features too
-  - brace-delimited style
-  - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression…  
-  - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
-  - people have went crazy making Rust bindings for nearly every C/C++ library out there.., maybe writing C bindings have become easier?
-  - Mozilla, and as always, open-source
-
 Nim
-  - performance-oriented, allowing for many kinds of optimizations and implementations (compiled, static-typed), but still
-  - **garbage collected**, making this the biggest difference between this and Rust, though, you can do some manual memory management to change the way it is collected, it's still garbage collected
+  - performance-oriented, allowing for many kinds of optimizations and implementations (compiled, static-typed), but still **garbage collected** (this is the biggest difference between this and Rust), though, you can do some manual memory management to change the way it is collected, in the end, it's still garbage collected
+  - **_feels_ like scripting in a compiled language, making it much more joyful to use :)**
   - composition > inheritance  
   - python-like tab-delimited style
   - basically supports all programming paradigms
@@ -64,21 +57,36 @@ Nim
   - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression…
   - easy C binding
   - todo: i don't really know much more about it..
+  
+Rust
+  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"*
+    - all of that of course comes with the cost of a slower development time
+  - performance-oriented, allowing for many kinds of optimizations and implementations (compiles, static-typed)
+  - composition > inheritance
+  - Go's concurrency/threading features
+  - brace-delimited style
+  - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression…  
+  - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
+  - people have went crazy making Rust bindings for nearly every C/C++ library out there.., maybe writing C bindings have become easier?
+  - Mozilla, and as always, open-source
 
 Odin
   - from the hand-made network
   - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!*
   - influenced by Go
 
+
+
+## others
 Go
   - seems to be like a contemporary C, and a good alternative to C++'s much hated development path
   - **at the speed of C :o**
   - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
   - simple, straight-forward, procedural style, but pretty spartan and feature-less, making it far less appealing for hobbyists
-  - no memory management??
+  - todo: no memory management?? what? surely i read wrong..
+  - this seems to have influenced a lot of languages, especially it's concurrency features
   - Google, but open-source
     
-  
 Pony
   - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
 
