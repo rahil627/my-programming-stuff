@@ -1,0 +1,26 @@
+https://www.howtogeek.com/68563/HTG-EXPLAINS-WHAT-ARE-THE-DIFFERENCES-BETWEEN-LINUX-SHELLS/
+  - a good straight-foward tech post abuot the history of shells
+  
+basically:
+sh = bourne shell
+  - the main precursor and origin to/of the most popular future shells
+bash = bourne again shell
+  - most prevalent, used on all desktop Linux-derived OSs, including Mac OS X
+  - history: was created by open-source people GNU while they were creatin their free OS
+ash = Almaquish shell
+  - a light-wieght sub-set of bash used in embeded systems
+  - you can find it on the tiny Linux distros installed on mobile devices, sch as ArchLinux, which itself uses BusyBox
+    - i personally have "iSH" app on my iOS device, and this thing is lightning fast!!!, this is actually where i played with and learned vi: because it was *so* much faster than using CLI with my server
+zsh = z? shell
+  - a super-set of bash, used on contemporary desktop systems
+  - Mac OS X recently replaced bash with this
+  - more features, more configurability, etc.
+  
+  
+others:
+csh, tcsh, one other one = c shell, improved c shell, ane one other one
+  - C-like shell with more scripting ability than the bourne shell? A bit dated now..?
+fish
+  - a beginner-friendly shell with highlighting for errors, spell-checking, etc., although, because it's different from bash, it might not really be so useful..?
+  
+  
