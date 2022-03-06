@@ -8,9 +8,11 @@ bash = bourne again shell
   - most prevalent, used on all desktop Linux-derived OSs, including Mac OS X
   - history: was created by open-source people GNU while they were creatin their free OS
 ash = Almaquish shell
-  - a light-wieght sub-set of bash used in embeded systems
+  - a light-wieght sub-set(?) of bash used in embeded systems
   - you can find it on the tiny Linux distros installed on mobile devices, sch as ArchLinux, which itself uses BusyBox
     - i personally have "iSH" app on my iOS device, and this thing is lightning fast!!!, this is actually where i played with and learned vi: because it was *so* much faster than using CLI with my server
+dash = ? Almaquish shell
+  - based on ash, used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster
 zsh = z? shell
   - a super-set of bash, used on contemporary desktop systems
   - Mac OS X recently replaced bash with this
