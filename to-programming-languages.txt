@@ -1,6 +1,17 @@
-
+https://blog.back4app.com/server-side-programming-languages/
+  - a pretty simple and good summary of the popular languages (although, no haxe :( )
 
 server-side languages:
+usually have an interpreter so that you can run it via CLI with single commands or scripts
+
+haxe
+  - compiled, static-typed
+  - runs on front-end and back-end
+  - can interop with C(/C++?)
+  - **compiles to any language, including C**
+  - **compiles to bytecode then is run through a very fast VM (Neko, HashLink), like Lua**
+  - my favorite
+
 ruby
   - like Haxe, seems to have a nice cult community of hackers :)
   - also like Haxe, whereas Haxe devs tend to write object-oriented programs, Ruby in itself *is* object-oriented
@@ -8,6 +19,11 @@ ruby
     
 python
   - most popular and most loved
+  - can interop with C/C++
+  
+perl
+  - i've always thought this was a terse, perplexing langauge, like regex
+  - embeds/interops with C/C++?
 
 javascript
   - an old dynamic front-end rather mundane language that has over time become used for everything because of the abundance of web devs, including server-side
