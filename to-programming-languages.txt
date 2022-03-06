@@ -215,3 +215,6 @@ https://blog.back4app.com/server-side-programming-languages/
   - a pretty simple and good summary of the popular languages (although, no haxe :( )
   
 https://programmingzen.com/10-lesser-known-programming-languages-worth-exploring/
+
+https://www.reddit.com/r/gamedev/comments/1edn03/lua_angelscript_haxe_c_java_and_others_which_do/
+  - shares my conundrum: an indie dev trying to choose a language environment, and it seems, even 8 years ago C#/MonoGame was still the way to go
