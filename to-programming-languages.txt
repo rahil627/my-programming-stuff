@@ -31,6 +31,7 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big app devs away from the horrendous javascript/electron/html5 web-dev world
   - Microsoft, and very much feels like Microsoft: heavy, big dev environment
   - after using this, it feels like there's really no reason to use anything else! (todo: hmmmmm)
+  - http://www.paxscriptnet.com - a C# scripting engine!?!?
   
 *Haxe**
   - my fave :)
