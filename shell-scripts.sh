@@ -1,10 +1,10 @@
 #!/bin/sh
 
 
-# add a folder-path to the $PATH environment var
+# append a folder-path to the $PATH environment var
 # so that programs ("binaries") in it can be invoked via command line
 echo $PATH
-export PATH=$PATH:/usr/local/bin
+export PATH = $PATH:/path/to/bin
 
 
 
