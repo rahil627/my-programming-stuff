@@ -18,32 +18,39 @@ as far as i know, only Haxe fits all of the above requirements... i'm not sure h
 Crystal
   - like a static-typed ruby, along with *much* faster, in fact, **at C++ speeds!** :o
   - object-oriented, just as ruby was
-  - this language is the one that **appeals to me the most**, as i've missed the whole ruby generation, but maybe can join it late with this :)
+  - macros and ASTs like Haxe
+  - concurrency like Go
+  - uses ruby's (or jekyll's?) simple yaml config (build?) file to fetch dependencies, making it very simple get dependencies from git/github
+  - makes writing C-bindings easy! and perhaps generatable? :)
+  - this language is the one that **appeals to me the most**, as i've missed the whole ruby generation, but maybe can join it late with this :) ...but it seems to offer very little over Haxe, which already has most of these features
   
 Rust
   - **like C/C++ but safe**, using a specific memory management system, wherein you can have fine control of memory, but apparently it's not as bad as C/C++
   - also like Go, in that it has concurrency/threading features too
   - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
+  - people have went crazy making Rust bindings for nearly every C/C++ library out there..
   - Mozilla, and as always, open-source
 
 Nim
   - basically supports all programming paradigms
-  - interface with C and compiles to javascript
-  - todo: i don't really know much more about it..  
+  - interface with C/C++/Objective-C and compiles to javascript
+  - made for embedded systems?
+  - macros, etc. contemporary features
+  - todo: i don't really know much more about it..
+
+Odin
+  - from the hand-made network
+  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!*
+  - influenced by Go
 
 Go
   - seems to be like a contemporary C, and a good alternative to C++'s much hated development path
   - **at the speed of C :o**
   - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
-  - simple, straight-forward, procedural style
+  - simple, straight-forward, procedural style, but pretty spartan and feature-less, making it far less appealing for hobbyists
   - no memory management??
   - Google, but open-source
-  
-Odin
-  - from the hand-made network
-  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!*
-  - influenced by Go
-  
+    
   
 Pony
   - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
