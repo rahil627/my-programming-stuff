@@ -2,21 +2,23 @@
 
 ## my needs (or wants?)
 
-it should be high-level with lots of cool contemporary features
-it should be relatively fast (faster than ruby and python interpreters)
+it should be high-level, preferrably wiith cool contemporary features
+it should be relatively fast (at least faster than ruby and python interpreters)
 
-for simple fun web server hackery :D
-  - it should have an interpreter, so that you can run it via cli
-  - it should be able to run server-side (interpreter) and client-side
+for simple fun OS shell and web server hackery: :D
+  - it should have an interpreter, so that you can just run it via cli
+  - it should be able to run on both server-side (interpreter) and client-side (compiled)
   
-for games (and other "creative" applications that use various input/output hardwares) :D
+for games (and other "creative" applications that use various input/output hardwares): :D
   - it should have the option of memory management, for fine-tuning intense computations on both the CPU and the GPU, yet i should'nt be forced to handle memory, thus
     - it should have automatic garbage collection, yet 
     - it should allow the option to write "unmanaged code", or better yet, make it very easy to interop with C/C++ so that you can just write C/C++ when needed
-  - it should be designed to be cross-platform (not sure how.., have stable, maintained cross-platform libraries?)
+  - it should be designed to be cross-platform, or at least have that in mind (not sure how.., have stable, maintained cross-platform libraries?)
   
   
-as far as i know, only C#, Haxe, and maybe Dart fit all of the above requirements above. The cross-platform libraries really narrow down the choices, as most newer languages just won't have that, *yet*. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and to maintain them... Only time will tell. Beyond C# and Haxe though, i haven't really seen many good cross-platform libraries... todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, imo. A game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.
+as far as i know, only C#, Haxe, and maybe Dart fit all of the above requirements above. The need for cross-platform libraries really narrow down the choices, as most newer languages just won't have that, *yet*. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.
+
+as far as using C# as a scripting language, well, there's dotnet-script, but i'd have to look into it some more..
 
 
 
