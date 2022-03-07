@@ -1,16 +1,24 @@
-# a language for every application
+# what langauge is best for my needs?
+
+## my needs (or wants?)
+
+it should be high-level with lots of cool contemporary features
+it should be relatively fast (faster than ruby and python interpreters)
 
 for simple fun web server hackery :D
   - it should have an interpreter, so that you can run it via cli
-  - it should be able to run server-side (interpreter) and client-side (VM)
+  - it should be able to run server-side (interpreter) and client-side
   
 for games (and other "creative" applications that use various input/output hardwares) :D
-  - it should have the option of memory management, for fine-tuning intense computations on both the CPU and the GPU
-  - it should interop or embed to C/C++
-  - it should be designed to be cross-platform (not sure how..)
+  - it should have the option of memory management, for fine-tuning intense computations on both the CPU and the GPU, yet i should'nt be forced to handle memory, thus
+    - it should have automatic garbage collection, yet 
+    - it should allow the option to write "unmanaged code", or better yet, make it very easy to interop with C/C++ so that you can just write C/C++ when needed
+  - it should be designed to be cross-platform (not sure how.., have stable, maintained cross-platform libraries?)
   
   
-as far as i know, only Haxe fits all of the above requirements... i'm not sure how C# really works, and i haven't touched dart.
+as far as i know, only C#, Haxe, and maybe Dart fit all of the above requirements above. The cross-platform libraries really narrow down the choices, as most newer languages just won't have that, *yet*. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and to maintain them... Only time will tell. Beyond C# and Haxe though, i haven't really seen many good cross-platform libraries... todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, imo. A game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.
+
+
 
 
 
@@ -39,31 +47,37 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 *Haxe**
   - my fave :)
 
+Java/Scala
+  - this is a world i've seem to have avoided... can it even interop with C?
+
 
 ## newer stuff
 **Crystal**
   - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!?!?** :o :O
-  - **object-oriented**, just as ruby was
+  - sytax and style *very very* similar to ruby, like 75% similar!
+  - **object-oriented**, just as ruby was too
   - macros and ASTs like Haxe
   - concurrency like Go
   - uses ruby's (or jekyll's?) simple yaml config (build?) file to fetch dependencies, making it very simple get dependencies from git/github
   - makes writing C-bindings easy! and perhaps generatable? :)
-  - this language is the one that **appeals to me the most**, as i've missed the whole ruby generation, but maybe can join it late with this :) ...but it seems to offer very little over Haxe, which already has most of these features
+  - compiles to C (like Haxe), allowing it to use C compilers, and therefore making it really fast
+  - i think they are building some way to be able to interop with ruby, so as to re-use existing ruby libraries...
+  - this language is the one that **appeals to me the most**, as i've missed the whole ruby generation, but maybe can join it late with this :) ...but it seems to offer very little over Haxe, which already has most of these features, and many more years behind it
   
 Nim
   - performance-oriented, allowing for many kinds of optimizations and implementations (compiled, static-typed), but still **garbage collected** (this is the biggest difference between this and Rust), though, you can do some manual memory management to change the way it is collected, in the end, it's still garbage collected
   - **_feels_ like scripting in a compiled language, making it much more joyful to use :)**
   - composition > inheritance  
   - python-like tab-delimited style
-  - basically supports all programming paradigms
+  - **basically supports all programming paradigms**
   - interface with C/C++/Objective-C and compiles to javascript
   - made for embedded systems?
-  - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression…
+  - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression, etc.
   - easy C binding
-  - todo: i don't really know much more about it..
+  - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented-only, *slightly faster*, ruby-style Crystal, as i don't even know any of the other programming paradigms
   
 Rust
-  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"*
+  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for the *true game engine programmers*
     - all of that of course comes with the cost of a slower development time
   - performance-oriented, allowing for many kinds of optimizations and implementations (compiles, static-typed)
   - composition > inheritance
@@ -76,7 +90,7 @@ Rust
 
 Odin
   - from the hand-made network
-  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!*
+  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!* :o very rad
   - influenced by Go
 
 
