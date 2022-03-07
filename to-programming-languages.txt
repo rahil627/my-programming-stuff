@@ -56,6 +56,15 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   - small community feeling, can make a difference :)
   - frameworks like OpenFL, NME, Heaps ensures it's shared cross-platform code is in good condition, though not .NET level
 
+Ruby
+  - scripting people seem to really like this one
+  - aims to be natural, like English
+  - seems to have an interesting rad community vibe, similar to Haxe :)
+  - *very* object-oriented, even in the language itself!, allowing you to hack away at the language itself! :o
+  - **too slow for games, unless it has a compiler? :(**
+    - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
+  - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
+
 Java/Scala
   - adds a garbage collector, making it feel "high-level"
   - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that couldn't be collected
@@ -79,7 +88,7 @@ C
 **Crystal**
   - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!?!?** :o :O
   - sytax and style *very very* similar to ruby, like 75% similar!
-  - **object-oriented**, just as ruby was too
+  - deeply **object-oriented**, just as ruby was too
   - macros and ASTs like Haxe
   - concurrency like Go
   - uses ruby's (or jekyll's?) simple yaml config (build?) file to fetch dependencies, making it very simple get dependencies from git/github
@@ -121,10 +130,10 @@ Odin
 
 ## others
 Go
-  - seems to be like a contemporary C, and a good alternative to C++'s much hated development path
-  - **at the speed of C :o**
+  - seems to be like a contemporary C
+  - **at the speed of C too! :o**
   - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
-  - simple, straight-forward, procedural style, but pretty spartan and feature-less, making it far less appealing for hobbyists
+  - simple, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it far less appealing for hobbyists (that like *natural* languages) and game-makers (that like lots of features and object-oriented paradigm)
   - todo: no memory management?? what? surely i read wrong..
   - this seems to have influenced a lot of languages, especially it's concurrency features
   - Google, but open-source
