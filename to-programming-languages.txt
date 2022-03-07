@@ -74,7 +74,9 @@ Ruby
 
 Java/Scala
   - **adds a garbage collector, making it feel "high-level"**
-    - ...but can you use pointers when you want to?
+    - but no pointers *at all*, all objects are references (basically every high-level language after this does this)
+    - a good comparison between C++'s pointers and Java's magic
+      - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
   - feels neat, like an early C#! :)
   - object-oriented, direct contender to C++
   - adds lambdas (maybe this was added later on..)
