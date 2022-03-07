@@ -147,11 +147,12 @@ Odin
 
 ## others
 Go
-  - seems to be like a contemporary C
+  - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
   - **at the speed of C too! :o**
+  - **not object-oriented**, or not meant to be
+    - this kills it for games
   - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
   - simple, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it far less appealing for hobbyists (that like *natural* languages) and game-makers (that like lots of features and object-oriented paradigm)
-  - todo: no memory management?? what? surely i read wrong..
   - this seems to have influenced a lot of languages, especially it's concurrency features
   - Google, but open-source
     
