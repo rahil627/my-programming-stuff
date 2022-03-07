@@ -74,7 +74,7 @@ Ruby
 
 Java/Scala
   - **adds a garbage collector, making it feel "high-level"**
-    - but no pointers *at all*, all objects are references (basically every high-level language after this does this)
+    - but no pointers *at all*, **all objects are references and all objects are passed by references** (basically every high-level language after this does this)
     - a good comparison between C++'s pointers and Java's magic
       - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
   - feels neat, like an early C#! :)
@@ -87,6 +87,7 @@ Java/Scala
   
 C++
   - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
+    - and therefore pass function arguments by value or pointer or reference or smart pointer too
   - adds **object-oriented design features (classes)** to C
     - also adds the idea of allocating stuff during constructor and de-allocating during deconstructor
   - adds references to C (i guess in C you just had to use pointers for everything..?)
