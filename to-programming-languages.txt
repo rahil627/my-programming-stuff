@@ -67,7 +67,9 @@ Ruby
 
 Java/Scala
   - adds a garbage collector, making it feel "high-level"
-  - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that couldn't be collected
+  - can interop with C through JNI (java native interface)
+  - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/
+  - LibGDX
   
 C++
   - adds **object-oriented** to C
@@ -81,7 +83,7 @@ C
    - and interestingly, it forces you to write a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, then you are able to do what is needed without thinking about how to do it. There's a whole philosohpy about this with Casey Muratori's hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
  - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
  - OpenFrameworks also has Raylib's beauty (not sure if it's C or C++ tho..)
- - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, dividing data from functions, ending up to be more modular, more re-usable, etc. etc.
+ - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow
 
 
 ## newer stuff
@@ -107,7 +109,7 @@ Nim
   - made for embedded systems?
   - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression, etc.
   - easy C binding
-  - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented-only, *slightly faster*, ruby-style Crystal, as i don't even know any of the other programming paradigms
+  - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
   
 Rust
   - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for the *true game engine programmers*
