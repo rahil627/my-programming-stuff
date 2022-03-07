@@ -42,8 +42,9 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big app devs away from the horrendous javascript/electron/html5 web-dev world
   - Microsoft, and very much *feels* like Microsoft: *heavy*, heavy dev environment, heavy libraries, standard coding convention, etc.
   - after using this, it feels like there's really no reason to use anything else! (todo: hmmmmm)
-  - has a contemporary **scripting** solution!!?? :o :O
-    - https://github.com/filipw/dotnet-script - 
+  - has a contemporary **scripting** solutions!!?? :o :O
+    - csscript
+    - https://github.com/filipw/dotnet-script
     - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
   - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
   - nuget package library
