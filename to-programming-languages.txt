@@ -35,7 +35,7 @@ nearly all high-level languages interop with C, so, i see no reason to write in 
 # important changes in dev tech
 with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run native apps (machine code?) in the web-browser :o :O luckily, i've never cared about web-targets, but now it's finally really dead! :) No Flash. No HTML5/WebGl. *Long live native dev.*
 
-.NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, but now, C#/.NET can truly be used to make *everything*! *The C#/.NET stock is rising...* Thus, app frameworks like **Avalonia** and **Uno** can compete with Google's Flutter, and the game framework **MonoGame** is still *the king of indie game engines*. Microsoft is doing well. All that, alongside VS Code. Microsoft has always been closer to games than both Google and Apple have ever have been.
+.NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, and so *the people* created Mono as an open-source cross-platform version of .NET, but now, the new .NET Core can truly be used to make *everything*! *The C#/.NET stock is rising...* Thus, app frameworks like **Avalonia** and **Uno** can compete with Google's Flutter, and the game framework **MonoGame** is still *the king of indie game engines*. Microsoft is doing well. All that, alongside VS Code. Microsoft has always been closer to games than both Google and Apple have ever have been.
 
 
 
@@ -150,7 +150,7 @@ Nim
 Dart
   - todo
   - **designed to be cross-platform**
-  - Flutter, ...i haven't really seen any game frameworks in this... yet?
+  - Flutter, ...i haven't really seen any game frameworks in this... yet? Flame Engine exists on top of Flutter, lol?
   - Google
 
 Rust
