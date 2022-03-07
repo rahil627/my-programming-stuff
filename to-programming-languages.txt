@@ -18,13 +18,15 @@ for simple fun OS shell and web server hackery: :D
 for games (and other "creative" applications that use various input/output hardwares): :D
   - it should have the option of memory management, for fine-tuning intense computations on both the CPU and the GPU, yet i should'nt be forced to handle memory, thus
     - it should have automatic garbage collection, yet 
-    - it should allow the option to write "unmanaged code", or better yet, make it very easy to interop with C/C++ so that you can just write C/C++ when needed
+    - it should allow the option to write "unmanaged code", or better yet, make it very easy to interop with C/C++ so that you can just write C/C++ when needed (nearly all langauges allow this..)
   - it should be designed to be cross-platform, or at least have that in mind (not sure how.., have stable, maintained cross-platform libraries?)
   
   
-as far as i know, only C#, Haxe, and maybe Dart fit all of the above requirements above. The need for cross-platform libraries really narrow down the choices, as most newer languages just won't have that, *yet*. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.
+as far as i know, only C#, Haxe, and maybe Dart fit all of the above requirements above. The need for cross-platform libraries really narrow down the choices, as most newer languages just won't have that, *yet*. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... *todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.*
 
-as far as using C# as a scripting language, well, there's dotnet-script, but i'd have to look into it some more..
+as far as using C# as a scripting language, well, there's "cs script", but i'd have to look into it some more..
+
+nearly all high-level languages interop with C, so, i see no reason to write in C or C++. *I don't want to even think about pointers or references, and definitely not smart pointers!* Java is the lowest i'd go.
 
 
 
@@ -60,8 +62,8 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   - simple, *light-feeling*--feels like a scripting language!, powerful like C#, but without all the *heaviness* of it, cross-platform-oriented, just *siiiick*
   - has all of the features of ruby plus more, but comes with a fast compiler
   - adds macros, ASTs, etc.
-  - **incredible compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, and javascript, to be run in a browser), to bytecode which is then run by a VM (Neko, HashLink)**
-  - don't feel overwhelmed by the decades of C/C++ libraries to piece together
+  - **incredible compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, and javascript, to be run in a browser), to bytecode which is then run by a VM (Neko (old?), HashLink), itself with two options: HL/JIT and HL/C** *whoa*...
+  - don't feel overwhelmed by the decades of C/C++ libraries to piece together, nor pointers/references/smart-pointers and header files
   - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code your own way! :)
   - small community feeling, can make a difference :)
   - frameworks like OpenFL, NME, Heaps ensures it's shared cross-platform code is in good condition, though not .NET level
@@ -85,6 +87,7 @@ Java/Scala
     - a good comparison between C++'s pointers and Java's magic
       - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
   - feels neat, like an early C#! :)
+  - no header files? :o
   - object-oriented, direct contender to C++
   - adds lambdas (maybe this was added later on..)
   - can interop with C through JNI (java native interface)
@@ -100,6 +103,7 @@ C++
   - adds references to C (i guess in C you just had to use pointers for everything..?)
   - smart pointers (3 kinds) that generally delete themselves once the last reference falls out of scope
     - this just makes it even more complex!! :( why worry about references and 3 kinds of smart pointers and raw pointers, when you can worry about raw pointers?
+  - header files are also annoying
   - adds "standard library" including strings to C (before they were an array of "char"s)
   - adds generics ("templates"), enums, and other now basic features..
   - loved/hated, mostly hated, i think
@@ -112,6 +116,7 @@ C
  - manual memory management via "raw" pointers (no references?) and the const key-word
  - *not* **object-oriented**
    - and interestingly, it forces you to write a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, then you are able to do what is needed without thinking about how to do it. There's a whole philosohpy about this with Casey Muratori's hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
+ - has header files, which is annoying, but it seems nowadays people just write everything in the header file!
  - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
  - OpenFrameworks also has Raylib's beauty (not sure if it's C or C++ tho..)
  - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow
@@ -145,7 +150,8 @@ Nim
 Dart
   - todo
   - **designed to be cross-platform**
-  - Flutter
+  - Flutter, ...i haven't really seen any game frameworks in this... yet?
+  - Google
 
 Rust
   - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for the *true game engine programmers*
@@ -348,7 +354,7 @@ https://benchmarksgame-team.pages.debian.net/benchmarksgame/
 https://blog.back4app.com/server-side-programming-languages/
   - a pretty simple and good summary of the popular languages (although, no haxe :( )
   
-https://programmingzen.com/10-lesser-known-programming-languages-worth-exploring/
+https://community.haxe.org/t/how-does-haxe-hxcpp-performance-compare-to-writing-c-c/460
 
 https://www.reddit.com/r/gamedev/comments/1edn03/lua_angelscript_haxe_c_java_and_others_which_do/
   - shares my conundrum: an indie dev trying to choose a language environment, and it seems, even 8 years ago C#/MonoGame was still the way to go
