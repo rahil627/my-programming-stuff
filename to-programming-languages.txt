@@ -277,6 +277,28 @@ javascript
 PHP
   - perhaps the only thing worse than javascript, and perhaps closest to the horror that is objective-c
   - have you ever seen WordPress?.. :sob:
+  
+  
+  
+# popularity / use
+https://www.tiobe.com/tiobe-index/
+
+10%-15%
+Python
+C
+Java
+
+5%+
+C++
+C#
+
+1%+
+Go
+Swift
+Ruby
+
+...the rest
+
 
 
 # resources
