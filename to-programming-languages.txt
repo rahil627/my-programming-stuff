@@ -73,9 +73,14 @@ Ruby
   - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
 
 Java/Scala
-  - adds a garbage collector, making it feel "high-level"
+  - **adds a garbage collector, making it feel "high-level"**
+    - ...but can you use pointers when you want to?
+  - feels neat, like an early C#! :)
+  - object-oriented, direct contender to C++
+  - adds lambdas (maybe this was added later on..)
   - can interop with C through JNI (java native interface)
   - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/
+    - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#
   - LibGDX
   
 C++
