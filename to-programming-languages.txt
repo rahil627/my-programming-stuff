@@ -150,7 +150,7 @@ Nim
 Dart
   - todo
   - **designed to be cross-platform**
-  - Flutter, ...i haven't really seen any game frameworks in this... yet? Flame Engine exists on top of Flutter, lol?
+  - Flutter, ...i haven't really seen any game frameworks in this... yet? Flame Engine exists on top of Flutter, lol? (that does not sound like a good idea... probably limited to Skia graphics..)
   - Google
 
 Rust
