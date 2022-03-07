@@ -1,3 +1,9 @@
+# compare languages by reading them
+
+https://learnxinyminutes.com/
+
+
+
 # what langauge is best for my needs?
 
 ## my needs (or wants?)
@@ -73,13 +79,17 @@ Java/Scala
   - LibGDX
   
 C++
-  - adds **object-oriented** to C
+  - adds **object-oriented design features (classes)** to C
+  - adds references to C
+  - adds strings to C (before they were an array of "char"s)
   - loved/hated, mostly hated, i think
   - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
+  - also a confusing choice of compilers (gcc, vs, dev-cpp, etc.)
   - manual memory management via pointers 'n references
   
 C
- - manual memory management via pointers 'n references
+ - *very* simple
+ - manual memory management via pointers (no references)
  - *not* **object-oriented**
    - and interestingly, it forces you to write a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, then you are able to do what is needed without thinking about how to do it. There's a whole philosohpy about this with Casey Muratori's hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
  - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
