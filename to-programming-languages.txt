@@ -79,17 +79,21 @@ Java/Scala
   - LibGDX
   
 C++
+  - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
   - adds **object-oriented design features (classes)** to C
-  - adds references to C
-  - adds strings to C (before they were an array of "char"s)
+    - also adds the idea of allocating stuff during constructor and de-allocating during deconstructor
+  - adds references to C (i guess in C you just had to use pointers for everything..?)
+  - smart pointers (3 kinds) that generally delete themselves once the last reference falls out of scope
+    - this just makes it even more complex!! :( why worry about references and 3 kinds of smart pointers and raw pointers, when you can worry about raw pointers?
+  - adds "standard library" including strings to C (before they were an array of "char"s)
+  - adds generics ("templates"), enums, and other now basic features..
   - loved/hated, mostly hated, i think
   - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
-  - also a confusing choice of compilers (gcc, vs, dev-cpp, etc.)
-  - manual memory management via pointers 'n references
+  - also a choice of compilers (gcc, vs, dev-cpp, etc.)
   
 C
  - *very* simple
- - manual memory management via pointers (no references)
+ - manual memory management via "raw" pointers (no references?) and the const key-word
  - *not* **object-oriented**
    - and interestingly, it forces you to write a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, then you are able to do what is needed without thinking about how to do it. There's a whole philosohpy about this with Casey Muratori's hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
  - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
