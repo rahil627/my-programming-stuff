@@ -35,20 +35,42 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 **C#**
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library, and the .NET library
-  - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (MonoGame)
+  - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (Unity, MonoGame)
+    - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
   - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big app devs away from the horrendous javascript/electron/html5 web-dev world
-  - Microsoft, and very much feels like Microsoft: heavy, big dev environment
+  - Microsoft, and very much *feels* like Microsoft: *heavy*, heavy dev environment, heavy libraries, standard coding convention, etc.
   - after using this, it feels like there's really no reason to use anything else! (todo: hmmmmm)
-  - https://github.com/filipw/dotnet-script - looks like a contemporary **scripting** solution!!!! :o :O
+  - has a contemporary **scripting** solution!!?? :o :O
+    - https://github.com/filipw/dotnet-script - 
     - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
-  - http://www.paxscriptnet.com - an old C# scripting engine?
   - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
+  - nuget package library
   
 *Haxe**
   - my fave :)
+  - simple, *light-feeling*--feels like a scripting language!, powerful like C#, but without all the *heaviness* of it, cross-platform-oriented, just *siiiick*
+  - don't feel overwhelmed by the decades of C/C++ libraries to piece together
+  - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code your own way! :)
+  - small community feeling, can make a difference :)
+  - frameworks like OpenFL, NME, Heaps ensures it's shared cross-platform code is in good condition, though not .NET level
 
 Java/Scala
-  - this is a world i've seem to have avoided... can it even interop with C?
+  - adds a garbage collector, making it feel "high-level"
+  - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that couldn't be collected
+  
+C++
+  - adds **object-oriented** to C
+  - loved/hated, mostly hated, i think
+  - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
+  - manual memory management via pointers 'n references
+  
+C
+ - manual memory management via pointers 'n references
+ - *not* **object-oriented**
+   - and interestingly, it forces you to write a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, then you are able to do what is needed without thinking about how to do it. There's a whole philosohpy about this with Casey Muratori's hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
+ - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
+ - OpenFrameworks also has Raylib's beauty (not sure if it's C or C++ tho..)
+ - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, dividing data from functions, ending up to be more modular, more re-usable, etc. etc.
 
 
 ## newer stuff
