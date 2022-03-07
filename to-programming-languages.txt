@@ -58,23 +58,30 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 *Haxe**
   - my fave :)
   - simple, *light-feeling*--feels like a scripting language!, powerful like C#, but without all the *heaviness* of it, cross-platform-oriented, just *siiiick*
+  - has all of the features of ruby plus more, but comes with a fast compiler
+  - adds macros, ASTs, etc.
+  - **incredible compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, and javascript, to be run in a browser), to bytecode which is then run by a VM (Neko, HashLink)**
   - don't feel overwhelmed by the decades of C/C++ libraries to piece together
   - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code your own way! :)
   - small community feeling, can make a difference :)
   - frameworks like OpenFL, NME, Heaps ensures it's shared cross-platform code is in good condition, though not .NET level
 
 Ruby
-  - scripting people seem to really like this one
+  - scripting people seem to really *love* this one
   - aims to be natural, like English
   - seems to have an interesting rad community vibe, similar to Haxe :)
-  - *very* object-oriented, even in the language itself!, allowing you to hack away at the language itself! :o
+  - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
   - **too slow for games, unless it has a compiler? :(**
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
+  - adds a ton of features: object.map => { anonymous function / lambda / closure / "block" (i dunno difference) }, getter/setters, modules (this is interesting and have not seen before: basically can include group of methods to an object! :o), etc.
+  - has incredible syntax: no var necessary?
   - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
 
 Java/Scala
+  - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
   - **adds a garbage collector, making it feel "high-level"**
     - but no pointers *at all*, **all objects are references and all objects are passed by references** (basically every high-level language after this does this)
+      - thus perhaps making fine-tuning of memory impossible?
     - a good comparison between C++'s pointers and Java's magic
       - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
   - feels neat, like an early C#! :)
@@ -100,6 +107,7 @@ C++
   - also a choice of compilers (gcc, vs, dev-cpp, etc.)
   
 C
+ - **used by most electronic devices**
  - *very* simple
  - manual memory management via "raw" pointers (no references?) and the const key-word
  - *not* **object-oriented**
@@ -133,7 +141,12 @@ Nim
   - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression, etc.
   - easy C binding
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
-  
+
+Dart
+  - todo
+  - **designed to be cross-platform**
+  - Flutter
+
 Rust
   - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for the *true game engine programmers*
     - all of that of course comes with the cost of a slower development time
