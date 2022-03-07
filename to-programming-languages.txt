@@ -149,45 +149,6 @@ Pony
 https://www.atatus.com/blog/rust-vs-golang/
 
 
-# language compilation speed
-just a very very very broad gut feeling, lol
-
-tier 1 (manual memory management) *for crazy game engine people only*:
-**Rust** (borrow-checker)
-C++
-C
-Go (manual?)
-Chapel (manual?)
-
-tier 1 (garbage collected) for me! :)
-  - these are somehow comparable to Rust/C++ speeds... :o
-**Crystal**
-  - Ruby syntax but as fast as C++?? wtf
-Java
-  - why on earth have people suffered all these years using C++ instead of Java??
-**Dart**
-Kotlin
-Swift (manual? reference counting)
-
-tier 3:
-  - these add features but come at the cost of being a few times slower
-Scala
-**C#**
-**Haxe**
-**Nim**
-Lua (LuaJIT -j)
-
-
-Python (pypy)
-Elixer
-
-
-tier 4 (interpreted) *not for games!!*
-Ruby - ~5x slower
-Lua - ~5-15x slower (not LuaJIT?)
-Python - ~10-15x slower
-
-Perl - ~20+ slower
 
 
 # "server-side", "scripting" languages:
@@ -281,7 +242,6 @@ PHP
   
   
 # popularity / use
-https://www.tiobe.com/tiobe-index/
 
 10%-15%
 Python
@@ -298,6 +258,53 @@ Swift
 Ruby
 
 ...the rest
+
+https://www.tiobe.com/tiobe-index/
+
+
+# language compilation speed
+just a very very very broad gut feeling, lol
+
+tier 1 (manual memory management) *for crazy game engine people only*:
+**Rust** (borrow-checker)
+C++
+C
+Go (manual?)
+Chapel (manual?)
+
+tier 1 (garbage collected) for me! :)
+  - these are somehow comparable to the speeds of the non-gc languages... :o
+**Crystal**
+  - Ruby syntax but as fast as C++?? wtf
+Java
+  - why on earth have people suffered all these years using C++ instead of Java??
+**Dart**
+Kotlin
+Swift (manual? reference counting)
+**Haxe**
+  - not in the benchmark, and not sure where this goes..
+
+tier 2:
+  - these add features but come at the cost of being a few times slower
+Scala
+**C#**
+**Nim**
+Lua (LuaJIT -j)
+
+
+Python (pypy)
+Elixer
+
+
+tier 3 (interpreted) *not for games!!*
+Ruby - ~5x slower
+Lua - ~5-15x slower
+Python - ~10-15x slower
+
+Perl - ~20+ slower
+
+https://benchmarksgame-team.pages.debian.net/benchmarksgame/
+  - a joke, and hard to read, because it's more of a competition in which people upload crazy optimized programs that use multiple-cores/threads, but you can kinda see the limits and means using the simple implementations
 
 
 
