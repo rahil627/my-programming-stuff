@@ -26,7 +26,9 @@ as far as i know, only C#, Haxe, and maybe Dart fit all of the above requirement
 
 as far as using C# as a scripting language, well, there's "cs script", but i'd have to look into it some more..
 
-nearly all high-level languages interop with C, so, i see no reason to write in C or C++. *I don't want to even think about pointers or references, and definitely not smart pointers!* Java is the lowest i'd go.
+nearly all high-level languages interop with C, so, i see no reason to write an *entire* program in C or C++, leave that to the game-engine makers, and anyway, you can always write C/C++ for intensive parts when needed (i doubt i'll ever need to). *I don't want to even think about pointers or references, and definitely not smart pointers!* Java is the lowest i'd go.
+
+in the case of iOS, as long as there is a compiler to compile it to C, then there's a possibility.
 
 
 
@@ -62,7 +64,7 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   - simple, *light-feeling*--feels like a scripting language!, powerful like C#, but without all the *heaviness* of it, cross-platform-oriented, just *siiiick*
   - has all of the features of ruby plus more, but comes with a fast compiler
   - adds macros, ASTs, etc.
-  - **incredible compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, and javascript, to be run in a browser), to bytecode which is then run by a VM (Neko (old?), HashLink), itself with two options: HL/JIT and HL/C** *whoa*...
+  - **incredible compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, or to use C libraries, or to build in C for iOS, and javascript, to be run in a browser or to use pop javascript libraries, and Java, to build for Android), to bytecode which is then run by a VM (Neko (old?), HashLink), itself with two options: HL/JIT and HL/C** *whoa*...
   - don't feel overwhelmed by the decades of C/C++ libraries to piece together, nor pointers/references/smart-pointers and header files
   - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code your own way! :)
   - small community feeling, can make a difference :)
