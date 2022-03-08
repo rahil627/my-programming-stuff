@@ -177,6 +177,10 @@ Nim
   - easy C binding
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
 
+Elixer
+  - again, very Ruby-eque
+  - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's functional style: of creating very concise, easy-to-read simple often single-line functions
+
 Dart
   - todo
   - **designed to be cross-platform**
