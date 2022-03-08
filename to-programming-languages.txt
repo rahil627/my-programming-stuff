@@ -56,7 +56,6 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 
 ## old classics
 **C#**
-  - my first love
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library, and the .NET library
   - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (Unity, MonoGame)
@@ -72,19 +71,21 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
     - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
   - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
   - nuget package library
+  - my first love
   
 *Haxe**
-  - my fave :)
-  - simple, *light-feeling*--feels like a scripting language!, powerful like C#, but without all the *heaviness* of it, feeling more like Ruby, just *siiiick*
+  - simple, *light-feeling*--feels like a scripting language!, **powerful like C#**, but without all the *heaviness* of it, **feeling more like Ruby**, just *siiiick*
+    - also like Ruby, it feels very *Linux-y*, where **everything is a simple text file**, including the build file (this is a major difference in feeling to C#, as it can feel like you must edit stuff in VS's gui, or even Unity's gui. In Haxe, **everything can be done by simple text editing**, no gui software necessary)
   - maybe the first major language with **cross-platform** in mind?
   - has all of the features of ruby (container filters, anonymous functions, etc.) plus more, but comes with a *much much* faster compiler, making Ruby feel rather obsolete, and just surviving off of it's libraries and community
   - adds macros, ASTs, static extensions, etc.
   - **_incredible_ compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, or to use C libraries, or to build in C for iOS/consoles/embedded devices, and javascript, to be run in a browser or to use pop javascript libraries or to compile to Node.js, and Java, to build for Android, and to bytecode which is then run by a VM (Neko [old VM?], HashLink [current VM]), itself with two options: HL/JIT and HL/C**, one for faster compilation speed and one for optimized run-time speed *whoa...*
   - don't feel overwhelmed by decades of C/C++ libraries to piece together, nor have to think about pointers/references/smart-pointers and header files
-  - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code in any way you want to! :)
+  - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code in any way you want to, and use any tools you want to too! :)
   - small community feeling, will run into the makers on the forums, discord, or github (including the maker of Haxe/Heaps himself!!), can make a big difference :)
   - frameworks like OpenFL, NME, Heaps ensures it's shared cross-platform code is in good condition, though not .NET level
   - haxelib package manager
+  - **my fav :)**
 
 Ruby
   - scripting people seem to really *love* this one
@@ -104,6 +105,7 @@ Ruby
   - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
   - game engines, such as Gosu, are written in C/C++ and then wrapped/binded by Ruby, because it would be too slow otherwise
   - Ruby Gems package manager
+  - although i missed this generation, i think i would have enjoyed this little world :)  
 
 Java/Scala
   - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
@@ -117,9 +119,10 @@ Java/Scala
   - object-oriented, direct contender to C++
   - adds lambdas (maybe this was added later on..)
   - can interop with C through JNI (java native interface)
-  - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/
-    - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#
   - LibGDX
+  - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/  
+    - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#
+
   
 C++
   - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
@@ -213,10 +216,10 @@ Go
   - Google, but open-source
   
 ActionScript (3)
-  - my second love, leading me to Haxe
-  - thanks to Flash, and it's Flash engines, FlashPunk and Flixel, i was able to make my first little games with them! :)
+  - thanks to Flash and it's game engines FlashPunk and Flixel, i was able to make my first *little* games with them! :)
   - to this day, that was the best game dev experience i've ever had: pure code-only **light-weight scripting**
-  - Haxe feels very close to ActionScript in syntax and features, and really just made the perfect replacement for it, so there's no need for this now, but good to note for history's sake
+  - Haxe feels very close to ActionScript in both syntax and features, and really just made the perfect replacement for it, so, there's no need for this now, but good to note for history's sake
+  - my second love, leading me to Haxe
     
 Pony
   - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
