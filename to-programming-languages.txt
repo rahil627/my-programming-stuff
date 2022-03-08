@@ -177,12 +177,6 @@ Nim
   - easy C binding
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
 
-Elixer
-  - "Elixir is a dynamic, functional language for building scalable and maintainable applications." says it's home-page
-    - proably not the most performance-oriented, but it being new, surely it's faster than python/ruby!
-  - again, very Ruby-eque
-  - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
-
 Dart
   - todo
   - **designed to be cross-platform**
@@ -211,7 +205,14 @@ Odin
 
 
 
-## others
+## others: not for games, or just history
+Elixer
+  - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
+    - proably not the most performance-oriented, but it being new, surely it's faster than python/ruby!
+  - again, very Ruby-eque, but really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
+  - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
+  - not really suitable for games, i think..
+
 Go
   - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
   - **at the speed of C too! :o**
