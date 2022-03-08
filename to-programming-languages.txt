@@ -58,7 +58,7 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 **C#**
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
-    - basically C# v3 (in 2007) set the standards for high-level languages (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set
+    - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set
   - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (Unity, MonoGame)
     - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
     - probably also used by Microsoft themselves for making Xbox games
