@@ -13,51 +13,60 @@ https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-o
 
 ## my needs (or wants?)
 
-it should be high-level, preferrably wiith cool contemporary features
+it should be "high-level" (specifically, not forced to handle pointers, references, and const), preferrably wiith many cool contemporary features
 it should be relatively fast (at least faster than ruby and python interpreters)
 
 for simple fun OS shell and web server hackery: :D
   - it should have an interpreter, so that you can just run it via cli
-  - it should be able to run on both server-side (interpreter) and client-side (compiled)
+  - it should be able to run on both server-side and client-side (both: interpreter or compiled, for simple scripts and complex games/apps)
   
 for games (and other "creative" applications that use various input/output hardwares): :D
   - it should have the option of memory management, for fine-tuning intense computations on both the CPU and the GPU, yet i should'nt be forced to handle memory, thus
-    - it should have automatic garbage collection, yet 
-    - it should allow the option to write "unmanaged code", or better yet, make it very easy to interop with C/C++ so that you can just write C/C++ when needed (nearly all langauges allow this..)
-  - it should be designed to be cross-platform, or at least have that in mind (not sure how.., have stable, maintained cross-platform libraries?)
+    - it should have automatic garbage collection (pass by reference), yet 
+    - it should allow the option to write "unmanaged code" *and/or* make it very easy to interop with C/C++ so that you can just write C/C++ when needed *(note: nearly all langauges allow this..)*
+  - it should be designed to be cross-platform, or at least have that in mind
+    - compile to C (for most platforms: desktop OSs, iOS (+ iPadOS), consoles, embedded devices, etc.)
+    - maintain a set of libraries for target platforms: iOS > desktop OSs > consoles > the rest, in that order
+    x/- compile to Java for Andriod (i personally don't care about this platform... non-iOS mobile devices are a mess)
   
   
-as far as i know, only C#, Haxe, and maybe Dart fit all of the above requirements above. The need for cross-platform libraries really narrow down the choices, as most newer languages just won't have that, *yet*. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... *todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.*
+as far as i know, only C# (Microsoft), Haxe (indie), and maybe Dart (Google) fit all of the above requirements above. The need for cross-platform targets really narrow down the choices, as most newer languages just won't have the libraries, *yet* (they hae the potential, as long as they can compile down to C). It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... *todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.*
 
-as far as using C# as a scripting language, well, there's "cs script", but i'd have to look into it some more..
+as far as using C# as a scripting language, well, there's the Rosyln compiler (part of open-source .NET foundation) and "cs script", but i'd have to look into it some more.. but **if you can script in C#, then, well, it might just be game over for any other language!**
 
-nearly all high-level languages interop with C, so, i see no reason to write an *entire* program in C or C++, leave that to the game-engine makers, and anyway, you can always write C/C++ for intensive parts when needed (i doubt i'll ever need to). *I don't want to even think about pointers or references, and definitely not smart pointers!* Java is the lowest i'd go.
+**nearly all high-level languages interop with C, so, i see no reason to write an *entire* program in C or C++**, leave that to the game-engine makers, and **anyway, you can always write C/C++ for the intensive sections when needed** (i doubt i'll ever need to). *I don't want to even think about pointers or references, and definitely not smart pointers! :barf:* Java is the lowest i'd stoop.
 
-in the case of iOS, as long as there is a compiler to compile it to C, then there's a possibility.
+in the case of iOS, as long as there is a compiler for the language that can compile it to C, then there's a possibility.
 
 
 
 
 
 # important changes in dev tech
+
+## WebGL is dead. Long live native dev.
 with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run native apps (machine code?) in the web-browser :o :O luckily, i've never cared about web-targets, but now it's finally really dead! :) No Flash. No HTML5/WebGl. *Long live native dev.*
 
-.NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, and so *the people* created Mono as an open-source cross-platform version of .NET, but now, the new .NET Core can truly be used to make *everything*! *The C#/.NET stock is rising...* Thus, app frameworks like **Avalonia** and **Uno** can compete with Google's Flutter, and the game framework **MonoGame** is still *the king of indie game engines*. Microsoft is doing well. All that, alongside VS Code. Microsoft has always been closer to games than both Google and Apple have ever have been.
+## Microsoft <3 games *and* now open-source too?
+.NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, and so *the people* created Mono as an open-source cross-platform version of .NET, but now, the new .NET Core can truly be used to make *everything*! (I guess Mono is dead..? Or maybe it was used as a base for .NET Core??) *The C#/.NET stock is rising...* Thus, app frameworks like **Avalonia** and **Uno** can compete with Google's Flutter, and the game frameworks like **Unity** and **MonoGame** (based on Microsoft's own XNA framework used in the original Xbox) are still respectively the *the kings of indie game engines*. Microsoft is doing well. All of that, alongside open-source-made VS Code, and the fact that Windows always had a monopolty on games. Microsoft has always been closer to games than both Google and Apple have ever have been, and now it's really showing.
 
 
 
-# a few contemporary languages
+# a few contemporary languages, old and new
 
 ## old classics
 **C#**
+  - my first love
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library, and the .NET library
   - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (Unity, MonoGame)
     - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
-  - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big app devs away from the horrendous javascript/electron/html5 web-dev world
-  - Microsoft, and very much *feels* like Microsoft: *heavy*, heavy dev environment, heavy libraries, standard coding convention, etc.
-  - after using this, it feels like there's really no reason to use anything else! (todo: hmmmmm)
+    - probably also used by Microsoft themselves for making Xbox games
+  - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big game/app devs away from the horrendous temporal javascript/electron/html5 web-dev world
+  - Microsoft, and very much *feels* like Microsoft: *heavy*, heavy dev environment, heavy libraries, clunky standard coding convention, etc.
+  - after using this, it feels like there's really no reason to use anything else! (todo: :thinking:)
   - has a contemporary **scripting** solutions!!?? :o :O
+    - Rosylyn compiler
     - csscript
     - https://github.com/filipw/dotnet-script
     - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
@@ -66,14 +75,16 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   
 *Haxe**
   - my fave :)
-  - simple, *light-feeling*--feels like a scripting language!, powerful like C#, but without all the *heaviness* of it, cross-platform-oriented, just *siiiick*
-  - has all of the features of ruby plus more, but comes with a fast compiler
-  - adds macros, ASTs, etc.
-  - **incredible compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, or to use C libraries, or to build in C for iOS, and javascript, to be run in a browser or to use pop javascript libraries, and Java, to build for Android), to bytecode which is then run by a VM (Neko (old?), HashLink), itself with two options: HL/JIT and HL/C** *whoa*...
-  - don't feel overwhelmed by the decades of C/C++ libraries to piece together, nor pointers/references/smart-pointers and header files
-  - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code your own way! :)
-  - small community feeling, can make a difference :)
+  - simple, *light-feeling*--feels like a scripting language!, powerful like C#, but without all the *heaviness* of it, feeling more like Ruby, just *siiiick*
+  - maybe the first major language with **cross-platform** in mind?
+  - has all of the features of ruby (container filters, anonymous functions, etc.) plus more, but comes with a *much much* faster compiler, making Ruby feel rather obsolete, and just surviving off of it's libraries and community
+  - adds macros, ASTs, static extensions, etc.
+  - **_incredible_ compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, or to use C libraries, or to build in C for iOS/consoles/embedded devices, and javascript, to be run in a browser or to use pop javascript libraries or to compile to Node.js, and Java, to build for Android, and to bytecode which is then run by a VM (Neko [old VM?], HashLink [current VM]), itself with two options: HL/JIT and HL/C**, one for faster compilation speed and one for optimized run-time speed *whoa...*
+  - don't feel overwhelmed by decades of C/C++ libraries to piece together, nor have to think about pointers/references/smart-pointers and header files
+  - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code in any way you want to! :)
+  - small community feeling, will run into the makers on the forums, discord, or github (including the maker of Haxe/Heaps himself!!), can make a big difference :)
   - frameworks like OpenFL, NME, Heaps ensures it's shared cross-platform code is in good condition, though not .NET level
+  - haxelib package manager
 
 Ruby
   - scripting people seem to really *love* this one
@@ -84,13 +95,15 @@ Ruby
     - uses the last statement's expression in a function as the return value, thus saving a line; and oh you can easily write one-liner functions with Ruby! :o
     - can omit the '()' in function()
     - no need for 'var'
-  - seems to have an interesting rad community vibe, similar to Haxe :)
+  - seems to have an interesting, diverse, rad community vibe, similar to Haxe :) ...but *way* more web-dev-oriented, thanks to Rails, the language's premier web framework.., and Jekyll (used by GitHub Pages) too
   - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
   - **too slow for games, unless it has a compiler? :(**
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
-  - adds a ton of features: object.map => { anonymous function / lambda / closure / "block" (i dunno difference) }, getter/setters, modules (this is interesting and have not seen before: basically can include group of methods to an object! :o), etc.
+  - adds a ton of features: object.map => { anonymous function / lambda / closure / "block" (i dunno difference) }, container.select/find/filter {|item| item == item_i_want}, getter/setters, modules (this is interesting and have not seen before: basically can include group of methods to an object! :o), etc.
   - has incredible syntax: no var necessary?
   - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
+  - game engines, such as Gosu, are written in C/C++ and then wrapped/binded by Ruby, because it would be too slow otherwise
+  - Ruby Gems package manager
 
 Java/Scala
   - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
@@ -124,11 +137,11 @@ C++
   - also a choice of compilers (gcc, vs, dev-cpp, etc.)
   
 C
- - **used by most electronic devices**
+ - **used as the "low-level" language by most electronic devices**
  - *very* simple
  - manual memory management via "raw" pointers (no references?) and the const key-word
  - *not* **object-oriented**
-   - and interestingly, it forces you to write a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, then you are able to do what is needed without thinking about how to do it. There's a whole philosohpy about this with Casey Muratori's hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
+   - and interestingly, it forces you to write in a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, you are able to do what is needed without thinking about how to do it. There's a whole philosophy about this vocalized by Casey Muratori and his hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
  - has header files, which is annoying, but it seems nowadays people just write everything in the header file!
  - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
  - OpenFrameworks also has Raylib's beauty (not sure if it's C or C++ tho..)
@@ -163,11 +176,13 @@ Nim
 Dart
   - todo
   - **designed to be cross-platform**
-  - Flutter, ...i haven't really seen any game frameworks in this... yet? Flame Engine exists on top of Flutter, lol? (that does not sound like a good idea... probably limited to Skia graphics..)
+  - Flutter
+  - ...i haven't really seen any game frameworks in this... yet? Flame Engine exists on top of Flutter, lol? (that does not sound like a good idea... probably limited to Skia graphics..)
   - Google
+    - although Flutter seems really nifty... i'd personally choose Microsoft's C#/.NET world over this *any day*
 
 Rust
-  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for the *true game engine programmers*
+  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for *true game engine programmers*
     - all of that of course comes with the cost of a slower development time
   - performance-oriented, allowing for many kinds of optimizations and implementations (compiles, static-typed)
   - composition > inheritance
@@ -175,7 +190,8 @@ Rust
   - brace-delimited style
   - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression…  
   - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
-  - people have went crazy making Rust bindings for nearly every C/C++ library out there.., maybe writing C bindings have become easier?
+  - people have went crazy making Rust bindings for nearly every C/C++ library out there.., maybe writing C bindings have become easier? ...Or area they completely re-writing all these libraries!?
+  - Bevy game engine
   - Mozilla, and as always, open-source
 
 Odin
@@ -195,6 +211,12 @@ Go
   - simple, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it far less appealing for hobbyists (that like *natural* languages) and game-makers (that like lots of features and object-oriented paradigm)
   - this seems to have influenced a lot of languages, especially it's concurrency features
   - Google, but open-source
+  
+ActionScript (3)
+  - my second love, leading me to Haxe
+  - thanks to Flash, and it's Flash engines, FlashPunk and Flixel, i was able to make my first little games with them! :)
+  - to this day, that was the best game dev experience i've ever had: pure code-only **light-weight scripting**
+  - Haxe feels very close to ActionScript in syntax and features, and really just made the perfect replacement for it, so there's no need for this now, but good to note for history's sake
     
 Pony
   - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
