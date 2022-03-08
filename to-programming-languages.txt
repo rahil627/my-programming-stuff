@@ -58,7 +58,7 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 **C#**
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
-    - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set
+    - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, and LINQ via .NET, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set. By C# v10 now, the features are *overwhelming!*. There's really nothing to complain about here.
   - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (Unity, MonoGame)
     - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
     - probably also used by Microsoft themselves for making Xbox games
@@ -76,10 +76,10 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   
 *Haxe**
   - simple, *light-feeling*--feels like a scripting language!, **powerful like C#**, but without all the *heaviness* of it, **feeling more like Ruby**, just *siiiick*
+    - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but it's not nearly as exhaustive as C#, making it more tolerable for a mortal, and a little less flexible, which can actually be good, as you can focus more on writing as opposed to thinking which C# feature to use here, and making code easier to read too (try reading the code of a pro C# user!)
     - also like Ruby, it feels very *Linux-y*, where **everything is a simple text file**, including the build file (this is a major difference in feeling to C#, as it can feel like you must edit stuff in VS's gui, or even Unity's gui. In Haxe, **everything can be done by simple text editing**, no gui software necessary)
   - maybe the first major language with **cross-platform** in mind?
   - has all of the features of ruby (container filters, anonymous functions, etc.) plus more, but comes with a *much much* faster compiler, making Ruby feel rather obsolete, and just surviving off of it's libraries and community
-  - adds macros, ASTs, static extensions, etc.
   - **_incredible_ compilation options: compile to nearly any other language (including C, which can then be compiled again by optmized-compiler LLVM to reach near-C speeds, or to use C libraries, or to build in C for iOS/consoles/embedded devices, and javascript, to be run in a browser or to use pop javascript libraries or to compile to Node.js, and Java, to build for Android, and to bytecode which is then run by a VM (Neko [old VM?], HashLink [current VM]), itself with two options: HL/JIT and HL/C**, one for faster compilation speed and one for optimized run-time speed *whoa...*
   - don't feel overwhelmed by decades of C/C++ libraries to piece together, nor have to think about pointers/references/smart-pointers and header files
   - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code in any way you want to, and use any tools you want to too! :)
