@@ -220,6 +220,7 @@ ActionScript (3)
   - thanks to Flash and it's game engines FlashPunk and Flixel, i was able to make my first *little* games with them! :)
   - to this day, that was the best game dev experience i've ever had: pure code-only **light-weight scripting**
   - Haxe feels very close to ActionScript in both syntax and features, and really just made the perfect replacement for it, so, there's no need for this now, but good to note for history's sake
+    - *update:* as it turns out, Nicholas (the maker of Haxe) wrote the compiler for ActionScript 2 :o ...now it all makes sense..!
   - my second love, leading me to Haxe
     
 Pony
@@ -366,7 +367,7 @@ Swift (manual? reference counting)
   - not in the benchmark, and not sure where this goes..
 
 tier 2:
-  - these add features but come at the cost of being a few times slower
+  - these add features but come at the cost of being a few times slower, of course, depending on how you use them
 Scala
 **C#**
 **Nim**
