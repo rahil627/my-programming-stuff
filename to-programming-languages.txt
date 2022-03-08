@@ -72,7 +72,7 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 
 Ruby
   - scripting people seem to really *love* this one
-  - aims to be natural, like English
+  - aims to be natural, like English; also_uses_snake_case_convention :o *finally*, someone gets it!
   - seems to have an interesting rad community vibe, similar to Haxe :)
   - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
   - **too slow for games, unless it has a compiler? :(**
