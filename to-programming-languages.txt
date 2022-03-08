@@ -2,6 +2,11 @@
 
 https://learnxinyminutes.com/
 
+good examples:
+
+ruby:
+https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
+
 
 
 # what langauge is best for my needs?
