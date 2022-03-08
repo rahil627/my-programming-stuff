@@ -36,7 +36,7 @@ as far as using C# as a scripting language, well, there's the Rosyln compiler (p
 
 **nearly all high-level languages interop with C, so, i see no reason to write an *entire* program in C or C++**, leave that to the game-engine makers, and **anyway, you can always write C/C++ for the intensive sections when needed** (i doubt i'll ever need to). *I don't want to even think about pointers or references, and definitely not smart pointers! :barf:* Java is the lowest i'd stoop.
 
-in the case of iOS, as long as there is a compiler for the language that can compile it to C, then there's a possibility.
+in the case of iOS, as long as there is a compiler for the language that can compile it to C, then there's a possibility. The same goes for *all* devices(?): all desktop OSs, all mobile devices, most embedded devices, 'n so on. Maye even underneath that Android's Java is C... it's just that Android has it's libraries written in Java, which you'd have to link.,
 
 
 
