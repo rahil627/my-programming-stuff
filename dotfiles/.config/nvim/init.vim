@@ -1,3 +1,6 @@
+"see https://vimawesome.com for vim (not nvim) plugins, it's a really well-designed site!
+"see https://github.com/rockerBOO/awesome-neovim#completion for nvim specific plugins, pretty exhaustive
+
 " consult https://vim.fandom.com/wiki/Unused_keys for keys to map
 
 
