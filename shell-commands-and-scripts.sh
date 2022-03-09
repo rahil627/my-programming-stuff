@@ -5,7 +5,10 @@
 # get encoding of the file
 file -i file-path
 
-# encode files in the current directory
+# convert encoding
+iconv -f ISO-8859-1 -t UTF-8//TRANSLIT in-file -o out-file
+
+# convert encoding of multiple files in the current directory
 # #!/bin/bash
 
 FROM_ENCODING="value_here" # set this
