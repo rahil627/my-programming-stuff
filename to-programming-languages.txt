@@ -44,6 +44,13 @@ as far as using C# as a scripting language, well, there's the Rosyln compiler (p
 in the case of iOS, as long as there is a compiler for the language that can compile it to C, then there's a possibility. The same goes for *all* devices(?): all desktop OSs, all mobile devices, most embedded devices, 'n so on. Maye even underneath that Android's Java is C... it's just that Android has it's libraries written in Java, which you'd have to link.,
 
 
+
+https://groups.google.com/g/haxelang/c/JCQCGbLy0xc?pli=1
+  - to figure out wtf NME is
+  
+https://www.wxwidgets.org/develop/roadmap/
+https://docs.wxwidgets.org/trunk/plat_ios_install.html
+
 ## libraries matter
 libraries, including frameworks, engines, matter. Altough you could use just about any language to solve just about any solution, certain languages are better suited for certain... *areas* in programming. This occurs naturally: someone wants to make something, solve something, they *hopefully* try to choose the right tool for the right job: the right language. Thus, the **language is just a tool** to do a job.
 
