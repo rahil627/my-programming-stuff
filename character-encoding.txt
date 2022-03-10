@@ -1,0 +1,38 @@
+files contain bytes (00001111)
+
+how those bytes are read depends on the encoding
+
+there is no way to know how the file is encoded (todo: really..?)
+  - (i read this on StackOverflow)
+
+so, i'm guessing that's what file extensions are for, to tell you how to read the file
+
+**depending on the encoding, each byte(s) represents a single character**
+  - for example, in utf-8, each single byte (or 8-bits) represents a single character, simple! :)
+  - perhaps bigger ones like utf-16 (two bytes) and utf-32 (4 bytes) are used for Chinese?? who knows, lol
+  
+and thus, programs (such as a text editor) can then be able to display characters (representations of bytes, depending on the encoding)
+
+(text editors by default use utf-8 encoding, except on Windows, where it can use it's own non-standard encoding windows-1552(?))
+
+
+
+
+
+
+https://en.m.wikipedia.org/wiki/Character_encoding
+  - the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.[1] The numerical values that make up a character encoding are known as "code points" and collectively comprise a "code space", a "code page", or a "character map".
+
+https://github.com/vegardit/haxe-strings#ansi-class
+  - this ansi class contains a bunch of useful ansi literals, which then can be sent to output (stdout), which'll then tell a program (a text widget, a terminal, an OS, whatever) to do stuff
+  
+https://en.wikipedia.org/wiki/ANSI_escape_code
+
+ascii
+  - a standard for the first 128 chars?
+  
+utf-8
+  - **the standard encoding, everything should be utf-8**, although, for some reason, it is different based on the target (the Haxe standard library must write individual code for each target)
+  
+ 
+  
