@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# DO NOT EXECUTE ME !!!
+
 # change file encoding
 
 # get encoding of the file

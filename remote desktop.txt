@@ -1,0 +1,13 @@
+NoVNC
+  - simple, spartan features
+  - actually uses VNC, in addition to other protocols
+  - healthy github repo, even installed ships with many Linux distros 'n software
+SPICE
+ - currently only supports LAN (todo: research github)
+ - newer, more ambitious
+x2go
+ - actually some kind of bigger terminal software, wherein the remote desktop part is just one feature
+ - terrible name
+ 
+ 
+ https://blog.hostseo.com/x2go-vs-novnc-vs-spice-what-is-the-best-software-for-remote-desktop-connection-rdp/
