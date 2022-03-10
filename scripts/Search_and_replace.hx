@@ -1,23 +1,52 @@
 
-// TODO: sys package autocompletes correctoly, but is not showing documentation for functions :(
-
-
-
 class Search_and_replace {
 
 	static function main() {
-
-		var file_path:String = Sys.args()[0]; // just gets the first argument
 
 		// check if FileSystem is available
 		#if sys
 		trace("file system can be accessed");
 		#end
-		// otherwise you will get the error: "You cannot access the sys package while targeting js (for sys.FileSystem)".
-	
-		// read content of a file
-		var content:String = sys.io.File.getContent(file_path);
-		trace(content);
+		// else it traces "You cannot access the sys package while targeting js (for sys.FileSystem)".
+
+
+		if (Sys.args().length == 0) {
+			trace('you forgot to add a file-path argument!');
+			return;
+		}
+
+		// get file-path argument and create a proper file-path string
+		var file_path:String = Sys.args()[0]; // just gets the first argument
+		var path = new haxe.io.Path(file_path); // not sure if needed
+
+		if (path.dir == null) {
+			var programPath = new haxe.io.Path(Sys.programPath();
+			path.dir = programPath.dir; 
+		}
+
+		file_path = path.toString();
+
+		// read
+		var fc:String = sys.io.File.getContent(file_path);
+		trace(fc);
+
+		// do stuff
+
+		// if only file argument, just save it
+		if (Sys.args().length == 1) {
+			// TODO: test if this turns it into unicode
+			sys.io.File.saveContent(file_path, fc);
+			return;
+		}
+
+		var search:String = Sys.args()[1];
+		var replace:String = Sys.args()[2];
+
+		//StringTools.contains(fc, search);
+		StringTools.replace(fc, search, replace);
+
+		// write
+		sys.io.File.saveContent(file_path, fc);
 	}
 }
 
