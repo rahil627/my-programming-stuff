@@ -21,6 +21,8 @@ and thus, programs (such as a text editor) can then be able to display character
 
 the main problem:
 
+"Microsoft failed to support UTF-8 until 2017."
+
 from https://en.m.wikipedia.org/wiki/Windows-1252:
 
 This character encoding is a superset of ISO 8859-1 in terms of printable characters, but differs from the IANA's ISO-8859-1 by using displayable characters rather than control characters in the 80 to 9F (hex) range. Notable additional characters include curly quotation marks and all the printable characters that are in ISO 8859-15 (at different places than ISO 8859-15). It is known to Windows by the code page number 1252, and by the IANA-approved name "windows-1252".
@@ -43,7 +45,7 @@ ascii
   - a standard for the first 128 chars?
   
 utf-8
-  - **the standard encoding, everything should be utf-8**, although, for some reason, it is different based on the target (the Haxe standard library must write individual code for each target)
+  - **the standard encoding, used by 98% of all web-sites now, everything should be utf-8**, although, for some reason, it's implementation is dfferent based on the target (the Haxe standard library must write individual code for each target)?
   
  
   
