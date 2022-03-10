@@ -1,5 +1,6 @@
 # display completions
 #-lib heaps
---interp
--main Search_and_replace
+#--interp
 -debug
+--run Search_and_replace
+temp.txt

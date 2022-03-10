@@ -20,7 +20,7 @@ class Search_and_replace {
 		var path = new haxe.io.Path(file_path); // not sure if needed
 
 		if (path.dir == null) {
-			var programPath = new haxe.io.Path(Sys.programPath();
+			var programPath = new haxe.io.Path(Sys.programPath());
 			path.dir = programPath.dir; 
 		}
 
