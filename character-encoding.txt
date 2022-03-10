@@ -19,8 +19,18 @@ and thus, programs (such as a text editor) can then be able to display character
 
 
 
+the main problem:
+
+from https://en.m.wikipedia.org/wiki/Windows-1252:
+
+This character encoding is a superset of ISO 8859-1 in terms of printable characters, but differs from the IANA's ISO-8859-1 by using displayable characters rather than control characters in the 80 to 9F (hex) range. Notable additional characters include curly quotation marks and all the printable characters that are in ISO 8859-15 (at different places than ISO 8859-15). It is known to Windows by the code page number 1252, and by the IANA-approved name "windows-1252".
+
+It is very common to mislabel Windows-1252 text with the charset label ISO-8859-1. A common result was that all the quotes and apostrophes (produced by "smart quotes" in word-processing software) were replaced with question marks or boxes on non-Windows operating systems, making text difficult to read. Most modern web browsers and e-mail clients treat the media type charset ISO-8859-1 as Windows-1252 to accommodate such mislabeling. This is now standard behavior in the HTML5 specification, which requires that documents advertised as ISO-8859-1 actually be parsed with the Windows-1252 encoding.[5]
 
 
+
+
+resources:
 https://en.m.wikipedia.org/wiki/Character_encoding
   - the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.[1] The numerical values that make up a character encoding are known as "code points" and collectively comprise a "code space", a "code page", or a "character map".
 
