@@ -1,0 +1,5 @@
+# display completions
+#-lib heaps
+--interp
+-main Search_and_replace
+-debug
