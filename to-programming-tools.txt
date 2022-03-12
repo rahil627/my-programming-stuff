@@ -1,0 +1,32 @@
+
+
+
+IDEs:
+Microsoft Visual Studio
+  - Visual Studio 20xx
+  - Visual Studio for Mac
+  - Visual Studio Code
+    - more like a suped up text editor?
+    - cross-platform (vis Electron)
+    
+Intellij IDEA
+  - top competitor?
+  - more Java focused?
+    
+JetBrains Rider
+  - i think they create IDEs specific to and specialized for each language
+  
+others??
+
+
+
+text editors:
+vim (neovim, etc.)
+  - classic, cli
+  - modal (reading(?), insert, visual, command(?))
+  - *heavily* key-board input user interface focused
+  
+  
+emacs
+  - classic, cli, competitor to vim
+  - much more than a text editor...
