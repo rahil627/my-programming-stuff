@@ -211,8 +211,8 @@ Dart
 Rust
   - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for *true game engine programmers*
     - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
-    - see: https://doc.rust-lang.org/std/keyword.mut.html
-    - and: https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
+    - mutability: https://doc.rust-lang.org/std/keyword.mut.html, https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
+    - https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
   - performance-oriented, allowing for many kinds of optimizations and implementations
   - **incredible documentation design**: a web book, docs, crates (it's package manager), all look *stunning*. Languages with smaller communities will have a tough time matching that!
     - see: https://doc.rust-lang.org/std/index.html, 
