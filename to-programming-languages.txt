@@ -10,6 +10,10 @@ ruby
 
 rust
   - https://github.com/rsaihe/zenith/tree/main/src/game
+  
+OCaml
+  - https://github.com/HaxeFoundation/haxe/blob/development/src/core/tOther.ml
+    - brain-exploding example of Haxe's compiler
 
 
 
