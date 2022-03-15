@@ -1,4 +1,9 @@
-
+SwiftUI
+  - closed-source, Apple's tool for making ui apps for Apple platforms (MacOS, iOS, etc.)
+  - https://developer.apple.com/xcode/swiftui/#
+  - **this is the current native method for creating ui apps for Apple's platforms**, but i think it already **supports Linux**, and **will support Windows in v5.3**, turning it into **exactly what i want: native iOS, non-native for everything other platform**
+  - Apple's products, including their software, tend to last decades, making this far more future-proof than Google's Flutter
+  - must use XCode to dev?
 
 
 Haxe
@@ -8,10 +13,22 @@ Haxe
     - currently supported back-ends: (TODO: update this) React-Native for mobile, coming soon: Heaps
   - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of your Haxe code, not just the coconut ui api, but the actual functions behind the ui. **this might just be the most future-proof solution that i know of...**
   
-Swift
-  - SwiftUI, closed-source, Apple's tool for making ui apps for Apple platforms (MacOS, iOS, etc.)
-    - https://developer.apple.com/xcode/swiftui/#
-    - **this is the current way to go for native apps for Apple's platforms, but i think it already supports Linux, and will support Window in v5.3**, making it a contemporary competitor of Flutter and Avalonia/Uno
+  
+  
+  
+conclusion:
+
+1. Flutter for quick native-looking app-making
+1. SwiftUI for real native Apple devices, native-looking for other devices, and still quick app-making workflow
+?. Qt
+?. Avalonia/Uno/MAUI
+
+it seems in general that **Flutter is amazing with an excited new community, quite like the web/javascript framework communities, but limited, whereas SwiftUI is native and nothing can replace that.** So, **for simple apps, use Flutter.** And **if you think you will hit Flutter's limitations--more techinical designs--use SwiftUI.** However, **in the long-run, it might just be better to invest in Swift**, as it is also the native language of Apple's products, and won't be disappearing any-time soon. It's as solid as amy other C-like language.
+
+constraints and limitations:
+need to look like native Apple to pass the Apple store, thus, the game-ui idea is botched for Apple apps (iOS and MacOS)
+
+    
 
 to lanauges.txt:
   - actually looks like a decent language, though rather dull...
