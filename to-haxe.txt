@@ -1,3 +1,4 @@
+# links / pinned
 https://github.com/Dvergar/awesome-haxe-gamedev
   - very good
   - lists all current engines and frameworks
@@ -8,9 +9,16 @@ https://github.com/nadako/awesome-haxe
 
 
 
+# set-up
 scripting?:
 wrapper method
   - https://github.com/haxelime/hxp
 
 haxelib method
   - i was told in Discord
+
+
+
+# the rest
+https://code.haxe.org/category/macros/add-parameters-as-fields.html
+  - macros are nuts!!!
