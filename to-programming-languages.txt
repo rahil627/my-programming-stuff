@@ -5,11 +5,28 @@ https://learnxinyminutes.com/
 good examples:
 aim for 2d space shooter classes
 
-ruby:
-https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
+ruby
+  - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
 
-rust:
-https://github.com/rsaihe/zenith/tree/main/src/game
+rust
+  - https://github.com/rsaihe/zenith/tree/main/src/game
+
+
+
+historical intrigues:
+BASIC (well, some variant of it):
+  - https://github.com/wls/Wumpus.bci/blob/master/wumpus.bci
+    - 'let' keyword for dynamic types?? :o
+  - surprisingly simple and readable, almost like it was specificalyl made for game programming! :o 
+  - lots of GOTOs
+  - many people cite this an their first prgramming language as a child
+  
+Commodore64 (c64)
+  - https://github.com/lvcabral/retaliate64/blob/master/source/gameData.asm
+  - everything is a "co-routine"
+  - feels closer to assembly, three-letter terse commands
+  
+
 
 
 # what langauge is best for my needs?
