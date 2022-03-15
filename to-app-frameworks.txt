@@ -6,6 +6,7 @@ React-Native
   - javascript, but perhaps now has other bindings??
   - the syntax / ui lanugage of React is like horrible HTML/CSS
   - **the most mature/oldest one** (excluding Qt), setting a new standard, an therefore has the largets library collection
+    - expo.io builds the mobile apps for you, so you don't need a Mac! :o
   - open-source and (*was?*) extremely popular among trendy trashy startup companies, but, **it feels more more abandoned now, i think even Facebook stopped using it now, lol!**
   - Facebook
 
@@ -33,6 +34,7 @@ Qt
 
 Flutter
   - ...
+  - CodeMagic might be similar to React's expo.io, builing the automating build apps for you, 500 build minute free per month
   
   
 # other solutions
