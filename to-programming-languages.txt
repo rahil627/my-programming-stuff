@@ -3,10 +3,13 @@
 https://learnxinyminutes.com/
 
 good examples:
+aim for 2d space shooter classes
 
 ruby:
 https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
 
+rust:
+https://github.com/rsaihe/zenith/tree/main/src/game
 
 
 # what langauge is best for my needs?
