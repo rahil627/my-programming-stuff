@@ -161,7 +161,7 @@ C++
   - adds generics ("templates"), enums, and other now basic features..
   - loved/hated, mostly hated, i think
   - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
-  - also a choice of compilers (gcc, vs, dev-cpp, etc.)
+  - also a problem of multiple compilers, each of which only work for certain version or certain features?? (gcc, vs, dev-cpp, etc.)
   
 C
  - **used as the "low-level" language by most electronic devices**
@@ -210,15 +210,20 @@ Dart
 
 Rust
   - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for *true game engine programmers*
-    - all of that of course comes with the cost of a slower development time
-  - performance-oriented, allowing for many kinds of optimizations and implementations (compiles, static-typed)
+    - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
+    - see: https://doc.rust-lang.org/std/keyword.mut.html
+    - and: https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
+  - performance-oriented, allowing for many kinds of optimizations and implementations
+  - **incredible documentation design**: a web book, docs, crates (it's package manager), all look *stunning*. Languages with smaller communities will have a tough time matching that!
+    - see: https://doc.rust-lang.org/std/index.html, 
+    - the book: https://doc.rust-lang.org/book/
   - composition > inheritance
   - Go's concurrency/threading features
   - brace-delimited style
   - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression…  
   - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
   - people have went crazy making Rust bindings for nearly every C/C++ library out there.., maybe writing C bindings have become easier? ...Or area they completely re-writing all these libraries!?
-  - Bevy game engine
+  - Bevy game engine, also see "awesome gamdev rust" on github
   - Mozilla, and as always, open-source
 
 Odin
