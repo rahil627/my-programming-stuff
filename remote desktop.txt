@@ -1,13 +1,29 @@
+ChromeRDP
+  - like most of Google's products: it simply works, but, there's zero customization and zero community-support
+  - the desktop version is different and superior to the iOS version, offering some options
+    - cannot use modifier keys on the iOS version
+
 NoVNC
   - simple, spartan features
   - actually uses VNC, in addition to other protocols
   - healthy github repo, even installed ships with many Linux distros 'n software
+  
 SPICE
  - currently only supports LAN (todo: research github)
  - newer, more ambitious
+
+Screens
+  - premiujm iOS software with a premium cost
+  
+JumpScreen
+  - premium iOS software
+ 
 x2go
  - actually some kind of bigger terminal software, wherein the remote desktop part is just one feature
  - terrible name
  
- 
- https://blog.hostseo.com/x2go-vs-novnc-vs-spice-what-is-the-best-software-for-remote-desktop-connection-rdp/
+
+https://en.m.wikipedia.org/wiki/Comparison_of_remote_desktop_software
+  - quite extensive...
+  
+https://blog.hostseo.com/x2go-vs-novnc-vs-spice-what-is-the-best-software-for-remote-desktop-connection-rdp/
