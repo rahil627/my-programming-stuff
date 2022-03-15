@@ -12,6 +12,10 @@ just a note: i've got quite a few posts on the Heaps forum... but it seems the D
 
 # set-up
 scripting?:
+hscript
+  - https://lib.haxe.org/p/hscript/
+    - 
+
 wrapper method
   - https://github.com/haxelime/hxp
 
