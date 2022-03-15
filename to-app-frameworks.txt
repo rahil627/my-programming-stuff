@@ -1,11 +1,28 @@
 
+
+
 Haxe
   - HaxeUI
     - currently supported back-ends: (TODO: update this), wxWidgets for desktop OSs, Heaps, NME, OpenFL (therefore HaxeFlixel and HaxePunk (rip))
   - coconut
     - currently supported back-ends: (TODO: update this) React-Native for mobile, coming soon: Heaps
   - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of your Haxe code, not just the coconut ui api, but the actual functions behind the ui. **this might just be the most future-proof solution that i know of...**
+  
+Swift
+  - SwiftUI, closed-source, Apple's tool for making ui apps for Apple platforms (MacOS, iOS, etc.)
+    - https://developer.apple.com/xcode/swiftui/#
+    - **this is the current way to go for native apps for Apple's platforms, but i think it already supports Linux, and will support Window in v5.3**, making it a contemporary competitor of Flutter and Avalonia/Uno
 
+to lanauges.txt:
+  - actually looks like a decent language, though rather dull...
+  - "core libraries" seem to be the same as .NET core libraries
+    - https://www.swift.org/core-libraries/
+  - https://www.swift.org/about/
+    - "One of the most exciting aspects of developing Swift in the open is knowing that it is now free to be ported across a wide range of platforms, devices, and use cases.
+       Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next."
+  
+Kotlin MultiFramework
+  - terrible name... does it compile to C now??
 
 
 
