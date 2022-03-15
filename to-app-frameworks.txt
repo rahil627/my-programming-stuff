@@ -34,7 +34,6 @@ Qt
 
 Flutter
   - ...
-  - CodeMagic might be similar to React's expo.io, builing the automating build apps for you, 500 build minute free per month
   
   
 # other solutions
@@ -45,6 +44,14 @@ Haxe
     - currently supported back-ends: (TODO: update this) **React-Native for mobile**, coming soon: Heaps
   - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of your Haxe code, not just the coconut ui api, but the actual functions behind the ui. **this might just be the most future-proof solution that i know of...**
   
+  
+  
+# tools
+**CodeMagic**
+  - builds apps for you, so that you don't need a Mac, iOS device, Windows(?), and Android to make stuff
+  - 500 build minute free per month
+  - supports: native iOS/Android, Flutter, React Native, Unity, and some older ui frameworks
+  - https://codemagic.io/start/
   
   
 conclusion:
