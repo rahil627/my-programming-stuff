@@ -1,0 +1,28 @@
+
+
+
+my personal posts:
+
+https://github.com/ocornut/imgui/discussions/5090
+
+title: is it okay to use imgui for iOS apps?
+ 
+PathogenDavid's answer:
+TL;DR: Just because you can doesn't mean you should.
+
+is it okay to use imgui for iOS apps?
+There's no reason you couldn't (and people do), but I personally would not unless it's just for debugging stuff. IMO using Dear ImGui as the primary UI for mobile apps is shoving a square peg in the round hole. It was designed around desktop UI paradigms, not mobile ones.
+
+i’ve read quite a few times that the main problem with immediate gui, in general, as opposed to the normal “retained” gui, is that it can be CPU-expensive, for drawing the entire GUI on every frame.
+
+First, is that even true? lol
+I wouldn't say this is inherently true, but it is somewhat true for Dear ImGui. Dear ImGui was first and foremost designed for games, in which situation you're probably rendering a lot more complex stuff at 60 FPS regardless so its overhead if negligible.
+
+There are some workarounds for this, look at the various power saving PRs. #4076 #3124 #2749
+
+I personally just want to make simple apps for iOS, [...], and i don’t care about native feel anyway.
+I would be concerned about cert. Dear ImGui won't play nice with VoiceOver and I don't believe the text input would properly support things like auto complete or correction. (If it does I can't imagine it works as well as the native text input widgets.) I don't have experience with cert on iOS but my understanding is Apple is very picky and I can't imagine they'd like these things.
+
+Also my understanding is Apple rejects apps which they think depart too far from their UI guidelines.
+
+(huh, sorry to post here, as i see the only category is issues... but i read on the actual forums that it was better to post here..)
