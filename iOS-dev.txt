@@ -1,9 +1,13 @@
 
-ohhhh iOS... how i love your hardware, but why can't i use you for *everything?*
+ohhhh iOS... how i love you so... but why can't i use you for *everything??*
 
+
+#programming
 
 working copy
 github.com
+kodex?
+  - no autocomplete server?
 
 shells:
 ish
@@ -19,6 +23,12 @@ screens
   - app, $20
 chrome remote desktop
   - app, free
+  
+  
+# others
+paper, sketching / drawing
+ulysses vs bear vs etc.
+noto? for a simple text editor
 
 
 
