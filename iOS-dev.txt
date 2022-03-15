@@ -9,12 +9,20 @@ github.com
 kodex?
   - no autocomplete server?
 
-shells:
+linux sandbox:
 ish
+  - alpine linux distro, busybox, super fast cute little local cli linux
+  - had problems with nvim (colors? keyboard keys?? don't remember...)
+  
 blink.sh
+  - requires iOS 15 :(
+  - incredible feature-set, made for techies
+  - keyboard re-mappings
+  - VS Code connection support (through various ways: VS Code web, etc.)
 
 terminals:
 **termius**
+  - perfect
 
 mobile remote desktop clients:
 noVNC
