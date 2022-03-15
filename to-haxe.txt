@@ -7,6 +7,10 @@ https://github.com/Dvergar/awesome-haxe-gamedev
 https://github.com/nadako/awesome-haxe
   - more personal, toward developing the haxe langauge
   
+  
+the codebook is especially good for learning bit-by-bit, especially for macros!
+
+  
 # forums
 just a note: i've got quite a few posts on the Heaps forum... but it seems the Discord is a better place
 
@@ -27,3 +31,8 @@ haxelib method
 # the rest
 https://code.haxe.org/category/macros/add-parameters-as-fields.html
   - macros are nuts!!!
+  
+tink (lib)
+  - macro heaven
+  
+  
