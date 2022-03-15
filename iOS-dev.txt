@@ -1,0 +1,26 @@
+
+ohhhh iOS... how i love your hardware, but why can't i use you for *everything?*
+
+
+working copy
+github.com
+
+shells:
+ish
+blink.sh
+
+terminals:
+**termius**
+
+mobile remote desktop clients:
+noVNC
+  - in browser, free
+screens
+  - app, $20
+chrome remote desktop
+  - app, free
+
+
+
+
+https://arslan.io/2019/01/07/using-the-ipad-pro-as-my-development-machine/
