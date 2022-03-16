@@ -26,11 +26,14 @@ can either use the cli or create an hxml file, where each line is a command argu
 haxe --main MainClass --interp
   - for interpreter
   
-or:
+or, via buildFile.hxml file:
 --interp
 --main MainClass
 -lib heaps (installed via haxelibs)
 -cp sourceFolder
+
+then run haxe buildFile.hxml
+  
   
 haxe --main MainClass -js app.js
   - results in app.js and app.map.js (or something like that)
@@ -38,7 +41,8 @@ haxe --main MainClass -js app.js
   
 haxe --main MainClass -hl build.hl
   - be sure to `haxelib install hashlink`
-  - results in the single file buil.hl
+  - results in a single file build.hl containing bytecode
+  - todo: maybe has other arguments for generating a C binary
 
 haxe --main MainClass -cpp build
   - be sure to `haxelib install hashlink`
