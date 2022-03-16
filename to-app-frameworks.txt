@@ -1,6 +1,6 @@
 # native
 React-Native
-  - the grand-daddy of native frameworks?
+  - the grand-daddy of native frameworks?, and still perhaps the most popular (as of 2022), though on a decline..
   - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
   - **uses native device componenets / wrappers**
   - javascript, but since haxe has bindings, perhaps there are other bindings?? :o
@@ -16,8 +16,8 @@ SwiftUI
   - **this is the current native method for creating ui apps for Apple's platforms**, but i think it already **supports Linux**, and **will support Windows in v5.3**, turning it into **exactly what i want: native iOS, non-native for everything other platform**
   - Apple's products, including their software, tend to last decades, making this far more future-proof than Google's Flutter
   - because it's rather new, **it even has the best api, perhaps even simpler/better than Flutter!**
-  - must learn native development (UIKit, AppKit, etc.)
-  - **must use XCode/MacOS to dev**?
+  - **must still learn native libraries (UIKit, AppKit, etc.)**
+  - **must use XCode/MacOS to dev** :(
   - Apple
 
 Jetpack Compose
@@ -40,7 +40,7 @@ Qt
   - feels like a massive tool :(, like as big as Unity!
 
 Flutter
-  - ...
+  - the contempory banger, quickly rising in popularity, equaling React-Native, top 2
   
   
 # other solutions
