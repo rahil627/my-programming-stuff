@@ -9,16 +9,19 @@ React-Native
   - **the most mature/oldest one** (excluding Qt), setting a new standard, an therefore has the largets library collection
     - expo.io builds the mobile apps for you, so you don't need a Mac! :o
   - open-source and (*was?*) extremely popular among trendy trashy startup companies, but, **it feels more more abandoned now, i think even Facebook stopped using it now, lol!**
+  - great VS Code dev experience, although still dynamically typed
   - Facebook
 
 SwiftUI
-  - closed-source, Apple's tool for making ui apps for Apple platforms (MacOS, iOS, etc.)
+  - Apple's tool for making ui apps for Apple platforms (MacOS, iOS, etc.)
   - https://developer.apple.com/xcode/swiftui/#
   - **this is the current native method for creating ui apps for Apple's platforms**, but i think it already **supports Linux**, and **will support Windows in v5.3**, turning it into **exactly what i want: native iOS, non-native for everything other platform**
   - Apple's products, including their software, tend to last decades, making this far more future-proof than Google's Flutter
   - because it's rather new, **it even has the best api, perhaps even simpler/better than Flutter!**
   - **must still learn native libraries (UIKit, AppKit, etc.)**
-  - **must use XCode/MacOS to dev** :(
+  - **need a MacOS to dev** :(
+  - **need to use god awful XCode to dev??**
+  - **closed-source means you cannot figure out what the code really does, you just pray with API documentation**, and that documentation is poor (**remember your time with Cocos2D and that shit networking code?? *ugh*)
   - Apple
 
 Jetpack Compose
@@ -42,6 +45,7 @@ Qt
 
 Flutter
   - the contempory banger, quickly rising in popularity, equaling React-Native, top 2
+  - ...
   
   
 # other solutions
@@ -64,17 +68,25 @@ Haxe
   
 conclusion:
 0. Haxe/coconut/react-native
-1. SwiftUI for real native Apple devices, native-looking or Apple-looking for other devices(??), and a very contemporary app-making workflow (equal to or better than Flutter!)
-2. Flutter for quick *native-looking* app-making, but not if you want native completely components/widgets (TextView, for example),
-3. React Native for the open-source libraries, but *nasty* HTML/CSS ui language, still the best solution for web targets though
-?. Avalonia/Uno/MAUI
+1. Flutter for quick *native-looking* app-making, but not if you want native completely components/widgets (TextView, for example),
+2. React Native for the open-source javascript libraries and community, but *nasty* HTML/CSS ui language, still the best solution for web targets though
+2. SwiftUI for real native Apple devices, (cross-platform support in the works???), and a very contemporary app-making workflow (equal to or better than Flutter!)
+?. Avalonia/Uno/MAUI (Xamarin)
 ?. Qt (with official python bindings)
 
-it seems in general that **Flutter is amazing with an excited new community, quite like the web/javascript framework communities, but limited, whereas SwiftUI is native and nothing can replace that.** So, **for simple apps, can use Flutter.** And **if you think you will hit Flutter's limitations--more techinical designs--use SwiftUI**. However, **in the long-run, it might just be better to invest in Swift**, as it is also the native language of Apple's products, and won't be disappearing any-time soon. The language itself as solid as any other C-like language.
+it seems in general that **Flutter is amazing with an excited new community, quite like the web/javascript framework communities, but limited, whereas SwiftUI is native and nothing can replace that.** So, **for simple apps, can use Flutter.** And **if you think you will hit Flutter's limitations--more techinical designs--use SwiftUI**. However, in the long-run, it might just be better to invest in Swift, as it is also the native language of Apple's products, and won't be disappearing any-time soon. The language itself as solid as any other C-like language.
+
+yeah, the MacOS/XCode dev environment is *terrible*. I'd much rather just use VS Code, or straight up nvim for a relaxed scripting fell.
+
+also, although i haven't used javascript for a decade, i'm just not interested. It sounds like a messs. I don't need a million libraries. Just a good standard library is enough... *maybe.* Can always check npm for libs later on to compare...
+
+so, that just leaves Flutter and simple 'n plain Dart. I'm okay with that..!
+
+
 
 constraints and limitations:
 need to look like native Apple to pass the Apple store, thus, the game-ui idea is botched for Apple apps (iOS and MacOS)
-
+need a MacOS and must use XCode for SwiftUI, *gross*
     
 
 
@@ -100,6 +112,12 @@ https://blog.udemy.com/flutter-vs-react-native/
 
 https://news.ycombinator.com/item?id=23198914
   - good reddit-like data
+
+
+I’ve spent the last week learning SwiftUI to see how hard it would be to reimplement Notion in a performant way. It seems really ... unfinished. Like, the default List view is really hard to style. I spent 4 hours yesterday trying to get an unstyled text Button to have a hit target bigger than the characters themselves. Adding a frame with a background worked, but if the frame had no background (or a transparent background) then the hit target would stay tiny. I ended up fixing it by just reading through every property method in swiftui and guessing. It reminds me of web development in the early days of jQuery.
+**If the SwiftUI code were opensource it would be much more pleasant - I could paw through the code if I needed to, file issues, and so on. But the whole experience compared to writing typescript with VS Code is shockingly bad. With the preview open Xcode sometimes stutters so much that it misses key presses - so I’ll type a function name and it’ll come out missing letters, because apparently I wasn’t typing slowly enough for my $3000 computer from 2016 to keep up.**
+
+
 
 
 
