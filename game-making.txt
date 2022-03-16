@@ -1,0 +1,4 @@
+
+https://community.heaps.io/u/rahil627/summary
+  - my posts on Heaps community forums contains a documentation of a lot of my early struggles with first figuring out what Heaps is, and then the beginnings of making a game engine (or at least an entity system..)
+
