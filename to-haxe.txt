@@ -60,6 +60,12 @@ haxelib install someLibrary
 scripting?:
 i think Haxe has top-level functions, so don't even need a class?
 
+since Haxe comes with an interpreter, it's pretty simple to run a script using the haxe command:
+`haxe --main ScriptName --interp`
+
+
+otherwise, there are the following options for more scripting power:
+
 hscript
   - https://lib.haxe.org/p/hscript/
     - ??
