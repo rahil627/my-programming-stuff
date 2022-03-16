@@ -7,15 +7,21 @@ https://github.com/Dvergar/awesome-haxe-gamedev
 https://github.com/nadako/awesome-haxe
   - more personal, toward developing the haxe langauge
   
-https://github.com/haddock7/hlimgui
-  - imgui bindings
-  
-  
 the codebook is especially good for learning bit-by-bit, especially for macros!
+
 
   
 # forums
 just a note: i've got quite a few posts on the Heaps forum... but it seems the Discord is a better place
+
+
+# libs
+https://github.com/haddock7/hlimgui
+  - imgui bindings
+  
+
+
+
 
 # set-up
 scripting?:
