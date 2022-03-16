@@ -1,4 +1,16 @@
 
+
+
+
+how to get rid of files with sensitive data in the entire history of a git repo?
+  - https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+  - it uses a tool: git filter-repo
+  - it's a bit complex, so, if the git repo isn't too important, it might just be easier to re-create the git repo (delete and init)
+
+how to delete git from a local repo?
+  - delete the .git folder
+  - https://stackoverflow.com/questions/1514054/how-do-i-delete-a-local-repository-in-git
+
 how to change the location of a submodule
   - git submodule set-url [path to submodule] [url]
   - https://stackoverflow.com/questions/60003502/git-how-to-change-url-path-of-a-submodule#60003644
