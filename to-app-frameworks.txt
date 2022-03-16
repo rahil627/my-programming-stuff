@@ -10,7 +10,8 @@ React-Native
     - expo.io builds the mobile apps for you, so you don't need a Mac! :o
   - open-source and (*was?*) extremely popular among trendy trashy startup companies, but, **it feels more more abandoned now, i think even Facebook stopped using it now, lol!**
   - great VS Code dev experience, although still dynamically typed
-  - Facebook
+  - Facebook (abandoned to open-source?)
+  - Microsoft..? https://microsoft.github.io/react-native-windows/
 
 SwiftUI
   - Apple's tool for making ui apps for Apple platforms (MacOS, iOS, etc.)
