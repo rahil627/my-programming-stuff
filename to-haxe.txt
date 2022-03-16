@@ -16,6 +16,10 @@ just a note: i've got quite a few posts on the Heaps forum... but it seems the D
 
 
 # libs
+https://github.com/HaxeFoundation
+  - contains the language, all compiler/target code, the entire site (site, manual, codebook, docs, etc.), and more goodies
+  - can easily edit these to update anything: the language, site, whatever!
+
 https://github.com/haddock7/hlimgui
   - imgui bindings
   
