@@ -19,6 +19,14 @@ just a note: i've got quite a few posts on the Heaps forum... but it seems the D
 https://github.com/haddock7/hlimgui
   - imgui bindings
   
+https://code.haxe.org/category/macros/add-parameters-as-fields.html
+  - macros are nuts!!!
+  
+tink
+  - macro heaven
+
+  
+  
   
 # haxe cli
 can either use the cli or create an hxml file, where each line is a command argument
@@ -53,56 +61,59 @@ haxe --main MainClass -cpp build
 haxelib searchRegEx
 haxelib install someLibrary
 
+  
+  
 
 
 
-# set-up
-scripting?:
+
+
+# scripting?:
+you can't do #!/usr/haxe or whatever to make proper shell scripts, but:
+
 i think Haxe has top-level functions, so don't even need a class?
 
 since Haxe comes with an interpreter, it's pretty simple to run a script using the haxe command:
 `haxe --main ScriptName --interp`
 
 and if that't too much, or if you don't want to remember the command arguments, you can just create an hxml file. Though it's a little inconvenient to have two files... **It's probably just best to add the haxe command *in* the script file itself, on the top of the file, commented out.**
+`haxe build-file.hxml`
 
 otherwise, there are the following options for more scripting power:
+
+wrapper method: hxp
+  - https://github.com/haxelime/hxp
+    - you can put the followin directly in the script file, thereby removing the need for a hxml build file
+    - `var hxml = new HXML ({ cp: ["src"], main: "Main", js: "bin/index.js" });`
+      `hxml.build ();`
+      - now thinking about it, **i might just prefer seperating the script from building after all.. I don't think i'd want to add this code to every script file.. :/**
+    - then can use `hxp script-file` to run it
+    - extend hxp.Script to get CLI-like argument handling, perhaps a bit more complex than just the Sys.args() string
+      - **i personally wouldn't go this route as it creates a dependency on hxp for all of your scripts! :/, it's better to just use a CLI parsing lib only when you need it, and use `import CLILib`**
+    
+
+haxelib method
+  - i was told of this in Discord
+  - you'd still need a json file to set the haxelib though, so, same problem, no? How is this different or better than just having an hxml file?
+  - maybe you could run it from anywhere..? `haxelib ScriptClass` will work anywhere?
+  
 
 hscript
   - https://lib.haxe.org/p/hscript/
     - "Parser and interpreter for Haxe expressions"
     - written by Nicholas, includes:
-    - a sub-set of haxe? Like haxe without classes? dynamically typed
-    - not only can you parse a script and run it, but you can set variables of the interpreter!
-    - it also has a tiny library for super super advanced stuff... it's something similar to the level of Haxe macros... like AST level stuff
+    - this is contains and optional library for super super advanced stuff... it's something similar to the level of Haxe macros... like AST level stuff :o
       - "`hscript.Macro` : convert Haxe macro into hscript Expr"
+    - contains sub-set of haxe?? Like haxe without classes? dynamically typed
+    - not only can you parse a script and run it, but you can set variables of the interpreter!
+      - **thus seperating variable/configs from the actual script/program** *whoa..*
 
 ```    
 var parser = new hscript.Parser();
-var program = parser.parseString(script);
+var program = parser.parseString(script); // can just read a file to get the script's string 
 var interp = new hscript.Interp();
 interp.variables.set("Math",Math); // share the Math class
 interp.variables.set("angles",[0,1,2,3]); // set the angles list
 trace( interp.execute(program) ); 
 ```
 
-wrapper method
-  - https://github.com/haxelime/hxp
-    - use `hxp script-file` to run it
-    - `var hxml = new HXML ({ cp: ["src"], main: "Main", js: "bin/index.js" });`
-      `hxml.build ();`
-    - extend hxp.Script to get CLI-like argument handling, perhaps a bit more complex than just Sys.args()
-    
-
-haxelib method
-  - i was told in Discord
-
-
-
-# the rest
-https://code.haxe.org/category/macros/add-parameters-as-fields.html
-  - macros are nuts!!!
-  
-tink (lib)
-  - macro heaven
-  
-  
