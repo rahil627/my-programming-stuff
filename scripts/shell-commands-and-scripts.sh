@@ -2,6 +2,12 @@
 
 # DO NOT EXECUTE ME !!!
 
+
+diff file-path file-path-2 --color
+diff folder-path folder-path-2 --color
+
+
+
 # change file encoding
 
 # get encoding of the file
