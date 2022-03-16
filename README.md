@@ -11,10 +11,8 @@ rename 'my-stuff' to stuff, 'my notes' to notes, 'n so on
 
 # my programming-related stuff
 includes:  
- - code editor themes, fonts
- - vim configs, etc.
- - code snippets
+ - code editor themes, fonts, configs
  - server configs ("dot files")
- - shell scripts
+ - scripts
 
 i found some from my first job... wowww
