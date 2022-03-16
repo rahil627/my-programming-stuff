@@ -1,3 +1,9 @@
+
+class name cannot have '-' in it! :o
+
+
+
+
 # links / pinned
 https://github.com/Dvergar/awesome-haxe-gamedev
   - very good
