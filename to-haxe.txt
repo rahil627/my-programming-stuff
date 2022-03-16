@@ -19,19 +19,53 @@ just a note: i've got quite a few posts on the Heaps forum... but it seems the D
 https://github.com/haddock7/hlimgui
   - imgui bindings
   
+  
+# haxe cli
+can either use the cli or create an hxml file, where each line is a command argument
+
+haxe --main MainClass --interp
+  - for interpreter
+  
+or:
+--interp
+--main MainClass
+-lib heaps (installed via haxelibs)
+-cp sourceFolder
+  
+haxe --main MainClass -js app.js
+  - results in app.js and app.map.js (or something like that)
+  - then you need to create a basic HTML page to include the script
+  
+haxe --main MainClass -hl build.hl
+  - be sure to `haxelib install hashlink`
+  - results in the single file buil.hl
+
+haxe --main MainClass -cpp build
+  - be sure to `haxelib install hashlink`
+  - results with a folder build, including generated C++ sources and bin(aries)
+
+
+# haxelibs
+haxelib searchRegEx
+haxelib install someLibrary
 
 
 
 
 # set-up
 scripting?:
+i think Haxe has top-level functions, so don't even need a class?
+
 hscript
   - https://lib.haxe.org/p/hscript/
     - ??
 
 wrapper method
   - https://github.com/haxelime/hxp
-    - ??
+    - `var hxml = new HXML ({ cp: ["src"], main: "Main", js: "bin/index.js" });`
+      `hxml.build ();`
+    - extend hxp.Script to get CLI-like argument handling, perhaps a bit more complex than just Sys.args()
+    
 
 haxelib method
   - i was told in Discord
