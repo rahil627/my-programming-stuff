@@ -98,6 +98,9 @@ https://www.donnfelker.com/flutter-just-might-work/
 https://blog.udemy.com/flutter-vs-react-native/
   - explains the architecturs of both
 
+https://news.ycombinator.com/item?id=23198914
+  - good reddit-like data
+
 
 
 
