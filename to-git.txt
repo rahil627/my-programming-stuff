@@ -1,11 +1,13 @@
 
 
-
+how to push a new repo?
+  - first create a repo on github
+  - then, it will provide instructions on how to init, commit, and push the new repo
 
 how to get rid of files with sensitive data in the entire history of a git repo?
   - https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
   - it uses a tool: git filter-repo
-  - it's a bit complex, so, if the git repo isn't too important, it might just be easier to re-create the git repo (delete and init)
+  - it's a bit complex, so, if the git repo isn't too important, it might just be easier to re-create the git repo
 
 how to delete git from a local repo?
   - delete the .git folder
