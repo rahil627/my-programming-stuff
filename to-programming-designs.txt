@@ -1,3 +1,16 @@
+
+
+wisdom from a wise banana:
+you are mutating (re-assigning) a single variable across multiple files/classes, please don't do this
+
+
+
+https://github.com/Aidan63/ecs
+  - a crazy powerful ecs using Haxe's macros
+  
+
+
+# design patterns
 https://gameprogrammingpatterns.com/contents.html
   - Bob's book, online version
   
