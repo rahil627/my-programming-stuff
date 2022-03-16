@@ -1,10 +1,11 @@
 # native
 React-Native
-  - the grand-daddy of native frameworks?, and still perhaps the most popular (as of 2022), though on a decline..
+  - the grand-daddy of native frameworks?, and still perhaps the most popular (as of 2022)
   - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
   - **uses native device componenets / wrappers**
   - javascript, but since haxe has bindings, perhaps there are other bindings?? :o
-  - the syntax / ui lanugage of React is like horrible HTML/CSS
+    - javascript has the biggest library tho (npm)
+  - the syntax / ui lanugage of React is like HTML-like :/
   - **the most mature/oldest one** (excluding Qt), setting a new standard, an therefore has the largets library collection
     - expo.io builds the mobile apps for you, so you don't need a Mac! :o
   - open-source and (*was?*) extremely popular among trendy trashy startup companies, but, **it feels more more abandoned now, i think even Facebook stopped using it now, lol!**
