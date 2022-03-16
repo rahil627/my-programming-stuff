@@ -102,38 +102,27 @@ Xamarin -> MAUI
   
 conclusion:
 0. Haxe/coconut/react-native
-  - this solution is ridiculously god: best of both worlds: Haxe power, can use javascript libraries, compile to javascript though?
-1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets, faster compiled language, simpler by design
-2. React Native for the open-source javascript libraries and community, *nasty* HTML/CSS ui language, although maybe not he best performance for mobile, it's still the best solution for web targets, and **you get access to native components!!**
-3. Qt (with official python bindings), an interesting option...
-?. Avalonia/Uno/MAUI (Xamarin)
-x. SwiftUI for real native dev for all Apple devices (but what about web and windows? :/ )
+  - this solution is ridiculously good: best of both worlds: **ui-framework independent**, Haxe power, **can use javascript libraries(?)**, but if it compiles to javascript, it won't be any faster...
+2. React Native for the **huge open-source javascript libraries and community**, *nasty* HTML/CSS ui language, although maybe not he best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
+  - alts: MAUI
+2. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??), thus quite limiting(??), faster compiled language, simpler by design, **covers most use cases**
+  - alts: Avalonia, Uno
+?. Qt, with official python bindings, maybe can write C++ code to access native componenets?, but that would be *grooosss*
 
-it seems in general that **Flutter is amazing with an excited new community, quite like the web/javascript framework communities, but limited, whereas SwiftUI is just for Apple native stuff.** So, **for simple apps, can use Flutter.** And **if you think you will hit Flutter's limitations--more techinical designs--use either React Native or SwiftUI**. However, in the long-run, it might just be better to invest in Swift, as it is also the native language of Apple's products, and won't be disappearing any-time soon. The language itself as solid as any other C-like language.
+it seems in general that **Flutter is amazing with an excited new community, quite like React Native was in the past, but limited, whereas React Native still lives on, native support for everything, now including Microsoft covering the Windows and even MacOS targets (surely a big stab at Apple's closed source nature). Flutter can be used for most simple cases. React Native can be used for more technical, experimental, custom cases that reqoires much native component access, and doesn't constrain.
 
-yeeeaaah, the MacOS/XCode dev environment is *terrible*. I'd much rather just use VS Code or straight up nvim for a relaxed scripting feel. :) happiness comes first!
+SwiftUI is constrained by it's terrible MacOS/XCode dev environment. I'd much rather just use VS Code or even straight up nvim for a relaxed scripting feel. :) happiness *matters*.
 
-also, although i haven't used javascript for a decade, i'm just not interested. Not then, not now. It sounds like a messs. A mess of shiity web devs. I don't need a million libraries. Just one good standard library is enough... *maybe.* Can always check npm for libs later on to compare... Or who knows, maybe they'll just build a javascript compiler, like Haxe?
+also, although i haven't used javascript for a decade, i'm just not interested. Not then, not now. It sounds like a messs. A mess of shiity web devs. I personally don't need a million libraries. Just one good standard library is enough... *maybe.* Can always check npm for libs later on to compare... Or who knows, maybe Google/Dart will just build a javascript compiler, like Haxe (so that you can use javascript libraries)..
 
-so, that just leaves Flutter and Dart. I'm okay with that..! It sounds like Haxe anyway. :)
+so, that leaves **trying Flutter and Dart first, then React Native second, as Flutter can be a bit faster in development, simpler. But in the long run, i think hybrid ui frameworks such as React Native are indeed the way to go.**
 
 
 
 constraints and limitations:
-need to look like native Apple to pass the Apple store, thus, the game-ui idea is botched for Apple apps (iOS and MacOS)
-need a MacOS and must use XCode for SwiftUI, *gross*
+in order to publish to the App store, the app needs to appear native, thus, the game-ui idea is botched for Apple apps (iOS and MacOS)
+in order to use SwiftUI, you need a MacOS, and you need to use XCode (and XCode is garbage).
     
-
-
-
-to languages.txt:
-Swift
-  - actually looks like a decent language, though rather dull...
-  - "core libraries" seem to be the same as .NET core libraries
-    - https://www.swift.org/core-libraries/
-  - https://www.swift.org/about/
-    - "One of the most exciting aspects of developing Swift in the open is knowing that it is now free to be ported across a wide range of platforms, devices, and use cases.
-       Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next."
   
 
 
