@@ -1,9 +1,9 @@
 # native
 React-Native
   - the grand-daddy of native frameworks?
-  - it's actually a specific component, that goes alone with React. React is the front-end framework. React Native is the native back-end.
+  - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
   - **uses native device componenets / wrappers**
-  - javascript, but perhaps now has other bindings??
+  - javascript, but since haxe has bindings, perhaps there are other bindings?? :o
   - the syntax / ui lanugage of React is like horrible HTML/CSS
   - **the most mature/oldest one** (excluding Qt), setting a new standard, an therefore has the largets library collection
     - expo.io builds the mobile apps for you, so you don't need a Mac! :o
@@ -23,10 +23,17 @@ SwiftUI
 Jetpack Compose
   - Google Android's version of SwiftUI ?? *gross* :vomiting_face:
   - still too new (as of 2022)
+  
+Kotlin MultiFramework
+  - ...how is this different from Jetpack compose..??
+  - terrible name... does it compile to C now??
+  - is it Google? why would Google have 3 UI frameworks??
+
 
 # non-native
 Qt
   - the grand-daddy of all non-native ui frameworks
+  - i didn't even know it still existed!!
   - impressive use history: from contemporary use in Linux's KDE desktop UI(!!!) to Valve's Source Engine
   - official python bindings :o
   - non-official rust bindings
@@ -69,6 +76,8 @@ need to look like native Apple to pass the Apple store, thus, the game-ui idea i
 
     
 
+
+
 to lanauges.txt:
   - actually looks like a decent language, though rather dull...
   - "core libraries" seem to be the same as .NET core libraries
@@ -77,16 +86,12 @@ to lanauges.txt:
     - "One of the most exciting aspects of developing Swift in the open is knowing that it is now free to be ported across a wide range of platforms, devices, and use cases.
        Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next."
   
-Kotlin MultiFramework
-  - terrible name... does it compile to C now??
 
 
 
-React-Native
-  - has haxe bindings?
-  - the coconut ui library has a react-native back-end
 
-
+https://www.donnfelker.com/flutter-just-might-work/
+  - good post, covers many
 
 
 https://blog.udemy.com/flutter-vs-react-native/
