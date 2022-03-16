@@ -186,6 +186,8 @@ C++
   - loved/hated, mostly hated, i think
   - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
   - also a problem of multiple compilers, each of which only work for certain version or certain features?? (gcc, vs, dev-cpp, etc.)
+  - this first reddit thread illustrates the terrible flaws of C++
+    - https://www.reddit.com/r/rust/comments/4yz59h/cc_interop/
   
 C
  - **used as the "low-level" language by most electronic devices**
