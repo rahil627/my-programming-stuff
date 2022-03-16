@@ -7,6 +7,9 @@ https://github.com/Dvergar/awesome-haxe-gamedev
 https://github.com/nadako/awesome-haxe
   - more personal, toward developing the haxe langauge
   
+https://github.com/haddock7/hlimgui
+  - imgui bindings
+  
   
 the codebook is especially good for learning bit-by-bit, especially for macros!
 
@@ -18,10 +21,11 @@ just a note: i've got quite a few posts on the Heaps forum... but it seems the D
 scripting?:
 hscript
   - https://lib.haxe.org/p/hscript/
-    - 
+    - ??
 
 wrapper method
   - https://github.com/haxelime/hxp
+    - ??
 
 haxelib method
   - i was told in Discord
