@@ -66,8 +66,16 @@ haxelib searchRegEx
 haxelib install someLibrary
 
   
-  
+hashlink profiler:
+from a discord message:
 
+here's what I did:
+created some code - some Test.hx
+haxe --main Test --hl test.hl
+hl --profile 10000 .\test.hl
+hl ..\..\HLProfiler\profiler.hl
+
+Load the converted hlprofile.dump into Chrome Performance tab
 
 
 
