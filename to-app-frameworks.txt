@@ -1,30 +1,19 @@
 
 
-# native
+ui framework agnostic:
+instead of being tied to a framework, just abstract it! **this is the best solution i know of**...
 
-SwiftUI
-  - Apple's tool for making native ui apps for Apple platforms (MacOS, iOS, etc.)
-  - https://developer.apple.com/xcode/swiftui/#
-  - Apple's products, including their software, tend to last decades, making this far more future-proof than Google's Flutter
-  - because it's rather new, **it even has the best api, perhaps even simpler/better than Flutter!**
-  - **must still learn native libraries (UIKit, AppKit, etc.)**
-  - **need a MacOS to dev** :(
-  - **need to use god awful XCode to dev??**
-  - **closed-source means you cannot figure out what the code really does, you just pray with API documentation**, and that documentation is poor (**remember your time with Cocos2D and that shit networking code?? *ugh*)
-    - it's also confusing because Swift the programming language is open-source... but since Apple's products are all closed-source, it doesn't make much sense to use it, even though it's a good language. If SwiftUI was a cross-platform product, it'd kill tho.
-  - Apple
+Haxe
+  - HaxeUI
+    - currently supported back-ends: (TODO: update this), wxWidgets for desktop OSs, Heaps, NME, OpenFL (therefore HaxeFlixel and HaxePunk (rip))
+  - coconut
+    - currently supported back-ends: (TODO: update this) **React-Native for mobile**, coming soon: Heaps
+  - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same core code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of Haxe code and even coconut ui api code. **this might just be the most future-proof solution that i know of...**
 
-Jetpack Compose
-  - Google Android's version of SwiftUI ?? *gross* :vomiting_face:
-  - still too new (as of 2022)
-  
-Kotlin MultiFramework
-  - ...how is this different from Jetpack compose..??
-  - terrible name... does it compile to C now??
-  - is it Google? why would Google have 3 UI frameworks??
-  
-  
+
 # "hybrid"
+basically bindings to native components (UIKit for iOS, Win32 api for Windows, etc.). This is the first solution that came to my mind when i thought cross-platform ui/apps : just provide bindings, and a common framework. **It sounds like it's a bit painful to write code for native componenets, but for most cases, this works well, and very importantly does not constrain as you always have acces to native APIs.**
+
 React-Native
   - the grand-daddy of hybrid frameworks?, and still perhaps the most popular (as of 2022)
   - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
@@ -40,8 +29,10 @@ React-Native
   - Microsoft..? https://microsoft.github.io/react-native-windows/
   
 MAUI (Xamarin)
+  - C#/.NET WinForms(?) api
 
 Uno?
+  - C#/.NET WPF api
 
 
 
@@ -55,7 +46,7 @@ Qt
   - feels like a massive tool :(, like as big as Unity!
 
 Flutter
-  - the contempory banger, quickly rising in popularity, equaling React-Native, top 2
+  - the contempory banger, quickly rose in popularity, equaling React-Native to become top 2
   - ...
   - Dart has VM during development and AOT compilation for production, basically like Haxe
   
@@ -63,15 +54,43 @@ Avalonia
   - C#/.NET version of Flutter
   
   
-# other solutions
-Haxe
-  - HaxeUI
-    - currently supported back-ends: (TODO: update this), wxWidgets for desktop OSs, Heaps, NME, OpenFL (therefore HaxeFlixel and HaxePunk (rip))
-  - coconut
-    - currently supported back-ends: (TODO: update this) **React-Native for mobile**, coming soon: Heaps
-  - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of your Haxe code, not just the coconut ui api, but the actual functions behind the ui. **this might just be the most future-proof solution that i know of...**
   
+
+
+# native
+
+SwiftUI
+  - Apple's newer (2019?) tool for making native ui apps for Apple platforms (MacOS, iOS, etc.)
+  - https://developer.apple.com/xcode/swiftui/#
+  - Apple's products, including their software, tend to last decades, making this far more future-proof than Google's Flutter
+  - because it's rather new, **it even has among the best api, perhaps even simpler/better than Flutter!**, despite that though, it seemsyou:
+  - **must still learn native libraries (UIKit, AppKit, etc.)**
+  - **need a MacOS to dev** :(
+  - **need to use god awful XCode to dev??**
+  - **closed-source means you cannot figure out what the code really does, you just grasp/understand through API documentation**, and that documentation is poor (**remember your time with Cocos2D and that shit Apple networking code?? *ugh* :vomiting_face:)
+    - it's also confusing because Swift, the programming language, is open-source... however SwiftUI isn't, and since Apple's products are all closed-source, it doesn't make much sense to use the language, even though it's a good language. If SwiftUI was a cross-platform product, both targeting all platforms *and* able to dev from all platforms, it *could* kill. The simplcity and productivity of VS Code is just too important.
+  - todo: not sure if it has a web target, which is pretty darn important!
+  - Apple
+
+
+
+# not interested
+Jetpack Compose
+  - Google Android's version of SwiftUI ?? *gross* :vomiting_face:
+  - still too new (as of 2022)
   
+Kotlin MultiFramework
+  - ...how is this different from Jetpack compose..??
+  - terrible name... does it compile to C now??
+  - is it Google? why would Google have 3 UI frameworks??
+
+
+# old
+Cordova
+Ionic
+Xamarin -> MAUI
+
+
   
 # tools
 **CodeMagic**
