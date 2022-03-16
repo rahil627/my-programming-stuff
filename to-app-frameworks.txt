@@ -9,6 +9,7 @@ Haxe
   - coconut
     - currently supported back-ends: (TODO: update this) **React-Native for mobile**, coming soon: Heaps
   - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same core code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of Haxe code and even coconut ui api code. **this might just be the most future-proof solution that i know of...**
+    - from Rudy on the Haxe server (15 years Haxe dev with tons of React experience): "Yeah the theory is all nice, but in practice you'll build your UI with/around your current backend's components and that won't translate well to other backends"
 
 
 # "hybrid"
