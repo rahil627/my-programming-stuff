@@ -251,6 +251,14 @@ Rust
   - people have went crazy making Rust bindings for nearly every C/C++ library out there.., maybe writing C bindings have become easier? ...Or area they completely re-writing all these libraries!?
   - Bevy game engine, also see "awesome gamdev rust" on github
   - Mozilla, and as always, open-source
+  
+  
+Swift
+  - Apple's native langugae, replacing Objective-C
+  - looks really good actually
+  - open-source, surprisingly
+  - meant to be cross-platform, but, what's the point when all of Apple's frameworks are closed products?..
+  - also, like Google, Apple sucks with community / documentation / etc. It would all rely on the open-source community.
 
 Odin
   - from the hand-made network
