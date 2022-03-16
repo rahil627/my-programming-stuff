@@ -226,13 +226,6 @@ Nim
   - easy C binding
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
 
-Dart
-  - todo
-  - **designed to be cross-platform**
-  - Flutter
-  - ...i haven't really seen any game frameworks in this... yet? Flame Engine exists on top of Flutter, lol? (that does not sound like a good idea... probably limited to Skia graphics..)
-  - Google
-    - although Flutter seems really nifty... i'd personally choose Microsoft's C#/.NET world over this *any day*
 
 Rust
   - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for *true game engine programmers*
@@ -254,11 +247,29 @@ Rust
   
   
 Swift
-  - Apple's native langugae, replacing Objective-C
-  - looks really good actually
-  - open-source, surprisingly
-  - meant to be cross-platform, but, what's the point when all of Apple's frameworks are closed products?..
-  - also, like Google, Apple sucks with community / documentation / etc. It would all rely on the open-source community.
+  - Apple's native language, replacing Objective-C, and i believe a lot of code was rewritten using it
+  - looks really good actually, simple yet powerful, like Haxe, and most importantly
+  - probably has extremely good interopability with C/C++/Obj-C
+  - open-source (surprisingly!)
+  - **meant to be cross-platform, but, what's the point when all of Apple's frameworks are closed products?..**
+    - "core libraries" seem to be the same as .NET core libraries
+    - https://www.swift.org/core-libraries/
+    - https://www.swift.org/about/
+      - "One of the most exciting aspects of developing Swift in the open is knowing that it is now free to be ported across a wide range of platforms, devices, and use cases.
+         Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next."
+  - also, **like Google, Apple sucks with community / documentation / etc. A lot of power really comes from open-source popularity...**
+  - Apple
+  
+  
+Dart
+  - considered pretty dull, but it works
+  - **designed to be cross-platform**
+  - Flutter, and this is really all it's got behind it
+  - Google
+
+  
+
+
 
 Odin
   - from the hand-made network
