@@ -39,25 +39,26 @@ https://wiki.archlinux.org/title/Arch_compared_to_other_distributions
 
 Ubuntu
   - built on top of Debian
-  - through GUI or terminal
-  - Debian, abides 100% free software social cotract
   - has long-term-stable (LTS) releases for stability (once every two years), supported for a whopping 5 or even 10 years!!!
     - then interim releases once every 6 months
-  - great for both server-side and desktop
+  - super stable for both server-side and desktop
   - desktop can be a tad bit bloated for some more advanced users
-  - super stable
+  - has sane config defaults
   - desktop, core, server versions
     - core only has snap, meanted for embedded devices
     - **server** doesn't come with a desktop, but is widely adopted for server use by all major cloud server companies
   - "Most Ubuntu editions and flavours simply install a different set of default packages compared to the standard Ubuntu Desktop. Since they share the same package repositories, all of the same software is available for each of them.[109][110] Ubuntu Core[a] is the sole exception as it only has access to packages in the Snap Store.[111"
     - Kubuntu, Xubuntu, etc. are just Ubuntu with different desktop environments: KDE for Kubuntu, xfce for Xubuntu, and so on
+  - although free, sorta run by the company Canonical
   
 Debian
-  - more so for developers, as it won't have the friendliness of Ubuntu (software center, etc.)
+  - more so for developers, as it won't have the friendliness of Ubuntu (software center, etc.), nor sane config defaults
   - but that means it also won't have the bloat!
   - probably a good step from Ubuntu
   - super stable, maybe even more-so than Ubuntu as it has even less features to worry about
   - two version branches: stable (for enterprise-grade tested) every 6 months and testing (for current software)
+  - Debian, abides 100% free software social cotract, thus no paid software in the package manager?
+  - compleptely community-based
 
 Fedora
   - ?
