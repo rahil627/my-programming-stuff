@@ -33,6 +33,8 @@ BootCamp
   - a native application to handle installing and booting into Windows (or any OS?), along with setting up all of the input/output drivers required. This worked like a dream on my 2010 and 2013 Macbooks, booting into Windows for games and Mac for production and every-day use
 
 Linux:
+can begin with Ubuntu until one is familiar with the cli, package managers, file-system, etc., then, Debian for stable server use or Arch Linux for personal desktop use
+
 Ubuntu
   - built on top of Debian
   - through GUI or terminal
@@ -55,6 +57,7 @@ Fedora
 Arch Linux
   - abides KISS principle
   - completely customizable, no bloat
+    - this can take time
   - good community, and great community-run package manager (AUR)
   - rolling software update
     - makes it bad for server-side use, as stuff can break
