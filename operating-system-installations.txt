@@ -33,7 +33,7 @@ BootCamp
   - a native application to handle installing and booting into Windows (or any OS?), along with setting up all of the input/output drivers required. This worked like a dream on my 2010 and 2013 Macbooks, booting into Windows for games and Mac for production and every-day use
 
 Linux:
-can begin with Ubuntu until one is familiar with the cli, package managers, file-system, etc., then, Debian for stable server use or Arch Linux for personal desktop use
+can begin with Ubuntu (server edition) until one is familiar with the cli, package managers, file-system, etc., then, move on to either Debian (server and desktop use) or Arch Linux (desktop-only use) for less bloat
 
 https://wiki.archlinux.org/title/Arch_compared_to_other_distributions
 
@@ -46,6 +46,11 @@ Ubuntu
   - great for both server-side and desktop
   - desktop can be a tad bit bloated for some more advanced users
   - super stable
+  - desktop, core, server versions
+    - core only has snap, meanted for embedded devices
+    - **server** doesn't come with a desktop, but is widely adopted for server use by all major cloud server companies
+  - "Most Ubuntu editions and flavours simply install a different set of default packages compared to the standard Ubuntu Desktop. Since they share the same package repositories, all of the same software is available for each of them.[109][110] Ubuntu Core[a] is the sole exception as it only has access to packages in the Snap Store.[111"
+    - Kubuntu, Xubuntu, etc. are just Ubuntu with different desktop environments: KDE for Kubuntu, xfce for Xubuntu, and so on
   
 Debian
   - more so for developers, as it won't have the friendliness of Ubuntu (software center, etc.)
