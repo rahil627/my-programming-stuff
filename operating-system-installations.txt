@@ -68,9 +68,15 @@ Arch Linux
   - completely customizable, no bloat
     - this can take time
   - good community, and great community-run package manager (AUR)
-  - rolling software update
-    - makes it bad for server-side use, as stuff can break
+  - rolling release software update means very frequent updates
+    - making it bad for server-side use, as stuff can break
   - install via terminal only, as it starts without a desktop
+  
+OpenSUSE
+  - Leap and Tumbleweed versions
+    - Leap for on-edge rolling release
+    - Tumbleweed for slow rolling release
+      - a very good option to get rolling release (latest software), but in a more stable manner than Arch and Leap
   
 Linux Mint
   - like Ubuntu, another newer beginner-friendly distro built on top of Debian
