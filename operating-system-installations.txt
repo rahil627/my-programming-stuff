@@ -34,19 +34,37 @@ BootCamp
 
 Linux:
 Ubuntu
+  - built on top of Debian
   - through GUI or terminal
   - Debian, abides 100% free software social cotract
-  - has long-term-stable (LTS) releases for stability
+  - has long-term-stable (LTS) releases for stability (once every two years)
+    - then interim releases once every 6 months
   - great for both server-side and desktop
   - desktop can be a tad bit bloated for some more advanced users
+  - super stable
   
+Debian
+  - more so for developers, as it won't have the friendliness of Ubuntu (software center, etc.)
+  - but that means it also won't have the bloat!
+  - probably a good step from Ubuntu
+  - super stable, maybe even more-so than Ubuntu as it has even less features to worry about
+
+Fedora
+  - ?
+
 Arch Linux
   - abides KISS principle
   - completely customizable, no bloat
   - good community, and great community-run package manager (AUR)
-  - for desktop, not server-side
+  - rolling software update
+    - makes it bad for server-side use, as stuff can break
   - install via terminal only, as it starts without a desktop
   
+Linux Mint
+  - like Ubuntu, another newer beginner-friendly distro built on top of Debian
+  
+Rocky Linux
+  - super stable, super slow release cycle
   
   
   
