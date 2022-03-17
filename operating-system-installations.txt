@@ -41,7 +41,7 @@ Ubuntu
   - built on top of Debian
   - through GUI or terminal
   - Debian, abides 100% free software social cotract
-  - has long-term-stable (LTS) releases for stability (once every two years)
+  - has long-term-stable (LTS) releases for stability (once every two years), supported for a whopping 5 or even 10 years!!!
     - then interim releases once every 6 months
   - great for both server-side and desktop
   - desktop can be a tad bit bloated for some more advanced users
@@ -57,6 +57,7 @@ Debian
   - but that means it also won't have the bloat!
   - probably a good step from Ubuntu
   - super stable, maybe even more-so than Ubuntu as it has even less features to worry about
+  - two version branches: stable (for enterprise-grade tested) every 6 months and testing (for current software)
 
 Fedora
   - ?
