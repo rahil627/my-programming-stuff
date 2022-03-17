@@ -35,6 +35,8 @@ BootCamp
 Linux:
 can begin with Ubuntu until one is familiar with the cli, package managers, file-system, etc., then, Debian for stable server use or Arch Linux for personal desktop use
 
+https://wiki.archlinux.org/title/Arch_compared_to_other_distributions
+
 Ubuntu
   - built on top of Debian
   - through GUI or terminal
@@ -70,4 +72,5 @@ Rocky Linux
   - super stable, super slow release cycle
   
   
+ 
   
