@@ -1,5 +1,21 @@
 #!/bin/bash
 
+# from github, after you create a new repo
+# …or create a new repository on the command line
+echo "# my-written-expressions" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rahil627/my-written-expressions.git
+git push -u origin main
+
+# …or push an existing repository from the command line
+ git remote add origin https://github.com/rahil627/my-written-expressions.git
+git branch -M main
+git push -u origin main
+
+
 # discard changes and un-stage
 # maybe as an unstage flag for just un-staging
 git restore file-name
