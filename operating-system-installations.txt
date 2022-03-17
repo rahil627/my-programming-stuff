@@ -31,3 +31,22 @@ generally requires specific hardware, so be sure to check "hackintosh" for the r
 
 BootCamp
   - a native application to handle installing and booting into Windows (or any OS?), along with setting up all of the input/output drivers required. This worked like a dream on my 2010 and 2013 Macbooks, booting into Windows for games and Mac for production and every-day use
+
+Linux:
+Ubuntu
+  - through GUI or terminal
+  - Debian, abides 100% free software social cotract
+  - has long-term-stable (LTS) releases for stability
+  - great for both server-side and desktop
+  - desktop can be a tad bit bloated for some more advanced users
+  
+Arch Linux
+  - abides KISS principle
+  - completely customizable, no bloat
+  - good community, and great community-run package manager (AUR)
+  - for desktop, not server-side
+  - install via terminal only, as it starts without a desktop
+  
+  
+  
+  
