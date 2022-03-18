@@ -1,3 +1,4 @@
+
 files contain bytes (00001111)
 
 how those bytes are read depends on the encoding
@@ -41,13 +42,15 @@ sed 's/crazy-character/normal-ascii-character/' my_file.txt
 
 unidecode
   - a simple cli program i found on github, ported into several languages
+  - it's good to use because it'll throw an error every-time it runs into a character it can't decode, so you can use this like a compiler and fix your errors one-by-one
   
 iconv
   - default linux encoding cli program
+  - the problem with this is that if you don't know the encoding, you're screwed
   
 recode
   - another linux encoding converter
-
+  - same problem as iconv
 
 
 
