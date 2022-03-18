@@ -1,7 +1,7 @@
 
 
 conclusion:
-CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and waiting for processes / process handling), so; the lines are blurry; and thus, give that fact, i think it's better to invest time in a more powerful general programming langauge, especially if it can be run as easily as a shell script can (ruby, python, etc.). Although, for super duper simple things, these are still indeed nice to have, especially to save/run a "batch" of commands.
+CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and waiting for processes / process handling), so; the lines are blurry; and thus, given that fact, i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can (ruby, python, etc.) or even near as easily (haxe, C#). Although, for super duper simple things, these are still indeed nice to have, especially to save/run a "batch" of commands.
 
 Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
 
