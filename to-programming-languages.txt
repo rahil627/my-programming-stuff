@@ -488,3 +488,9 @@ https://community.haxe.org/t/how-does-haxe-hxcpp-performance-compare-to-writing-
 
 https://www.reddit.com/r/gamedev/comments/1edn03/lua_angelscript_haxe_c_java_and_others_which_do/
   - shares my conundrum: an indie dev trying to choose a language environment, and it seems, even 8 years ago C#/MonoGame was still the way to go
+  
+https://www.reddit.com/r/ruby/comments/5c1prl/ruby_vs_python/
+  - always good to gather some real thought from real people
+  
+  
+  
