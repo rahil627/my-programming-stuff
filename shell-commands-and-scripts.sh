@@ -2,8 +2,16 @@
 
 # DO NOT EXECUTE ME !!!
 
-# use this often!! no need to search for stuff manually
-find file-or-directory .
+# most useful commands in this section
+
+# use this to find the file, then use | to chain the command
+# no more hunting for files!
+# the search i think is automatically recursive
+find . -name *.ext
+find . some*text
+
+
+# end of most useful commands
 
 
 # diff
