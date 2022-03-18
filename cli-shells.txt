@@ -14,6 +14,8 @@ https://learnxinyminutes.com/docs/powershell/
 https://learnxinyminutes.com/docs/bash/
 
 https://stackoverflow.com/questions/11369522/bash-utility-script-library#11369935
+  - the answer points out bash's limitations really well, mainly:
+  - "Bash functions don't return anything; they only produce output streams. Every reasonable method of capturing that stream and either assigning it to a variable or passing it as an argument requires a SubShell, which breaks all assignments to outer scopes. (See also BashFAQ/084 for tricks to retrieve results from a function.) Thus, libraries of reusable functions are not feasible, as you can't ask a function to store its results in a variable whose name is passed as an argument (except by performing eval backflips)."
 
 
 Windows:
