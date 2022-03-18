@@ -10,6 +10,10 @@ For Windows, you'd get more familiar with the .NET standard library, which'll tr
 Linux is a mess of CLI programs and scripts, written in *tons* of different languages. Windows is a lot more insular, with just powershell (although of course you can install any language and run any script too). That's just the feeling i get.
 
 
+https://learnxinyminutes.com/docs/powershell/
+https://learnxinyminutes.com/docs/bash/
+
+
 
 Windows:
 you have no choice, it's just powershell
