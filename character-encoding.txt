@@ -37,6 +37,8 @@ the best way i found was to simply search and replace using a text editor, then
 save those search and replace commands,
 and make a script out of it
 
+sed 's/crazy-character/normal-ascii-character/' my_file.txt
+
 unidecode
   - a simple cli program i found on github, ported into several languages
   
