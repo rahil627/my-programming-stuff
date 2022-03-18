@@ -13,7 +13,7 @@ Haxe
 
 
 # "hybrid"
-basically bindings to native components (UIKit for iOS, Win32 api for Windows, etc.). This is the first solution that came to my mind when i thought cross-platform ui/apps : just provide bindings, and a common framework. **It sounds like it's a bit painful to write code for native componenets, but for most cases, this works well, and very importantly does not constrain as you always have acces to native APIs.**
+basically bindings to native components (UIKit for iOS, Win32 api for Windows, etc.). This is the first solution that came to my mind when i thought cross-platform ui/apps : just provide bindings, and then a common framework on top of that. **The main trade-off is this: it will not constrain as you always have acces to native APIs, but you must understand the inner APIs of each target: UIKit for Apple, Win32 for Windows, and so on. Thus, this is definitely not for the casual or even the indie devs.** Indies should go one step up, to "owner-drawn" non-native frameworks.
 
 React-Native
   - the grand-daddy of hybrid frameworks?, and still perhaps the most popular (as of 2022)
@@ -34,10 +34,18 @@ MAUI (Xamarin)
 
 Uno?
   - C#/.NET WPF api
+  
+RubyMotion
+  - closed source, made by the same people that made DragonRuby, the cross-platform game framework
+  - *i think* it's a hybrid, basically just bindings to everything, wherein you'd have to develop specifically for each platform target
+  - at the moment there's a free version (not sure if it's a trial or not...), then, perhaps after it is populra or for publishing to other devices you need to pay quite a bit..
+  - basically run by a 2 people
 
 
 
 # non-native
+for a single, indie dev, these are the way to go. Well, either this or web (React, without the Native), which is inherently cross-platform.
+
 Qt
   - the grand-daddy of all non-native ui frameworks
   - i didn't even know it still existed!!
@@ -53,6 +61,16 @@ Flutter
   
 Avalonia
   - C#/.NET version of Flutter
+ 
+ 
+ 
+# other?
+
+Electron
+  - i'm not really sure if this even belongs here, but i think you can make anything with it..?
+  - the major problem: it runs on top of a web browser: Chromium, meaning, each Electron application contains a copy of Chromium inside! :o
+    - just based off this alone, it does not intrigue me... but:
+  - VS Code, Skype?, Slack?, etc.
   
   
   
