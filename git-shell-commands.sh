@@ -32,6 +32,17 @@ git restore file-name
 # https://stackoverflow.com/questions/13541615/how-to-remove-files-that-are-listed-in-the-gitignore-but-still-on-the-repositor 
 git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
 
+
+
+# git submodules
+
+# add a git submodule
+git submodule add https://bitbucket.org/jaredw/awesomelibrary
+
+git add .gitmodules awesomelibrary/
+
+
+# remove a git submodule
 # Remove the submodule entry from .git/config
 git submodule deinit -f path/to/submodule
 
