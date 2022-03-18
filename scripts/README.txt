@@ -1,3 +1,5 @@
+TODO: move to /opt path, then update path var
+
 a little short history:
 
 when i got back to computering, after a decade without computering, i got into *making* stuff, including little scripts / programs to do stuff. Because when i got back i started with a Linux command terminal, i started with Bash commands to do everything.
