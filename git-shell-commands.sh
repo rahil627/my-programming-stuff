@@ -1,5 +1,13 @@
 #!/bin/bash
 
+
+# use these to see differences and discard them
+git diff HEAD
+git diff file-name
+
+git restore file-name
+
+
 # from github, after you create a new repo
 # …or create a new repository on the command line
 echo "# my-written-expressions" >> README.md
