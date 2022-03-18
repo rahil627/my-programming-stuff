@@ -31,6 +31,23 @@ It is very common to mislabel Windows-1252 text with the charset label ISO-8859-
 
 
 
+the solutions:
+
+the best way i found was to simply search and replace using a text editor, then
+save those search and replace commands,
+and make a script out of it
+
+unidecode
+  - a simple cli program i found on github, ported into several languages
+  
+iconv
+  - default linux encoding cli program
+  
+recode
+  - another linux encoding converter
+
+
+
 
 resources:
 https://en.m.wikipedia.org/wiki/Character_encoding
