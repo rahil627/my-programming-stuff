@@ -13,6 +13,7 @@ Linux is a mess of CLI programs and scripts, written in *tons* of different lang
 https://learnxinyminutes.com/docs/powershell/
 https://learnxinyminutes.com/docs/bash/
 
+https://stackoverflow.com/questions/11369522/bash-utility-script-library#11369935
 
 
 Windows:
