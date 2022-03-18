@@ -101,11 +101,17 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 
 # a few contemporary languages, old and new
 
+order of traits:
+simple summary
+frameworks
+the rest
+
 ## old classics
 *Haxe**
   - simple, *light-feeling*--feels like a scripting language!, **powerful like C#**, but without all the *heaviness* of it, **feeling more like Ruby**, just *siiiick*
-    - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but it's not nearly as exhaustive as C#, making it more tolerable for a mortal, and a little less flexible, which can actually be good, as you can focus more on writing as opposed to thinking which C# feature to use here, and making code easier to read too (try reading the code of a pro C# user!)
-      - also has **macros** that are much more powerful than anything C# has
+  - frameworks include: NME, Heaps, OpenFL (now feels like it's stuck woth too much Flash baggage..), HaxeFlixel, HaxePunk, Kha; all of them are basically an i/o base **to create basically *anything*, cross-platform**. In addition, there's HaxeUI, coconut, and bindings for React and React Native for cross-platform UI, along with bindings for other stuff, like RayLib and Unreal.
+  - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but it's not nearly as exhaustive as C#, making it more tolerable for a mortal, and a little less flexible, which can actually be good, as you can focus more on writing as opposed to thinking which C# feature to use here, and making code easier to read too (try reading the code of a pro C# user!)
+    - also has **macros** that are much more powerful than anything C# has
     - also like Ruby, it feels very *Linux-y*, where **everything is a simple text file**, including the build file (this is a major difference in feeling to C#, as it can feel like you must edit stuff in VS's gui, or even Unity's gui. In Haxe, **everything can be done by simple text editing**, no gui software necessary)
   - maybe the first major language with **cross-platform** in mind?
   - has all of the features of ruby (container filters, anonymous functions, etc.) plus more, but comes with a *much much* faster compiler, making Ruby feel rather obsolete, and just surviving off of it's libraries and community
@@ -120,25 +126,24 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 
 **C#**
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
-  - *incredible feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
-    - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, and LINQ via .NET, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set. By C# v10 now, the features are *overwhelming!*. There's really nothing to complain about here.
   - has great frameworks for both games (Unity, MonoGame) and cross-platform apps (Avalonia, Uno, ASP.NET?)
     - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
     - probably also used by Microsoft themselves for making Xbox games
+  - *incredible feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
+    - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, and LINQ via .NET, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set. By C# v10 now, the features are *overwhelming!*. There's really nothing to complain about here.
   - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big game/app devs away from the horrendous temporal javascript/electron/html5 web-dev world
   - Microsoft, and very much *feels* like Microsoft: *heavy*, heavy dev environment, heavy libraries, clunky standard coding convention, etc.
   - after using this, it feels like there's really no reason to use anything else! (todo: :thinking:)
   - has a contemporary **scripting** solutions!!?? :o :O
-    - Rosylyn compiler
-    - csscript
-    - https://github.com/filipw/dotnet-script
+    - Rosylyn compilerm, csscript, dotnet-script
     - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
   - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
   - nuget package library
   
 
 Ruby
-  - scripting people seem to really *love* this one
+  - a scripting language that people seem to really *love*
+  - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Sinatra (*this one looks amazing...*), Hinami, Middlemen (*this looks like a good step up from Jekyll*), and more..
   - aims to be natural, like English;
     - also_uses_snake_case_convention :o *finally*, someone gets it! although, maybe-i-like-this-better
     - uses function-name? for functions that return true/false *neat!*
@@ -147,7 +152,6 @@ Ruby
     - can omit the '()' in function()
     - no need for 'var'
   - seems to have a *quirky*, more diverse, rad community vibe, similar to Haxe :), but perhaps more accessible and diverse, whereas Haxe attracts just game-makers
-  - the frameworks 'n libraires seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages) too
   - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
   - **too slow for games, unless it has a compiler? :(**
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
@@ -159,13 +163,15 @@ Ruby
   - although i missed this generation, i think i would have enjoyed this little world :)  
   
 Python
-  - perhaps the most popular and most loved language, even as of 2022(!!)
-  - scripting language, competitive to Ruby
+  - perhaps the most popular and most loved scripting language, even as of 2022(!!), competitive to Ruby
   - frameworks and libraries seems to be more scientific-oriented, with machine learning, ai, math, 'n so on
   - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; around as slow as ruby, and without the rad features and rad community
   - Google, although, even they probably rewrote a lot of stuff in Go
   
 Java/Scala
+  - C/C++ power without memory management, a classic systems language (along with C/C++) but *much* easier to use
+  - frameworks include: LibGDX... (todo: ??)
+  - the vibe i get is strange... there seems to be only an old cult that like it, similar to neovim's cult
   - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
   - **adds a garbage collector, making it feel "high-level"**
     - but no pointers *at all*, **all objects are references and all objects are passed by references** (basically every high-level language after this does this)
@@ -173,16 +179,17 @@ Java/Scala
     - a good comparison between C++'s pointers and Java's magic
       - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
   - feels neat, like an early C#! :)
+    - although the modules/class seem like 5 folder deep??
   - no header files? :o
   - object-oriented, direct contender to C++
   - adds lambdas (maybe this was added later on..)
   - can interop with C through JNI (java native interface)
-  - LibGDX
   - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/  
     - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#
 
   
 C++
+  - frameworks: ??, maybe C++ people don't rely on frameworks: they build it! :p
   - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
     - and therefore pass function arguments by value or pointer or reference or smart pointer too
   - adds **object-oriented design features (classes)** to C
@@ -200,8 +207,8 @@ C++
     - https://www.reddit.com/r/rust/comments/4yz59h/cc_interop/
   
 C
- - **used as the "low-level" language by most electronic devices**
- - *very* simple
+ - **a *very* simple "low-level" language used by most electronic devices**
+ - frameworks: RayLib, (todo: ??), not really the best for making frameworks, as it's not object-oriented; it'll more or less end up like RayLib: a ton of functions included in the top-level namespace, as there is no concept of namespace!
  - manual memory management via "raw" pointers (no references?) and the const key-word
  - *not* **object-oriented**
    - and interestingly, it forces you to write in a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, you are able to do what is needed without thinking about how to do it. There's a whole philosophy about this vocalized by Casey Muratori and his hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
