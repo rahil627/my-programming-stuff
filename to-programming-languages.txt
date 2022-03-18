@@ -122,7 +122,7 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
   - *incredible feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
     - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, and LINQ via .NET, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set. By C# v10 now, the features are *overwhelming!*. There's really nothing to complain about here.
-  - has great frameworks for both cross-platform apps (Avalonia, Uno, ASP.NET?) and games (Unity, MonoGame)
+  - has great frameworks for both games (Unity, MonoGame) and cross-platform apps (Avalonia, Uno, ASP.NET?)
     - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
     - probably also used by Microsoft themselves for making Xbox games
   - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big game/app devs away from the horrendous temporal javascript/electron/html5 web-dev world
@@ -146,7 +146,8 @@ Ruby
     - uses the last statement's expression in a function as the return value, thus saving a line; and oh you can easily write one-liner functions with Ruby! :o
     - can omit the '()' in function()
     - no need for 'var'
-  - seems to have an interesting, diverse, rad community vibe, similar to Haxe :) ...but *way* more web-dev-oriented, thanks to Rails, the language's premier web framework.., and Jekyll (used by GitHub Pages) too
+  - seems to have a *quirky*, more diverse, rad community vibe, similar to Haxe :), but perhaps more accessible and diverse, whereas Haxe attracts just game-makers
+  - the frameworks 'n libraires seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages) too
   - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
   - **too slow for games, unless it has a compiler? :(**
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
@@ -156,7 +157,14 @@ Ruby
   - game engines, such as Gosu, are written in C/C++ and then wrapped/binded by Ruby, because it would be too slow otherwise
   - Ruby Gems package manager
   - although i missed this generation, i think i would have enjoyed this little world :)  
-
+  
+Python
+  - perhaps the most popular and most loved language, even as of 2022(!!)
+  - scripting language, competitive to Ruby
+  - frameworks and libraries seems to be more scientific-oriented, with machine learning, ai, math, 'n so on
+  - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; around as slow as ruby, and without the rad features and rad community
+  - Google, although, even they probably rewrote a lot of stuff in Go
+  
 Java/Scala
   - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
   - **adds a garbage collector, making it feel "high-level"**
