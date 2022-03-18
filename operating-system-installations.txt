@@ -35,6 +35,9 @@ BootCamp
 Linux:
 can begin with Ubuntu (server edition) until one is familiar with the cli, package managers, file-system, etc., then, move on to either Debian (server and desktop use) or Arch Linux (desktop-only use) for less bloat
 
+"Unix (shell) has a philosophy that everything is a file. The input and output of a Unix command can be accessed like a file. This makes chaining command really simple and reusing the output of one command by another is the power of the Unix shell."
+
+
 https://wiki.archlinux.org/title/Arch_compared_to_other_distributions
 
 Ubuntu
