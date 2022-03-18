@@ -2,9 +2,16 @@
 
 # DO NOT EXECUTE ME !!!
 
+# use this often!! no need to search for stuff manually
+find file-or-directory .
 
-diff file-path file-path-2 --color
-diff folder-path folder-path-2 --color
+
+# diff
+git diff HEAD
+git diff file-path
+
+diff file-path file-path-2 --color --side-by-side
+diff folder-path folder-path-2 --color --side-by-side
 
 
 
