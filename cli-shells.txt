@@ -1,3 +1,31 @@
+
+
+conclusion:
+Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
+
+Windows, i feel, isn't as CLI heavy, so you won't be using it as often--you'd be using GUI apps--, and when you do, it's probably more in a programming way/feel (writing a program) rather than a quick script way/feel (that just runs a chain of commands--linux cli programs).
+
+For Windows, you'd get more familiar with the .NET standard library, which'll transfer into C#. For Linux, you'd need to be savvy enough to be able to find useful CLI programs (could be written in bash or *any* other programming language*) in package managers or github, be able to use them, and then execute them in a script. As far as i know, Bash doesn't really have a standard library to do stuff(??). Whereas for Powershell, you can do everhything that Bash does, but you'd be more inclined to leverage it's programming power and it's standard library more, rather than rely on other CLI programs, written in god know whats langauge.
+
+Linux is a mess of CLI programs and scripts, written in *tons* of different languages. Windows is a lot more insular, with just powershell (although of course you can install any language and run any script too). That's just the feeling i get.
+
+
+
+Windows:
+you have no choice, it's just powershell
+
+although, you can install Linux (via WSL), and i think there's a bash shell now too (though, without the linux tools, i'm not so sure how useful it would be..., so you'd be much better off just installing a desktop-less minimalistic linux distro, and get the best of both worlds)
+
+powershell
+  - more like a programming lanugage, like VB.NET, making it more comparable to python than bash
+  - have acess to the .NET library and a few other important libs (??), which makes it a nice step to C#
+  - has a pipeline operator
+  - "With Windows PowerShell, as far as I know, everything is an object. You can pass the result of a command to another as an object. This can be really powerful, but it does not have the simple concept (everything is a file) of Unix."
+
+
+
+Linux:
+
 https://www.howtogeek.com/68563/HTG-EXPLAINS-WHAT-ARE-THE-DIFFERENCES-BETWEEN-LINUX-SHELLS/
   - a good straight-foward tech post abuot the history of shells
   
