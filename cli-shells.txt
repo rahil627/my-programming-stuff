@@ -1,6 +1,8 @@
 
 
 conclusion:
+CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and waiting for processes / process handling), so; the lines are blurry; and thus, give that fact, i think it's better to invest time in a more powerful general programming langauge, especially if it can be run as easily as a shell script can (ruby, python, etc.). Although, for super duper simple things, these are still indeed nice to have, especially to save/run a "batch" of commands.
+
 Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
 
 Windows, i feel, isn't as CLI heavy, so you won't be using it as often--you'd be using GUI apps--, and when you do, it's probably more in a programming way/feel (writing a program) rather than a quick script way/feel (that just runs a chain of commands--linux cli programs).
@@ -8,6 +10,8 @@ Windows, i feel, isn't as CLI heavy, so you won't be using it as often--you'd be
 For Windows, you'd get more familiar with the .NET standard library, which'll transfer into C#. For Linux, you'd need to be savvy enough to be able to find useful CLI programs (could be written in bash or *any* other programming language*) in package managers or github, be able to use them, and then execute them in a script. As far as i know, Bash doesn't really have a standard library to do stuff(??). Whereas for Powershell, you can do everhything that Bash does, but you'd be more inclined to leverage it's programming power and it's standard library more, rather than rely on other CLI programs, written in god know whats langauge.
 
 Linux is a mess of CLI programs and scripts, written in *tons* of different languages. Windows is a lot more insular, with just powershell (although of course you can install any language and run any script too). That's just the feeling i get.
+
+
 
 
 https://learnxinyminutes.com/docs/powershell/
