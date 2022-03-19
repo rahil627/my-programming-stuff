@@ -38,6 +38,20 @@ tink
   
   
   
+# how to write optimized code for most targets
+
+avoid having the following in a loop over entities:
+
+no anonymous structs
+  - no "anonymous objects" (typedef alias of a struct)
+no Dyanimic
+no Any
+no templates
+
+
+
+  
+  
 # haxe cli
 can either use the cli or create an hxml file, where each line is a command argument
 
