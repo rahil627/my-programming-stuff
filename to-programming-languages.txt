@@ -246,7 +246,7 @@ Nim
 
 
 Rust
-  - **like C/C++ but safe**, using a specific memory management system, wherein you still have fine control of memory, but apparently it's not as bad as C/C++ (run-time safety, etc.). **no garbage collector**, you *must* learn and use this system to handle the memory yourself (probably like learning Obj-C's reference counting), *"a true systems programming language"* for *true game engine programmers*
+  - **like C/C++ but safe--no run-time errors(!?!?)**, **no garbage collector**, instead, using a specific memory management system, wherein you still have fine control of memory but it's easier(?) and guaranteed to be safe. you *must* learn and use this system to handle the memory yourself (just as you must learn Obj-C's reference counting, or C++'s pointers and smart pointers), thus if ever there's a problem with a garbage collector you'll either write that portion of code in C/C++ or just end up re-writing the whole thing with Rust
     - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
     - mutability: https://doc.rust-lang.org/std/keyword.mut.html, https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
     - https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
@@ -254,6 +254,7 @@ Rust
   - **incredible documentation design**: a web book, docs, crates (it's package manager), all look *stunning*. Languages with smaller communities will have a tough time matching that!
     - see: https://doc.rust-lang.org/std/index.html, 
     - the book: https://doc.rust-lang.org/book/
+  - a great and excited community
   - composition > inheritance
   - Go's concurrency/threading features
   - brace-delimited style
@@ -261,6 +262,8 @@ Rust
   - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
   - people have went crazy making Rust bindings for nearly every C/C++ library out there.., maybe writing C bindings have become easier? ...Or area they completely re-writing all these libraries!?
   - Bevy game engine, also see "awesome gamdev rust" on github
+  - https://discord.com/blog/why-discord-is-switching-from-go-to-rust
+    - this article tells of a single example of many where Discord replaced Rust because they were hitting the limit of Go's garbage collector, and to their surprise, beyond that problem, it outperformed go in every way anyway
   - Mozilla, and as always, open-source
   
   
