@@ -47,9 +47,13 @@ no anonymous structs
 no Dyanimic
 no Any
 no templates
+no generics (though not the worst)
 
 
 
+# codebook study
+public inline function new(x, y) {
+  - rsulte: ... sleep
   
   
 # haxe cli
