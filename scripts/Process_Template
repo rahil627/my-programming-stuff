@@ -1,0 +1,25 @@
+// https://stackoverflow.com/questions/35547117/haxe-run-system-commands-as-an-adminstrator#36451192
+
+// TODO: untested, just copied from above source
+class Hello {
+public static function Process_Template() {
+
+    // TODO: what about Sys.command?
+
+
+    if(Sys.systemName()=="Windows"){
+        var output = new sys.io.Process("ipconfig", []).stdout.readAll().toString();
+        trace("output:::"+output);
+    }
+
+    if(Sys.systemName()=="Linux"){
+        var output = new sys.io.Process("ifconfig", []).stdout.readAll().toString();
+        trace("output:::"+output);
+    }
+
+    // an entire bash command / script in the arguments parameter!
+    var output = new Process("bash", ["-c 'echo rootS_PASswoRd | sudo -S ifconfig'"]).stdout.readAll().toString();
+        trace("output:::"+output);
+
+ }
+}
