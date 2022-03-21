@@ -20,6 +20,12 @@ trace((-1 / 0) == Math.NEGATIVE_INFINITY); // true
 
 
 ## pattern matching
+worth reading, replaces longer if/else statements for good!
+
+### or
+case 2 | 4 | 6: 
+      trace("special number");
+
 
 ### syntatic sugar for case vars
   switch value {
@@ -30,6 +36,10 @@ trace((-1 / 0) == Math.NEGATIVE_INFINITY); // true
   }
 
 instead of case 2 and case default, can use this sugar to automatically create a variable there
+
+
+
+
 
 
 ## inline constructor
