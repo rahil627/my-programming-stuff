@@ -1,9 +1,15 @@
 # haxe cookbook study
 try to order from most useful to least useful
 
-## random
+## numbers
 Std.random(10); // a random Int between 0 (included) and 10 (excluded)
 Math.random();  // a random Float between 0.0 (included) and 1.0 (excluded)
+
+var value = Math.sqrt(-1); // NaN
+trace(Math.isNaN(value));  // true
+
+trace((1 / 0) == Math.POSITIVE_INFINITY);  // true
+trace((-1 / 0) == Math.NEGATIVE_INFINITY); // true
 
 
 ## map and filter functions on data structures
