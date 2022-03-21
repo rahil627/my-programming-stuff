@@ -1,4 +1,19 @@
 # haxe cookbook study
+try to order from most useful to least useful
+
+
+## map and filter functions on data structures
+Filter
+List elements can be filtered into a new list via a filtering function. Every list element for which the filtering function returns true is added to a new list.
+
+var listOfEvenInts = listOfInts.filter(function (e) return e % 2 == 0);
+
+Map
+List elements can be mapped to a new list of elements via a mapping function. The mapping is bijective, and every element from the inital list will have its mapping in the new list.
+
+var listOfIntsAsStrings = listOfInts.map(function (e) return Std.string(e));
+
+
 
 ## generics
 
