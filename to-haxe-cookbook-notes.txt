@@ -1,7 +1,12 @@
 # haxe cookbook study
 try to order from most useful to least useful
 
+
 Std.string(myInt); // "10"
+
+var content = Sys.stdin().readAll().toString();
+
+
 
 ## numbers
 Std.random(10); // a random Int between 0 (included) and 10 (excluded)
@@ -28,6 +33,7 @@ no allocation
 
 Quite useful with eg matrix/vector operations because then the compiler can do a lot more optimizations.
 (And you won't get extra allocations for temporary matrices.)
+
 
 
 
