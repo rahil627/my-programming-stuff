@@ -22,6 +22,11 @@ just a note: i've got quite a few posts on the Heaps forum... but it seems the D
 
 
 # libs
+tween
+  - slide
+  - actuate
+  - tweenx (old)
+
 https://github.com/HaxeFoundation
   - contains the language, all compiler/target code, the entire site (site, manual, codebook, docs, etc.), and more goodies
   - can easily edit these to update anything: the language, site, whatever!
@@ -60,9 +65,6 @@ todo: wasn't there a third way..?
 
 
 
-# codebook study
-public inline function new(x, y) {
-  - rsulte: ... sleep
   
   
 # haxe cli
@@ -161,4 +163,41 @@ interp.variables.set("Math",Math); // share the Math class
 interp.variables.set("angles",[0,1,2,3]); // set the angles list
 trace( interp.execute(program) ); 
 ```
+
+
+
+
+
+
+
+# haxe cookbook study
+
+## inline constructor
+class myPoint {
+x; y;
+public inline function new(x, y) { this.x = x; this.y = y}
+}
+
+outputs:
+var myPoint_x = 100;
+var myPoint_y = 150;
+
+
+## generics
+class Value<T> {
+  public var value:T;
+  
+  public function new(value:T) {
+    this.value = value;
+  }
+}
+
+// Create a new Value Int instance
+var myIntValue = new Value<Int>(5);
+
+// Create a new Value String instance
+var myStringValue = new Value<String>("String");
+
+
+
 
