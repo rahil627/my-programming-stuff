@@ -44,10 +44,19 @@ avoid having the following in a loop over entities:
 
 no anonymous structs
   - no "anonymous objects" (typedef alias of a struct)
-no Dyanimic
+no Dynamic
 no Any
 no templates
 no generics (though not the worst)
+
+
+
+# notes
+cast expr; // unsafe cast
+  - unsafe, meaning the compiler won't catch it
+cast (expr, Type); // safe cast
+todo: wasn't there a third way..?
+
 
 
 
