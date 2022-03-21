@@ -1,6 +1,10 @@
 # haxe cookbook study
 try to order from most useful to least useful
 
+## random
+Std.random(10); // a random Int between 0 (included) and 10 (excluded)
+Math.random();  // a random Float between 0.0 (included) and 1.0 (excluded)
+
 
 ## map and filter functions on data structures
 Filter
