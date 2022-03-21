@@ -19,6 +19,19 @@ trace((1 / 0) == Math.POSITIVE_INFINITY);  // true
 trace((-1 / 0) == Math.NEGATIVE_INFINITY); // true
 
 
+## pattern matching
+
+### syntatic sugar for case vars
+  switch value {
+    case special = 2:
+      trace("special number: " + special);
+    case other: 
+      trace("other: " + other);
+  }
+
+instead of case 2 and case default, can use this sugar to automatically create a variable there
+
+
 ## inline constructor
 class myPoint {
 x; y;
