@@ -182,6 +182,11 @@ outputs:
 var myPoint_x = 100;
 var myPoint_y = 150;
 
+no allocation
+
+Quite useful with eg matrix/vector operations because then the compiler can do a lot more optimizations.
+(And you won't get extra allocations for temporary matrices.)
+
 
 ## generics
 class Value<T> {
