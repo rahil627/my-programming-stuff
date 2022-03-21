@@ -1,6 +1,8 @@
 # haxe cookbook study
 
 ## generics
+
+### class
 class Value<T> {
   public var value:T;
   
@@ -14,6 +16,21 @@ var myIntValue = new Value<Int>(5);
 
 // Create a new Value String instance
 var myStringValue = new Value<String>("String");
+
+
+### function / parameterized arguments
+// Declare our new function
+function equals<T>(a:T, b:T):Bool {
+  return a == b;
+}
+
+// Call it with integers
+trace(equals(2, 2)); // true
+trace(equals(2, 1)); // false
+
+// Call it with strings
+trace(equals("hello","hello")); // true
+trace(equals("hello","world")); // false
 
 
 
