@@ -1,6 +1,8 @@
 # haxe cookbook study
 try to order from most useful to least useful
 
+Std.string(myInt); // "10"
+
 ## numbers
 Std.random(10); // a random Int between 0 (included) and 10 (excluded)
 Math.random();  // a random Float between 0.0 (included) and 1.0 (excluded)
@@ -10,6 +12,23 @@ trace(Math.isNaN(value));  // true
 
 trace((1 / 0) == Math.POSITIVE_INFINITY);  // true
 trace((-1 / 0) == Math.NEGATIVE_INFINITY); // true
+
+
+## inline constructor
+class myPoint {
+x; y;
+public inline function new(x, y) { this.x = x; this.y = y}
+}
+
+outputs:
+var myPoint_x = 100;
+var myPoint_y = 150;
+
+no allocation
+
+Quite useful with eg matrix/vector operations because then the compiler can do a lot more optimizations.
+(And you won't get extra allocations for temporary matrices.)
+
 
 
 ## map and filter functions on data structures
@@ -59,21 +78,25 @@ trace(equals("hello","world")); // false
 
 
 
-## inline constructor
-class myPoint {
-x; y;
-public inline function new(x, y) { this.x = x; this.y = y}
+
+
+## reflection, calling a function!
+class MyClass {
+    public function new () {}
+    @:keep public function printName() {
+        trace("MyClass printName is invoked");
+    }
 }
 
-outputs:
-var myPoint_x = 100;
-var myPoint_y = 150;
+class Main {
+    static function main() {
+        var myObject = new MyClass();
+        var fn = Reflect.field(myObject, "printName");
+        Reflect.callMethod(myObject, fn, []);
+    }
+}
 
-no allocation
-
-Quite useful with eg matrix/vector operations because then the compiler can do a lot more optimizations.
-(And you won't get extra allocations for temporary matrices.)
-
+the @:keep is for "dead code elimination" compiler option, which would eliminate it otherwise because it's not ever used (reflection doesn't count!)
 
 
 
