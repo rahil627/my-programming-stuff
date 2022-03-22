@@ -272,12 +272,19 @@ Nim
   - Mozilla, and as always, open-source
   
   
+Dart
+  - considered pretty dull, but it works; open-source, **designed to be cross-platform**
+  - Flutter, and this is really all it's got behind it
+  - Google
+
+  
+  
 Swift
   - Apple's native language, replacing Objective-C, and i believe a lot of code was rewritten using it
   - looks really good actually, simple yet powerful, like Haxe, and most importantly
   - probably has extremely good interopability with C/C++/Obj-C
   - open-source (surprisingly!)
-  - **meant to be cross-platform, but, what's the point when all of Apple's frameworks are closed products?..**
+  - **meant to be cross-platforn... but, what's the point when all of Apple's frameworks are closed products?..**
     - "core libraries" seem to be the same as .NET core libraries
     - https://www.swift.org/core-libraries/
     - https://www.swift.org/about/
@@ -287,20 +294,9 @@ Swift
   - Apple
   
   
-Dart
-  - considered pretty dull, but it works
-  - **designed to be cross-platform**
-  - Flutter, and this is really all it's got behind it
-  - Google
-
-  
 
 
 
-Odin
-  - from the hand-made network
-  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!* :o very rad
-  - influenced by Go
 
 
 
@@ -311,6 +307,11 @@ Elixer
   - again, very Ruby-eque, but really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
   - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
   - not really suitable for games, i think..
+  
+Odin
+  - from the hand-made network
+  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!* :o very rad
+  - influenced by Go
 
 Go
   - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
