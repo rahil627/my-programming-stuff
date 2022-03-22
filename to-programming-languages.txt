@@ -108,7 +108,7 @@ the rest
 
 ## old classics
 *Haxe**
-  - simple, *light-feeling*--feels like a scripting language!, **powerful like C#**, but without all the *heaviness* of it, **feeling more like Ruby**, just *siiiick*
+  - simple, *light-feeling*--feels like a scripting language!, **powerful like C#**, but without all the *heaviness* of it, **feeling more like Ruby**, just *siiiick*, **garbage collector depends on the target**
   - frameworks include: NME, Heaps, OpenFL (now feels like it's stuck woth too much Flash baggage..), HaxeFlixel, HaxePunk, Kha; all of them are basically an i/o base **to create basically *anything*, cross-platform**. In addition, there's HaxeUI, coconut, and bindings for React and React Native for cross-platform UI, along with bindings for other stuff, like RayLib and Unreal.
   - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but it's not nearly as exhaustive as C#, making it more tolerable for a mortal, and a little less flexible, which can actually be good, as you can focus more on writing as opposed to thinking which C# feature to use here, and making code easier to read too (try reading the code of a pro C# user!)
     - also has **macros** that are much more powerful than anything C# has
@@ -141,7 +141,7 @@ the rest
   - nuget package library
   
 
-Ruby
+**Ruby**
   - a scripting language that people seem to really *love*
   - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Sinatra (*this one looks amazing...*), Hinami, Middlemen (*this looks like a good step up from Jekyll*), and more..
     - there are two particular newer frameworks that compile to machine language, DragonRuby and RubyMotion, for cross-platform game and apps, deploying to just about any device! :o It sounds like haxe's frameworks! Unfortunately, they are closed-source, giving it a more closed-off, isolated feeling, and they cost quite a chunk of money to try...
@@ -163,13 +163,18 @@ Ruby
   - Ruby Gems package manager
   - although i missed this generation, i think i would have enjoyed this little world :)  
   
+Scala
+  - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
+  - much loved
+  - just as featureful and powerful as most of the newer contemporary lanugages
+  
 Python
   - perhaps the most popular and most loved scripting language, even as of 2022(!!), competitive to Ruby
   - frameworks and libraries seems to be more scientific-oriented, with machine learning, ai, math, 'n so on
   - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; around as slow as ruby, and without the rad features and rad community
   - Google, although, even they probably rewrote a lot of stuff in Go
   
-Java/Scala
+Java
   - C/C++ power without memory management, a classic systems language (along with C/C++) but *much* easier to use
   - frameworks include: LibGDX... (todo: ??)
   - the vibe i get is strange... there seems to be only an old cult that like it, similar to neovim's cult
@@ -245,7 +250,7 @@ Nim
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
 
 
-Rust
+**Rust**
   - **like C/C++ but safe--no run-time errors(!?!?)**, **no garbage collector**, instead, using a specific memory management system, wherein you still have fine control of memory but it's easier(?) and guaranteed to be safe. you *must* learn and use this system to handle the memory yourself (just as you must learn Obj-C's reference counting, or C++'s pointers and smart pointers), thus if ever there's a problem with a garbage collector you'll either write that portion of code in C/C++ or just end up re-writing the whole thing with Rust
     - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
     - mutability: https://doc.rust-lang.org/std/keyword.mut.html, https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
