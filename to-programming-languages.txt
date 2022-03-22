@@ -45,9 +45,9 @@ for simple fun OS shell and web server hackery: :D
   - it should be able to run on both server-side and client-side (both: interpreter or compiled, for simple scripts and complex games/apps)
   
 for games (and other "creative" applications that use various input/output hardwares): :D
-  - it should have the option of memory management, for fine-tuning intense computations on both the CPU and the GPU, yet i should'nt be forced to handle memory, thus
+  - it should have the option of memory management, for fine-tuning intense memory changes--textures going in 'n out--yet i should'nt be forced to handle memory, thus
     - it should have automatic garbage collection (pass by reference), yet 
-    - it should allow the option to write "unmanaged code" *and/or* make it very easy to interop with C/C++ so that you can just write C/C++ when needed *(note: nearly all langauges allow this..)*
+    - it should allow the option to write "unmanaged code" *and/or* make it very easy to interop with C/C++ so that you can just write C/C++ modules when needed *(note: nearly all langauges allow this..)*
   - it should be designed to be cross-platform, or at least have that in mind
     - compile to C (for most platforms: desktop OSs, iOS (+ iPadOS), consoles, embedded devices, etc.)
     - maintain a set of libraries for target platforms: iOS > desktop OSs > consoles > the rest, in that order
