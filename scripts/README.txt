@@ -1,4 +1,7 @@
-TODO: move to /opt path, then update path var
+todo:
+move to /opt path, then update path var
+try to save your software installation commands 'n scripts so you don't have to do that bullshit again!
+  - https://github.com/chances/dotfiles/tree/master/scripts
 
 a little short history:
 
