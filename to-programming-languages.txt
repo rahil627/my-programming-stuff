@@ -5,6 +5,11 @@ https://learnxinyminutes.com/
 good examples:
 aim for 2d space shooter classes
 
+todo:
+crystal
+scala
+haxe
+
 ruby
   - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
 
@@ -57,23 +62,19 @@ for games (and other "creative" applications that use various input/output hardw
 ## answers and some thoughts
 
 ### the cross-platform problem
-as far as i know, only Haxe (indie), C# (Microsoft), Dart (Google), and C++/C fit all of the above requirements above. The need for cross-platform targets really narrow down the choices, as most newer languages just won't have the libraries, *yet* (they have the potential, as long as they can compile down to C). It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... (*todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.*)
+as far as i know, only Haxe (indie), C# (Microsoft), Dart (Google), and C++/C fit all of the above requirements above. The need for cross-platform "target" compilers and standard libs really narrow down the choices, as most newer languages just won't have neither the library nor compilers, *yet*, they have the potential, as long as they can compile down to C. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond Haxe, C#, and Dart though, i haven't really seen many good cross-platform libraries... (*todo: I'd have to look into the C# and Haxe FFI like, is it easy to just call a C# function that calls the native (C/C++/obj-C) iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every platform!*)
 
-[SEE "app frameworks.txt"]
+see ["app frameworks.txt"]
+
+see ["game frameworks.txt"]
 
 as far as using C# as a scripting language, well, there's the Rosyln compiler (part of open-source .NET foundation) and "cs script", but i'd have to look into it some more.. but **if you can script in C#, then, well, it might just be game over for any other language!**
 
 **nearly all high-level languages interop with C, so, i see no reason to write an *entire* program in C or C++_--or even Rust!_**, leave that to the game-engine makers, and **anyway, you can always write C/C++ for the intensive sections when needed** (i doubt i'll ever need to). *I don't want to even think about pointers or references, and definitely not smart pointers! :barf:* Java is the lowest i'd stoop.
+  - writing the core in C/C++ is perhaps the best option, as you get the best of both worlds: manual memory management for the core, and a light-weight scripting langauge on top (Lua, Wren), or, people can create high-level bindings in their favorite langauge of choice
 
-in the case of iOS, as long as there is a compiler for the language that can compile it to C, then there's a possibility. The same goes for *all* devices(?): all desktop OSs, all mobile devices, most embedded devices, 'n so on. Maye even underneath that Android's Java is C... it's just that Android has it's libraries written in Java, which you'd have to link.,
+as long as the language can compile to C/C++, then it should, in theory, work with just about any device (desktop, mobile, embedded, whatever). The problem is that it'll have to link to the libraries that the platform uses, which is likely C/C++/obj-C (exception: Android uses Java).
 
-
-
-https://groups.google.com/g/haxelang/c/JCQCGbLy0xc?pli=1
-  - to figure out wtf NME is
-  
-https://www.wxwidgets.org/develop/roadmap/
-https://docs.wxwidgets.org/trunk/plat_ios_install.html
 
 ## libraries matter
 libraries, including frameworks, engines, matter. Altough you could use just about any language to solve just about any solution, certain languages are better suited for certain... *areas* in programming. This occurs naturally: someone wants to make something, solve something, they *hopefully* try to choose the right tool for the right job: the right language. Thus, the **language is just a tool** to do a job.
