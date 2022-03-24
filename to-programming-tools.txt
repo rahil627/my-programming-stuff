@@ -22,6 +22,12 @@ JetBrains Rider
     - .net
     - ...
     - etc.
+    
+    
+smaller, newer, experimental alts:
+Kate
+Lapce
+  - made by Rust's open-source community
   
 others??
 
