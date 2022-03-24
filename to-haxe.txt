@@ -22,6 +22,10 @@ just a note: i've got quite a few posts on the Heaps forum... but it seems the D
 
 
 # libs
+**hxnew**
+  - to create a new project from the cli
+    - (normally you'd use the VS Code extension to do this for you)
+
 tween
   - slide
   - actuate
