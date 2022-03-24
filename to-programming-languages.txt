@@ -57,13 +57,9 @@ for games (and other "creative" applications that use various input/output hardw
 ## answers and some thoughts
 
 ### the cross-platform problem
-as far as i know, only C# (Microsoft), Haxe (indie), and maybe Dart (Google) fit all of the above requirements above. The need for cross-platform targets really narrow down the choices, as most newer languages just won't have the libraries, *yet* (they hae the potential, as long as they can compile down to C). It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... (*todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.*)
-  - so, third-party Xamarin(.Forms) merged into .NET was re-titled to MAUI (a *much* better name). Xamarin used to cost *a lot* of money, but i think it's now free and open-source (it's on github! :) ).
-  - Avalonia is the spiritual successor of WPF (i personally don't know the difference between WPF, Xamarin.Forms, or ASP.NET: to me they are all "win forms"!). At the moment it only supports desktop platforms, but i think it will target mobile platforms soon, as they have a *ton* of support, including Unity and JetBrains.
-  - Uno, along with MAUI, are the most direct solutions, both are far more mobile-focused than Avalonia. If one is mainly targeting iOS, then it might just honestly be better to write native Swift code instead! maaaybe.
-  - as it turns out, **Haxe does not have a *native* (haxe) library of bindings for the native GUI APIs of various platforms (and devices)**. However, it does have HaxeUI, which serves as a kind of intermediary containing several "back-ends", one of which is the C++ open-source cross-platform GUI library wxWidgets. HaxeUI is actually kept up-to-date, but i'm not so sure about the status of wxWidgets, although, it was quite popular back in the day... Anyway, even **wxWidgets doesn't seem to support mobile platforms, only desktop platforms,* definitely not Android (the "dev roadmap" page says they have no plans for it unless someone wants to fun them), and iOS seems abandoned (the docs/readme reads: "wxiOS is far from a full supported port, but can be used as base for simple applications and future improvements."). Thus, **Haxe does not currently (2022) have any way to create native GUI apps for mobile platforms, neither iOS nor Android.**
-    - note: NME does not provide any sort of native GUI bindings neither, it just provides a neat Flash-like way to draw stuff on the screen, for several different device platforms. Lime pretty much does the same thing as NME (they even share a lot of code), and is perhaps is it's "spiritual successor"(?). OpenFL, which uses Lime as a "back-end", just adds a higher level to that. 
-    - and so to conclude, if you care abuot native GUI, then C#'s frameworks (Avalonia, Uno, MAUI) and Dart's Flutter are the main options that i know of, and of the four, i'd pesonally choose Avalonia, for sure choose C#. However, if native gui doesn't matter to you, and you just want to make a game or even an app *without* native gui, then you can still choose Haxe, along with several other languages/frameworks/game engines (haxeUI, raylib's raygui, various newer imGUIs, etc.), as it's much easier to divide the UI drawing and maintain a graphics renderer context and input for several platforms, then to maintain *the entire gui api for every platform, including input and renderer**. Yeah... it's a confusing mess... I personally am inclined to comprimising native gui for the ease and simplicity of immediate-GUIs, specifically **dear imgui**.., and calling it a day, lol. fuck all the native bullshit. it's just too much!
+as far as i know, only Haxe (indie), C# (Microsoft), Dart (Google), and C++/C fit all of the above requirements above. The need for cross-platform targets really narrow down the choices, as most newer languages just won't have the libraries, *yet* (they have the potential, as long as they can compile down to C). It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond C#, Haxe, and Dart though, i haven't really seen many good cross-platform libraries... (*todo: I'd have to look into the C# and Haxe cross-platform libs to understand this bit a bit more... like, is it easy to just call a C# function that calls the native iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every other platform.*)
+
+[SEE "app frameworks.txt"]
 
 as far as using C# as a scripting language, well, there's the Rosyln compiler (part of open-source .NET foundation) and "cs script", but i'd have to look into it some more.. but **if you can script in C#, then, well, it might just be game over for any other language!**
 
@@ -106,6 +102,7 @@ simple summary
 frameworks
 the rest
 
+
 ## old classics
 *Haxe**
   - simple, *light-feeling*--feels like a scripting language!, **powerful like C#**, but without all the *heaviness* of it, **feeling more like Ruby**, just *siiiick*, **garbage collector depends on the target**
@@ -140,7 +137,6 @@ the rest
   - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
   - nuget package library
   
-
 **Ruby**
   - a scripting language that people seem to really *love*
   - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Sinatra (*this one looks amazing...*), Hinami, Middlemen (*this looks like a good step up from Jekyll*), and more..
@@ -193,7 +189,6 @@ Java
   - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/  
     - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#
 
-  
 C++
   - frameworks: ??, maybe C++ people don't rely on frameworks: they build it! :p
   - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
@@ -249,7 +244,6 @@ Nim
   - easy C binding
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
 
-
 **Rust**
   - **like C/C++ but safe--no run-time errors(!?!?)**, **no garbage collector**, instead, using a specific memory management system, wherein you still have fine control of memory but it's easier(?) and guaranteed to be safe. you *must* learn and use this system to handle the memory yourself (just as you must learn Obj-C's reference counting, or C++'s pointers and smart pointers), thus if ever there's a problem with a garbage collector you'll either write that portion of code in C/C++ or just end up re-writing the whole thing with Rust
     - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
@@ -271,14 +265,11 @@ Nim
     - this article tells of a single example of many where Discord replaced Rust because they were hitting the limit of Go's garbage collector, and to their surprise, beyond that problem, it outperformed go in every way anyway
   - Mozilla, and as always, open-source
   
-  
 Dart
   - considered pretty dull, but it works; open-source, **designed to be cross-platform**
   - Flutter, and this is really all it's got behind it
   - Google
 
-  
-  
 Swift
   - Apple's native language, replacing Objective-C, and i believe a lot of code was rewritten using it
   - looks really good actually, simple yet powerful, like Haxe, and most importantly
@@ -300,19 +291,21 @@ Swift
 
 
 
-## others: not for games, or just history
+## others: not for useful for games, or just history
+
+### functional languages
+  - "Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
+    - this basically applies to most functional languages
+
 Elixer
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
     - proably not the most performance-oriented, but it being new, surely it's faster than python/ruby!
   - again, very Ruby-eque, but really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
   - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
   - not really suitable for games, i think..
-  
-Odin
-  - from the hand-made network
-  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!* :o very rad
-  - influenced by Go
 
+
+### server-side specialization (concurrency, functional)
 Go
   - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
   - **at the speed of C too! :o**
@@ -322,21 +315,29 @@ Go
   - simple, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it far less appealing for hobbyists (that like *natural* languages) and game-makers (that like lots of features and object-oriented paradigm)
   - this seems to have influenced a lot of languages, especially it's concurrency features
   - Google, but open-source
-  
+    - basically replaced a bunch of slow python code
+
+
+### just *special*...
+Odin
+  - from the hand-made network
+  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!* :o very rad
+  - influenced by Go
+    
+Pony
+  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
+
+
+### old / history
 ActionScript (3)
   - thanks to Flash and it's game engines FlashPunk and Flixel, i was able to make my first *little* games with them! :)
   - to this day, that was the best game dev experience i've ever had: pure code-only **light-weight scripting**
   - Haxe feels very close to ActionScript in both syntax and features, and really just made the perfect replacement for it, so, there's no need for this now, but good to note for history's sake
     - *update:* as it turns out, Nicholas (the maker of Haxe) wrote the compiler for ActionScript 2 :o ...now it all makes sense..!
   - my second love, leading me to Haxe
-    
-Pony
-  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
-
 
 
 https://www.atatus.com/blog/rust-vs-golang/
-
 
 
 
@@ -508,6 +509,13 @@ https://www.reddit.com/r/gamedev/comments/1edn03/lua_angelscript_haxe_c_java_and
   
 https://www.reddit.com/r/ruby/comments/5c1prl/ruby_vs_python/
   - always good to gather some real thought from real people
+  
+  
+ 
+ 
+https://blog.discord.com/using-rust-to-scale-elixir-for-11-million-concurrent-users-c6f19fc029d3
+
+
   
   
   
