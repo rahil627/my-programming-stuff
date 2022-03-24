@@ -10,9 +10,16 @@ rename 'my-stuff' to stuff, 'my notes' to notes, 'n so on
   - its also nice to have a single naming convention, as of now, i think its 'photos', 'documents', along with 'my notes'
 
 # my programming-related stuff
-includes:  
+includes:
+ - notes
  - code editor themes, fonts, configs
- - server configs ("dot files")
+ - linux configs ("dot files")
+   - server
+     - Fedora?
+   - personal
+     - Windows
+     - ArchLinux (VM)
+     - Mac OS X (boot)
  - scripts
 
 i found some from my first job... wowww
