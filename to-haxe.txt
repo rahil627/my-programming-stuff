@@ -58,7 +58,15 @@ no generics (though not the worst)
 
 
 
-# targets, bindings, transpilers, etc.
+
+# interop
+
+## target code injection
+
+it sounds like you should avoid this, but it's possible to just inject code in your target language!
+  - https://haxe.org/manual/target-syntax.html
+
+## targets, bindings, transpilers, etc.
 
 main, native, C/C++/VM:
 hashlink, can choose from two compile options:
