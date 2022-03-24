@@ -61,6 +61,11 @@ no generics (though not the worst)
 
 # interop
 
+## magical library linking
+apparently you can just do something like
+`-lib java filePath`
+to link a target library, and you even get autocompletion!! :o
+
 ## target code injection
 
 it sounds like you should avoid this, but it's possible to just inject code in your target language!
