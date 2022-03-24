@@ -33,6 +33,7 @@ https://github.com/HaxeFoundation
 
 https://github.com/haddock7/hlimgui
   - imgui bindings
+    - wait for Yanrish to release an example of imgui with Heaps
   
 https://code.haxe.org/category/macros/add-parameters-as-fields.html
   - macros are nuts!!!
@@ -53,6 +54,47 @@ no Dynamic
 no Any
 no templates
 no generics (though not the worst)
+
+
+
+
+# targets, bindings, transpilers, etc.
+
+main, native, C/C++/VM:
+hashlink, can choose from two compile options:
+  - hl/C, LLVM-optimized slow compilation / fast run-time
+  - hl, VM/JIT fast compilation / slow run-time, all in a single bytecode file for convenience too
+hxcpp, used to compile to mobile devices, also very fast, not sure how it compares to hl/C
+  - generates several C++ files which takes time without a compilation server
+neko, old, don't use this?
+
+other targets:
+js target, for **js/npm libs**, also for **node.js server-side use and it's libs**
+C# target, for **C#/Nuget libs**
+java target, for **java libs**
+  - JVM target, ? direct to JVM bytecode?
+python target, for **ai / machine learning libs**
+php target, for old CMSs?? lol
+
+transpilers:
+  - with trasnpiling, can then use any target!
+go2hx, for **Go libs**, 
+
+binding generators:
+  - with bindings, you are limited to that specific target language
+dts2hx, for **typescript (and javascript??)**
+
+manual bindings:
+  - most languages??
+C
+obj-C
+C++?
+...others?
+
+
+most of the targets are *very* fast (except python, and that's not haxe's fault)
+
+
 
 
 
