@@ -155,9 +155,16 @@ haxe --main MainClass -cpp build
   - results with a folder build, including generated C++ sources and bin(aries)
 
 
-# haxelibs
+# package management
+
+## haxelibs
 haxelib searchRegEx
 haxelib install someLibrary
+
+## lix
+a newer, smarter alt to haxelib
+  - tracks the version of all dependencies (over time?)
+  - https://github.com/lix-pm/lix.client
 
   
 hashlink profiler:
