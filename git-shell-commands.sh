@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# main use
 
 # use these to see differences and discard them
 git diff HEAD
@@ -50,3 +51,17 @@ rm -rf .git/modules/path/to/submodule
 
 # Remove the entry in .gitmodules and remove the submodule directory located at path/to/submodule
 git rm -f path/to/submodule
+
+
+
+# specific stuff
+
+# undo git pull
+git reset --keep HEAD@{1}
+
+# diff works for two folders (if they are the same repo, but different version)
+git diff repo-old repo-new
+
+# save diff log
+git diff --output output.txt
+
