@@ -1,44 +1,16 @@
-# compare languages by reading them
-
-https://learnxinyminutes.com/
-
-good examples:
-aim for 2d space shooter classes
-
-todo:
-crystal
-scala
-haxe
-
-ruby
-  - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
-
-rust
-  - https://github.com/rsaihe/zenith/tree/main/src/game
-  
-OCaml
-  - https://github.com/HaxeFoundation/haxe/blob/development/src/core/tOther.ml
-    - brain-exploding example of Haxe's compiler
-
-
-
-historical intrigues:
-BASIC (well, some variant of it):
-  - https://github.com/wls/Wumpus.bci/blob/master/wumpus.bci
-    - 'let' keyword for dynamic types?? :o
-  - surprisingly simple and readable, almost like it was specificalyl made for game programming! :o 
-  - lots of GOTOs
-  - many people cite this an their first prgramming language as a child
-  
-Commodore64 (c64)
-  - https://github.com/lvcabral/retaliate64/blob/master/source/gameData.asm
-  - everything is a "co-routine"
-  - feels closer to assembly, three-letter terse commands
-  
-
-
 
 # what langauge is best for my needs?
+
+## Zeta's opinion
+Zeta has written: a *very good* game engine, and is now writing an ARM assembler, and a simple OS
+
+Java is bad
+C# is Java owned by Microsoft, and thus doubly bad
+
+C is good
+Haxe is very good
+Rust is great
+
 
 ## my needs (or wants?)
 
@@ -93,6 +65,55 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 
 ## Microsoft <3 games *and* now open-source too?
 .NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, and so *the people* created Mono as an open-source cross-platform version of .NET, but now, the new .NET Core can truly be used to make *everything*! (I guess Mono is dead..? Or maybe it was used as a base for .NET Core??) *The C#/.NET stock is rising...* Thus, app frameworks like **Avalonia** and **Uno** can compete with Google's Flutter, and the game frameworks like **Unity** and **MonoGame** (based on Microsoft's own XNA framework used in the original Xbox) are still respectively the *the kings of indie game engines*. Microsoft is doing well. All of that, alongside open-source-made VS Code, and the fact that Windows always had a monopolty on games. Microsoft has always been closer to games than both Google and Apple have ever have been, and now it's really showing.
+
+
+
+
+
+# compare languages by reading them
+
+https://learnxinyminutes.com/
+
+good examples:
+aim for 2d space shooter classes
+
+todo:
+crystal
+scala
+haxe
+
+ruby
+  - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
+
+rust
+  - https://github.com/rsaihe/zenith/tree/main/src/game
+  
+OCaml
+  - https://github.com/HaxeFoundation/haxe/blob/development/src/core/tOther.ml
+    - brain-exploding example of Haxe's compiler
+
+
+
+historical intrigues:
+BASIC (well, some variant of it):
+  - https://github.com/wls/Wumpus.bci/blob/master/wumpus.bci
+    - 'let' keyword for dynamic types?? :o
+  - surprisingly simple and readable, almost like it was specificalyl made for game programming! :o 
+  - lots of GOTOs
+  - many people cite this an their first prgramming language as a child
+  
+Commodore64 (c64)
+  - https://github.com/lvcabral/retaliate64/blob/master/source/gameData.asm
+  - everything is a "co-routine"
+  - feels closer to assembly, three-letter terse commands
+  
+
+
+
+
+
+
+
 
 
 
