@@ -87,6 +87,7 @@ ruby
 
 rust
   - https://github.com/rsaihe/zenith/tree/main/src/game
+  - https://github.com/naodroid/bevy_game_tutorial
   
 OCaml
   - https://github.com/HaxeFoundation/haxe/blob/development/src/core/tOther.ml
