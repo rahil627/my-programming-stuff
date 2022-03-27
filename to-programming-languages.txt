@@ -269,6 +269,9 @@ C
     - Tooling
   - great simple web-site 'n documentation
   - this looks great! no hidden bullshit. optional std lib. everything about it makes sense to me! :)
+  - one line C interop
+    - // build with `zig build-exe cimport.zig -lc -lraylib`
+    - const ray = @cImport({ @cInclude("raylib.h"); });
   
   
 Odin
