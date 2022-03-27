@@ -5,7 +5,7 @@
 Zeta has written: a *very good* game engine, and is now writing an ARM assembler, and a simple OS
 
 Java is bad
-C# is Java owned by Microsoft, and thus doubly bad
+C# is like Java owned but by Microsoft, and thus doubly bad
 
 C is good
 Haxe is very good
