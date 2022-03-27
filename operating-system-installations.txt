@@ -1,4 +1,9 @@
 
+http://leofebey.com/blog/linux-vs-windows-vs-mac-2022
+  - this is the gist of the comparison:
+    - windows for almost everything except iOS dev, lol
+  
+  
 
 
 all OSs:
