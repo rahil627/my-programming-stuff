@@ -1,7 +1,7 @@
-
-# what langauge is best for my needs?
+# the opinions of great programmers
 
 ## Zeta's opinion
+
 Zeta has written: a *very good* game engine, and is now writing an ARM assembler, and a simple OS
 
 Java is bad
@@ -11,6 +11,16 @@ C is good
 Haxe is very good
 Rust is great
 
+
+
+# really good reads
+
+https://ziglang.org/learn/why_zig_rust_d_cpp/
+
+
+
+
+# what langauge is best for my needs?
 
 ## my needs (or wants?)
 
@@ -112,7 +122,11 @@ Commodore64 (c64)
 
 
 
+# my choices
 
+Haxe in general, garbage collected
+Ruby, scripting
+C vs Rust vs Zig vs Odin, manual memory management
 
 
 
@@ -180,7 +194,8 @@ the rest
   - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
   - game engines, such as Gosu, are written in C/C++ and then wrapped/binded by Ruby, because it would be too slow otherwise
   - Ruby Gems package manager
-  - although i missed this generation, i think i would have enjoyed this little world :)  
+  - although i missed this generation, i think i would have enjoyed this little world :)
+  - **my fav scripting language**
   
 Scala
   - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
@@ -243,6 +258,9 @@ C
 
 
 ## newer stuff
+**Zig**
+  - great simple web-site 'n documentation
+
 **Crystal**
   - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!?!?** :o :O
   - sytax and style *very very* similar to ruby, like 75% similar!
