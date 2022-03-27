@@ -259,7 +259,27 @@ C
 
 ## newer stuff
 **Zig**
+  - from the site:
+    - No hidden control flow
+    - No hidden allocations
+    - First-class support for no standard library
+    - A Portable Language for Libraries
+    - A Package Manager and Build System for Existing Projects
+    - Simplicity
+    - Tooling
   - great simple web-site 'n documentation
+  - this looks great! no hidden bullshit. optional std lib. everything about it makes sense to me! :)
+  
+  
+Odin
+  - from the hand-made network
+  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!* :o very rad
+  - influenced by Go
+
+
+Pony
+  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
+  
 
 **Crystal**
   - like a compiled and static-typed ruby, along with *much* faster, in fact, **at C++ speeds!?!?** :o :O
@@ -307,6 +327,9 @@ Nim
   - https://discord.com/blog/why-discord-is-switching-from-go-to-rust
     - this article tells of a single example of many where Discord replaced Rust because they were hitting the limit of Go's garbage collector, and to their surprise, beyond that problem, it outperformed go in every way anyway
   - Mozilla, and as always, open-source
+  
+
+
   
 Dart
   - considered pretty dull, but it works; open-source, **designed to be cross-platform**
@@ -361,14 +384,6 @@ Go
     - basically replaced a bunch of slow python code
 
 
-### just *special*...
-Odin
-  - from the hand-made network
-  - like C, not object-oriented, with a belief that *data and procedures should be seperate, and that behaviors shouldn't even exist!* :o very rad
-  - influenced by Go
-    
-Pony
-  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
 
 
 ### old / history
