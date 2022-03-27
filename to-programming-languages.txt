@@ -125,7 +125,7 @@ Commodore64 (c64)
 # my choices
 
 Haxe in general, garbage collected
-Ruby, scripting
+Ruby for scripting, including mRuby for embedded devices(!), although Wren is nice too
 C vs Rust vs Zig vs Odin, manual memory management
 
 
@@ -510,7 +510,7 @@ Ruby
 https://www.tiobe.com/tiobe-index/
 
 
-# language compilation speed
+# language compilation/interpretation speed
 just a very very very broad gut feeling, lol
 
 tier 1 (manual memory management) *for crazy game engine people only*:
@@ -522,29 +522,30 @@ Chapel (manual?)
 
 tier 1 (garbage collected) for me! :)
   - these are somehow comparable to the speeds of the non-gc languages... :o
+**Haxe**
+  - not in the benchmark, and not sure where this goes.. but when compiled to C, it's probably very fast  
 **Crystal**
-  - Ruby syntax but as fast as C++?? wtf
+  - Ruby syntax but with LLVM power!
 Java
-  - why on earth have people suffered all these years using C++ instead of Java??
 **Dart**
 Kotlin
 Swift (manual? reference counting)
-**Haxe**
-  - not in the benchmark, and not sure where this goes..
 
 tier 2:
   - these add features but come at the cost of being a few times slower, of course, depending on how you use them
 Scala
-**C#**
-**Nim**
+C#
+Nim
 Lua (LuaJIT -j)
+  - the interpreter that set the standard
 
 
 Python (pypy)
 Elixer
 
 
-tier 3 (interpreted) *not for games!!*
+tier 3 (interpreted) *not for games (core parts)!!*
+Wren - between Ruby and LuaJIT, but closer to Ruby
 Ruby - ~5x slower
 Lua - ~5-15x slower
 Python - ~10-15x slower
@@ -553,6 +554,8 @@ Perl - ~20+ slower
 
 https://benchmarksgame-team.pages.debian.net/benchmarksgame/
   - a joke, and hard to read, because it's more of a competition in which people upload crazy optimized programs that use multiple-cores/threads, but you can kinda see the limits and means using the simple implementations
+  
+https://wren.io/performance.html
 
 
 
