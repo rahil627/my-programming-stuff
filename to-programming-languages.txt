@@ -125,7 +125,7 @@ Commodore64 (c64)
 # my choices
 
 Haxe in general, garbage collected
-Ruby for scripting, including mRuby for embedded devices(!), although Wren is nice too
+Ruby for scripting (including mRuby for embedded devices!!), although Wren is nice too
 C vs Rust vs Zig vs Odin, manual memory management
 
 
@@ -246,7 +246,7 @@ C++
     - https://www.reddit.com/r/rust/comments/4yz59h/cc_interop/
   
 C
- - **a *very* simple "low-level" language used by most electronic devices**
+ - **a *very* simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
  - frameworks: RayLib, (todo: ??), not really the best for making frameworks, as it's not object-oriented; it'll more or less end up like RayLib: a ton of functions included in the top-level namespace, as there is no concept of namespace!
  - manual memory management via "raw" pointers (no references?) and the const key-word
  - *not* **object-oriented**
