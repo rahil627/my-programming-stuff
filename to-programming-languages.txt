@@ -44,7 +44,7 @@ for games (and other "creative" applications that use various input/output hardw
 ## answers and some thoughts
 
 ### the cross-platform problem
-as far as i know, only Haxe (indie), C# (Microsoft), Dart (Google), and C++/C fit all of the above requirements above. The need for cross-platform "target" compilers and standard libs really narrow down the choices, as most newer languages just won't have neither the library nor compilers, *yet*, they have the potential, as long as they can compile down to C. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond Haxe, C#, and Dart though, i haven't really seen many good cross-platform libraries... (*todo: I'd have to look into the C# and Haxe FFI like, is it easy to just call a C# function that calls the native (C/C++/obj-C) iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every platform!*)
+as far as i know, only Haxe (indie), C# (Microsoft), and Dart (Google) fit all of the above requirements above. The need for cross-platform "target" compilers (at the least, to C) and cross-platform standard libs really narrow down the choices, as most newer languages just won't have neither the library nor compilers, *yet*--they have the potential tho. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond Haxe, C#, and Dart though, i haven't really seen many good cross-platform libraries... (*todo: I'd have to look into the C# and Haxe FFI like, is it easy to just call a C# function that calls the native (C/C++/obj-C) iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every platform!*)
 
 see ["app frameworks.txt"]
 
@@ -52,10 +52,10 @@ see ["game frameworks.txt"]
 
 as far as using C# as a scripting language, well, there's the Rosyln compiler (part of open-source .NET foundation) and "cs script", but i'd have to look into it some more.. but **if you can script in C#, then, well, it might just be game over for any other language!**
 
-**nearly all high-level languages interop with C, so, i see no reason to write an *entire* program in C or C++_--or even Rust!_**, leave that to the game-engine makers, and **anyway, you can always write C/C++ for the intensive sections when needed** (i doubt i'll ever need to). *I don't want to even think about pointers or references, and definitely not smart pointers! :barf:* Java is the lowest i'd stoop.
-  - writing the core in C/C++ is perhaps the best option, as you get the best of both worlds: manual memory management for the core, and a light-weight scripting langauge on top (Lua, Wren), or, people can create high-level bindings in their favorite langauge of choice
+**nearly all high-level languages interop with C, so, i see no reason to write an *entire* program in C or C++ --or even Rust!_**, leave that to the game-engine makers, and **anyway, you can always write C (and maybe simple C++) for the intensive sections when needed** (i doubt i'll ever need to). *I don't want to even think about pointers or references, and definitely not smart pointers! :barf:* 
+  - writing the core in C/C++ is perhaps the best option, as you get the best of both worlds: manual memory management for the core, and a light-weight scripting langauge on top (Lua, Wren, mRuby?), or, people can create high-level bindings in their favorite langauge of choice
 
-as long as the language can compile to C/C++, then it should, in theory, work with just about any device (desktop, mobile, embedded, whatever). The problem is that it'll have to link to the libraries that the platform uses, which is likely C/C++/obj-C (exception: Android uses Java).
+as long as the language can compile to C/C++, then it should, in theory, work with just about any device (desktop, mobile, embedded, whatever). The problem is that it'll have to link to the libraries that each platform uses, which is likely C/C++/obj-C (exception: Android uses Java). If the application doesnt need to use the platform's libraries at all, however, i guess a binary is enough (apps/games for web assembly, desktop).
 
 
 ## libraries matter
@@ -64,7 +64,7 @@ libraries, including frameworks, engines, matter. Altough you could use just abo
 Over time, people who use the language will create libraries, *hopefully* many of which are open-source, thus buidling up a huge collection libraries specific to that language. **That resulting library, the contents of the library, is really an effect of the language itself, along with the community behind it, it's pop frameworks, etc.** If the language was created for intense math, then intense math libraries will likely be the result. (todo: If the language is close to being natural, like a human language, then it will likely be popular (Python). If the language has particular traits to it, or a style, such as focusing on being neat, tidy, and *clean* (Ruby), then it might have a community following...)
 
 (back to libraries...)
-Languages often have their own package managers: haxelib for Haxe, RubyGems for Ruby, NuGet for C#. Just by looking at the package manger, you can get a pretty good idea of what that language is mostly used for, and the power of the big frameworks in it. So, in RubyGems, the Rails web framework is a huge force, and much of Ruby is indeed used for web dev, along with general scripting / cli. In Haxelib, game 'n app frameworks such as OpenFL and NME are by far the biggest forces, with game frameworks and game-related libraries following after. todo: check out NuGet. But anyway, i think checking what's in the packagee manage, in the library, is a good way to compare languages, instead of comparing the features of the language itself, as it's the people that make the languages, not vice versa.
+Languages often have their own package managers: haxelib for Haxe, RubyGems for Ruby, NuGet for C#. Just by looking at the package manger, you can get a pretty good idea of what that language is mostly used for, and the power of the big frameworks in it. So, in RubyGems, the Rails web framework is a huge force, and much of Ruby is indeed used for web dev, along with general scripting / cli. In Haxelib, game 'n app frameworks such as OpenFL and NME are by far the biggest forces, with game frameworks and game-related libraries following after Htodo: check out NuGet). **I think checking what's in the package manager, in the library, is a good way to compare languages, instead of comparing the features of the language itself**, as it's the people that make the languages, not vice versa.
 
 
 
@@ -91,6 +91,11 @@ todo:
 crystal
 scala
 haxe
+
+C
+  - pacman, single-header-style
+    - https://github.com/floooh/pacman.c/blob/main/pacman.c
+      - uses sokol
 
 ruby
   - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
