@@ -105,6 +105,7 @@ zig
     - https://github.com/floooh/pacman.zig/blob/main/src/pacman.zig
   - https://github.com/ratfactor/zigish/blob/main/src/main.zig
   - https://github.com/tomhoule/zig-diff/tree/main/src
+  - https://github.com/Kiakra/Alka/blob/master/examples/example_shooter_game/src/game.zig
 
 ruby
   - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
