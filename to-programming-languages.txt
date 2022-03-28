@@ -138,9 +138,10 @@ Commodore64 (c64)
 
 # my choices
 
-Haxe in general, garbage collected
-Ruby for scripting (including mRuby for embedded devices!!), although Wren is nice too
-C vs Rust vs Zig vs Odin, manual memory management
+Haxe for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.)
+Ruby for simple everyday scripting, much more fun and expressive than Python, includes mRuby for embedded devices!?, its the only time i'd get to use something similar to a functional language
+Wren for embedded scripting, as in games, a much better suit alt to Lua, no std lib / can use libuv
+Zig > C, manual memory management, although still have to see Odin and try Rust
 
 
 
