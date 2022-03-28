@@ -103,6 +103,7 @@ C
 zig
   - same pacman implementation as above (but in zig)
     - https://github.com/floooh/pacman.zig/blob/main/src/pacman.zig
+  - https://github.com/ratfactor/zigish/blob/main/src/main.zig
   - https://github.com/tomhoule/zig-diff/tree/main/src
 
 ruby
