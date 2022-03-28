@@ -1,4 +1,5 @@
 
+i prefer the syntax (end), expressiveness, clean 'n tidyness, and fun of ruby over python :)
 
 https://github.com/learnbyexample/Ruby_Scripting/tree/master/chapters
 
@@ -23,3 +24,7 @@ Hello World
 
 
 
+https://github.com/learnbyexample/Ruby_Scripting/blob/master/chapters/File_processing.md
+  - totally awesome file io and current directory stuff
+  
+  
