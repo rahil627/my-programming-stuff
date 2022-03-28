@@ -272,6 +272,7 @@ C
 ## newer stuff
 **Zig**
   - from the site:
+  - page 1:
     - No hidden control flow
     - No hidden allocations
     - First-class support for no standard library
@@ -279,9 +280,32 @@ C
     - A Package Manager and Build System for Existing Projects
     - Simplicity
     - Tooling
+  - page 2:
+    - Small, simple language
+    - Performance and Safety: Choose Two
+    - Zig competes with C instead of depending on it
+    - Order independent top level declarations
+    - Optional type instead of null pointers
+    - Manual memory management
+      - i prefer the simplicity of this over Rust
+    - A fresh take on error handling
+    - Stack traces on all targets
+    - Generic data structures and functions
+    - Compile-time reflection and compile-time code execution
+    - Integration with C libraries without FFI/bindings
+    - Zig is also a C compiler
+    - Export functions, variables, and types for C code to depend on
+    - **Cross-compiling is a first-class use case**
+    - Zig ships with libc
+    - Zig Build System
+    - **Concurrency via Async Functions**
+      - i don't think haxe has this
+    - Wide range of targets supported
+    - Friendly toward package maintainers
   - great simple web-site 'n documentation
   - this looks great! no hidden bullshit. optional std lib. everything about it makes sense to me! :)
-  - one line C interop
+    - whereas Haxe and Rust use macros and "special" solutions in their standard library or hidden in their compiler, Zig doesnt take any shortcuts, doing everything the proper way
+  - **one line C interop**
     - // build with `zig build-exe cimport.zig -lc -lraylib`
     - const ray = @cImport({ @cInclude("raylib.h"); });
   
@@ -294,6 +318,13 @@ Odin
 
 Pony
   - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
+  
+  
+Streem
+  - "a stream based concurrent scripting language. It is based on a programming model similar to the shell, with influences from Ruby, Erlang, and other functional programming languages."
+  - https://github.com/matz/streem
+  - by the maker of Ruby
+  - seems kinda abandonded, but rad idea! :D
   
 
 **Crystal**
