@@ -96,6 +96,10 @@ C
   - pacman, single-header-style
     - https://github.com/floooh/pacman.c/blob/main/pacman.c
       - uses sokol
+      
+zig
+  - same pacman implementation as above (but in zig)
+    - https://github.com/floooh/pacman.zig/blob/main/src/pacman.zig
 
 ruby
   - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
