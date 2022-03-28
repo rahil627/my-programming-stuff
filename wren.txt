@@ -1,0 +1,33 @@
+wren for normal non-embedded scripting?
+
+# conclusion
+because there is no standard library, i dont think this can really be used for neither programs nor even small scripts. Libuv seems nice, but even that is just a minimalist io module. Even a scripting language needs a good standard library. You shouldn't have to rewrite that, nor even select them / build up your own standard library. You will need things like regex, more helpful / end-user-oriented file io and networking, and all those things you'd normal use found in a common standard library.
+
+no is the answer
+
+however, for it's purpose, it kicks ass, much prettier in all ways (syntax, concurrency, classes) than Lua for game 'n ui app scripting and for general embedding into C (especially embedded devices).
+
+
+# what's included?
+System class is bare, basically with just print(), gc(), and clock()
+
+optional modules Meta and Random can be added via compiler flags
+  - Meta includes the interpreter and compiler functions
+  
+Fiber class is used for concurrency
+  
+the rest is the standard types (strings, etc.)
+
+these are the things that are included in the VM, and nothing more
+
+
+
+# cli repl that includes libuv
+because there is no standard library, it used libuv for concurrent io
+
+https://github.com/wren-lang/wren-cli
+  - test/os/process folder for process class and executing commands
+  - test/io folder for file stuff
+  
+
+  
