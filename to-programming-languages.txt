@@ -140,12 +140,12 @@ Commodore64 (c64)
 
 # my choices
 
-Haxe for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.)
-Ruby for simple everyday scripting, much more fun and expressive than Python, includes mRuby for embedded devices!?, its the only time i'd get to use something similar to a functional language
-Wren for embedded scripting, as in games, a much better suit alt to Lua, no std lib / can use libuv
-Zig > C, manual memory management, although still have to see Odin and try Rust
+Haxe for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.), small Flash-game-oriented community
+Ruby for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language, includes mRuby: a minimal implementation for embedded devices!, cult clean-design-oriented commmunity
+Wren (or mRuby) for embedded scripting, embedding into C, as in game scripting, a much better suited alt to Lua (but as it as no standard library, it cannot replace a scripting language with one)
+Zig > C, manual memory management, although still have to see Odin and think more about the power of Rust's memory solution and compiler
 
-
+although Crystal seems cool, Haxe is far more developed
 
 
 
