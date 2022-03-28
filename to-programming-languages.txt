@@ -16,6 +16,10 @@ Rust is great
 # really good reads
 
 https://ziglang.org/learn/why_zig_rust_d_cpp/
+  - a good critique of all other systems languages
+
+https://floooh.github.io/2020/08/23/sokol-bindgen.html
+  - creator of sokol tackles C api language binding generation
 
 
 
