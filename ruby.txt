@@ -1,5 +1,11 @@
 
-i prefer the syntax (end), expressiveness, clean 'n tidyness, and fun of ruby over python :)
+i prefer the syntax, expressiveness, clean 'n tidyness, and fun of ruby over python :)
+
+its also a funny way to write very clean simple scripts in a more functional style
+
+anyway, anything is better than bash!
+
+
 
 https://github.com/learnbyexample/Ruby_Scripting/tree/master/chapters
 
