@@ -1,0 +1,25 @@
+
+
+https://github.com/learnbyexample/Ruby_Scripting/tree/master/chapters
+
+
+
+irb command for repl
+
+
+
+$ type env ruby
+env is /usr/bin/env
+ruby is /usr/local/bin/ruby
+
+$ cat hello_world.rb
+#!/usr/bin/env ruby
+
+puts 'Hello World'
+
+$ chmod +x hello_world.rb
+$ ./hello_world.rb
+Hello World
+
+
+
