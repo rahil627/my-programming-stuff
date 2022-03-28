@@ -103,6 +103,7 @@ C
 zig
   - same pacman implementation as above (but in zig)
     - https://github.com/floooh/pacman.zig/blob/main/src/pacman.zig
+  - https://github.com/tomhoule/zig-diff/tree/main/src
 
 ruby
   - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
