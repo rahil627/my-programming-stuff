@@ -145,13 +145,13 @@ Commodore64 (c64)
 # my choices
 
 Haxe (or Crystal?) for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.), small Flash-game-oriented community
-Ruby (or Crystal? or Haxe) for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language, includes mRuby: a minimal implementation for embedded devices!, cult clean-design-oriented commmunity
+Ruby (or Crystal? or Haxe) for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language, includes mRuby: a minimal implementation for embedded devices!, clean-design-oriented cult commmunity
 Wren (or mRuby) for embedded scripting, embedding into C, as in game scripting, a much better suited alt to Lua (but as it as no standard library, it cannot replace a scripting language with one)
 Zig > C, manual memory management, although still have to see Odin and think more about the power of Rust's memory solution and compiler
 
 although Crystal has all of the things i want--good C api, concurrency, Ruby syntax, performance, etc.--Haxe is *far* more developed...
 
-although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass combo as they share similar syntax across: all Ruby influenced, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, and Crystal has good C api). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt has an interpreter.
+although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass combo as they share similar syntax across: all Ruby influenced, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, Crystal has good C api, Ruby might have C and Java api??). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt has an interpreter.
 
 it seems like Ruby is still better for simple scripting. For with Elixer, once you include another file, you basically have to create a project for it. For Crystal, you must either compile it every time in order to run it (just adds a second) or save the compiled binary (i'm not sure if thr eval interpreter is enough...). For Haxe you have all the choices (interpreter, VM bytecode, LLVM-optimized C binary), but you still need to make sure you have a Main class ;).
 
@@ -164,7 +164,9 @@ https://news.ycombinator.com/item?id=14120398
 
   
 https://thoughtbot.com/blog/is-elixir-a-scripting-language
-  - todo: try it out! see what the limits are
+  - running it via command line, it seems it would only work for a single module, and i'm not sure if you can simply import other modules using this method
+  - adding a shebang and running it via 'mix file' seems the way to go, you'd just need Elixer installed, and im not sure if it can actually execute without that command...
+  - compiling it to a binary is similar, or even more complicated, than haxe: you need a seperate build file, put the script into a main function, compile it, and ensure you have Erlang's VM (BEAM)
   
 https://news.ycombinator.com/item?id=23431941
   - crystal vs ruby
