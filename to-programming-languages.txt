@@ -151,12 +151,15 @@ Zig > C, manual memory management, although still have to see Odin and think mor
 
 although Crystal seems cool, Haxe is far more developed...
 
-Ruby for scripting, Crystal for native, Elixer for server-side is a kick-ass combo, sharing similar syntax across: all Ruby influenced.
+Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass combo, as they share similar syntax across: all Ruby influenced, however, unfortunately, they would'nt share a single library :(. There is zero interoprability between them (Elixer can work with Erlang, and Crystal has good C api). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt has an interpreter.
 
 
 
 https://news.ycombinator.com/item?id=14120398
   - seems like Ruby is still better for simple scripting, as for with Elixer, once you include another file, you basically have to create a project for it
+  
+https://thoughtbot.com/blog/is-elixir-a-scripting-language
+  - todo: try it out! see what the limits are
 
 
 # a few contemporary languages, old and new
@@ -438,10 +441,10 @@ Haskell
 
 Elixer
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
-    - proably not the most performance-oriented, but it being new, surely it's faster than python/ruby!
+    - proably not the most performance-oriented (for native apps), but it being new, it has much better concurrency, and the VM ensures it's much faster than python/ruby!
   - again, very Ruby-eque, but really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
   - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
-  - not really suitable for games, i think..
+  - not really suitable for games, i think.. but a good alternstive to Go, i guess?
 
 
 ### server-side specialization (concurrency, functional)
