@@ -151,8 +151,12 @@ Zig > C, manual memory management, although still have to see Odin and think mor
 
 although Crystal seems cool, Haxe is far more developed...
 
-Ruby for scripting, Crystal for native, Elixer for server-side is a kick-ass combo, sharing similar syntax across.
+Ruby for scripting, Crystal for native, Elixer for server-side is a kick-ass combo, sharing similar syntax across: all Ruby influenced.
 
+
+
+https://news.ycombinator.com/item?id=14120398
+  - seems like Ruby is still better for simple scripting, as for with Elixer, once you include another file, you basically have to create a project for it
 
 
 # a few contemporary languages, old and new
