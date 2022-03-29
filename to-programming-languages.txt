@@ -167,6 +167,7 @@ https://thoughtbot.com/blog/is-elixir-a-scripting-language
   
 https://news.ycombinator.com/item?id=23431941
   - crystal vs ruby
+  - "Ruby's "metaprogramming" is something Java, C# and JS don't do well -- dynamically redefining things during runtime. Everything in Ruby, including literals and operators, can be redefined during runtime, because everything is an object, and every message passed to any object can be redirected, filtered, transformed ad hoc. It's not just classes can be modified. Specific objects can be modified. Well-crafted Ruby code breaks things up into mixins that can be composed together. The closest comparison is one of Ruby's inspiration -- Smalltalk."
 
 
 # a few contemporary languages, old and new
