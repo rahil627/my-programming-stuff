@@ -156,6 +156,7 @@ although having Ruby for scripting, Crystal for native, Elixer for server-side s
 
 
 https://news.ycombinator.com/item?id=14120398
+  - elixer vs ruby?
   - seems like Ruby is still better for simple scripting, as for with Elixer, once you include another file, you basically have to create a project for it
     - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
     - "I do not particularly like the usual global package installation model, though, because it means that you can only have a single version of a package available for your scripts to require. The best package management model for standalone scripts that I have seen is Groovy's [1]: a script can include a special directive that downloads a specific version of a package just for that script. Any versions can be stored in the global (per-user) package cache so that you don't have to redownload them every time a script runs, but your import statements always give you strictly the version you asked for. This is the model I'd adopt for Elixir."
@@ -163,6 +164,9 @@ https://news.ycombinator.com/item?id=14120398
   
 https://thoughtbot.com/blog/is-elixir-a-scripting-language
   - todo: try it out! see what the limits are
+  
+https://news.ycombinator.com/item?id=23431941
+  - crystal vs ruby
 
 
 # a few contemporary languages, old and new
