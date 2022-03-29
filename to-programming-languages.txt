@@ -165,7 +165,7 @@ https://news.ycombinator.com/item?id=14120398
   
 https://thoughtbot.com/blog/is-elixir-a-scripting-language
   - running it via command line, it seems it would only work for a single module, and i'm not sure if you can simply import other modules using this method. Its possible to add a shebang and make it an executable
-  - running the script via the 'mix' command seems the way to go, as that makes it a proper project allowing you to add modules; you'd just need Elixer installed, and im not sure if it can actually execute standalone without that command...
+  - running the script via the 'mix' command seems the way to go, as that makes it a proper project allowing you to add modules, but then you'd need to create a new project, with a project folder, with it's own directory structure ' files, snd on top of that you'd need Elixer installed, and im not even sure if it can actually execute standalone without that command...
   - compiling it to a binary is similar, or even more complicated, than haxe: you need a seperate build file, put the script into a main function, compile it, and ensure you have Erlang's VM (BEAM)
   
 https://news.ycombinator.com/item?id=23431941
