@@ -214,10 +214,12 @@ the rest
   - although i missed this generation, i think i would have enjoyed this little world :)
   - **my fav scripting language**
   
+  
 Scala
   - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
   - much loved
   - just as featureful and powerful as most of the newer contemporary lanugages
+  
   
 Python
   - perhaps the most popular and most loved scripting language, even as of 2022(!!), competitive to Ruby
@@ -409,6 +411,16 @@ Swift
 
 
 ## others: not for useful for games, or just history
+
+### magics
+Lisp
+  - magic
+  
+Schema
+  - meta-magic
+  
+Haskell
+  - magical feeling to write
 
 ### functional languages
   - "Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
