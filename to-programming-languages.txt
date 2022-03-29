@@ -109,6 +109,10 @@ zig
 
 ruby
   - https://github.com/benbalter/jekyll-optional-front-matter/blob/main/lib/jekyll-optional-front-matter/generator.rb
+  
+elixer
+  - https://github.com/elixirkoans/elixir-koans
+    - based off ruby koans
 
 rust
   - https://github.com/rsaihe/zenith/tree/main/src/game
@@ -141,11 +145,13 @@ Commodore64 (c64)
 # my choices
 
 Haxe for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.), small Flash-game-oriented community
-Ruby for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language, includes mRuby: a minimal implementation for embedded devices!, cult clean-design-oriented commmunity
+Ruby (or Elixer?) for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language, includes mRuby: a minimal implementation for embedded devices!, cult clean-design-oriented commmunity
 Wren (or mRuby) for embedded scripting, embedding into C, as in game scripting, a much better suited alt to Lua (but as it as no standard library, it cannot replace a scripting language with one)
 Zig > C, manual memory management, although still have to see Odin and think more about the power of Rust's memory solution and compiler
 
-although Crystal seems cool, Haxe is far more developed
+although Crystal seems cool, Haxe is far more developed...
+
+Ruby for scripting, Crystal for native, Elixer for server-side is a kick-ass combo, sharing similar syntax across.
 
 
 
