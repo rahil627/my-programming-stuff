@@ -144,12 +144,12 @@ Commodore64 (c64)
 
 # my choices
 
-Haxe for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.), small Flash-game-oriented community
-Ruby for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language, includes mRuby: a minimal implementation for embedded devices!, cult clean-design-oriented commmunity
+Haxe (or Crystal?) for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.), small Flash-game-oriented community
+Ruby (or Crystal?) for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language, includes mRuby: a minimal implementation for embedded devices!, cult clean-design-oriented commmunity
 Wren (or mRuby) for embedded scripting, embedding into C, as in game scripting, a much better suited alt to Lua (but as it as no standard library, it cannot replace a scripting language with one)
 Zig > C, manual memory management, although still have to see Odin and think more about the power of Rust's memory solution and compiler
 
-although Crystal seems cool, Haxe is *far* more developed...
+although Crystal has all of the things i want--good C api, concurrency, Ruby syntax, performance, etc.--Haxe is *far* more developed...
 
 although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass combo as they share similar syntax across: all Ruby influenced, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, and Crystal has good C api). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt has an interpreter.
 
