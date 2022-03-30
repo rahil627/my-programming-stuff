@@ -18,9 +18,9 @@ see the docs for other languages
 ## types
 
 ### basic types
-bool
-int
-float
+bool - 1 bit?
+int - 8, 16, 32, 64 bits
+float - 8, 16, 32, 64 bits
 
 ### advanced types
 class (instance)
@@ -70,11 +70,39 @@ usually a standard build file is provided to store the compiler options, for con
 ## standard library:
 included in most general programming languages, though can be excluded from embedded scripting languages, for example: Lua and Wren
 
-std input, std output
-std error(?)
-io
-strings
-etc.
+std lib strucutre from haxe's docs, expanded a few categories:
+Standard Library
+String
+Data Structures
+  - Array
+  - Vector
+  - List
+  - GenericStack
+  - Map
+  - Option(?)
+Regular Expressions
+Math
+Lambda
+Template
+Reflection
+Serialization
+Xml
+Json
+Input/Output
+Sys
+  - Threading
+  - Standard IO Streams
+  - Process
+x/Remoting
+  - replaced by sockets?
+Unit Testing
+Haxe 3 Compatibility
+
+there's also target-specific stuff.. (todo)
+
+
+
+
 
 ### processes, threads, and fibers
 processes
