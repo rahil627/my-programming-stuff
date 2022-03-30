@@ -68,8 +68,9 @@ usually a standard build file is provided to store the compiler options, for con
 
 
 ## standard library:
-included in most general programming languages, though can be excluded from embedded scripting languages, for example: Lua and Wren
+although not part of the actual programming language, it's bundled along with most general programming languages, though it can be excluded, for example: embedded scripting languages such as Lua and Wren
 
+### standard library structure
 std lib strucutre from haxe's docs, expanded a few categories:
 Standard Library
 String
@@ -102,7 +103,7 @@ there's also target-specific stuff.. (todo)
 
 
 
-
+### standard library in details
 
 ### processes, threads, and fibers
 processes
