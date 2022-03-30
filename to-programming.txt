@@ -1,3 +1,30 @@
+
+# programming features
+see the docs for haxe
+also the language features page
+see the docs for other languages
+
+
+processes
+  - run a process
+  - pID, close, exit code, kill
+  - readonly: input stream, output stream, error output stream
+  - https://haxe.org/manual/std-input-output-process.html
+  
+threads
+  - 
+
+
+fibers
+  - Fibers are primitives for implementing light weight cooperative concurrency in Ruby. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by the programmer and not the VM.
+  - https://ruby-doc.org/core-2.1.1/Fiber.html
+
+
+
+
+
+
+
 http://www.craftinginterpreters.com/a-map-of-the-territory.html
   - this chapter lays out the all of the concepts about *how programming languages work* very simply and lightly
 
