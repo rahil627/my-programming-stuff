@@ -17,6 +17,8 @@ processes
 threads
   - like another Main() process
   - generally you don't have control of this
+    - "...typically switching between threads is handled by the operating system, a process known as *preemptive scheduling*. Fibers, by contrast, are *cooperatively scheduled*: they must voluntarily yield control, usually at the behest of the programmer."
+      - https://thoughtbot.com/blog/meet-fiber-thread-s-cooperative-cousin
   - from the haxe docs:
     - "All spawned threads are treated as daemon threads, meaning that the main thread will not wait for their completion."
     - "Due to threads having access to a shared memory space with all the Haxe variables and objects, it is possible to run into issues due to deadlocks and race conditions. The standard library provides some core synchronization constructs in the sys.thread package."
