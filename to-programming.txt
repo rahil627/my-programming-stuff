@@ -42,10 +42,27 @@ tell what a program should do
 ### macros
 
 
+### compiler metadata
+i think the metadata is sent to the compiler to to either conditionally do different stuff or run a macro...
+
+haxe's list of compiler metadata, for example, is exhausting, mostly due to it's multi-target nature
+  - https://haxe.org/manual/cr-metadata.html
+
+
 ## compilers
-The Haxe Compiler is typically invoked from command line with several arguments which have to answer two questions:
+"The Haxe Compiler is typically invoked from command line with several arguments which have to answer two questions:
 What should be compiled?
-What should the output be?
+What should the output be?"
+
+generally the answers are a Main class for input, and
+a target platform: this could be source code, bytecode, machine code
+
+### compiler flags
+haxe's options for compiling, for example, are exhausting, mostly due to it's multi-target nature
+  - https://haxe.org/manual/compiler-usage-flags.html
+
+### a build file
+usually a standard build file is provided to store the compiler options, for convenience
 
 
 
