@@ -1,7 +1,13 @@
 
 # programming features
 see the docs for haxe
+  - this covers the basic and many advanced features of most programming languages
+  - https://haxe.org/manual/introduction.html
+  
 also the language features page
+  - this page quickly lists a sub-set of advanced features of haxe
+  - https://haxe.org/manual/lf.html
+  
 see the docs for other languages
 
 
