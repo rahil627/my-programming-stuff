@@ -9,7 +9,8 @@ also the language features page
   - https://haxe.org/manual/lf.html
   
 see the docs for other languages
-
+  - i personally like how succint and simple haxe's docs are, it helps with memorization, but it's worth seeing other docs. For example, the docs to Rust is like a book!
+  - language-specific features are noted in seperate notes for each programming language (ruby.txt for ruby, etc.)
 
 
 ## processes, threads, and fibers
