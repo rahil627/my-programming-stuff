@@ -1,7 +1,9 @@
 
-# programming features
+# programming language elements
+
 see the docs for haxe
   - this covers the basic and many advanced features of most programming languages
+  - i will categorize my notes similar to the docs: types, type systems, expressions, features, compiler, etc.
   - https://haxe.org/manual/introduction.html
   
 also the language features page
@@ -13,7 +15,51 @@ see the docs for other languages
   - language-specific features are noted in seperate notes for each programming language (ruby.txt for ruby, etc.)
 
 
-## processes, threads, and fibers
+## types
+
+### basic types
+bool
+int
+float
+
+### advanced types
+class (instance)
+enum (instance)
+anonymous structure
+function type
+dynamic
+abstract
+monomorph
+
+
+## expressions
+tell what a program should do
+
+
+## features
+
+
+### macros
+
+
+## compilers
+The Haxe Compiler is typically invoked from command line with several arguments which have to answer two questions:
+What should be compiled?
+What should the output be?
+
+
+
+
+## standard library:
+included in most general programming languages, though can be excluded from embedded scripting languages, for example: Lua and Wren
+
+std input, std output
+std error(?)
+io
+strings
+etc.
+
+### processes, threads, and fibers
 processes
   - run a process--basically a another OS program/executable
   - example api:
