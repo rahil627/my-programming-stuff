@@ -24,8 +24,13 @@ zsh
 
 tldr
 
+fzf
+  - holy shit, search entire OS with this!
+
 htop
 
+dropbox
+  - cli vs app
 
 dev-related:
 nvim
