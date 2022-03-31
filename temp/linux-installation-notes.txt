@@ -1,0 +1,50 @@
+
+from previous install:
+
+the minimal desktop thingy
+
+desktop:
+should be good for remote desktop apps
+xfce
+
+chrome-rdp
+  - can try noVNC instead
+
+package managers:
+apt
+  - default OS
+homebrew
+  - save install script
+snapd(d)
+  - save install script
+
+cli:
+fish
+zsh
+
+tldr
+
+htop
+
+
+dev-related:
+nvim
+git
+gh - github cli
+
+gems (Ruby):
+basically the dependencies of Jekyll... maybe i tried to run Jekyll locally??
+i seriously don't remember trying this tho...
+
+snaps:
+code
+sublime-text
+ruby
+  - not sure why it's here..
+
+
+
+
+
+
+snap is sandboxed, so use it for temporary apps

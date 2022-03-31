@@ -1,0 +1,32 @@
+https://www.dropbox.com/s/bl9lzjuyvdk57l8/luxe_launcher-0.0.17-linux.zip?dl=0
+
+
+https://ruby0x1.itch.io/luxe/download/MeScnHS6IibYmLURCnyzkuMfxjgc8UuBxMKRT0Ty
+
+(download the zip directly instead of using the itch app atm)
+
+**setup steps** here: (doc link is private of course): https://ruby0x1.ca/dev-lx/get/
+login: ||`luxe + create with luxe` - spaces included||
+
+the second step to make sure everything is good to go: 
+**follow all the steps on this page** to run via code + editor: https://ruby0x1.ca/dev-lx/tutorial/create-and-run-a-project/
+
+tell me if anything goes wrong
+
+
+
+
+
+you'd start here: https://ruby0x1.ca/dev-lx/guide/
+and then here https://ruby0x1.ca/dev-lx/tutorial/overview/
+
+once you accept the github invite I sent (check email), there's this LD jam game, https://github.com/luxeengine/ld46 - https://ruby0x1.itch.io/the-ruins
+it's a little platformer with some scenes + some tilemaps if you want to open it in editor and look around some content.
+- magical ice cream thing https://luxeengine.com/1.0/k2020/ - https://github.com/luxeengine/icecream 
+- breakout game https://joeld42.itch.io/breaklchemy - https://github.com/luxeengine/breaklchemy
+
+the guide is important for big picture, and the tutorial highly recommended as it covers a whole lot, takes a few hours. if you have questions or thoughts definitely please share, here in DM is fine, there's also the private dev chat channels there or you can file issues. nothing is too small etc, all feedback is good
+
+- don't miss the code completion setup https://ruby0x1.ca/dev-lx/guide/workflow/#code-completion
+- you can file issues here https://github.com/luxeengine/preview/issues/
+- you can post an intro here, it's encouraged https://github.com/luxeengine/preview/discussions/1
