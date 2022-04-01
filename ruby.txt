@@ -7,7 +7,15 @@ anyway, anything is better than bash!
 
 
 
-https://github.com/learnbyexample/Ruby_Scripting/tree/master/chapters
+tutorial:
+
+make sure you have a good set-up: vs code with ruby extensions, nvim with vim-ruby, or whatever, ad this it should be pretty easy to just get completion for everything for a "everything is an object" language
+
+these three chapters look useful: otherwise, it's just the same ol' programming stuff
+https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Executing_external_commands.html
+https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/File_processing.html
+https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Regular_expressions.html
+  - https://github.com/learnbyexample/Ruby_Scripting
 
 
 
@@ -28,9 +36,5 @@ $ chmod +x hello_world.rb
 $ ./hello_world.rb
 Hello World
 
-
-
-https://github.com/learnbyexample/Ruby_Scripting/blob/master/chapters/File_processing.md
-  - totally awesome file io and current directory stuff
   
   
