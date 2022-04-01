@@ -1,0 +1,56 @@
+
+
+https://en.m.wikipedia.org/wiki/Scripting_language
+
+from the wiki:
+Bash, an interpreted scripting language for use on Unix and Unix-like operating systems and environments.
+PowerShell, a scripting language originally for use on Microsoft Windows but nowadays also installable on macOS and Linux.
+sed and AWK, two text processing languages used mainly in Unix-like environments.
+Perl,[2] a text processing language that later developed into a general-purpose language, also used as an extension language for various applications.
+Python, a general-purpose scripting language, also used as an extension language.
+Tcl,[3] a scripting language for Unix-like environments, popular in the 1990s for creating GUI applications.
+JavaScript (later: ECMAScript), originally a very small, highly domain-specific language, limited to running within a web browser to dynamically modify the web page being shown, that later developed into a widely portable general-purpose programming language.
+x/Visual Basic for Applications, an extension language specifically for Microsoft Office applications.
+Lua, a language designed for use as an extension language for applications in general, and used as such by many different applications.
+Lisp, a family of general-purpose languages and extension languages for specific applications, e.g. Emacs Lisp, for the Emacs editor.
+
+
+Lisp and Tcl are mysteries to me.
+It makes sense that Perl started out as a text processing language..
+
+
+
+
+nowadays many compiled languages also have an interpreter, as the interpreter is much simpler than a compiler, and offers REPL for some interactivity
+
+
+https://stackoverflow.com/questions/5327340/ruby-vs-lua-as-scripting-language-for-c
+  - "I'm not sure if I should use Ruby or Lua. Lua is easier to embed, but Ruby has a larger library, and better syntax (in my opinion). The problem is, there is no easy way I found to use Ruby as scripting language with C++, whereas it's very easy with Lua."
+  - "If you think Lua is too simplistic, and Ruby too hard to embed, maybe you should consider Python?"
+  - "I've looked at embedding Ruby into C/C++ before, and it seemed extremely difficult. There are a lot of challenges you'll face:
+      Calling into Ruby from C/C++ requires 2 layers of functions to be written (one layer to call, and one to catch exceptions)
+      Calling back into C/C++ from Ruby requires the normal SWIG-type work
+      Moving data back and forth requires keeping careful track of allocations, since Ruby will want to garbage collect anything it can
+      I'm sure that this can be done, but it seemed extremely difficult to me, only doable if you can jump into Ruby in a minimum of entry points."
+  - "Luabind is really easy to use, there is no need for an external generator like SWIG, the doc is great. Compile times remain decent.
+      Biggest problem I've seen : lua is mostly ... write-only. You don't really have classes, but only associative arrays with a bit of syntaxic sugar ( object['key'] can be written object.key ), so you easily end up adding a 'member' in an obscure function, completely forget about it, and have side effects later.
+      For this reason, and this reason only, I'd prefer Python. "
+    "Not directly related : None of these can be reliably used in a multithreaded environment (so this depends on the complexity of your server).
+       N Python threads : the GIL ( Global Interpreter Lock ) is on your way. Each and every time you use a variable in a thread, it's locked, so it kinda ruins the point, except for long I/O operations and calls to C functions.
+       lua has coroutines, but they aren't parallelisable.
+       Ruby threads aren't really threads, but similar to Lua's coroutines
+       Note that you can still create one environement for each thread, but they won't be able to communicate (except with a C++ machinery). This is especially easy in Lua."
+   - "The newest versions of Ruby (1.9+) use real system level threads. It does still have a GIL though, which puts it on equal footing with Python."
+   - "You may be interested in learning about Squirrel. I believe it was the scripting language used by Left 4 Dead 2. It is more advanced than lua (uses objects and classes) and is meant to easily be embedded in a C++ app, which sounds like exactly what you are looking for."
+   - "One thing Lua has going for it is its ability to shuttle data between C++ (or C) and itself very easily. Essentially you're just pushing/popping data onto a stack in order to communicate between the two. Having multiple Lua environments up and running at the same time is quite simple as well (should you need that functionality). Although Lua is a garbage collected language, it's easy to prevent it from doing so on data that needs to stick around in your C++ code. Creating an extensible plugin system should be easy with Lua once you lay the groundwork. Swapping plugins (in this case, scripts) in and out at runtime is also pretty trivial (although this may be true for Ruby as well, I'm not familiar enough with it to know)."
+     "One thing to think about is how much object-oriented stuff you want your scripts to be able to handle. Lua uses functions, tables, metatables, and prototypes to implement OO-like programming. Some people like it, some don't; personally I found it interesting to use, if a bit clunky at times. Not having used Ruby, I can't speak for it, but you may want to weigh your need for object/class support."
+     "I think in your situation you should also consider how fast you want to get your project up and running. As you and others have noted, Ruby is hard to embed in C++, whereas Lua is not. Time is always precious and if you want to get something working ASAP, Lua is probably your best bet."
+
+
+so, basically, Lua for C/C++ embedding, not Python and certainly not Ruby
+
+otherwise, if embedding to C/C++ isn't the worry, then just choose the one you like! :)
+
+Lua's like a primitive language that can build features that other languages have, but, it's not built-in, it's all dynamic, so overall it feels janky, imo. **I personally much prefer Ruby or Python over Lua, and Ruby over Python**.
+
+
