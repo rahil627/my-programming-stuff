@@ -58,11 +58,36 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'
 
 " completion plugin that mirrors VS code's completion set-up
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" then run the following commands in nvim:
-" CocInstall coc-haxe
-" for more langs see https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+" use :CocConfig to edit the configuration file.
+" coc-json will help you provide completion for it :)
+
+" for more extensions including langauges see:
+" https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+" or use this command:
+" then run the following commands in nvim: (note: they cannot be done via this config file)
 " :CocList extensions
-" CocUninstall [extension]
+" CocInstall [extension]
+" :CocUninstall [extension]
+
+
+" languages
+" coc-haxe
+" coc-sh for bash using bash-language-server.
+" coc-zig
+" coc-json
+" coc-html
+
+" extensions
+" coc-markdownlint for markdown linting
+" coc-markdown-preview-enhanced
+" coc-dot-complete
+" coc-fzf-preview
+" coc-git
+" coc-gist
+" coc-prettier
+" coc-snippets
+" coc-spell-checker
+
 
 
 
