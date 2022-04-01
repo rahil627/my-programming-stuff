@@ -1,6 +1,7 @@
 # author/source: https://github.com/lluchs/territory
 # ~/.inputrc: readline initialization file.
 
+# TODO: MAYBE CAN DELETE THIS SECTION
 # the following line is actually
 # equivalent to "\C-?": delete-char
 #"\e[3~": delete-char
@@ -27,6 +28,7 @@ $if mode=vi
   set keymap vi-insert
   "jk": vi-movement-mode
 $endif
+# end of MAYBE CAN DELETE THIS SECTION
 
 # Allow 8-bit input/output
 #set meta-flag on
