@@ -1,5 +1,19 @@
 
 
+# conclusion
+so basically,
+
+**for C/C++ embedding, Lua is better than Python, and much better than Ruby, yet, for the more specific task of embedding into a game, there might be better options such as Squirrel and Wren, both of which have object-oriented paradigm built-in. Otherwise, if embedding to C/C++ isn't the worry, then just choose the one you like! :)**
+
+All of them have standard libraries, though, Lua with it's goal of minimal size, is the smallest, though in a charming in it's own charming way (see the very simple one-web-page manual). **Python's and Ruby's standard librares are literally *the* standards by now, untouchable.**
+
+Lua's like a primitive language that can build features that other languages have, but, it's not built-in, it's all dynamic-feeling, so overall it feels janky, imo. **For general scripting use, not embedding, I much prefer Ruby or Python over Lua, and Ruby over Python**. **Lua is made for embedding,** and it's great at that, whereas **Ruby and Python are made for scripting.**
+
+So, in the end, it'll just be a preference between Ruby vs Python. Or the bajillion newer languages such as Crystal (compiled, static-typed Ruby), Nim (compiled, static-typed Python), Elixer (Ruby + Erlang), or good ol' Haxe, and whatever else out there.
+
+
+
+
 https://en.m.wikipedia.org/wiki/Scripting_language
 
 from the wiki:
@@ -64,16 +78,6 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
 
 
 
-# conclusion
-so basically,
-
-**for C/C++ embedding, Lua is better than Python, and much better than Ruby, yet, for the more specific task of embedding into a game, there might be better options such as Squirrel and Wren, both of which have object-oriented paradigm built-in. Otherwise, if embedding to C/C++ isn't the worry, then just choose the one you like! :)**
-
-All of them have standard libraries, though, Lua with it's goal of minimal size, is the smallest, though in a charming in it's own charming way (see the very simple one-web-page manual). **Python's and Ruby's standard librares are literally *the* standards by now, untouchable.**
-
-Lua's like a primitive language that can build features that other languages have, but, it's not built-in, it's all dynamic-feeling, so overall it feels janky, imo. **For general scripting use, not embedding, I much prefer Ruby or Python over Lua, and Ruby over Python**. **Lua is made for embedding,** and it's great at that, whereas **Ruby and Python are made for scripting.**
-
-So, in the end, it'll just be a preference between Ruby vs Python. Or the bajillion newer languages such as Crystal (compiled, static-typed Ruby), Nim (compiled, static-typed Python), Elixer (Ruby + Erlang), or good ol' Haxe, and whatever else out there.
 
 
 
