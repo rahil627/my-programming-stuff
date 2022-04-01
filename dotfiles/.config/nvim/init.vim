@@ -72,8 +72,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " languages
 " coc-haxe
+
 " coc-sh for bash using bash-language-server.
+
 " coc-zig
+
+" coc-yaml
 " coc-json
 " coc-html
 
