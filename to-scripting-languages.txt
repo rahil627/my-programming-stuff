@@ -9,7 +9,8 @@ All of them have standard libraries, though, Lua with it's goal of minimal size,
 
 Lua's like a primitive language that can build features that other languages have, but, it's not built-in, it's all dynamic-feeling, so overall it feels janky, imo. **For general scripting use, not embedding, I much prefer Ruby or Python over Lua, and Ruby over Python**. **Lua is made for embedding,** and it's great at that, whereas **Ruby and Python are made for scripting.**
 
-So, in the end, it'll just be a preference between Ruby vs Python. Or the bajillion newer languages such as Crystal (compiled, static-typed Ruby), Nim (compiled, static-typed Python), Elixer (Ruby + Erlang), or good ol' Haxe, and whatever else out there.
+So, in the end, it'll just be a preference between Ruby vs Python. *Or*: the bajillion newer languages such as Crystal (compiled, static-typed Ruby), Nim (compiled, static-typed Python), Elixer (Ruby + Erlang), or good ol' Haxe, and whatever else out there. Nowadays most compiled languages also have an interpreter, as the interpreter is *much* simpler to create than a compiler.
+
 
 
 
@@ -31,6 +32,7 @@ Lua, a language designed for use as an extension language for applications in ge
 Lisp, a family of general-purpose languages and extension languages for specific applications, e.g. Emacs Lisp, for the Emacs editor.
 
 
+
 Lisp, Tcl, Rexx are mysteries to me.
   - tcl seeems incredible, surely a predecessor to ruby from 1988! :o
     - "every type can be treated as a string" :o
@@ -44,9 +46,9 @@ It makes sense that Perl started out as a text processing language..
       - and so, everything instruction is within parenthesis :o
 
 
+https://en.m.wikipedia.org/wiki/Domain-specific_language
 
 
-nowadays many compiled languages also have an interpreter, as the interpreter is much simpler than a compiler, and offers REPL for some interactivity
 
 
 https://stackoverflow.com/questions/5327340/ruby-vs-lua-as-scripting-language-for-c
