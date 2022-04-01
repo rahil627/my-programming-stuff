@@ -56,20 +56,26 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
 
+" completion plugin that mirrors VS code's completion set-up
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" then run the following commands in nvim:
+" CocInstall coc-haxe
+
 " press tab to trigger omnicomplete (vim's autocomplete) 
-Plug 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 
 " make omni-complete the default
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+"let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " ensure it has precedence
-let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-let g:SuperTabClosePreviewOnPopupClose = 1
-
+"let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+"let g:SuperTabClosePreviewOnPopupClose = 1
 
 filetype plugin on
+" ...maybe from some other completion plugin?
 "set omnifunc=syntaxcomplete#Complete
-set omnifunc=vaxe#HaxeComplete
+" get completion from vaxe plugin which gets info form the haxe compiler?
+"set omnifunc=vaxe#HaxeComplete
 
 
 " fuzzy finder diretory tree (like NERDTree)

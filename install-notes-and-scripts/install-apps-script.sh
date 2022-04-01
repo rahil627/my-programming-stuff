@@ -22,11 +22,13 @@ dropbox start
 
 sudo apt install git
 
-# google github cli, download the correct release from the github repo
+# google github cli
+# download the correct release from the github repo
 # sudo apt install ./[package-name]
 # create an auth token here: https://github.com/settings/tokens
 gh auth login
 # go through the cli prompts, paste in the auth token
+# now git won't prompt you for a password anymore! :)
 
 
 
