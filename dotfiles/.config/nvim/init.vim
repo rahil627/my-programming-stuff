@@ -60,6 +60,11 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " then run the following commands in nvim:
 " CocInstall coc-haxe
+" for more langs see https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+" :CocList extensions
+" CocUninstall [extension]
+
+
 
 " press tab to trigger omnicomplete (vim's autocomplete) 
 "Plug 'ervandew/supertab'
