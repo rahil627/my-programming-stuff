@@ -122,13 +122,18 @@ nmap . :TagbarToggle<CR>
 " language syntaxes
 
 " haxe
+
+" can looks at these two haxe gods for some config stuff
+" https://github.com/snsvrno/dots/tree/main/.config/nvim
+" https://github.com/ZwodahS/vimfiles
+
 " this interacts with many other plugins such as airline and tag bar
 " so put it last
 " for ctags, be sure to copy the ctags language regex code from the vaxe github repo
 " and put it in (. or ~)/.ctags.d/something.ctags (NOT ~/.ctags)
-Plug 'jdonaldson/vaxe'
-set autowrite
-let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
+"Plug 'jdonaldson/vaxe'
+"set autowrite
+"let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 
 "wren
