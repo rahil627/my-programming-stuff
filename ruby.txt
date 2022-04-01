@@ -22,6 +22,7 @@ kernal
   - exec, replaces current process to execute something
   - eval, interpreter
   - system, runs in a "subshell" (another process?)
+    - i think this is the one you'd often use for batch files
   - spawn, "similar to system but it doesn't wait for the command to finish"
     - "The parent process should use Process.wait to collect the termination status of its child or use Process.detach to register disinterest in their status; otherwise, the operating system may accumulate zombie processes."
     - "has bunch of options to specify process attributes:"
