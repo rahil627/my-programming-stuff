@@ -1,4 +1,9 @@
 
+todo:
+https://fishshell.com/docs/current/tutorial.html
+  - read through this
+  - or zsh? :/
+    
 
 conclusion:
 CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can ("scripting languages": ruby, python, etc.) or even with a *slight* bit extra code (haxe or C# with interpreters). **Although, for simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run the scripts from another process (another script, program, or **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of perhaps the best standard library: .NET library, in addition to being as powerful as a general programming language**.
@@ -75,6 +80,8 @@ csh, tcsh, one other one = c shell, improved c shell, ane one other one
   - C-like shell with more scripting ability than the bourne shell? A bit dated now..?
 fish
   - a beginner-friendly shell with highlighting for errors, spell-checking, etc., although, because it's different from bash, it might not really be so useful..?
+  - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
+  - "a shell for the 90s" lol
   
 
 "server-side" programming languages:
