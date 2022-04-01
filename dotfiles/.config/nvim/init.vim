@@ -182,6 +182,11 @@ nmap . :TagbarToggle<CR>
 
 " ruby
 Plug 'vim-ruby/vim-ruby'
+" in case of problems:
+":help vim-ruby-plugin: Filetype settings and custom mappings
+":help vim-ruby-indent: Indentation settings
+":help vim-ruby-syntax: Syntax-related tweaks
+":help vim-ruby-omni: Information and settings for omni completion
 
 " wren
 Plug 'lluchs/vim-wren'
