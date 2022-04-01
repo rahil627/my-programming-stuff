@@ -1,0 +1,3 @@
+
+use fzf to search for any file
+use fzf plugin in nvim to search and edit any file
