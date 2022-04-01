@@ -46,8 +46,12 @@ It makes sense that Perl started out as a text processing language..
       - and so, everything instruction is within parenthesis :o
 
 
-https://en.m.wikipedia.org/wiki/Domain-specific_language
 
+
+https://en.m.wikipedia.org/wiki/Domain-specific_language
+  - a language created for a specific use: a specific domain: a DSL
+    - html, xml & json, yaml & toml, postscript, latex?, gml (game maker language) & UnityScript & GDScript, and so on
+  - i think in some cases it's good, such as html, but in many cases, a programmer with a general language is better. It's *much* better to invest time in learning a general language than a bunch of specific ones. Failed examples include all of the game scripting languages. They all failed to make scripting easier, as, in the end, programming is programming.
 
 
 
