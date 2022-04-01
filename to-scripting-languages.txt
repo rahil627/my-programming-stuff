@@ -31,8 +31,17 @@ Lua, a language designed for use as an extension language for applications in ge
 Lisp, a family of general-purpose languages and extension languages for specific applications, e.g. Emacs Lisp, for the Emacs editor.
 
 
-Lisp and Tcl are mysteries to me.
+Lisp, Tcl, Rexx are mysteries to me.
+  - tcl seeems incredible, surely a predecessor to ruby from 1988! :o
+    - "every type can be treated as a string" :o
+    - add object-oriented features in 2012
+  - Rexx has a simple beauty to it, like Python from 1996
 It makes sense that Perl started out as a text processing language..
+  - the Lisp family includes: Racket, Common Lisp, Scheme, and Clojure
+    - 2nd oldest language
+    - Lisp pioneered many ideas in computer science, including tree data structures, automatic storage management, dynamic typing, conditionals, higher-order functions, recursion, the self-hosting compiler,[8] and the read–eval–print loop.[9]
+    - The name LISP derives from "LISt Processor".[10] Linked lists are one of Lisp's major data structures, and Lisp source code is made of lists. Thus, Lisp programs can manipulate source code as a data structure, giving rise to the macro systems that allow programmers to create new syntax or new domain-specific languages embedded in Lisp.
+      - and so, everything instruction is within parenthesis :o
 
 
 
