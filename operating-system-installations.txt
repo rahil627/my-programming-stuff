@@ -45,6 +45,27 @@ can begin with Ubuntu (server edition) until one is familiar with the cli, packa
 
 https://wiki.archlinux.org/title/Arch_compared_to_other_distributions
 
+basically, the slower the release cycle, the more stable, with LTS versions being among the most stable
+stable distros are more for servers, wheras "rolling-update" distros are more for personal desktop use
+
+from most stable to least:
+RHEL (costs money)
+CentOS/Rocky Linux (free RHEL branch, basically LTS by nature)
+Debian LTS(?) > Ubuntu LTS
+Debian > Ubuntu (normal version, stable branch)
+Debian (testing branch) > Ubuntu (devel branch) > Arch Linux
+
+  
+# Debian
+Debian
+  - more so for developers, as it won't have the friendliness of Ubuntu (software center, etc.), nor sane config defaults
+  - but that means it also won't have the bloat!
+  - probably a good step from Ubuntu
+  - super stable, maybe even more-so than Ubuntu as it has even less features to worry about
+  - two version branches: stable (for enterprise-grade tested) every 6 months and testing (for current software)
+  - Debian, **abides 100% free software social contract**, thus no paid software in the package manager?
+  - **completely community-based**
+  
 Ubuntu
   - built on top of Debian
   - has long-term-stable (LTS) releases for stability (once every two years), supported for a whopping 5 or even 10 years!!!
@@ -59,18 +80,22 @@ Ubuntu
     - Kubuntu, Xubuntu, etc. are just Ubuntu with different desktop environments: KDE for Kubuntu, xfce for Xubuntu, and so on
   - although free, sorta run by the company Canonical
   
-Debian
-  - more so for developers, as it won't have the friendliness of Ubuntu (software center, etc.), nor sane config defaults
-  - but that means it also won't have the bloat!
-  - probably a good step from Ubuntu
-  - super stable, maybe even more-so than Ubuntu as it has even less features to worry about
-  - two version branches: stable (for enterprise-grade tested) every 6 months and testing (for current software)
-  - Debian, abides 100% free software social cotract, thus no paid software in the package manager?
-  - compleptely community-based
-
+Linux Mint
+  - like Ubuntu, another newer beginner-friendly distro built on top of Debian
+  
+Pop OS
+  - like Ubuntu, another newer beginner-friendly distro built on top of Debian
+  - although the name is terrible, people say it's alright
+  
+  
+# Fedora
 Fedora
   - ?
-
+  - update every year?
+  - more fore desktop?
+  
+  
+# Arch Linux
 Arch Linux
   - abides KISS principle
   - completely customizable, no bloat
@@ -80,17 +105,28 @@ Arch Linux
     - making it bad for server-side use, as stuff can break
   - install via terminal only, as it starts without a desktop
   
+  
+# OpenSUSE
 OpenSUSE
   - Leap and Tumbleweed versions
     - Leap for on-edge rolling release
     - Tumbleweed for slow rolling release
       - a very good option to get rolling release (latest software), but in a more stable manner than Arch and Leap
-  
-Linux Mint
-  - like Ubuntu, another newer beginner-friendly distro built on top of Debian
-  
+
+
+# RHEL
+RHEL
+  - paid enterprise server product
+
 Rocky Linux
+  - successor of Cent OS, and thus on top of RHEL
   - super stable, super slow release cycle
+  
+Cent OS
+  - on top of RHEL
+  - moved to Rocky Linux, although still supported as of 2022
+  
+  
   
   
  
