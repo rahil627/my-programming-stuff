@@ -14,6 +14,8 @@ So, in the end, it'll just be a preference between Ruby vs Python. Or the bajill
 
 
 
+# a little random research
+
 https://en.m.wikipedia.org/wiki/Scripting_language
 
 from the wiki:
