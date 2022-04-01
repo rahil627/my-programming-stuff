@@ -1,0 +1,7 @@
+
+can list other people's .files here,
+to extract some goodies from more experienced people
+
+haxe users:
+https://github.com/snsvrno/dots/tree/main/.config/nvim
+https://github.com/ZwodahS/vimfiles
