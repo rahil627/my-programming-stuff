@@ -6,6 +6,11 @@ its also a funny way to write very clean simple scripts in a more functional sty
 anyway, anything is better than bash!
 
 
+# learn
+
+basically, i just want to use Ruby for shell scripting, because bash is hella ugly, and i don't think zsh really fixes that due to compatibility with bash (posix). Fish is an interesting alternative, but, anyway, i think Ruby can be a cool 
+
+
 
 tutorial:
 
@@ -16,6 +21,56 @@ https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Executing_ext
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/File_processing.html
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Regular_expressions.html
   - https://github.com/learnbyexample/Ruby_Scripting
+  
+  
+
+# commands
+#!/usr/bin/env ruby
+system('clear')
+system('echo Hello $USER')
+
+
+
+#!/usr/bin/env ruby
+
+cmd1 = 'ls out.txt' # true if the file exists
+cmd2 = 'grep "foo" out.txt' # false if none found
+cmd3 = 'xyz' # nil because command not found
+
+for cmd in [cmd1, cmd2, cmd3]
+  puts "Command: #{cmd}"
+  rv = system(cmd)
+
+  # inspect method will display human readable representation of object
+  puts "system return value: #{rv.inspect}"
+  puts "Command exit status: #{$?.exitstatus}" # special var $? detils include PID/exit status/etc
+  puts '-' * 30
+end
+
+
+# save stdout to a var
+>> working_dir = `pwd`
+=> "/home/learnbyexample/ruby_programs\n"
+>> working_dir.chomp
+=> "/home/learnbyexample/ruby_programs"
+
+# use %x to use different delimeters, in case of character problems
+>> nums = %x/seq 3/
+=> "1\n2\n3\n"
+>> puts nums # stdout
+1
+2
+3
+=> nil
+
+>> foo = %x(echo `seq 2`).chomp
+=> "1 2"
+
+# only stdout is saved
+>> files = %x{ls *.txt *.log}
+ls: cannot access '*.log': No such file or directory
+=> "out.txt\n"
+
 
 
 
