@@ -177,8 +177,10 @@ nmap . :TagbarToggle<CR>
 "set autowrite
 "let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
+" ruby
+Plug 'vim-ruby/vim-ruby'
 
-"wren
+" wren
 Plug 'lluchs/vim-wren'
 
 
