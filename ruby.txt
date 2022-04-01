@@ -8,17 +8,28 @@ anyway, anything is better than bash!
 
 # learn
 
-basically, i just want to use Ruby for shell scripting, because bash is hella ugly, and i don't think zsh really fixes that due to compatibility with bash (posix). Fish is an interesting alternative, but, anyway, i think Ruby can be a cool 
+basically, i just want to use Ruby for shell scripting, because bash is hella ugly, and i don't think zsh really fixes that due to compatibility with bash (posix). Fish is an interesting alternative, but, anyway, i think Ruby can be a cool general-use "scripting" langauge--basically glue for all sorts of every-day problems :)
 
 
-# read the docs
+# 1. learn x in y minutes
+todo: get link
+
+
+# 2. jump in
+
+see the source code of Jekyll plugins
+then see the source code of Jekyll
+
+
+# check the docs
 
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-exec
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-system
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-spawn
-  - kernal contains most keywords, and base object methods?
+https://ruby-doc.org/core-3.1.1/IO.html
   
 kernal
+- kernal contains most keywords, and base object methods?
   - exec, replaces current process to execute something
   - eval, interpreter
   - system, runs in a "subshell" (another process?)
@@ -32,7 +43,8 @@ kernal
 
 make sure you have a good set-up: vs code with ruby extensions, nvim with vim-ruby, or whatever, ad this it should be pretty easy to just get completion for everything for a "everything is an object" language
 
-these three chapters look useful: otherwise, it's just the same ol' programming stuff
+these three chapters look useful: otherwise, it's just the same ol' programming stuff... it's definitely much better to just jump into source code..
+
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Executing_external_commands.html
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/File_processing.html
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Regular_expressions.html
