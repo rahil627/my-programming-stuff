@@ -18,6 +18,7 @@ So, in the end, it'll just be a preference between Ruby vs Python. *Or*: the baj
 # a little random research
 
 https://en.m.wikipedia.org/wiki/Scripting_language
+  - TODO: still need to read through this...
 
 from the wiki:
 Bash, an interpreted scripting language for use on Unix and Unix-like operating systems and environments.
