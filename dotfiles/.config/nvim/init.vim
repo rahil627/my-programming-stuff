@@ -93,6 +93,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-spell-checker
 
 
+" coc-haxe notes:
+" https://github.com/vantreeseba/coc-haxe
+" haxe.goToHxml jump to the current hxml in the configuration.
+" haxe.changeHxml some.hxml tell haxe language server to use another hxml.
+" haxe.restart restarts the coc client for haxe language server.
+" haxe.printConfig prints the current haxe language server config.
+
+
 
 
 " press tab to trigger omnicomplete (vim's autocomplete) 
