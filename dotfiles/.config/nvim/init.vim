@@ -169,6 +169,9 @@ nmap . :TagbarToggle<CR>
 " https://github.com/snsvrno/dots/tree/main/.config/nvim
 " https://github.com/ZwodahS/vimfiles
 
+" vaxe
+" note: i have replaced this with CoC + coc-haxe which uses the
+" vscode language server
 " this interacts with many other plugins such as airline and tag bar
 " so put it last
 " for ctags, be sure to copy the ctags language regex code from the vaxe github repo
