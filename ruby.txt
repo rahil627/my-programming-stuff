@@ -14,16 +14,21 @@ https://github.com/jekyll/jekyll/tree/master/lib
 
 ## ref
 https://hyperpolyglot.org/scripting
+
+https://docs.ruby-lang.org/en/master/
+  - official docs, on github
+  
+https://www.rubydoc.info
+  - like a package manager, but for docs
+
+
 https://en.m.wikibooks.org/wiki/Ruby_Programming
 http://ruby-doc.com/docs/ProgrammingRuby/
 
 https://ruby-doc.org/core-3.1.1/
 https://ruby-doc.org/stdlib-3.1.1/
-  - **standard library**
   - "Each package in the Ruby standard library (found in lib/ directory of the Ruby source code, or lib/ruby/1.x/ of a Ruby installation) has been run through RDoc and the results have been collected here."
 
-https://www.rubydoc.info
-  - generated docs from gems?
 
 
 
