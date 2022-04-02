@@ -24,6 +24,9 @@ also see my notes in cli-shells.txt
 
 also, you might just be able to use programming languages within a shell!
   - see pry for ruby: https://github.com/pry/pry
+    - "We can also interpolate Ruby code into the shell. In the example below we use the shell command cat on a random file from the current directory and count the number of lines in that file with wc:"
+      - pry main:/home/john $ .cat #{Dir['*.*'].sample} | wc -l
+        44
 
 basically my conclusion was that the shell scripting languages are limited, simple, domain-specific (DSL), and in the end, i think i imagine i will end up reaching out for a more general-purpose scripting language (ruby, python, lua?, etc.) for both the more extensive standard library and the pop libraries in the package manager.
 
