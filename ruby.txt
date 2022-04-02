@@ -41,6 +41,11 @@ then see the source code of Jekyll
 
 # check the docs
 
+https://www.ruby-lang.org/en/documentation/
+  - main site, includes links to many good tutorials
+    - https://try.ruby-lang.org
+      - contains many examples to quickly go through
+
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-exec
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-system
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-spawn
