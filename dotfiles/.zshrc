@@ -1,5 +1,6 @@
 
 # some sources to grab bits from
+# https://github.com/Innei/zshrc
 # https://github.com/unixorn/zsh-quickstart-kit
 
 
