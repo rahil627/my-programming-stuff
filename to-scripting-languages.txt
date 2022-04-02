@@ -23,7 +23,8 @@ https://hyperpolyglot.org
 also see my notes in cli-shells.txt
 
 also, you might just be able to use programming languages within a shell!
-  - see pry for ruby: https://github.com/pry/pry
+  - https://github.com/tombenner/ru
+  - in might also be included in pry: https://github.com/pry/pry
     - "We can also interpolate Ruby code into the shell. In the example below we use the shell command cat on a random file from the current directory and count the number of lines in that file with wc:"
       - pry main:/home/john $ .cat #{Dir['*.*'].sample} | wc -l
         44
