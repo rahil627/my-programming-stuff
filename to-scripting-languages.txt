@@ -14,6 +14,21 @@ So, in the end, it'll just be a preference between Ruby vs Python. *Or*: the baj
 
 
 
+# shell scripting vs general scripting languages
+
+also see my notes in cli-shells.txt
+
+basically my conclusion was that the shell scripting languages are limited, simple, domain-specific (DSL), and in the end, i think i imagine i will end up reaching out for a more general-purpose scripting language (ruby, python, lua?, etc.) for both the more extensive standard library and the pop libraries in the package manager.
+
+in addition, the bash-like shells (all except fish) have a bit of cryptic syntax, especially using the $. It's not bad however, considering how tiny the language is, but using $ for vars is hella old. Also there's a problem with escaping quotes ("$var" vs $var vs one more way...). Crap like that just sucks.
+
+Overall, the shell scripting langauges (bash/zsh, fish, etc.) are great tools for simple scripting: stringing together commands (via the pipe operator: |), managing processes (running commands externally, in a sub-shell, or switching processes), taking in arguments from the command line ($1, $2, $argsv), and so on. But once you want to do a bit more, you'd have to know Linux CLI programs/tools really well to do what you want, whereas, with a more general scripting langauge, you can just do what you want with the normal ways of programming: with a typed system (in shell scripting langs, vars are strings), with a solid std lib, with helpful external libs.
+
+Ah, that leads to another problem: because all vars are strings, they are a pain to do conditional control flow upon. In fish, for example, you'd have to use a program(?) called test with various flags. So instead of a boolean it'd be:
+`if test -z condition` or `if set -q condition`
+...or something like that. Definitely not ideal. And probably worse in bash.
+
+
 
 # a little random research
 
@@ -45,6 +60,9 @@ It makes sense that Perl started out as a text processing language..
     - Lisp pioneered many ideas in computer science, including tree data structures, automatic storage management, dynamic typing, conditionals, higher-order functions, recursion, the self-hosting compiler,[8] and the read–eval–print loop.[9]
     - The name LISP derives from "LISt Processor".[10] Linked lists are one of Lisp's major data structures, and Lisp source code is made of lists. Thus, Lisp programs can manipulate source code as a data structure, giving rise to the macro systems that allow programmers to create new syntax or new domain-specific languages embedded in Lisp.
       - and so, everything instruction is within parenthesis :o
+
+
+TODO: finish the wiki article
 
 
 
