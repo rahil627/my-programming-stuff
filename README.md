@@ -6,20 +6,20 @@ include the 'programming' folder from 'my notes' folder
 
 
 rename 'my-stuff' to stuff, 'my notes' to notes, 'n so on
-  - this makes it nice for cli
+  - this makes it nice for cli auto-completion, although, with current shells, it'll auto-complete as you type the word regardless of the my!
   - its also nice to have a single naming convention, as of now, i think its 'photos', 'documents', along with 'my notes'
 
 # my programming-related stuff
 includes:
  - notes
- - code editor themes, fonts, configs
- - linux configs ("dot files")
-   - server
+ - code editor configs
+ - OS configs
+   - server ("dot files")
      - Fedora?
    - personal
      - Windows
      - ArchLinux (VM)
      - Mac OS X (boot)
  - scripts
+   - every-day use
 
-i found some from my first job... wowww
