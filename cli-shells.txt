@@ -77,11 +77,12 @@ dash = ? Almaquish shell
   - based on ash, used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
 zsh = z? shell
   - a super-set of bash, used on contemporary desktop systems
-  - Mac OS X recently replaced bash with this
-  - more features, more configurability, etc.
+  - **Mac OS X recently replaced bash with this**, thus making it the current standard
+  - more features, more configurability, etc. **it's basically the neovim of shells. There's plug-in managers, infinite plugins, everything you could dream of.**
+  - by default the shell is quite bare, especially compared to fish which ships with auto-completion/auto-suggestion, syntax highlighting, spell-checking, ignoring input mistakes, etc. However, there are plugins for all of these, and more.
   
 fish
-  - a beginner-friendly shell with highlighting for errors, spell-checking, etc., although, because it's different from bash, it might not really be so useful..?
+  - a beginner-friendly shell that ships with contemporary functionality: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
   - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
   - "a shell for the 90s" lol
   - not POSIX compliant
