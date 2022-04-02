@@ -16,7 +16,7 @@ Rust is great
 # really good reads
 
 https://ziglang.org/learn/why_zig_rust_d_cpp/
-  - a good critique of all other systems languages
+  - a good little critique other systems languages (and how to learn from them)
 
 https://floooh.github.io/2020/08/23/sokol-bindgen.html
   - creator of sokol tackles C api language binding generation
@@ -86,6 +86,9 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 # compare languages by reading them
 
 https://learnxinyminutes.com/
+
+https://hyperpolyglot.org
+  - compare syntax between families of languages
 
 good examples:
 aim for 2d space shooter classes
