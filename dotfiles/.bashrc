@@ -125,18 +125,22 @@ alias cp='cp -v'
 alias c='clear'
 alias q='exit'
 
+# ordered by git work-flow
+alias gpl='git pull'
+alias gd='git diff'
 alias ga='git add -A';
 alias gc='git commit -a'
 # don't you need a message tho..?
 alias gm='git commit -a -m'
 alias gp='git push'
-alias gpl='git pull'
+
 #alias g?='git clone'
 #alias gb='git branch'
 #alias gf='git fetch'
 #alias gs='git stash'
 #alias gr='git rebase'
 #alias gt='git log --graph --oneline --all'
+
 
 # hmmm.. ok...
 alias t='tldr'
