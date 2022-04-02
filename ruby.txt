@@ -4,7 +4,11 @@
 https://github.com/planetjekyll/awesome-jekyll-plugins
 https://github.com/benbalter/
   - wrote most of the plugins thate are included by default for Jekyll
-  - ***extremely* clean design**, i love it!!! :D
+  - ***extremely* clean design**, beautiful really... i love it!!! :D
+  - for example: https://github.com/benbalter/jekyll-titles-from-headings/blob/main/lib/jekyll-titles-from-headings/generator.rb
+  
+then, after reading some plugins, you'll be able to read Jekyll itself! :o
+https://github.com/jekyll/jekyll/tree/master/lib
 
 
 ## ref
