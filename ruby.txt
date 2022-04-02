@@ -14,6 +14,19 @@ https://github.com/jekyll/jekyll/tree/master/lib
 
 ## ref
 https://hyperpolyglot.org/scripting
+https://en.m.wikibooks.org/wiki/Ruby_Programming
+http://ruby-doc.com/docs/ProgrammingRuby/
+
+https://ruby-doc.org/core-3.1.1/
+https://ruby-doc.org/stdlib-3.1.1/
+  - **standard library**
+  - "Each package in the Ruby standard library (found in lib/ directory of the Ruby source code, or lib/ruby/1.x/ of a Ruby installation) has been run through RDoc and the results have been collected here."
+
+https://www.rubydoc.info
+  - generated docs from gems?
+
+
+
 
 
 # why?
@@ -39,16 +52,30 @@ see the source code of Jekyll plugins
 then see the source code of Jekyll
 
 
-# check the docs
+# useful links
 
 https://www.ruby-lang.org/en/documentation/
   - main site, includes links to many now ancient classic tutorials, but it's better to just read Jekyll code, or something similar to what you want to do
+  - **good from other langauge page**
+  - **good ruby in 20 min page**
+  - **how to use gems**: https://www.ruby-lang.org/en/libraries/
+  - external links
+    - tuts:
     - https://poignant.guide
-      - comic-style, super adhd
+      - comic-style, super adhd, but def special
+    - https://pine.fm/LearnToProgram/
+      - for complete noobs, just goes over the language, but good site style
     - http://rubykoans.com
       - good interactive exercise, but the content is boring, as it doesn't use any "standard libs" or external libs, or any *real use*
     - https://try.ruby-lang.org
       - contains many examples to quickly go through
+      
+      
+https://en.m.wikibooks.org/wiki/Ruby_Programming
+  - in addition to being a wikibook, it contains a lot of useful links
+
+
+
 
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-exec
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-system
