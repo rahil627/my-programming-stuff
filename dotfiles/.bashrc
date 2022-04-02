@@ -115,7 +115,8 @@ alias l='ls -CF'
 alias ll='ls -alF'
 alias la='ls -A'
 
-#alias mv='mv -v'
+# TODO: get the flag for making mv and cp prompt you for overwrite
+alias mv='mv -v'
 alias cp='cp -v'
 # what is this?
 #alias mkdir='mkdir -p'
@@ -124,7 +125,9 @@ alias cp='cp -v'
 alias c='clear'
 alias q='exit'
 
+alias ga='git add -A';
 alias gc='git commit -a'
+# don't you need a message tho..?
 alias gm='git commit -a -m'
 alias gp='git push'
 alias gpl='git pull'
