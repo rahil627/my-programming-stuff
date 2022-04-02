@@ -1,10 +1,4 @@
-
-todo:
-https://fishshell.com/docs/current/tutorial.html
-  - read through this
-  - or zsh? :/
     
-
 conclusion:
 CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/lang' (general "scripting languages": ruby, python, etc., and even Lua), or even a *slight* bit extra code might be okay in cases of larger scripts (server-side langs such as elixer or haxe, as both come with interpreters). **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language. For Linux/MacOS users, however, that choice doesn't make much sense, and it is best to choose a general scripting languge: basically Ruby vs Python.**
 
@@ -18,6 +12,11 @@ Linux is a mess of CLI programs and scripts, written in *tons* of different lang
 
 
 
+# a note on seperation
+a shell's terminal can be used without every using it's scripting language, and vice versa, so, choose both seperately. You can use fish with bash scripts, or zsh with fish scripts. It doesn't really matter. Only that you'd need to install a zsh(?) or fish interpreter to run them.
+
+
+
 
 # shell scripting
 
@@ -28,10 +27,17 @@ https://learnxinyminutes.com/docs/powershell/
 https://learnxinyminutes.com/docs/bash/
 
 https://developerlife.com/2021/01/19/fish-scripting-manual/
-  - very good overview of fish scripting lang
+  - very good overview of fish scripting lang, very practical
   
 https://fishshell.com/docs/current/fish_for_bash_users.html
-  - also a great overview, from the docs
+  - **a great overview of the differences and improvements over bash**
+  
+
+todo:
+https://fishshell.com/docs/current/tutorial.html
+  - read through this?
+  - compare with zsh
+
 
 
 ## thoughts
