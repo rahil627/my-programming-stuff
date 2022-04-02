@@ -1,4 +1,7 @@
 
+# some sources to grab bits from
+# https://github.com/unixorn/zsh-quickstart-kit
+
 
 # fetch shared shell configs
 # aliases, key-mappings, etc.
@@ -38,6 +41,10 @@ antigen bundle github
 antigen bundle ruby # not sure if this actually exists...
 
 # other stuff
+
+# experimental
+antigen bundle chruby
+antigen bundle sudo
 
 
 # Tell Antigen that you're done.
