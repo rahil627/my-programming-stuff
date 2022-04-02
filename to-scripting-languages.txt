@@ -13,6 +13,10 @@ So, in the end, it'll just be a preference between Ruby vs Python. *Or*: the baj
 
 
 
+# compare
+https://hyperpolyglot.org
+
+
 
 # shell scripting vs general scripting languages
 
