@@ -3,6 +3,9 @@ todo:
 go through the docs
   - https://fishshell.com/docs/current/tutorial.html
   - they're really good
+
+https://github.com/pry/pry
+  - use ruby in the shell?? :o  
   
     
 conclusion:
