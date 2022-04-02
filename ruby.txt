@@ -15,14 +15,21 @@ https://github.com/jekyll/jekyll/tree/master/lib
 ## ref
 https://hyperpolyglot.org/scripting
 
+https://www.ruby-lang.org/
+  - official site
+
 https://docs.ruby-lang.org/en/master/
   - official docs, also on github?
   
 https://www.rubydoc.info
-  - like a package manager, but for docs
+  - like a package manager, but for docs. includes the readme of each package
 
 http://ruby-doc.com/docs/ProgrammingRuby/
-  - a complete book, wordy, tons of examples, looks good!
+  - a complete book, wordy, tons of examples, very comprehensive, looks great!
+  - the page on "Object-Oriented Design Libraries" is great, as i've never heard about them
+  - "built-in classes and methods"
+  - "standard library"
+  - "threads and processes"
 
 https://en.m.wikibooks.org/wiki/Ruby_Programming
   - feels like an alt unofficial site
