@@ -110,6 +110,11 @@ fi
 
 #nah, keep it here for now
 
+# basic signals
+alias c='clear'
+alias q='exit'
+
+# basic file system commands
 # TODO: config these
 alias l='ls -CF'
 alias ll='ls -alF'
@@ -122,10 +127,15 @@ alias cp='cp -v'
 #alias mkdir='mkdir -p'
 #alias rmdir=''
 
-alias c='clear'
-alias q='exit'
+# fzf
+# TODO: test these
+alias vf='nvim $(fzf)'
+alias cdt='cd $(find * -type d | fzf)'
+alias gct='git checkout $(git branch -r | fzf)'
 
-# ordered by git work-flow
+
+# git, ordered by git work-flow
+alias gs='git status'
 alias gpl='git pull'
 alias gd='git diff'
 alias ga='git add -A';
@@ -142,16 +152,20 @@ alias gp='git push'
 #alias gt='git log --graph --oneline --all'
 
 
+# dev
+alias haxe='hx'
+alias ruby='rb'
+alias python='py'
+
+
+
 # hmmm.. ok...
 alias t='tldr'
 
-# todo: test these!
-alias vf='nvim $(fzf)'
-alias cdt='cd $(find * -type d | fzf)'
-alias gct='git checkout $(git branch -r | fzf)'
 
+# experimental
+# TODO: test these
 #alias cl='cloc . --exclude-dir=node_modules,.nuxt,build,.vscode,dist --exclude-lang=JSON'
-
 #alias r='ranger'
 
 
