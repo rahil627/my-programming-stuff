@@ -90,11 +90,11 @@ fish
       - cannot run a script with `#!/bin/sh`, you'd need `#!/usr/bin/fish`, and the user would need a fish interpreter installed
       - you cannot simply copy-paste snippets of scripts from the net and expect them to work
       - **basically, it's just a different language, so treat it like so**
-      - suprrisingly, **this is a problem of standards, because really, none of the shells are POSIX-compliant!**
+      - **this is a problem of standards, because really, none of the shells are POSIX-compliant!**
         - (see link in comments section of the SO question)
-  - although the syntax and semantics are indeed better, it doesn't change much from the normal POSIX stuff (bash, etc.), which is strange--why not just create a completely new lang(?), closer to python/ruby! The trade-off is tough: lose the ability to share the scripts that you write (will people install a fish interpreter?), and although you can simply still use bash-like scripts, it's just confusing to add yet another language with such little differences, because it is precisely those little differences that will become bugs.
+  - although the syntax and semantics are indeed better, it doesn't change much from the normal POSIX stuff (bash, etc.), which is strange--why not just create a completely new lang(?), closer to python/ruby! The trade-off is tough: lose the ability to share the scripts that you write (will people install a fish interpreter?), and although you can simply still use bash-like scripts, it's just confusing to add yet another language with such little differences: because *it is precisely those little differences that will become bugs!*
    - having said all that, it's still a great shell to install, use, out-of-the-box, sane defaults, etc. etc. There's no need to actually use the fish scripting language. You can just continue to use bash scripts.
-     - it's a good stepping stone to the more bare zsh, where you'd need to configure quite a bit to get it to fish-level. Consider fish as **zsh with a solid starter config kit**
+   - it's a great stepping stone to the more bare zsh, where you'd need to configure quite a bit to get it to fish-level. Consider fish as **zsh with a solid starter config kit**
    - it's also awesome for "dev ops", so they can just enter workstations/servers, quickly install fish, and continue with life
 
   
