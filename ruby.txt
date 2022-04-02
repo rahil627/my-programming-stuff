@@ -42,7 +42,11 @@ then see the source code of Jekyll
 # check the docs
 
 https://www.ruby-lang.org/en/documentation/
-  - main site, includes links to many good tutorials
+  - main site, includes links to many now ancient classic tutorials, but it's better to just read Jekyll code, or something similar to what you want to do
+    - https://poignant.guide
+      - comic-style, super adhd
+    - http://rubykoans.com
+      - good interactive exercise, but the content is boring, as it doesn't use any "standard libs" or external libs, or any *real use*
     - https://try.ruby-lang.org
       - contains many examples to quickly go through
 
@@ -72,6 +76,8 @@ https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Executing_ext
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/File_processing.html
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Regular_expressions.html
   - https://github.com/learnbyexample/Ruby_Scripting
+  
+https://www.techotopia.com/index.php/Working_with_Files_in_Ruby
   
   
 
