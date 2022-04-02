@@ -21,13 +21,13 @@ ordered from "high-level" to "low-level":
 
 **Ruby** (or Crystal? or Haxe) for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language; includes mRuby: a minimal implementation for embedded devices!, clean-design-oriented cult commmunity
 
-**Wren** (TODO: look at Squirrel) for embedded scripting, embedding into C, as in game scripting, a much better suited alt to Lua (but unlike Lua, it doesn't have a standard library)
+**Wren** (TODO: look at Squirrel) for object-oriented embedded scripting, a much better suited alt to Lua, but unlike Lua, it doesn't have a standard library
 
-**Lua** for general-purpose embedded scripting, for it's speed, and it's simple std library
+**Lua** for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library
 
 **Zig** > **C**, manual memory management, although still have to see Odin and think more about the power of Rust's memory solution and compiler...
 
-**fish** vs **zsh**, shell scripting, todo: still have to see/try zsh to compare
+**fish** vs zsh, shell scripting, todo: still have to see zsh scripting to compare
 
 although **Crystal** has all of the things i want--good C api, *real* concurrency, Ruby syntax, performance, etc.--Haxe is *far* more developed...
 
