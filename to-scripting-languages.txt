@@ -22,6 +22,9 @@ https://hyperpolyglot.org
 
 also see my notes in cli-shells.txt
 
+also, you might just be able to use programming languages within a shell!
+  - see pry for ruby: https://github.com/pry/pry
+
 basically my conclusion was that the shell scripting languages are limited, simple, domain-specific (DSL), and in the end, i think i imagine i will end up reaching out for a more general-purpose scripting language (ruby, python, lua?, etc.) for both the more extensive standard library and the pop libraries in the package manager.
 
 in addition, the bash-like shells (all except fish) have a bit of cryptic syntax, especially using the $. It's not bad however, considering how tiny the language is, but using $ for vars is hella old. Also there's a problem with escaping quotes ("$var" vs $var vs one more way...). Crap like that just sucks.
