@@ -90,9 +90,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -102,6 +99,46 @@ alias l='ls -CF'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+#nah, keep it here for now
+
+# TODO: config these
+alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+
+#alias mv='mv -v'
+alias cp='cp -v'
+# what is this?
+#alias mkdir='mkdir -p'
+#alias rmdir=''
+
+alias c='clear'
+alias q='exit'
+
+alias gc='git commit -a'
+alias gm='git commit -a -m'
+alias gp='git push'
+alias gpl='git pull'
+#alias g?='git clone'
+#alias gb='git branch'
+#alias gf='git fetch'
+#alias gs='git stash'
+#alias gr='git rebase'
+#alias gt='git log --graph --oneline --all'
+
+# hmmm.. ok...
+alias t='tldr'
+
+# todo: test these!
+alias vf='nvim $(fzf)'
+alias cdt='cd $(find * -type d | fzf)'
+alias gct='git checkout $(git branch -r | fzf)'
+
+#alias cl='cloc . --exclude-dir=node_modules,.nuxt,build,.vscode,dist --exclude-lang=JSON'
+
+#alias r='ranger'
+
 
 
 
