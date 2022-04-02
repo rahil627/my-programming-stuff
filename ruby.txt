@@ -1,5 +1,13 @@
 
-# ref
+# just do it & ref
+
+https://github.com/planetjekyll/awesome-jekyll-plugins
+https://github.com/benbalter/
+  - wrote most of the plugins thate are included by default for Jekyll
+  - ***extremely* clean design**, i love it!!! :D
+
+
+## ref
 https://hyperpolyglot.org/scripting
 
 
