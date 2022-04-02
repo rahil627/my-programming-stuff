@@ -37,6 +37,15 @@ https://en.m.wikibooks.org/wiki/Ruby_Programming
 
 
 
+# tools
+https://www.ruby-lang.org/en/documentation/
+  - contains a list of IDEs, text editors, 'n plugins
+  - for vim, vim-ruby and RSense are mentioned
+    - RSense is also used for emacs
+  - from a reddit post dated ~2020, RubyMine (JetBrains) vs VS Code, it seemed VS Code was taking over, along with simpler editors like atom, vim, etc., but it sounded like many people have problems, probably because of use of Ruby's complex features not working well with the language server...
+
+
+
 
 # why?
 i prefer the syntax, expressiveness, clean 'n tidyness, and fun of ruby over python :)
