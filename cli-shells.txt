@@ -6,7 +6,7 @@ https://fishshell.com/docs/current/tutorial.html
     
 
 conclusion:
-CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can ("scripting languages": ruby, python, etc.) or even with a *slight* bit extra code (haxe or C# with interpreters). **Although, for simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run the scripts from another process (another script, program, or **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of perhaps the best standard library: .NET library, in addition to being as powerful as a general programming language**.
+CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/lang' (general "scripting languages": ruby, python, etc., and even Lua), or even a *slight* bit extra code might be okay in cases of larger scripts (server-side langs such as elixer or haxe, as both come with interpreters). **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language. For Linux/MacOS users, however, that choice doesn't make much sense, and it is best to choose a general scripting languge: basically Ruby vs Python.**
 
 Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
 
@@ -21,6 +21,9 @@ Linux is a mess of CLI programs and scripts, written in *tons* of different lang
 
 https://learnxinyminutes.com/docs/powershell/
 https://learnxinyminutes.com/docs/bash/
+
+https://developerlife.com/2021/01/19/fish-scripting-manual/
+  - very good overview of fish scripting lang
 
 https://stackoverflow.com/questions/11369522/bash-utility-script-library#11369935
   - the answer points out bash's limitations really well, mainly:
@@ -57,6 +60,9 @@ Linux:
 https://www.howtogeek.com/68563/HTG-EXPLAINS-WHAT-ARE-THE-DIFFERENCES-BETWEEN-LINUX-SHELLS/
   - a good straight-foward tech post abuot the history of shells
   
+https://hyperpolyglot.org/unix-shells
+  - a great web-site, comparing many shell langs and providing some history too
+  
 basically:
 sh = bourne shell
   - the main precursor and origin to/of the most popular future shells
@@ -68,20 +74,33 @@ ash = Almaquish shell
   - you can find it on the tiny Linux distros installed on mobile devices, sch as ArchLinux, which itself uses BusyBox
     - i personally have "iSH" app on my iOS device, and this thing is lightning fast!!!, this is actually where i played with and learned vi: because it was *so* much faster than using CLI with my server
 dash = ? Almaquish shell
-  - based on ash, used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster
+  - based on ash, used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
 zsh = z? shell
   - a super-set of bash, used on contemporary desktop systems
   - Mac OS X recently replaced bash with this
   - more features, more configurability, etc.
   
-  
-others:
-csh, tcsh, one other one = c shell, improved c shell, ane one other one
-  - C-like shell with more scripting ability than the bourne shell? A bit dated now..?
 fish
   - a beginner-friendly shell with highlighting for errors, spell-checking, etc., although, because it's different from bash, it might not really be so useful..?
   - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
   - "a shell for the 90s" lol
+  - not POSIX compliant
+    - https://stackoverflow.com/questions/48732986/why-how-fish-does-not-support-posix
+      - cannot run a script with `#!/bin/sh`, you'd need `#!/usr/bin/fish`, and the user would need a fish interpreter installed
+      - you cannot simply copy-paste snippets of scripts from the net and expect them to work
+      - **basically, it's just a different language, so treat it like so**
+      - suprrisingly, **this is a problem of standards, because really, none of the shells are POSIX-compliant!**
+        - (see link in comments section of the SO question)
+  - although the syntax and semantics are indeed better, it doesn't change much from the normal POSIX stuff (bash, etc.), which is strange--why not just create a completely new lang(?), closer to python/ruby! The trade-off is tough: lose the ability to share the scripts that you write (will people install a fish interpreter?), and although you can simply still use bash-like scripts, it's just confusing to add yet another language with such little differences, because it is precisely those little differences that will become bugs.
+   - having said all that, it's still a great shell to install, use, out-of-the-box, sane defaults, etc. etc. There's no need to actually use the fish scripting language. You can just continue to use bash scripts.
+     - it's a good stepping stone to the more bare zsh, where you'd need to configure quite a bit to get it to fish-level. Consider fish as **zsh with a solid starter config kit**
+
+  
+  
+others:
+csh, tcsh, one other one = c shell, improved c shell, ane one other one
+  - C-like shell with more scripting ability than the bourne shell? A bit dated now..?
+  
   
 
 "server-side" programming languages:
