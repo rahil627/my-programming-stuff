@@ -10,21 +10,29 @@
 
 source /path-to-antigen/antigen.zsh
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# to test
+#antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle lein
+# main shell stuff
+antigen bundle zsh-autosuggestions #- Adds fish-like autosuggestions to your ZSH sessions.
 antigen bundle command-not-found
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+# zsh-users
+antigen bundle zsh-users/zsh-completions #- Tab completions for many more applications than come standard with ZSH.
+antigen bundle zsh-users/zsh-history-substring-search #- Better history search.
+antigen bundle zsh-users/zsh-syntax-highlighting #- Syntax highlighting as you type.
 
-# Load the theme.
+# themes
+# todo: find one
 antigen theme robbyrussell
+
+
+# app-specific
+antigen bundle git
+#antigen bundle heroku # maybe have one for digitalocean?
+
+# other stuff
+
 
 # Tell Antigen that you're done.
 antigen apply
