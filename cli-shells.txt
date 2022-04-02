@@ -19,17 +19,38 @@ Linux is a mess of CLI programs and scripts, written in *tons* of different lang
 
 
 
+# shell scripting
+
+see my conclusion in scripting-languages.txt
+
+## read it, do it, experience it
 https://learnxinyminutes.com/docs/powershell/
 https://learnxinyminutes.com/docs/bash/
 
 https://developerlife.com/2021/01/19/fish-scripting-manual/
   - very good overview of fish scripting lang
+  
+https://fishshell.com/docs/current/fish_for_bash_users.html
+  - also a great overview, from the docs
 
+
+## thoughts
+
+bash (and i believe even zsh??) is janky, with strange things for strings, math, and old syntax using `$` everywhere, including for special vars `$#`, making it feel something closer to Perl or PHP, both of which are old and cryptic to me (see the ~"fish for bash users" link for a good overview of the many problems of bash). A ton of things are confused due to syntax, especially sub-shells vs command substitutions. Also the escaping quotes with strings is awful... **Yeah, fuck bash. It's either fish (or zsh?) or a proper scripting language.**
+
+
+
+
+## research
 https://stackoverflow.com/questions/11369522/bash-utility-script-library#11369935
+  - i think i was pondering on why there's no bash standard library
   - the answer points out bash's limitations really well, mainly:
-  - "Bash functions don't return anything; they only produce output streams. Every reasonable method of capturing that stream and either assigning it to a variable or passing it as an argument requires a SubShell, which breaks all assignments to outer scopes. (See also BashFAQ/084 for tricks to retrieve results from a function.) Thus, libraries of reusable functions are not feasible, as you can't ask a function to store its results in a variable whose name is passed as an argument (except by performing eval backflips)."
+  - "**Bash functions don't return anything; they only produce output streams. Every reasonable method of capturing that stream and either assigning it to a variable or passing it as an argument requires a SubShell, which breaks all assignments to outer scopes.** (See also BashFAQ/084 for tricks to retrieve results from a function.) **Thus, libraries of reusable functions are not feasible, as you can't ask a function to store its results in a variable whose name is passed as an argument** (except by performing eval backflips)."
 
 
+
+
+# terminals
 
 all OSs / terminal emulators:
 
