@@ -15,11 +15,12 @@ includes:
  - code editor configs
  - OS configs
    - server ("dot files")
-     - Fedora?
+     - Fedora
+       - if not, OpenSUSE tumbleweed
    - personal
-     - Windows
-     - ArchLinux (VM)
-     - Mac OS X (boot)
+     - Windows (dual-boot)
+     - ArchLinux (VM vs WSL2)
+     - Mac OS X (dual-boot)
  - scripts
    - every-day use
 
