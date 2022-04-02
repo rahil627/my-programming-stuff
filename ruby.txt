@@ -13,7 +13,17 @@ https://github.com/jekyll/jekyll/tree/master/lib
 
 
 ## ref
+https://github.com/ruby/ruby
+  - open-source :)
+  - https://github.com/ruby/ruby/tree/master/lib
+
 https://hyperpolyglot.org/scripting
+  - great to see where it differs and excels over python
+
+https://github.com/markets/awesome-ruby
+  - **github** (?? no way!!), gitlab, discourse, mastodon, jekyll, tons of web frameworks 'n templating languages... whoa... i didn't even know...
+  
+https://github.com/trending?l=ruby
 
 https://www.ruby-lang.org/
   - official site
@@ -44,6 +54,13 @@ https://www.ruby-lang.org/en/documentation/
     - RSense is also used for emacs
   - from a reddit post dated ~2020, RubyMine (JetBrains) vs VS Code, it seemed VS Code was taking over, along with simpler editors like atom, vim, etc., but it sounded like many people have problems, probably because of use of Ruby's complex features not working well with the language server...
 
+
+
+usefule libs:
+https://docs.ruby-lang.org/en/master/English.html
+  - basically, you can alias anything in ruby, so, you can pretty much make your own language! :D
+https://github.com/pry/pry
+  - next-level shell hackery
 
 
 
