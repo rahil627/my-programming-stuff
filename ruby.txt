@@ -1,4 +1,9 @@
 
+# ref
+https://hyperpolyglot.org/scripting
+
+
+# why?
 i prefer the syntax, expressiveness, clean 'n tidyness, and fun of ruby over python :)
 
 its also a funny way to write very clean simple scripts in a more functional style
