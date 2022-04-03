@@ -300,7 +300,8 @@ Java
   - adds lambdas (maybe this was added later on..)
   - can interop with C through JNI (java native interface)
   - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/  
-    - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#
+    - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#.
+  - like C#, it's similarly bulky, with interfaces, tons of classes, project files, and just making it feel like the opposite of the freedom of a scripting language
 
 C++
   - frameworks: ??, maybe C++ people don't rely on frameworks: they build it! :p
