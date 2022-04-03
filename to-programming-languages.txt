@@ -252,7 +252,7 @@ the rest
   - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Sinatra (*this one looks amazing...*), Hinami, Middlemen (*this looks like a good step up from Jekyll*), and more..
     - there are two particular newer frameworks that compile to machine language, DragonRuby and RubyMotion, for cross-platform game and apps, deploying to just about any device! :o It sounds like haxe's frameworks! Unfortunately, they are closed-source, giving it a more closed-off, isolated feeling, and they cost quite a chunk of money to try...
   - aims to be natural, like English;
-    - also_uses_snake_case_convention :o *finally*, someone gets it! although, maybe-i-like-this-better
+    - **also_uses_snake_case_convention** :o *finally*, someone gets it! although, maybe-i-like-this-better
     - uses function-name? for functions that return true/false *neat!*
   - *very clean* syntax
     - uses the last statement's expression in a function as the return value, thus saving a line; and oh you can easily write one-liner functions with Ruby! :o
@@ -260,7 +260,7 @@ the rest
     - no need for 'var'
   - seems to have a *quirky*, more diverse, rad community vibe, similar to Haxe :), but perhaps more accessible and diverse, whereas Haxe attracts just game-makers
   - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
-  - **too slow for games, even with the compiled version (CRuby) :(**
+  - **too slow for games, even with the compiled version (CRuby?) :(**
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
     - GraalVM
       - a VM for Java, and possible implementation for other languages: Ruby, Pythong, and Javascript, for example, are all official
@@ -278,6 +278,21 @@ the rest
   - Ruby Gems package manager
   - although i missed this generation, i think i would have enjoyed this little world :)
   - **my fav scripting language**
+  - GitHub might be the biggest company behind it :D
+  
+https://www.reddit.com/r/ruby/comments/hp3yar/i_am_tired_of_hearing_that_ruby_is_dead/
+https://www.quora.com/What-are-the-main-weaknesses-of-Ruby-as-a-programming-language?share=1
+https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-and-limited-compared-to-other-languages?share=1
+  - I've seen ruby being used for webapp (the most common usage these days), as an automation language (Chef), for high volume data processing tools (FluentD), for desktop apps (ruby + Glade), as a tool to build videogames, for network middleware, as scripting tool (as in system admin kind of a thing).
+  - Now, over the last few years ruby in the form of rails, has seen some of its userbase move to other things like node, like go and others (I know people who ditched ruby to go do php). That's mostly because other technologies finally got on par with some of the amazing concepts on ruby/rails. That's also because there is this misconception that states “Ruby is slow” - ruby isn't slow, your code is slow, your solution is slow. Maybe Ruby and the rails community haven't exactly excelled at teaching people to build fast code - they actually have always been focusing on doing the “opposite”, not do fast code but do code fast.
+    - Ruby is a complex language to master and it’s a challenge to write an interpreter for it...In general terms, the simplest a language is to implement the harder it is to write code using that language :)
+    - I certainly dislike the existence of symbols and I feel writing threaded applications should be made simpler in Ruby and the MRI implementation has certainly some limitations regarding parallelism
+    - Regarding productivity it’s mostly about familiarity and personal taste I guess. 
+    - Ruby is dead. Long live Ruby...What’s happened to Ruby is that it’s matured. It doesn’t have a bunch of folks jumping up and down saying “do everything in Ruby!” … what it does have is lots of people quietly getting lots of shit done in Ruby … just like a ton of other languages that nobody’s super-excited about anymore.
+    - Ruby is anything but simple. Simple would imply a single way of doing something. Ruby gives you five ways of doing everything. I legit think it's one of the most complex languages that's in common use.
+
+
+
   
 Python
   - perhaps the most popular and most loved scripting language, even as of 2022(!!), competitive to Ruby
