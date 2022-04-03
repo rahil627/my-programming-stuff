@@ -490,6 +490,10 @@ Haskell
     - this makes it very limiting in practice, and more of a theoretical interest
   - because it is purely functional, it can do things that no other non-purely-functional languages can do
   - web-site home-page is awesome (todo: make Haxe's home-page like this!)
+    - intro from a great little on-line book that was listed on the main site
+      - http://learnyouahaskell.com/introduction#so-whats-haskell
+  - statically typed
+  - lazy. "That means that unless specifically told otherwise, Haskell won't execute functions and calculate things until it's really forced to show you a result"
 
 Elixer
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
