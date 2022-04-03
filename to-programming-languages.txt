@@ -476,6 +476,11 @@ Schema
   
 Haskell
   - magical feeling to write
+  - many people really like this one
+  - *purely functional*, meaning, there is *absolutely no way to mutate data* (vars and functions)
+    - this makes it very limiting in practice, and more of a theoretical interest
+  - because it is purely functional, it can do things that no other non-purely-functional languages can do
+  - web-site home-page is awesome (todo: make Haxe's home-page like this!)
 
 ### functional languages
   - "Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
