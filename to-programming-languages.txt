@@ -491,6 +491,18 @@ Schema
 
 "Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
     - this basically applies to most functional languages
+    
+note: the following languages have very different use cases:
+OCaml for compilers
+Haskell for math, language
+Elixer for server-side
+
+OCaml
+  - used to write many compilers, including haxe's compiler
+  - O stands for object-oriented
+  - has reference types, "a mutable container for a value"
+  - for those two reasons and more, it's not purely functional
+  - based on the functional language ML
 
 Haskell
   - magical feeling to write
@@ -503,6 +515,9 @@ Haskell
       - http://learnyouahaskell.com/introduction#so-whats-haskell
   - statically typed
   - lazy. "That means that unless specifically told otherwise, Haskell won't execute functions and calculate things until it's really forced to show you a result"
+  - "all side effects are completely controlled and you can very easily identify functions with side effects" - CRobes
+  - "there are ways of interacting with the real world, such as printing to a console, but this is done in an absolutely controlled environment" - CRobes
+    - soo, i'm guessing limited to formal sciences: math, languages, etc.
 
 Elixer
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
@@ -547,6 +562,9 @@ https://www.atatus.com/blog/rust-vs-golang/
 
 
 
+
+
+# TODO: merge with the above
 # "server-side", "scripting" languages:
 usually have an interpreter so that you can run it ("in run-time") via CLI with single commands or scripts, as opposed to having to be compiled *and then* ran ...although, nowadays, this dividing line is quite blurry
 
