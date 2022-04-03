@@ -245,6 +245,7 @@ the rest
     - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
   - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
   - nuget package library
+  - "Microsoft's Java", Java EE = ASP.NET, Java VM (JVM) = .NET CLR, ...and so on
   
 **Ruby**
   - a scripting language that people seem to really *love*
@@ -269,19 +270,19 @@ the rest
   - although i missed this generation, i think i would have enjoyed this little world :)
   - **my fav scripting language**
   
-  
-Scala
-  - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
-  - much loved
-  - just as featureful and powerful as most of the newer contemporary lanugages
-  
-  
 Python
   - perhaps the most popular and most loved scripting language, even as of 2022(!!), competitive to Ruby
   - frameworks and libraries seems to be more scientific-oriented, with machine learning, ai, math, 'n so on
   - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; around as slow as ruby, and without the rad features and rad community
+  - the syntax is among the most readable, and it shows by it's popularity and love from first-time programmers
+    - although, it's just a preference... **i def prefer delimiters over whitespace delimiter**, and **i also prefer having my control statements with an ending delimiter**
   - Google, although, even they probably rewrote a lot of stuff in Go
-  
+
+Scala
+  - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
+  - much loved
+  - just as featureful and powerful as most of the newer contemporary lanugages
+
 Java
   - C/C++ power without memory management, a classic systems language (along with C/C++) but *much* easier to use
   - frameworks include: LibGDX... (todo: ??)
@@ -316,6 +317,7 @@ C++
   - loved/hated, mostly hated, i think
   - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
   - also a problem of multiple compilers, each of which only work for certain version or certain features?? (gcc, vs, dev-cpp, etc.)
+  - segfaults, blue screen of deaths
   - this first reddit thread illustrates the terrible flaws of C++
     - https://www.reddit.com/r/rust/comments/4yz59h/cc_interop/
   
@@ -473,7 +475,13 @@ Lisp
   
 Schema
   - meta-magic
-  
+
+
+### functional languages
+
+"Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
+    - this basically applies to most functional languages
+
 Haskell
   - magical feeling to write
   - many people really like this one
@@ -481,10 +489,6 @@ Haskell
     - this makes it very limiting in practice, and more of a theoretical interest
   - because it is purely functional, it can do things that no other non-purely-functional languages can do
   - web-site home-page is awesome (todo: make Haxe's home-page like this!)
-
-### functional languages
-  - "Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
-    - this basically applies to most functional languages
 
 Elixer
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
@@ -510,6 +514,13 @@ Go
 
 
 ### old / history
+Perl
+  - cryptic text-processer with a heavy emphasis on regex DSL turned into a general programming langauge
+  - note: awk is similar, but never turned into a programming langauge
+  
+PHP
+  - $var, $func?, $_special_var, $everything
+
 ActionScript (3)
   - thanks to Flash and it's game engines FlashPunk and Flixel, i was able to make my first *little* games with them! :)
   - to this day, that was the best game dev experience i've ever had: pure code-only **light-weight scripting**
