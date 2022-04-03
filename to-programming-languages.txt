@@ -126,8 +126,9 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 
 ## move from dynamically-typed to static-typed
 AS2 -> AS3/haxe (a change in compiler/language)
-js -> ts (type checker?)
-python -> mypy (and others; type checker)
+js -> ts (type checker bundle?)
+php -> hack (type checker bundle?)
+python -> mypy and others (type checker)
 ruby /w sorbet (type checker)
 
 
