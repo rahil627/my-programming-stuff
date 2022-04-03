@@ -266,6 +266,7 @@ the rest
       - a VM for Java, and possible implementation for other languages: Ruby, Pythong, and Javascript, for example, are all official
         - TruffleRuby is ~9x faster than CRuby, *so far*
           - https://github.com/oracle/truffleruby
+          - https://eregon.me/blog/2022/01/06/benchmarking-cruby-mjit-yjit-jruby-truffleruby.html
         - allows one to use several languages and libraries together! :o
       - https://en.m.wikipedia.org/wiki/GraalVM
       - https://github.com/graalvm
