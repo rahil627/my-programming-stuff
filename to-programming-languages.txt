@@ -264,7 +264,8 @@ the rest
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
     - GraalVM
       - a VM for Java, and possible implementation for other languages: Ruby, Pythong, and Javascript, for example, are all official
-        - TruffleRuby is 9x faster than CRuby
+        - TruffleRuby is ~9x faster than CRuby, *so far*
+          - https://github.com/oracle/truffleruby
         - allows one to use several languages and libraries together! :o
       - https://en.m.wikipedia.org/wiki/GraalVM
       - https://github.com/graalvm
