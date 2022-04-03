@@ -260,8 +260,15 @@ the rest
     - no need for 'var'
   - seems to have a *quirky*, more diverse, rad community vibe, similar to Haxe :), but perhaps more accessible and diverse, whereas Haxe attracts just game-makers
   - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
-  - **too slow for games, unless it has a compiler? :(**
+  - **too slow for games, even with the compiled version (CRuby) :(**
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
+    - GraalVM
+      - a VM for Java, and possible implementation for other languages: Ruby, Pythong, and Javascript, for example, are all official
+        - TruffleRuby is 9x faster than CRuby
+        - allows one to use several languages and libraries together! :o
+      - https://en.m.wikipedia.org/wiki/GraalVM
+      - https://github.com/graalvm
+      - by Oracle, used by Facebook and Twitter
   - adds a ton of features: object.map => { anonymous function / lambda / closure / "block" (i dunno difference) }, container.select/find/filter {|item| item == item_i_want}, getter/setters, modules (this is interesting and have not seen before: basically can include group of methods to an object! :o), etc.
   - has incredible syntax: no var necessary?
   - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
