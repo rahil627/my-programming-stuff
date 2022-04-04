@@ -258,10 +258,19 @@ the rest
     - uses the last statement's expression in a function as the return value, thus saving a line; and oh you can easily write one-liner functions with Ruby! :o
     - can omit the '()' in function()
     - no need for 'var'
+  - "Blocks are awesome. They're basically just closures, but the inline syntax is really powerful"
+  - "This sort of block gives you that "I did something pretty cool in one line" feeling."
   - seems to have a *quirky*, more diverse, rad community vibe, similar to Haxe :), but perhaps more accessible and diverse, whereas Haxe attracts just game-makers
   - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
+    - Ruby even lets you add a method to a single specific instance of a class
+  - Metaprogramming "so you can dynamically create / change / etc behaviors using anonymous methods, closures, etc." and also writing a DSL
+    - "Ruby makes hard things easy (think meta-programming, functional programming, etc). Bad programmers overuse it all the time (just because you can use the tool, you do not always have to), and other programmers suffer."
+  - bad: "GIL (global interpreter lock) - disable normal usage of multithreading. Can be solved..." usnig other interpreters?
+  - "monkey patching - "If you need a Class to work slightly differently, you can monkey-patch it (this can get dangerous, but sometimes it’s super useful) — you just re-define the Class, which “opens” it, define the methods you want to add, and they are implicitly added."
+  - memory hungry
   - **too slow for games, even with the compiled version (CRuby?) :(**
     - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
+    - "it's clearly up to the task for small shell script sizes up to medium sized applications."
     - GraalVM
       - a VM for Java, and possible implementation for other languages: Ruby, Pythong, and Javascript, for example, are all official
         - TruffleRuby is ~9x faster than CRuby, *so far*
@@ -281,7 +290,42 @@ the rest
   - GitHub might be the biggest company behind it :D
   
 https://www.reddit.com/r/ruby/comments/hp3yar/i_am_tired_of_hearing_that_ruby_is_dead/
+
 https://www.quora.com/What-are-the-main-weaknesses-of-Ruby-as-a-programming-language?share=1
+  - It has many features to process text files and to do system management tasks (as in Perl). It is simple, straight-forward, extensible, and portable
+  - Concurrency, distributed computing and domains which depend on those tools (e.g. machine learning) have become the big story of 21st century computing. Ruby is not in that space, while rivals Python and JavaScript have found a way in.
+  - "It's terse without losing readability. Less typing, less time spent with IDEs and boilerplating classes, mucking around with function prototypes, etc. Ruby borrows enough from perl to have some of that "hack it out in a day" flavor without being quite as unreadable and esoteric as perl."
+  - "The language is beautiful and at times more readable than python. Sadly it lacks a larger community that isn’t focused on web development, which holds it back. As a language it can be used for many things being that it is a general purpose language, and you’ll likely enjoy using it.
+
+    Oh yeah, it is being used more frequently in system administration as well.
+
+    Edit: I forgot to memtion, everything is an object and its form of object orientation is far more elegant than Javascript or Java, which is a big plus imo."
+  - In Java 8:
+List<Long> longArray = ImmutableList.of(1L,2L,3L,4L,5L)
+longArray.stream().map(num -> Math.pow(num, 2)).collect(Collectors.toList());
+
+Stream? Why? Couldn’t they have done away with the extra syntax?
+Math.pow? What is this? 1946? Surely exponentiation is common enough to have a simple operator for it.
+.collect? Why not just assume this type of collection by default unless specified otherwise. It did start out as a list, after all. Why stream just to collect?
+Collectors.toList? Okay? Still takes a dozen characters too long, but at least I know that it’s going to be a list instead of the HashMap<Object,Object> that I generally expect after running a simple map on a list.
+
+Now in Ruby:
+nums = [1,2,3,4,5]
+nums.map{|num| num**2}
+
+
+1) The lack of hyperspecific typing as a general practice limits the 200 character+ lines (usually split, but still) that permeate a lot of java code.
+2) The naming conventions in ruby are generally shorter, leading to shorter lines as well.
+3) 2 space indentation also helps with this.
+
+  - Speed, stability, and footprint are problems today. Maybe not tomorrow.
+
+The real troubles are singular. For fear of borrowing from ideology-driven prose, in Ruby it's simply too easy to make a mess. You can write bad code in any language, but, in Ruby, you can do it at ten times the productivity. Monkey patching, opening classes, metaprogramming, and even the vileness of eval all have their uses, but they can lure you into some sweaty situations just as rapidly.
+
+Just remember: peace, commerce and honest friendship with all classes--entangling alliances with none!
+
+  - Much of the language consists of special cases rather than general features that combine in orthogonal ways. (about python)
+  
 https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-and-limited-compared-to-other-languages?share=1
   - I've seen ruby being used for webapp (the most common usage these days), as an automation language (Chef), for high volume data processing tools (FluentD), for desktop apps (ruby + Glade), as a tool to build videogames, for network middleware, as scripting tool (as in system admin kind of a thing).
   - Now, over the last few years ruby in the form of rails, has seen some of its userbase move to other things like node, like go and others (I know people who ditched ruby to go do php). That's mostly because other technologies finally got on par with some of the amazing concepts on ruby/rails. That's also because there is this misconception that states “Ruby is slow” - ruby isn't slow, your code is slow, your solution is slow. Maybe Ruby and the rails community haven't exactly excelled at teaching people to build fast code - they actually have always been focusing on doing the “opposite”, not do fast code but do code fast.
@@ -290,6 +334,7 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
     - Regarding productivity it’s mostly about familiarity and personal taste I guess. 
     - Ruby is dead. Long live Ruby...What’s happened to Ruby is that it’s matured. It doesn’t have a bunch of folks jumping up and down saying “do everything in Ruby!” … what it does have is lots of people quietly getting lots of shit done in Ruby … just like a ton of other languages that nobody’s super-excited about anymore.
     - Ruby is anything but simple. Simple would imply a single way of doing something. Ruby gives you five ways of doing everything. I legit think it's one of the most complex languages that's in common use.
+
 
 
 
