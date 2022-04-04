@@ -578,6 +578,7 @@ Haskell for math, language
 Elixer for server-side
 
 OCaml
+  - in the functional to object-oriented/procedural sprectrum, OCaml is closer to functional, whereas Haxe is closer to object-oriented/procedural, giving i very good profile and balance, making it far more practical than more functional languages
   - used to write many compilers, including haxe's compiler
   - O stands for object-oriented
   - has reference types, "a mutable container for a value"
