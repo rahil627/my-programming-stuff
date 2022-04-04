@@ -19,7 +19,7 @@ Rust is great
 ordered from "high-level" to "low-level":
 **Haxe** (or Crystal?) for general all-round use, garbage collected, powerful (macros, ADTs, metadata, etc.), small Flash-game and creative-programming oriented community
 
-**Ruby** (or Crystal? or Haxe) for simple everyday scripting, much more fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language; includes mRuby: a minimal implementation for embedded devices!, clean-design-oriented cult commmunity
+**Ruby** (or Crystal? or Haxe) for simple everyday scripting, much mo,kkkre fun and expressive than Python, and i really like it's sytax too, its the only time i'd get to use something similar to a functional language; includes mRuby: a minimal implementation for embedded devices!, clean-design-oriented cult commmunity
 
 **Wren** (TODO: look at Squirrel) for object-oriented embedded scripting, a much better suited alt to Lua, but unlike Lua, it doesn't have a standard library
 
@@ -267,6 +267,9 @@ the rest
   - Metaprogramming "so you can dynamically create / change / etc behaviors using anonymous methods, closures, etc." and also writing a DSL
     - "Ruby makes hard things easy (think meta-programming, functional programming, etc). Bad programmers overuse it all the time (just because you can use the tool, you do not always have to), and other programmers suffer."
   - bad: "GIL (global interpreter lock) - disable normal usage of multithreading. Can be solved..." usnig other interpreters?
+    - Ruby 3 adds fibers (non-parallel) and ractors (parallel)
+  - Ruby 3 adds TypeProf, "a type analysis tool, which are the “first steps” towards a “future with static type checking, without type declaration, using abstract interpretation”"
+  - Ruby 3, is 3x faster (was released just before 2021)
   - "monkey patching - "If you need a Class to work slightly differently, you can monkey-patch it (this can get dangerous, but sometimes it’s super useful) — you just re-define the Class, which “opens” it, define the methods you want to add, and they are implicitly added."
   - memory hungry
   - **too slow for games, even with the compiled version (CRuby?) :(**
@@ -287,8 +290,8 @@ the rest
   - game engines, such as Gosu, are written in C/C++ and then wrapped/binded by Ruby, because it would be too slow otherwise
   - Ruby Gems package manager
   - although i missed this generation, i think i would have enjoyed this little world :)
-  - **my fav scripting language**
-  - GitHub might be the biggest company behind it :D
+  - **my fav scripting language**, and possibly my favorite language overall :o
+  - GitHub and Shopify might be the biggest companies behind it :D
   
 https://www.reddit.com/r/ruby/comments/hp3yar/i_am_tired_of_hearing_that_ruby_is_dead/
 
