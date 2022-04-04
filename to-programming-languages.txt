@@ -27,7 +27,7 @@ ordered from "high-level" to "low-level":
 
 **Zig** > **C**, manual memory management, although still have to see Odin and think more about the power of Rust's memory solution and compiler...
 
-**fish** vs zsh, shell scripting, todo: still have to see zsh scripting to compare
+**fish** vs zsh (or Ruby), shell scripting, todo: still have to see zsh scripting to compare
 
 although **Crystal** has all of the things i want--good C api, *real* concurrency, Ruby syntax, performance, etc.--Haxe is *far* more developed...
 
@@ -346,7 +346,26 @@ Python
   - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; around as slow as ruby, and without the rad features and rad community
   - the syntax is among the most readable, and it shows by it's popularity and love from first-time programmers
     - although, it's just a preference... **i def prefer delimiters over whitespace delimiter**, and **i also prefer having my control statements with an ending delimiter**
+      - there's also no real reason to limit to whitespace delimiting, as Haskell proves that it's possible to support both ways
   - Google, although, even they probably rewrote a lot of stuff in Go
+    - also in Google fashion, they broke the language-compatibility for the v3 update
+    - Google just sucks at long-term vision, design, and maintenance.
+
+https://www.quora.com/What-are-the-main-weaknesses-of-Python-as-a-programming-language
+  - The traces of this “hacky” origin seen everywhere. I will list just some: 
+__something__
+self
+whitespace-as-syntax
+len()
+getters vs setters syntax
+“”.join()
+string instance methods returning value (“aaa”.capitalize()) (much stranger when compared with the fact that len() is function not method)
+No static typing, which is in itself great thing, but not on the scale of big projects python now is used for
+… and more
+  - "Lack of anonymous multi-line functions, combined with unintuitive scoping, has sent me scurrying to Node.js or Ruby time after time. Python syntax is great for a a pipeline of heavy computation, but becomes unwieldy when weaving together asynchronous calls."
+  - I'd really prefer an easier way to figure out which exceptions a given class or function can raise. The only way I know of doing this now is to hunt through the source code or look in the documentation and hope that it's comprehensive in this regard.
+  - Circular import errors. Imports are statements too, and they can fail if the objects they target have not been created yet. Compare this with languages that support separate compilation (C family and ML family languages), and can link at runtime without having to worry about the order in which things are defined.
+  - No helpful IDEs. It's hard to reason about dynamic code before you run it, so it's very hard to write tools to help you reason about it.
 
 Scala
   - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
