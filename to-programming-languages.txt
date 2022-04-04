@@ -251,6 +251,7 @@ the rest
   - a scripting language that people seem to really *love*
   - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Sinatra (*this one looks amazing...*), Hinami, Middlemen (*this looks like a good step up from Jekyll*), and more..
     - there are two particular newer frameworks that compile to machine language, DragonRuby and RubyMotion, for cross-platform game and apps, deploying to just about any device! :o It sounds like haxe's frameworks! Unfortunately, they are closed-source, giving it a more closed-off, isolated feeling, and they cost quite a chunk of money to try...
+  - "Matsumoto describes the design of Ruby as being like a simple Lisp language at its core, with an object system like that of Smalltalk, blocks inspired by higher-order functions, and practical utility like that of Perl."
   - aims to be natural, like English;
     - **also_uses_snake_case_convention** :o *finally*, someone gets it! although, maybe-i-like-this-better
     - uses function-name? for functions that return true/false *neat!*
