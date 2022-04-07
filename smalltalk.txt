@@ -1,0 +1,9 @@
+
+
+http://onsmalltalk.com/why-smalltalk
+  - prep
+ 
+ https://insearchofsecrets.com/2014/08/04/lisp-smalltalk-and-the-power-of-symmetry/
+   - power
+   
+   
