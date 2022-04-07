@@ -6,4 +6,10 @@ http://onsmalltalk.com/why-smalltalk
  https://insearchofsecrets.com/2014/08/04/lisp-smalltalk-and-the-power-of-symmetry/
    - power
    
-   
+http://wiki.squeak.org/squeak/158
+  - squeak's directions:
+    - children's design
+    - industrial use
+    - in the end: tough to mesh
+    
+    
