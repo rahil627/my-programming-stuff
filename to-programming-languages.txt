@@ -1,5 +1,13 @@
 # the opinions of great programmers
 
+## Robert's opinion
+
+Java had good marketing, otherwise, it stole from Smalltalk, VM, dumbed down true objects into dumbed down prototyping and classes calling that "object-oriented"
+Basic was the Java of it's time
+
+
+
+
 ## Zeta's opinion
 
 Zeta has written: a *very good* game engine, and is now writing an ARM assembler, and a simple OS
