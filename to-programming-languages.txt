@@ -2,6 +2,9 @@
 
 ## Robert's opinion
 
+Lisp, no language ever been so simple yet so powerful, macros are easier to write
+Smalltalk, most readable language and you can alter *any* part of it while it's running
+
 Java had good marketing, otherwise, it stole from Smalltalk, VM, dumbed down true objects into dumbed down prototyping and classes calling that "object-oriented"
 Basic was the Java of it's time
 
