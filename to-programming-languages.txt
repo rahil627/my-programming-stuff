@@ -215,7 +215,8 @@ assembly
   - https://github.com/Herringway/ebsrc
     - re-creation of earthbound in SNES's assembly
   
-
+https://github.com/flipacholas/Architecture-of-consoles/
+  - console architectures
 
 
 
@@ -227,6 +228,22 @@ order of traits:
 simple summary
 frameworks
 the rest
+
+## god-like
+Lisp
+  - second-oldest language, after fortran
+  - **still the most powerful language**
+    - a history of programming languages reveal that they are only now catching up to Lisp, and still, they are behind in features, in addition to creating a lot more complex syntax
+  - **the simplest sytax**: '(word)', that's it!
+  
+"9. The whole language always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
+
+Running code at read-time lets users reprogram Lisp's syntax; running code at compile-time is the basis of macros; compiling at runtime is the basis of Lisp's use as an extension language in programs like Emacs; and reading at runtime enables programs to communicate using s-expressions, an idea recently reinvented as XML."
+  
+Smalltalk
+  - **can edit *any* part of the program while it's running**
+  - the IDE is basically like an OS, written in smalltalk itself
+    - **browse any object** (not class, but the underlying data
 
 
 ## old classics
