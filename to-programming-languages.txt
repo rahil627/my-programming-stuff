@@ -197,6 +197,12 @@ Commodore64 (c64)
   - https://github.com/lvcabral/retaliate64/blob/master/source/gameData.asm
   - everything is a "co-routine"
   - feels closer to assembly, three-letter terse commands
+
+
+assembly
+  - each platform probably has it's own assembly language and assembler
+  - https://github.com/Herringway/ebsrc
+    - re-creation of earthbound in SNES's assembly
   
 
 
