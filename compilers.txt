@@ -1,0 +1,24 @@
+
+process:
+high-level lang -> LLVM -> target platform assembly
+C/C++ (optional?: -> LLVM for optimizing) -> target platform assembly (maybe prefers a compiler?)
+
+high-level lang -> LLVM -> generated C (to link to consoles, mobile) -> target platform assembly
+  - LLVM dropped C backend in v3.1  
+    - this project revived it https://github.com/JuliaComputingOSS/llvm-cbe
+    - however, this sounds impossible for any non-trivial program
+
+
+mobile
+  - iOS uses C/C++
+  - Android uses Java, and thus game dev cares about it
+
+consoles:
+  - all consoles use C/C++
+  - can alternativly run a simple game in the browser using JS, but at like 1% gpu power
+
+
+warning for iOS and consoles: "cannot execute writeable regions", thus cannot use JIT compilation, and thus cannot run a complex javascript game, as without JIT it'd be too slow
+
+
+
