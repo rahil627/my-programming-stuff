@@ -210,18 +210,18 @@ OCaml
 
 
 historical intrigues:
-BASIC (well, some variant of it):
+BASIC (well, some variant of it)
+  - "the java of it's time"
+    - because Bill Gates sold BASIC to nearly every platform during the 80's (Commodore, Atari, Apple, etc.)
   - https://github.com/wls/Wumpus.bci/blob/master/wumpus.bci
     - 'let' keyword for dynamic types?? :o
-  - surprisingly simple and readable, almost like it was specificalyl made for game programming! :o 
-  - lots of GOTOs
+  - surprisingly simple and readable, almost like it was specifically made for simple game programming! :o 
   - many people cite this an their first prgramming language as a child
   
 Commodore64 (c64)
   - https://github.com/lvcabral/retaliate64/blob/master/source/gameData.asm
   - everything is a "co-routine"
-  - feels closer to assembly, three-letter terse commands
-
+  - three-letter terse commands make it feel closer to asssembly
 
 assembly
   - each platform probably has it's own assembly language and assembler
