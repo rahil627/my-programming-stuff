@@ -246,12 +246,22 @@ the rest
 Lisp
   - second-oldest language, after fortran
   - **still the most powerful language**
-    - a history of programming languages reveal that they are only now catching up to Lisp, and still, they are behind in features, in addition to creating a lot more complex syntax
-  - **the simplest sytax**: '(word)', that's it!
+    - a history of programming languages reveal that they are only *just* now catching up to Lisp, and still, they've only caught up to it's features, but not it's implementation which allow the real wild stuff (see below), in addition to creating a lot more complex syntax
+  - **the simplest sytax**: '(word arg)', that's it!
+    - thus **easy to parse / interpret / compile**
   
 "9. The whole language always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
 Running code at read-time lets users reprogram Lisp's syntax; running code at compile-time is the basis of macros; compiling at runtime is the basis of Lisp's use as an extension language in programs like Emacs; and reading at runtime enables programs to communicate using s-expressions, an idea recently reinvented as XML."
+
+used by Naughty Dog game studio:
+https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
+  - "...from Crash Bandicoot a much more elaborate language for coding all the gameplay objects called GOOL. In Jak & Daxter I went full on crazy and wrote a native compiler for an object oriented full featured Scheme language called GOAL. We wrote 98% of four Jak & Daxter games in it, including the vector unit assembly."
+  - "One of the interesting things about LISP is that it’s actually a pretty easy language to parse, interpret, and compile. This isn’t actually an accident as the S-expression syntax was initially chosen for it’s machine regularity (in those early days of underpowered mainframes). Newer languages are syntactically much more complicated. Ironically most normal programmers, being human, seem to find the more complicated syntax easier and the “simple” S-expression syntax confusing (being backward much of the time to normal human convention). I always found it unambiguous, but go figure. It’s also precisely this regularity that makes the awesome macrology of LISP possible and has allowed the language to remain relevant despite its advanced age."
+  - But by the mid 2000s I started doing the kind of programming I used to do in LISP in Ruby. It’s not that Ruby is a better language (although it is a good one), but mostly it was the momentum factor and the availability of modern libraries for interfacing with the vast array of services out there. Using the crappy unreliable or outdated LISP libraries — if they worked at all — was tedious. Plus the LISP implementations were so outmoded. It was very hard to get other programers (except a couple enthusiasts) to work that way. And ugh, those old CMCL and ACL Garbage Collection code/algo’s were (at least when I last used them in 2006) so awful. In ACL I’d get these LispMachine-like multi-hour GCs.
+  - Ruby had a great book (I put big stock in that) and struck a decent compromise. It’s type system and object model are better (or at least more modern) than Common LISP anyway. The syntax is more inconsistent, and the macro model nowhere near as good. In Ruby you can manually build up strings and feed them into the interpreter, which is equivalent to simple backquote. But you can’t easily do the kind of cool nested constructions that are trivial in LISP.
+  - But it turns out. Libraries and implementation matter a lot. Momentum too. Ruby has momentum, people supporting it who aren’t older than me (and I’m not a young programmer anymore, started in 1980!) Still, you can feel lots and lots of LISP influence in all the new runtime typed languages (Ruby, Python, etc). And 30 years later, listeners still rule! Using a language without a listener is like walking without legs. I pity the C, C++, Java only type programmer.
+
   
 Smalltalk
   - **can edit *any* part of the program while it's running**
