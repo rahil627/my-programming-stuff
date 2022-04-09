@@ -37,17 +37,17 @@ ordered from "high-level" to "low-level":
 
 **Smalltalk**, god-like, productivity, can alter aything *any time* (while the program is running)
 
-**Haxe** (or Crystal?) for general all-round use, garbage collected, powerful (lisp-level macros, ADTs, metadata, etc.), small Flash-game and creative-programming oriented community
+**Haxe** (or Crystal?) for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros, ADTs**, metadata, etc.), small Flash-game and creative-programming oriented community
 
-**Ruby** (or Crystal? or Haxe) for simple everyday scripting, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.)
+**Ruby** (or Crystal? or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
 
-**Wren** (or Squirrel) for object-oriented embedded scripting, a much better suited alt to Lua, but unlike Lua, it doesn't have a standard library
+**Wren** (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
 
 **Lua** for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
 
-**C** (or Zig), manual memory management, although still have to see Odin and think more about the power of Rust's memory solution and compiler...
+**C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, eventually you'll have to face it
 
-Ruby (or fish or zsh for tiny stuff), shell scripting, todo: still have to see zsh scripting to compare
+Ruby or whatever the shell's language is (bash, zsh, fish, etc.) for shell scripting, these languages suck, feel old, full of $, so, only use them if you need a batch file, or for shell piping
 
 
 notes:
