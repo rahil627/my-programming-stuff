@@ -35,7 +35,7 @@ ordered from "high-level" to "low-level":
 
 **Lisp**, god-like, at the same the the simplest syntax yet the most powerful language, macro heaven, unlimited metaprogramming (todo: get note)
 
-**Smalltalk**, god-like, productivity, can alter aything *any time* (while the program is running)
+**Smalltalk**, god-like, productivity, can alter anything *any time* (while the program is running), unfortunately not until Pharo was there much progress
 
 **Haxe** (or Crystal?) for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros, ADTs**, metadata, etc.), small Flash-game and creative-programming oriented community
 
@@ -267,6 +267,13 @@ Smalltalk
   - **can edit *any* part of the program while it's running**
   - the IDE is basically like an OS, written in smalltalk itself
     - **browse any object** (not class, but the underlying data
+  - when you save a project, you just save an "image" of all the code, there are no files
+  - however, because there are no files, and that you are forced to use it's only IDE, often which looks like it's stuck in the 80s or 90s, it detracts most people
+  - dialects:
+    - **Pharo** is the most contemporary, with a great site, docs, etc., leveraging the power of github, newer ui, an uprising of creating new libs including low-level gpu api and low-level ui framework, pretty awesome!
+      - https://pharo.org/documentation
+    - Squeak created some resurgence as it was made by the main makers of the lang (Alan Kays), but also dying out just as suddenly due to lack of community, perhaps most being of his age and similarly  academic or scientific; it's web-site is composed of a messy wiki that is often out-dated by 15 years, and it's package manager is just as old and out-dated; it's UI looks like Windows 95
+  - made in a MIT lab in 1980, huge influence in all programming langs: VM -> Java VM, objective-c, all "object-oriented" paradigms, etc.
 
 
 ## old classics
