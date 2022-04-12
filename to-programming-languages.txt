@@ -273,6 +273,10 @@ Smalltalk
     - **Pharo** is the most contemporary, with a great site, docs, etc., leveraging the power of github, newer ui, an uprising of creating new libs including low-level gpu api and low-level ui framework, pretty awesome!
       - https://pharo.org/documentation
     - Squeak created some resurgence as it was made by the main makers of the lang (Alan Kays), but also dying out just as suddenly due to lack of community, perhaps most being of his age and similarly academic or scientific; it's web-site is composed of a messy wiki that is often out-dated by 15 years, and it's package manager is just as old and out-dated; it's UI looks like Windows 95
+      - https://squeak.org/documentation/
+        - squeak docs site contains free books for squeak, such as 'squeak by example', but also the original four smalltalk books from the 80s
+      - http://wiki.squeak.org/squeak/2983
+        - main wiki page is a list of links, including some intersting historical ones
       - the FFI page was updated pretty recently, 2019?, and it's one of the main libs of the Squeak core repo
         - <https://wiki.squeak.org/squeak/1414>
       - croquet is an example of FFI use for OpenGL
