@@ -35,7 +35,7 @@ Rust is great
 ## special mentions
 these lack the popular native libraries and support compared to other langugages, but, as both have C FFI, so, they're both still great for whatever individual projects
 
-a minimalist Lisp dialect for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?)
+Racket, an intro dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?) and just plain cli scripting
 
 Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
 
