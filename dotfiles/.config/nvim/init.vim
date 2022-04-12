@@ -70,10 +70,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocUninstall [extension]
 
 
+" completion sources
+" https://github.com/neoclide/coc-sources#readme
+" coc-tags
+" coc-syntax
+
 " languages
 " coc-haxe
+" coc-solargraph for solargraph (ruby) lang server
+" gem install solargraph
 
-" coc-sh for bash using bash-language-server.
+" coc-sh for bash using bash-language-server
+" coc-fish need fish installed
 
 " coc-zig
 
@@ -82,15 +90,22 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-html
 
 " extensions
+" coc-pairs should not conflict with other plugins...
+" coc-yank
+
 " coc-markdownlint for markdown linting
 " coc-markdown-preview-enhanced
-" coc-dot-complete
-" coc-fzf-preview
-" coc-git
+" coc-dot-complete in case completion is slow or annoying
+" coc-fzf-preview hella powerful, "This plugin can be easily extended in comparison to fzf.vim."
+" coc-git pretty complex stuff, super customizable, "it's recommended to use plugin like vim-fugitive at the same time."
 " coc-gist
 " coc-prettier
 " coc-snippets
 " coc-spell-checker
+
+
+" to-experiment:
+" coc-terminal
 
 
 " coc-haxe notes:
