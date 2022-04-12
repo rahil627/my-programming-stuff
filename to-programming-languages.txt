@@ -272,12 +272,17 @@ Lisp
       - https://en.m.wikipedia.org/wiki/Common_Lisp
         - used in Deep Space and Mars Rover
       - the web-site shows the extremely simple and bare syntax/features
-    - Clojure
-      - Rob said it "adds syntax" and that "it should be burned with fire"
-      - uses JVM
     - Scheme
       - a minimal dialect
+        - the core seems to be rigorously thought out and is now a standard used as a base for newer dialects
+        - beyond the core, there arre similarly rigoriously thought out extensions to the lang
       - this sounds more in tune with the spirit of Lisp, whereas other newer dialects just add more syntax/keywords, when the point is to be simple
+     - Clojure
+       - Rob said it "adds syntax" and that "it should be burned with fire"
+       - uses JVM
+     - Racket
+       - a contemporary one based off of one of the Scheme standards
+       - more like a whole tool-set, used to create your own langauge! Now this is the spirit!
   
 "9. The whole language always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
