@@ -31,19 +31,24 @@ Rust is great
 
 # my choices
 
+
+## special mentions
+these lack the popular native libraries and support compared to other langugages, but, as both have C FFI, so, they're both still great for whatever individual projects
+
+Lisp for god-like macros and *zen way of programming*
+
+Smalltalk for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for games programming
+
+## main list
 ordered from "high-level" to "low-level":
-
-**Lisp**, god-like, at the same the the simplest syntax yet the most powerful language, macro heaven, unlimited metaprogramming (todo: get note)
-
-**Smalltalk**, god-like, productivity, can alter anything *any time* (while the program is running), unfortunately not until Pharo was there much progress
 
 **Haxe** (or Crystal?) for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros, ADTs**, metadata, etc.), small Flash-game and creative-programming oriented community
 
 **Ruby** (or Crystal? or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
 
-**Wren** (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
+Wren (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
 
-**Lua** for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
+Lua for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
 
 **C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, eventually you'll have to face it
 
@@ -251,11 +256,13 @@ simple summary
 frameworks
 the rest
 
-## god-like
+## god-like, but not popular
 Lisp
   - second-oldest language, after fortran
-  - **still the most powerful language**
+  - **at the same the the simplest syntax yet the most powerful language, still!**
     - a history of programming languages reveal that they are only *just* now catching up to Lisp, and still, they've only caught up to it's features, but not it's implementation which allow the real wild stuff (see below), in addition to creating a lot more complex syntax
+    - macro heaven
+    - unlimited metaprogramming (todo: get note)
   - **the simplest sytax**: '(word arg)', that's it!
     - thus **easy to parse / interpret / compile**
   - dialects:
@@ -463,22 +470,28 @@ No static typing, which is in itself great thing, but not on the scale of big pr
   - Circular import errors. Imports are statements too, and they can fail if the objects they target have not been created yet. Compare this with languages that support separate compilation (C family and ML family languages), and can link at runtime without having to worry about the order in which things are defined.
   - No helpful IDEs. It's hard to reason about dynamic code before you run it, so it's very hard to write tools to help you reason about it.
 
+
+Java / JVM world
 Scala
   - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
   - much loved
   - just as featureful and powerful as most of the newer contemporary lanugages
+  
+Groovy
+  - "Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk. It can be used as both a programming language and a scripting language for the Java Platform"
+  - "Most valid Java files are also valid Groovy files. Although the two languages are similar, Groovy code can be more compact, because it does not need all the elements that Java needs.[15] This makes it possible for Java programmers to learn Groovy gradually by starting with familiar Java syntax before acquiring more Groovy programming idioms."
 
 Java
   - C/C++ power without memory management, a classic systems language (along with C/C++) but *much* easier to use
   - frameworks include: LibGDX... (todo: ??)
-  - the vibe i get is strange... there seems to be only an old cult that like it, similar to neovim's cult
+  - the vibe i get is strange... there seems to be only an old cult that like it, one that's business-class or "enterprise"-class
   - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
   - **adds a garbage collector, making it feel "high-level"**
     - but no pointers *at all*, **all objects are references and all objects are passed by references** (basically every high-level language after this does this)
       - thus perhaps making fine-tuning of memory impossible?
     - a good comparison between C++'s pointers and Java's magic
       - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
-  - feels neat, like an early C#! :)
+  - feels neat, like an early C#, but heavy too
     - although the modules/class seem like 5 folder deep??
   - no header files? :o
   - object-oriented, direct contender to C++
