@@ -35,9 +35,9 @@ Rust is great
 ## special mentions
 these lack the popular native libraries and support compared to other langugages, but, as both have C FFI, so, they're both still great for whatever individual projects
 
-Lisp for god-like macros and *zen way of programming*
+a minimalist Lisp dialect for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?)
 
-Smalltalk for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for games programming
+Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
 
 ## main list
 ordered from "high-level" to "low-level":
@@ -299,7 +299,8 @@ Smalltalk
   - when you save a project, you just save an "image" of all the code, there are no files
   - however, because there are no files, and that you are forced to use it's only IDE, often which looks like it's stuck in the 80s or 90s, it detracts most people
   - dialects:
-    - **Pharo** is the most contemporary, with a great site, docs, etc., leveraging the power of github, newer ui, an uprising of creating new libs including low-level gpu api and low-level ui framework, pretty awesome!
+    - **Pharo**
+      - forked from Squeak in 2008, it is far more contemporary, with a great site, docs, etc., leveraging the power of github, newer ui, an uprising of creating new libs including low-level gpu api and low-level ui framework, pretty awesome!
       - https://pharo.org/documentation
     - Squeak created some resurgence as it was made by the main makers of the lang (Alan Kays), but also dying out just as suddenly due to lack of community, perhaps most being of his age and similarly academic or scientific; it's web-site is composed of a messy wiki that is often out-dated by 15 years, and it's package manager is just as old and out-dated; it's UI looks like Windows 95
       - https://squeak.org/documentation/
