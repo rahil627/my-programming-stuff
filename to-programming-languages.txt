@@ -280,9 +280,11 @@ Lisp
      - Clojure
        - Rob said it "adds syntax" and that "it should be burned with fire"
        - uses JVM
-     - Racket
-       - a contemporary one based off of one of the Scheme standards
+     - **Racket**
+       - a contemporary one based off of one of the Scheme standards, full of contemporary features
        - more like a whole tool-set, used to create your own langauge! Now this is the spirit!
+         - "The language platform provides a self-hosted IDE named DrRacket, a continuation-based web server, a graphical user interface, and other tools. As a viable scripting tool with libraries like common scripting languages, it can be used for scripting the Unix shell. It can parse command line arguments and execute external tools."
+       - used in more recent Naughty Dog games!
   
 "9. The whole language always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
