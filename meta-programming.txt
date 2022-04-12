@@ -1,9 +1,12 @@
 
 
+# stages
 read-time
 compile-time
 run-time
 
+
+# possibilities
 during read-time
   - compile -> ?
   - run -> change syntax: DSL
@@ -15,6 +18,51 @@ during compile-time
 during run-time
   - read -> programs communicate via s-expressions (in the case of Lisp)
   - compile -> program extensions : Emacs extensions
+
+
+
+# pop features
+
+## all of the time?
+(todo: wip)
+
+eval
+  - Some dynamic languages offer an eval function. This function takes a string parameter containing code in the language and executes it. If this code stands for an expression, the resulting value is returned... (vs higher-order functions)
+
+object runtime alteration
+  - A type or object system can typically be modified during runtime in a dynamic language. This can mean generating new objects from a runtime definition or based on mixins of existing types or objects. This can also refer to changing the inheritance or type tree, and thus altering the way that existing types behave (especially with respect to the invocation of methods).
+    - mixin
+    - metaclass
+
+type inference
+  - As a lot of dynamic languages come with a dynamic type system, runtime inference of types based on values for internal interpretation marks a common task. As value types may change throughout interpretation, it is regularly used upon performing atomic operations.
+
+variable memory allocation (-> dynamic typing)
+  - Static programming languages (possibly indirectly) require developers to define the size of utilized memory before compilation (unless working around with pointer logic). Consistent with object runtime alteration, dynamic languages implicitly need to (re-)allocate memory based on program individual operations.
+
+
+
+## during read-time
+
+
+## during compile-time (and run-time?)
+macros
+  - ...combines code introspection (the ability to examine classes, functions, and keywords to know what they are, what they do and what they know) and eval in a feature called macros... they provide access to the inner workings of the compiler, and full access to the interpreter, virtual machine, or runtime, allowing the definition of language-like constructs which can optimize code or modify the syntax or grammar of the language.
+
+Assembly, C, C++, early Java, and Fortran do not generally fit into this category.
+
+*note: c++ people use the word macros for simple preprocessor-like substitutions*
+
+reflection
+  - ...common in many dynamic languages, and typically involves analysis of the types and metadata of generic or polymorphic data. (to macros?: It can, however, also include full evaluation and modification of a program's code as data, such as the features that Lisp provides in analyzing S-expressions.)
+
+
+## during run-time
+program extensions
+  - i think like configs, adding libs
+  
+programs communicate
+  - !?!? the matrix?
 
 
 
