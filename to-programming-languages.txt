@@ -262,6 +262,7 @@ Lisp
   - **at the same the the simplest syntax yet the most powerful language, still!**
     - a history of programming languages reveal that they are only *just* now catching up to Lisp, and still, they've only caught up to it's features, but not it's implementation which allow the real wild stuff (see below), in addition to creating a lot more complex syntax
     - macro heaven
+      - "Thus, **Lisp functions can be manipulated, altered or even created within a Lisp program without lower-level manipulations.** This is generally considered one of the main advantages of the language with regard to its expressive power, and makes the language suitable for syntactic macros and metacircular evaluation."
     - unlimited metaprogramming (todo: get note)
   - **the simplest sytax**: '(word arg)', that's it!
     - thus **easy to parse / interpret / compile**
