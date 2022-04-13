@@ -26,6 +26,12 @@ just a note: i've got quite a few posts on the Heaps forum... but the Discord is
   - to create a new project from the cli
     - (normally you'd use the VS Code extension to do this for you)
 
+https://github.com/jeremyfa/interpret/
+  - modify and execute haxe code during run-time, like a scripting language!
+  
+https://github.com/RblSb/KhaHotReload
+  - hot reload for js targets
+
 tween
   - slide
   - actuate
