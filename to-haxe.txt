@@ -18,7 +18,7 @@ the codebook is especially good for learning bit-by-bit, especially for macros!
 
   
 # forums
-just a note: i've got quite a few posts on the Heaps forum... but it seems the Discord is a better place
+just a note: i've got quite a few posts on the Heaps forum... but the Discord is a *much much* better place
 
 
 # libs
@@ -66,28 +66,33 @@ no generics (though not the worst)
 # interop
 
 ## magical library linking
+
+for c# and java only:
 apparently you can just do something like
 `-lib java filePath`
 to link a target library, and you even get autocompletion!! :o
+
 
 ## target code injection
 
 it sounds like you should avoid this, but it's possible to just inject code in your target language!
   - https://haxe.org/manual/target-syntax.html
 
+
 ## targets, bindings, transpilers, etc.
 
 main, native, C/C++/VM:
 hashlink, can choose from two compile options:
   - hl/C, LLVM-optimized slow compilation / fast run-time
+    - note: "hashlink can interact with C++ libraries, look at hldx for example."
   - hl, VM/JIT fast compilation / slow run-time, all in a single bytecode file for convenience too
 hxcpp, used to compile to mobile devices, also very fast, not sure how it compares to hl/C
   - generates several C++ files which takes time without a compilation server
 neko, old, don't use this?
 
 other targets:
-js target, for **js/npm libs**, also for **node.js server-side use and it's libs**
-C# target, for **C#/Nuget libs**
+js target, for **web ("front-end" and "back-end")**, **js/npm libs**, also for **node.js server-side use and it's libs**
+c# target, for **C#/Nuget libs**
 java target, for **java libs**
   - JVM target, ? direct to JVM bytecode?
 python target, for **ai / machine learning libs**
