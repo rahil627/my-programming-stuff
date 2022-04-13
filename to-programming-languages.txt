@@ -239,7 +239,7 @@ Lisp
       - https://en.m.wikipedia.org/wiki/Common_Lisp
         - used in Deep Space and Mars Rover
       - the web-site shows the extremely simple and bare syntax/features
-    - Scheme
+    - **Scheme**
       - a minimal dialect
         - the core seems to be rigorously thought out and is now a standard used as a base for newer dialects
         - beyond the core, there arre similarly rigoriously thought out extensions to the lang
@@ -399,6 +399,22 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
     - Regarding productivity it’s mostly about familiarity and personal taste I guess. 
     - Ruby is dead. Long live Ruby...What’s happened to Ruby is that it’s matured. It doesn’t have a bunch of folks jumping up and down saying “do everything in Ruby!” … what it does have is lots of people quietly getting lots of shit done in Ruby … just like a ton of other languages that nobody’s super-excited about anymore.
     - Ruby is anything but simple. Simple would imply a single way of doing something. Ruby gives you five ways of doing everything. I legit think it's one of the most complex languages that's in common use.
+
+
+ML (Meta Language)
+  - dialects:
+    - **OCaml**
+      - adds object-oriented, and a lot more
+      - extremely practical, used to write many compilers
+      - quite known among language design people
+    - SML
+      - something for hard-core ML people
+
+
+F#
+  - much loved
+  - basically an improved ML
+  - built on .NET
 
 
 **C#**
