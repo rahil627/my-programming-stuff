@@ -28,6 +28,9 @@ linking/including C++ libs into a C host program is possible but not advisable d
 the other way around, i think works fine though(??)
 
 
+> C++ can call C functions, `extern "C"` exists.
+> C cannot call C++ function "out of the box".
+
 "...for every single function (and all the overloads of that function).":
 ```cpp
 extern "C" foo_some_method(Foo &foo) {
