@@ -13,8 +13,6 @@ Java had good marketing, otherwise, it stole from Smalltalk (VM, object-oriented
 Basic was the Java of it's time
 
 
-
-
 ## Zeta's opinion
 
 Zeta has written: a game engine on top of Robert's Kinc lib, and is now writing an ARM assembler (for Hashlink), and is tinkering with writing an OS
@@ -28,73 +26,40 @@ Rust is great
 
 
 
-
 # my choices
-
-
-## special mentions
-these lack the popular native libraries and support compared to other langugages, but, as both have C FFI, so, they're both still great for whatever individual projects
-
-Racket, an intro dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?) and just plain cli scripting
-
-Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
 
 ## main list
 ordered from "high-level" to "low-level":
 
-**Haxe** (or Crystal?) for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros, ADTs**, metadata, etc.), small Flash-game and creative-programming oriented community
+**Haxe** (or Crystal?) for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community
 
-**Ruby** (or Crystal? or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
+**Ruby** (or Crystal? or Haxe or hscript) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
 
 Wren (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
 
 Lua for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
 
-**C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, eventually you'll have to face it
+**C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
 
-Ruby or whatever the shell's language is (bash, zsh, fish, etc.) for shell scripting, these languages suck, feel old, full of $, so, only use them if you need a batch file, or for shell piping
-
-
-notes:
-although **Crystal** has all of the things i want--good C api, *real* concurrency, Ruby syntax, nice macro syntax too, performance, etc.--Haxe is *far* more developed...
-
-although C-replacements such as Zig and Odin exist, both clearly much superioer to C, as far as consoles go, it sounds like, as far as consoles go, you'd sitll need to use C/C++
-
-although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass combo as they share similar syntax across: all Ruby influenced, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, Crystal has good C api and can maybe use Ruby as a scripting languages (Anyolite), and Ruby might have C and Java api(??). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt has an interpreter.
-
-it seems like Ruby is still better for simple scripting. For with Elixer, once you include another file, you basically have to create a project for it. For Crystal, you must either compile it every time in order to run it (just adds a second) or save the compiled binary (i'm not sure if thr eval interpreter is enough...). For Haxe you have all the choices (interpreter, VM bytecode, LLVM-optimized C binary), but you still need to make sure you have a Main class ;).
+Ruby or whatever the shell's language is (bash, zsh, fish, etc.) for shell scripting, these languages suck, feel old, full of '$'s, so, only use them if you need a batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
 
 
+## special mentions
+these lack the popular native libraries and support compared to other contemporary langugages, but, as both have C FFI, so, they're both still great for whatever individual projects
 
-https://news.ycombinator.com/item?id=14120398
-  - elixer vs ruby?
-    - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
-    - "I do not particularly like the usual global package installation model, though, because it means that you can only have a single version of a package available for your scripts to require. The best package management model for standalone scripts that I have seen is Groovy's [1]: a script can include a special directive that downloads a specific version of a package just for that script. Any versions can be stored in the global (per-user) package cache so that you don't have to redownload them every time a script runs, but your import statements always give you strictly the version you asked for. This is the model I'd adopt for Elixir."
+Racket, an intro dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?) and just plain cli scripting
 
-  
-https://thoughtbot.com/blog/is-elixir-a-scripting-language
-  - running it via command line, it seems it would only work for a single module, and i'm not sure if you can simply import other modules using this method. Its possible to add a shebang and make it an executable
-  - running the script via the 'mix' command seems the way to go, as that makes it a proper project allowing you to add modules, but then you'd need to create a new project, with a project folder, with it's own directory structure ' files, snd on top of that you'd need Elixer installed, and im not even sure if it can actually execute standalone without that command...
-  - compiling it to a binary is similar, or even more complicated, than haxe: you need a seperate build file, put the script into a main function, compile it, and ensure you have Erlang's VM (BEAM)
-  
-https://news.ycombinator.com/item?id=23431941
-  - crystal vs ruby
-  - "Ruby's "metaprogramming" is something Java, C# and JS don't do well -- dynamically redefining things during runtime. **Everything in Ruby, including literals and operators, can be redefined during runtime, because everything is an object, and every message passed to any object can be redirected, filtered, transformed ad hoc. It's not just classes can be modified. Specific objects can be modified. Well-crafted Ruby code breaks things up into mixins that can be composed together. The closest comparison is one of Ruby's inspiration -- Smalltalk."**
+Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
+
+**Crystal**, although it has all of the things i want--Ruby syntax, good C api, *real* concurrency, macros--*including nice macro syntax too!* (much simpler than haxe, close to lisp), performance (static-typing and compiled via llvm), etc.--Haxe is *far* more developed and has been in production use for a long time now, including top-tier a JS/web target, fast-compiling and performant VM target, and tons more stuff
+
+Zig and Odin, although C-replacements such as these exist, all clearly much superior to C, as far as consoles go, *i think* you'd still be restricted to using C/C++, and even then it'll be finnicky with hardware specific stuff, so i don't see much reason, *yet*
 
 
+## notes
+although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, Crystal has good C api and can maybe use Ruby as a scripting languages (via Anyolite lib), and Ruby might have C and Java api (among the most libs and implementations). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt improves.
 
-
-
-
-
-# really good reads
-
-https://ziglang.org/learn/why_zig_rust_d_cpp/
-  - a good little critique other systems languages (and how to learn from them)
-
-https://floooh.github.io/2020/08/23/sokol-bindgen.html
-  - creator of sokol tackles C api language binding generation
-
+it seems like Ruby is still better for general scripting. As for Elixer, once you include another file, you basically have to create a project for it. For Crystal, you must either compile it every time in order to run it (just adds a second) or save the compiled binary (i'm not sure if the eval interpreter is enough...). For Haxe you have all of those choices plus more (interpreter, VM bytecode, LLVM-optimized C binary), you just need to make sure you have a Main class ;). However, it's still nice as it contains about 80% of the same syntax as Ruby.
 
 
 
@@ -240,6 +205,8 @@ https://github.com/flipacholas/Architecture-of-consoles/
 
 # a little info
 
+see meta-programming.txt
+
 https://en.m.wikipedia.org/wiki/Dynamic_programming_language :
 In computer science, a dynamic programming language is a class of high-level programming languages, which at runtime execute many common programming behaviours that static programming languages perform during compilation. These behaviors could include an extension of the program, by adding new code, by extending objects and definitions, or by modifying the type system. Although similar behaviors can be emulated in nearly any language, with varying degrees of difficulty, complexity and performance costs, dynamic languages provide direct tools to make use of them. Many of these features were first implemented as native features in the Lisp programming language.
 
@@ -339,22 +306,6 @@ Smalltalk
   - haxelib package manager
   - **my fav :)**
 
-**C#**
-  - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
-  - has great frameworks for both games (Unity, MonoGame) and cross-platform apps (Avalonia, Uno, ASP.NET?)
-    - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
-    - probably also used by Microsoft themselves for making Xbox games
-  - *incredible feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
-    - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, and LINQ via .NET, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set. By C# v10 now, the features are *overwhelming!*. There's really nothing to complain about here.
-  - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big game/app devs away from the horrendous temporal javascript/electron/html5 web-dev world
-  - Microsoft, and very much *feels* like Microsoft: *heavy*, heavy dev environment, heavy libraries, clunky standard coding convention, etc.
-  - after using this, it feels like there's really no reason to use anything else! (todo: :thinking:)
-  - has a contemporary **scripting** solutions!!?? :o :O
-    - Rosylyn compilerm, csscript, dotnet-script
-    - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
-  - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
-  - nuget package library
-  - "Microsoft's Java", Java EE = ASP.NET, Java VM (JVM) = .NET CLR, ...and so on
   
 **Ruby**
   - a scripting language that people seem to really *love*
@@ -375,6 +326,7 @@ Smalltalk
     - Ruby even lets you add a method to a single specific instance of a class
   - Metaprogramming "so you can dynamically create / change / etc behaviors using anonymous methods, closures, etc." and also writing a DSL
     - "Ruby makes hard things easy (think meta-programming, functional programming, etc). Bad programmers overuse it all the time (just because you can use the tool, you do not always have to), and other programmers suffer."
+    - "Ruby's "metaprogramming" is something Java, C# and JS don't do well -- dynamically redefining things during runtime. **Everything in Ruby, including literals and operators, can be redefined during runtime, because everything is an object, and every message passed to any object can be redirected, filtered, transformed ad hoc. It's not just classes can be modified. Specific objects can be modified. Well-crafted Ruby code breaks things up into mixins that can be composed together. The closest comparison is one of Ruby's inspiration -- Smalltalk."**
   - bad: "GIL (global interpreter lock) - disable normal usage of multithreading. Can be solved..." usnig other interpreters?
     - Ruby 3 adds fibers (non-parallel) and ractors (parallel)
   - Ruby 3 adds TypeProf, "a type analysis tool, which are the “first steps” towards a “future with static type checking, without type declaration, using abstract interpretation”"
@@ -449,8 +401,22 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
     - Ruby is anything but simple. Simple would imply a single way of doing something. Ruby gives you five ways of doing everything. I legit think it's one of the most complex languages that's in common use.
 
 
-
-
+**C#**
+  - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
+  - has great frameworks for both games (Unity, MonoGame) and cross-platform apps (Avalonia, Uno, ASP.NET?)
+    - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
+    - probably also used by Microsoft themselves for making Xbox games
+  - *incredible feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
+    - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, and LINQ via .NET, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a lanauge, a library, and a tool-set. By C# v10 now, the features are *overwhelming!*. There's really nothing to complain about here.
+  - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big game/app devs away from the horrendous temporal javascript/electron/html5 web-dev world
+  - Microsoft, and very much *feels* like Microsoft: *heavy*, heavy dev environment, heavy libraries, clunky standard coding convention, etc.
+  - after using this, it feels like there's really no reason to use anything else! (todo: :thinking:)
+  - has a contemporary **scripting** solutions!!?? :o :O
+    - Rosylyn compilerm, csscript, dotnet-script
+    - **todo: with this, there's not much reason for even Haxe, then is there?...** :thinking:
+  - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
+  - nuget package library
+  - "Microsoft's Java", Java EE = ASP.NET, Java VM (JVM) = .NET CLR, ...and so on
   
 Python
   - perhaps the most popular and most loved scripting language, even as of 2022(!!), competitive to Ruby
@@ -724,6 +690,10 @@ Elixer
   - again, very Ruby-eque, but really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
   - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
   - not really suitable for games, i think.. but a good alternstive to Go, i guess?
+  - not really suitable for quick scripting either
+    - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
+  - as these are my two main use cases, i don't really have any use for it :/
+
 
 
 ### server-side specialization (concurrency, functional)
@@ -925,6 +895,17 @@ https://wren.io/performance.html
 
 
 # resources
+
+## good reads
+
+https://ziglang.org/learn/why_zig_rust_d_cpp/
+  - a good little critique other systems languages (and how to learn from them)
+
+https://floooh.github.io/2020/08/23/sokol-bindgen.html
+  - creator of sokol tackles C api language binding generation
+
+
+## info extraction
 https://blog.back4app.com/server-side-programming-languages/
   - a pretty simple and good summary of the popular languages (although, no haxe :( )
   
@@ -936,12 +917,22 @@ https://www.reddit.com/r/gamedev/comments/1edn03/lua_angelscript_haxe_c_java_and
 https://www.reddit.com/r/ruby/comments/5c1prl/ruby_vs_python/
   - always good to gather some real thought from real people
   
-  
- 
- 
 https://blog.discord.com/using-rust-to-scale-elixir-for-11-million-concurrent-users-c6f19fc029d3
 
+https://news.ycombinator.com/item?id=23431941
+  - crystal vs ruby
+  - "Ruby's "metaprogramming" is something Java, C# and JS don't do well -- dynamically redefining things during runtime. **Everything in Ruby, including literals and operators, can be redefined during runtime, because everything is an object, and every message passed to any object can be redirected, filtered, transformed ad hoc. It's not just classes can be modified. Specific objects can be modified. Well-crafted Ruby code breaks things up into mixins that can be composed together. The closest comparison is one of Ruby's inspiration -- Smalltalk."**
 
+https://news.ycombinator.com/item?id=14120398
+  - elixer vs ruby?
+    - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
+    - "I do not particularly like the usual global package installation model, though, because it means that you can only have a single version of a package available for your scripts to require. The best package management model for standalone scripts that I have seen is Groovy's: a script can include a special directive that downloads a specific version of a package just for that script. Any versions can be stored in the global (per-user) package cache so that you don't have to redownload them every time a script runs, but your import statements always give you strictly the version you asked for. This is the model I'd adopt for Elixir."
   
+https://thoughtbot.com/blog/is-elixir-a-scripting-language
+  - running it via command line, it seems it would only work for a single module, and i'm not sure if you can simply import other modules using this method. Its possible to add a shebang and make it an executable
+  - running the script via the 'mix' command seems the way to go, as that makes it a proper project allowing you to add modules, but then you'd need to create a new project, with a project folder, with it's own directory structure ' files, snd on top of that you'd need Elixer installed, and im not even sure if it can actually execute standalone without that command...
+  - compiling it to a binary is similar, or even more complicated, than haxe: you need a seperate build file, put the script into a main function, compile it, and ensure you have Erlang's VM (BEAM)
+  
+
   
   
