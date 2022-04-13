@@ -9,6 +9,7 @@ high-level lang -> LLVM -> generated C (to link to consoles, mobile) -> target p
     - however, this sounds impossible for any non-trivial program
 
 
+platform-specific:
 mobile
   - iOS uses C/C++
   - Android uses Java, and thus game dev cares about it
@@ -22,3 +23,6 @@ warning for iOS and consoles: "cannot execute writeable regions", thus cannot us
 
 
 
+notes:
+linking/including C++ libs into a C host program is possible but not advisable, due to *the non-standardation of name-mangling*
+the other way around, i think works fine though
