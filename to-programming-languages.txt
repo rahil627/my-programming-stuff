@@ -30,9 +30,9 @@ Rust is great
 
 ## main list
 
-**Haxe** (or Crystal?) for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community
+**Haxe** for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community
 
-**Ruby** (or Crystal? or Haxe or hscript) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
+**Ruby** (or hscript [haxe-script] or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
 
 **C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
 
@@ -44,15 +44,16 @@ Ruby or whatever the shell's language is (bash, zsh, fish, etc.) for shell scrip
 
 
 ## special mentions
-these lack the popular native libraries and support compared to other contemporary langugages, but, as both have C FFI, so, they're both still great for whatever individual projects
+**Crystal**, although it has all of the things i want--Ruby syntax, good C api, *real* concurrency, macros--*including nice macro syntax too!* (much simpler than haxe, closer to lisp), performance (static-typing and compiled via llvm), etc.--Haxe is *far* more developed and has been in production use for a long time now, including a top-tier JS/web target, a fast-compiling and performant VM target, and tons more stuff, in addition to solid cross-platform app and game frameworks
+
+Zig and Odin, although C-replacements such as these exist, all clearly much superior to C, as far as consoles go, *i think* you'd still be restricted to using C/C++, and even then it'll be finnicky with hardware specific stuff, so i don't see much reason, *yet*
+
+the next two lack libraries and support compared to other contemporary langugages, but, as both have C FFI, so, they both still can be used for whatever individual projects
 
 Racket, an intro dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?) and just plain cli scripting
 
 Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
 
-**Crystal**, although it has all of the things i want--Ruby syntax, good C api, *real* concurrency, macros--*including nice macro syntax too!* (much simpler than haxe, close to lisp), performance (static-typing and compiled via llvm), etc.--Haxe is *far* more developed and has been in production use for a long time now, including top-tier a JS/web target, fast-compiling and performant VM target, and tons more stuff
-
-Zig and Odin, although C-replacements such as these exist, all clearly much superior to C, as far as consoles go, *i think* you'd still be restricted to using C/C++, and even then it'll be finnicky with hardware specific stuff, so i don't see much reason, *yet*
 
 
 ## notes
