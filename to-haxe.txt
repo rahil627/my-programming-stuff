@@ -31,6 +31,13 @@ https://github.com/jeremyfa/interpret/
   
 https://github.com/RblSb/KhaHotReload
   - hot reload for js targets
+  
+https://github.com/Aurel300/hx-objc-externs
+  - also includes UIKit and other Apple stuff
+  
+https://github.com/RobertBorghese/Haxe-MagicArrayTools
+
+https://github.com/tobil4sk/haxe-git-submodule-manager/blob/main/src/Run.hx
 
 tween
   - slide
