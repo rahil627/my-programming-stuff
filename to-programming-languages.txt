@@ -402,20 +402,20 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
 
 
 ML (Meta Language)
+  - functional, purely?
+  - either invented or first major use of static type with type-inferring compiler, and thus all dialects benefit it
   - dialects:
+    - Standard ML
+      - i'm guessing functional
     - **OCaml**
-      - adds object-oriented, and a lot more
+      - "OCaml unifies functional, imperative, and object-oriented programming under an ML-like type system."
       - extremely practical, used to write many compilers
       - quite known among language design people
+    - **F#**
+      - much loved, open-source, cross-platform (via .NET)
     - SML
       - something for hard-core ML people
-
-
-F#
-  - much loved
-  - basically an improved ML
-  - built on .NET
-
+    
 
 **C#**
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat
