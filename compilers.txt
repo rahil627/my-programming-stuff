@@ -26,3 +26,12 @@ warning for iOS and consoles: "cannot execute writeable regions", thus cannot us
 notes:
 linking/including C++ libs into a C host program is possible but not advisable due to *the non-standardization of name-mangling*, however you can "spend a few days writing a C-style wrapper for the C++ library."
 the other way around, i think works fine though(??)
+
+
+"...for every single function (and all the overloads of that function).":
+```cpp
+extern "C" foo_some_method(Foo &foo) {
+  foo.someMethod();
+}
+```
+
