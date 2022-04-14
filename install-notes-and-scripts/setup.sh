@@ -13,10 +13,12 @@ sudo dnf update
 sudo dnf update
 sudo dnf upgrade
 
-sudo dnf install tldr
-
 
 # main stuff
+
+sudo dnf install tldr
+
+sudo dnf install fish
 
 # dropbox
 # get the binaries and read the instructions here:
