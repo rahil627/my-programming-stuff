@@ -12,11 +12,12 @@ chrome-rdp
 
 package managers:
 apt
-  - default OS
-homebrew
-  - save install script
-snapd(d)
-  - save install script
+  - debian
+dnf
+  - fedora
+snap(d)
+
+
 
 cli:
 fish
@@ -37,9 +38,9 @@ nvim
 git
 gh - github cli
 
+haxelibs
+
 gems (Ruby):
-basically the dependencies of Jekyll... maybe i tried to run Jekyll locally??
-i seriously don't remember trying this tho...
 
 snaps:
 code
