@@ -1,9 +1,4 @@
 
-class name cannot have '-' in it! :o
-
-
-
-
 # links / pinned
 https://github.com/Dvergar/awesome-haxe-gamedev
   - very good
@@ -14,7 +9,6 @@ https://github.com/nadako/awesome-haxe
   - more personal, toward developing the haxe langauge
   
 the codebook is especially good for learning bit-by-bit, especially for macros!
-
 
   
 # forums
@@ -57,22 +51,9 @@ https://code.haxe.org/category/macros/add-parameters-as-fields.html
   
 tink
   - macro heaven
-
   
   
   
-# how to write optimized code for most targets
-
-avoid having the following in a loop over entities:
-
-no anonymous structs
-  - no "anonymous objects" (typedef alias of a struct)
-no Dynamic
-no Any
-no templates
-no generics (though not the worst)
-
-
 
 
 
@@ -130,20 +111,8 @@ C++?
 most of the targets are *very* fast (except python, and that's not haxe's fault)
 
 
-
-
-
-# notes
-cast expr; // unsafe cast
-  - unsafe, meaning the compiler won't catch it
-cast (expr, Type); // safe cast
-todo: wasn't there a third way..?
-
-
-
-
   
-  
+
 # haxe cli
 can either use the cli or create an hxml file, where each line is a command argument
 
@@ -171,6 +140,7 @@ haxe --main MainClass -hl build.hl
 haxe --main MainClass -cpp build
   - be sure to `haxelib install hashlink`
   - results with a folder build, including generated C++ sources and bin(aries)
+
 
 
 # package management

@@ -1,0 +1,63 @@
+
+thoughts 'n quirks from my game dev:
+
+
+
+how to write optimized code for most targets:
+
+generally, using these features are fine, but, in something as intensive as games, avoid putting using these within a loop over entities
+
+no anonymous structs
+  - no "anonymous objects" (typedef alias of a struct)
+no Dynamic
+no Any
+no templates
+no generics (though not the worst)
+--
+
+
+
+quirks:
+
+cast expr; // unsafe cast
+  - unsafe, meaning the compiler won't catch it
+cast (expr, Type); // safe cast
+todo: wasn't there a third way..?
+
+class name cannot have '-' in it! :o
+
+if(this-is-null) throw ("this is not bool")
+
+ // TODO: are strings set by value? yes, they are!
+
+is3d = false; // TODO: maybe can't have field names begin with a number?
+
+the Std (standard) package is automatically imported
+
+package ra; // package name it not automatically implied by file-path
+// without it, it will use the top-most name-space
+
+if the module/package doesn't match the file-path
+  - add "-cp path-to-modules" to hxml file
+
+ // this.super() doesn't work, must use just super()
+
+import ra.hp.* // doesn't work recursively...
+
+//this = null; // TODO: FAIL, lol    
+
+// note: classes have new instead of class name / standard constructor
+
+// TODO: init in constuctor vs in init()
+hmm, why ever seperate this?
+
+
+naming:
+classes at least two characters so that refactoring isn't bad, and that ctags 'n autocomplete all work okay
+PunkApp extends App
+
+
+std.Int() // no (Int)floatyNumber
+
+
+// TODO: haxe.std not showing up in autocompletion...

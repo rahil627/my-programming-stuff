@@ -1,7 +1,9 @@
 todo: copy to my dropbox
 
-can put notes i gather from the web on my iPad more easily here,
-just use the web interface from github
+
+heaps people from the haxe discord:
+https://github.com/jefvel
+https://gitlab.com/users/ZwodahS/projects
 
 
 forums:
