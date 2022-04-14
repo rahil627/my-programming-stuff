@@ -1,0 +1,10 @@
+.
+..
+console,hx
+hashlink
+heaps
+hscript
+hxnodejs
+markdown
+std
+yaml
