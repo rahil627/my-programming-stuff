@@ -122,11 +122,11 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 ## move from dynamically-typed to static-typed
 "imo, not having static typing is a real pain for anything bigger than a small script, as it introduces a lot of potential bugs" - CRobes, from the haxe discord
 
-i don't know the reason why this exists, save a very minor convenience of not physically typing the type keyword, which is mostly avoided by type inference from literals anyway...
+i don't know the reason why this exists, save a very minor convenience of not physically typing the type keyword, which is mostly avoided by *type inference* anyway...
 
 i'm just guessing in the special case of server-side: server-client api, it has some special reason? like to talk to javascript maybe?? i dunno..
 
-AS2 -> AS3/haxe (a change in compiler/language)
+AS2 -> AS3/haxe (a whole new language and compiler)
 js -> ts (type checker bundle?)
 php -> hack (type checker bundle?)
 python -> mypy and others (type checker)
@@ -411,6 +411,8 @@ ML (Meta Language)
       - "OCaml unifies functional, imperative, and object-oriented programming under an ML-like type system."
       - extremely practical, used to write many compilers
       - quite known among language design people
+      - surprisingly nice syntax with many pop syntax stuff being optional, allowing one to use white-space instead
+        - the switch/pattern matching is amazing, as it allows function arguments to magically work with it automatically (sorta like the opposite of how all functions return stuff)
     - **F#**
       - much loved, open-source, cross-platform (via .NET)
     - SML
