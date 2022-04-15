@@ -210,7 +210,7 @@ nmap . :TagbarToggle<CR>
 
 " but this one hand-picks repos and fetches the appropriate one based on the file
 " includes: haxe (from vaxe) and ruby (from vim-ruby)
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 
 
 " haxe
@@ -226,9 +226,9 @@ Plug 'sheerun/vim-polyglot'
 " so put it last
 " for ctags, be sure to copy the ctags language regex code from the vaxe github repo
 " and put it in (. or ~)/.ctags.d/something.ctags (NOT ~/.ctags)
-"Plug 'jdonaldson/vaxe'
-"set autowrite
-"let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
+Plug 'jdonaldson/vaxe'
+set autowrite
+let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 " ruby
 "Plug 'vim-ruby/vim-ruby'
