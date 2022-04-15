@@ -30,6 +30,7 @@ https://github.com/Aurel300/hx-objc-externs
   - also includes UIKit and other Apple stuff
   
 https://github.com/RobertBorghese/Haxe-MagicArrayTools
+  - turn ds.map/filter/select into efficient for loops! :o
 
 https://github.com/tobil4sk/haxe-git-submodule-manager/blob/main/src/Run.hx
 

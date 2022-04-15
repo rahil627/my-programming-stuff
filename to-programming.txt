@@ -1,4 +1,52 @@
 
+# paradigms
+
+"Programming paradigms are a way to classify programming languages based on their features. Languages can be classified into multiple paradigms.
+
+Some paradigms are concerned mainly with implications for the execution model of the language, such as allowing side effects, or whether the sequence of operations is defined by the execution model. Other paradigms are concerned mainly with the way that code is organized, such as grouping a code into units along with the state that is modified by the code. Yet others are concerned mainly with the style of syntax and grammar."
+
+imperative 
+  - instructs the machine how to change its state
+procedural
+  - groups instructions into procedures
+  - C
+object-oriented
+  - groups instructions with the part of the state they operate on
+  - C++, smalltalk
+declarative
+  - declares properties of the desired result (what the program should do), but not how to compute it
+  - SQL
+  - functional
+    - the desired result is declared as the value of a series of function applications
+    - use functions, blocks of code intended to behave like mathematical functions. Functional languages discourage changes in the value of variables through assignment, making a great deal of use of recursion instead.
+  - logic
+    - the desired result is declared as the answer to a question about a system of facts and rules
+  - mathematical
+    - the desired result is declared as the solution of an optimization problem
+  - reactive
+    - the desired result is declared with data streams and the propagation of change
+symbolic
+  - describes programs able to manipulate formulas and program components as data. Programs can thus effectively modify themselves, and appear to "learn", making them suited for applications such as artificial intelligence, expert systems, natural-language processing and computer games. Languages that support this paradigm include Lisp and Prolog.
+
+procedural, structured, modular, object-oriented
+  - these seem to describe more of how code is organized rather than executed...
+procedural
+  - fit code into procedures (aka functions, co-routines)
+structured
+  - some vague notion of structuring the code, as opposed to no structure? lol
+  - modular
+    - try to fit code into modules, for portability
+  - object-oriented
+    - try to fit code into objects, both data and functions that affect the state
+
+
+sources:
+wiki
+https://en.m.wikipedia.org/wiki/Comparison_of_multi-paradigm_programming_languages
+  - interesting huge feature matrix
+
+
+
 # programming language elements
 
 see the docs for haxe

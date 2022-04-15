@@ -2,6 +2,11 @@
 http://leofebey.com/blog/linux-vs-windows-vs-mac-2022
   - this is the gist of the comparison:
     - windows for almost everything except iOS dev, lol
+
+
+https://pkgstats.archlinux.de/fun
+  - statistics of packages used by arch linux users
+  - pretty good spot to figure out whats currently popular among the tech kids
   
   
 
@@ -90,9 +95,9 @@ Pop OS
   
 # Fedora
 Fedora
-  - ?
-  - update every year?
-  - more fore desktop?
+  - update every 13 months? or was it 6 months?, pretty short version life-span..
+  - is the upstream source for Red Hat Enterprise Linux
+  - Linus uses it
   
   
 # Arch Linux

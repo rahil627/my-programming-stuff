@@ -1,6 +1,15 @@
 todo: copy to my dropbox
 
 
+my post from hacker news:
+https://news.ycombinator.com/item?id=30970934
+i really think it's just preference.
+Heaps sorta says it's a "graphics engine", in reality it's closer to a minimalistic, modular game engine tool-kit, *enabling you to make your engine the way you want to*. Unity and Godot have their own entity-components-systems along with many components, and all of that tightly-integrate with their game editors. In Heaps, there is no entity system, no collision system, no tween system, no game editor, nothing extra. There are however modular libraries for those things in a Haxe library though. It's a modular approach. DIY. Add what you want, as you need them, NOT the other way around. So, instead of chucking a massive engine at you, you start with just what you need, and build up from there. This way, the engine, both the 2D and 3D modules are able to be very simple, able to be grasped by a single individual very quickly and easily. They're like game-engine bases, really. A good-start for people who don't want to re-invent the entire wheel, yet also want that wheel to be suitable to their own specific needs, not the needs of everyone.
+Given that, this is a lot more programmer/hand-made-centric as opposed to game-editor game-maker way of making. It is sorta assumed that you are able to use imGUI or whatever if you really wanted some sort of editor anyway. There are no custom formats, custom scripting languages, nor editors your are forced to go through to do something. Thus, *everything can be programmed and manipulated*. And oh, you will learn how to do some real programming! :) This is not for the faint-hearted.
+Also, I personally much prefer Haxe over C# because it feels more like a light-weight scripting language (like AS4), yet has the power of Lisp's macros (if you know, then you know). Also the Haxe discord has a cooler indie game-oriented community, which is rare for a programming language. But honestly, often-times both are too complex and feature-full for me, lol. But then again there's probably haxe bindings for both Unity and Godot, so maybe that's not a good reason... :)
+So, overall, it's just completely different approaches: DIY vs one-fits-all-solutions. If you can tolerate Unity/Godot & C#, then wonderful! However, if that doesn't feel right, it's language, it's work-flow, it's asset-store, it's game editor, it's game components, it's C++ code, it's hidden C++ code... then perhaps the heart is looking for a more comfortable way, your own way.
+
+
 heaps people from the haxe discord:
 https://github.com/jefvel
 https://gitlab.com/users/ZwodahS/projects
@@ -18,6 +27,10 @@ heaps-useful-repos
 heeps
 ld40
 terryheaps
+
+
+libs:
+https://github.com/nspitko/hlimgui
 
 
 forums:
