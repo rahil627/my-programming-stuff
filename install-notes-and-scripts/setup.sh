@@ -47,7 +47,7 @@ gh clone my-programming-stuff
 
 
 # ruby
-sudo dnf install ruby ruby-devel
+sudo dnf install ruby ruby-devel rubygem-irb rubygem-pry
 # this is for fedora only, to build ruby native extensions
 sudo dnf group install "C Development Tools and Libraries"
 
