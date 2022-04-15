@@ -127,6 +127,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 
+
+
 " press tab to trigger omnicomplete (vim's autocomplete) 
 "Plug 'ervandew/supertab'
 
@@ -157,6 +159,11 @@ Plug 'junegunn/fzf.vim'
 
 " map key to open the fzf window
 map ; :Files<CR>
+
+
+" a distraction-free mode
+" use :Goyo command to enter it
+Plug 'junegunn/goyo.vim
 
 
 
