@@ -1,4 +1,19 @@
 
+# paradigms
+
+imperative
+  - "...uses statements that change a program's state. In much the same way that the imperative mood in natural languages expresses commands, an imperative program consists of commands for the computer to perform. Imperative programming focuses on describing how a program operates step by step, rather than on high-level descriptions of its expected results. The term is often used in contrast to:"
+
+declarative
+"focuses on what the program should accomplish without specifying all the details of how the program should achieve the result."
+
+procedural, structured, modular, object-oriented
+"Procedural programming is a type of imperative programming in which the program is built from one or more procedures (also termed subroutines or functions). The terms are often used as synonyms, but the use of procedures has a dramatic effect on how imperative programs appear and how they are constructed. Heavy procedural programming, in which state changes are localized to procedures or restricted to explicit arguments and returns from procedures, is a form of structured programming. From the 1960s onwards, structured programming and modular programming in general have been promoted as techniques to improve the maintainability and overall quality of imperative programs. The concepts behind object-oriented programming attempt to extend this approach."
+
+sources:
+wiki
+
+
 # programming language elements
 
 see the docs for haxe
