@@ -205,6 +205,14 @@ nmap . :TagbarToggle<CR>
 
 " language syntaxes
 
+" by default, vim comes with a lot, see:
+" https://github.com/vim/vim/tree/master/runtime/syntax
+
+" but this one hand-picks repos and fetches the appropriate one based on the file
+" includes: haxe (from vaxe) and ruby (from vim-ruby)
+Plug 'sheerun/vim-polyglot'
+
+
 " haxe
 
 " can looks at these two haxe gods for some config stuff
@@ -223,7 +231,7 @@ nmap . :TagbarToggle<CR>
 "let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 " ruby
-Plug 'vim-ruby/vim-ruby'
+"Plug 'vim-ruby/vim-ruby'
 " in case of problems:
 ":help vim-ruby-plugin: Filetype settings and custom mappings
 ":help vim-ruby-indent: Indentation settings
@@ -231,7 +239,7 @@ Plug 'vim-ruby/vim-ruby'
 ":help vim-ruby-omni: Information and settings for omni completion
 
 " wren
-Plug 'lluchs/vim-wren'
+"Plug 'lluchs/vim-wren'
 
 
 
