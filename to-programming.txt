@@ -29,11 +29,22 @@ symbolic
   - describes programs able to manipulate formulas and program components as data. Programs can thus effectively modify themselves, and appear to "learn", making them suited for applications such as artificial intelligence, expert systems, natural-language processing and computer games. Languages that support this paradigm include Lisp and Prolog.
 
 procedural, structured, modular, object-oriented
-"Procedural programming is a type of imperative programming in which the program is built from one or more procedures (also termed subroutines or functions). The terms are often used as synonyms, but the use of procedures has a dramatic effect on how imperative programs appear and how they are constructed. Heavy procedural programming, in which state changes are localized to procedures or restricted to explicit arguments and returns from procedures, is a form of structured programming. From the 1960s onwards, structured programming and modular programming in general have been promoted as techniques to improve the maintainability and overall quality of imperative programs. The concepts behind object-oriented programming attempt to extend this approach."
+  - these seem to describe more of how code is organized rather than executed...
+procedural
+  - fit code into procedures (aka functions, co-routines)
+structured
+  - some vague notion of structuring the code, as opposed to no structure? lol
+  - modular
+    - try to fit code into modules, for portability
+  - object-oriented
+    - try to fit code into objects, both data and functions that affect the state
 
 
 sources:
 wiki
+https://en.m.wikipedia.org/wiki/Comparison_of_multi-paradigm_programming_languages
+  - interesting huge feature matrix
+
 
 
 # programming language elements
