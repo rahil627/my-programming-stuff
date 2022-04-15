@@ -29,6 +29,10 @@ ld40
 terryheaps
 
 
+libs:
+https://github.com/nspitko/hlimgui
+
+
 forums:
 https://community.heaps.io/t/the-path-from-flashpunk-to-haxepunk-to-heaps-punk/849/16
 
