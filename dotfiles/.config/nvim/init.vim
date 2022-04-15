@@ -62,6 +62,7 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'
 
 " completion plugin that mirrors VS code's completion set-up
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " use :CocConfig to edit the configuration file.
 " coc-json will help you provide completion for it :)
 
@@ -69,10 +70,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 " or use this command:
 " then run the following commands in nvim: (note: they cannot be done via this config file)
-" :CocList extensions
 " CocInstall [extension] [extension2]
 " :CocUninstall [extension]
-"
+" :CocList extensions (from here you can select which extensions to register and unregister)
+
 " To install extensions with shell script, use command like:
 " # install coc-json & coc-html and exit
 " vim -c 'CocInstall -sync coc-json coc-html|q'
@@ -84,28 +85,27 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-syntax
 
 " languages
-" CocInstall coc-haxe coc-solargraph coc-fish
 " coc-haxe
+" maybe need to somehow install haxe lanauge server?
+"
 " coc-solargraph for solargraph (ruby) lang server
 " gem install solargraph
 
 " coc-sh requires(?) bash using bash-language-server
 " coc-fish need fish installed
 
-" coc-zig
-
 " TODO: need to check insructions for these 
-" CocInstall coc-yaml coc-json coc-html coc-css coc-md coc-markdown
+" markup
+" CocInstall coc-yaml coc-json coc-html coc-css
+" TODO: find one for markdown
 
 " extensions
-" CocInstall coc-pairs coc-yank coc-git coc-git coc-fzf-preview
-
-" coc-git pretty complex stuff, super customizable, "it's recommended to use plugin like vim-fugitive at the same time."
-
 " fzf integration options:
 " these are both hella powerful
 "Plug 'antoinemadec/coc-fzf'
 " coc-fzf-preview requires fzf, hella powerful, "This plugin can be easily extended in comparison to fzf.vim."
+
+" coc-git pretty complex stuff, super customizable, "it's recommended to use plugin like vim-fugitive at the same time."
 
 " coc-pairs should not conflict with other plugins...
 " coc-yank
@@ -164,7 +164,7 @@ Plug 'junegunn/fzf.vim'
 
 
 " map key to open the fzf window
-"map ; :Files<CR>
+map ; :Files<CR>
 
 
 " a distraction-free mode
