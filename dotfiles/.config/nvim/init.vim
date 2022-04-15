@@ -66,38 +66,47 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " or use this command:
 " then run the following commands in nvim: (note: they cannot be done via this config file)
 " :CocList extensions
-" CocInstall [extension]
+" CocInstall [extension] [extension2]
 " :CocUninstall [extension]
+"
+" To install extensions with shell script, use command like:
+" # install coc-json & coc-html and exit
+" vim -c 'CocInstall -sync coc-json coc-html|q'
 
-
+"
 " completion sources
 " https://github.com/neoclide/coc-sources#readme
 " coc-tags
 " coc-syntax
 
 " languages
+" CocInstall coc-haxe coc-solargraph coc-fish
 " coc-haxe
 " coc-solargraph for solargraph (ruby) lang server
 " gem install solargraph
 
-" coc-sh for bash using bash-language-server
+" coc-sh requires(?) bash using bash-language-server
 " coc-fish need fish installed
 
 " coc-zig
 
-" coc-yaml
-" coc-json
-" coc-html
+" TODO: need to check insructions for these 
+" CocInstall coc-yaml coc-json coc-html coc-css coc-md coc-markdown
 
 " extensions
+" CocInstall coc-pairs coc-yank coc-git coc-git coc-fzf-preview
+"
+" coc-fzf-preview hella powerful, requires fzf.vim, "This plugin can be easily extended in comparison to fzf.vim."
+
+" coc-git pretty complex stuff, super customizable, "it's recommended to use plugin like vim-fugitive at the same time."
+
 " coc-pairs should not conflict with other plugins...
 " coc-yank
-
 " coc-markdownlint for markdown linting
 " coc-markdown-preview-enhanced
 " coc-dot-complete in case completion is slow or annoying
-" coc-fzf-preview hella powerful, "This plugin can be easily extended in comparison to fzf.vim."
-" coc-git pretty complex stuff, super customizable, "it's recommended to use plugin like vim-fugitive at the same time."
+"
+" can try testing coc's default finder before installing this
 " coc-gist
 " coc-prettier
 " coc-snippets
@@ -128,7 +137,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 "let g:SuperTabClosePreviewOnPopupClose = 1
 
-filetype plugin on
+"filetype plugin on
 " ...maybe from some other completion plugin?
 "set omnifunc=syntaxcomplete#Complete
 " get completion from vaxe plugin which gets info form the haxe compiler?
@@ -138,11 +147,14 @@ filetype plugin on
 " fuzzy finder diretory tree (like NERDTree)
 " this next line didn't work...? :/
 "export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" this auto-installs fzf to a loctaion, but it might be better to just install
+" it via package manager
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" this is the main plugin, but, coc also has a plugin
+"Plug 'junegunn/fzf.vim'
 
 " map key to open the fzf window
-map ; :Files<CR>
+"map ; :Files<CR>
 
 
 
