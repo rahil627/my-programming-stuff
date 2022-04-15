@@ -56,6 +56,10 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
 
+
+
+
+
 " completion plugin that mirrors VS code's completion set-up
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " use :CocConfig to edit the configuration file.
@@ -90,13 +94,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-html
 
 " extensions
+" fzf integration options:
+" these are both hella powerful
+"Plug 'antoinemadec/coc-fzf'
+" coc-fzf-preview requires fzf, hella powerful, "This plugin can be easily extended in comparison to fzf.vim."
+
+
 " coc-pairs should not conflict with other plugins...
 " coc-yank
 
 " coc-markdownlint for markdown linting
 " coc-markdown-preview-enhanced
 " coc-dot-complete in case completion is slow or annoying
-" coc-fzf-preview hella powerful, "This plugin can be easily extended in comparison to fzf.vim."
 " coc-git pretty complex stuff, super customizable, "it's recommended to use plugin like vim-fugitive at the same time."
 " coc-gist
 " coc-prettier
@@ -138,8 +147,13 @@ filetype plugin on
 " fuzzy finder diretory tree (like NERDTree)
 " this next line didn't work...? :/
 "export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" should probably install this using a package manager instead
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" CoC uses Coc-lists, and in order to use fzf, you'd need to use a CoC extension (coc-fzf or something)
+" but, i think you can just use this completely seperately too
+" then can decide whether to integreate or not
 Plug 'junegunn/fzf.vim'
+
 
 " map key to open the fzf window
 map ; :Files<CR>
