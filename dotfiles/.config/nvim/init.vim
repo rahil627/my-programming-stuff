@@ -169,7 +169,7 @@ Plug 'junegunn/fzf.vim'
 
 " a distraction-free mode
 " use :Goyo command to enter it
-Plug 'junegunn/goyo.vim
+Plug 'junegunn/goyo.vim'
 
 
 
