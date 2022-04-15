@@ -2,6 +2,11 @@
 http://leofebey.com/blog/linux-vs-windows-vs-mac-2022
   - this is the gist of the comparison:
     - windows for almost everything except iOS dev, lol
+
+
+https://pkgstats.archlinux.de/fun
+  - statistics of packages used by arch linux users
+  - pretty good spot to figure out whats currently popular among the tech kids
   
   
 
