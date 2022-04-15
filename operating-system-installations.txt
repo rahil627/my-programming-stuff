@@ -90,9 +90,9 @@ Pop OS
   
 # Fedora
 Fedora
-  - ?
-  - update every year?
-  - more fore desktop?
+  - update every 13 months? or was it 6 months?, pretty short version life-span..
+  - is the upstream source for Red Hat Enterprise Linux
+  - Linus uses it
   
   
 # Arch Linux
