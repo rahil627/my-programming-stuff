@@ -1,4 +1,51 @@
+
 also see the 'scripting languages' section in 'programming lanugages.txt' for notes on them
+
+
+https://linuxhandbook.com/run-shell-script/
+
+add shebang to the top of the script:
+#! /bin/bash
+
+make it executable:
+chmod u+x hello.sh
+
+add the path:
+(see below)
+
+
+
+where to store scripts?:
+
+anywhere, just add to PATH
+  - this way, you can just keep your scripts in a github repo!
+
+bash
+  - export PATH=$PATH:/home/user/scripts
+fish
+  - set -gx PATH ...
+
+
+
+
+default user binaries location:
+typically `.local/bin`
+
+as long as the distro is using systemd:
+
+(The ~/.local directories are part of the systemd file-hierarchy spec and is an extension of the xdg user-dirs spec)
+
+run `systemd-path user-binaries`
+
+
+
+https://unix.stackexchange.com/questions/316765/which-distributions-have-home-local-bin-in-path
+
+
+
+
+
+
 
 (copied to the readme.txt in the scripts folder)
 a little short history:
