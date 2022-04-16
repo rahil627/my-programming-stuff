@@ -1,4 +1,9 @@
 
+# for fish, add -s flag to all alias commands, then run it as a fish script
+# this will create functions (all commands are functions in fish)
+# and they will automatically lazy-load
+# otherwise, if you do it the bash/zsh way and throw it all in a file,
+# it will load them all into the shell's memory
 
 # basic shell signals
 alias c='clear'
