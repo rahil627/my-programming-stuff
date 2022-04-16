@@ -15,10 +15,14 @@ sudo dnf update
 sudo dnf upgrade
 
 
+
 # main stuff
 
 # replace bash with a more contemporary shell
 sudo dnf install fish
+
+# fedora doesn't include common linux/unix utilities by default
+sudo dnf install util-linux-user
 
 # get file-path of shell
 which fish
@@ -26,7 +30,13 @@ which fish
 # change shell, will prompt you for entering the file-path
 chsh
 
+# now, from within the fish shell...
+# create aliases / functions
+fish .aliases-fish
 
+
+
+# simple community-sourced help for most commands, super practical
 sudo dnf install tldr
 
 # dropbox

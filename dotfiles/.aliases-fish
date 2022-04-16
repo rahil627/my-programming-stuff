@@ -1,0 +1,82 @@
+
+# for bash you'd just run this file in the main config
+
+# for fish, just run this file after editing it:
+# fish .alises-fish
+
+# notes:
+# add -s flag to all alias -s commands, then run it as a fish script
+# alias -s -s <alias -sname> "command(s)" # Or --save
+# this will create functions (all commands are functions in fish)
+# and they will automatically lazy-load
+# otherwise, if you do it the bash/zsh way and throw it all in a file,
+# it will load them all into the shell's memory
+# https://stackoverflow.com/questions/2762994/define-an-alias -s-in-fish-shell
+
+# for whatever reason, normal `alias command-name='command'` via script wasn't working, so
+# then i did a simple search 'n replace to crate this file:
+# 'sed 's/alias/alias -s/g' .aliases >> .aliases-fish
+
+# otherwise, if it worked, i could have kept the original bash file without the -s and run this:
+# for f in (alias | awk '{print $2}'); funcsave $f; end
+# ah well!
+
+
+# basic shell signals
+alias -s c='clear'
+alias -s q='exit'
+
+# basic file system commands
+# TODO: config these, just the ls commands
+alias -s l='ls -CF'
+alias -s ll='ls -alF'
+alias -s la='ls -A'
+
+alias -s mv='mv iv'
+alias -s cp='cp iv'
+alias -s mkdir='mkdir -pv'
+alias -s rmdir='rmdir -v'
+
+# man replacement
+alias -s t='tldr'
+alias -s h='tldr'
+
+# fuzzy search
+# TODO: test these
+#alias -s vf='nvim $(fzf)'
+#alias -s cdt='cd $(find * -type d | fzf)'
+#alias -s gct='git checkout $(git branch -r | fzf)'
+
+
+# git, ordered by git work-flow
+alias -s gs='git status'
+alias -s gpl='git pull'
+alias -s gd='git diff'
+alias -s gaa='git add -A';
+alias -s gca='git commit -a'
+alias -s gcam='git commit -a -m "no message"'
+alias -s gp='git push'
+
+#alias -s g?='git clone'
+#alias -s gb='git branch'
+#alias -s gf='git fetch'
+#alias -s gs='git stash'
+#alias -s gr='git rebase'
+#alias -s gt='git log --graph --oneline --all'
+
+
+# dev
+alias -s haxe='hx'
+alias -s ruby='rb'
+# bash?
+# fish?
+
+
+
+# experimental
+# TODO: test these
+#alias -s cl='cloc . --exclude-dir=node_modules,.nuxt,build,.vscode,dist --exclude-lang=JSON'
+#alias -s r='ranger'
+
+
+
