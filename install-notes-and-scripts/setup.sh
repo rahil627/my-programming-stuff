@@ -5,6 +5,7 @@
 # sudo dnf install ./[package-name]
 
 
+
 # sync the OS package manager
 # before installing anything
 sudo dnf update
@@ -16,9 +17,17 @@ sudo dnf upgrade
 
 # main stuff
 
-sudo dnf install tldr
-
+# replace bash with a more contemporary shell
 sudo dnf install fish
+
+# get file-path of shell
+which fish
+
+# change shell, will prompt you for entering the file-path
+chsh
+
+
+sudo dnf install tldr
 
 # dropbox
 # get the binaries and read the instructions here:
