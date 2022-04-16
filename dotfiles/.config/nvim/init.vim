@@ -220,7 +220,8 @@ nmap . :TagbarToggle<CR>
 " https://github.com/ZwodahS/vimfiles
 
 " vaxe
-" note: i have replaced this with CoC + coc-haxe which uses the
+" note: CoC doesn't come with syntax-highlighting
+" note: CoC doesn't seem to work without this for some reason...
 " vscode language server
 " this interacts with many other plugins such as airline and tag bar
 " so put it last
