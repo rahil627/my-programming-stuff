@@ -210,7 +210,8 @@ nmap . :TagbarToggle<CR>
 
 " but this one hand-picks repos and fetches the appropriate one based on the file
 " includes: haxe (from vaxe) and ruby (from vim-ruby)
-"Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
+set nocompatible
 
 
 " haxe
@@ -260,7 +261,8 @@ Plug 'machakann/vim-sandwich'
 Plug 'preservim/nerdcommenter'
 
 " auto-detect-and-set tabs
-Plug 'tpope/vim-sleuth'
+" error with vim-polyglot?
+" Plug 'tpope/vim-sleuth'
 
 " git magic, choose one
 Plug 'airblade/vim-gitgutter'

@@ -1,5 +1,8 @@
 
-# for bash you'd just run this file in the main config
+# for bash you'd just execute this file from within the main config
+#if [ -f ~/.aliases ]; then
+#    . ~/.aliases
+#fi
 
 # for fish, just run this file after editing it:
 # fish .alises-fish
@@ -22,6 +25,8 @@
 # ah well!
 
 
+# NOTE: don't use the name of an actual command, it won't override, it'll just execute twice!
+
 # basic shell signals
 alias -s c='clear'
 alias -s q='exit'
@@ -33,7 +38,7 @@ alias -s ll='ls -alF'
 alias -s la='ls -A'
 
 alias -s mv='mv iv'
-alias -s cp='cp iv'
+#alias -s cp='cp iv'
 alias -s mkdir='mkdir -pv'
 alias -s rmdir='rmdir -v'
 
@@ -52,6 +57,7 @@ alias -s h='tldr'
 alias -s gs='git status'
 alias -s gpl='git pull'
 alias -s gd='git diff'
+alias -s gdh='git diff HEAD'
 alias -s gaa='git add -A';
 alias -s gca='git commit -a'
 alias -s gcam='git commit -a -m "no message"'

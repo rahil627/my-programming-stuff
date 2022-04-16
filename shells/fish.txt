@@ -1,0 +1,32 @@
+
+see notes in cli-shells.txt
+
+
+config files:
+~/.config/fish/
+  - main dir
+
+~/.config/fish/config.fish
+  - main config file, i think can just throw everything in here
+
+~/.config/fish/fish_variables
+
+~/.config/fish/conf.d/
+  - empty, maybe for keeping modular config files?
+
+~/.config/fish/functions/
+  - each function has it's own file
+
+~/.config/fish/completions/
+  - ?
+
+
+
+
+aliases:
+alias
+  - adds an alias to current sessions memory
+alias -s
+  - saves it into a function in ~/.config/fish/function/
+unalias
+  - remove an alias, and hopefully function too?
