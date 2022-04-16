@@ -44,7 +44,10 @@ gh clone my-programming-stuff
 # might have to hand-copy dotfiles, ensuring you don't overwrite some distro-specific configs
 
 
-
+# haxe
+sudo dnf install haxe
+# can choose any directory to set the haxelib location
+mkdir ~/haxelib && haxelib setup ~/haxelib
 
 # ruby
 sudo dnf install ruby ruby-devel rubygem-irb rubygem-pry
