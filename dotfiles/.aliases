@@ -4,6 +4,7 @@
 # and they will automatically lazy-load
 # otherwise, if you do it the bash/zsh way and throw it all in a file,
 # it will load them all into the shell's memory
+# https://stackoverflow.com/questions/2762994/define-an-alias-in-fish-shell
 
 # basic shell signals
 alias c='clear'
