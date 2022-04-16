@@ -9,7 +9,7 @@ https://github.com/pry/pry
   
     
 conclusion:
-CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/lang' (general "scripting languages": ruby, python, etc., and even Lua), or even a *slight* bit extra code might be okay in cases of larger scripts (server-side langs such as elixer or haxe, as both come with interpreters). **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language. For Linux/MacOS users, however, that choice doesn't make much sense, and it is best to choose a general scripting languge: basically Ruby vs Python.**
+CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/env lang' (general "scripting languages": ruby, python, etc., and even Lua), or even a *slight* bit extra code from compiled languages might be okay in cases of larger scripts. **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language, and now with the recent additin of being cross-platform, bash has no benefits, save for the fact it was used since the beginning of computers. For people that are neiher a fan of .NET or even Microsoft, however, that choice doesn't make much sense, and it is best to choose a general scripting languge: basically, Ruby or Python, and my personal preference is Ruby, as it is perhaps my favorite programming language.*
 
 Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
 
@@ -115,10 +115,10 @@ zsh = z? shell
   - a super-set of bash, used on contemporary desktop systems
   - **Mac OS X recently replaced bash with this**, thus making it the current standard
   - more features, more configurability, etc. **it's basically the neovim of shells. There's plug-in managers, infinite plugins, everything you could dream of.**
-  - by default the shell is quite bare, especially compared to fish which ships with auto-completion/auto-suggestion, syntax highlighting, spell-checking, ignoring input mistakes, etc. However, there are plugins for all of these, and more.
+  - by default the shell is quite bare, especially compared to fish which ships with auto-completion/auto-suggestion, syntax highlighting, spell-checking, ignoring input mistakes, etc. However, there are plugins for all of these (to directly compete), and more.
   
 fish
-  - a beginner-friendly shell that ships with contemporary functionality: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
+  - "a beginner-friendly shell" that ships with contemporary functionality: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
   - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
   - "a shell for the 90s" lol
   - not POSIX compliant
@@ -132,6 +132,8 @@ fish
    - having said all that, it's still a great shell to install, use, out-of-the-box, sane defaults, etc. etc. There's no need to actually use the fish scripting language. You can just continue to use bash scripts.
    - it's a great stepping stone to the more bare zsh, where you'd need to configure quite a bit to get it to fish-level. Consider fish as **zsh with a solid starter config kit**
    - it's also awesome for "dev ops", so they can just enter workstations/servers, quickly install fish, and continue with life
+   - it's also a much better idea to allow the makers of fish to choose and update the shell rather than configuring yet another linux thing--neovim config is arduous enough!!
+   - update: as it turns out, fish is just a much newer design, all around: aliases are simple functions (with lazy-loading!), strings are arrays (thus saving you from parsing and accessing words 'n args), and theres prolly a ton more stuff like this. So, even without the language, it just seems overall better to ditch old "posix standardized" bash, zsh, and ofher variants
 
   
   
@@ -140,14 +142,6 @@ csh, tcsh, one other one = c shell, improved c shell, ane one other one
   - C-like shell with more scripting ability than the bourne shell? A bit dated now..?
   
   
-
-"server-side" programming languages:
-in addition to shells, many languages come with an "interpreter" which makes it feel similiar to the bash cli, in that you can send a command through the terminal/console, or a set of commands (a script, or a program), and it will run it for you:
-python
-ruby
-haxe
-  - haxe is kinda special as it seems to have both an interpreter and a compiler(??)
-etc.
   
   
 # get file-path of shell

@@ -5,6 +5,7 @@
 # sudo dnf install ./[package-name]
 
 
+
 # sync the OS package manager
 # before installing anything
 sudo dnf update
@@ -16,9 +17,17 @@ sudo dnf upgrade
 
 # main stuff
 
-sudo dnf install tldr
-
+# replace bash with a more contemporary shell
 sudo dnf install fish
+
+# get file-path of shell
+which fish
+
+# change shell, will prompt you for entering the file-path
+chsh
+
+
+sudo dnf install tldr
 
 # dropbox
 # get the binaries and read the instructions here:
@@ -50,8 +59,9 @@ sudo dnf install haxe
 mkdir ~/haxelib && haxelib setup ~/haxelib
 
 # ruby
+# https://developer.fedoraproject.org/tech/languages/ruby/gems-installation.html
 sudo dnf install ruby ruby-devel rubygem-irb rubygem-pry
-# this is for fedora only, to build ruby native extensions
+# need fo make sure you have a C compiler to build ruby native extensions
 sudo dnf group install "C Development Tools and Libraries"
 
 

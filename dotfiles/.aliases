@@ -1,4 +1,68 @@
 
+# for fish, add -s flag to all alias commands, then run it as a fish script
+# alias -s <aliasname> "command(s)" # Or --save
+# this will create functions (all commands are functions in fish)
+# and they will automatically lazy-load
+# otherwise, if you do it the bash/zsh way and throw it all in a file,
+# it will load them all into the shell's memory
+# https://stackoverflow.com/questions/2762994/define-an-alias-in-fish-shell
+
+# basic shell signals
+alias c='clear'
+alias q='exit'
+
+# basic file system commands
+# TODO: config these
+alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+
+# TODO: get the flag for making mv and cp prompt you for overwrite
+#alias mv='mv -?'
+#alias cp='cp -?'
+# what is this?
+#alias mkdir='mkdir -p'
+#alias rmdir='rmdir -?
+
+# fzf
+# TODO: test these
+#alias vf='nvim $(fzf)'
+#alias cdt='cd $(find * -type d | fzf)'
+#alias gct='git checkout $(git branch -r | fzf)'
+
+
+# git, ordered by git work-flow
+alias gs='git status'
+alias gpl='git pull'
+alias gd='git diff'
+alias gaa='git add -A';
+alias gca='git commit -a'
+alias gcam='git commit -a -m "no message"'
+alias gp='git push'
+
+#alias g?='git clone'
+#alias gb='git branch'
+#alias gf='git fetch'
+#alias gs='git stash'
+#alias gr='git rebase'
+#alias gt='git log --graph --oneline --all'
+
+
+# dev
+alias haxe='hx'
+alias ruby='rb'
+# bash?
+# fish?
+
+
+# hmmm.. not sure about this...
+alias t='tldr'
+
+
+# experimental
+# TODO: test these
+#alias cl='cloc . --exclude-dir=node_modules,.nuxt,build,.vscode,dist --exclude-lang=JSON'
+#alias r='ranger'
 
 
 

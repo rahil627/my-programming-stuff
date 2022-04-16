@@ -81,8 +81,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -108,79 +108,18 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-#nah, keep it here for now
 
-# basic signals
-alias c='clear'
-alias q='exit'
-
-# basic file system commands
-# TODO: config these
-alias l='ls -CF'
-alias ll='ls -alF'
-alias la='ls -A'
-
-# TODO: get the flag for making mv and cp prompt you for overwrite
-alias mv='mv -v'
-alias cp='cp -v'
-# what is this?
-#alias mkdir='mkdir -p'
-#alias rmdir=''
-
-# fzf
-# TODO: test these
-alias vf='nvim $(fzf)'
-alias cdt='cd $(find * -type d | fzf)'
-alias gct='git checkout $(git branch -r | fzf)'
-
-
-# git, ordered by git work-flow
-alias gs='git status'
-alias gpl='git pull'
-alias gd='git diff'
-alias ga='git add -A';
-alias gc='git commit -a'
-# don't you need a message tho..?
-alias gm='git commit -a -m'
-alias gp='git push'
-
-#alias g?='git clone'
-#alias gb='git branch'
-#alias gf='git fetch'
-#alias gs='git stash'
-#alias gr='git rebase'
-#alias gt='git log --graph --oneline --all'
-
-
-# dev
-alias haxe='hx'
-alias ruby='rb'
-alias python='py'
-
-
-
-# hmmm.. ok...
-alias t='tldr'
-
-
-# experimental
-# TODO: test these
-#alias cl='cloc . --exclude-dir=node_modules,.nuxt,build,.vscode,dist --exclude-lang=JSON'
-#alias r='ranger'
-
-
-
-
-
-
-# i think i added these
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-#    . /etc/bash_completion
-#fi
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+
+
+# TODO i must have added this...
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
