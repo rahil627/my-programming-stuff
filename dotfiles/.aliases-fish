@@ -56,12 +56,14 @@ alias -s h='tldr'
 # git, ordered by git work-flow
 alias -s gs='git status'
 alias -s gpl='git pull'
+alias -s gpull='git pull'
 alias -s gd='git diff'
 alias -s gdh='git diff HEAD'
 alias -s gaa='git add -A';
 alias -s gca='git commit -a'
 alias -s gcam='git commit -a -m "no message"'
 alias -s gp='git push'
+alias -s gpush='git push'
 
 #alias -s g?='git clone'
 #alias -s gb='git branch'
