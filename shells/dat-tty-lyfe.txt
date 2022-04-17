@@ -18,8 +18,20 @@ elvish tutorial:
 https://elv.sh
   - a shell, but also has a good shell tutorial
 
+0.
 "There are really a myriad of external commands; to start with, you can manage code repositories with git, convert documents with pandoc, process images with ImageImagick, transcode videos with ffmpeg, test the security of websites with nmap and analyze network traffic with tcpdump. Many free and open-source software come with a command-line interface."
 
-can use var to store anything, super useful, like yank memory registers in nvim
+var
+  - **can use var to store anything, super useful, like yank memory registers in nvim**
+  
+escape var to string
+  - var x = 10; echo $x;
 
+env var
+  - often stored like C constants, all caps: $USER, $IPS, etc.
+  - these are stored in shell memory and always available for the shell session
+  - these are often used by shell scripts to access particular info such as paths to config files: rubygems has an env var for $GEM_PATH, 'n so on
+  - $ARGV (or: $1, $2, ...) are often used to pass arguments to a script
+  
+  
 
