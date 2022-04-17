@@ -15,7 +15,7 @@ https://direnv.net
   
   
 elvish tutorial:
-https://elv.sh
+https://elv.sh/learn/fundamentals.html
   - a shell, but also has a good shell tutorial
 
 0.
