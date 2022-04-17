@@ -50,6 +50,10 @@ Plug 'https://github.com/rakr/vim-one.git'
 " just themes for the airline status bar on the bottom, not themes for the whole app
 "Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
 
+
+
+
+
 " main list
 " see https://vimawesome.com for a list of pop plugins
 " data gathered from actual vim configs on github! :o
