@@ -37,8 +37,8 @@ alias -s l='ls -CF'
 alias -s ll='ls -alF'
 alias -s la='ls -A'
 
-alias -s mv='mv iv'
-#alias -s cp='cp iv'
+alias -s mv='mv -iv'
+alias -s cp='cp -iv'
 alias -s mkdir='mkdir -pv'
 alias -s rmdir='rmdir -v'
 
