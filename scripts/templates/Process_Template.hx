@@ -1,13 +1,16 @@
 // https://stackoverflow.com/questions/35547117/haxe-run-system-commands-as-an-adminstrator#36451192
 
 // TODO: untested, just copied from above source
-class Hello {
+class Process_Template {
 public static function Process_Template() {
 
-    // TODO: what about Sys.command?
+	// can uses Sys.command for running commands, like a batch script
+	// outputs stdout to the current process
+	Sys.command("ls", "-a");
 
-
+	// can use sys.io.Process for more advanced stuff
     if(Sys.systemName()=="Windows"){
+		// can store stdout
         var output = new sys.io.Process("ipconfig", []).stdout.readAll().toString();
         trace("output:::"+output);
     }

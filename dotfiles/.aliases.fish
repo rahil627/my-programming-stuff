@@ -27,6 +27,9 @@
 
 # NOTE: don't use the name of an actual command, it won't override, it'll just execute twice!
 
+# NOTE: if you remove an alias from here, i think the function still remains
+# so then you'd have to use the unalias command
+
 # basic shell signals
 alias -s c='clear'
 alias -s q='exit'
@@ -65,6 +68,11 @@ alias -s gcam='git commit -a -m "no message"'
 alias -s gp='git push'
 alias -s gpush='git push'
 
+# an interesting alternative to writing a batch script and to writing a fish function
+# not quite as pretty as a batch shell script though
+# not as portable/shareble neither...
+alias -s gfuckit 'git add -A; git commit -m "(> \'.\')>"; git push;'
+
 #alias -s g?='git clone'
 #alias -s gb='git branch'
 #alias -s gf='git fetch'
@@ -74,10 +82,10 @@ alias -s gpush='git push'
 
 
 # dev
-alias -s haxe='hx'
-alias -s ruby='rb'
-# bash?
-# fish?
+alias -s hx='haxe'
+alias -s rb='ruby'
+# bash
+# fish
 
 
 
