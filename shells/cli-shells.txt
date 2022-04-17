@@ -100,6 +100,8 @@ https://hyperpolyglot.org/unix-shells
   - a great web-site, comparing many shell langs and providing some history too
   
 basically:
+
+the old bourne-like shells:
 sh = bourne shell
   - the main precursor and origin to/of the most popular future shells
 bash = bourne again shell
@@ -109,14 +111,21 @@ ash = Almaquish shell
   - a light-wieght sub-set(?) of bash used in embeded systems
   - you can find it on the tiny Linux distros installed on mobile devices, sch as ArchLinux, which itself uses BusyBox
     - i personally have "iSH" app on my iOS device, and this thing is lightning fast!!!, this is actually where i played with and learned vi: because it was *so* much faster than using CLI with my server
+    
+
+the current bourne-like shells:
 dash = ? Almaquish shell
-  - based on ash, used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
+  - based on ash, and therefore also light-weight, quick
+  - used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
+  
 zsh = z? shell
   - a super-set of bash, used on contemporary desktop systems
   - **Mac OS X recently replaced bash with this**, thus making it the current standard
   - more features, more configurability, etc. **it's basically the neovim of shells. There's plug-in managers, infinite plugins, everything you could dream of.**
   - by default the shell is quite bare, especially compared to fish which ships with auto-completion/auto-suggestion, syntax highlighting, spell-checking, ignoring input mistakes, etc. However, there are plugins for all of these (to directly compete), and more.
-  
+ 
+
+the newer stuff, post-bourne:
 fish
   - "a beginner-friendly shell" that ships with contemporary functionality: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
   - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
@@ -135,6 +144,16 @@ fish
    - it's also a much better idea to allow the makers of fish to choose and update the shell rather than configuring yet another linux thing--neovim config is arduous enough!!
    - update: as it turns out, fish is just a much newer design, all around: aliases are simple functions (with lazy-loading!), strings are arrays (thus saving you from parsing and accessing words 'n args), strings are escaped properly (don't need to worry about "v" vs $"v", or whatever), and theres prolly a ton more stuff like this. So, even without the language, it just seems overall better to ditch old "posix standardized" bash, zsh, and ofher variants
    - **also has vi *and* emacs mode!**
+   
+   
+elvish
+  - https://elv.sh
+  - seems fishy
+  - **directory history *and* command history search seperated**
+  - simple syntax, like fish
+  - a little std lib?
+  - more pipeline power?
+  - overall looks very cool! can try it out :)
 
   
   
