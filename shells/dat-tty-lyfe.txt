@@ -1,4 +1,5 @@
 
+setup:
 see setup.sh
 
 install a better shell
@@ -8,10 +9,14 @@ use a fuzzy search program plugin (fzf-vim) in nvim to search and edit any file
 add scripts folder to path env var, and then upload aliases (in case of fish)
 
 
-
-
+tools:
 https://direnv.net
   - make global environment vars local to current directory
+  
+  
+  
+https://elv.sh
+  - a shell, but also has a good shell tutorial
   
   
   
