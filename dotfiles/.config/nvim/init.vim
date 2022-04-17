@@ -33,9 +33,10 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'junegunn/seoul256.vim'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'https://github.com/sickill/vim-monokai.git'
-Plug 'https://github.com/sainnhe/sonokai.git'
 
 " testing
+Plug 'https://github.com/sainnhe/sonokai.git'
+Plug 'https://github.com/mhinz/vim-janah.git'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'https://github.com/sainnhe/everforest.git'
@@ -298,7 +299,7 @@ set shiftwidth=4
 
 
 " map caps lock to escape
-" TODO: this doesn't work
+" this might not work, depends on your terminal app
 au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
@@ -438,6 +439,24 @@ endif
 
 
 "config plugins
+
+
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+"nnoremap <leader>; <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Using Lua functions
+"nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+"nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+"nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+"nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+
+
 
 
 
