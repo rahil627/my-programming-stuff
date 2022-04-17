@@ -33,5 +33,15 @@ env var
   - these are often used by shell scripts to access particular info such as paths to config files: rubygems has an env var for $GEM_PATH, 'n so on
   - $ARGV[0] list (or: $1, $2, ...) are often used to pass arguments to a script
   
-  
-
+command chaining, capturing
+  - use ; to seperate commands
+    - echo Hello, $E:USER,; uname; echo user!
+      - this will output on 3 new-lines
+  - or use cat, without any args, to take in multi-line std input from the shell
+  - use command substitution/capture, even from within echo
+    - echo Hello, $E:USER, (uname) user!
+      - this will output one one line
+  - use command sub/capture to store 
+    - var $os = (uname)
+    
+    
