@@ -28,7 +28,8 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " https://github.com/rakr/vim-one
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'junegunn/seoul256.vim'
-Plug "rebelot/kanagawa.nvim"
+Plug 'rebelot/kanagawa.nvim'
+Plug 'https://github.com/sickill/vim-monokai.git'
 Plug 'https://github.com/sainnhe/sonokai.git'
 
 " testing
