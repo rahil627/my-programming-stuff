@@ -31,14 +31,13 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " https://github.com/rakr/vim-one
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'junegunn/seoul256.vim'
-Plug 'rebelot/kanagawa.nvim'
-Plug 'https://github.com/sickill/vim-monokai.git'
-
-" testing
 Plug 'https://github.com/sainnhe/sonokai.git'
 Plug 'https://github.com/mhinz/vim-janah.git'
-Plug 'morhetz/gruvbox'
+Plug 'rebelot/kanagawa.nvim'
 Plug 'NLKNguyen/papercolor-theme'
+
+" testing
+Plug 'morhetz/gruvbox'
 Plug 'https://github.com/sainnhe/everforest.git'
 Plug 'https://github.com/sainnhe/gruvbox-material.git'
 Plug 'ayu-theme/ayu-vim'
@@ -250,12 +249,13 @@ set autowrite
 let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 " ruby
+" not really sure what this adds in addition to syntax high-lighting...
 Plug 'vim-ruby/vim-ruby'
 " in case of problems:
-:help vim-ruby-plugin: Filetype settings and custom mappings
-:help vim-ruby-indent: Indentation settings
-:help vim-ruby-syntax: Syntax-related tweaks
-:help vim-ruby-omni: Information and settings for omni completion
+":help vim-ruby-plugin: Filetype settings and custom mappings
+":help vim-ruby-indent: Indentation settings
+":help vim-ruby-syntax: Syntax-related tweaks
+":help vim-ruby-omni: Information and settings for omni completion
 
 " wren
 "Plug 'lluchs/vim-wren'
