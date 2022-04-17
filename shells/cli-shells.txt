@@ -154,6 +154,7 @@ elvish
   - simple syntax, like fish
   - a little std lib?
   - more pipeline power?
+  - extremely clean web-site, very simple, seems like a growing language (released in 2017, and still updating every few months)
   - overall looks very cool! can try it out :)
 
   
