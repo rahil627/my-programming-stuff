@@ -1,0 +1,17 @@
+
+see setup.sh
+
+install a better shell
+copy dot files
+use a fuzzy search program (fzf) to search for any file
+use a fuzzy search program plugin (fzf-vim) in nvim to search and edit any file
+add scripts folder to path env var, and then upload aliases (in case of fish)
+
+
+
+
+https://direnv.net
+  - make global environment vars local to current directory
+  
+  
+  
