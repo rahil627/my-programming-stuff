@@ -1,0 +1,24 @@
+
+
+# customization
+
+desktop environments (DE):
+
+main:
+KDE Plasma > one more...? > GNOME
+
+lightweight
+xfce
+
+
+compositers:
+  - to put windows in the write place
+sway
+i3
+..?
+
+
+task-bar:
+polybar
+  - easy to customize
+  
