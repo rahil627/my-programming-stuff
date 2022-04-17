@@ -14,10 +14,12 @@ https://direnv.net
   - make global environment vars local to current directory
   
   
-  
+elvish tutorial:
 https://elv.sh
   - a shell, but also has a good shell tutorial
 
 "There are really a myriad of external commands; to start with, you can manage code repositories with git, convert documents with pandoc, process images with ImageImagick, transcode videos with ffmpeg, test the security of websites with nmap and analyze network traffic with tcpdump. Many free and open-source software come with a command-line interface."
+
+can use var to store anything, super useful, like yank memory registers in nvim
 
 
