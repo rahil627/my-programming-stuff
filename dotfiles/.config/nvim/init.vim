@@ -26,13 +26,16 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " see the following links on ways to setup colors in terminal
 " https://github.com/morhetz/gruvbox/wiki/Terminal-specific
 " https://github.com/rakr/vim-one
-Plug 'morhetz/gruvbox'
-Plug 'junegunn/seoul256.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'junegunn/seoul256.vim'
+Plug "rebelot/kanagawa.nvim"
+Plug 'https://github.com/sainnhe/sonokai.git'
+
+" testing
+Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'https://github.com/sainnhe/everforest.git'
 Plug 'https://github.com/sainnhe/gruvbox-material.git'
-Plug 'https://github.com/sainnhe/sonokai.git'
 Plug 'ayu-theme/ayu-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'https://github.com/lifepillar/vim-solarized8.git'
@@ -160,11 +163,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " CoC uses Coc-lists, and in order to use fzf, you'd need to use a CoC extension (coc-fzf or something)
 " but, i think you can just use this completely seperately too
 " then can decide whether to integreate or not
-Plug 'junegunn/fzf.vim'
-
+"Plug 'junegunn/fzf.vim'
 
 " map key to open the fzf window
-map ; :Files<CR>
+"map ; :Files<CR>
+
+" more modular, extendable, though perhaps slower(?) than fzf which was written in Go
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+
 
 
 " a distraction-free mode
@@ -233,12 +241,12 @@ set autowrite
 let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 " ruby
-"Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby'
 " in case of problems:
-":help vim-ruby-plugin: Filetype settings and custom mappings
-":help vim-ruby-indent: Indentation settings
-":help vim-ruby-syntax: Syntax-related tweaks
-":help vim-ruby-omni: Information and settings for omni completion
+:help vim-ruby-plugin: Filetype settings and custom mappings
+:help vim-ruby-indent: Indentation settings
+:help vim-ruby-syntax: Syntax-related tweaks
+:help vim-ruby-omni: Information and settings for omni completion
 
 " wren
 "Plug 'lluchs/vim-wren'
