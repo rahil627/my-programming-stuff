@@ -149,7 +149,8 @@ fish
 elvish
   - https://elv.sh
   - seems fishy
-  - **directory history *and* command history search seperated**
+  - **directory history *and* command history search seperated** (programs and shortcut)
+  - file-manager (program and shortcut)
   - simple syntax, like fish
   - a little std lib?
   - more pipeline power?
