@@ -30,7 +30,8 @@ escape var to string
 env var
   - often stored like C constants, all caps: $USER, $IPS, etc.
   - these are stored in shell memory and always available for the shell session
-  - these are often used by shell scripts to access particular info such as paths to config files: rubygems has an env var for $GEM_PATH, 'n so on
+  - these are often used by shell scripts to access particular info such as paths to config files
+    - rubygems dir-path for env var is $GEM_PATH
   - $ARGV[0] list (or: $1, $2, ...) are often used to pass arguments to a script
   
 command chaining, capturing
