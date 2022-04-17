@@ -23,8 +23,12 @@ anywhere, just add to PATH
 bash
   - export PATH=$PATH:/home/user/scripts
 fish
-  - set -gx PATH ...
+  - set -gx PATH $PATH /path/to/scripts
 
+
+note: once the PATH is set, you can then easily add aliases:
+alias do do-something.sh
+alias dr do-something.rb
 
 
 
