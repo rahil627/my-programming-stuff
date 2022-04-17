@@ -19,6 +19,9 @@ craftin interpreters
 # design patterns
 https://gameprogrammingpatterns.com/contents.html
   - Bob's book, online version
+
+https://refactoring.guru/design-patterns/catalog
+  - cute little site, including a whole section for refactoring
   
 https://trello.com/b/Z6cDRyis/good-coding-practices-in-unity-unofficial
   - trello board full of treasures to help make stuff in Unity, often talking about patterns and linking to them
