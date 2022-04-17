@@ -133,7 +133,8 @@ fish
    - it's a great stepping stone to the more bare zsh, where you'd need to configure quite a bit to get it to fish-level. Consider fish as **zsh with a solid starter config kit**
    - it's also awesome for "dev ops", so they can just enter workstations/servers, quickly install fish, and continue with life
    - it's also a much better idea to allow the makers of fish to choose and update the shell rather than configuring yet another linux thing--neovim config is arduous enough!!
-   - update: as it turns out, fish is just a much newer design, all around: aliases are simple functions (with lazy-loading!), strings are arrays (thus saving you from parsing and accessing words 'n args), and theres prolly a ton more stuff like this. So, even without the language, it just seems overall better to ditch old "posix standardized" bash, zsh, and ofher variants
+   - update: as it turns out, fish is just a much newer design, all around: aliases are simple functions (with lazy-loading!), strings are arrays (thus saving you from parsing and accessing words 'n args), strings are escaped properly (don't need to worry about "v" vs $"v", or whatever), and theres prolly a ton more stuff like this. So, even without the language, it just seems overall better to ditch old "posix standardized" bash, zsh, and ofher variants
+   - **also has vi *and* emacs mode!**
 
   
   
