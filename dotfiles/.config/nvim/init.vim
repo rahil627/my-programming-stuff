@@ -453,8 +453,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-"i added these
-# search symbols/tags
+" i added these
+" check the site for more "pickers"
+" https://github.com/nvim-telescope/telescope.nvim
+" search symbols/tags
 nnoremap <leader>fs <cmd>Telescope lsp_document_symbols<cr>
 nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
 
