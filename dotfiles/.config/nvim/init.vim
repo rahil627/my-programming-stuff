@@ -453,6 +453,11 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+"i added these
+# search symbols/tags
+nnoremap <leader>fs <cmd>Telescope lsp_document_symbols<cr>
+nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
+
 " Using Lua functions
 "nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 "nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
