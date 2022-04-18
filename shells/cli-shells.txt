@@ -68,12 +68,19 @@ https://stackoverflow.com/questions/11369522/bash-utility-script-library#1136993
 # terminals
 
 all OSs / terminal emulators:
+  - generally: GPU rendering
 
 alacritty
   - OpenGL, contemporary terminal and terminal multiplexor (basically managing multiple terminal instances)
   - "vi mode"
   - made by the Rust community
   - https://github.com/alacritty/alacritty
+  
+kitty
+  - super scriptable: api to control it; open tab/window/etc.
+  - super extensible: "kittens"
+  - overall a whole 'nother layer of customization and complexity
+  
 
 
 
