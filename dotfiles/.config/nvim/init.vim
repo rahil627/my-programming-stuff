@@ -206,16 +206,8 @@ let g:tagbar_width = max([25, winwidth(0) / 5])
 " hopefully . is okay?
 nmap . :TagbarToggle<CR>
 
-" autocomplete
-"if has('nvim')
-"	  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
-"	    Plug 'Shougo/deoplete.nvim'
-"	      Plug 'roxma/nvim-yarp'
-"	        Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-"let g:deoplete#enable_at_startup = 1
-"let g:deoplete#auto_complete=1
+
+
 
 
 
@@ -454,11 +446,29 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " i added these
+
 " check the site for more "pickers"
 " https://github.com/nvim-telescope/telescope.nvim
-" search symbols/tags
-nnoremap <leader>fs <cmd>Telescope lsp_document_symbols<cr>
-nnoremap <leader>ft <cmd>Telescope lsp_document_symbols<cr>
+
+" search symbols/tags in workspace and document
+" for the moment, try using workspace as default
+nnoremap <leader>fs <cmd>Telescope lsp_workspace_symbols<cr>
+nnoremap <leader>ft <cmd>Telescope lsp_workspace_symbols<cr>
+nnoremap <leader>fsiw <cmd>Telescope lsp_workspace_symbols<cr>
+nnoremap <leader>ftiw <cmd>Telescope lsp_workspace_symbols<cr>
+nnoremap <leader>fsif <cmd>Telescope lsp_document_symbols<cr>
+nnoremap <leader>ftif <cmd>Telescope lsp_document_symbols<cr>
+
+" experimenting:
+
+" fzf basics
+nnoremap <leader>fch <cmd>Telescope command_history<cr>
+nnoremap <leader>fsh <cmd>Telescope search_history<cr>
+
+" test this against workspace symbols
+" find (w)ord or (t)ext?
+nnoremap <leader>fw <cmd>Telescope current_buffer_fuzzy_find<cr>
+
 
 " Using Lua functions
 "nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
