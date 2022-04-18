@@ -22,7 +22,7 @@ Linux is a mess of CLI programs and scripts, written in *tons* of different lang
 
 
 # a note on seperation
-a shell's terminal can be used without every using it's scripting language, and vice versa, so, choose both seperately. You can use fish with bash scripts, or zsh with fish scripts. It doesn't really matter. Only that you'd need to install a zsh(?) or fish interpreter to run them.
+a shell's terminal can be used without ever using it's scripting language (save beyond running commands), and vice versa, so, **choose both (the terminal, real or emulator, and shell scripting language) seperately**. You can use fish with bash scripts, or zsh with fish scripts. It doesn't really matter. Only that you'd need to install a zsh or fish interpreter to run them (and for that reason, bash is still accumulating it's monolithic mess).
 
 
 
@@ -51,7 +51,14 @@ https://fishshell.com/docs/current/tutorial.html
 
 ## thoughts
 
-bash (and i believe even zsh??) is janky, with strange things for strings, math, and old syntax using `$` everywhere, including for special vars `$#`, making it feel something closer to Perl or PHP, both of which are old and cryptic to me (see the ~"fish for bash users" link for a good overview of the many problems of bash). A ton of things are confused due to syntax, especially sub-shells vs command substitutions. Also the escaping quotes with strings is awful... **Yeah, fuck bash. It's either fish (or zsh?) or a proper scripting language.**
+bash (and i believe even zsh??) is janky, with strange things for basic if statements (if [statement]; then, and even that is different when it's on a new line), basic switch statemtns, strings (escape with "" or $"" or $"$v"??), math, and old syntax using `$` everywhere, including for special vars `$#`, making it feel something closer to Perl or PHP, both of which are old and cryptic to me (see the ~"fish for bash users" link for a good overview of the many problems of bash). A ton of things are confused due to syntax, especially sub-shells vs command substitutions (parenthesis vs back-ticks vs square brackets). **Yeah... fuck bash. Even zsh seems like garbage, changing only a little, and further confusing it's own syntax with bash syntax. It's either super basic bash/sh batch scripts (a list of commands), some better newly designed scripting language (fish, kitty?, elvish, etc.), or a proper scripting language, with my personal preference toward a proper scripting language, such as ruby**
+
+**perhaps can even find some way to use ruby as the main shell language...**
+  - irb
+  - pry
+  - ru
+  - some ruby shells
+  - etc.
 
 
 
