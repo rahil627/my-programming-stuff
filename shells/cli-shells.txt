@@ -68,7 +68,7 @@ https://stackoverflow.com/questions/11369522/bash-utility-script-library#1136993
 # terminals
 
 all OSs / terminal emulators:
-  - generally: GPU rendering
+  - generally: a *ton* of features over an actual basic terminal: GPU rendering (OpenGL)
 
 alacritty
   - OpenGL, contemporary terminal and terminal multiplexor (basically managing multiple terminal instances)
@@ -77,8 +77,34 @@ alacritty
   - https://github.com/alacritty/alacritty
   
 kitty
+  - overview
+    - https://sw.kovidgoyal.net/kitty/overview/#sessions
+    - philosophies: keyboard power-user oriented, simple / modular / extensible / hackable, simple configs
+    - tabs + windows
+    - layouts / compositer
+      - **i'm personally not sure about using learning kitty's layout system, over a geneal linux compositer...**
+    - **remote control**
+      - control other terminal windows
+      - "More usefully, you can pipe the output of a command running in one window to another window, for example:"
+        - ls | kitty @ send-text --match title:Output --stdin
+          - this is nice, **instead of creating new windows and tabs all the time, just use one window for input, then output everything to other windows 'n tabs**
+    - startup sessions
+      - to **create workspaces**
+        - maybe can even just save a workspace
+    - a few built-in extensions
+      - ssh from terminal made simpler
+        - **i personally still think a ssh/sftp file manager GUI is much simpler**
+        - "remote file"
+          - ls --hyperlink=auto, brings up a few hyperlinked commands, just click to download, open in editor, etc.
+        - transfer
+          - kitty +kitten transfer /path/to/local/file /path/to/destination/on/remote/computer
+          - kitty +kitten transfer file1 dir1 destination/
+       - "broadcast"
+         - broadcast input from one terminal to multiple other terminals
+           - amazing for dev-ops, saving one from writing scripts
+  - written in C
   - super scriptable: api to control it; open tab/window/etc.
-  - super extensible: "kittens"
+  - super extensible: "kittens", written in python
   - overall a whole 'nother layer of customization and complexity
   
 
