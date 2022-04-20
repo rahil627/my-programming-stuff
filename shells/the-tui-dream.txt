@@ -21,7 +21,6 @@ use a fuzzy search program to list and search stuff
     - find files including hidden files
   - command history aka reverse search (c-r)
   - find file-paths and change directory (a-c)
-  - ...more?
 
 CTRL-T - Paste the selected files and directories onto the command-line
 Set FZF_CTRL_T_COMMAND to override the default command
@@ -32,6 +31,30 @@ Set FZF_CTRL_R_OPTS to pass additional options
 ALT-C - cd into the selected directory
 Set FZF_ALT_C_COMMAND to override the default command
 Set FZF_ALT_C_OPTS to pass additional options
+
+
+https://github.com/jethrokuan/fzf
+  - as-c to include hidden files!
+  - a-o to open with default editor!
+  - auto-complete /w fzf! :o
+  - i think i'll go with this as it's just simpler, and i don't use stuff from the other repo
+
+Legacy	New Keybindings	Remarks
+Ctrl-t	Ctrl-o	Find a file.
+Ctrl-r	Ctrl-r	Search through command history.
+Alt-c	Alt-c	cd into sub-directories (recursively searched).
+Alt-Shift-c	Alt-Shift-c	cd into sub-directories, including hidden ones.
+Ctrl-o	Alt-o	Open a file/dir using default editor ($EDITOR)
+Ctrl-g	Alt-Shift-o	Open a file/dir using xdg-open or open command
+
+https://github.com/PatrickF1/fzf.fish
+  - newer than jethrokuan's repo, but a little different
+  - key-bindings for fish, also lists some other stuff, like processes, git stuff, etc.
+    - c-v, local + global env vars list
+  - the reverse command shows the fish function that is run! :o
+
+
+
 
 
 use a fuzzy search program plugin in nvim to search and edit any file
