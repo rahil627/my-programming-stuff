@@ -53,8 +53,11 @@ Plug 'https://github.com/rakr/vim-one.git'
 "Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
 
 
+" some found on tree-sitter supported themes repo
+" many of the above themes might also support tree-sitter
 Plug 'https://github.com/sainnhe/edge.git'
 Plug 'https://github.com/yonlu/omni.vim.git'
+Plug 'https://github.com/folke/tokyonight.nvim.git'
 
 
 " main list
