@@ -224,9 +224,11 @@ set nocompatible
 
 " haxe
 
-" can looks at these two haxe gods for some config stuff
+" can looks at these haxe gods for some config stuff
 " https://github.com/snsvrno/dots/tree/main/.config/nvim
 " https://github.com/ZwodahS/vimfiles
+" https://gist.github.com/kLabz/ef4713271a67bcb7dc6c980df3cdc6a5
+
 
 " vaxe
 " note: CoC doesn't come with syntax-highlighting
