@@ -64,6 +64,12 @@ Plug 'https://github.com/yonlu/omni.vim.git'
 Plug 'https://github.com/folke/tokyonight.nvim.git'
 
 
+" not tree-sitter supported
+" very pleasant to eyes, very dark
+"Plug 'tjdevries/colorbuddy.vim'
+"Plug 'RishabhRD/nvim-rdark'
+
+
 " main list
 " see https://vimawesome.com for a list of pop plugins
 " data gathered from actual vim configs on github! :o
