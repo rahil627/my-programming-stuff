@@ -9,9 +9,15 @@ install a better shell
 copy dot files
 use a fuzzy search program (fzf) to search for any file
   - map it to a key
-use a fuzzy search program plugin (fzf-vim) in nvim to search and edit any file
+use a fuzzy search program plugin (telescope > fzf-vim) in nvim to search and edit any file
   - map it to a key
+  - try to use most of telescope's hooks
 add scripts folder to path env var, and then upload aliases (in case of fish)
+
+next level shit:
+https://github.com/sainnhe/tmux-fzf
+  - use a fuzzy search program to control terminal multiplexor, and do more stuff beyond file-finding
+
 
 
 tools:
