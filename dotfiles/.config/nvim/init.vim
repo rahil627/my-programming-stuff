@@ -228,10 +228,20 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " use fzf-native, which is a C impl of fzf, for the sorting algorithm
 " supports regex stuff in search, such as * ^ . etc.
+
 " TODO: might need to config fzf.case_mode to "ignore_case", using vimscript tho
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+"sbtrkt	fuzzy-match	Items that match sbtrkt
+"'wild	exact-match (quoted)	Items that include wild
+"^music	prefix-exact-match	Items that start with music
+".mp3$	suffix-exact-match	Items that end with .mp3
+"!fire	inverse-exact-match	Items that do not include fire
+"!^music	inverse-prefix-exact-match	Items that do not start with music
+"!.mp3$	inverse-suffix-exact-match	Items that do not end with .mp3
+
 " required for live_grep and grep_string
 Plug 'BurntSushi/ripgrep'
+
 
 
 
