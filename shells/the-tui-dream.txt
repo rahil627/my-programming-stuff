@@ -11,13 +11,28 @@ install a better shell
 copy my dot files
 
 use a fuzzy search program to list and search stuff
+  - "It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc."
   - fzf (does telescope have a standalone version?)
   - map keys
-    - fzf comes with an install script
-  - find files (in current working directory)
+    - fzf comes with an install script, somewhere in the package manager, see github repo
+    - "Key bindings (CTRL-T, CTRL-R, and ALT-C) (bash, zsh, fish)"
+    - "Fuzzy auto-completion (bash, zsh)" (note: no fish, because fish already has it)
+  - find file-paths and paste (c-t)
     - find files including hidden files
-  - command history
+  - command history aka reverse search (c-r)
+  - find file-paths and change directory (a-c)
   - ...more?
+
+CTRL-T - Paste the selected files and directories onto the command-line
+Set FZF_CTRL_T_COMMAND to override the default command
+Set FZF_CTRL_T_OPTS to pass additional options
+CTRL-R - Paste the selected command from history onto the command-line
+If you want to see the commands in chronological order, press CTRL-R again which toggles sorting by relevance
+Set FZF_CTRL_R_OPTS to pass additional options
+ALT-C - cd into the selected directory
+Set FZF_ALT_C_COMMAND to override the default command
+Set FZF_ALT_C_OPTS to pass additional options
+
 
 use a fuzzy search program plugin in nvim to search and edit any file
   - telescope > fzf
