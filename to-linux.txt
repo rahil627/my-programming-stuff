@@ -1,17 +1,26 @@
 
 
 # customization
+the linux world is full of customization, like the way kids do for desktop computer hardware, bicycles, motorcycles, and cars.
+
+https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice/
+  - /r/unixporn is full of ricers suping up their desktop environments
+
+
 
 desktop environments (DE):
+  - contain everything: a windows manager, a taskbar, widgets, etc.
 
 main:
 KDE Plasma > one more...? > GNOME
 
-lightweight
+lightweight:
 xfce
 
 
-compositers:
+
+custom:
+compositers / WMs:
   - to put windows in the write place
 sway
 i3
@@ -22,3 +31,6 @@ task-bar:
 polybar
   - easy to customize
   
+...
+
+
