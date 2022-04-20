@@ -33,6 +33,7 @@ RHEL (Red Hat Enterprise L?)
 
 
 Windows:
+10 > 11
 https://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/
   - Windows Sub-system Linux (WSL) is a feature introduced in Windows 10 that allows you to install Linux CLI, and perhaps in the future, Linux GUI too (it already kinda works?). it's like an entire compatibility layer between native Windows powershell and Linux shells! So, you can write bash scripts and it will work on Windows just as it does on Linux, thus reducing the amount of shell languages you need to learn / keep in memory, and, enabling you to re-use the bajillion scripts already written in bash over the past 40 years
 
@@ -43,9 +44,9 @@ BootCamp
   - a native application to handle installing and booting into Windows (or any OS?), along with setting up all of the input/output drivers required. This worked like a dream on my 2010 and 2013 Macbooks, booting into Windows for games and Mac for production and every-day use
 
 Linux:
-can begin with Ubuntu (server edition) until one is familiar with the cli, package managers, file-system, etc., then, move on to either Debian (server and desktop use) or Arch Linux (desktop-only use) for less bloat
+can begin with Ubuntu (server edition) until one is familiar with the cli, package managers, file-system, etc., then, move on to either Fedora (server and desktop use) or Arch Linux (desktop-only use) for up-to-date software and less bloat
 
-"Unix (shell) has a philosophy that everything is a file. The input and output of a Unix command can be accessed like a file. This makes chaining command really simple and reusing the output of one command by another is the power of the Unix shell."
+"Unix (and therefore Linux) has a philosophy that everything is a file. The input and output of a Unix command can be accessed like a file. This makes chaining command really simple and reusing the output of one command by another is the power of the Unix shell."
 
 
 https://wiki.archlinux.org/title/Arch_compared_to_other_distributions
