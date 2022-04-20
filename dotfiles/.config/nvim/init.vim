@@ -57,6 +57,10 @@ Plug 'https://github.com/rakr/vim-one.git'
 " many of the above themes might also support tree-sitter
 Plug 'https://github.com/sainnhe/edge.git'
 Plug 'https://github.com/yonlu/omni.vim.git'
+
+" make sure this next line comes before the plugin
+" options: storm (default), night, day
+"let g:tokyonight_style = "night"
 Plug 'https://github.com/folke/tokyonight.nvim.git'
 
 
