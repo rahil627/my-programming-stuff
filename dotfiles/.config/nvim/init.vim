@@ -183,10 +183,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" from my own chat
-" sheeeet, i might just hook up most of these pickers 😅 seems like a much more interactive way to learn... fuzzy search vim commands, vim `man` pages, key-mappings, registers.... it's all so much easier with this!!
-
-
 
 
 " a distraction-free mode
@@ -483,6 +479,14 @@ nnoremap <leader>fsif <cmd>Telescope lsp_document_symbols<cr>
 nnoremap <leader>ftif <cmd>Telescope lsp_document_symbols<cr>
 
 " experimenting:
+
+" notes from my own chat
+" `builtin.command_history` 🤔
+" `builtin.search_history` 🤔 
+" hmm, i think fzf is a combo of command history and "reverse" search history...
+" sheeeet, i might just hook up most of these pickers 😅 seems like a much more interactive way to learn... fuzzy search vim commands, vim `man` pages, key-mappings, registers.... it's all so much easier with this!!
+
+
 
 " fzf basics
 nnoremap <leader>fch <cmd>Telescope command_history<cr>
