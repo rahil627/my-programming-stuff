@@ -221,6 +221,15 @@ nmap . :TagbarToggle<CR>
 Plug 'sheerun/vim-polyglot'
 set nocompatible
 
+" tree-sitter, i heard, is better, but takes more effort, but it also covers most languages
+" considered experimental and requires newest version of nvim
+" https://github.com/nvim-treesitter/nvim-treesitter
+
+" this is a fork of the original abandoned haxe tree-sitter repo, 2 commits ahead
+https://github.com/Skehmatics/tree-sitter-haxe
+
+
+
 
 " haxe
 
