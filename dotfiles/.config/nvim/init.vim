@@ -214,6 +214,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " more modular, extendable, though perhaps slower(?) than fzf which was written in Go
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+" use fzf-native, which is a C impl of fzf, for the sorting algorithm
+" supports regex stuff in search, such as * ^ . etc.
+" TODO: might need to config fzf.case_mode to "ignore_case", using vimscript tho
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+" required for live_grep and grep_string
+Plug 'BurntSushi/ripgrep'
 
 
 
@@ -321,7 +327,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'preservim/nerdcommenter'
 " Create default mappings
 " cc..., the mappings start with c
-" :help nerdocommenter
+" :help nerdocommenter to figure out the rest of the key mappings
 let g:NERDCreateDefaultMappings = 1
 " optional motions support
 "nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
