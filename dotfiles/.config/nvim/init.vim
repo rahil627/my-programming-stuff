@@ -54,6 +54,7 @@ Plug 'https://github.com/rakr/vim-one.git'
 
 
 Plug 'https://github.com/sainnhe/edge.git'
+Plug 'https://github.com/yonlu/omni.vim.git'
 
 
 " main list
