@@ -225,8 +225,14 @@ set nocompatible
 " considered experimental and requires newest version of nvim
 " https://github.com/nvim-treesitter/nvim-treesitter
 
+" haxe
 " this is a fork of the original abandoned haxe tree-sitter repo, 2 commits ahead
 " https://github.com/Skehmatics/tree-sitter-haxe
+" follow these steps
+" https://github.com/nvim-treesitter/nvim-treesitter#adding-parsers
+" steal some stuff from here
+" https://mzte.de/git/LordMZTE/dotfiles/src/commit/73360c9c1e9fe307f6eba7cf9df2a50deefe26ee/.config/nvim/lua/pluginconf/treesitter.lua
+" configs, parser-configs, config.setup
 
 
 
