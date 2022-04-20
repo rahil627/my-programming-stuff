@@ -9,6 +9,15 @@ install a better shell
   - see cli-shells.txt
   
 copy my dot files
+  - includes aliases
+
+install shell plug-in manager
+  - curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+installs shell plugins
+  - fisher install jethrokuan/fzf
+  - set -U FZF_LEGACY_KEYBINDINGS 0
+    - add this to fish_config
 
 use a fuzzy search program to list and search stuff
   - "It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc."
@@ -34,6 +43,9 @@ Set FZF_ALT_C_OPTS to pass additional options
 
 
 https://github.com/jethrokuan/fzf
+  - fisher install jethrokuan/fzf
+  - set -U FZF_LEGACY_KEYBINDINGS 0
+    - i think need this too
   - as-c to include hidden files!
   - a-o to open with default editor!
   - auto-complete /w fzf! :o
@@ -49,9 +61,12 @@ Ctrl-g	Alt-Shift-o	Open a file/dir using xdg-open or open command
 
 https://github.com/PatrickF1/fzf.fish
   - newer than jethrokuan's repo, but a little different
-  - key-bindings for fish, also lists some other stuff, like processes, git stuff, etc.
+  - key-bindings for fish, also lists some other stuff, like processes, git status, git log, etc.
     - c-v, local + global env vars list
-  - the reverse command shows the fish function that is run! :o
+  - the reverse command shows a preivew of the fish function that is run! :o that's cool!
+  - i'm guessing these are just commands that end up piping into fzf, so no biggie, can do yourself too
+  
+
 
 
 
