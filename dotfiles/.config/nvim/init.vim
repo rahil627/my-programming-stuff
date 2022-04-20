@@ -178,7 +178,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 
-
+" OLD, currently using CoC now
 " press tab to trigger omnicomplete (vim's autocomplete) 
 "Plug 'ervandew/supertab'
 
@@ -194,6 +194,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "set omnifunc=syntaxcomplete#Complete
 " get completion from vaxe plugin which gets info form the haxe compiler?
 "set omnifunc=vaxe#HaxeComplete
+" END OF OLD
+
 
 
 " fuzzy finder diretory tree (like NERDTree)
@@ -291,7 +293,7 @@ let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 " ruby
 " not really sure what this adds in addition to syntax high-lighting...
-Plug 'vim-ruby/vim-ruby'
+" Plug 'vim-ruby/vim-ruby'
 " in case of problems:
 ":help vim-ruby-plugin: Filetype settings and custom mappings
 ":help vim-ruby-indent: Indentation settings
@@ -317,6 +319,13 @@ Plug 'machakann/vim-sandwich'
 
 " comment stuff from the default mode
 Plug 'preservim/nerdcommenter'
+" Create default mappings
+" cc..., the mappings start with c
+" :help nerdocommenter
+let g:NERDCreateDefaultMappings = 1
+" optional motions support
+"nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
+"nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
 
 " auto-detect-and-set tabs
 " error with vim-polyglot?
@@ -517,7 +526,6 @@ nnoremap <leader>ftif <cmd>Telescope lsp_document_symbols<cr>
 " sheeeet, i might just hook up most of these pickers 😅 seems like a much more interactive way to learn... fuzzy search vim commands, vim `man` pages, key-mappings, registers.... it's all so much easier with this!!
 
 
-
 " fzf basics
 nnoremap <leader>fch <cmd>Telescope command_history<cr>
 nnoremap <leader>fsh <cmd>Telescope search_history<cr>
@@ -532,6 +540,10 @@ nnoremap <leader>fw <cmd>Telescope current_buffer_fuzzy_find<cr>
 "nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 "nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 "nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+
+
+
 
 
 
