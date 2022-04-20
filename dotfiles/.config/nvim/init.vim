@@ -183,6 +183,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" from my own chat
+" sheeeet, i might just hook up most of these pickers 😅 seems like a much more interactive way to learn... fuzzy search vim commands, vim `man` pages, key-mappings, registers.... it's all so much easier with this!!
+
 
 
 
