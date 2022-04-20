@@ -226,7 +226,7 @@ set nocompatible
 " https://github.com/nvim-treesitter/nvim-treesitter
 
 " this is a fork of the original abandoned haxe tree-sitter repo, 2 commits ahead
-https://github.com/Skehmatics/tree-sitter-haxe
+" https://github.com/Skehmatics/tree-sitter-haxe
 
 
 
