@@ -1,6 +1,9 @@
 
 see notes in cli-shells.txt
 
+https://github.com/starship/starship
+  - smarter cross-shell prompt?
+
 
 config files:
 ~/.config/fish/
