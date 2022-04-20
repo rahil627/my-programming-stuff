@@ -77,11 +77,6 @@ https://stackoverflow.com/questions/11369522/bash-utility-script-library#1136993
 all OSs / terminal emulators:
   - generally: a *ton* of features over an actual basic terminal: GPU rendering (OpenGL)
 
-alacritty
-  - OpenGL, contemporary terminal and terminal multiplexor (basically managing multiple terminal instances)
-  - "vi mode"
-  - made by the Rust community
-  - https://github.com/alacritty/alacritty
   
 kitty
   - overview
@@ -113,9 +108,26 @@ kitty
   - super scriptable: api to control it; open tab/window/etc.
   - super extensible: "kittens", written in python
   - overall a whole 'nother layer of customization and complexity
+
+
+foot
+  - "A fast, lightweight and minimalistic Wayland terminal emulator"
+  - very fast
+  - according to the maker of NotCurses tui lib, this one is awesome if you use Wayland
+  - https://codeberg.org/dnkl/foot
+
+alacritty
+  - OpenGL, contemporary terminal and terminal multiplexor (basically managing multiple terminal instances)
+  - "vi mode"
+  - made with Rust
+  - https://github.com/alacritty/alacritty
+
+
   
 
-
+https://www.reddit.com/r/archlinux/comments/n9noje/alacritty_vs_kitty/
+  - didn't read through much, but in general it seems kitty > alacritty
+  - foot is mentioned
 
 
 Windows:
