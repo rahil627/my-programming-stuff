@@ -231,6 +231,8 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " TODO: might need to config fzf.case_mode to "ignore_case", using vimscript tho
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+" supports fzf syntax:
 "sbtrkt	fuzzy-match	Items that match sbtrkt
 "'wild	exact-match (quoted)	Items that include wild
 "^music	prefix-exact-match	Items that start with music
@@ -238,6 +240,10 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 "!fire	inverse-exact-match	Items that do not include fire
 "!^music	inverse-prefix-exact-match	Items that do not start with music
 "!.mp3$	inverse-suffix-exact-match	Items that do not end with .mp3
+
+" also can use or-operator
+"^core go$ | rb$ | py$
+
 
 " required for live_grep and grep_string
 Plug 'BurntSushi/ripgrep'
