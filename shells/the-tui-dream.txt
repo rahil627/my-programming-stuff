@@ -60,6 +60,8 @@ Ctrl-o	Alt-o	Open a file/dir using default editor ($EDITOR)
 Ctrl-g	Alt-Shift-o	Open a file/dir using xdg-open or open command
 
 https://github.com/PatrickF1/fzf.fish
+  - add this to config_fish, to show hidden files but exclude .git
+    - set fzf_fd_opts --hidden --exclude=.git
   - newer than jethrokuan's repo, but a little different
   - key-bindings for fish, also lists some other stuff, like processes, git status, git log, etc.
     - c-v, local + global env vars list
