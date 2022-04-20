@@ -29,6 +29,9 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " see the following links on ways to setup colors in terminal
 " https://github.com/morhetz/gruvbox/wiki/Terminal-specific
 " https://github.com/rakr/vim-one
+" a place to get schemes that work with nvim-treesitter syntax highlighting
+" also just has some good ones in general
+" https://github.com/nvim-treesitter/nvim-treesitter/wiki/Colorschemes
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'junegunn/seoul256.vim'
 Plug 'https://github.com/sainnhe/sonokai.git'
