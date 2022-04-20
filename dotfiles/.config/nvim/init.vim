@@ -55,13 +55,29 @@ Plug 'https://github.com/rakr/vim-one.git'
 
 " some found on tree-sitter supported themes repo
 " many of the above themes might also support tree-sitter
+" :Help edge.txt to figure out how to toggle through themes
+" also contains themes for most terminal emulators and more
 Plug 'https://github.com/sainnhe/edge.git'
+
 Plug 'https://github.com/yonlu/omni.vim.git'
 
 " make sure this next line comes before the plugin
 " options: storm (default), night, day
 "let g:tokyonight_style = "night"
 Plug 'https://github.com/folke/tokyonight.nvim.git'
+
+" darker, lighter, palenight, oceanic, deep ocean
+"let g:material_style = "darker"
+Plug 'marko-cerovac/material.nvim'
+
+" not even sure how to change the themes within in this one
+" Plug 'EdenEast/nightfox.nvim'
+
+" lua only
+" https://github.com/rafamadriz/neon.git
+
+" maybe lua only
+" https://sr.ht/~novakane/kosmikoa.nvim/
 
 
 " not tree-sitter supported
