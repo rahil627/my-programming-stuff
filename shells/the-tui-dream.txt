@@ -6,17 +6,41 @@ everyday use:
 TODO: should ask other people, or watch videos on how pros use shells. Its one of those things where you don't really have a good education / tutorial on, and rely on scraping info, trying stuff over time
 
 install a better shell
-copy dot files
-use a fuzzy search program (fzf) to search for any file
-  - map it to a key
-use a fuzzy search program plugin (telescope > fzf-vim) in nvim to search and edit any file
-  - map it to a key
+  - see cli-shells.txt
+  
+copy my dot files
+
+use a fuzzy search program to list and search stuff
+  - fzf (does telescope have a standalone version?)
+  - map keys
+    - fzf comes with an install script
+  - find files (in current working directory)
+    - find files including hidden files
+  - command history
+  - ...more?
+
+use a fuzzy search program plugin in nvim to search and edit any file
+  - telescope > fzf
+  - map keys
   - try to use most of telescope's hooks
+
 add scripts folder to path env var, and then upload aliases (in case of fish)
+
+
+--
+
+
+to try:
+https://github.com/starship/starship
+  - smarter cross-shell prompt?
 
 next level shit:
 https://github.com/sainnhe/tmux-fzf
   - use a fuzzy search program to control terminal multiplexor, and do more stuff beyond file-finding
+
+
+
+
 
 
 
