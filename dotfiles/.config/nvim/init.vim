@@ -53,7 +53,7 @@ Plug 'https://github.com/rakr/vim-one.git'
 "Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
 
 
-
+Plug 'https://github.com/sainnhe/edge.git'
 
 
 " main list
