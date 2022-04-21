@@ -19,7 +19,7 @@ installs shell plugins
   - set -U FZF_LEGACY_KEYBINDINGS 0
     - add this to fish_config
 
-use a fuzzy search program to list and search stuff
+use a fuzzy search program to list and search stuff (including files)
   - "It's an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc."
   - fzf (does telescope have a standalone version?)
   - map keys
@@ -86,6 +86,35 @@ add scripts folder to path env var, and then upload aliases (in case of fish)
 
 
 to try:
+
+file managers:
+
+try them all!
+
+**ranger**
+  - most feature-rich / extensible
+  - vim key bindings are used by
+  - python
+  
+**nnn**
+  - light-weight, fast, zero-config
+  - C
+  
+lf
+  - simple, fast
+
+fff
+  - simple, fast
+  - written in bash! :o
+
+mc (midnight commander)
+  - for that old school feel
+  
+  
+  
+
+
+
 https://github.com/starship/starship
   - smarter cross-shell prompt?
 
