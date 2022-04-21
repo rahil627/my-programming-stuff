@@ -94,47 +94,53 @@ use a fuzzy search program plugin in nvim to search and edit any file
 
 to try:
 
+
+# file nav
 cd replacement
   - these replace cd, saving the data and providing a list of most frequently cd
-    - as you probably only cd into a few places, this list probably isnt even that long, and therfore quicker than using either a file manager or normal cd... however, fzf might still be able to compete
+    - as you probably only cd into a few places, the list of "working dirs" probably isnt even that long(!), and therfore quicker than using either a file manager or normal cd... however, fzf (alt+c) might still be able to compete
+  - however, contemporary shells do this too..? so... not sure..
+    - best to just use absolute paths when using cd
   - z
     - there's a port to fish too
   - f
+    - a newer little project by an indian student
 
 
 
-file managers:
-
-try them all!
-
+file managers
+  - GUI > wasting human memory, also *way* better than typing ls/cd!!
+  - todo: try them all!
 **ranger**
   - most feature-rich / extensible
   - vim key bindings are used by
   - python
-  
 **nnn**
   - light-weight, fast, zero-config
   - C
-  
 lf
   - simple, fast
-
 fff
   - simple, fast
-  - written in bash! :o
-
+  - written in bash :o
 mc (midnight commander)
   - for that old school feel
   
   
   
-
-
-
-https://github.com/starship/starship
+x/https://github.com/starship/starship
   - smarter cross-shell prompt?
+  - not really sure what this adds... maybe just provides something that can be customized..
+
+
 
 next level shit:
+
+tmux vs kitty
+  - kitty basically provides tmux stuff (multiple windows/tabs management), but im not really sure how they differ...
+  - tmux def has the advantage of being used in a real remote terminal
+  - tmux also has the great advantage of working on any terminal app
+
 https://github.com/sainnhe/tmux-fzf
   - use a fuzzy search program to control terminal multiplexor, and do more stuff beyond file-finding
 
