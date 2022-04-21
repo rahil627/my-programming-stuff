@@ -8,7 +8,6 @@
 
 
 
-
 " automated installation of vimplug if not installed
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -119,6 +118,47 @@ Plug 'https://github.com/vim-airline/vim-airline'
 " a good selection of themes that auto-match the status bar
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" pair opening 'n closing symbols
+Plug 'jiangmiao/auto-pairs'
+
+" shortcuts for text within symbols
+Plug 'machakann/vim-sandwich'
+
+" comment stuff from the normal mode
+Plug 'preservim/nerdcommenter'
+" Create default mappings
+" cc..., the mappings start with c
+" :help nerdocommenter to figure out the rest of the key mappings
+let g:NERDCreateDefaultMappings = 1
+" optional motions support
+"nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
+"nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
+
+" auto-detect-and-set tabs
+" TODO: error with vim-polyglot?
+" Plug 'tpope/vim-sleuth'
+
+" git magic, choose one
+" TODO: still haven't even used this, but it displays changes nicely :)
+" need to somehow stop it from shifting lines tho, and add a column just for this
+Plug 'airblade/vim-gitgutter'
+" more heavy, but most popular
+"Plug 'tpope/vim-fugitive'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" end of a list of plugins from ...top-neovim-plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+" completion, syntax-highlighter, fuzzy finder, etc.
 
 
 
@@ -377,35 +417,6 @@ let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" pair opening 'n closing symbols
-Plug 'jiangmiao/auto-pairs'
-
-" shortcuts for text within symbols
-Plug 'machakann/vim-sandwich'
-
-" comment stuff from the normal mode
-Plug 'preservim/nerdcommenter'
-" Create default mappings
-" cc..., the mappings start with c
-" :help nerdocommenter to figure out the rest of the key mappings
-let g:NERDCreateDefaultMappings = 1
-" optional motions support
-"nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
-"nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
-
-" auto-detect-and-set tabs
-" TODO: error with vim-polyglot?
-" Plug 'tpope/vim-sleuth'
-
-" git magic, choose one
-" TODO: still haven't even used this, but it displays changes nicely :)
-" need to somehow stop it from shifting lines tho, and add a column just for this
-Plug 'airblade/vim-gitgutter'
-" more heavy, but most popular
-"Plug 'tpope/vim-fugitive'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#end()
