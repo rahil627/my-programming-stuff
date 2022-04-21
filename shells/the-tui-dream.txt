@@ -106,7 +106,8 @@ ripgrep > grep
   - simple replacement
   - https://github.com/BurntSushi/ripgrep
 bat > cat
-  - integrate/use with fzf, git diff, ripgrep, etc.
+  - mainly: adds syntax highlighting
+  - integrate/use with fzf, git diff, ripgrep, etc., resulting in better previews
     - https://github.com/eth-p/bat-extras
   - https://github.com/sharkdp/bat
 
