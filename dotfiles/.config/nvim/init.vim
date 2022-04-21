@@ -510,6 +510,9 @@ endif
 
 " might be better to seperate key-mapping from plugin install info for better viewing
 
+" syntax
+"[mapKind] [attributes?] [key] [sequence of keys and commands]
+
 " some punctuation keys are un-mapped
 " TODO: check
 " these are probably the highest valued un-mapped keys
@@ -517,9 +520,10 @@ endif
 " ; is mapped to fzf file
 
 " the F keys aren't used
-" TODO: test all F keys
-"map <F1> should go to cheatsheet or manual, or maybe already does?
+" TODO: test all F keys / check key mappings with it all commented out
+"map <F1> should go to cheatsheet, or maybe already does?
 "map shift+<F1> manual
+" telescope manual
 "map <F2> ?
 "map <F3> prettier?
 "map <F4> linter?
@@ -538,14 +542,13 @@ map <F5> :w<CR>:make<CR>
 
 " config 'n plugin managers
 "map <F9> should colorscheme get next
-"map shift+<F9> should colorscheme get previous
+"map <S-F9> should colorscheme get previous
 " TODO: trash the default colorschemes
 map <F10> :CocList
-" TODO: get update command
-"map <F10> :CocUpdate
-" TODO: get list command
+map <S-F10> :CocUpdate
 map <F11> :PlugUpdate
-"map shift+<F11> :PlugUpdate
+map <S-F11> :PlugUpdate
+" TODO: does this open a new buffer?
 map <F12> :source ~/.config/init.vim<CR>
 
 " examples
@@ -553,6 +556,7 @@ map <F12> :source ~/.config/init.vim<CR>
 "map <F6> :filetype detect<CR>
 "map <F10> :syntax sync fromstart<CR>
 "map <F12> :source ~/.vim/text.vim<CR>
+
 
 
 
