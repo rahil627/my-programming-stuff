@@ -91,6 +91,23 @@ use a fuzzy search program plugin in nvim to search and edit any file
 
 --
 
+replacement of old tools:
+most of these are written in rust
+exa > ls
+  - better choice of flags
+  - adds a tree layouts
+  - better coloring?
+fd > find
+ripgrep > grep
+  - simple replacement
+bat > cat
+  - https://github.com/sharkdp/bat
+  - integrate/use with fzf, git diff, ripgrep, etc.
+    - https://github.com/eth-p/bat-extras
+
+
+
+
 
 to try:
 
