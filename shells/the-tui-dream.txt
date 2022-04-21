@@ -94,6 +94,15 @@ use a fuzzy search program plugin in nvim to search and edit any file
 
 to try:
 
+cd replacement
+  - these replace cd, saving the data and providing a list of most frequently cd
+    - as you probably only cd into a few places, this list probably isnt even that long, and therfore quicker than using either a file manager or normal cd... however, fzf might still be able to compete
+  - z
+    - there's a port to fish too
+  - f
+
+
+
 file managers:
 
 try them all!
