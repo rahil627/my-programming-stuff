@@ -18,12 +18,13 @@ endif
 
 
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Declare the list of plugins.
-
+"""""""""""""""""""
 " experimenting
+"""""""""""""""""""
 " a distraction-free mode
 " use :Goyo command to enter it
 Plug 'junegunn/goyo.vim'
@@ -31,8 +32,9 @@ Plug 'junegunn/goyo.vim'
 
 
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " themes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " use the following command to change between light 'n dark themes
 " set bg=dark/light
 " see the following links on ways to setup colors in terminal
@@ -60,6 +62,7 @@ Plug 'https://github.com/rakr/vim-one.git'
 "Plug 'chriskempson/base16-vim'
 " just themes for the airline status bar on the bottom, not themes for the whole app
 "Plug 'https://github.com/dawikur/base16-vim-airline-themes.git'
+
 
 
 " some found on tree-sitter supported themes repo
@@ -93,9 +96,17 @@ Plug 'marko-cerovac/material.nvim'
 " very pleasant to eyes, very dark
 "Plug 'tjdevries/colorbuddy.vim'
 "Plug 'RishabhRD/nvim-rdark'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" end of themes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-" main list
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" main plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " see https://vimawesome.com for a list of pop plugins
 " data gathered from actual vim configs on github! :o
 
@@ -105,14 +116,16 @@ Plug 'https://github.com/tpope/vim-sensible.git'
 " status bar replacement
 Plug 'https://github.com/vim-airline/vim-airline'
 
-" a good selection of themes that match the status bar
+" a good selection of themes that auto-match the status bar
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
 
 
 
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" completion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " completion plugin that mirrors VS code's completion set-up
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -131,18 +144,26 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " # install coc-json & coc-html and exit
 " vim -c 'CocInstall -sync coc-json coc-html|q'
 
-"
+" TODO: maybe add :CocInstall -sync in front of all of these?
+
 " completion sources
 " https://github.com/neoclide/coc-sources#readme
 " coc-tags
 " coc-syntax
 
 " languages
+
 " coc-haxe
-" maybe need to somehow install haxe lanauge server?
-"
+" somebody already did the hard work! wooooo
+" otherwise:
+" the CoC autocomplete takes a bit of time to use with haxe
+" see https://github.com/vshaxe/vshaxe/issues/328
+" which concluced with https://github.com/vshaxe/haxe-language-server#usage-with-neovim
+
+
 " coc-solargraph for solargraph (ruby) lang server
 " gem install solargraph
+" requires to install C compiler stuff because it uses "native extensions"
 
 " coc-sh requires(?) bash using bash-language-server
 " coc-fish need fish installed
@@ -185,9 +206,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 
-
-
-" OLD, currently using CoC now
+"""""""""""""""""""""""""""""""""""""""""""""""
+" old completion stuff, currently using CoC now
+"""""""""""""""""""""""""""""""""""""""""""""""
 " press tab to trigger omnicomplete (vim's autocomplete) 
 "Plug 'ervandew/supertab'
 
@@ -203,7 +224,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "set omnifunc=syntaxcomplete#Complete
 " get completion from vaxe plugin which gets info form the haxe compiler?
 "set omnifunc=vaxe#HaxeComplete
+""""""""""""""
 " END OF OLD
+""""""""""""""
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" end of completion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
@@ -223,6 +252,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "map ; :Files<CR>
 
 " telescope
+" TODO: NOT WORKING?
 " more modular, extendable, though perhaps slower(?) than fzf which was written in Go
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -246,19 +276,23 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 
 " required for live_grep and grep_string
+" should install this anyway
 Plug 'BurntSushi/ripgrep'
 
 
 
 
 
-
+"""""""""""""""""""""""
 " data structure tree
+"""""""""""""""""""""""
 
 " lsp-based
+
 " vista
 
 
+" OLD way
 " tags-based
 " need ctags installed
 " universal ctags has a monopoly on this:  https://github.com/universal-ctags/ctags
@@ -279,8 +313,11 @@ Plug 'BurntSushi/ripgrep'
 
 
 
-
+"""""""""""""""""""""""
 " language syntaxes
+"""""""""""""""""""""""
+
+" note: CoC doesn't handle syntax-highlighting
 
 " by default, vim comes with a lot, see:
 " https://github.com/vim/vim/tree/master/runtime/syntax
@@ -315,7 +352,6 @@ set nocompatible
 
 
 " vaxe
-" note: CoC doesn't come with syntax-highlighting
 " note: CoC doesn't seem to work without this for some reason...
 " vscode language server
 " this interacts with many other plugins such as airline and tag bar
@@ -340,12 +376,10 @@ let g:airline_statusline_funcrefs = get(g:, 'airline_statusline_funcrefs', [])
 
 
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " a list of plugins from from https://breuer.dev/blog/top-neovim-plugins
-
-" the CoC autocomplete takes a bit of time to use with haxe
-" see https://github.com/vshaxe/vshaxe/issues/328
-" which conluced with https://github.com/vshaxe/haxe-language-server#usage-with-neovim
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " pair opening 'n closing symbols
 Plug 'jiangmiao/auto-pairs'
 
@@ -363,10 +397,12 @@ let g:NERDCreateDefaultMappings = 1
 "nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
 
 " auto-detect-and-set tabs
-" error with vim-polyglot?
+" TODO: error with vim-polyglot?
 " Plug 'tpope/vim-sleuth'
 
 " git magic, choose one
+" TODO: still haven't even used this, but it displays changes nicely :)
+" need to somehow stop it from shifting lines tho, and add a column just for this
 Plug 'airblade/vim-gitgutter'
 " more heavy, but most popular
 "Plug 'tpope/vim-fugitive'
@@ -396,7 +432,7 @@ colorscheme onehalfdark
 
 " CoC provides a lot of these in it's defaults too
 
-" don't need with automatic plugin
+" don't need with automatic plugin, but oh well
 set tabstop=4
 set shiftwidth=4
 
