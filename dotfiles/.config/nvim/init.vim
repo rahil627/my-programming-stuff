@@ -371,21 +371,43 @@ Plug 'airblade/vim-gitgutter'
 " more heavy, but most popular
 "Plug 'tpope/vim-fugitive'
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#end()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set config stuff here
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "colorscheme seoul256
 colorscheme onehalfdark
 
-"don't need with automatic plugin
+
+""""""""""""""""""""""""""
+" basic settings stuff
+""""""""""""""""""""""""""
+
+" there's a plugin that probably set some sane default settings already
+
+" CoC provides a lot of these in it's defaults too
+
+" don't need with automatic plugin
 set tabstop=4
 set shiftwidth=4
 
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" key-bindings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " map caps lock to escape
 " this might not work, depends on your terminal app
@@ -397,6 +419,84 @@ au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" tmux: moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <C-space> ?
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Close the current buffer
+map <leader>bc :Bclose<cr>:tabclose<cr>gT
+
+" Close all the buffers
+map <leader>bca :bufdo bd<cr>
+
+map <leader>l :bnext<cr>
+map <leader>h :bprevious<cr>
+
+" Useful mappings for managing tabs
+" add control+t for new tab?
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
+
+" Let 'tl' toggle between this and the last accessed tab
+let g:lasttab = 1
+nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Specify the behavior when switching between buffers
+try
+  set switchbuf=useopen,usetab,newtab
+  set stal=2
+catch
+endtry
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+"""""""""""""""""""
+" editing mappings
+"""""""""""""""""""
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+if has("mac") || has("macunix")
+  nmap <D-j> <M-j>
+  nmap <D-k> <M-k>
+  vmap <D-j> <M-j>
+  vmap <D-k> <M-k>
+endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" end of tmux
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
@@ -404,12 +504,9 @@ au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 
 
-
-
-
-
-
-"config plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" F keys
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " might be better to seperate key-mapping from plugin install info for better viewing
 
@@ -463,14 +560,24 @@ map <F12> :source ~/.config/init.vim<CR>
 
 
 
-" Find files using Telescope command-line sugar.
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" config plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""
+" telescope
+"""""""""""""
+" defaults
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 "nnoremap <leader>; <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" i added these
+" i added the rest:
 
 " check the site for more "pickers"
 " https://github.com/nvim-telescope/telescope.nvim
@@ -513,32 +620,12 @@ nnoremap <leader>fw <cmd>Telescope current_buffer_fuzzy_find<cr>
 
 
 
-" not proper plugins, but still a plugin
 
-" moving around windows: c+h/j/k/l
-
-"function! WinMove(key)
-"    let t:curwin = winnr()
-"    exec "wincmd ".a:key
-"    if (t:curwin == winnr())
-"        if (match(a:key,'[jk]'))
-"            wincmd v
-"        else
-"            wincmd s
-"        endif
-"        exec "wincmd ".a:key
-"    endif
-"endfunction
-
-"nnoremap <silent> <C-h> :call WinMove('h')<CR>
-"nnoremap <silent> <C-j> :call WinMove('j')<CR>
-"nnoremap <silent> <C-k> :call WinMove('k')<CR>
-"nnoremap <silent> <C-l> :call WinMove('l')<CR>
-
-
-
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CoC defaults
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: keep these for later use, it seems to provide some sane defaults
+
 " https://github.com/neoclide/coc.nvim
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -708,84 +795,10 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-
-
-
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
+" end of CoC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <C-space> ?
-
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" Close the current buffer
-map <leader>bc :Bclose<cr>:tabclose<cr>gT
-
-" Close all the buffers
-map <leader>bca :bufdo bd<cr>
-
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
-
-" Useful mappings for managing tabs
-" add control+t for new tab?
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
-
-" Let 'tl' toggle between this and the last accessed tab
-let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
 
 
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" Specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
-catch
-endtry
-
-" Return to last edit position when opening files (You want this!)
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
