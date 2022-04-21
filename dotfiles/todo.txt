@@ -1,8 +1,6 @@
 
 test changing terminal colors via iOS app, otherwise delete base16 themes?
 
-copy aliases from .bashrc to .aliases
-
 delete ctags stuff?
   - including plugins related to it
 
