@@ -93,6 +93,7 @@ use a fuzzy search program plugin in nvim to search and edit any file
 --
 
 replacement of old tools:
+although, i think you still have to keep the original for compatibility, scripts, etc. as they change flags
 many of these are written in rust
 exa or lsd > ls
   - better choice of flags
@@ -160,10 +161,14 @@ x/https://github.com/starship/starship
 
 next level shit:
 
-tmux vs kitty
+tmux with a light-wieght terminal vs kitty
   - kitty basically provides tmux stuff (multiple windows/tabs management), but im not really sure how they differ...
-  - tmux def has the advantage of being used in a real remote terminal
+  - tmux def has the great advantage of being used in a real remote terminal
   - tmux also has the great advantage of working on any terminal app
+  - however, kitty, much like fish, is still the best designed terminal emulator, so still worth trying both routes
+    - kitty's tmux stuff, it seems, is a lot more scriptable...
+    - kitty comes with the ability to save sessions
+    - but yeah.. you'd have to learn kitty-specific tmux-like commands
 
 https://github.com/sainnhe/tmux-fzf
   - use a fuzzy search program to control terminal multiplexor, and do more stuff beyond file-finding
