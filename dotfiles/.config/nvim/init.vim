@@ -254,6 +254,12 @@ Plug 'BurntSushi/ripgrep'
 
 
 " data structure tree
+
+" lsp-based
+" vista
+
+
+" tags-based
 " need ctags installed
 " universal ctags has a monopoly on this:  https://github.com/universal-ctags/ctags
 " just apt install universal-ctags
@@ -261,14 +267,13 @@ Plug 'BurntSushi/ripgrep'
 "  a good 'n simple how-to-use: https://andrew.stwrt.ca/posts/vim-ctags/
 " for ctags, be sure to copy the ctags language regex code from the vaxe github repo
 " and put it in (. or ~)/.ctags.d/something.ctags (NOT ~/.ctags)
-Plug 'https://github.com/preservim/tagbar.git'
-let g:tagbar_width = max([25, winwidth(0) / 5])
+"Plug 'https://github.com/preservim/tagbar.git'
+"let g:tagbar_width = max([25, winwidth(0) / 5])
 "nmap <F8> :TagbarToggle<CR>
 " it seemsl ike the blackslash is a modifier key because it waits
 "nmap <Bslash> :TagbarToggle<CR>
 "alt+number is also good
-" hopefully . is okay?
-nmap . :TagbarToggle<CR>
+"nmap . :TagbarToggle<CR>
 
 
 
@@ -502,6 +507,52 @@ endif
 
 
 "config plugins
+
+" might be better to seperate key-mapping from plugin install info for better viewing
+
+" some punctuation keys are un-mapped
+" TODO: check
+" these are probably the highest valued un-mapped keys
+" . , ; and perhaps others
+" ; is mapped to fzf file
+
+" the F keys aren't used
+" TODO: test all F keys
+"map <F1> should go to cheatsheet or manual, or maybe already does?
+"map shift+<F1> manual
+"map <F2> ?
+"map <F3> prettier?
+"map <F4> linter?
+
+" views
+" toggle file tree
+" shift: telescope on current directory
+" toggle class tree
+" shift: telescope on LSP symbols
+
+" build and debug
+map <F5> :w<CR>:make<CR>
+"map <F6> debug stuff?
+"map <F7> debug stuff?
+"map <F8> debug stuff?
+
+" config 'n plugin managers
+"map <F9> should colorscheme get next
+"map shift+<F9> should colorscheme get previous
+" TODO: trash the default colorschemes
+map <F10> :CocList
+" TODO: get update command
+"map <F10> :CocUpdate
+" TODO: get list command
+map <F11> :PlugUpdate
+"map shift+<F11> :PlugUpdate
+map <F12> :source ~/.config/init.vim<CR>
+
+" examples
+"map <F4> "ayy@a<CR>
+"map <F6> :filetype detect<CR>
+"map <F10> :syntax sync fromstart<CR>
+"map <F12> :source ~/.vim/text.vim<CR>
 
 
 
