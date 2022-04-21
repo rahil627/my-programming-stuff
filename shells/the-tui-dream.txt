@@ -10,7 +10,8 @@ install a better shell
   
 copy my dot files
   - includes aliases
-  - todo: create a binding for file manager
+  - includes shell key-bindings
+    - todo: create a binding for file manager
 
 copy my scripts folder (maybe add to dot files)
   - add scripts folder to path env var, and then upload aliases (in case of fish)
