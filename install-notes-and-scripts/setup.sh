@@ -60,7 +60,7 @@ gh auth login
 
 
 # copy dotfiles
-gh clone my-programming-stuff
+gh repo clone my-programming-stuff
 # might have to hand-copy dotfiles, ensuring you don't overwrite some distro-specific configs
 
 
