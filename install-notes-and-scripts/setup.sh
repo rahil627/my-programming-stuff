@@ -3,6 +3,7 @@
 # google github cli
 # download the correct release from the github repo
 # sudo dnf install ./[package-name]
+# replace dnf with apt for Debian OS
 
 
 
