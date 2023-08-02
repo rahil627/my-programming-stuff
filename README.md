@@ -21,6 +21,7 @@ includes:
      - Windows (dual-boot)
      - ArchLinux (VM vs WSL2)
      - Mac OS X (dual-boot)
+     - ChromeOS with "crostini" Debian linux container
  - scripts
    - every-day use
 

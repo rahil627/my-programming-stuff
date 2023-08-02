@@ -17,8 +17,6 @@ dnf
   - fedora
 snap(d)
 
-
-
 cli:
 fish
 zsh
