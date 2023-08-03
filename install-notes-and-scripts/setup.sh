@@ -1,7 +1,8 @@
-# TODO: move to notes
+# THIS IS NOT TO BE RUN AS A SCRIPT...yet?
+# TODO: move to notes.txt
 # how to install stuff
 # google github cli
-# download the correct release from the github repo
+#   - download the correct release from the github repo
 # sudo dnf install ./[package-name]
 # replace dnf with apt for Debian OS
 
@@ -23,6 +24,7 @@ sudo dnf upgrade
 sudo dnf install fish
 
 # fedora doesn't include common linux/unix utilities by default
+# maybe needed for chsh
 sudo dnf install util-linux-user
 
 # get file-path of shell
@@ -62,7 +64,7 @@ gh auth login
 
 
 # copy dotfiles
-gh clone my-programming-stuff
+gh repo clone my-programming-stuff
 # might have to hand-copy dotfiles, ensuring you don't overwrite some distro-specific configs
 
 

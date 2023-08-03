@@ -1,3 +1,18 @@
+file structure:
+.config
+  - config files of various apps
+.inputrc
+  - config for all command readline (including bash command-line)
+
+# shell-specific
+.aliases.fish
+.bashrc
+.zhrc
+
+others:
+.ctags.d/
+  - currently for haxe ctags which maybe have been used in conjunction with nvim to create a class navigator panel for nvim
+--
 
 can list other people's .files here,
 to extract some goodies from more experienced people
