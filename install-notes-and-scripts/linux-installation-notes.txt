@@ -23,8 +23,9 @@ cli:
 fish
 zsh
 
+core cli apps:
 tldr
-
+  - way better manual than man
 fzf
   - holy shit, search entire OS with this!
 

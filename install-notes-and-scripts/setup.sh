@@ -36,9 +36,11 @@ chsh
 fish .aliases-fish
 
 
-
+# core shell apps
 # simple community-sourced help for most commands, super practical
 sudo dnf install tldr
+# one time, it didn't update the dictionary upon install, so...
+tldr -u
 
 # dropbox
 # get the binaries and read the instructions here:
