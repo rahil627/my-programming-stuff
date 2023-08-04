@@ -1,3 +1,19 @@
+# install
+ruby 2.6 is installed by Debian's package manager, so you must use a version manager to instsall multiple versions of ruby and for it to select the correct one
+use rbenv NOT rvm
+use chruby if you don't need multiple versions, it's the simplest!
+https://github.com/rbenv/rbenv#readme
+
+sudo apt install rbenv
+
+# install ruby-build as a plugin
+# https://github.com/rbenv/ruby-build#installation
+# NOTE: throws an error in fish
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+git -C "$(rbenv root)"/plugins/ruby-build pull
+rbenv --list
+#rbenv install 3.2.2
+
 
 # just do it & ref
 
