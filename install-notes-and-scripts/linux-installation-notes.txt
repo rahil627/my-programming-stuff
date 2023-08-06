@@ -11,15 +11,25 @@ chrome-rdp
   - can try noVNC instead
 
 package managers:
+native:
+  - checked by the people that maintain the distro
 apt
   - debian
 dnf
   - fedora
+
+non-native:
+  - unchecked, includes all dependencies, making it easier for app-devs to maintain
 snap(d)
+flatpak
 
 cli:
 fish
+  - not compliant with POSIX, bash, etc., so bash script may fail
+  - comes equipped with the most useful shell tools
 zsh
+  - for the most part, works well with bash, though still not POSIX compliant
+  - comes naked, and will require manually tinkering add-ons over time to get it set-up right
 
 core cli apps:
 tldr

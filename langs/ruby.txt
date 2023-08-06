@@ -1,18 +1,42 @@
 # install
-ruby 2.6 is installed by Debian's package manager, so you must use a version manager to instsall multiple versions of ruby and for it to select the correct one
-use rbenv NOT rvm
+ruby 2.6 is installed by Debian's package manager, so you must use a version manager to install multiple versions of ruby and for it to select the correct one
+chruby > rbenv > rvm
 use chruby if you don't need multiple versions, it's the simplest!
-https://github.com/rbenv/rbenv#readme
 
-sudo apt install rbenv
+https://github.com/postmodern/chruby
+  - check the readme to install
+  - auto-loads for bash and zsh
+  
+https://github.com/JeanMertz/chruby-fish
+  - if using fish, use this wrapper instead
+  
+https://github.com/postmodern/ruby-install
+  - check readme to install, a little hidden:
+  - https://github.com/postmodern/ruby-install/tree/master#install
+ruby-install --update
+# install latest version of ruby
+ruby-install ruby
+# list versions to install more
+#ruby-install
+# set default version for auto-switcher
+#echo "ruby-3.2.2" > ~/.ruby-version
 
-# install ruby-build as a plugin
-# https://github.com/rbenv/ruby-build#installation
-# NOTE: throws an error in fish
-git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-git -C "$(rbenv root)"/plugins/ruby-build pull
-rbenv --list
-#rbenv install 3.2.2
+
+# not sure if necessary...
+gem update
+
+# ruby lsp for vs code
+gem install solargraph
+gem install yard
+
+# create a Gemfile in the working directory with the following lines:
+source "https://rubygems.org"
+gem "solargraph"
+
+# TODO: perhaps because i'm using fish shell, there's an error
+# start the program from the fish terminal to force vs code to use current terminal
+code
+
 
 
 # just do it & ref
