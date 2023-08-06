@@ -16,55 +16,53 @@ end
 
 
 # https://www.tutorialspoint.com/ruby/ruby_input_output.htm
-#f = File.read(filename)
-#puts f
-#f.chomp
 
 #IO.foreach(filename) do |line|
 #   if line.
 #   puts line if (line[/ohn\b/])
 #end
 
-#positions_at_beginning_of_paragraphs = []
-#positions_at_tags
+def read_and_output_string(filename)
+   lineno_at_beginning_of_item = 0
+   output = ""
+   concatenating = false
 
-lineno_at_beginning_of_item = 0
-output = ""
-concatenating = false
+   File.open(filename) do |f|
+      f.each_line do |line|
 
-File.open(filename) do |f|
-   f.each_line do |line|
+         if concatenating == true
+            output += line
 
-      if concatenating = true
-         output += line
+            if line.include?("####") && (f.lineno != lineno_at_beginning_of_item)
+                  # until the second #### line
+                  concatenating = false
+            end
 
-         if line.include?("####") && (f.lineno != lineno_at_beginning_of_item)
-               # until the second #### line
-               concatenating = false
+            break
          end
 
-         break
-      end
-
-      if line.include?("####")
-         # f.rewind # rewind to beginning of line? or file?
-         lineno_at_beginning_of_item = f.lineno
-      end
-
-      if line.include?("tags: ")
-         if line.include?(input)
-            f.lineno = lineno_at_beginning_of_item
-            concatenating = true;
+         if line.include?("####")
+            # f.rewind # rewind to beginning of line? or file?
+            lineno_at_beginning_of_item = f.lineno
          end
+
+         if line.include?("tags: ")
+            if line.include?(input)
+               f.lineno = lineno_at_beginning_of_item
+               concatenating = true;
+            end
+         end
+         p "position=#{f.pos} eof?=#{f.eof?} lineno=#{f.lineno}"
+         
       end
-      p "position=#{f.pos} eof?=#{f.eof?} lineno=#{f.lineno}"
-      
    end
+
+   return output
 end
 
 
-#aFile = File.new(filename, "r")
-#if not(aFile)
-#   puts "Unable to open file!"
+out = read_and_output_string(filename)
 
-# File.readline("tags")
+File.write('output.txt', out)
+
+puts File.read('output.txt')
