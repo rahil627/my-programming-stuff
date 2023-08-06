@@ -30,18 +30,17 @@ end
 
 lineno_at_beginning_of_item = 0
 output = ""
-concatenating = false;
+concatenating = false
 
-File.open('dummy.txt') do |f|
+File.open(filename) do |f|
    f.each_line do |line|
 
       if concatenating = true
          output += line
 
          if line.include?("####") && (f.lineno != lineno_at_beginning_of_item)
-            # until the second #### line
+               # until the second #### line
                concatenating = false
-            end
          end
 
          break
