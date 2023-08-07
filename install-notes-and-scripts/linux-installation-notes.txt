@@ -19,7 +19,7 @@ dnf
   - fedora
 
 non-native:
-  - unchecked, includes all dependencies, making it easier for app-devs to maintain
+  - unchecked, includes all dependencies, making it easier for app-devs to maintain, good for bigger apps
 snap(d)
 flatpak
 
@@ -40,22 +40,21 @@ fzf
 htop
 
 dropbox
-  - cli vs app
+  - cli vs app?
 
 dev-related:
 nvim
 git
 gh - github cli
 
-haxelibs
-
-gems (Ruby):
+(see notes under langs folder)
+haxe and haxelibs
+ruby and gems
+  - especially pry
 
 snaps:
 code
 sublime-text
-ruby
-  - not sure why it's here..
 
 
 
