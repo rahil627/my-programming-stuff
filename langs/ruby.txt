@@ -27,7 +27,7 @@ gem update
 
 # ruby lsp for vs code
 gem install solargraph
-gem install yard
+gem install yard # documentation gem, super-set of original ruby docs
 
 # create a Gemfile in the working directory with the following lines:
 source "https://rubygems.org"
@@ -37,6 +37,15 @@ gem "solargraph"
 # start the program from the fish terminal to force vs code to use current terminal
 code
 
+
+# for all sorts of cool hackery
+gem install pry
+# can use binding.pry in code to break it and inspect everything up to that point
+
+
+# debug
+https://marketplace.visualstudio.com/items?itemName=KoichiSasada.vscode-rdbg
+  - can try? vs pry?
 
 
 # just do it & ref

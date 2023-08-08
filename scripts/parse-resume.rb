@@ -27,8 +27,8 @@ def read_and_output_string(filename)
    output = ""
    concatenating = false
 
-   File.open(filename) do |f|
-      f.each_line do |line|
+   File.open(filename) do |f| # auto closes the file this way at the end of the block
+      f.each_line do |line| # vs f.gets
 
          if concatenating == true
             output += line
@@ -42,7 +42,6 @@ def read_and_output_string(filename)
          end
 
          if line.include?("####")
-            # f.rewind # rewind to beginning of line? or file?
             lineno_at_beginning_of_item = f.lineno
          end
 
