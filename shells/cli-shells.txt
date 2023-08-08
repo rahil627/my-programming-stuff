@@ -9,6 +9,8 @@ https://github.com/pry/pry
   
     
 conclusion:
+use any cool contemporary shell for personal use (zsh, fish, ion, etc.) but write scripts in bash (or ruby! :) ) for portability
+
 CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/env lang' (general "scripting languages": ruby, python, etc., and even Lua), or even a *slight* bit extra code from compiled languages might be okay in cases of larger scripts. **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language, and now with the recent additin of being cross-platform, bash has no benefits, save for the fact it was used since the beginning of computers. For people that are neiher a fan of .NET or even Microsoft, however, that choice doesn't make much sense, and it is best to choose a general scripting languge: basically, Ruby or Python, and my personal preference is Ruby, as it is perhaps my favorite programming language.*
 
 Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
@@ -208,6 +210,9 @@ elvish
   - more pipeline power?
   - extremely clean web-site, very simple, seems like a growing language (released in 2017, and still updating every few months)
   - overall looks very cool! can try it out :)
+
+ion
+  - Rust
 
   
   
