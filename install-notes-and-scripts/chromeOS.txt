@@ -1,0 +1,7 @@
+install linux (called "crostini" by the internets)
+  - i used the defualt 10gb
+  - then can go to Files app and share folders with linux
+
+enable trash!!
+  - chrome://flags
+    - search for trash
