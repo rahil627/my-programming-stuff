@@ -7,7 +7,6 @@
 # replace dnf with apt for Debian OS
 
 
-
 # sync the OS package manager
 # before installing anything
 sudo dnf update
@@ -16,29 +15,15 @@ sudo dnf update
 sudo dnf update
 sudo dnf upgrade
 
-
-
 # main stuff
-
-# replace bash with a more contemporary shell
-sudo dnf install fish
-
-# fedora doesn't include common linux/unix utilities by default
-# maybe needed for chsh
-sudo dnf install util-linux-user
-
-# get file-path of shell
-which fish
-
-# change shell, will prompt you for entering the file-path
-chsh
-
-# now, from within the fish shell...
-# create aliases / functions
-fish .aliases-fish
-
+source setup-shell.sh # not sure if this is the proper way to execute other scripts...
 
 # core shell apps
+# some text editors
+sudo apt install nano
+sudo apt install vi # for a minimal nvim
+sudo apt install nvim
+
 # simple community-sourced help for most commands, super practical
 sudo dnf install tldr
 # one time, it didn't update the dictionary upon install, so...

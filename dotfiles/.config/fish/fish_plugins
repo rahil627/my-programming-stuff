@@ -1,0 +1,22 @@
+# note: do not put comments on the same line as the plug-in
+
+# this plug-in manager is a plug-in!
+jorgebucaran/fisher
+
+# of utmost importance
+PatrickF1/fzf.fish
+
+# should be included in fish
+jorgebucaran/autopair.fish
+
+# experimenting
+# the best prompt thingy
+IlanCosman/tide
+# see github repo for instructions
+# copy font files to ~/.fonts/
+
+# a minimialist prompt thingy
+#jorgebucaran/hydro
+
+# REMEMBER TO RUN:
+# fisher update
