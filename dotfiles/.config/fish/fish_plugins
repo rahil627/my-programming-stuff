@@ -6,6 +6,9 @@ jorgebucaran/fisher
 
 # of utmost importance
 PatrickF1/fzf.fish
+# note: requires fzf installation to work
+# TODO: fzf already auto-detects and integrates with fish shell, so...
+# wtf does this do??
 
 # should be included in fish
 jorgebucaran/autopair.fish

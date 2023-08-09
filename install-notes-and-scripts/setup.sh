@@ -19,6 +19,12 @@ sudo dnf upgrade
 source setup-shell.sh # not sure if this is the proper way to execute other scripts...
 
 # core shell apps
+
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+# note: i have this included in the nvim plug-in manager too
+
 # some text editors
 sudo apt install nano
 sudo apt install vi # for a minimal nvim

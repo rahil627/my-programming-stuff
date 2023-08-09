@@ -21,7 +21,6 @@ config files:
 
 
 
-
 aliases:
 alias
   - adds an alias to current sessions memory
@@ -29,3 +28,8 @@ alias -s
   - saves it into a function in ~/.config/fish/function/
 unalias
   - remove an alias, and hopefully function too?
+
+
+bindings:
+bind
+  - use bind command to see bindings
