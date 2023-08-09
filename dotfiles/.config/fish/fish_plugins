@@ -1,4 +1,5 @@
 # note: do not put comments on the same line as the plug-in
+# note: need a space between # and plug-in/name, in case of commenting
 
 # this plug-in manager is a plug-in!
 jorgebucaran/fisher
@@ -10,13 +11,14 @@ PatrickF1/fzf.fish
 jorgebucaran/autopair.fish
 
 # experimenting
-# the best prompt thingy
-IlanCosman/tide
+# the best prompt thingy, but i def don't want anything to customize, ugh!
+# ilancosman/tide@v5
 # see github repo for instructions
 # copy font files to ~/.fonts/
 
 # a minimialist prompt thingy
-#jorgebucaran/hydro
+# can compare this to the native one
+jorgebucaran/hydro
 
 # REMEMBER TO RUN:
 # fisher update

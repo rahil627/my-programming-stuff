@@ -1,6 +1,7 @@
 # install
 ruby 2.6 is installed by Debian's package manager, so you must use a version manager to install multiple versions of ruby and for it to select the correct one
 chruby > rbenv > rvm
+  - rvm is a pain
 use chruby if you don't need multiple versions, it's the simplest!
 
 https://github.com/postmodern/chruby
@@ -23,6 +24,8 @@ ruby-install ruby
 
 
 # not sure if necessary...
+gem update --system --no-document
+  - nevermind!, may have broke my gems up
 gem update
 
 # ruby lsp for vs code
@@ -44,8 +47,11 @@ gem install pry
 
 
 # debug
+try the user castwide's (maintainer of solargraph) debug extension
+
 https://marketplace.visualstudio.com/items?itemName=KoichiSasada.vscode-rdbg
   - can try? vs pry?
+
 
 
 # just do it & ref
