@@ -25,6 +25,16 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 # note: i have this included in the nvim plug-in manager too
 
+# file directory navigator
+sudo apt install ranger
+# vs midnight commander
+
+# replacement utilities
+sudo apt-get install ripgrep
+sudo apt-get install fd-find
+
+
+
 # some text editors
 sudo apt install nano
 sudo apt install vi # for a minimal nvim

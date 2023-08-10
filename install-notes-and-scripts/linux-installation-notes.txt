@@ -36,8 +36,28 @@ tldr
   - way better manual than man
 fzf
   - holy shit, search entire OS with this!
+ranger
+  - hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck. 
+  - better than gui, incredible
+
+tmux
+  - todo: try
+
+others:
+grep replacement
+rg
+  - replace grep
+  - https://github.com/BurntSushi/ripgrep
+
+fd
+  - replace find
 
 htop
+ncdu(?)
+  - todo: try
+
+
+
 
 dropbox
   - cli vs app?
