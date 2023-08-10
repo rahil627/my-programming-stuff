@@ -10,3 +10,19 @@ enable trash!!
   - chrome://flags
     - search for trash
 
+change font
+  - TODO: find a way to increase DPI of display
+  - from terrible Tinos to something else!
+  - in chrome browser -> settings -> search for apperance
+
+change terminal appearance
+  - chrome-untrusted://terminal/html/nassh_preferences_editor.html
+
+increase dpi on vs code
+  - https://www.reddit.com/r/Crostini/comments/cesxr0/vscode_ui_and_fonts_too_small_heres_how_to_fix_it/
+  - essentially, you modify: /usr/share/applications/code.desktop
+  - #replace this line: Exec=/usr/share/code/code --unity-launch %F
+  - Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--unity-launch %F"
+  - #replace this line: Exec=/usr/share/code/code --new-window %F
+  - Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--new-window %F"
+  - Smaller value for --scale means more magnification. The fonts actually look sharp.

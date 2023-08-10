@@ -1,0 +1,29 @@
+
+chromeos terminal
+  - size 14
+
+vs code
+  - size 14, but has custom dpi (exec on start)
+
+mesloLGS nf == dejavu sans mono > inconsolata
+
+dejavu sans mono == noto sans mono?
+  - default
+  - more line space on odd numbers, compare size 12 and 13
+  - size 14 is nice 'n big, i dig it
+
+MesloLSG NF
+  - gathers the best from powerline and others
+
+PowerLine (series)
+  - forked from source code pro
+
+# source code pro
+  - more compact, adds a little blur, otherwise about the same as dejavu sans mono
+git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
+fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
+
+Cantarell
+  - used by Manjaro for ui elements
+
+iconsolata

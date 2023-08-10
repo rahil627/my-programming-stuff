@@ -58,6 +58,13 @@ gh auth login
 gh repo clone my-programming-stuff
 # might have to hand-copy dotfiles, ensuring you don't overwrite some distro-specific configs
 
+# re-build font cache files 
+fc-cache -fv
+# see running font
+#fc-match monospace
+# list fonts
+#fc-list
+
 
 # haxe
 sudo dnf install haxe
