@@ -5,25 +5,66 @@ chromeos terminal
 vs code
   - size 14, but has custom dpi (exec on start)
 
-mesloLGS nf == dejavu sans mono > inconsolata
+
+https://kinsta.com/blog/best-programming-fonts/
+  - TODO: the one's that cost money might just be even better!!
+also see powerline fonts
+https://fonts.google.com/?preview.size=13&category=Monospace
+  - compare fonts here
+
+
+current favorite:
+source code pro
+  - source code pro semibold is a great idea too
+
+mesloLGS nf ~= fira code ~= dejavu sans mono
+JetBrains sans mono <- dejavu sans mono
+
+MesloLSG NF
+  - NF = nerd font
+  - just fixes smybol positions from dejavu sans mono
+  - The recommended font is the product of many individuals. Its origin is Bitstream Vera Sans Mono, which has given birth to Menlo, which in turn has spawned Meslo. Finally, extra glyphs have been added to Meslo with scripts forked from Nerd Fonts. The final font is released under the terms of Apache License.
+
+fira code
+  - adds space width, adds some serif-ness
+
+JetBrains sans mono
+  - a cute robotic version of dejavu, with long characters shortened nicely
 
 dejavu sans mono == noto sans mono?
   - default
   - more line space on odd numbers, compare size 12 and 13
   - size 14 is nice 'n big, i dig it
 
-MesloLSG NF
-  - gathers the best from powerline and others
-
-PowerLine (series)
+PowerLine (bundle)
+  - bundle of fonts from the popular PowerLevel10k zsh bundle
   - forked from source code pro
+  - https://github.com/powerline/fonts
+  - contains all of the fonts here!
+  - TODO: try some of these, then uninstall this, keeping only what you need
 
-# source code pro
-  - more compact, adds a little blur, otherwise about the same as dejavu sans mono
-git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
-fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
+source code pro
+  - more sans than dejavu! very clear 'n spacey
+  - by Adobe
+  - git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
+  - fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 
 Cantarell
   - used by Manjaro for ui elements
 
-iconsolata
+inconsolata
+  - open source consolas, though not as good as the original
+
+consolas
+  - on Windows computers, closed-source?
+
+
+
+
+vintage terminal style fonts
+
+Dina
+  - https://github.com/zshoals/Dina-Font-TTF-Remastered
+
+proggy fonts
+  - old school
