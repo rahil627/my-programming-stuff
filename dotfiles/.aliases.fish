@@ -5,7 +5,7 @@
 #fi
 
 # for fish, just run this file after editing it:
-# fish .alises-fish
+# fish .aliases-fish
 
 # notes:
 # add -s flag to all alias -s commands, then run this file as a fish script
