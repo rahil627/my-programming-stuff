@@ -1,10 +1,12 @@
-
 chromeos terminal
-  - size 14
+  - size 13-16
+  - noto sans mono, 16
 
 vs code
-  - size 14, but has custom dpi (exec on start)
-
+  - size 13-14, but has custom dpi (exec on start)
+  - source code pro, 13
+  - fira mono
+    - for some reaason, fira mono is more seriphy than noto sans mono on terminal, and the inverse is true for vs code
 
 https://kinsta.com/blog/best-programming-fonts/
   - TODO: the one's that cost money might just be even better!!
@@ -31,7 +33,7 @@ fira code
 JetBrains sans mono
   - a cute robotic version of dejavu, with long characters shortened nicely
 
-dejavu sans mono == noto sans mono?
+dejavu sans mono == noto sans mono? ~= roboto mono
   - default
   - more line space on odd numbers, compare size 12 and 13
   - size 14 is nice 'n big, i dig it
@@ -47,6 +49,7 @@ PowerLine (bundle)
     - good: otherwise does many good things like: a better 'g', bigger symbols, aligned symbols, etc.
 
 source code pro
+  - a classic
   - more sans than dejavu! very clear 'n spacey
   - by Adobe
   - git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
@@ -57,8 +60,10 @@ Cantarell
 
 Cousine
   - squashes the f and l, i prefer it longer
+  - too wide
 
 inconsolata
+  - a classic
   - open source consolas, though not as good as the original
 
 consolas
