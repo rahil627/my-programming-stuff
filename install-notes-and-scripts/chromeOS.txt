@@ -19,8 +19,8 @@ change font
   - in chrome browser -> settings -> search for apperance
 
 change terminal appearance
+  - terminal -> terminal settings (in the ui)
   - chrome-untrusted://terminal/html/nassh_preferences_editor.html
-  - font, font size, etc.
 
 increase dpi on vs code
   - https://www.reddit.com/r/Crostini/comments/cesxr0/vscode_ui_and_fonts_too_small_heres_how_to_fix_it/

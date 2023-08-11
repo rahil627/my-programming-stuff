@@ -1,6 +1,7 @@
 chromeos terminal
   - size 13-16
   - noto sans mono, 16
+  - change font color to be slightly transparent (terminal settings -> appearance)
 
 vs code
   - size 13-14, but has custom dpi (exec on start)
