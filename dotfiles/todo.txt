@@ -1,4 +1,15 @@
 
+bindings dotfile?
+  - check what fzf_fish plug-in binds, then create own bindings
+  - control+lower-case-only, alt+anything
+  - bind function keys for stuff too?
+  - c+a+r = reverse search, c+a+f = search directory with preview, a+c cd "widget", c+t find file "widget"
+  - should make it:
+  - c+f = search file without preview
+  - c+a+f = search file with preview
+  - c+c, c+h, c+r = reverse search command history
+  - c+d = directory explorer / navigator
+
 test changing terminal colors via iOS app, otherwise delete base16 themes?
 
 delete ctags stuff?

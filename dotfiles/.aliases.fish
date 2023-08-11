@@ -45,8 +45,7 @@ alias -s cp='cp -iv'
 alias -s mkdir='mkdir -pv'
 alias -s rmdir='rmdir -v'
 
-# man replacement
-alias -s t='tldr'
+# man supplement
 alias -s h='tldr'
 
 # fuzzy search
@@ -59,10 +58,9 @@ alias -s h='tldr'
 alias -s f='ranger'
 
 # contemporary replacements
+# note: do not replace the original commands, bash scripts need to execute them!
 # rg is the actual command for ripgrep by default, there is no 'ripgrep' command
-alias -s grep='rg'
 alias -s fd='fdfind'
-alias -s find='fdfind'
 alias -s f='fdfind'
 
 alias -s v='nvim'
