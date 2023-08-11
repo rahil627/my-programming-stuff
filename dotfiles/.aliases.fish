@@ -66,7 +66,6 @@ alias -s f='ranger'
 
 # TODO: debian has a package named bat already, so it named it 'batcat'
 alias -s bat='batcat'
-alias -s cat='batcat'
 
 
 # rg is the actual command for ripgrep by default, there is no 'ripgrep' command
