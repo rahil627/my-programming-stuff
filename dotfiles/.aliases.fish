@@ -25,13 +25,17 @@
 # ah well!
 
 
-# NOTE: don't use the name of an actual command, it won't override, it'll just execute twice!
+# note: don't use the name of an actual command, it won't override, it'll just execute twice!
 
-# NOTE: if you remove an alias from here, i think the function still remains
-# so then you'd have to use the unalias command
+# note: if you remove an alias from here, i think the function still remains
+# so then you'd have to use the unalias command or functions --erase command
+
+# note: cover all options: verbose and short
 
 # basic shell signals
 alias -s c='clear'
+#alias -s c='clear' -x
+#alias -s ca='clear'
 alias -s q='exit'
 
 # basic file system commands
@@ -58,8 +62,15 @@ alias -s h='tldr'
 alias -s f='ranger'
 
 # contemporary replacements
-# note: do not replace the original commands, bash scripts need to execute them!
+# note: DO NOT replace the original commands, bash scripts need to execute them!
+
+# TODO: debian has a package named bat already, so it named it 'batcat'
+alias -s bat='batcat'
+alias -s cat='batcat'
+
+
 # rg is the actual command for ripgrep by default, there is no 'ripgrep' command
+alias -s ripgrep='rg'
 alias -s fd='fdfind'
 alias -s f='fdfind'
 

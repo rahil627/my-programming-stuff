@@ -29,6 +29,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo apt install ranger
 # vs midnight commander
 
+# replacement basic commands
+sudo apt install bat
+
 # replacement utilities
 sudo apt-get install ripgrep
 sudo apt-get install fd-find
