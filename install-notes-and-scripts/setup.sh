@@ -38,7 +38,7 @@ sudo apt-get install fd-find
 # some text editors
 sudo apt install nano
 sudo apt install vi # for a minimal nvim
-sudo apt install nvim
+sudo apt-get install neovim
 
 # simple community-sourced help for most commands, super practical
 sudo dnf install tldr

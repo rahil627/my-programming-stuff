@@ -8,7 +8,7 @@
 # fish .alises-fish
 
 # notes:
-# add -s flag to all alias -s commands, then run it as a fish script
+# add -s flag to all alias -s commands, then run this file as a fish script
 # alias -s -s <alias -sname> "command(s)" # Or --save
 # this will create functions (all commands are functions in fish)
 # and they will automatically lazy-load
@@ -54,6 +54,20 @@ alias -s h='tldr'
 #alias -s vf='nvim $(fzf)'
 #alias -s cdt='cd $(find * -type d | fzf)'
 #alias -s gct='git checkout $(git branch -r | fzf)'
+
+# (f)ile 'n' directory navigator / explorer
+alias -s f='ranger'
+
+# contemporary replacements
+# rg is the actual command for ripgrep by default, there is no 'ripgrep' command
+alias -s grep='rg'
+alias -s fd='fdfind'
+alias -s find='fdfind'
+alias -s f='fdfind'
+
+alias -s v='nvim'
+alias -s vim='nvim'
+alias -s neovim='nvim'
 
 
 # git, ordered by git work-flow

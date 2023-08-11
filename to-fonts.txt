@@ -42,6 +42,9 @@ PowerLine (bundle)
   - https://github.com/powerline/fonts
   - contains all of the fonts here!
   - TODO: try some of these, then uninstall this, keeping only what you need
+  - source code pro for powerline uses a more bold font (medium?) and adds:
+    - bad: bottom serif to 'i', lowers the '_',
+    - good: otherwise does many good things like: a better 'g', bigger symbols, aligned symbols, etc.
 
 source code pro
   - more sans than dejavu! very clear 'n spacey
@@ -51,6 +54,9 @@ source code pro
 
 Cantarell
   - used by Manjaro for ui elements
+
+Cousine
+  - squashes the f and l, i prefer it longer
 
 inconsolata
   - open source consolas, though not as good as the original

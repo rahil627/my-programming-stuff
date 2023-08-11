@@ -15,6 +15,8 @@ config files:
 
 ~/.config/fish/functions/
   - each function has it's own file
+  - thus far, all of my functions were auto-generated either from aliases or plug-install
+  - otherwise, you'd have to track which ones i made and remember to save to dotfiles! :/
 
 ~/.config/fish/completions/
   - ?
