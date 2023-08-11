@@ -39,12 +39,19 @@ gem "solargraph"
 # TODO: perhaps because i'm using fish shell, there's an error
 # start the program from the fish terminal to force vs code to use current terminal
 code
+# fix this!
 
 
 # for all sorts of cool hackery
 gem install pry
 # can use binding.pry in code to break it and inspect everything up to that point
-
+# pry replaces irb (comes bundled with ruby)? or use both?
+# `cat filename`.capitalize
+# or
+# `cat filename`.pry # "goes into" the returned string, then can execute string methods
+# capitalize!
+# provides a very interactive way to use ruby, learning it's common methods along the way
+# can completely replace shell for most stuff
 
 # debug
 try the user castwide's (maintainer of solargraph) debug extension
