@@ -9,6 +9,13 @@ vs code
   - fira mono
     - for some reaason, fira mono is more seriphy than noto sans mono on terminal, and the inverse is true for vs code
 
+chrome (browser/OS?)
+font size: 18
+strandard: carlito
+serif: georgia
+sans: arimo
+fixed-width: roboto
+
 https://kinsta.com/blog/best-programming-fonts/
   - TODO: the one's that cost money might just be even better!!
 also see powerline fonts
