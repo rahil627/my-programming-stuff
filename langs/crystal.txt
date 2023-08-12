@@ -1,0 +1,9 @@
+crystal-lang.org
+
+the default crystal vs code extension is old
+https://github.com/elbywan/crystalline
+  - TODO: installation is strange...
+
+TODO:
+to run crystal -i, you need to re-install crystal with -i flag (interpreter)
+
