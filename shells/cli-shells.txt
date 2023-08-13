@@ -79,7 +79,6 @@ https://stackoverflow.com/questions/11369522/bash-utility-script-library#1136993
 all OSs / terminal emulators:
   - generally: a *ton* of features over an actual basic terminal: GPU rendering (OpenGL)
 
-  
 kitty
   - overview
     - https://sw.kovidgoyal.net/kitty/overview/#sessions
@@ -110,7 +109,6 @@ kitty
   - super scriptable: api to control it; open tab/window/etc.
   - super extensible: "kittens", written in python
   - overall a whole 'nother layer of customization and complexity
-
 
 foot
   - "A fast, lightweight and minimalistic Wayland terminal emulator"

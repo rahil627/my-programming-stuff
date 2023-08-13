@@ -1,4 +1,7 @@
 
+nvim tabs vs spaces
+  - i changed it to use spaces instead of tabs, will python still work?
+
 bindings dotfile?
   - check what fzf_fish plug-in binds, then create own bindings
     - fzf_configure_bindings --help

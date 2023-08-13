@@ -75,7 +75,7 @@ alias -s bat='batcat'
 # rg is the actual command for ripgrep by default, there is no 'ripgrep' command
 alias -s ripgrep='rg'
 alias -s fd='fdfind'
-alias -s f='fdfind'
+#alias -s f='fdfind'
 
 alias -s v='nvim'
 alias -s vim='nvim'

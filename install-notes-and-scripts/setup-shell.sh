@@ -21,7 +21,7 @@ chsh
 
 # now, from within the fish shell...
 # create aliases / functions
-fish .aliases-fish
+fish ~/.aliases-fish
 
 # install minimalist plug-in manager: fisher
 sudo curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher

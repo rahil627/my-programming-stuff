@@ -61,6 +61,16 @@ https://marketplace.visualstudio.com/items?itemName=KoichiSasada.vscode-rdbg
 
 
 
+
+# for fedora
+# just use chruby!?
+# https://developer.fedoraproject.org/tech/languages/ruby/gems-installation.html
+sudo dnf install ruby ruby-devel rubygem-irb rubygem-pry
+# need fo make sure you have a C compiler to build ruby native extensions
+sudo dnf group install "C Development Tools and Libraries"
+
+
+
 # just do it & ref
 
 https://github.com/planetjekyll/awesome-jekyll-plugins

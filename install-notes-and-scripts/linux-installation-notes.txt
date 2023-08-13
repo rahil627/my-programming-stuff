@@ -1,4 +1,8 @@
 
+TODO: merge this file into setup.sh
+TODO: merge the-tui-dream.txt to setup.sh
+see the-tui-dream.txt
+
 from previous install:
 
 the minimal desktop thingy
@@ -23,62 +27,32 @@ non-native:
 snap(d)
 flatpak
 
-cli:
+shells:
+bash
+  - have this by default, still necessary to run bash scripts
+
+should choose one and stick to it
 fish
   - not compliant with POSIX, bash, etc., so bash script may fail
-  - comes equipped with the most useful shell tools
+  - comes equipped with the most useful shell tools by default
 zsh
   - for the most part, works well with bash, though still not POSIX compliant
   - comes naked, and will require manually tinkering add-ons over time to get it set-up right
 
 core cli apps:
-tldr
-  - way better manual than man
-fzf
-  - holy shit, search entire OS with this!
-ranger
-  - hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck. 
-  - better than gui, incredible
-
 tmux
   - todo: try
 
 others:
-grep replacement
-rg
-  - replace grep
-  - https://github.com/BurntSushi/ripgrep
-
-fd
-  - replace find
-
 htop
 ncdu(?)
   - todo: try
 
-
-
-
 dropbox
   - cli vs app?
-
-dev-related:
-nvim
-git
-gh - github cli
-
-(see notes under langs folder)
-haxe and haxelibs
-ruby and gems
-  - especially pry
 
 snaps:
 code
 sublime-text
-
-
-
-
-
 
 snap is sandboxed, so use it for temporary apps

@@ -21,32 +21,40 @@ source setup-shell.sh # not sure if this is the proper way to execute other scri
 # core shell apps
 
 # fzf
+# holy shit, search entire OS with this!
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 # note: i have this included in the nvim plug-in manager too
 
 # file directory navigator
+# hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck. 
+# better than gui, incredible
+# TODO: try them all!
 sudo apt install ranger
-# vs midnight commander
+# nnn
+# midnight commander
 
 # replacement basic commands
-sudo apt install bat
+sudo apt install exa # ls TODO: try lsd
+sudo apt install bat # cat
 
 # replacement utilities
-sudo apt-get install ripgrep
-sudo apt-get install fd-find
+sudo apt-get install ripgrep # grep
+sudo apt-get install fd-find # find
 
+# simple community-sourced help for most commands, super practical
+sudo dnf install tldr
+# one time, it didn't update the dictionary upon install, so...
+tldr -u
+
+# pry
+# see ruby.txt to install ruby
 
 
 # some text editors
 sudo apt install nano
 sudo apt install vi # for a minimal nvim
 sudo apt-get install neovim
-
-# simple community-sourced help for most commands, super practical
-sudo dnf install tldr
-# one time, it didn't update the dictionary upon install, so...
-tldr -u
 
 # dropbox
 # get the binaries and read the instructions here:
@@ -71,6 +79,9 @@ gh auth login
 gh repo clone my-programming-stuff
 # might have to hand-copy dotfiles, ensuring you don't overwrite some distro-specific configs
 
+# (re)create all aliases/functions
+fish .aliases.fish
+
 # re-build font cache files 
 fc-cache -fv
 # see running font
@@ -79,17 +90,20 @@ fc-cache -fv
 #fc-list
 
 
+
+
+
+
+# optional: install langs as you need them
+
 # haxe
 sudo dnf install haxe
 # can choose any directory to set the haxelib location
 mkdir ~/haxelib && haxelib setup ~/haxelib
 
 # ruby
-# https://developer.fedoraproject.org/tech/languages/ruby/gems-installation.html
-sudo dnf install ruby ruby-devel rubygem-irb rubygem-pry
-# need fo make sure you have a C compiler to build ruby native extensions
-sudo dnf group install "C Development Tools and Libraries"
-
+# see ruby.txt
+# needed for pry!
 
 
 
