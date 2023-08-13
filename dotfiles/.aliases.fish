@@ -64,6 +64,8 @@ alias -s f='ranger'
 
 # contemporary replacements
 # note: DO NOT replace the original commands, bash scripts need to execute them!
+alias -s lt='exa --tree --git-ignore'
+alias -s lat='exa --tree --all --git-ignore' # vs lta
 alias -s llt='exa --tree --all --long --git-ignore' # vs llat, llta
 
 # TODO: debian has a package named bat already, so it named it 'batcat'
