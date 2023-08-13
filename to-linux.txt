@@ -1,4 +1,9 @@
 
+to install an app manually:
+copy the binary to /usr/bin/ for most distros
+then you should be able to run the binary via command line
+
+
 
 # customization
 the linux world is full of customization, like the way kids do for desktop computer hardware, bicycles, motorcycles, and cars.

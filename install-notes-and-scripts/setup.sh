@@ -30,9 +30,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck. 
 # better than gui, incredible
 # TODO: try them all!
-sudo apt install ranger
+sudo apt install lf # might have to manually install
+# ranger # python, slow-startup on chromebook
+# lf # ranger in go, less bloated too
 # nnn
-# midnight commander
+# midnight commander # old-school
 
 # replacement basic commands
 sudo apt install exa # ls TODO: try lsd

@@ -60,7 +60,7 @@ alias -s h='tldr'
 #alias -s gct='git checkout $(git branch -r | fzf)'
 
 # (f)ile 'n' directory navigator / explorer
-alias -s f='ranger'
+alias -s f='lf'
 
 # contemporary replacements
 # note: DO NOT replace the original commands, bash scripts need to execute them!
@@ -76,6 +76,7 @@ alias -s bat='batcat'
 alias -s ripgrep='rg'
 alias -s fd='fdfind'
 #alias -s f='fdfind'
+#alias -s diff='delta'
 
 alias -s v='nvim'
 alias -s vim='nvim'
@@ -119,7 +120,6 @@ alias -s cr='crystal'
 # experimental
 # TODO: test these
 #alias -s cl='cloc . --exclude-dir=node_modules,.nuxt,build,.vscode,dist --exclude-lang=JSON'
-#alias -s r='ranger'
 
 
 
