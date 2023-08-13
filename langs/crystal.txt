@@ -1,6 +1,6 @@
 crystal-lang.org
 
-the default crystal vs code extension is old, so:
+the default crystal vs code extension doesn't include autocomplete, so:
 install crystalline
   - https://github.com/elbywan/crystalline
   - in the default extension's settings, point vscode's lsp to the binary

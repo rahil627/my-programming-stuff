@@ -41,8 +41,20 @@ sudo apt install exa # ls TODO: try lsd
 sudo apt install bat # cat
 
 # replacement utilities
-sudo apt-get install ripgrep # grep
-sudo apt-get install fd-find # find
+# https://news.ycombinator.com/item?id=26561211
+sudo apt-get install ripgrep # grep & ack
+# TODO: try fzf+ripgrep
+# https://github.com/junegunn/fzf#3-interactive-ripgrep-integration
+sudo apt-get install fd-find # find & parallel
+# zoxide > cd
+# delta > diff
+# xh > curl & httpie
+# sd > sed
+
+# dust > du
+# procs > ps
+# bottom > top
+
 
 # simple community-sourced help for most commands, super practical
 sudo dnf install tldr

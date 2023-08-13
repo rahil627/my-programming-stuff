@@ -1,0 +1,7 @@
+can just try an installation of Kali Linux, which comes equipped with pop hacking tools
+
+read https://www.reddit.com/r/ethicalhacking/comments/x8an2u/would_you_start_with_nmap_wireshark_or_metasploit/
+
+
+https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html
+
