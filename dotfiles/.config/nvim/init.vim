@@ -444,10 +444,17 @@ colorscheme onehalfdark
 " CoC provides a lot of these in it's defaults too
 
 " don't need with automatic plugin, but oh well
-set tabstop=4
-set shiftwidth=4
 
+" use 2 spaces instead of tabs
+" https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
+" keep tabs width at 8 so that you can see them easily
+set tabstop=8 softtabstop=0
 
+" however, indent (using '<<' and '>>') using two spaces
+set shiftwidth=2 smarttab
+
+" make the tab key insert space characters
+set expandtab
 
 
 
