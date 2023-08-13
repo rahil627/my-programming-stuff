@@ -9,6 +9,9 @@ function bind-keys
   # note: this ERASES ALL PREVIOUS BINDINGS by default!
   fish_vi_key_bindings
 
+  # '/' = grep history, not as good as fzf though
+  # '[' and ']' go to previous/next command with the token currently under the cursor
+
   # optional: can combine the default/emacs bindings
   # Execute this once per mode that emacs bindings should be used in
   #fish_default_key_bindings -M insert
@@ -20,18 +23,7 @@ function bind-keys
   #fish_vi_key_bindings --no-erase insert
 
 
-  # remove default fzf bindings (see .fzf/shell/key-bindings.fish)
-  # not sure where it's getting called... .fzf.fish plugin?
-  bind -e \ct fzf-file-widget
-  bind -e \cr fzf-history-widget
-  bind -e \ec fzf-cd-widget
-  # for insert mode of vim mode
-  if bind -M insert > /dev/null 2>&1
-    bind -e -M insert \ct fzf-file-widget
-    bind -e -M insert \cr fzf-history-widget
-    bind -e -M insert \ec fzf-cd-widget
-  end
-
+# keep bindings here, so it's easy to remember n change
 # add new fzf bindings
   bind \ef fzf-file-widget
   bind \eh fzf-history-widget
@@ -45,10 +37,4 @@ end
 
 
 bind-keys
-
-# not sure.. maybe for reverse search?
-#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-
-
 
