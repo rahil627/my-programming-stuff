@@ -1,3 +1,4 @@
+#! /usr/bin/fish
 
 # for bash you'd just execute this file from within the main config
 #if [ -f ~/.aliases ]; then
@@ -106,6 +107,7 @@ alias -s gfuckit 'git add -A; git commit -m "(> \'.\')>"; git push;'
 # dev
 alias -s hx='haxe'
 alias -s rb='ruby'
+alias -s cr='crystal'
 # bash
 # fish
 
