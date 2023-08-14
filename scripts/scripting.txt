@@ -1,0 +1,58 @@
+
+ai:
+what is the standard for ruby scripts in regards to making them re-usable via pipeline
+
+Creating reusable Ruby scripts that can be easily integrated into pipelines often involves adhering to certain best practices and design principles. Here are some guidelines to consider:
+
+1. **Modularization:** Break your script into smaller, modular components. This makes it easier to reuse specific functionalities and integrate them into different pipelines.
+
+2. **Use Functions/Methods:** Encapsulate logic within functions or methods. This allows you to call specific pieces of functionality as needed.
+
+3. **Command-Line Interface (CLI):** Create a CLI interface for your script using tools like `OptionParser` or `Thor`. This allows users to provide input parameters through the command line when running the script.
+
+4. **Input and Output Handling:**
+   - Design your script to accept input from various sources like command line arguments, files, or standard input.
+   - Consider allowing users to specify input and output formats, making your script more flexible.
+
+5. **Error Handling:**
+   - Implement robust error handling to provide clear error messages when something goes wrong.
+   - Consider using exceptions to handle exceptional situations.
+
+6. **Configuration:**
+   - Allow users to configure script behavior through configuration files or environment variables.
+   - Use sensible defaults to make the script easy to use out of the box.
+
+7. **Documentation:**
+   - Include clear and concise documentation that explains how to use the script, its purpose, and any required dependencies.
+   - Provide examples of how the script can be used in different pipeline scenarios.
+
+8. **Dependency Management:**
+   - If your script relies on external libraries, manage dependencies using tools like Bundler or Gemfiles.
+   - Clearly document the required dependencies and versions.
+
+9. **Testing:**
+   - Write tests for your script using frameworks like RSpec or MiniTest.
+   - Test different scenarios and edge cases to ensure your script works as expected.
+
+10. **Versioning:**
+    - If your script evolves over time, consider implementing versioning to manage changes and ensure backward compatibility.
+
+11. **Logging:**
+    - Implement logging to provide insights into script execution and debugging information.
+
+12. **Packaging and Distribution:**
+    - Consider packaging your script as a gem if it's meant to be widely distributed and reused.
+    - Host the gem on RubyGems.org or a private gem server for easy installation.
+
+13. **Code Quality:**
+    - Follow Ruby's style guide (like RuboCop) to maintain consistent and clean code.
+    - Use meaningful variable and method names to enhance readability.
+
+14. **Source Control:**
+    - Use a version control system (e.g., Git) to manage your script's source code. This makes collaboration and versioning easier.
+
+15. **Continuous Integration (CI):**
+    - Set up CI/CD pipelines to automatically test and deploy changes to your script.
+    - This ensures that your script remains functional as you make updates.
+
+By following these guidelines, you can create reusable Ruby scripts that are well-documented, maintainable, and easily integrable into various pipelines.

@@ -29,7 +29,7 @@ gem update --system --no-document
 gem update
 
 # ruby lsp for vs code
-gem install solargraph
+gem install solargraph # community lsp, not sure why it isn't the default one...
 gem install yard # documentation gem, super-set of original ruby docs
 
 # create a Gemfile in the working directory with the following lines:
@@ -52,6 +52,11 @@ gem install pry
 # capitalize!
 # provides a very interactive way to use ruby, learning it's common methods along the way
 # can completely replace shell for most stuff
+
+# find maintained libs here
+https://www.ruby-toolbox.com/
+  - , great for choosing the best lib for a specific purpose (category)
+https://github.com/markets/awesome-ruby
 
 # debug
 try the user castwide's (maintainer of solargraph) debug extension
