@@ -1,3 +1,6 @@
+# TODO: lost these notes because fish-plugins is generated??
+# or maybe i just didn't copy to local copy
+
 # note: do not put comments on the same line as the plug-in
 # note: need a space between # and plug-in/name, in case of commenting
 
