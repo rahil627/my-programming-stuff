@@ -119,9 +119,8 @@ fi
 
 
 
-# TODO i must have added this...
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+
+# set vi-mode =O
+set -o vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
