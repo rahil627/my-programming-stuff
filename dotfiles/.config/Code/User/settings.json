@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "source code pro, mesloLGS NF, 'noto sans mono', 'fira mono', 'Source Code Pro Medium for PowerLine'",
+    "editor.fontSize": 13,
+    "window.zoomLevel": 1,
+    "crystal-lang.server": "/home/rahil627/my-stuff/downloads/crystalline",
+    "crystal-lang.completion": true,
+    "crystal-lang.hover": true,
+    "crystal-lang.implementations": true
+}
