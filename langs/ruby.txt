@@ -1,57 +1,47 @@
-# install
-ruby 2.6 is installed by Debian's package manager, so you must use a version manager to install multiple versions of ruby and for it to select the correct one
-chruby > rbenv > rvm
-  - rvm is a pain
-use chruby if you don't need multiple versions, it's the simplest!
-
-https://github.com/postmodern/chruby
-  - check the readme to install
-  - auto-loads for bash and zsh
-  
-https://github.com/JeanMertz/chruby-fish
-  - if using fish, use this wrapper instead
-  
-https://github.com/postmodern/ruby-install
-  - check readme to install, a little hidden:
-  - https://github.com/postmodern/ruby-install/tree/master#install
-ruby-install --update
-# install latest version of ruby
-ruby-install ruby
-# list versions to install more
-#ruby-install
-# set default version for auto-switcher
-#echo "ruby-3.2.2" > ~/.ruby-version
 
 
-# not sure if necessary...
-gem update --system --no-document
-  - nevermind!, may have broke my gems up
-gem update
-
-# ruby lsp for vs code
-gem install solargraph # community lsp, not sure why it isn't the default one...
-gem install yard # documentation gem, super-set of original ruby docs
-
-# create a Gemfile in the working directory with the following lines:
-source "https://rubygems.org"
-gem "solargraph"
-
-# TODO: perhaps because i'm using fish shell, there's an error
-# start the program from the fish terminal to force vs code to use current terminal
-code
-# fix this!
+can use binding.pry in code to break it and inspect everything up to that point
+pry replaces irb (comes bundled with ruby)? or use both?
+`cat filename`.capitalize
+or
+`cat filename`.pry # "goes into" the returned string, then can execute string methods
+capitalize!
+provides a very interactive way to use ruby, learning it's common methods along the way
+can completely replace shell for most stuff
 
 
-# for all sorts of cool hackery
-gem install pry
-# can use binding.pry in code to break it and inspect everything up to that point
-# pry replaces irb (comes bundled with ruby)? or use both?
-# `cat filename`.capitalize
-# or
-# `cat filename`.pry # "goes into" the returned string, then can execute string methods
-# capitalize!
-# provides a very interactive way to use ruby, learning it's common methods along the way
-# can completely replace shell for most stuff
+SUPER COOL STUFF
+
+https://github.com/pry/pry#command-shell-integration
+`ls -l`.split("\n")
+  - normally use back-ticks for command substitution
+
+file_names=`ls -l`
+  - store it in a temp repl var
+
+.cat #{Dir['*'].sample} | wc -l
+  - use . to begin running a shell command (instead of using pry)
+  - use string interpolation like syntax "#{string}", without quotes, to interpolate ruby code
+
+.echo #{puts object} | rg '2' # searches the object.to_s
+ 
+.echo #{p 'ls`.upcase() + `ls`} | rg doc
+  - can even combine command sub with shell-mode
+
+
+
+gem install pry-doc
+
+# irb
+# ruby's default repl irb is awesome, containing autocomplete!
+
+# ri
+# ruby's console app to search documentation
+# Class#method
+rdoc # re-builds docs?
+
+# ruby comes with a web-server!
+ruby -run -e httpd
 
 # find maintained libs here
 https://www.ruby-toolbox.com/
