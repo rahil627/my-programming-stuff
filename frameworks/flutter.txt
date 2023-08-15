@@ -1,0 +1,5 @@
+
+https://docs.flutter.dev/get-started/install/chromeos
+  - 500mb just for the required dependencies "core dev tools"
+    - maybe installed a different version of llvm than crystal?
+
