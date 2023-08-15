@@ -35,3 +35,7 @@ unalias
 bindings:
 bind
   - use bind command to see bindings
+
+
+add to $PATH env var:
+fish_add_path ~/path/to/bin
