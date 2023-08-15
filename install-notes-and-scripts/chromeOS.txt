@@ -1,3 +1,11 @@
+common problems:
+in case linux is timing out
+turn off ipv6
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+
+
+install:
 move taskbar to the side (to free up vertical screen space)
   - right click taskbar...
 
@@ -30,3 +38,4 @@ increase dpi on vs code
   - #replace this line: Exec=/usr/share/code/code --new-window %F
   - Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--new-window %F"
   - Smaller value for --scale means more magnification. The fonts actually look sharp.
+
