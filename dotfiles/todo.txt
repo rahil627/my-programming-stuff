@@ -1,3 +1,13 @@
+replace debian with archlinux
+  - benefit from having AUR
+replace server distro with openSUSE and can try using nix containers for dev stuff
+
+finish installing flutter dev env
+  - web AND native
+run a sample app in web
+run a sample app in native (Android/ChromeOS)
+run ai gen'd mapping example
+use ai to gen the boiler-plate code of other apps i want to make 
 
 nvim tabs vs spaces
   - i changed it to use spaces instead of tabs, will python still work?

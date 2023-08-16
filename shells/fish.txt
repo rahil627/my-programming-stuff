@@ -1,6 +1,10 @@
 
 see notes in cli-shells.txt
 
+echo (command)
+  - command substitution
+  - bash and ruby use `command` syntax
+
 config files:
 ~/.config/fish/
   - main dir

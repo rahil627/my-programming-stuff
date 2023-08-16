@@ -9,6 +9,8 @@ install crystalline
 pry?
   - https://github.com/I3oris/ic
 
+the default installation installs without the interpreter
+  - https://forum.crystal-lang.org/t/shipping-the-interpreter/4524/16 
   
 TODO:
 to run crystal -i, you need to re-install crystal with -i flag (interpreter)

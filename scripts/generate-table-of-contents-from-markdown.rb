@@ -1,3 +1,7 @@
+#!/usr/bin/ruby
+
+# write a console app script in ruby with the Slop options parser gem that uses the headers of a markdown file to create a table of contents. The input defaults to stdin allowing the use of a pipeline operator and has an option to read from a file. The output defaults to stdout and has an option for inserting to the top of a file.
+
 require 'slop'
 
 # functions
@@ -37,13 +41,14 @@ end
 
 # main
 input_lines = if opts[:input]
-                if opts[:input] == '-' # TODO: or empty?
+                if opts[:input] == '-' # stdin by default
+                  puts "type stuff, then press control + d"
                   $stdin.readlines
                 else
                   File.readlines(opts[:input])
                 end
               else
-                ARGF.readlines
+                ARGF.readlines # handles piping?
               end
 
 table_of_contents = generate_table_of_contents(input_lines)

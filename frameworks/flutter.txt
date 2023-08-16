@@ -3,3 +3,6 @@ https://docs.flutter.dev/get-started/install/chromeos
   - 500mb just for the required dependencies "core dev tools"
     - maybe installed a different version of llvm than crystal?
 
+must install chrome in the linux conatainer for web dev
+otherwise, can do native app dev, without Android Studio?
+

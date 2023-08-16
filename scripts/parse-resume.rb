@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 filename = "Gemfile"
-tags = ["hospitality", "tech", "community"]
+tags = ["H", "T", "C"]
 
 # console part
 puts tags
