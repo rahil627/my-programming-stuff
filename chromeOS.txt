@@ -1,0 +1,20 @@
+
+
+
+pro-tips:
+search + v
+  - show last few item in the clipboard
+
+
+advanced settings:
+chrome://flags
+
+troubleshooting:
+network probs?:
+try changing network connection to use google servers
+try clear host dns cache
+
+in case linux is timing out
+turn off ipv6
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sysctl -w net.ipv6.conf.all.disable_ipv6=1

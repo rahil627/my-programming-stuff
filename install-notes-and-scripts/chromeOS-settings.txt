@@ -1,9 +1,3 @@
-common problems:
-in case linux is timing out
-turn off ipv6
-sysctl -w net.ipv6.conf.default.disable_ipv6=1
-sysctl -w net.ipv6.conf.all.disable_ipv6=1
-
 
 install:
 move taskbar to the side (to free up vertical screen space)

@@ -1,0 +1,23 @@
+
+
+# install base dev tools required to make AUR packages
+sudo pacman -S base-devel
+
+# make AUR package
+# -s = --syncdeps, -i = --install
+makepkg -si
+
+
+# maintenance
+# periodically remove unused packages
+https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)
+
+
+
+
+notes:
+
+# check file-systems mounted
+mount | grep ext4
+mount | grep vda
+# /dev/vda on /opt/google/cros-containers type ext4 (ro,relatime)
