@@ -17,10 +17,6 @@ which fish
 # change shell, will prompt you for entering the file-path
 chsh
 
-# create aliases / functions
-# note: requires copying from my dotfiles first
-fish ~/.aliases-fish
-
 # install minimalist plug-in manager: fisher
 sudo curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
@@ -29,3 +25,7 @@ sudo curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functio
 # then run
 fisher update
 
+# create aliases / functions
+# note: requires copying from my dotfiles first
+# put this after update, in case i overwrote plugin functions
+fish ~/.aliases-fish
