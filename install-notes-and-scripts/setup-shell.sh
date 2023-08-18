@@ -18,13 +18,14 @@ which fish
 chsh
 
 # create aliases / functions
-# note: requires copying dotfiles first
+# note: requires copying from my dotfiles first
 fish ~/.aliases-fish
 
 # install minimalist plug-in manager: fisher
 sudo curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 # plug-ins
-# located in: .config/fish/fish_plugins
+# note: requires copying from my dotfiles to: ~/.config/fish/fish_plugins
 # then run
-#fisher update
+fisher update
+
