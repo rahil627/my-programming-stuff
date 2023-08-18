@@ -1,13 +1,10 @@
-# shell
-# install latest version here:
-# https://fishshell.com/
+# shell install script
 
 # warning: popular linux package managers are hella out-dated, so
 # go to https://fishshell.com/ and download the latest one
 
-# fedora install
 # replace bash with a more contemporary shell
-#sudo dnf install fish
+sudo pacman -S fish
 
 # fedora doesn't include common linux/unix utilities by default
 # maybe needed for chsh
@@ -15,12 +12,13 @@
 
 # get file-path of shell
 which fish
+# use /usr/bin/fish over /bin/fish
 
 # change shell, will prompt you for entering the file-path
 chsh
 
-# now, from within the fish shell...
 # create aliases / functions
+# note: requires copying dotfiles first
 fish ~/.aliases-fish
 
 # install minimalist plug-in manager: fisher

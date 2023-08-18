@@ -1,19 +1,24 @@
-# THIS IS NOT TO BE RUN AS A SCRIPT...yet?
+# TODO: THIS IS NOT TO BE RUN AS A SCRIPT...yet?
+# https://github.com/caarlos0/dotfiles.fish/blob/main/script/bootstrap.fish
+
 # TODO: move to notes.txt
+
+
 # how to install stuff
-# google github cli
-#   - download the correct release from the github repo
-# sudo dnf install ./[package-name]
-# replace dnf with apt for Debian OS
+# sudo pacman -S ./package-name # for fedora
+# sudo apt install package-name # for debian
 
 
 # sync the OS package manager
 # before installing anything
-sudo dnf update
+# sudo apt update
 
 # update the OS
-sudo dnf update
-sudo dnf upgrade
+# sudo apt update
+# sudo apt upgrade
+
+# update everything for arch
+pacman -Syu # TODO: read the arch-wiki maintenance article
 
 # main stuff
 source setup-shell.sh # not sure if this is the proper way to execute other scripts...
@@ -24,40 +29,45 @@ source setup-shell.sh # not sure if this is the proper way to execute other scri
 # holy shit, search entire OS with this!
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
-# note: i have this included in the nvim plug-in manager too
+# note: i have this exact two lines included in the nvim plug-in manager too
+# prompts:
+# autocomplete? yes
+# bindings? TODO
+# shell integration? nah (adds to .bashrc and some fish config file
 
 # file directory navigator
 # hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck. 
 # better than gui, incredible
 # TODO: try them all!
-sudo apt install lf # might have to manually install
-# ranger # python, slow-startup on chromebook
-# lf # ranger in go, less bloated too
+sudo pacman -S lf # might have to manually install
+# lf # like ranger but written in go, less bloated too
 # nnn
 # midnight commander # old-school
 
 # replacement basic commands
-sudo apt install exa # ls TODO: try lsd
-sudo apt install bat # cat
+sudo pacman -S exa # ls TODO: try lsd
+sudo pacman -S bat # cat
 
 # replacement utilities
 # https://news.ycombinator.com/item?id=26561211
-sudo apt-get install ripgrep # grep & ack
+sudo pacman -S ripgrep # grep & ack
 # TODO: try fzf+ripgrep
 # https://github.com/junegunn/fzf#3-interactive-ripgrep-integration
-sudo apt-get install fd-find # find & parallel
+sudo pacman -S fd # find & parallel, fd-find package in debian
 # zoxide > cd
-# delta > diff
+yay -S delta # diff
 # xh > curl & httpie
-# sd > sed
+sudo pacman -S sd # sed
 
 # dust > du
 # procs > ps
 # bottom > top
 
 
+
+# essentials
 # simple community-sourced help for most commands, super practical
-sudo dnf install tldr
+sudo pacman -S tldr # man
 # one time, it didn't update the dictionary upon install, so...
 tldr -u
 
@@ -66,9 +76,13 @@ tldr -u
 
 
 # some text editors
-sudo apt install nano
-sudo apt install vi # for a minimal nvim
-sudo apt-get install neovim
+sudo pacman -S nano
+sudo pacman -S vi # for a minimal nvim
+sudo pacman -S neovim
+
+# if gui, add some terminals
+sudo pacman alacritty # vs foot
+sudo pacman kitty
 
 # dropbox
 # get the binaries and read the instructions here:
@@ -78,11 +92,12 @@ dropbox start
 
 
 # dev-related stuff
-sudo dnf install git
+sudo pacman -S git
 
-sudo dnf install gh
+sudo pacman -S gh
 # create an auth token here: https://github.com/settings/tokens
 # select most of the access check-marks when creating the token
+# TODO: the https method is simpler, why use token?
 gh auth login
 # go through the cli prompts, paste in the auth token
 # now git won't prompt you for a password anymore! :)
@@ -111,7 +126,7 @@ fc-cache -fv
 # optional: install langs as you need them
 
 # haxe
-sudo dnf install haxe
+sudo pacman -S haxe
 # can choose any directory to set the haxelib location
 mkdir ~/haxelib && haxelib setup ~/haxelib
 
@@ -123,14 +138,4 @@ mkdir ~/haxelib && haxelib setup ~/haxelib
 
 # possible garbage
 
-dkpg
-  - why not just use 'dnf install ./package'?
-
-# install homebrew
 # homebrew is garbage, try to avoid installing this
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# it will then tell you to run some commands depending on your OS
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/ra/.profile
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# uninstall that garbage
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
