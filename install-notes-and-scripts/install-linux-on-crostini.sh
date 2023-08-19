@@ -7,6 +7,9 @@ https://gist.github.com/baldrailers/09ba52a17219ca1e8fbf233dc8a4b375
 https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md
   - some notes on running customer containers on chromeos
 
+https://github.com/edeloya/ChromeOS-Terminal-LXC-LXD
+  - how to connect lxc to terminal app?
+
 
 # TODO: note: in order to access files, must be named penguin?
 # TODO: note: can have multiple containers, is it a chromeos beta only things?

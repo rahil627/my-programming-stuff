@@ -1,10 +1,12 @@
 
-
+https://www.reddit.com/r/chromeos/
 
 pro-tips:
 search + v
   - show last few item in the clipboard
 
+change app shortcut command line options
+  - Take a look under /usr/share/applications/ and/or ~/.local/share/applications/. That's where you'll find the *.desktop files which define how an app gets listed in the launcher. You should be able to edit the Exec= line there to change how the executable gets called.
 
 advanced settings:
 chrome://flags

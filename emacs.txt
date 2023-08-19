@@ -1,5 +1,15 @@
 
+
+tips, tutorials, help:
+https://github.com/emacs-tw/awesome-emacs#tutorials
+discord
+discourse
+zaiste video series
+
+
 beginner bundles:
+https://github.com/emacs-tw/awesome-emacs#starter-kit
+
 spacemacs
   - "a community-drive emacs distro"
   - sounds like 'oh my zsh', which is not good
