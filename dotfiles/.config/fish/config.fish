@@ -36,5 +36,9 @@ function bind-keys
 end
 
 
+
+
 bind-keys
 
+# only necessary after updating aliases file
+# source ~/.config/fish/aliases.fish

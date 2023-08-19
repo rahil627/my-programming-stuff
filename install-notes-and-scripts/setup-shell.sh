@@ -17,6 +17,9 @@ which fish
 # change shell, will prompt you for entering the file-path
 chsh
 
+# set vi mode
+fish_vi_key_bindings
+
 # install minimalist plug-in manager: fisher
 sudo curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 

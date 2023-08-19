@@ -3,7 +3,11 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# [ -z "$PS1" ] && return # from older install
+[[ $- != *i* ]] && return # from arch-linux install
+
+PS1='[\u@\h \W]\$ ' # from arch-linux install
+
 
 # base16 command doesn't exist... :/
 # Base16 Shell
@@ -33,6 +37,65 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+
+# enable color support
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+fi
+
+
+
+
+
+
+# aliases
+
+# can seperate into another file to share the config across multiple shells
+# nahhhh, would have to transpile it to other shell scripting languages (such as fish language)
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+
+
+
+# set vi-mode =O
+set -o vi
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+
+
+
+
+
+
+
+# TODO: too much, test and remove it
+# also limited to debian
+function addColoredPrompt {
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -76,51 +139,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+}
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-
-
-
-
-
-# aliases
-
-# can seperate into another file to share the config across multiple shells
-
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
-
-
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-
-
-
-# set vi-mode =O
-set -o vi
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+addColoredPrompt

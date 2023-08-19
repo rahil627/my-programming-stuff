@@ -55,7 +55,7 @@ sudo pacman -S ripgrep # grep & ack
 # https://github.com/junegunn/fzf#3-interactive-ripgrep-integration
 sudo pacman -S fd # find & parallel, fd-find package in debian
 # zoxide > cd
-yay -S delta # diff
+sudo pacman -S delta # diff
 # xh > curl & httpie
 sudo pacman -S sd # sed
 

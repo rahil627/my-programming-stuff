@@ -2,6 +2,9 @@ replace debian with archlinux
   - benefit from having AUR
 replace server distro with openSUSE and can try using nix containers for dev stuff
 
+try DOOMemacs vs nvim
+  - find a sane nvim config like doomemacs
+
 finish installing flutter dev env
   - web AND native
 run a sample app in web

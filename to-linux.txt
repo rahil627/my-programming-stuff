@@ -5,6 +5,13 @@ then you should be able to run the binary via command line
 
 
 
+# distros
+debian
+  - it works, stable as it gets
+  - to use more recent packages, just download them using snaps, docker, etc.
+    - benefits from being safe too
+  - the main community-based distro
+
 # customization
 the linux world is full of customization, like the way kids do for desktop computer hardware, bicycles, motorcycles, and cars.
 
