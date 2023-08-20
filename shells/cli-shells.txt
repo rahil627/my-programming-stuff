@@ -86,7 +86,7 @@ all OSs / terminal emulators:
     - meant to combine your own terminal multiplexor (tmux), and other apps
   - GPU-rendering via OpenGL
   - "vi mode"
-    - conflict with fish?
+    - fish only covers the prompt, this covers the entire buffer!
   - made with Rust
   - https://github.com/alacritty/alacritty
 
