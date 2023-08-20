@@ -3,9 +3,15 @@ to install an app manually:
 copy the binary to /usr/bin/ for most distros
 then you should be able to run the binary via command line
 
-
-
 # distros
+https://www.reddit.com/r/openSUSE/comments/x7ge7j/thinking_about_moving_from_arch_based_to_opensuse/
+
+openSUSE
+  - Tumbleweed
+    - rolling release distro of openSUSE
+    - OBS, OpenQA, snapper, BtrFs by default, YasT
+    - AUR (arch's user repo) > OBS
+
 debian
   - it works, stable as it gets
   - to use more recent packages, just download them using snaps, docker, etc.

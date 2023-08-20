@@ -42,3 +42,18 @@ bind-keys
 
 # only necessary after updating aliases file
 # source ~/.config/fish/aliases.fish
+
+
+# set appearance
+# can use 'fish_config' command to set up the fish shell using a web-based gui
+
+# use this to help you find a theme, displaying text within your terminal
+# fish_config theme show
+# fish_config theme choose [theme_name]
+
+set -g fish_greeting "herro little fishy :)
+don't forget to go toward nature,
+toward yourself,
+toward the life you used to live"
+
+

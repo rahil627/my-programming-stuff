@@ -1,9 +1,36 @@
 
 see notes in cli-shells.txt
 
+shorcuts:
+https://fishshell.com/docs/current/interactive.html
+  - seems like the most useful page
+
+c+r
+  - fuzzy search command history
+
+c+i
+  - fuzzy'ish search commands
+  - with one-liner description!
+
+[ and ]
+  - fuzzy search using the word beneath the cursor
+
+a+left, a+right
+  - go to previous/next directory
+  - prevd/nextd command
+
+dirh
+  - directory history
+cdh
+  - cd history
+
+
+fish language:
+see learn x in y minutes website
 echo (command)
   - command substitution
   - bash and ruby use `command` syntax
+
 
 config files:
 ~/.config/fish/
@@ -26,19 +53,18 @@ config files:
   - ?
 
 
-
 aliases:
-alias
+alias rm='rm -vi'
   - adds an alias to current sessions memory
-alias -s
+alias -s rm='rm -vi'
   - saves it into a function in ~/.config/fish/function/
-unalias
+functions --erase rm
   - remove an alias, and hopefully function too?
 
 
 bindings:
 bind
-  - use bind command to see bindings
+  - use 'bind' command to see bindings
 
 
 add to $PATH env var:

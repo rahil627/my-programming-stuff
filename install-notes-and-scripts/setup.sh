@@ -1,7 +1,13 @@
 # TODO: THIS IS NOT TO BE RUN AS A SCRIPT...yet?
 # https://github.com/caarlos0/dotfiles.fish/blob/main/script/bootstrap.fish
+# should def use a basic bash script instead: no functions, straight commands
+# otherwise, just write it in ruby and transpile it to bash, lol
+# TODO: copy dotfiles
 
 # TODO: move to notes.txt
+
+# TODO: make this code platform independent
+# if arch, use 'pacman -S'
 
 
 # how to install stuff
@@ -81,8 +87,8 @@ sudo pacman -S vi # for a minimal nvim
 sudo pacman -S neovim
 
 # if gui, add some terminals
-sudo pacman alacritty # vs foot
-sudo pacman kitty
+sudo pacman -S alacritty # vs foot
+sudo pacman -S kitty
 
 # dropbox
 # get the binaries and read the instructions here:

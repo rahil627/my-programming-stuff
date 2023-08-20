@@ -20,6 +20,10 @@
 
 # note: cover all options: verbose and short
 
+# fish commands
+# TODO: what to do about commands that require input?
+#alias -s unalias='functions --erase'
+
 # basic shell signals
 alias -s c='clear'
 #alias -s c='clear' -x
@@ -28,12 +32,15 @@ alias -s q='exit'
 
 # basic file system commands
 # TODO: config these, just the ls commands
-alias -s l='ls -CF'
-alias -s ll='ls -alF'
-alias -s la='ls -A'
+alias -s l='ls'
+alias -s ll='ls -l' # long (no --long flag)
+alias -s lla='ls -la'
+alias -s la='ls -a' # --all
 
-alias -s mv='mv -iv'
+alias -s mv='mv -iv' # --interactive --verbose
 alias -s cp='cp -iv'
+alias -s cpr='cp -ivr' # --recursive
+alias -s cpa='cp -iv --parents' # not the same as -p
 alias -s mkdir='mkdir -pv'
 alias -s rmdir='rmdir -v'
 
