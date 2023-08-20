@@ -79,6 +79,17 @@ https://stackoverflow.com/questions/11369522/bash-utility-script-library#1136993
 all OSs / terminal emulators:
   - generally: a *ton* of features over an actual basic terminal: GPU rendering (OpenGL)
 
+**alacritty**
+  - "a modern terminal emulator that comes with sensible defaults, but allows for extensive configuration."
+    - very fish-like, just works, no config needed
+  - "By integrating with other applications, rather than reimplementing their functionality..."
+    - meant to combine your own terminal multiplexor (tmux), and other apps
+  - GPU-rendering via OpenGL
+  - "vi mode"
+    - conflict with fish?
+  - made with Rust
+  - https://github.com/alacritty/alacritty
+
 kitty
   - overview
     - https://sw.kovidgoyal.net/kitty/overview/#sessions
@@ -115,12 +126,6 @@ foot
   - very fast
   - according to the maker of NotCurses tui lib, this one is awesome if you use Wayland
   - https://codeberg.org/dnkl/foot
-
-alacritty
-  - OpenGL, contemporary terminal and terminal multiplexor (basically managing multiple terminal instances)
-  - "vi mode"
-  - made with Rust
-  - https://github.com/alacritty/alacritty
 
 
   
