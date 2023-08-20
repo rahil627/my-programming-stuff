@@ -1,0 +1,6 @@
+
+control+shift+space
+  - toggle vi-mode, normal / visual combo
+  - press i (insert) to exit
+    - or control+shift+space again
+
