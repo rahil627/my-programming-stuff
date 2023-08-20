@@ -25,14 +25,26 @@ function bind-keys
 
 # keep bindings here, so it's easy to remember n change
 # add new fzf bindings
-  bind \ef fzf-file-widget
-  bind \eh fzf-history-widget
-  bind \ec fzf-cd-widget
+# \e = alt
+  bind \ef fzf-file-widget # a+f = fzf find file-path
+  bind \eh fzf-history-widget # a+h = fzf command history
+  bind \ec fzf-cd-widget # a+c = cd + fzf find file-path
+  # same for vi-mode's insert mode
   if bind -M insert > /dev/null 2>&1
     bind -M insert \ef fzf-file-widget
     bind -M insert \eh fzf-history-widget
     bind -M insert \ec fzf-cd-widget
   end
+
+  # alt+r = vi-mode's replace mode
+
+  bind \cf lf # c+f = file manager
+
+  if bind -M insert > /dev/null 2>&1 # not sure... just copied
+    bind -M insert \cf lf
+  end
+  
+
 end
 
 
