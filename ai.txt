@@ -1,0 +1,14 @@
+
+open ai's official python api
+https://github.com/openai/openai-python
+  - contains a cli
+  - (also the official python api)
+
+pacman -S python-pip
+yay -S python-openai
+# i got errors, fucking packages...
+
+# some user-made openai cli made with go
+# no need for api key!!
+yay -S tgpt-bin
+
