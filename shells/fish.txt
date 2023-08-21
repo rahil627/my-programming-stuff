@@ -5,12 +5,7 @@ shorcuts:
 https://fishshell.com/docs/current/interactive.html
   - seems like the most useful page
 
-see my config.fish for my bindings and notes
-
 c+r
-  - fuzzy search command history?
-
-/
   - fuzzy search command history
 
 c+i

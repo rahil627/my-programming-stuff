@@ -1,12 +1,7 @@
 #! /usr/bin/fish
 
-# NOTE: this is not necessarily a dotfile, as you don't need it, just run it upon updating it
-
 # for fish, just run this file after editing it:
 # fish .aliases-fish
-
-# NOTE: if you remove an alias from here, i think the function still remains
-# functions --erase command # or -e
 
 # notes:
 # add -s flag to all alias -s commands, then run this file as a fish script
@@ -17,9 +12,13 @@
 # it will load them all into the shell's memory (maybe that's the functionality without the -s flag)
 # https://stackoverflow.com/questions/2762994/define-an-alias -s-in-fish-shell
 
-# NOTE: don't use the name of an actual command, it won't override, it'll just execute twice!
 
-# try cover all options: verbose and short
+# note: don't use the name of an actual command, it won't override, it'll just execute twice!
+
+# note: if you remove an alias from here, i think the function still remains
+# functions --erase command # or -e
+
+# note: cover all options: verbose and short
 
 # fish commands
 # TODO: what to do about commands that require input?
@@ -55,7 +54,7 @@ alias -s h='tldr'
 #alias -s gct='git checkout $(git branch -r | fzf)'
 
 # (f)ile 'n' directory navigator / explorer
-alias -s f='lf' # also c+f binding
+alias -s f='lf'
 
 # contemporary replacements
 # note: DO NOT replace the original commands, bash scripts need to execute them!
@@ -72,13 +71,11 @@ alias -s ripgrep='rg' # rg is the actual command for the ripgrep package
 #alias -s f='fdfind'
 alias -s d='delta'
 
-alias -s v='nvim' # control+v binding? alt+e for $EDITOR by default in fish
+alias -s v='nvim'
 alias -s vim='nvim'
 alias -s neovim='nvim'
 
 alias -s e='doom run' # emacs
-
-alias -s ai='tgpt' # openai's chatGPT
 
 
 # git, ordered by git work-flow

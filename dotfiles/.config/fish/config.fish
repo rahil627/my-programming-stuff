@@ -9,6 +9,9 @@ function bind-keys
   # note: this ERASES ALL PREVIOUS BINDINGS by default!
   fish_vi_key_bindings
 
+  # '/' = grep history, not as good as fzf though
+  # '[' and ']' go to previous/next command with the token currently under the cursor
+
   # optional: can combine the default/emacs bindings
   # Execute this once per mode that emacs bindings should be used in
   #fish_default_key_bindings -M insert
@@ -19,14 +22,6 @@ function bind-keys
   # The argument specifies the initial mode (insert, "default" or visual).
   #fish_vi_key_bindings --no-erase insert
 
-
-# fish's default bindings
-# '/' = fish's impl of search command history
-# '[' and ']' go to previous/next command with the token currently under the cursor
-# TODO: control+r ? overwritten by fzf's default bindings?
-
-# fzf's default bindings
-# control+r, control+t, alt+c
 
 # keep bindings here, so it's easy to remember n change
 # add new fzf bindings
@@ -43,12 +38,10 @@ function bind-keys
 
   # alt+r = vi-mode's replace mode
 
-  bind \cv nvim # c+v = vim, also c+e = text editor
   bind \cf lf # c+f = file manager
 
   if bind -M insert > /dev/null 2>&1 # not sure... just copied
     bind -M insert \cf lf
-    bind -M insert \cv nvim
   end
   
 
@@ -61,11 +54,6 @@ bind-keys
 
 # only necessary after updating aliases file
 # source ~/.config/fish/aliases.fish
-
-
-# set some vars
-set -gx EDITOR nvim # used by fish for alt+e binding
-set -gx VISUAL nvim
 
 
 # set appearance

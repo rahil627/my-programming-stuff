@@ -1,6 +1,6 @@
+replace debian with archlinux
+  - benefit from having AUR
 replace server distro with openSUSE and can try using nix containers for dev stuff
-
-create a key binding for cdlf/lfcd, control+c?
 
 try DOOMemacs vs nvim
   - find a sane nvim config like doomemacs
