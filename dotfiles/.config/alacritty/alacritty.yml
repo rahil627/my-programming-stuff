@@ -1,13 +1,28 @@
+
+# https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
+
 window:
-  decorations: none # doesn't work on wayland (or at least crostini's wayland)
   opacity: .85
+  decorations: none # now to figure out how to move it...
+  padding:
+    x: 5
+    y: 5
+
 
 font:
   normal:
-    family: "Mono" # TODO: update to have multiple
+    family: "Mono" # noto sans mono by default for chromeos
   # bold:
   # italic:
+  size: 11 # 11 by default
 
 key_bindings:
-  #- { key: Space, mods: Shift|Control, mode: ~Search, action: ToggleViMode }
+  #- { key: Space, mods: Shift|Control, mode: ~Search, action: ToggleViMode } # default
   - { key: V, mods: Control, mode: ~Search, action: ToggleViMode }
+
+
+#draw_bold_text_with_bright_colors: false
+
+#selection:
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  #save_to_clipboard: false
