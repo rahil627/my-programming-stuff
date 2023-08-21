@@ -28,23 +28,50 @@ function bind-keys
 # fzf's default bindings
 # control+r, control+t, alt+c
 
-# keep bindings here, so it's easy to remember n change
-# add new fzf bindings
+
+# note: config file is run before fish_user_key_bindings
+
+# default fzf bindings (see .fzf/shell/key-bindings.fish)
+# i think upon install it copies it's contents to functions/fzf_key_bindings.fish
+# then normally it's called in fish_user_key_bindings:
+fzf_key_bindings
+# it contains both the functions and the bindings
+
+# TODO: binding then unbinding is jank, but you must call fzf_key_bindings for it to create the widget functions inside
+#bind --erase --mode --key
+bind -e \ct
+bind -e \cr # TODO: this is eating up fish's default binding for reverse command history
+bind -e \ec
+# for insert mode of vim mode
+if bind -M insert > /dev/null 2>&1
+    bind -e -M insert \ct
+    bind -e -M insert \cr
+    bind -e -M insert \ec
+end
+
+
+# create fzf bindings myself here, so it's easy to remember 'n change
 # \e = alt
+# alt+keys to help with terminal stuff
   bind \ef fzf-file-widget # a+f = fzf find file-path
+  bind \ed fzf-file-widget # a+d = fzf find file-path aka directory
   bind \eh fzf-history-widget # a+h = fzf command history
+  bind \er fzf-history-widget # a+r = fzf command history aka reverse command history
   bind \ec fzf-cd-widget # a+c = cd + fzf find file-path
   # same for vi-mode's insert mode
   if bind -M insert > /dev/null 2>&1
     bind -M insert \ef fzf-file-widget
+    bind -M insert \ed fzf-file-widget
     bind -M insert \eh fzf-history-widget
+    bind -M insert \er fzf-history-widget
     bind -M insert \ec fzf-cd-widget
   end
 
-  # alt+r = vi-mode's replace mode
+  # alt+r = vi-mode's replace mode from normal mode?
 
-  bind \cv nvim # c+v = vim, also c+e = text editor
+  # control+keys for jumping to apps
   bind \cf lf # c+f = file manager
+  bind \cv nvim # c+v = vim, also c+e = text editor
 
   if bind -M insert > /dev/null 2>&1 # not sure... just copied
     bind -M insert \cf lf
@@ -55,6 +82,12 @@ function bind-keys
 end
 
 
+
+# bind fzf.fish widgets
+# be explicit about all bindings here
+# TODO: for now, just use c+a+char
+# NOTE: \c\e doesn't work, must use \e\c
+fzf_configure_bindings --directory=\e\cf --history=\e\ch --processes=\e\cp --variables=\e\cv --git_status=\e\cs --git_log=\e\cl 
 
 
 bind-keys
