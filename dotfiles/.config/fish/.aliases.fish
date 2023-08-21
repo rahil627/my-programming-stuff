@@ -78,6 +78,8 @@ alias -s neovim='nvim'
 
 alias -s e='doom run' # emacs
 
+alias -s ai='tgpt' # openai's chatGPT
+alias -s chatgpt='tgpt'
 
 # git, ordered by git work-flow
 alias -s gs='git status'
