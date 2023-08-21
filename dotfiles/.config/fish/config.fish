@@ -62,6 +62,7 @@ bind-keys
 # only necessary after updating aliases file
 # source ~/.config/fish/aliases.fish
 
+functions --erase bat # TODO: hotfix, not going away for some reason...
 
 # set some vars
 set -gx EDITOR nvim # used by fish for alt+e binding

@@ -65,7 +65,6 @@ alias -s llt='exa --tree --all --long --git-ignore' # vs llat, llta
 
 # if debian (too difficult: https://unix.stackexchange.com/questions/6345/how-can-i-get-distribution-name-and-version-number-in-a-simple-shell-script)
 #alias -s bat='batcat' # debian has a package named bat already, so it named it batcat, wtf
-functions --erase bat # not going away for some reason...
 
 alias -s ripgrep='rg' # rg is the actual command for the ripgrep package
 #alias -s fd='fdfind' # package uses fd command on arch, fdfind on debian
