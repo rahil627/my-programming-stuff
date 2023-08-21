@@ -5,6 +5,12 @@ pro-tips:
 search + v
   - show last few item in the clipboard
 
+workspaces ("desks"):
+f5 is the desk button
+4-finger swipe right/left
+alt+tab has a toggle switch to show windows in current desk ot all desks
+shift+search+[1-8]
+
 change app shortcut command line options
   - Take a look under /usr/share/applications/ and/or ~/.local/share/applications/. That's where you'll find the *.desktop files which define how an app gets listed in the launcher. You should be able to edit the Exec= line there to change how the executable gets called
   - https://support.google.com/pixelbook/thread/708306/how-do-i-add-linux-apps-to-the-home-screen?hl=en
