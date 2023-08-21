@@ -1,0 +1,13 @@
+window:
+  decorations: none # doesn't work on wayland (or at least crostini's wayland)
+  opacity: .85
+
+font:
+  normal:
+    family: "Mono" # TODO: update to have multiple
+  # bold:
+  # italic:
+
+key_bindings:
+  #- { key: Space, mods: Shift|Control, mode: ~Search, action: ToggleViMode }
+  - { key: V, mods: Control, mode: ~Search, action: ToggleViMode }
