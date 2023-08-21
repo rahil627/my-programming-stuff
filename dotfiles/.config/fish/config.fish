@@ -9,9 +9,6 @@ function bind-keys
   # note: this ERASES ALL PREVIOUS BINDINGS by default!
   fish_vi_key_bindings
 
-  # '/' = grep history, not as good as fzf though
-  # '[' and ']' go to previous/next command with the token currently under the cursor
-
   # optional: can combine the default/emacs bindings
   # Execute this once per mode that emacs bindings should be used in
   #fish_default_key_bindings -M insert
@@ -22,6 +19,14 @@ function bind-keys
   # The argument specifies the initial mode (insert, "default" or visual).
   #fish_vi_key_bindings --no-erase insert
 
+
+# fish's default bindings
+# '/' = fish's impl of search command history
+# '[' and ']' go to previous/next command with the token currently under the cursor
+# TODO: control+r ? overwritten by fzf's default bindings?
+
+# fzf's default bindings
+# control+r, control+t, alt+c
 
 # keep bindings here, so it's easy to remember n change
 # add new fzf bindings
