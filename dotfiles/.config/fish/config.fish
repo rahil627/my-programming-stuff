@@ -43,10 +43,12 @@ function bind-keys
 
   # alt+r = vi-mode's replace mode
 
+  bind \cv nvim # c+v = vim, also c+e = text editor
   bind \cf lf # c+f = file manager
 
   if bind -M insert > /dev/null 2>&1 # not sure... just copied
     bind -M insert \cf lf
+    bind -M insert \cv nvim
   end
   
 
@@ -59,6 +61,11 @@ bind-keys
 
 # only necessary after updating aliases file
 # source ~/.config/fish/aliases.fish
+
+
+# set some vars
+set -gx EDITOR nvim # used by fish for alt+e binding
+set -gx VISUAL nvim
 
 
 # set appearance

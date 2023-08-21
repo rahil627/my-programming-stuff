@@ -72,7 +72,7 @@ alias -s ripgrep='rg' # rg is the actual command for the ripgrep package
 #alias -s f='fdfind'
 alias -s d='delta'
 
-alias -s v='nvim'
+alias -s v='nvim' # control+v binding? alt+e for $EDITOR by default in fish
 alias -s vim='nvim'
 alias -s neovim='nvim'
 
