@@ -8,7 +8,10 @@ https://fishshell.com/docs/current/interactive.html
 see config.fish for my bindings and notes
 
 c+r
-  - fuzzy search command history
+  - reverse search command history
+
+/
+  - NOT fuzzy search command history
 
 c+i
   - fuzzy'ish search commands
