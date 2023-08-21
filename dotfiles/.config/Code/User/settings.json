@@ -4,5 +4,8 @@
     "crystal-lang.server": "/home/rahil627/my-stuff/downloads/crystalline",
     "crystal-lang.completion": true,
     "crystal-lang.hover": true,
-    "crystal-lang.implementations": true
+    "crystal-lang.implementations": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "window.titleBarStyle": "custom"
 }
