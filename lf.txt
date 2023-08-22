@@ -1,0 +1,15 @@
+config file directory:
+~/.config/lf/lfrc
+
+keyboard shortcuts:
+   lf heavily relies on keyboard shortcuts. Some common ones include:
+   - yy or Y: Copy selected files/directories to the clipboard.
+   - dd or D: Cut (delete) selected files/directories to the clipboard.
+   - pp or P: Paste files/directories from the clipboard.
+   - yy: Copy the current path to the clipboard.
+   - /: Start a search.
+   - n and N: Go to the next and previous search results, respectively.
+   - :: Enter command mode.
+   - ;: toggle preview window
+   - z: displays a small list of common shortcuts
+   
