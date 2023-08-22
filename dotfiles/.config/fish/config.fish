@@ -110,8 +110,13 @@ set -gx VISUAL nvim
 # fish_config theme choose [theme_name]
 
 set -g fish_greeting "herro little fishy :)
-don't forget to go toward nature,
-toward yourself,
-toward the life you used to live"
+don't forget to go toward nature
+toward yourself
+toward the life you used to live
+toward the life you love
+toward the life you so desire everyone to live
+a life full of love
+a love full of life
+and a soul that keeps on giving"
 
 
