@@ -14,8 +14,8 @@ includes:
  - notes
  - code editor configs
  - OS configs
-   - server (dotfiles or nix)
-     - OpenSUSE tumbleed or leap
+   - server
+     - OpenSUSE tumbleed or leap (dotfiles or nix)
    - personal
      - Windows (dual-boot)
      - Mac OS X (dual-boot)
