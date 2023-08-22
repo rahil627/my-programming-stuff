@@ -14,14 +14,12 @@ includes:
  - notes
  - code editor configs
  - OS configs
-   - server ("dot files")
-     - Fedora
-       - if not, OpenSUSE tumbleweed
+   - server
+     - OpenSUSE tumbleed or leap (dotfiles or nix)
    - personal
      - Windows (dual-boot)
-     - ArchLinux (VM vs WSL2)
      - Mac OS X (dual-boot)
-     - ChromeOS with "crostini" Debian linux container
+     - ChromeOS with "crostini" Arch Linux container (dotfiles)
  - scripts
    - every-day use
 
