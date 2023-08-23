@@ -71,7 +71,7 @@ end
 
   # control+keys for jumping to apps
   bind \cf lf # c+f = file manager
-  bind \cv nvim # c+v = vim, also c+e = text editor
+  bind \cv nvim # c+v = vim, also c+e = EDITOR env var by default on fish
 
   if bind -M insert > /dev/null 2>&1 # not sure... just copied
     bind -M insert \cf lf
@@ -82,12 +82,16 @@ end
 end
 
 
+# fish shell default functions binding remaps
+bind \c\r history-pager # also '/'
+bind \c\h history-pager
 
 # bind fzf.fish widgets
 # be explicit about all bindings here
-# TODO: for now, just use c+a+char
+# TODO: for now, just use alt+shift+char until i know for certain i'm not overwriting anything useful
 # NOTE: \c\e doesn't work, must use \e\c
-fzf_configure_bindings --directory=\e\cf --history=\e\ch --processes=\e\cp --variables=\e\cv --git_status=\e\cs --git_log=\e\cl 
+# TODO: try multiple bindings for the same function
+fzf_configure_bindings --directory=\eF --history=\eR --processes=\eP --variables=\eV --git_status=\eS --git_log=\eL 
 
 
 bind-keys
