@@ -101,6 +101,33 @@ functions --erase bat # TODO: hotfix, not going away for some reason...
 set -gx EDITOR nvim # used by fish for alt+e binding
 set -gx VISUAL nvim
 
+# TODO: use fd instead of find, and rg instead of grep
+# show hidden files (currently using fzf.fish binding to show hidden files)
+# https://github.com/junegunn/fzf/issues/337
+# for nvim, use this:
+# set -gx FZF_DEFAULT_COMMAND 'rg --hidden -l ""' # TODO: not working
+
+# update the fzf.fish plugin to show hidden files
+# --no-ignore # what are ignored files?
+# does adding -i (case insensitive) do anything here?
+set fzf_fd_opts --hidden --exclude=.git
+# TODO: might need to create an extra binding for non-hidden files... for now, just use the standard fzf bindings
+
+# update fzf.fish to be case insensitive, and alter the appearance a bit
+# this is taken from the default one provided in _fzf_wrapper
+# note: it will use whatever this value is if it is set, so you must re-add the default values here
+set --export FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*"'
+
+# these are my additional options
+set -x --append FZF_DEFAULT_OPTS '-i --height=100%'
+# -i = case insensitive TODO: the default fzf seems to already be case insensitive...
+# i think --color=dark by default
+# TODO: find a way to have top --margin/padding instead of --height, to fill in the space at the bottom
+# there's a bug that when you maximize the screen, the leftover 10% of past commands display wonky, so i just keep it at --height=100%
+
+
+
+
 
 # set appearance
 # can use 'fish_config' command to set up the fish shell using a web-based gui
