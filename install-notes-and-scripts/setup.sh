@@ -83,7 +83,7 @@ tldr -u
 
 # some text editors
 sudo pacman -S nano
-sudo pacman -S vi # for a minimal nvim
+sudo pacman -S vi # for a minimal nvim (nvim --noplugin threw errors for me)
 sudo pacman -S neovim
 
 # if gui, add some terminals

@@ -66,13 +66,18 @@ alias -s llt='exa --tree --all --long --git-ignore' # vs llat, llta
 # if debian (too difficult: https://unix.stackexchange.com/questions/6345/how-can-i-get-distribution-name-and-version-number-in-a-simple-shell-script)
 #alias -s bat='batcat' # debian has a package named bat already, so it named it batcat, wtf
 
-alias -s ripgrep='rg' # rg is the actual command for the ripgrep package
+# note: ripgrep defaults might affect everything that uses it (fzf, nvim, etc.)
+# -i = --ignore-case
+alias -s rg='rg -i'
+alias -s rgh='rg -i --hidden' # --no-ignore-dot ??, also the -i is duplicated to no ill effect
+alias -s ripgrep='rg -i' # rg is the actual command for the ripgrep package
 #alias -s fd='fdfind' # package uses fd command on arch, fdfind on debian
 #alias -s f='fdfind'
 alias -s d='delta'
 
 alias -s v='nvim' # control+v binding? alt+e for $EDITOR by default in fish
-alias -s vim='nvim'
+#alias -s vi='nvim --noplugin' # --noplugin throws errors :(
+#alias -s vim='nvim --noplugin'
 alias -s neovim='nvim'
 
 alias -s e='doom run' # emacs
