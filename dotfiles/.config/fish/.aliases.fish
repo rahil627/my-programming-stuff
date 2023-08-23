@@ -5,7 +5,10 @@
 # for fish, just run this file after editing it:
 # fish .aliases-fish
 
-# NOTE: if you remove an alias from here, i think the function still remains
+# NOTE: if you remove an alias from here, the function still remains
+# TODO: this doesn't work... :/
+# create our own delete function (including alias)?? :/
+# https://stackoverflow.com/questions/36699092/how-to-remove-functions-from-fishshell-without-deleting-the-function-file-direct
 # functions --erase command # or -e
 
 # notes:
