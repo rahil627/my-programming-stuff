@@ -9,7 +9,9 @@ keyboard shortcuts:
    - yy: Copy the current path to the clipboard.
    - /: Start a search.
    - n and N: Go to the next and previous search results, respectively.
-   - :: Enter command mode.
    - ;: toggle preview window
    - z: displays a small list of common shortcuts
    
+   - :: Enter command mode.
+   - $: shell
+   - %: shell pipe

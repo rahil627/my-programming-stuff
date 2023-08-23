@@ -15,7 +15,8 @@ c+r
 
 c+i
   - fuzzy'ish search commands
-  - with one-liner description!
+  - **with one-liner description!!!**
+    - **also provides a list of flags!!!**
 
 [ and ]
   - fuzzy search using the word beneath the cursor
