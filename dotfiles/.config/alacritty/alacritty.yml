@@ -11,10 +11,11 @@ window:
 
 font:
   normal:
-    family: "Mono" # noto sans mono by default for chromeos
+    family: "hasklig medium" # "Mono" # noto sans mono by default for chromeos
+
   # bold:
   # italic:
-  size: 11 # 11 by default
+  size: 10 # 11-12 by default
 
 key_bindings:
   #- { key: Space, mods: Shift|Control, mode: ~Search, action: ToggleViMode } # default
