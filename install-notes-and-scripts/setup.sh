@@ -86,9 +86,20 @@ sudo pacman -S nano
 sudo pacman -S vi # for a minimal nvim (nvim --noplugin threw errors for me)
 sudo pacman -S neovim
 
+sudo pacman -S wl-clipboard # make nvim clipboard work with wayland TODO: move to nvim config?
+
 # if gui, add some terminals
 sudo pacman -S alacritty # vs foot
 sudo pacman -S kitty
+
+# install some fonts
+# font utility, only for arch?
+# https://wiki.archlinux.org/title/font_configuration
+# other than listing fonts (fc-list), i haven't used it..
+# sudo pacman -S fontconfig
+
+sudo pacman -S adobe-source-code-pro-fonts
+yay -S otf-hasklig
 
 # dropbox
 # get the binaries and read the instructions here:
