@@ -1,8 +1,8 @@
 # TODO: lost these notes because fish-plugins is generated??
 # or maybe i just didn't copy to local copy
 
-# note: do not put comments on the same line as the plug-in
-# note: need a space between # and plug-in/name, in case of commenting
+# NOTE: do not put comments on the same line as the plug-in
+# NOTE: need a space between # and plug-in/name, in case of commenting
 
 # jorgebucaran's list of plug-ins, includes many of his own
 # https://github.com/jorgebucaran/awsm.fish
@@ -11,25 +11,26 @@
 # this plug-in manager is a plug-in!
 jorgebucaran/fisher
 
-# of utmost importance
+# TODO: pop fzf bindings, until you make your own
 PatrickF1/fzf.fish
 # note: requires fzf installation to work
-# TODO: fzf already auto-detects and integrates with fish shell, so...
-# wtf does this do??
 
-# should be included in fish
+# stuff that should be included in fish
 jorgebucaran/autopair.fish
 
-# experimenting
+# TODO: experimenting with prompts:
 # the best prompt thingy, but i def don't want anymore stuff to customize, ugh!
 # ilancosman/tide@v5
 # see github repo for instructions
-# copy font files to ~/.fonts/
 
 # a minimialist prompt thingy
 # can compare this to the native one
 # this one seems good enough for me! simple, no customization, like fish! :)
 jorgebucaran/hydro
+
+# TODO: experimenting theme
+# currently ussing catppuccin frappe
+catppuccin/fish
 
 # REMEMBER TO RUN:
 # fisher update
