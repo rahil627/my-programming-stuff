@@ -7,11 +7,11 @@ https://fishshell.com/docs/current/interactive.html
 
 see config.fish for my bindings and notes
 
-c+r
-  - reverse search command history
+when typing in a file-path, the dir/file-names are fuzzy-searched
+for example: .config/fish/functions/a-long-name, search .c[tab]/f[tab]/f[tab]/long[tab]
 
-/
-  - NOT fuzzy search command history
+/ (and c+r when using the default/emacs-like key bindings)
+  - fuzzy search command history
 
 c+i
   - fuzzy'ish search commands

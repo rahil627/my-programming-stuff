@@ -4,3 +4,5 @@ control+shift+space
   - press i (insert) to exit
     - or control+shift+space again
 
+control+shift+f
+  - search buffer
