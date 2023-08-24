@@ -10,12 +10,24 @@ window:
 
 
 font:
+  # just change this one for testing
   normal:
     family: "hasklig medium" # "Mono" # noto sans mono by default for chromeos
+  
+  size: 10
 
-  # bold:
-  # italic:
-  size: 10 # 11-12 by default
+  bold:
+    family: "hasklig medium"
+    style: Bold
+
+  italic:
+    family: "hasklig medium"
+    style: Italic
+
+  bold_italic:
+    family: "hasklig medium"
+    style: Bold Italic
+
 
 key_bindings:
   #- { key: Space, mods: Shift|Control, mode: ~Search, action: ToggleViMode } # default
