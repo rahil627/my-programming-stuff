@@ -1,0 +1,15 @@
+
+ls | fzf
+  - to get the basic idea of how it works
+
+find/fd | fzf
+  - used for searching files
+
+regex:
+!doesn't-have-this-token has-this-token
+
+
+fzf_default_command env var
+  - try messing with the default flags...
+  - conflicts with fzf.fish, as it will use the fzf_default_command over the one it creates (fzf_default_opts)
+
