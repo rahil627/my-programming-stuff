@@ -1,4 +1,6 @@
 
+https://www.programmingfonts.org/
+  - try fonts here!
 
 fonts.google.com
   - use this site to check out contemporary pop fonts
@@ -11,6 +13,9 @@ https://wiki.archlinux.org/title/fonts
 
 https://archlinux.org/packages/?sort=&repo=Extra&q=ttf&maintainer=&flagged=
   - ttf search of the arch package repo
+
+https://github.com/ryanoasis/nerd-fonts
+  - another good pop collection
 
 chromeos terminal
   - size 13-16
@@ -38,13 +43,21 @@ https://fonts.google.com/?preview.size=13&category=Monospace
 
 
 to try:
+DM Mono
+Ubuntu Mono
+Liberation Mono
+
+commercial fonts:
+Input Mono
+PragmataPro
+Consolas
+Operator Mono
+Dank Mono
 try medium thickness for all fonts!
 https://fonts.adobe.com/search?query=code
   - calling code
   - code saver
-DM Mono
-Ubuntu Mono
-Liberation Mono
+
 
 current favorite:
 **source code pro / hasklig**
@@ -54,6 +67,8 @@ current favorite:
 mononoki
   - trying in terminal
 
+**meslo**
+  - also really good, competitive to source code pro
 
 hasklig <- source code pro
 mesloLGS nf ~= fira mono <- dejavu sans mono
@@ -99,7 +114,6 @@ dejavu sans mono == noto sans mono? ~= roboto mono
 
 PowerLine (bundle)
   - bundle of fonts from the popular PowerLevel10k zsh bundle
-  - forked from source code pro
   - https://github.com/powerline/fonts
   - contains all of the fonts here!
   - TODO: try some of these, then uninstall this, keeping only what you need
@@ -124,6 +138,16 @@ Cousine
 
 Anonymous Pro
   - a bit serify, gothic, very round
+
+Meslo
+  - open-source customized menlo
+  - AUR packages are "Meslo LG [S/M/L]" and ttf-menlo-nerd
+    - nerd take 160mb :(
+
+Menlo
+  - a customized Bitstream Vera Sans Mono
+  - Apple Font
+    - used by Apple's dev tools 'n terminal
 
 Inconsolata
   - open source consolas, though not as good as the original
