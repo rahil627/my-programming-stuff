@@ -151,3 +151,11 @@ a love full of life
 and a soul that keeps on giving"
 
 
+
+
+# set up some specific env vars here
+
+# flutter
+fish_add_path -g opt/flutter/bin
+set -gx CHROME_EXECUTABLE /usr/bin/chromium #--incognito"
+

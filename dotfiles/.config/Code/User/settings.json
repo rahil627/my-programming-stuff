@@ -7,5 +7,17 @@
     "crystal-lang.implementations": true,
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    }
 }
