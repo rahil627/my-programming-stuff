@@ -1,8 +1,85 @@
 
+in vscode can type '>Flutter' to show flutter commands
+'>Flutter select device'
+  - or click the platform device on the bottom right status bar
+  - if it doesn't work, just run it via cli (flutter run -d device-name)
+
+# test flutter setup
+flutter doctor
+
+# show connected "devices" (platforms)
+flutter devices
+
+# runs --debug by default, provides debug tools
+flutter run -d chrome
+
+# release takes longer to compile
+# once compiled though, you're good, then can hot reload
+flutter run -d chrome --release
+
+--
+# setup
+
+# arch linux install
+# https://docs.flutter.dev/get-started/install/linux
+select jdk-openjdk for the latest package
+
+# check probs
+flutter doctor
+
+set path -ux /opt/flutter/bin
+yay -S android-sdk-build-tools
+
+
+# crostini install
+# https://gist.github.com/travisbhartwell/50dc75cb7b7eb10db21523af36a6f6fc
+
+https://proandroiddev.com/flutter-development-on-a-pixelbook-dde984a3fc1e
+
+#pacman -S chromium
+yay -S ungoogled-chromium
+#yay -S chromium-snapshot-bin
+
+
+
+# transpile/compile to linux
+pacman -S clang cmake ninja
+
+# transpile to web/javascript
+# set the env var in bash because vs code uses bash to execute plugin scripts
+# add to .bashrc
+export CHROME_EXECUTABLE="/usr/bin/chromium"
+# or add to settings.json
+"dart.env": {
+        //"ANDROID_HOME": "/home/rajput-hemant/android",
+        "CHROME_EXECUTABLE": "/usr/bin/chromium"
+      }
+    
+
+--
+
 https://docs.flutter.dev/get-started/install/chromeos
   - 500mb just for the required dependencies "core dev tools"
     - maybe installed a different version of llvm than crystal?
 
 must install chrome in the linux conatainer for web dev
 otherwise, can do native app dev, without Android Studio?
+
+
+
+vs code:
+just get Flutter extension
+which auto-installs the Dart extension
+https://docs.flutter.dev/tools/vs-code
+
+process:
+create a github repo with 'gh repo create'
+run command: flutter create application
+move the files to the repo folder
+run command: select device (or click the device on the bottom status bar)
+flutter pub get
+  - vs code should ask you about fetching dependencies
+run w/o debug
+profit?
+
 

@@ -19,5 +19,11 @@
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
-    }
+    },
+    //"terminal.integrated.shell.osx": "/usr/sbin/fish",
+    "dart.env": {
+        //"ANDROID_HOME": "/home/rajput-hemant/android",
+        "CHROME_EXECUTABLE": "/usr/bin/chromium"
+      }
+    
 }
