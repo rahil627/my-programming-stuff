@@ -1,4 +1,10 @@
 
+# add a "plugin" (package) to a project
+flutter pub add plugin_name
+flutter pub add plugin_name_web
+
+
+# building 'n running
 in vscode can type '>Flutter' to show flutter commands
 '>Flutter select device'
   - or click the platform device on the bottom right status bar
@@ -12,10 +18,18 @@ flutter devices
 
 # runs --debug by default, provides debug tools
 flutter run -d chrome
+# --web-renderer html or --web-renderer canvaskit
 
 # release takes longer to compile
 # once compiled though, you're good, then can hot reload
 flutter run -d chrome --release
+
+# web-server without browser
+flutter run -d web-server
+# note: it's hidden by default
+# flutter devices --show-web-server-device
+
+
 
 --
 # setup
