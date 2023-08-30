@@ -58,9 +58,9 @@ lxc console arch
 # press enter afterwards
 
 
-# TODO: update mirrors for pacman
+# update mirrors for pacman?
 # pacman -S reflector
-# reflector -n 10 --sort score > /etc/pacman.d/mirrorlist
+# sudo reflector -n 100 --sort score -c US --save /etc/pacman.d/mirrorlist
 
 
 pacman -S yay
