@@ -1,0 +1,30 @@
+herro
+
+# install
+https://hexdocs.pm/phoenix/installation.html
+
+# install elixir
+# see elixir.txt#install
+
+# double-check version that was installed
+elixir -v
+
+# linux only
+# install a file-system watcher in order to have live-reloading to work completely
+pacman -S inotify-tools
+
+# in case you need a db (can choose any)
+#sudo pacman -S postgresql
+
+
+# use
+
+# create a new project via cli
+mix phx.new hello
+# check for flags such as no database, no live-view etc.
+cd hello
+git init
+
+# create database
+mix ecto.create
+

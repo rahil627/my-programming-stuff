@@ -7,10 +7,13 @@
 
 # https://github.com/postmodern/chruby
 #   - check the readme to install
+yay -S chruby
+# follow instructions
 #   - auto-loads for bash and zsh
   
 # https://github.com/JeanMertz/chruby-fish
 #  - if using fish, use this wrapper instead
+yay -S chruby-fish
   
 # https://github.com/postmodern/ruby-install
 #  - check readme to install, a little hidden:
