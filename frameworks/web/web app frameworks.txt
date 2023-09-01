@@ -74,10 +74,11 @@ for bigger apps can throw in flutter (for front and back?) or react (for the fro
 
 **flutter**
   - **almost NO HTML/CSS/JS!!!**
-  - compiles/transpiles to js or web assembly
+  - compiles/transpiles to js (or web assembly??)
   - coming soon: **interop with js**
   - feels more systems programmingy (lots of ugly nesting), probably with better debugging too, and hot re-load for mobile
     - but debugging transpiled code may be a headache..
+  - works really well with firebase (a database BaaS), for when you need simple database stuff
   - see excellent samples folder: https://github.com/flutter/samples
     - https://github.com/flutter/samples/tree/main/veggieseasons/lib
 
@@ -96,6 +97,8 @@ ai is amazing for building skeletons/boiler-plate code, and just building enough
 just some notes:
 https://elixirforum.com/t/regretting-questioning-my-current-stack-flutter-elixir-as-solo-dev-for-mobile-app/55731/36
   - lots of great info about contemporary web app making
+
+https://www.reddit.com/r/FlutterDev/comments/nihq35/noob_question_is_flutter_alone_enough_to_make/
 
 https://news.ycombinator.com/item?id=32530203
   - phoenix is minimal yet can scale better than RoR

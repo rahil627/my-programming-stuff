@@ -1,8 +1,18 @@
 
+
+# to dart.txt
+https://www.reddit.com/r/FlutterDev/comments/ijzhei/never_using_final_or_const/
+  - not much reason to use const or final!?
+
+--
+# flutter cli
+
+https://docs.flutter.dev/get-started/codelab
+https://docs.flutter.dev/platform-integration/web/building
+
 # add a "plugin" (package) to a project
 flutter pub add plugin_name
 flutter pub add plugin_name_web
-
 
 # building 'n running
 in vscode can type '>Flutter' to show flutter commands
@@ -35,7 +45,9 @@ flutter run -d web-server
 # setup
 
 # arch linux install
-# https://docs.flutter.dev/get-started/install/linux
+https://docs.flutter.dev/get-started/install/linux
+https://dev.to/kaysoohyun/install-flutter-vscode-on-linux-successfully-2hpg
+  - someone installs it for arch-linux! :D
 select jdk-openjdk for the latest package
 
 # check probs
@@ -46,7 +58,8 @@ yay -S android-sdk-build-tools
 
 
 # crostini install
-# https://gist.github.com/travisbhartwell/50dc75cb7b7eb10db21523af36a6f6fc
+https://docs.flutter.dev/get-started/install/chromeos
+https://gist.github.com/travisbhartwell/50dc75cb7b7eb10db21523af36a6f6fc
 
 https://proandroiddev.com/flutter-development-on-a-pixelbook-dde984a3fc1e
 
