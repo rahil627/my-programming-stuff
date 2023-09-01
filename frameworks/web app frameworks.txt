@@ -4,22 +4,28 @@ conclusion:
 "back-end" routing:
 **phoenix**
   - heavy traffic: parallel, etc.
-  - supercedes ruby's back-end frameworks, yet maintaining it's simplicity
+  - a successor to ruby's back-end frameworks (rails), yet maintaining the simplicity of ruby's minimalist frameworks (sinatra)
 ruby minimal web frameworks (roda > sinatra)
   - **for minimalist apps**
   - for educational purposes: old school web app making in a minimalist style
 
 front-end:
-**flutter**
-  - for mobile apps + web apps together! > react native (which requires using wrappers for native libs)
-  - for performance/graphics thanks to web assembly output
-  - **for people that hate web dev (html/css/js)**
+**svelte**
+  - makes front-end make sense to object-oriented programmers
 react
   - "React is only concerned with the user interface and rendering components to the DOM"
   - for big stuff
   - paved way for state-based web app design
 
 full stack?:
+flutter
+  - for mobile apps + web apps together! > react native (which requires using wrappers for native libs)
+  - for performance/graphics thanks to web assembly output?
+  - can use dart for back-end too
+  - **for people that hate web dev (html/css/js)**
+phoenix live view
+  - specifically for single-page dynamic apps that require a constant connection
+  - phoenix live view native
 rails
   - for big stuff
 
@@ -28,27 +34,50 @@ rails
 
 the frameworks:
 **ruby/sinatra/roda** (or python/flask)
-  - the prettiest solution (app.rb), no MVC pattern
-  - even includes a choice of templating system (just as jekyll does): simplify writing html/js/css, and with your choice in style!
+  - the prettiest solution (see generated app.rb), no MVC pattern
+  - even includes a choice of **templating** system (just as jekyll does): simplify writing html/js/css, and with your choice in style!
   - you'd still have to write html/js though :(
   - see this example: https://github.com/katleiahramos/Sinatra-Capsule-Wardrobe-App/tree/master
 **elixir/phoenix**
   - compact
   - strict MVC file structure
+  - includes a template system (EEs) successor to ruby's ERB template system
   - has an additional learning curve for functional programming, but it fits the problem of server request handling perfectly
   - **currently the best back-end solution**
-x/pure js
-  - acutally looks good
-  - rquires node.js for server-side execution (ew)
-  - express.js is the js copy of sinatra
+  - "Phoenix is great, it has integration with everything you would need for back-end web development. Using Ecto for database communication makes things very easy on that front. The web pages have pre-rendered HTML but then upgrade the connection to WebSockets, so you have the advantages of both server-side rendering and client-side web apps. Scaling is built in the Erlang VM."
+phoenix liveview
+  - "Phoenix[ LiveView] is actually both. In short it handles things a bit differently. Each client gets a websocket connection to the server where the state lives, Phoenix adds some JS glue on the front-end so that when state on the server changes it streams a diff to the front-end that updates the state on the front-end. It's actually very very cool! Gives you a bunch of advantages."
+    - livesvelte
+      - small project
+      - "These are the advantages as I see them. Please correct me if I’m wrong:
+        - Have Svelte UI components that contain some decoupled state for performance purposes (for example sake tracking a user’s cursor position).
+        - Leverage existing UI components written in Svelte and JS.
+        - Seamlessly push and pull data from said components w/o needing fetch requests or promises (all Svelte sees is a JS variable being reassigned).
+        - Svelte components use hydration so there’s no coverage gaps in prerendering.
+        - Aren’t locked into writing Svelte exclusively. Can decide what to parts of the UI to render in LiveView, and what parts are more sensible with Svelte.
+        - Probably worth tacking on that Svelte provides the best DX for JS, and runs very efficiently."
+      - https://github.com/woutdp/live_svelte
+**js/svelte**
+  - **extremely simple** and sensible front-end framework
+  - the hot contemporary js framework
+  - awesome home page with interactive examples to get the gist of it
+  - **makes html/js/css object-oriented so it doesn't feel like an unorganized mess** (scoped)
+  - kinda comes with a template-like system built-in, in which you can inject js anywhere in the html, like php
+    - <? inject code here> -> { inject.jsfunction() }
+x/js/express
+  - actually looks good
+  - express is a copy of ruby's sinatra
+  - requires node.js for server-side execution (ew)
+    - i'd rather use a proper language for back-end..
 
 for bigger apps can throw in flutter (for front and back?) or react (for the front-end)
 
 **flutter**
-  - **NO HTML/CSS/JS!!!**
-  - compile (transpile?) to web assembly
-  - coming soon: interop with js
+  - **almost NO HTML/CSS/JS!!!**
+  - compiles/transpiles to js or web assembly
+  - coming soon: **interop with js**
   - feels more systems programmingy (lots of ugly nesting), probably with better debugging too, and hot re-load for mobile
+    - but debugging transpiled code may be a headache..
   - see excellent samples folder: https://github.com/flutter/samples
     - https://github.com/flutter/samples/tree/main/veggieseasons/lib
 
@@ -56,12 +85,18 @@ react actually has the most sensible output and also one file
   - what's the overhead? overkill?
   - react native has direct competition with flutter
 
+web-assembly?
+  - "Ideally you could use your given language of choice end-to-end via WASM as opposed to JS. Until one realizes how much of a PITA it is to transmit a whole GC’ed runtime to clients (looking at you, Blazor WASM)."
+
 
 ai is amazing for building skeletons/boiler-plate code, and just building enough so that you can jump into making, without copying/remembering various frameworks, languages, etc.
 
 
 
 just some notes:
+https://elixirforum.com/t/regretting-questioning-my-current-stack-flutter-elixir-as-solo-dev-for-mobile-app/55731/36
+  - lots of great info about contemporary web app making
+
 https://news.ycombinator.com/item?id=32530203
   - phoenix is minimal yet can scale better than RoR
 
@@ -71,6 +106,8 @@ https://www.reddit.com/r/ruby/comments/ecg2q2/which_ruby_web_framework_to_use_th
 roda > sinatra
   - https://www.reddit.com/r/ruby/comments/x0iyg1/sinatra_vs_roda_whats_your_take/
 
+https://www.reddit.com/r/elixir/comments/12b4nuv/livesvelte_render_svelte_directly_into_phoenix/
+  - livesvelte
 
 hanami or rails
 
