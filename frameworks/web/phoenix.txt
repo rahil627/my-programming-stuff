@@ -21,10 +21,35 @@ pacman -S inotify-tools
 
 # create a new project via cli
 mix phx.new hello
-# check for flags such as no database, no live-view etc.
+# check for flags such as --database (postgresql by default) or --no-ecto (for no database), no live-view etc.
 cd hello
 git init
 
+
 # create database
+
+# for archlinux
+# follow https://wiki.archlinux.org/title/PostgreSQL
+sudo -i -u postgres
+initdb -D /var/lib/postgres/data
+pg_ctl -D /var/lib/postgres/data -l logfile start
+#pg_ctl -D /var/lib/postgres/data start
+exit
+
+# if lockfile error on /var/run/postgresql...
+# https://stackoverflow.com/questions/22851352/postgresql-server-failed-to-start-could-not-create-lock-file-permission-denied 
+mkdir /var/run/postgresql
+sudo -i -u postgres
+chown -R postgres:postgres /var/run/postgresql
+exit
+
+# can use env vars PGHOST 'n PGPORT
+# see defaults here: /var/lib/postgres/data/postgresql.conf
+
+sudo systemctl start postgresql.service
+#sudo systemctl enable postgresql.service
+
 mix ecto.create
+
+
 
