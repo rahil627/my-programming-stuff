@@ -4,18 +4,23 @@ conclusion:
 bash script > fish script
   - simple scripts, automation
 ruby > python
-  - scripting (console apps)
+  - scripting (console apps), automation, devops, hacking
+elixir
+  - functional
+  - can also write scripts with it! (functional contemporary alt to ruby)
+  - web framework (phoenix > sinatra/roda & ruby on rails)
+    + template html (Eex) + css framework (tailwind)
+  - concurrency
 crystal == nim == haxe >= OCaml(?) == go
-  - compiled / for speed
+  - llvm compiled for speed
 special cases:
   - crystal/haxe?
     - interop with C
   - haxe/nim/dart
     - transpile to js/wasm or many other langs (don't write js!)
-  - elixir (phoenix > sinatra/roda)
-    - threading
   - Ocaml
     - parsing/compilers
+    - pattern matching, deep type system
   - rust >>> C++
     - low-level, memory management
   - C
@@ -25,6 +30,7 @@ scripting:
 **ruby**
   - the standard language "made for humans"
 **elixir**
+  - "you must remember, that it looks like Ruby, but it’s not Ruby at all” said the creator of the lang
   - not a big enough program to make use of functional programming
   - "Ruby has considerably more libraries and this is IMO at this point the only reason, other than being mandated or wanting to write ruby, that I would still use it over Elixir. The edge for everything else IMO goes to Elixir."
     - concurrency, FP scope > OO scopes, liveview and live dashboard are 🔥🤘, contexts > models, response times are in the micro vs milli seconds, Phoenix saw webpacker for the 💩 it was and quick pivoted to a sane alternative in esbuild, benchmarking, testing & code analysis (credo, dialyzer), immutability, ex doc is insanely easier to use vs rdoc et al, runs on significantly fewer resources, OTP, hex is better than bundler, deployment (releases), cross platform (ruby has come a long way on windows from what it was but...), stable API vs the OCD of ruby/rails
@@ -133,3 +139,6 @@ ref:
 https://madnight.github.io/githut/#/pull_requests/2023/2
 https://github.com/dwyl/learn-elixir/issues/102
 https://www.reddit.com/r/elixir/comments/zd9o07/comparing_phoenix_to_rails_in_december_2022/
+https://www.quora.com/Is-learning-the-Phoenix-web-framework-easier-for-experienced-Ruby-on-Rails-developers
+  - a great answer about thinking in the way of Elixir is *simpler*
+  
