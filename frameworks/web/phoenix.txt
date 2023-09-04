@@ -17,16 +17,20 @@ pacman -S inotify-tools
 #sudo pacman -S postgresql
 
 
-# use
+# setup basic app
+# https://hexdocs.pm/phoenix/up_and_running.html
 
 # create a new project via cli
 mix phx.new hello
-# check for flags such as --database (postgresql by default) or --no-ecto (for no database), no live-view etc.
+# check for flags such as --database (postgresql by default) or --no-ecto (for no database), --no-live, --no-gettext, --no-mailer, --no-tailwind (uses tailwind css framework by default), --no-esbuild (uses esbuild by default), --no-html, etc.
+# see https://hexdocs.pm/phoenix/directory_structure.html
 cd hello
 git init
 
 
 # create database
+mix ecto.create
+# can edit config/dev.exs for db user/pass, host, port, etc.
 
 # for archlinux
 # follow https://wiki.archlinux.org/title/PostgreSQL
@@ -52,4 +56,31 @@ sudo systemctl start postgresql.service
 mix ecto.create
 
 
+
+# start server
+# make sure postgresql.service is running
+mix phx.server
+iex -S mix phx.server
+
+
+# go through how it works
+# https://hexdocs.pm/phoenix/request_lifecycle.html
+
+The router maps unique HTTP verb/path pairs to controller/action pairs which will handle them. Controllers in Phoenix are simply Elixir modules. Actions are functions that are defined within these controllers.
+
+http request -> endpoint -> router -> controller -> view -> template
+tempalte = root layout +-> other layouts +-> template content
+
+
+
+# perhaps start with a minimalistic app base?
+# https://github.com/wojtekmach/mix_install_examples/blob/main/phoenix.exs
+
+
+# mix phx.gen.html
+holy shit, this is nuts!
+
+it generated pages for editing, updating, deleting data from a database!!!
+
+with these generated scripts, there isn't much phoenix-related code you need to write!
 
