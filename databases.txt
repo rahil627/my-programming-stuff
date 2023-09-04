@@ -1,0 +1,23 @@
+
+BaaS databases:
+  - back-end as service?
+  - use simple api's so that you can offload db mental-load
+
+firebase
+  - Google / vendor-locked
+  - nosql
+    - a document is a set of key-value pairs defined by a schema. A group of documents makes up a collection.
+    - "realtime database" and "cloude fire store"
+**supabase**
+  - open-source firebase
+  - **uses a standard postgres db**
+    - **makes it easier to port over to server**
+
+relational vs "nosql"
+relational are the traditional spreadsheet-like column 'n rows
+nosql can have various forms, but generally meant for less related data
+
+relational db's:
+postgres
+sqllite
+
