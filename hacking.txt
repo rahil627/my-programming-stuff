@@ -1,3 +1,19 @@
+
+https://new.reddit.com/r/hacking/wiki/index/
+  - main list of resources for hacking
+  - a fun way seems to be to play wargames/CTFs
+
+for more general linux learning games:
+  - https://devopschops.com/blog/games-for-learning-linux/
+  - Overall, there’s strong and weak points to each of these games. For complete beginners, Bashcrawl is a great way to start, and after some fluency on the command line has been reached, Command Challenge and Bandit could be used to expand one’s repertoire. After that, Command Line Murders could be considered a fun “final boss” to the Command Challenge. Finally, SadServers is less game-like but still exemplifies the more difficult end of the spectrum of acquiring Linux skills through play.
+
+overthewire
+  - all seems broken
+  - bandit
+    - lvl 6
+    - pass: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+  - leviathan
+
 can just try an installation of Kali Linux, which comes equipped with pop hacking tools
 
 read https://www.reddit.com/r/ethicalhacking/comments/x8an2u/would_you_start_with_nmap_wireshark_or_metasploit/
