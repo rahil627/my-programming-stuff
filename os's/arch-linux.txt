@@ -19,9 +19,15 @@ makepkg -si
 
 # periodically remove unused packages
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)
+https://wiki.archlinux.org/title/system_maintenance#Unused_packages_(orphans)
+
+pacman -Qtdq | pacman -Rns
+yay --clean
 
 # update mirrors
-sudo reflector -n 100 --sort score -c US --save /etc/pacman.d/mirrorlist
+# sudo reflector -n 100 --sort score -c US --save /etc/pacman.d/mirrorlist
+# update country in the service's config /etc/xdg/reflector/reflector.conf
+
 
 
 notes:
@@ -30,3 +36,4 @@ notes:
 mount | grep ext4
 mount | grep vda
 # /dev/vda on /opt/google/cros-containers type ext4 (ro,relatime)
+

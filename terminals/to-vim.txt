@@ -1,4 +1,15 @@
 
+TODO: merge old vim configs to NVChad?
+
+NVChad
+  - sane defaults for nvim!
+  - can try just using this for now...
+
+NOTE: you will have to delete your configs folder
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+
+~/.config/nvim/lua/custom
+  - contains the config files
 
 https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
   - classic post, met the dude at the sf hackerspace

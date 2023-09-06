@@ -114,7 +114,8 @@ bat > cat
   - https://github.com/sharkdp/bat
 
 
-
+not quite replacements, but better:
+ncdu > du
 
 
 to try:

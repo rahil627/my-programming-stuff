@@ -42,7 +42,30 @@ compositers / WMs:
   - to put windows in the write place
 sway
 i3
+wayland
+  - used by chromeos
 ..?
+
+
+tui file-managers:
+lf
+
+gui file-managers:
+https://www.reddit.com/r/swaywm/comments/ja93ss/comment/g8ojr1a/?utm_source=reddit&utm_medium=web2x&context=3&rdt=48122
+They all suck in their own way.
+
+vifm is quirky and feels slower than python-based ranger.
+
+nnn is fast, but too unconfigurable and unusable.
+
+mc is for admins that need a file manager on a remote machine, it's not better than the alternatives.
+
+pcmanfm is too basic, thunar is too basic, QT-based (pcmanfm-qt, dolphin) suffer from a disappearing menus QT bug, and dolphin is kinda bloated and practically pulls in the whole KDE suite.
+
+Choose something you like, I prefer ranger and use pcmanfm when I have to.
+
+
+krusader
 
 
 task-bar:

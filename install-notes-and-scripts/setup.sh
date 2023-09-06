@@ -104,8 +104,25 @@ yay -S otf-hasklig
 # dropbox
 # get the binaries and read the instructions here:
 # https://help.dropbox.com/installs-integrations/desktop/linux-commands
-dropbox start -i
-dropbox start
+# https://wiki.archlinux.org/title/dropbox
+# follow the archwiki!!
+# syncs to ~/Dropbox
+
+# for whatever reason this dependency isn't packed
+# pacman or yay? python-gpgme
+yay dropbox
+yay dropbox-cli
+# note: use dropbox-cli command not dropbox command??
+#dropbox-cli exclude books
+dropbox-cli start -i
+dropbox-cli start
+#dropbox-cli autostart
+# keep running this to check how it's going, or when you have problems
+#dropbox-cli status
+
+# after excluding files you don't need, they will end up in the cache
+# manually clear cache
+#rm -R ~/Dropbox/.dropbox.cache/*
 
 
 # dev-related stuff
