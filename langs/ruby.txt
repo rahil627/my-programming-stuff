@@ -1,4 +1,23 @@
 
+# start a new project
+# TODO: should this belong to setup-ruby.sh?
+# create a Gemfile in the working directory with the following lines:
+source "https://rubygems.org"
+gem 'solargraph', group: :development
+# gem 'gem-to-include'
+
+# installs all gems using the Gemfile
+#bundle install
+
+
+# start a new gem
+# use bundler
+???
+
+# rubocop?
+
+
+
 
 can use binding.pry in code to break it and inspect everything up to that point
 pry replaces irb (comes bundled with ruby)? or use both?
@@ -117,7 +136,7 @@ https://www.ruby-lang.org/en/documentation/
 
 
 
-usefule libs:
+useful libs:
 https://docs.ruby-lang.org/en/master/English.html
   - basically, you can alias anything in ruby, so, you can pretty much make your own language! :D
 https://github.com/pry/pry
@@ -131,13 +150,12 @@ i prefer the syntax, expressiveness, clean 'n tidyness, and fun of ruby over pyt
 its also a funny way to write very clean simple scripts in a more functional style
 
 anyway, anything is better than bash!
+-
 
-
-# learn
 
 basically, i just want to use Ruby for shell scripting, because bash is hella ugly, and i don't think zsh really fixes that due to compatibility with bash (posix). Fish is an interesting alternative, but, anyway, i think Ruby can be a cool general-use "scripting" langauge--basically glue for all sorts of every-day problems :)
 
-
+# learn
 # 1. learn x in y minutes
 todo: get link
 
