@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+gem 'solargraph', group: :development
+gem 'slop' # TODO: vs standard optparse
+gem 'wikipedia-client'
+
+
