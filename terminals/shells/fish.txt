@@ -7,6 +7,17 @@ https://fishshell.com/docs/current/interactive.html
 
 see config.fish for my bindings and notes
 
+tab-completion (c+i)
+[tab]
+  - list all commands
+partial-command[tab]
+  - list all commands (with descriptions!) starting with...
+command -[tab]
+  - list all flags (with descriptions!)
+cd[tab]
+  - list directories
+  
+
 when typing in a file-path, the dir/file-names are fuzzy-searched
 for example: .config/fish/functions/a-long-name, search .c[tab]/f[tab]/f[tab]/long[tab]
 

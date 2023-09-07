@@ -19,6 +19,7 @@ debian
   - the main community-based distro
 
 # customization
+NOTE: cli apps are listed in setup.sh
 the linux world is full of customization, like the way kids do for desktop computer hardware, bicycles, motorcycles, and cars.
 
 https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice/

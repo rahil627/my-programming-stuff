@@ -15,7 +15,7 @@ chrome-rdp
   - can try noVNC instead
 
 package managers:
-native:
+native package managers:
   - checked by the people that maintain the distro
 apt
   - debian
@@ -53,6 +53,8 @@ dropbox
 
 snaps:
 code
-sublime-text
+kate
 
 snap is sandboxed, so use it for temporary apps
+
+

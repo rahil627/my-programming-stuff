@@ -1,15 +1,39 @@
 
 TODO: merge old vim configs to NVChad?
 
+
 NVChad
   - sane defaults for nvim!
   - can try just using this for now...
 
+setup:
 NOTE: you will have to delete your configs folder
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
+https://nvchad.com/docs/config/walkthrough#config_structure
 ~/.config/nvim/lua/custom
-  - contains the config files
+  - contains the example starter config files
+
+
+use:
+
+# basics
+space - doomemacs-like shortcut cheat-sheet preview
+;
+'
+
+
+# plugins
+# this command starts the plugin manager gui
+:Mason
+
+# install a plugin
+:MasonInstall solargraph
+
+
+
+
+
 
 https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
   - classic post, met the dude at the sf hackerspace
