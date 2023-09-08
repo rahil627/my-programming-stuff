@@ -3,18 +3,50 @@
 # TODO: should this belong to setup-ruby.sh?
 # create a Gemfile in the working directory with the following lines:
 source "https://rubygems.org"
-gem 'solargraph', group: :development
 # gem 'gem-to-include'
 
 # installs all gems using the Gemfile
 #bundle install
 
 
+
+# rubocop?
+
+
+# gen docs?
+
+
+
 # start a new gem
 # use bundler
 ???
 
-# rubocop?
+
+
+
+
+
+
+solargraph:
+another lsp that's more featureful, but takes more effort to work: must use the yard gem to generate docs (as opposed to the standard rdoc, which the main ruby lsp uses)
+
+https://www.reddit.com/r/ruby/comments/ml3zs2/which_one_is_a_better_vs_code_language_server_for/
+  -  "Solargraph has more features. It can inference types and preview docs. But it requires building yard docs for all your gems, which can take a lot of time and be a big hassle."
+  - The vscode-solargraph extension is designed to work well alongside vscode-ruby. I frequently use both, typically with `"ruby.useLanguageServer": false` so code intelligence features like autocompletion come from Solargraph.
+
+    If you use vscode-ruby primarily for the debugger, vscode-ruby-debug is also an option.
+
+# add this to the Gemfile
+gem 'solargraph', group: :development
+
+# install yard cli
+sudo pacman -S ruby-yard
+
+# generate docs for all ruby gems
+# yard gems
+
+
+
 
 
 
