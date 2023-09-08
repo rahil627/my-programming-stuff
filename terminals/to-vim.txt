@@ -1,11 +1,19 @@
 
 TODO: merge old vim configs to NVChad?
 
+nvim bundles:
+LazyVim
+  - most minimalist, should prolly start with this
+LunarVim
+AstroVim
+  - most featureful, can use this and take what i want from it to lazyvim
+NVChad
+  - configs seems overly abstracted...
+
+https://medium.com/@adaml.poniatowski/exploring-the-top-neovim-distributions-lazyvim-lunarvim-astrovim-and-nvchad-which-one-reigns-3adcdbfa478d
+
 
 NVChad
-  - sane defaults for nvim!
-  - can try just using this for now...
-
 setup:
 NOTE: you will have to delete your configs folder
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
@@ -29,6 +37,15 @@ space - doomemacs-like shortcut cheat-sheet preview
 
 # install a plugin
 :MasonInstall solargraph
+
+
+# config
+https://github.com/NvChad/example_config
+
+.nvchadrc <- plugins.lua <- overrides.lua
+
+overrides
+  - seems to abstract config options from a plugin... it all seems very very redundant
 
 
 
