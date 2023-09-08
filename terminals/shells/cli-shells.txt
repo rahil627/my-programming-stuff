@@ -135,6 +135,10 @@ https://www.reddit.com/r/archlinux/comments/n9noje/alacritty_vs_kitty/
   - foot is mentioned
 
 
+
+# shells
+should choose one and stick to it
+
 Windows:
 you have no choice, it's just powershell
 
@@ -162,7 +166,8 @@ the old bourne-like shells:
 sh = bourne shell
   - the main precursor and origin to/of the most popular future shells
 bash = bourne again shell
-  - most prevalent, used on all desktop Linux-derived OSs, including Mac OS X
+  - most prevalent, used on all desktop Linux-derived OSs, including Mac OS X (until recently)
+  - have this by default, still necessary to run bash scripts
   - history: was created by open-source people GNU while they were creatin their free OS
 ash = Almaquish shell
   - a light-wieght sub-set(?) of bash used in embeded systems
@@ -180,14 +185,17 @@ zsh = z? shell
   - **Mac OS X recently replaced bash with this**, thus making it the current standard
   - more features, more configurability, etc. **it's basically the neovim of shells. There's plug-in managers, infinite plugins, everything you could dream of.**
   - by default the shell is quite bare, especially compared to fish which ships with auto-completion/auto-suggestion, syntax highlighting, spell-checking, ignoring input mistakes, etc. However, there are plugins for all of these (to directly compete), and more.
+  - for the most part, works well with bash, though still not POSIX compliant
+  - **comes without any functionality and will require manually tinkering add-ons over time to get it set-up right**
+    - so will need to get some package with clean defaults, like doomemacs 'n nvchad
  
 
 the newer stuff, post-bourne:
 fish
-  - "a beginner-friendly shell" that ships with contemporary functionality: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
+  - "a beginner-friendly shell" that ships with contemporary functionality / sane defaults: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
   - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
   - "a shell for the 90s" lol
-  - not POSIX compliant
+  - not POSIX compliant, so bash script may fail
     - https://stackoverflow.com/questions/48732986/why-how-fish-does-not-support-posix
       - cannot run a script with `#!/bin/sh`, you'd need `#!/usr/bin/fish`, and the user would need a fish interpreter installed
       - you cannot simply copy-paste snippets of scripts from the net and expect them to work
@@ -231,3 +239,5 @@ which [shell name]
 
 # change shell, will send you a prompt
 chsh
+
+

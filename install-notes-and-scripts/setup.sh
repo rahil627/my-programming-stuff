@@ -102,6 +102,8 @@ sudo pacman -S adobe-source-code-pro-fonts
 yay -S otf-hasklig
 
 # dropbox
+# app vs cli?
+#   - i'm guessing you can have both?
 # get the binaries and read the instructions here:
 # https://help.dropbox.com/installs-integrations/desktop/linux-commands
 # https://wiki.archlinux.org/title/dropbox

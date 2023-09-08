@@ -1,4 +1,13 @@
 
+related to:
+linux.txt
+  - gui apps
+  - linux gui customization
+setup.sh
+  - tui apps i currently use
+
+
+
 setup:
 see setup.sh
 
@@ -119,6 +128,10 @@ ncdu > du
 
 
 to try:
+tmux
+
+others:
+htop > top
 
 
 # file nav
@@ -134,14 +147,16 @@ cd replacement
 
 
 
-file managers
+file managers:
   - GUI > wasting human memory, also *way* better than typing ls/cd!!
   - todo: try them all!
-**ranger**
+**lf**
+  - current best
+ranger
   - most feature-rich / extensible
   - vim key bindings are used by
   - python
-**nnn**
+nnn
   - light-weight, fast, zero-config
   - C
 lf
@@ -151,7 +166,13 @@ fff
   - written in bash :o
 mc (midnight commander)
   - for that old school feel
-  
+
+
+text editors:
+nvim > vim > vi
+helix > kakoune
+  - TODO: to try
+
   
   
 x/https://github.com/starship/starship

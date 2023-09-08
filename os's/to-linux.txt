@@ -12,18 +12,37 @@ openSUSE
     - OBS, OpenQA, snapper, BtrFs by default, YasT
     - AUR (arch's user repo) > OBS
 
+  - Leap
+    - intervalled release
+
 debian
   - it works, stable as it gets
   - to use more recent packages, just download them using snaps, docker, etc.
     - benefits from being safe too
   - the main community-based distro
 
-# customization
-NOTE: cli apps are listed in setup.sh
+
+
+
+
+# customization (gui packages)
+NOTE: cli apps 'n setup are listed in the-tui-dream.txt and setup.sh
 the linux world is full of customization, like the way kids do for desktop computer hardware, bicycles, motorcycles, and cars.
 
 https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice/
   - /r/unixporn is full of ricers suping up their desktop environments
+
+
+package managers:
+native package managers:
+  - each linux distro has it's own package manager: apt for debian, dnf for fedora, etc.
+  - checked by the people that maintain the distro
+
+non-native:
+  - unchecked, includes all dependencies, making it easier for app-devs to maintain, good for bigger apps (like how Windows works?)
+  - often sandboxed to make it safe from affecting the rest of the os
+snap(d)
+flatpak
 
 
 
@@ -31,11 +50,18 @@ desktop environments (DE):
   - contain everything: a windows manager, a taskbar, widgets, etc.
 
 main:
-KDE Plasma > one more...? > GNOME
+KDE (Plasma)
+  - highly customizable
+mate
+  - also well-received
+cinnamon
+gnome
+  - used by ubuntu, old feeling
 
 lightweight:
 xfce
-
+  - probably used for servers 'n old computers just to be remoted into
+lxqt
 
 
 custom:
@@ -68,11 +94,22 @@ Choose something you like, I prefer ranger and use pcmanfm when I have to.
 
 krusader
 
-
 task-bar:
 polybar
   - easy to customize
   
 ...
 
+
+
+# linux apps (create a new file?)
+
+gui text editors:
+code (vs code)
+kate
+
+remote access apps:
+chromeRDP
+noVNC
+  - vnc is the open-source remote tech
 
