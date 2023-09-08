@@ -45,9 +45,15 @@ the frameworks:
   - has an additional learning curve for functional programming, but it fits the problem of server request handling perfectly
   - **currently the best back-end solution**
   - "Phoenix is great, it has integration with everything you would need for back-end web development. Using Ecto for database communication makes things very easy on that front. The web pages have pre-rendered HTML but then upgrade the connection to WebSockets, so you have the advantages of both server-side rendering and client-side web apps. Scaling is built in the Erlang VM."
+  - The way I look at it is Phoenix is equivalent or better to anywhere along the scale of a ruby project that is built directly on Rack -> Sinatra -> Rails. It is completely modular and you can strip it down to effectively just using plug (rack like low level) to piecemeal adding the bells and whistles (Sinatra -> Rails) to even more heavily extending it.
+    - https://www.reddit.com/r/elixir/comments/d8r7ob/is_phoenix_to_elixir_as_rails_is_to_ruby/
+      - very good comparison between ruby and elixir frameworks
+      - Plug == Rack, ectro == ROM, Phoenis == Roda (with RoR scaling)
+
 phoenix liveview
   - "Phoenix[ LiveView] is actually both. In short it handles things a bit differently. Each client gets a websocket connection to the server where the state lives, Phoenix adds some JS glue on the front-end so that when state on the server changes it streams a diff to the front-end that updates the state on the front-end. It's actually very very cool! Gives you a bunch of advantages."
-    - livesvelte
+   
+   - livesvelte
       - small project
       - "These are the advantages as I see them. Please correct me if I’m wrong:
         - Have Svelte UI components that contain some decoupled state for performance purposes (for example sake tracking a user’s cursor position).
@@ -57,6 +63,7 @@ phoenix liveview
         - Aren’t locked into writing Svelte exclusively. Can decide what to parts of the UI to render in LiveView, and what parts are more sensible with Svelte.
         - Probably worth tacking on that Svelte provides the best DX for JS, and runs very efficiently."
       - https://github.com/woutdp/live_svelte
+
 **js/svelte**
   - **extremely simple** and sensible front-end framework
   - the hot contemporary js framework
