@@ -187,7 +187,8 @@ zsh = z? shell
   - by default the shell is quite bare, especially compared to fish which ships with auto-completion/auto-suggestion, syntax highlighting, spell-checking, ignoring input mistakes, etc. However, there are plugins for all of these (to directly compete), and more.
   - for the most part, works well with bash, though still not POSIX compliant
   - **comes without any functionality and will require manually tinkering add-ons over time to get it set-up right**
-    - so will need to get some package with clean defaults, like doomemacs 'n nvchad
+    - so will need to get some package with clean defaults, similar to doomemacs 'n nvchad
+      - i heard 'oh my zsh' is bloated, so just find a minimalist one that replicates fish's core funcionality, 'n go from there
  
 
 the newer stuff, post-bourne:
