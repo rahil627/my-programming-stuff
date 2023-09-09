@@ -86,3 +86,9 @@ bind
 
 add to $PATH env var:
 fish_add_path ~/path/to/bin
+
+remove a path is missing?? wtf:
+https://superuser.com/questions/776008/how-to-remove-a-path-from-path-variable-in-fish/1212305#1212305
+echo $fish_user_paths | tr " " "\n" | nl // get the number of the one you want to delete, e.g. the 5th one
+set --erase --universal fish_user_paths[5]
+
