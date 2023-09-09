@@ -1,9 +1,24 @@
 
+basics:
+
+file-widget:
+nvim search-expression[fzf file-widget shortcut]
+  - can use it to get file-paths in the middle of a command
+
+command-widget:
+history | fzf
+
+
+
+
 ls | fzf
   - to get the basic idea of how it works
 
 find/fd | fzf
   - used for searching files
+
+rg something | fzf
+  - search contents by line?
 
 regex:
 !doesn't-have-this-token has-this-token
