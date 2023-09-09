@@ -5,10 +5,12 @@ pacman -S ruby
 
 
 
-# in case you need different versions of rubies, or different implementations of the compiler (truffle, etc.)
+# if you need different versions of rubies detected by the project folder:
 # use a version manager to install multiple versions of ruby
-# chruby > rbenv > rvm
-# use chruby if you don't need to automatically detect the version by the project folder; it's the simplest!
+# rbenv > rvm
+
+# otherwise:
+# use chruby
 # chruby also handles all the $PATH, $GEM_HOME, etc. stuff and more, so it's worth installing even if you don't need multiple versions
 
 # https://github.com/postmodern/chruby
@@ -18,8 +20,10 @@ yay -S chruby
 #   - auto-loads for bash and zsh
   
 # https://github.com/JeanMertz/chruby-fish
-#  - if using fish, use this wrapper instead (not both!)
+#  - if using fish, use this wrapper instead
+# NOTE: don't install both
 yay -S chruby-fish
+
 
 # goes together with chruby
 # TODO: not sure if you can use chruby without it (with ruby installed by the os's package manager)
@@ -32,9 +36,33 @@ ruby-install --update
 ruby-install ruby
 # list versions to install more
 #ruby-install
-# set default version for auto-switcher
+
+# set default version for chruby
+# i think it's optional...
 #echo "ruby-3.2.2" > ~/.ruby-version
 
+# make sure everthing is ok
+gem env
+
+# add gem path to $path
+# NOTE: this might clog up shell commands namespace...
+# use user gem path over root?
+fish_add_path /home/ra/.local/share/gem/ruby/3.0.0/bin
+
+
+
+# add lsp
+# the built-in lsp will use this gem's binaries (rct-complete, etc.)
+gem install rcodetools
+
+# a contemporary, more featureful ruby lsp
+# it adds previews on hover, documentation of classes via side-bar
+# it also seems to order class methods by inheritance, which is crucial in ruby's hella deep objects
+gem install solargraph 
+# documentation gem used by solargraph, super-set of original RDoc
+gem install yard 
+# generate docs for all installed gems (to ~/.yard)
+yard gems
 
 
 
@@ -52,25 +80,13 @@ gem update --system --no-document
 # this installs the documentation
 # for some reason it fetches AND builds ALL of the gems... :(
 
-# ruby lsp for vs code
-# community lsp, not sure why it isn't the default one...
-gem install solargraph 
-
-# documentation gem, super-set of original ruby docs
-gem install yard 
-
-# start a new project
-# create a Gemfile in the working directory with the following lines:
-source "https://rubygems.org"
-gem "solargraph"
 
 
-# start a new 
 
 
-# TODO: perhaps because i'm using fish shell, there's an error
-# start the program from the fish terminal to force vs code to use current terminal
-code
-# fix this!
+
+# i think because code must use the env vars for $path which contains the $gem_home (path to gems), you must start it from a terminal
+# or does it being a container a factor?
+#code
 
 

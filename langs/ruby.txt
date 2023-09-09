@@ -1,25 +1,59 @@
 
+
+
 # start a new project
-# TODO: should this belong to setup-ruby.sh?
+
 # create a Gemfile in the working directory with the following lines:
 source "https://rubygems.org"
+gem 'solargraph', group: :development # lsp
 # gem 'gem-to-include'
 
 # installs all gems using the Gemfile
 #bundle install
 
+# re-generates docs for ALL gems
+# run from anywhere?
+# TODO: is this necessary to do every-time you add a gem??
+yard gems
+
+# generate docs for gems only used in the project? (to .yardoc/)
+# run in project directory
+yard docs
 
 
-# rubocop?
-
-
-# gen docs?
 
 
 
-# start a new gem
+# start a new gem??
 # use bundler
 ???
+
+
+
+
+
+# formatters
+all of the formatters (rubocop, rubyfmt, prettier, etc.) are options in the main ruby vscode extension's settings
+
+rubocop does more than formatting, it's a deep linter that'll fix 'n optimize your code
+
+rubocop
+  - the first main one
+  - **comes pre-installed with ruby**
+prettier
+  - came after rubocop, based on javascript's prettier linter
+standard
+  - a standard immutable config (because people can't agree), using rubocop
+rufo
+  - like standard but with a different taste/opinion
+rubyfmt
+  - written in rust and very fast
+
+
+
+
+
+
 
 
 
@@ -40,10 +74,13 @@ https://www.reddit.com/r/ruby/comments/ml3zs2/which_one_is_a_better_vs_code_lang
 gem 'solargraph', group: :development
 
 # install yard cli
+# TODO: conflicts with 'gem install yard'??
 sudo pacman -S ruby-yard
 
 # generate docs for all ruby gems
 # yard gems
+
+
 
 
 
