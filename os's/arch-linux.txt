@@ -4,6 +4,9 @@ tips:
 # search packages by string
 pacman -Ss 'postgre'
 
+# search local packages by regex
+pacman -Qs ruby
+
 
 
 
