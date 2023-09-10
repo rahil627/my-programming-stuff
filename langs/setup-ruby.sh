@@ -18,6 +18,8 @@ pacman -S ruby
 yay -S chruby
 # follow instructions
 #   - auto-loads for bash and zsh
+# mght have to add this to ~/.bashrc or ~/.zshrc
+# source /usr/local/opt/chruby/share/chruby/chruby.sh
   
 # https://github.com/JeanMertz/chruby-fish
 #  - if using fish, use this wrapper instead
@@ -25,21 +27,36 @@ yay -S chruby
 yay -S chruby-fish
 
 
+
+# if you want to install using a package manager
+# this is the quickest 'n simplest way
+chruby system
+# even archlinux was using 3.0.6 when 3.2.2 was available...
+
+
+
 # goes together with chruby
-# TODO: not sure if you can use chruby without it (with ruby installed by the os's package manager)
 # https://github.com/postmodern/ruby-install
 #  - check readme to install, a little hidden:
 #  - https://github.com/postmodern/ruby-install/tree/master#install
 ruby-install --update
-# install latest version of ruby
+# install latest stable version of ruby
 # NOTE: VERY SLOW, this downloads the source and compiles it!!
 ruby-install ruby
-# list versions to install more
+# list versions to install more, including other quicker implementation
 #ruby-install
+# removes the source 'n build files
+ruby-install --cleanup # rm ~/src -rf
 
 # set default version for chruby
-# i think it's optional...
-#echo "ruby-3.2.2" > ~/.ruby-version
+# a lsp might look for this
+echo "ruby-3.2.2" > ~/.ruby-version
+# i think this runs 'chruby ruby-3.2.2' for you
+
+
+
+
+
 
 # make sure everthing is ok
 gem env

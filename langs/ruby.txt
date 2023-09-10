@@ -5,11 +5,22 @@
 
 # create a Gemfile in the working directory with the following lines:
 source "https://rubygems.org"
-gem 'solargraph', group: :development # lsp
 # gem 'gem-to-include'
 
 # installs all gems using the Gemfile
-#bundle install
+bundle install
+# make sure it's installed in the right place
+# bundle info gem-name
+
+
+
+
+
+# if using solargraph lsp
+# create a Gemfile in the working directory with the following lines:
+source "https://rubygems.org"
+gem 'solargraph', group: :development # lsp
+# gem 'gem-to-include'
 
 # re-generates docs for ALL gems
 # run from anywhere?
@@ -24,7 +35,7 @@ yard docs
 
 
 
-# start a new gem??
+# making a gem
 # use bundler
 ???
 

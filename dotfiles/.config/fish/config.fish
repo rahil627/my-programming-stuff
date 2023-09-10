@@ -82,6 +82,10 @@ end
 end
 
 
+# TODO: the bindings might be out of order, put it all in the function!
+
+# NOTE: use fish_key_reader to figure out the key sequence
+
 # fish shell default functions binding remaps
 bind \c\r history-pager # also '/'
 bind \c\h history-pager
@@ -156,6 +160,14 @@ and a soul that keeps on giving"
 # set up some specific env vars here
 
 # flutter
-fish_add_path -g opt/flutter/bin
-set -gx CHROME_EXECUTABLE /usr/bin/chromium #--incognito"
+#fish_add_path -g opt/flutter/bin
+#set -gx CHROME_EXECUTABLE /usr/bin/chromium #--incognito"
 
+# ruby
+# chruby_fish should've added it to the autoload
+# TODO: maybe need to add to bash for vs code?
+#source /usr/share/chruby/chruby.sh
+
+#set -gx GEM_HOME "$(gem env user_gemhome)"
+set -gx GEM_HOME $(ruby -e 'puts Gem.user_dir')
+# /home/ra/.gem/ruby/3.0.0
