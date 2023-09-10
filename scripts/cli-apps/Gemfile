@@ -1,0 +1,14 @@
+source "https://rubygems.org"
+
+# using a single Gemfile for all cli-apps for convenience
+
+# dev
+#gem 'solargraph', group: :development
+
+# used in all cli apps
+gem 'slop' # TODO: vs standard optparse
+
+# wiki
+gem 'wikipedia-client'
+
+
