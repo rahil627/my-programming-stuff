@@ -1,3 +1,16 @@
+akamud.vscode-theme-onedark
+azemoh.one-monokai
+bmalehorn.vscode-fish
 castwide.solargraph
 crystal-lang-tools.crystal-lang
-elixir-lsp.elixir-ls
+GitHub.copilot
+GitHub.github-vscode-theme
+JakeBecker.elixir-ls
+KoichiSasada.vscode-rdbg
+pantajoe.vscode-elixir-credo
+rebornix.ruby
+Shopify.ruby-extensions-pack
+Shopify.ruby-lsp
+sorbet.sorbet-vscode-extension
+victorbjorklund.phoenix
+wingrunr21.vscode-ruby

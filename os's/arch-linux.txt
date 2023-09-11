@@ -7,7 +7,8 @@ pacman -Ss 'postgre'
 # search local packages by regex
 pacman -Qs ruby
 
-
+# remove package and all it's dependencies
+sudo pacman -Rcns ruby
 
 
 # install base dev tools required to make AUR packages

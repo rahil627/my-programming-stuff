@@ -13,15 +13,39 @@ bundle install
 # bundle info gem-name
 
 
+# add a debugger
+# ensure rdbg debug extension is installed
+# control+shift+l in vscode, then click add config file, select rdgb
+# press 'debug current file with rdbg', add command flags, then can add breakpoints 'n debug!
+
+
+# use a LSP
+
+# OPTION: using Ruby LSP (by shopify), rather still new as of 2023
+# if the vs code extension doesn't exist, install it manually by file
+# https://www.reddit.com/r/ruby/comments/124vb7i/vscode_now_has_documentation_for_ruby/
+# https://marketplace.visualstudio.com/items?itemName=Shopify.ruby-lsp
+# (in the version history tab)
+# https://github.com/Shopify/vscode-ruby-lsp
+# https://github.com/Shopify/vscode-ruby-lsp/issues/782
+# no need to do anything! :)
+# should start automatically once a ruby file is opened, or a project folder with it is opened
+# if not, use command '>Ruby LSP Start'
+# to debug use command '>Debug: Add configuration...'
 
 
 
-# if using solargraph lsp
+# OPTION: using solargraph lsp
 # create a Gemfile in the working directory with the following lines:
 source "https://rubygems.org"
 gem 'solargraph', group: :development # lsp
 # gem 'gem-to-include'
 
+# automatically add docs
+# should have had this setup
+# yard config --install-yri
+
+# manually add docs
 # re-generates docs for ALL gems
 # run from anywhere?
 # TODO: is this necessary to do every-time you add a gem??
@@ -123,7 +147,7 @@ file_names=`ls -l`
   - use string interpolation like syntax "#{string}", without quotes, to interpolate ruby code
 
 .echo #{puts object} | rg '2' # searches the object.to_s
- 
+
 .echo #{p 'ls`.upcase() + `ls`} | rg doc
   - can even combine command sub with shell-mode
 
@@ -167,7 +191,7 @@ https://github.com/benbalter/
   - ***extremely* clean design**, beautiful really... i love it!!! :D
     - but i'm not really sure if that's better than just writing it all in a single main function..., if it were actually used as a class, it'd make sense... but i guess this is the ruby "everything is an object" way..?
   - for example: https://github.com/benbalter/jekyll-titles-from-headings/blob/main/lib/jekyll-titles-from-headings/generator.rb
-  
+
 then, after reading some plugins, you'll be able to read Jekyll itself! :o
 https://github.com/jekyll/jekyll/tree/master/lib
 
@@ -182,7 +206,7 @@ https://hyperpolyglot.org/scripting
 
 https://github.com/markets/awesome-ruby
   - **github** (?? no way!!), gitlab, discourse, mastodon, jekyll, tons of web frameworks 'n templating languages... whoa... i didn't even know...
-  
+
 https://github.com/trending?l=ruby
 
 https://www.ruby-lang.org/
@@ -190,7 +214,7 @@ https://www.ruby-lang.org/
 
 https://docs.ruby-lang.org/en/master/
   - official docs, also on github?
-  
+
 https://www.rubydoc.info
   - like a package manager, but for docs. includes the readme of each package
 
@@ -263,8 +287,8 @@ https://www.ruby-lang.org/en/documentation/
       - good interactive exercise, but the content is boring, as it doesn't use any "standard libs" or external libs, or any *real use*
     - https://try.ruby-lang.org
       - contains many examples to quickly go through
-      
-      
+
+
 https://en.m.wikibooks.org/wiki/Ruby_Programming
   - in addition to being a wikibook, it contains a lot of useful links
 
@@ -275,7 +299,7 @@ https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-exec
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-system
 https://ruby-doc.org/core-2.5.0/Kernel.html#method-i-spawn
 https://ruby-doc.org/core-3.1.1/IO.html
-  
+
 kernal
 - kernal contains most keywords, and base object methods?
   - exec, replaces current process to execute something
@@ -297,10 +321,10 @@ https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Executing_ext
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/File_processing.html
 https://learnbyexample.gitbooks.io/ruby-scripting/content/chapters/Regular_expressions.html
   - https://github.com/learnbyexample/Ruby_Scripting
-  
+
 https://www.techotopia.com/index.php/Working_with_Files_in_Ruby
-  
-  
+
+
 
 # commands
 #!/usr/bin/env ruby
@@ -369,5 +393,5 @@ $ chmod +x hello_world.rb
 $ ./hello_world.rb
 Hello World
 
-  
-  
+
+
