@@ -1,5 +1,6 @@
 herro
 
+# install
 https://wiki.archlinux.org/title/Elixir
 
 sudo pacman -S elixir
@@ -12,3 +13,10 @@ fish_add_path /usr/sbin/elixir
 # install hex package manager (using elixir!)
 mix local.hex
 
+
+
+
+
+https://github.com/wojtekmach/mix_install_examples/tree/main
+  - most minimalist uses of many libs 'n frameworks
+  - scripting with elixir!
