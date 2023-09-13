@@ -5,6 +5,21 @@ then you should be able to run the binary via command line
 
 # distros
 https://www.reddit.com/r/openSUSE/comments/x7ge7j/thinking_about_moving_from_arch_based_to_opensuse/
+https://www.reddit.com/r/NixOS/comments/zwqaxz/arch_user_convince_me_to_hop_to_nix/
+
+NixOS
+  - **reproducible env** via declarative configs
+  - steep learning curve
+    - uses a functional lang
+  - NOTE: should use flakes
+  - no games??
+
+arch
+  - rolling release system-packages + user-maintained user-packages
+    - meaning, you must update the entire system every time you want to get package that uses another package (dependency) that has a release newer than your system
+      - aka **you must update your entire system nearly every-time you want to get a package!!**
+  - great wiki: documentation on everything, great way to learn linux
+  - need to install your own backup software (BtrFs, etc.)
 
 openSUSE
   - Tumbleweed
@@ -12,8 +27,9 @@ openSUSE
     - OBS, OpenQA, snapper, BtrFs by default, YasT
     - AUR (arch's user repo) > OBS
 
-  - Leap
-    - intervalled release
+  - **Leap**
+    - **intervalled release**
+    - otherwise, same as Tumbleweed
 
 debian
   - it works, stable as it gets
@@ -37,12 +53,16 @@ package managers:
 native package managers:
   - each linux distro has it's own package manager: apt for debian, dnf for fedora, etc.
   - checked by the people that maintain the distro
+native
+nix
 
-non-native:
+app (like windows) package managers:
   - unchecked, includes all dependencies, making it easier for app-devs to maintain, good for bigger apps (like how Windows works?)
   - often sandboxed to make it safe from affecting the rest of the os
-snap(d)
 flatpak
+x/snap(d)
+  - has political problems tied to Canonical (company of Ubuntu), forcing certain apps to use snap on Ubuntu
+
 
 
 
@@ -60,7 +80,7 @@ gnome
 
 lightweight:
 xfce
-  - probably used for servers 'n old computers just to be remoted into
+  - often used for servers 'n old computers just to be remoted into
 lxqt
 
 
@@ -75,19 +95,23 @@ wayland
 
 
 tui file-managers:
-lf
+see the-tui-dream.txt and setup.sh
 
 gui file-managers:
 https://www.reddit.com/r/swaywm/comments/ja93ss/comment/g8ojr1a/?utm_source=reddit&utm_medium=web2x&context=3&rdt=48122
 They all suck in their own way.
 
-vifm is quirky and feels slower than python-based ranger.
+vifm
+  - quirky and feels slower than python-based ranger.
 
-nnn is fast, but too unconfigurable and unusable.
+nnn
+  - fast, but too unconfigurable and unusable.
 
-mc is for admins that need a file manager on a remote machine, it's not better than the alternatives.
+mc
+  - old school midnight commander
 
-pcmanfm is too basic, thunar is too basic, QT-based (pcmanfm-qt, dolphin) suffer from a disappearing menus QT bug, and dolphin is kinda bloated and practically pulls in the whole KDE suite.
+pcmanfm
+  - too basic, thunar is too basic, QT-based (pcmanfm-qt, dolphin) suffer from a disappearing menus QT bug, and dolphin is kinda bloated and practically pulls in the whole KDE suite.
 
 Choose something you like, I prefer ranger and use pcmanfm when I have to.
 
@@ -97,7 +121,7 @@ krusader
 task-bar:
 polybar
   - easy to customize
-  
+
 ...
 
 
