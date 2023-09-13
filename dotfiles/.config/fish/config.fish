@@ -74,10 +74,10 @@ end
   bind \cv nvim # c+v = vim, also c+e = EDITOR env var by default on fish
 
   if bind -M insert > /dev/null 2>&1 # not sure... just copied
-    bind -M insert \cf lf
+    bind -M insert \cf lfcd # function in aliases file
     bind -M insert \cv nvim
   end
-  
+
 
 end
 
@@ -95,7 +95,7 @@ bind \c\h history-pager
 # TODO: for now, just use alt+shift+char until i know for certain i'm not overwriting anything useful
 # NOTE: \c\e doesn't work, must use \e\c
 # TODO: try multiple bindings for the same function
-fzf_configure_bindings --directory=\eF --history=\eR --processes=\eP --variables=\eV --git_status=\eS --git_log=\eL 
+fzf_configure_bindings --directory=\eF --history=\eR --processes=\eP --variables=\eV --git_status=\eS --git_log=\eL
 
 
 bind-keys

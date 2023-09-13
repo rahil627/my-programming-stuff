@@ -2,11 +2,10 @@
 
 # NOTE: this is not necessarily a dotfile, as you don't need it, just run it upon updating it
 
-# for fish, just run this file after editing it:
 # fish .aliases-fish
 
 # NOTE: if you remove an alias from here, the function still remains
-# TODO: this doesn't work... :/
+# TODO: this doesn't work... :/ i ended up deleting the function file manually from the ~/.config/fish/functions file
 # create our own delete function (including alias)?? :/
 # https://stackoverflow.com/questions/36699092/how-to-remove-functions-from-fishshell-without-deleting-the-function-file-direct
 # functions --erase command # or -e
@@ -23,6 +22,10 @@
 # NOTE: don't use the name of an actual command, it won't override, it'll just execute twice!
 
 # try cover all options: verbose and short
+
+# fish functions
+# save the longer functions first! in case you want to alias them
+source functions.fish
 
 # fish commands
 # TODO: what to do about commands that require input?
@@ -48,7 +51,14 @@ alias -s cp='cp -iv'
 alias -s cpr='cp -ivr' # --recursive
 alias -s cpa='cp -iv --parents' # not the same as -p
 alias -s mkdir='mkdir -pv'
+alias -s mkd='mkdir -pv'
 alias -s rmdir='rmdir -v'
+alias -s rmd='rmdir -v'
+function mkcd --description "create a directory and change to it"
+  mkdir -pv $argv;
+	cd $argv;
+end
+funcsave mkcd
 
 # man supplement
 alias -s h='tldr'
@@ -60,7 +70,9 @@ alias -s h='tldr'
 #alias -s gct='git checkout $(git branch -r | fzf)'
 
 # (f)ile 'n' directory navigator / explorer
-alias -s f='lf' # also c+f binding
+#alias -s f='lf'
+alias -s f='lfcd' # also c+f binding, NOTE: requires lfcd function
+# NOTE: doesn't show autocomplete/autosuggest of lf flags
 
 # contemporary replacements
 # note: DO NOT replace the original commands, bash scripts need to execute them!
@@ -131,6 +143,4 @@ alias -s ex='elixir'
 # experimental
 # TODO: test these
 #alias -s cl='cloc . --exclude-dir=node_modules,.nuxt,build,.vscode,dist --exclude-lang=JSON'
-
-
 

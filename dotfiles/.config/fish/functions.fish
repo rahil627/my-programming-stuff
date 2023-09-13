@@ -1,3 +1,10 @@
+# longer functions are thrown in here
+# this is executed via source in aliases.fish
+
+
+
+
+# from lfcd.fish, part of lf (terminal file manager)
 # Change working dir in fish to last dir in lf on exit (adapted from ranger).
 #
 # You may put this file to a directory in $fish_function_path variable:
@@ -25,4 +32,6 @@ function lfcd
         end
     end
 end
+funcsave lfcd
+
 
