@@ -42,7 +42,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # shell integration? nah (adds to .bashrc and some fish config file
 
 # file directory navigator
-# hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck. 
+# hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck.
 # better than gui, incredible
 # TODO: try them all!
 sudo pacman -S lf # might have to manually install
@@ -51,11 +51,13 @@ sudo pacman -S lf # might have to manually install
 # midnight commander # old-school
 
 # replacement basic commands
-sudo pacman -S exa # ls TODO: try lsd
+sudo pacman -S eza # ls TODO: try lsd
 sudo pacman -S bat # cat
 
 # replacement utilities
 # https://news.ycombinator.com/item?id=26561211
+# https://wiki.archlinux.org/title/core_utilities#Alternatives
+  - great list
 sudo pacman -S ripgrep # grep & ack
 # TODO: try fzf+ripgrep
 # https://github.com/junegunn/fzf#3-interactive-ripgrep-integration
@@ -65,7 +67,7 @@ sudo pacman -S delta # diff
 # xh > curl & httpie
 sudo pacman -S sd # sed
 
-# dust > du
+# dust or ncdu > du
 # procs > ps
 # bottom > top
 
@@ -147,7 +149,7 @@ gh repo clone my-programming-stuff
 # (re)create all aliases/functions
 fish .aliases.fish
 
-# re-build font cache files 
+# re-build font cache files
 fc-cache -fv
 # see running font
 #fc-match monospace
