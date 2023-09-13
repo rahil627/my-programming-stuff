@@ -1,0 +1,39 @@
+
+install:
+https://wiki.archlinux.org/title/Nix
+  - use nix-installer by DeterminateSystems
+    - https://github.com/DeterminateSystems/nix-installer
+
+
+
+
+
+
+
+research:
+https://www.reddit.com/r/archlinux/comments/10th9vf/can_nix_be_a_dropin_replacement_for_yay_the_aur/
+Yes, I am using Nix on Arch. Home manager and nix-shell are awesome.
+
+If a package is not available in Arch official repo, I prefer to install it using Nix so that I don't have to read the PKGBUILD and worry about security. I might install the package on AUR later if I use it a lot.
+
+You can try a package without installing using nix-shell, and manage packages declaratively with home manager. These are powerful features of Nix.
+
+By the way, I also use flatpak as additional package manager. It's suitable for GUI software.
+
+
+
+
+
+https://www.reddit.com/r/pop_os/comments/xuq2pm/can_someone_explain_to_me_like_im_five_why_linux/
+macOS and Windows has a single platform vendor, Apple and Microsoft.
+
+Apple has a complete vertical stack integration; they control both the hardware and software, so they can provide a tight experience for their consumers.
+
+In addition, Apple continuously update their APIs and guidelines for app design, rules, and issue platform-wide updates once a year with their annual software refreshes. This allows developers with predicable schedules and docs to update their apps. This also allows Apple to simplify the packaging experience, such as the DMG and PKG.
+
+Microsoft has both EXE, MSI but they're not as tight as Apple because of backward compat support, which means apps often have to deal with registry, hardware tech (32bit/64bit/arm) that macOS devs do not have to deal with. This is because Microsoft does not own the hardware stack, so they have to provide backward compat to ensure everyone can use any software compiled to Windows for the past few decades, not permitting an easy one-win solution like Apple.
+
+Linux is an open source community project, it belongs to the public with no restrictions. There's no single vendor (Linus is Benevolent dictator for life but he doesn't really fully control it). There are several standard bodies to try to centralize the work going into Linux like free desktop APIs, but no one is required to follow it. Since there's no enforcement at all levels, there's also no way to ensure a consistent packaging experience for all users either. We do have some universal packaging solution such as Flatpak, AppImage, Snap but they're not available in all distros, it is up to the public.
+
+However, note majority of users download their apps from the package manager; apt, dnf, etc or the software store apps that is available for their distro. So they don't have to deal with the packaging either.
+
