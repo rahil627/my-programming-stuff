@@ -3,7 +3,7 @@
 
 window:
   opacity: .85
-  decorations: none # now to figure out how to move it...
+  #decorations: none # now to figure out how to move it...
   padding:
     x: 5
     y: 5
