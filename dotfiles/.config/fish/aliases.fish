@@ -36,10 +36,12 @@ alias -s q='exit'
 
 # basic file system commands
 # TODO: config these, just the ls commands
-alias -s l='ls'
-alias -s ll='ls -l' # long (no --long flag)
-alias -s lla='ls -la'
-alias -s la='ls -a' # --all
+alias -s l='eza'
+alias -s la='eza -a' # --all
+alias -s ll='eza -l' # long (no --long flag)
+alias -s lla='eza -la'
+alias -s ld='eza -D' # TODO: ld is a command-line tool!
+alias -s lda='eza -D -a'
 
 alias -s mv='mv -iv' # --interactive --verbose
 alias -s cp='cp -iv'
@@ -62,11 +64,14 @@ alias -s f='lf' # also c+f binding
 
 # contemporary replacements
 # note: DO NOT replace the original commands, bash scripts need to execute them!
-alias -s lt='exa --tree --git-ignore'
-alias -s lat='exa --tree --all --git-ignore' # vs lta
-alias -s lat2='exa --tree --all --git-ignore --level 2'
-alias -s lat3='exa --tree --all --git-ignore --level 3'
-alias -s llt='exa --tree --all --long --git-ignore' # vs llat, llta
+alias -s lt='eza --tree --git-ignore'
+alias -s lat='eza --tree --all --git-ignore' # vs lta
+alias -s lat1='eza --tree --all --git-ignore --level 1'
+alias -s lat2='eza --tree --all --git-ignore --level 2'
+alias -s lat3='eza --tree --all --git-ignore --level 3'
+alias -s llt='eza --tree --all --long --git-ignore' # vs llat, llta
+alias -s ldt='eza --tree -D --git-ignore'
+alias -s ldat='eza --tree -D --all --git-ignore'
 
 # if debian (too difficult: https://unix.stackexchange.com/questions/6345/how-can-i-get-distribution-name-and-version-number-in-a-simple-shell-script)
 #alias -s bat='batcat' # debian has a package named bat already, so it named it batcat, wtf
