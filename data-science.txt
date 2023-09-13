@@ -1,0 +1,22 @@
+
+jupyter (julia, python, R):
+provides an interface and platform to write code in documents and display it's visuals (mostly scientific kinds: graphs, plots, etc.), for scientific writings 'n papers
+
+the platform solves the problem of people (especially scientific people) having to set up dev environments
+
+
+https://github.com/topics/jupyter-notebook
+  - see some public projects? maybe there's a better way of seeing public projects...
+
+
+https://github.com/jakevdp/PythonDataScienceHandbook
+  - TODO: this seems like a perfect start
+
+https://jupyter.org/try
+
+https://jakevdp.github.io/PythonDataScienceHandbook/index.html
+  - click on the little Google colab button, which hosts a jupyter server and client for you
+  - TODO: quickly go over machine learning
+    - starts off very good
+
+
