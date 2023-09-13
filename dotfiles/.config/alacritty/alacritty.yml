@@ -10,11 +10,13 @@ window:
 
 
 font:
-  # just change this one for testing
   normal:
-    family: "hasklig medium" # "Mono" # noto sans mono by default for chromeos
-  
-  size: 10
+    #family: "hasklig medium" # "Mono" # noto sans mono by default for chromeos
+    #size: 10
+
+    family: "Meslo LG M" # "Mono" # noto sans mono by default for chromeos
+    style: Regular
+    size: 11
 
   bold:
     family: "hasklig medium"
@@ -30,6 +32,8 @@ font:
 
 
 key_bindings:
+  - { key: N, mods: Alt, action: CreateNewWindow }
+  - { key: N, mods: Control, action: CreateNewWindow }
   #- { key: Space, mods: Shift|Control, mode: ~Search, action: ToggleViMode } # default
   - { key: V, mods: Control, mode: ~Search, action: ToggleViMode }
 
