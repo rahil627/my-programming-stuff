@@ -1,13 +1,15 @@
-NOTE: do not put anything in fish_plugins file, it is generated/overwritten
 
+# update plugins
+edit ~/.config/fish/fish_plugins
+NOTE: do not put anything in fish_plugins file, it is generated/overwritten
 NOTE: after editing fish_plugins, remember to run:
 fisher update
+
 
 # sources:
 https://github.com/jorgebucaran/awsm.fish
   - jorgebucaran's list of plug-ins, includes many of his own
   - i went through this list
-
 
 
 # plugins and my notes:
@@ -23,7 +25,6 @@ jorgebucaran/autopair.fish
 nickeb96/puffer-fish
 gazorby/fish-abbreviation-tips
   - stuff that should be included in fish
-
 
 # TODO: experimenting with prompts:
 # ilancosman/tide@v5
@@ -42,12 +43,3 @@ jorgebucaran/hydro
 catppuccin/fish
 
 
-# copy of fish_plugins:
-jorgebucaran/fisher
-jorgebucaran/autopair.fish
-nickeb96/puffer-fish
-gazorby/fish-abbreviation-tips
-patrickf1/fzf.fish
-gregorias/bookmarks.fish
-jorgebucaran/hydro
-catppuccin/fish
