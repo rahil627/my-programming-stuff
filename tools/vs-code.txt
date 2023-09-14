@@ -1,15 +1,18 @@
 
+useful key-bindings:
 c+p
+  - find file in project
+
+c+sh+p
   - main command prompt
 
 file -> preferences ...
   - main settings
 
 
-how to backup settings:
+# backup settings
 https://gist.github.com/MaxAtoms/b30163855bc6995588a5af9e88b28e51
 
-# backup settings 
 Backup a copy of "~/.config/Code - OSS/User/settings.json"
 
 # save a list of extensions

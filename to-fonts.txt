@@ -1,4 +1,19 @@
 
+# install
+for arch, just use package managers to install them
+see https://wiki.archlinux.org/title/fonts
+
+pacman -S adobe-source-code-pro-fonts
+yay -S ttf-meslo
+...
+
+see all fonts installed by package:
+pacman -Qs ttf
+
+the way to install without using package manager, for other distros:
+/usr/share/fonts or a local dir (/.fonts/ is deprecated)
+
+# lists of fonts
 https://www.programmingfonts.org/
   - try fonts here!
 
@@ -6,7 +21,6 @@ fonts.google.com
   - use this site to check out contemporary pop fonts
   - although you can download them here, for linux, should use package managers
   - in order to use with crostini apps, might have to put them into the linux folders (see archwiki)
-    - /usr/share/fonts or a local dir (/.fonts/ is deprecated)
 
 https://wiki.archlinux.org/title/fonts
   - also a great resource, listing some pop font packages and more resources
