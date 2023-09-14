@@ -71,11 +71,12 @@ end
 
   # control+keys for jumping to apps
   bind \cf lf # c+f = file manager
-  bind \cv nvim # c+v = vim, also c+e = EDITOR env var by default on fish
+  # TODO: foot terminal doesn't seem to differentiate modifier keys...??
+  # bind \cv nvim # c+v = vim, also c+e = EDITOR env var by default on fish
 
   if bind -M insert > /dev/null 2>&1 # not sure... just copied
     bind -M insert \cf lfcd # function in aliases file
-    bind -M insert \cv nvim
+    # bind -M insert \cv nvim
   end
 
 
