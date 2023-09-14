@@ -1,11 +1,20 @@
 
 see notes in cli-shells.txt
 
+plugin lists:
+https://github.com/jorgebucaran/awsm.fish
+
 shorcuts:
 https://fishshell.com/docs/current/interactive.html
   - seems like the most useful page
 
 see config.fish for my bindings and notes
+https://www.reddit.com/r/fishshell/comments/16hjcpo/is_there_a_way_to_alias_a_batch_of_commands/
+  - ways to config fish (my post)
+
+the way i config fish:
+i keep a single file with all the `alias` commands which create simple functions, and also `source` another file which contains all of the longer functions.
+the fisher plugin will add functions to the functions folder, usually prepend `_`
 
 tab-completion (c+i?)
 [tab]
@@ -16,7 +25,7 @@ command -[tab]
   - list all flags (with descriptions!)
 cd[tab]
   - list directories
-  
+
 
 when typing in a file-path, the dir/file-names are fuzzy-searched
 for example: .config/a-long-name, search .c[tab]/long[tab]
@@ -43,6 +52,20 @@ dirh
   - directory history
 cdh
   - cd history
+
+funced function-name
+  - edit a function (for the shell session)
+funcsave function-name
+  - then save the edited function (for good)
+
+TODO: may have to run funcsave after functions --erase
+
+advanced:
+function (command)
+  - can run functions on events
+
+
+
 
 
 fish language:

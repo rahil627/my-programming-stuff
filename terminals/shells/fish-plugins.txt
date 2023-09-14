@@ -1,36 +1,53 @@
-# TODO: lost these notes because fish-plugins is generated??
-# or maybe i just didn't copy to local copy
+NOTE: do not put anything in fish_plugins file, it is generated/overwritten
 
-# NOTE: do not put comments on the same line as the plug-in
-# NOTE: need a space between # and plug-in/name, in case of commenting
+NOTE: after editing fish_plugins, remember to run:
+fisher update
 
-# jorgebucaran's list of plug-ins, includes many of his own
-# https://github.com/jorgebucaran/awsm.fish
-  - TODO: go through this list, and most popular list
+# sources:
+https://github.com/jorgebucaran/awsm.fish
+  - jorgebucaran's list of plug-ins, includes many of his own
+  - i went through this list
 
-# this plug-in manager is a plug-in!
+
+
+# plugins and my notes:
 jorgebucaran/fisher
+  - this plug-in manager is a plug-in!
 
-# TODO: pop fzf bindings, until you make your own
 PatrickF1/fzf.fish
-# note: requires fzf installation to work
+  - pop fzf bindings
+  - TODO: should make your own
+  - note: requires fzf installation to work
 
-# stuff that should be included in fish
 jorgebucaran/autopair.fish
+nickeb96/puffer-fish
+gazorby/fish-abbreviation-tips
+  - stuff that should be included in fish
+
 
 # TODO: experimenting with prompts:
-# the best prompt thingy, but i def don't want anymore stuff to customize, ugh!
 # ilancosman/tide@v5
-# see github repo for instructions
+  - the best prompt thingy, but i def don't want anymore stuff to customize, ugh!
+    - seems overkill
+  - see github repo for instructions
 
-# a minimialist prompt thingy
-# can compare this to the native one
-# this one seems good enough for me! simple, no customization, like fish! :)
 jorgebucaran/hydro
+  - a minimialist, lag-free prompt thingy
+  - can compare this to the native one
+    - this one seems good enough for me! simple, no customization, like fish! :)
+--
 
-# TODO: experimenting theme
+# TODO: experimenting with themes
 # currently ussing catppuccin frappe
 catppuccin/fish
 
-# REMEMBER TO RUN:
-# fisher update
+
+# copy of fish_plugins:
+jorgebucaran/fisher
+jorgebucaran/autopair.fish
+nickeb96/puffer-fish
+gazorby/fish-abbreviation-tips
+patrickf1/fzf.fish
+gregorias/bookmarks.fish
+jorgebucaran/hydro
+catppuccin/fish
