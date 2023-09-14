@@ -4,6 +4,17 @@
 
 # most useful commands in this section
 
+# just append useful commands here
+
+# append file to file2
+file >> file2 # TODO: NOTE: '>' operator overwrites!?
+
+# order entire file-system by disk size, navigate, delete
+ncdu /
+
+
+
+
 # use this to find the file, then use | to chain the command
 # no more hunting for files!
 # the search i think is automatically recursive
@@ -85,15 +96,15 @@ cp init.vim ~/.config/nvim/init.vim
 
 # replace file extensions in folder
 # https://unix.stackexchange.com/questions/78821/how-can-i-rename-all-files-with-one-extension-to-a-different-extension-recursive#78822
-find some_folder -type f -name "*.bub" | 
-    sed "s/\.bub$//" | 
+find some_folder -type f -name "*.bub" |
+    sed "s/\.bub$//" |
     xargs -I% mv -iv %.bub %.aaa
-    
+
 # function version
 # use: $ extmv some_folder/ bub aaa
 $ extmv () {
-    find "${1}" -type f -name "*.${2}" | 
-    sed "s/\.${2}$//" | 
+    find "${1}" -type f -name "*.${2}" |
+    sed "s/\.${2}$//" |
     xargs -I% mv -iv "%.${2}" "%.${3}"
 }
 
