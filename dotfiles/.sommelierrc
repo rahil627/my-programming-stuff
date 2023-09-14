@@ -1,0 +1,8 @@
+# scale crostini correctly system-wide
+# TODO: not working
+# echo Xft.dpi: 160 | xrdb -merge
+# export GDK_SCALE=2
+# export GDK_SCALE_DPI=192
+# export SOMMELIER_SCALE=.8
+
+
