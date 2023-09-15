@@ -33,9 +33,8 @@ source functions.fish
 #alias -s unalias='functions --erase'
 
 # basic shell signals
-alias -s c='clear'
-#alias -s c='clear' -x
-#alias -s ca='clear'
+alias -s c='clear -x' # scroll buffer up, c+l
+alias -s ca='clear' # clear scrollback buffer
 alias -s q='exit'
 
 # basic file system commands
