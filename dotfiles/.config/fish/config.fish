@@ -86,6 +86,12 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
   abbr -a ca 'clear' # clear scrollback buffer
   abbr -a q 'exit' # control+q
 
+
+  function add-fish-aliases
+    alias -s unset 'set --erase'
+    alias -s unalias 'functions --erase' # careful, deletes any function!
+  end
+
   function add-file-aliases
     # basic file system commands
     # add --interactive, --verbose, and --parents flags
@@ -130,6 +136,7 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
   end
 
   if test $rebuild = yes # WTF is this syntax fish!?!? arghhhh
+    add-fish-aliases
     add-file-aliases
   end
 
