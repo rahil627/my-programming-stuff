@@ -1,4 +1,7 @@
-todo:
+todo:  
+see https://github.com/clo4/dotfiles  
+aspire to https://github.com/clo4/nix-dotfiles  
+
 include the 'programming' folder from 'my notes' folder
   - create another git repo in programming(?), and use a git submodule here
     - not sure if its a good idea to have a repo inside of another repo...
