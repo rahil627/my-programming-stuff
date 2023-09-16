@@ -1,7 +1,11 @@
 # longer functions are thrown in here
-# this is executed via source in aliases.fish
+# this is executed via 'source $config_path'functions.fish' in config.fish
 
-
+function mkcd --description "create a directory and change to it"
+    mkdir -pv $argv;
+      cd $argv;
+  end
+  funcsave mkcd
 
 
 # from lfcd.fish, part of lf (terminal file manager)
@@ -17,7 +21,6 @@
 #     bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
 #
 # You may put this in a function called fish_user_key_bindings.
-
 function lfcd
     set tmp (mktemp)
     # `command` is needed in case `lfcd` is aliased to `lf`
@@ -33,7 +36,6 @@ function lfcd
     end
 end
 funcsave lfcd
-
 
 
 # https://github.com/kuncevic/execute-dir.fish/blob/master/functions/xd.fish
