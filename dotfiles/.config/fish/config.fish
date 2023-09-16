@@ -8,6 +8,7 @@ set config_path ~/.config/fish/ # --local didn't work in function scope...
 
 # NOTE: only need to build once during setup, then after alteration of aliases or functions
 set rebuild no # fish doesn't have booleans :(
+#source $config_path'aliases.fish'
 
 
 
@@ -48,6 +49,10 @@ set rebuild no # fish doesn't have booleans :(
 #alias -s unalias='functions --erase'
 
 
+
+
+
+
 # TODO: not sure of order: add functions -> add aliases -> add abbrevations -> bind keys -> add env vars ?
 # keep abbrs and aliases together for now, for easy editing
 
@@ -61,6 +66,8 @@ end
 if test $rebuild = yes
   add-functions
 end
+
+
 
 function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fish aliases
   # abbreviations > aliases
@@ -216,9 +223,6 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
 end
 add-aliases-and-abbrs
 
-#functions --erase bat # TODO: hotfix, fixed now..?
-
-
 
 
 
@@ -324,9 +328,6 @@ bind-keys
 
 
 
-# only necessary after updating aliases file
-# source ~/.config/fish/aliases.fish
-
 
 
 
@@ -389,6 +390,10 @@ add-env-vars
 # use this to help you find a theme, displaying text within your terminal
 # fish_config theme show
 # fish_config theme choose [theme_name]
+
+# NOTE: requires fisher plugin: catppuccin/fish
+#fish_config theme choose "Catpuccin Frappe"
+# otherwise, the default one ("fish default") is good enough!
 
 set -g fish_greeting "herro little fishy :)
 don't forget to go toward nature
