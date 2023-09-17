@@ -147,7 +147,10 @@ gh repo clone my-programming-stuff
 # might have to hand-copy dotfiles, ensuring you don't overwrite some distro-specific configs
 
 # (re)create all aliases/functions
-fish .aliases.fish
+# in ~/.config/fish/config.fish
+# set rebuild = yes
+# restart shell
+# set rebuild = no
 
 # re-build font cache files
 fc-cache -fv
