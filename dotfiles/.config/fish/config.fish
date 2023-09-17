@@ -76,13 +76,15 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
   # i kinda prefer core replacements to be functions rather than abbrevations..
   # but abbreviations make the command history more readable to others
   # expanding text is ugly compared to keeping it short
+  # so for things like 'mv -iv', i prefer aliases for neatness
 
   # basic shell signals
   # https://fishshell.com/docs/current/language.html#event
   #   - TODO: should make functions via 'function --on-signal'
   # https://fishshell.com/docs/current/cmds/trap.html
   # for now, just add commands and/or bindings
-  abbr -a c 'clear -x' # clear by scrolling buffer up, c+l triggers clear by default (i think via terminal signal)
+  # c binding is used by cd/cdi
+  #abbr -a c 'clear -x' # clear by scrolling buffer up, c+l triggers clear by default (i think via terminal signal)
   abbr -a ca 'clear' # clear scrollback buffer
   abbr -a q 'exit' # control+q
 
@@ -104,16 +106,16 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
     alias -s mkd 'mkdir -pv'
     # mkcd declared in functions.fish
     alias -s rm 'rm -iv'
-    alias -s rmr 'rm -rfv' # -i and -v asks for every file, use -f to skip that
+    alias -s rmr 'rm -rfv' # TODO: add a single prompt; -i and -v asks for every file, use -f to skip that
     alias -s rmdir 'rmdir -v'
     alias -s rmd 'rmdir -v'
 
     # TODO: finish configing the ls commands
     # TODO: should use core unix commands? ls > exa?
-    alias -s l 'eza'
-    alias -s la 'eza -a' # --all
-    alias -s ll 'eza -l' # long (no --long flag)
-    alias -s lla 'eza -la'
+    alias -s l 'eza --group-directories-first'
+    alias -s la 'eza -a --group-directories-first' # --all
+    alias -s ll 'eza -l --group-directories-first' # long (no --long flag), --header, --git
+    alias -s lla 'eza -la --group-directories-first' # --header, --git
     alias -s ld 'eza -D' # WARNING: TODO: ld is a command-line tool!
     alias -s lda 'eza -D -a'
 
@@ -124,12 +126,12 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
     function add-list-tree-aliases
       # TODO: experimenting with this...
       # note: DO NOT replace the original commands, bash scripts need to execute them!
-      alias -s lt 'eza --tree --git-ignore'
-      alias -s lat 'eza --tree --all --git-ignore' # vs lta
-      alias -s lat1 'eza --tree --all --git-ignore --level 1'
-      alias -s lat2 'eza --tree --all --git-ignore --level 2'
-      alias -s lat3 'eza --tree --all --git-ignore --level 3'
-      alias -s llt 'eza --tree --all --long --git-ignore' # vs llat, llta
+      alias -s lt 'eza --tree --git-ignore --group-directories-first'
+      alias -s lat 'eza --tree --all --git-ignore --group-directories-first' # vs lta
+      alias -s lat1 'eza --tree --level 1 --all --git-ignore --group-directories-first'
+      alias -s lat2 'eza --tree --level 2 --all --git-ignore --group-directories-first'
+      alias -s lat3 'eza --tree --level 3 --all --git-ignore --group-directories-first'
+      alias -s llt 'eza --tree --all --long --git-ignore --group-directories-first' # vs llat, llta; --header, --git
     end
     add-list-tree-aliases
 
@@ -141,12 +143,15 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
   end
 
 
-
+  # abbr functions
+  abbr -a c 'cdi'
 
 
   # super useful fuzzy search functions
   # TODO: test these
   # TODO: should create my own simple aliases/functions and then bind them here
+  abbr -a s 'fzf' # f is taken by file manager, so s for search; f for filter & find makes more sense though
+  abbr -a fuzzy 'fzf'
   abbr -a vf 'nvim $(fzf)' # vs typing 'nvim' then pressing fzf-file-widget binding
   #abbr -a cdt 'cd $(find * -type d | fzf)' # vs fzf-cd-widget
   #abbr -a gct 'git checkout $(git branch -r | fzf)'
@@ -165,7 +170,6 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
   #abbr -a fd 'fdfind'
 
   abbr -a h 'tldr' # -> man; vs t, m
-  abbr -a fuzzy 'fzf'
   # note: ripgrep defaults might affect everything that uses it (fzf, nvim, etc.)
   # -i   --ignore-case
   abbr -a rg 'rg -i' # -> grep
@@ -204,7 +208,8 @@ function add-aliases-and-abbrs # and by 'aliases' i mean fish abbrevations or fi
   function add-git-abbrs
     # git, ordered by git work-flow
     abbr -a gs 'git status'
-    #abbr -a gp 'git pull' # conflicts with push, although you fetch 'n pull more
+    abbr -a gf 'git fetch'
+    #abbr -a gp 'git pull' # conflicts with push; which one do i use more?
     abbr -a gpull 'git pull'
     abbr -a gd 'git diff' # delta?
     abbr -a gdh 'git diff HEAD' # delta?
@@ -399,7 +404,7 @@ add-env-vars
 # fish_config theme choose [theme_name]
 
 # NOTE: requires fisher plugin: catppuccin/fish
-#fish_config theme choose "Catpuccin Frappe"
+#fish_config theme choose "Catpuccin Mocha" # vs Macchiato
 # otherwise, the default one ("fish default") is good enough!
 
 set -g fish_greeting "herro little fishy :)

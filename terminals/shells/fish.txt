@@ -70,9 +70,14 @@ function (command)
 
 fish language:
 see learn x in y minutes website
+
 echo (command)
   - command substitution
   - bash and ruby use `command` syntax
+
+NOTE: $path ~= $PATH, use $ALL_CAPS
+
+test $some-int -eq 1
 
 
 config files:
@@ -98,7 +103,7 @@ config files:
 
 aliases:
 alias rm='rm -vi'
-  - adds an alias to current sessions memory
+  - adds an alias (temporary function?) to current sessions memory
 alias -s rm='rm -vi'
   - saves it into a function in ~/.config/fish/function/
 functions --erase rm
