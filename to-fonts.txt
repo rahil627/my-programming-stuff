@@ -10,6 +10,9 @@ yay -S ttf-meslo
 see all fonts installed by package:
 pacman -Qs ttf
 
+see names of fonts, needed to set string in config files
+fc-list | fzf
+
 the way to install without using package manager, for other distros:
 /usr/share/fonts or a local dir (/.fonts/ is deprecated)
 
@@ -73,16 +76,21 @@ https://fonts.adobe.com/search?query=code
   - code saver
 
 
-current favorite:
+current favorites:
+**meslo**
+  - better than source code pro!?
+  - terminal: size 10, 10.5, 11
+  - also really good, competitive to source code pro
+
 **source code pro / hasklig**
+  - a long-time standard
   - terminal: size 10-11, thickness: medium
   - vscode: size 13, thickness: (default) regular
 
 mononoki
   - trying in terminal
 
-**meslo**
-  - also really good, competitive to source code pro
+
 
 hasklig <- source code pro
 mesloLGS nf ~= fira mono <- dejavu sans mono
@@ -172,7 +180,12 @@ consolas
   - a classic
   - on Windows computers, closed-source? i think it came with VS Studio... it's the C# font
 
+Monaco
+  - and old Apple Mac OS X font, used in XCode
 
+DejaVu Sans Mono
+Andale Mono
+Vera Mono
 
 others:
 hermit
