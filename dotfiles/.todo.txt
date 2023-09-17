@@ -1,19 +1,53 @@
-replace debian with archlinux
-  - benefit from having AUR
-replace server distro with openSUSE and can try using nix containers for dev stuff
 
-try DOOMemacs vs nvim
+
+GET BACKUP SOFTWARE FOR ARCH!!
+
+replace server distro with openSUSE (leap) and try using nix package manager for most packages
+  - then change to nixOS
+
+update personal distro arch -> openSUSE leap
+  - start with nix the package manager first via 'determinate nix installer'
+
+port old vim configs to NVChad/lua
+
+make a directories bookmark script (fish function)
+
+bind alt+control+l to 'clear' command
+
+modify fzf to use fd command?
+  - search 'find' in fzf_key_bindings.fish
+  - is it much faster than find command?
+
+too much searching:
+c+r - fish command search
+c+s+f - alacritty buffer search
+a+r - fzf command search
+a+s+r - fzf.fish's fzf search with preview and options
+
+**add hidden files to fzf searches**
+  - a+f, a+s+f, c+a+f, c+a+s+f
+  - c+f taken by file manager
+learn to use lf to replace gui file manager
+  - show hidden files by default
+show hidden files by default for chromeos**
+note task manager for shortcuts for chromeos
+re-bind fish's default reverse command history search
+  - c+r and/or a+s+r
+figure out what's wrong with the long prompt path
+  - only on alacritty?
+
+
+try DOOMemacs
+  - compare to nvim
   - find a sane nvim config like doomemacs
+    - NVChad!
 
-finish installing flutter dev env
-  - web AND native
-run a sample app in web
-run a sample app in native (Android/ChromeOS)
-run ai gen'd mapping example
-use ai to gen the boiler-plate code of other apps i want to make 
+try godot
+  - run draw with code example
 
-nvim tabs vs spaces
-  - i changed it to use spaces instead of tabs, will python still work?
+alacritty has a alacritty.fish script
+copy the official alacritty.yml config file, which has all the defaults commented out?
+  - save as alacritty-defaults.yml
 
 bindings dotfile?
   - check what fzf_fish plug-in binds, then create own bindings
@@ -22,13 +56,13 @@ bindings dotfile?
   - bind function keys for stuff too?
   - c+a+r = reverse search, c+a+f = search directory with preview, a+c cd "widget", c+t find file "widget"
   - should make it:
-  - c+f = search file without preview
-  - c+a+f = search file with preview
-  - c+c, c+h, c+r = reverse search command history
-  - c+d = directory explorer / navigator
+  - a+f = search file without preview
+  - a+s+f = search file with preview
+  - a+c, a+h, a+r = reverse search command history
+  - a+d = directory explorer / navigator
 
 test changing terminal colors via iOS app, otherwise delete base16 themes?
 
 delete ctags stuff?
-  - including plugins related to it
+  - including plugins related to it: vaxe (for haxe)
 
