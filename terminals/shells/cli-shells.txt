@@ -1,13 +1,13 @@
-    
+
 todo:
 go through the docs
   - https://fishshell.com/docs/current/tutorial.html
   - they're really good
 
 https://github.com/pry/pry
-  - use ruby in the shell?? :o  
-  
-    
+  - use ruby in the shell?? :o
+
+
 conclusion:
 use any cool contemporary shell for personal use (zsh, fish, ion, etc.) but write scripts in bash (or ruby! :) ) for portability
 
@@ -39,10 +39,10 @@ https://learnxinyminutes.com/docs/bash/
 
 https://developerlife.com/2021/01/19/fish-scripting-manual/
   - very good overview of fish scripting lang, very practical
-  
+
 https://fishshell.com/docs/current/fish_for_bash_users.html
   - **a great overview of the differences and improvements over bash**
-  
+
 
 todo:
 https://fishshell.com/docs/current/tutorial.html
@@ -121,14 +121,14 @@ kitty
   - super extensible: "kittens", written in python
   - overall a whole 'nother layer of customization and complexity
 
-foot
+**foot**
   - "A fast, lightweight and minimalistic Wayland terminal emulator"
   - very fast
   - according to the maker of NotCurses tui lib, this one is awesome if you use Wayland
   - https://codeberg.org/dnkl/foot
 
 
-  
+
 
 https://www.reddit.com/r/archlinux/comments/n9noje/alacritty_vs_kitty/
   - didn't read through much, but in general it seems kitty > alacritty
@@ -156,10 +156,10 @@ Linux:
 
 https://www.howtogeek.com/68563/HTG-EXPLAINS-WHAT-ARE-THE-DIFFERENCES-BETWEEN-LINUX-SHELLS/
   - a good straight-foward tech post abuot the history of shells
-  
+
 https://hyperpolyglot.org/unix-shells
   - a great web-site, comparing many shell langs and providing some history too
-  
+
 basically:
 
 the old bourne-like shells:
@@ -173,13 +173,13 @@ ash = Almaquish shell
   - a light-wieght sub-set(?) of bash used in embeded systems
   - you can find it on the tiny Linux distros installed on mobile devices, sch as ArchLinux, which itself uses BusyBox
     - i personally have "iSH" app on my iOS device, and this thing is lightning fast!!!, this is actually where i played with and learned vi: because it was *so* much faster than using CLI with my server
-    
+
 
 the current bourne-like shells:
 dash = ? Almaquish shell
   - based on ash, and therefore also light-weight, quick
   - used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
-  
+
 zsh = z? shell
   - a super-set of bash, used on contemporary desktop systems
   - **Mac OS X recently replaced bash with this**, thus making it the current standard
@@ -189,7 +189,7 @@ zsh = z? shell
   - **comes without any functionality and will require manually tinkering add-ons over time to get it set-up right**
     - so will need to get some package with clean defaults, similar to doomemacs 'n nvchad
       - i heard 'oh my zsh' is bloated, so just find a minimalist one that replicates fish's core funcionality, 'n go from there
- 
+
 
 the newer stuff, post-bourne:
 fish
@@ -210,8 +210,8 @@ fish
    - it's also a much better idea to allow the makers of fish to choose and update the shell rather than configuring yet another linux thing--neovim config is arduous enough!!
    - update: as it turns out, fish is just a much newer design, all around: aliases are simple functions (with lazy-loading!), strings are arrays (thus saving you from parsing and accessing words 'n args), strings are escaped properly (don't need to worry about "v" vs $"v", or whatever), and theres prolly a ton more stuff like this. So, even without the language, it just seems overall better to ditch old "posix standardized" bash, zsh, and ofher variants
    - **also has vi *and* emacs mode!**
-   
-   
+
+
 elvish
   - https://elv.sh
   - seems fishy
@@ -226,15 +226,15 @@ elvish
 ion
   - Rust
 
-  
-  
+
+
 others:
 csh, tcsh, one other one = c shell, improved c shell, ane one other one
   - C-like shell with more scripting ability than the bourne shell? A bit dated now..?
-  
-  
-  
-  
+
+
+
+
 # get file-path of shell
 which [shell name]
 

@@ -71,7 +71,6 @@ export PATH = $PATH:/path/to/bi
 
 
 # update swap file
-
 # check size and name of swap file
 swapon -s
 
@@ -89,10 +88,6 @@ mkswap /swapfile
 swapon /swapfile
 swapon -s
 
-
-# i will never understand linux's file structre, wtf!!
-# NOTHING is standardized!!! ahhhhhh
-cp init.vim ~/.config/nvim/init.vim
 
 # replace file extensions in folder
 # https://unix.stackexchange.com/questions/78821/how-can-i-rename-all-files-with-one-extension-to-a-different-extension-recursive#78822

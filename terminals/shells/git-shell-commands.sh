@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # main use
 
@@ -20,7 +20,7 @@ git remote add origin https://github.com/rahil627/my-written-expressions.git
 git push -u origin main
 
 # …or push an existing repository from the command line
- git remote add origin https://github.com/rahil627/my-written-expressions.git
+git remote add origin https://github.com/rahil627/my-written-expressions.git
 git branch -M main
 git push -u origin main
 
@@ -30,7 +30,7 @@ git push -u origin main
 git restore file-name
 
 # remove files that are listed in the .gitignore but still on the repository
-# https://stackoverflow.com/questions/13541615/how-to-remove-files-that-are-listed-in-the-gitignore-but-still-on-the-repositor 
+# https://stackoverflow.com/questions/13541615/how-to-remove-files-that-are-listed-in-the-gitignore-but-still-on-the-repositor
 git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
 
 
@@ -40,7 +40,6 @@ git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
 # add a git submodule
 git submodule add https://bitbucket.org/jaredw/awesomelibrary
 # it should add .gitmodules and a folder for it
-
 
 # remove a git submodule
 # Remove the submodule entry from .git/config
