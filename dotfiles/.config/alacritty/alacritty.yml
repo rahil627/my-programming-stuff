@@ -11,23 +11,21 @@ window:
 
 font:
   normal:
-    #family: "hasklig medium" # "Mono" # noto sans mono by default for chromeos
-    #size: 10
-
+    #"hasklig medium"
     family: "Meslo LG M" # "Mono" # noto sans mono by default for chromeos
     style: Regular
-    size: 11
+  size: 10.5
 
   bold:
-    family: "hasklig medium"
+    family: "Meslo LG M"
     style: Bold
 
   italic:
-    family: "hasklig medium"
+    family: "Meslo LG M"
     style: Italic
 
   bold_italic:
-    family: "hasklig medium"
+    family: "Meslo LG M"
     style: Bold Italic
 
 
