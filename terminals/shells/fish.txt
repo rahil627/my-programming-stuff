@@ -3,6 +3,11 @@ see notes in cli-shells.txt
 
 plugin lists:
 https://github.com/jorgebucaran/awsm.fish
+  - done going through these
+https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+  - ohmyzsh is a community-maintained list of plugins
+    - there's way too many, but i think you choose which ones to install..?
+  - can go through these once in a while and look for fish alternatives
 
 shorcuts:
 https://fishshell.com/docs/current/interactive.html
@@ -13,8 +18,14 @@ https://www.reddit.com/r/fishshell/comments/16hjcpo/is_there_a_way_to_alias_a_ba
   - ways to config fish (my post)
 
 the way i config fish:
-i keep a single file with all the `alias` commands which create simple functions, and also `source` another file which contains all of the longer functions.
+i keep a single file with all the 'abbr' expansions and `alias` commands (which create simple functions), and also `source` another file which contains all of the longer functions.
 the fisher plugin will add functions to the functions folder, usually prepend `_`
+
+https://www.reddit.com/r/fishshell/comments/16hjcpo/comment/k1eqln1/?context=3
+  - post-3.6.0 abbr only exist per session unless you write them in config.fish
+    - this makes handling aliases/abbr better, as you don't have to manage deleting old aliases (functions)
+
+
 
 tab-completion (c+i?)
 [tab]
@@ -108,6 +119,9 @@ alias -s rm='rm -vi'
   - saves it into a function in ~/.config/fish/function/
 functions --erase rm
   - remove an alias, and hopefully function too?
+
+abbr:
+expands text, for example rm -> rm -vi after presing enter/space/etc.
 
 
 bindings:
