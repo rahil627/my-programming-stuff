@@ -5,7 +5,7 @@
 
 Some paradigms are concerned mainly with implications for the execution model of the language, such as allowing side effects, or whether the sequence of operations is defined by the execution model. Other paradigms are concerned mainly with the way that code is organized, such as grouping a code into units along with the state that is modified by the code. Yet others are concerned mainly with the style of syntax and grammar."
 
-imperative 
+imperative
   - instructs the machine how to change its state
 procedural
   - groups instructions into procedures
@@ -53,11 +53,11 @@ see the docs for haxe
   - this covers the basic and many advanced features of most programming languages
   - i will categorize my notes similar to the docs: types, type systems, expressions, features, compiler, etc.
   - https://haxe.org/manual/introduction.html
-  
+
 also the language features page
   - this page quickly lists a sub-set of advanced features of haxe
   - https://haxe.org/manual/lf.html
-  
+
 see the docs for other languages
   - i personally like how succint and simple haxe's docs are, it helps with memorization, but it's worth seeing other docs. For example, the docs to Rust is like a book!
   - language-specific features are noted in seperate notes for each programming language (ruby.txt for ruby, etc.)
@@ -82,6 +82,30 @@ monomorph
 
 ## expressions
 tell what a program should do
+
+https://www.rubyguides.com/2016/02/ruby-procs-and-lambdas/
+blocks
+  - anonymous functions that can be passed into methods
+  - can be used later
+yield (ruby)
+  - calls a block
+    - in ruby, this is actually what is used underneath when a method is called
+lambda
+  - a way to define a block with special syntax
+  - works similar to methods, provides exceptions on wrong arguments
+  - internally just a special proc object
+proc (ruby)
+  - return tries to jump out of the embracing method
+  - break tries to exit from the method which the block was given for
+  - Any object that implements the to_proc method can be converted into a proc by the & operator, and therefore can be consumed by iterators.
+closure
+  - proc ('n lambda) are closures:
+  - captures the current execution scope (local refs to vars 'n methods) with it
+binding class (ruby)
+  - used internally by proc/lambda/closure to anchor vars 'n methods to be used out of scope
+
+
+
 
 
 ## features
@@ -160,7 +184,7 @@ processes
     - pID, close, exit code, kill
     - readonly: input stream, output stream, error output stream
       - https://haxe.org/manual/std-input-output-process.html
-  
+
 threads
   - like another Main() process
   - generally you don't have control of this
@@ -195,3 +219,90 @@ difference between pointer and reference (in C)
     - a very very good answer!
     - basically: reference is like a goto, there is no memory allocated for it
     - pointer is actual data, and has memory allocated for it ("dereferencing" it leads to whatever it's pointing at)
+
+
+
+
+
+
+
+
+# in depth, copied examples
+## ruby block/lambda/proc/closure
+### blocks
+def one_two_three # block is passed implicitly
+  yield 1
+  yield 2
+  yield 3
+end
+
+one_two_three { |number| puts number * 10 }
+# 10, 20, 30
+
+def explicit_block(&block)
+  block.call # same as yield, maybe same as 'block'
+end
+
+explicit_block { puts "Explicit block called" }
+
+def do_something_with_block
+  return "No block given" unless block_given?
+  # otherwise throws an error
+  yield
+end
+
+### lambda
+say_something = -> { puts "This is a lambda" } # -> or lambda keyword
+say_something.call
+# "This is a lambda"
+
+times_two = ->(x) { x * 2 }
+times_two.call(10)
+# 20
+
+my_lambda.call
+my_lambda.() # not too bad, but can confuse with method calls?
+my_lambda[] # ??
+my_lambda.=== # wtf
+
+### proc
+my_proc = Proc.new { |x| puts x }
+my_proc = proc { |x| puts x }
+
+t = Proc.new { |x,y| puts "I don't care about arguments!" }
+t.call
+# "I don't care about arguments!"
+
+# Should work
+# jumps out of the lambda
+my_lambda = -> { return 1 }
+puts "Lambda result: #{my_lambda.call}"
+
+# Should raise exception
+# no method to jump out of, it's already the top function
+my_proc = Proc.new { return 1 }
+puts "Proc result: #{my_proc.call}"
+
+# return/jumps out of the method
+def call_proc
+  puts "Before proc"
+  my_proc = Proc.new { return 2 }
+  my_proc.call
+  puts "After proc"
+end
+
+p call_proc
+# Prints "Before proc" but not "After proc"
+
+
+### closures
+def call_proc(my_proc)
+  count = 500
+  my_proc.call
+end
+
+count   = 1
+my_proc = Proc.new { puts count }
+
+p call_proc(my_proc)
+# prints "1"

@@ -17,7 +17,7 @@ conclusion:
       - seems to be another layer of abstraction between io engine and ui
     - react-hx
       - haxe bindings for react native
-1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??), thus quite limiting(??), faster compiled language, simpler by design, **covers most use cases**
+1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??) thus quite limiting(??) nor if your focus is on web (due to limited styling by widgets provided?? and slow??), faster compiled language, simpler by design, **covers most use cases**
   - alts: Avalonia, Uno
 2. React Native for the **huge open-source javascript libraries and community**, *nasty* HTML/CSS ui language, although maybe not the best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
   - alts: MAUI
@@ -38,7 +38,7 @@ so, that leave either using **Haxe-UI for convenience and haxe love, Flutter for
 constraints and limitations:
 in order to publish to the App store, the app needs to appear native, thus, the game-ui idea is botched for Apple apps (iOS and MacOS)
 in order to use SwiftUI, you need a MacOS, and you need to use XCode (and XCode is garbage).
-    
+
 
 
 
@@ -54,6 +54,10 @@ Haxe
     - currently supported back-ends: (TODO: update this) **React-Native for mobile**, coming soon: Heaps
   - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same core code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of Haxe code and even coconut ui api code. **this might just be the most future-proof solution that i know of...**
     - from Rudy on the Haxe server (15 years Haxe dev with tons of React experience): "Yeah the theory is all nice, but in practice you'll build your UI with/around your current backend's components and that won't translate well to other backends"
+
+Ruby
+  - Glimmer DSL
+    - supports many back-ends (C/C++), old and contemporary: libui-ng, qt, gtk/gnome, tk, etc.
 
 
 # "hybrid"
@@ -72,13 +76,13 @@ React-Native
   - great VS Code dev experience, although still dynamically typed
   - Facebook (abandoned to open-source?)
   - Microsoft..? https://microsoft.github.io/react-native-windows/
-  
+
 MAUI (Xamarin)
   - C#/.NET WinForms(?) api
 
 Uno?
   - C#/.NET WPF api
-  
+
 RubyMotion
   - closed source, made by the same people that made DragonRuby, the cross-platform game framework
   - *i think* it's a hybrid, basically just bindings to everything, wherein you'd have to develop specifically for each platform target
@@ -103,12 +107,12 @@ Qt
   - hot-reload works on all devices, it's quite the killer feature
   - Dart has VM during development and AOT compilation for production, basically like Haxe
   - *tiny* minimum app size, like 2MB for Android
-  
+
 Avalonia
   - C#/.NET version of Flutter
- 
- 
- 
+
+
+
 # other?
 
 Electron
@@ -116,9 +120,9 @@ Electron
   - the major problem: it runs on top of a web browser: Chromium, meaning, each Electron application contains a copy of Chromium inside! :o
     - just based off this alone, it does not intrigue me... but:
   - VS Code, Skype?, Slack?, etc.
-  
-  
-  
+
+
+
 
 
 # native
@@ -142,7 +146,7 @@ SwiftUI
 Jetpack Compose
   - Google Android's version of SwiftUI ?? *gross* :vomiting_face:
   - still too new (as of 2022)
-  
+
 Kotlin MultiFramework
   - ...how is this different from Jetpack compose..??
   - terrible name... does it compile to C now??
@@ -155,16 +159,16 @@ Ionic
 Xamarin -> MAUI
 
 
-  
+
 # tools
 **CodeMagic**
   - builds apps for you, so that you don't need a Mac, iOS device, Windows(?), and Android to make stuff
   - 500 build minute free per month
   - supports: native iOS/Android, Flutter, React Native, Unity, and some older ui frameworks
   - https://codemagic.io/start/
-  
-  
-  
+
+
+
 
 
 
@@ -175,7 +179,7 @@ Xamarin -> MAUI
   - Avalonia is the spiritual successor of WPF (i personally don't know the difference between WPF, Xamarin.Forms, or ASP.NET: to me they are all "win forms"!). At the moment it only supports desktop platforms, but i think it will target mobile platforms soon, as they have a *ton* of support, including Unity and JetBrains.
   - Uno, along with MAUI, are the most direct solutions, both are far more mobile-focused than Avalonia. If one is mainly targeting iOS, then it might just honestly be better to write native Swift code instead! maaaybe.
   - as it turns out, **Haxe does not have a *native* (haxe) library of bindings for the native GUI APIs of various platforms (and devices)**. However, it does have HaxeUI, which serves as a kind of intermediary containing several "back-ends", one of which is the C++ open-source cross-platform GUI library wxWidgets. HaxeUI is actually kept up-to-date, but i'm not so sure about the status of wxWidgets, although, it was quite popular back in the day... Anyway, even **wxWidgets doesn't seem to support mobile platforms, only desktop platforms,* definitely not Android (the "dev roadmap" page says they have no plans for it unless someone wants to fun them), and iOS seems abandoned (the docs/readme reads: "wxiOS is far from a full supported port, but can be used as base for simple applications and future improvements."). Thus, **Haxe does not currently (2022) have any way to create native GUI apps for mobile platforms, neither iOS nor Android.**
-    - note: NME does not provide any sort of native GUI bindings neither, it just provides a neat Flash-like way to draw stuff on the screen, for several different device platforms. Lime pretty much does the same thing as NME (they even share a lot of code), but is way more messy / bloated. OpenFL, which uses Lime as a "back-end", just adds a higher level to that. 
+    - note: NME does not provide any sort of native GUI bindings neither, it just provides a neat Flash-like way to draw stuff on the screen, for several different device platforms. Lime pretty much does the same thing as NME (they even share a lot of code), but is way more messy / bloated. OpenFL, which uses Lime as a "back-end", just adds a higher level to that.
     - and so to conclude, if you care abuot native GUI, then C#'s frameworks (Avalonia, Uno, MAUI) and Dart's Flutter are the main options that i know of, and of the four, i'd pesonally choose Flutter or Avalonia. However, if native gui doesn't matter to you, and you just want to make a game or even an app *without* native gui, then i'd choose Haxe or any game framework really,
 
 along with several other languages/frameworks/game engines (haxeUI, raylib's raygui, various newer imGUIs, etc.)
@@ -192,7 +196,7 @@ https://www.donnfelker.com/flutter-just-might-work/
 
 https://blog.udemy.com/flutter-vs-react-native/
   - explains the architecturs of both
-  
+
 https://www.wxwidgets.org/develop/roadmap/
 https://docs.wxwidgets.org/trunk/plat_ios_install.html
 
@@ -215,7 +219,7 @@ my personal posts:
 https://github.com/ocornut/imgui/discussions/5090
 
 title: is it okay to use imgui for iOS apps?
- 
+
 PathogenDavid's answer:
 TL;DR: Just because you can doesn't mean you should.
 

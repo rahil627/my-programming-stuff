@@ -1,5 +1,8 @@
 herro
 
+https://learn-elixir.dev/blogs/creating-reusable-ecto-code
+  - to re-create the magic of RoR
+
 # install
 https://hexdocs.pm/phoenix/installation.html
 
@@ -41,7 +44,7 @@ pg_ctl -D /var/lib/postgres/data -l logfile start
 exit
 
 # if lockfile error on /var/run/postgresql...
-# https://stackoverflow.com/questions/22851352/postgresql-server-failed-to-start-could-not-create-lock-file-permission-denied 
+# https://stackoverflow.com/questions/22851352/postgresql-server-failed-to-start-could-not-create-lock-file-permission-denied
 mkdir /var/run/postgresql
 sudo -i -u postgres
 chown -R postgres:postgres /var/run/postgresql

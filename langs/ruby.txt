@@ -1,4 +1,89 @@
 
+language specific:
+https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/to-ruby-from-python/
+  - succintly lists differences with python
+  - i def prefer ruby in just about every decision!
+
+https://github.com/martinmurciego/good-books/
+  - a few ruby books, along with a few others
+
+
+
+practice:
+https://learnbyexample.github.io/books/
+ - practice examples 'n exercises for common cli stuff using ruby! :D  - ruby -e 'command' can be used to replace grep/sed/awk, and more
+  - ruby one-liners cookbook
+    - https://learnbyexample.github.io/learn_ruby_oneliners/one-liner-introduction.html
+  - ruby regex
+
+
+
+
+irb:
+https://news.ycombinator.com/item?id=24637797
+> Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use.
+
+
+cli & pipes:
+https://www.honeybadger.io/blog/ruby-unix-command-line/
+
+# not so useful...
+echo "puts 2+2" | ruby
+
+# useful!
+ruby -e "puts 'code goes here'" arg1 arg2 argN
+ruby -e 'puts ARGV.inspect' apples bananas pears oranges
+["apples", "bananas", "pears", "oranges"]
+
+# check web-page for a reg-ex using only ruby
+ruby -e "require 'open-uri'; puts open(ARGV.first).read.scan(/starr/i).count" <url here>
+
+# piping 101
+cat moby-dick.txt | ruby -e "puts STDIN.read"
+(outputs entire text)
+
+# combining with another unix tool for fetching
+curl <MY URL> | ruby -e "puts STDIN.read.scan(/starr/i).size"
+
+# loop through lines and do something (print file extensions)
+ls | ruby -e 'STDIN.each_line { |l| puts l.split(".").last }'
+# same thing using -n to loop each line, and $_ meaning the current line
+ls | ruby -n -e 'puts $_.split(".").last'
+
+
+
+useful gems:
+
+sequel
+  - database toolkit
+
+gui
+  - https://www.reddit.com/r/ruby/comments/10rugw3/2023_best_ruby_gui_library/
+    - in general, ruby, like haxe, just doesn't have enough support for gui, it would have to just bind Qt, GTK, or another cross-platform gui framework written in C/C++
+  - https://github.com/AndyObtiva/glimmer
+    - DSL wrapper for many (retained) gui back-ends
+    - similar to haxe-ui
+  - https://github.com/vaiorabbit/ruby-imgui
+    - imgui wrapper
+
+ffi
+  - https://www.rubyguides.com/2019/05/ruby-ffi/
+    - grabs a function from C's std lib libc
+    - use VLC media player's lib (written in C)
+
+rubyinline
+  - https://github.com/seattlerb/rubyinline
+  - run ffi code inline (in a ruby code file)!
+
+opal
+  - ruby to js transpiler
+
+
+
+
+
+
+
 
 
 # start a new project

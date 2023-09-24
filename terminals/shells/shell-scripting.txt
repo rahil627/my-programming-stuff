@@ -1,7 +1,24 @@
 
-also see the 'scripting languages' section in 'programming lanugages.txt' for notes on them
+also see the 'scripting languages' section in 'programming lanugages.txt' for notes on
 
 
+practice:
+https://learnbyexample.github.io/books/
+  - ruby one-liners cookbook
+  - ruby regex
+  - grep/ripgrep, sed, awk
+
+
+tui frameworks:
+bubbletea
+  - a powerful little tui framework
+  - has a bunch of component libs (bubble, etc.)
+gum
+  - built on top of bubble and lip gloss
+
+
+
+how to make a script:
 https://linuxhandbook.com/run-shell-script/
 
 add shebang to the top of the script:

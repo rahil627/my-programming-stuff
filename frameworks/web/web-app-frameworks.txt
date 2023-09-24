@@ -33,11 +33,27 @@ rails
 
 
 the frameworks:
-**ruby/sinatra/roda** (or python/flask)
+ruby on rails
+  - *the* classic web framework
+  - magical
+  - "majestic monolith"
+    - https://m.signalvnoise.com/the-majestic-monolith/
+    - for a small team, this makes more sense than micro-service architecture
+  - https://world.hey.com/dhh/the-one-person-framework-711e6318
+    - rails 7 gets closer to being "the one person framework"
+  - https://elixirforum.com/t/rails-and-phoenix-as-one-person-frameworks/44779/14
+    - rails is the best solution for gettings to minimum viable product, but maintaining it sucks due to updates breaking code
+
+ruby/grape
+  - "opinionated"
+  - between roda and rails
+
+**ruby/roda>sinatra**
   - the prettiest solution (see generated app.rb), no MVC pattern
   - even includes a choice of **templating** system (just as jekyll does): simplify writing html/js/css, and with your choice in style!
   - you'd still have to write html/js though :(
   - see this example: https://github.com/katleiahramos/Sinatra-Capsule-Wardrobe-App/tree/master
+
 **elixir/phoenix**
   - compact
   - strict MVC file structure
@@ -48,7 +64,7 @@ the frameworks:
   - The way I look at it is Phoenix is equivalent or better to anywhere along the scale of a ruby project that is built directly on Rack -> Sinatra -> Rails. It is completely modular and you can strip it down to effectively just using plug (rack like low level) to piecemeal adding the bells and whistles (Sinatra -> Rails) to even more heavily extending it.
     - https://www.reddit.com/r/elixir/comments/d8r7ob/is_phoenix_to_elixir_as_rails_is_to_ruby/
       - very good comparison between ruby and elixir frameworks
-      - Plug == Rack, ectro == ROM, Phoenis == Roda (with RoR scaling)
+      - Plug == Rack, ecto == ROM, Phoenix == Roda (with RoR scaling)
 
 phoenix liveview
   - "Phoenix[ LiveView] is actually both. In short it handles things a bit differently. Each client gets a websocket connection to the server where the state lives, Phoenix adds some JS glue on the front-end so that when state on the server changes it streams a diff to the front-end that updates the state on the front-end. It's actually very very cool! Gives you a bunch of advantages."
@@ -63,6 +79,10 @@ phoenix liveview
         - Aren’t locked into writing Svelte exclusively. Can decide what to parts of the UI to render in LiveView, and what parts are more sensible with Svelte.
         - Probably worth tacking on that Svelte provides the best DX for JS, and runs very efficiently."
       - https://github.com/woutdp/live_svelte
+
+**marko**
+  - looks cool! worth looking into.
+  - runs and maintained by eBay
 
 **js/svelte**
   - **extremely simple** and sensible front-end framework
@@ -102,6 +122,55 @@ ai is amazing for building skeletons/boiler-plate code, and just building enough
 
 
 just some notes:
+https://elixirforum.com/t/rails-and-phoenix-as-one-person-frameworks/44779/4
+Overall, I agree with DHH, that we have seen a huge ramp-up in complexity in the last decade when it comes to web development. Much of it was necessary and caused by improvements in standards and practices around security, privacy, user experiences, etc.
+
+However, some of this complexity was brought by moving the logic to the client, which naturally creates a split between client and server. The movement started with Phoenix+LiveView shows the server is equally capable of powering rich and interactive user experiences. And now, with esbuild, sass, and tailwind-standalone, we can get rid of npm and limit JavaScript to the front-end only, as it was 10 years ago.
+
+https://www.reddit.com/r/elixir/comments/zd9o07/comparing_phoenix_to_rails_in_december_2022/
+I've been a rubyist for over 10 years. Elixir for about 4. I will always love ruby for what it is. My 2 cents
+
+Ruby has considerably more libraries and this is IMO at this point the only reason, other than being mandated or wanting to write ruby, that I would still use it over Elixir.
+
+The edge for everything else IMO goes to Elixir.
+
+The big highlights are
+
+concurrency
+
+FP scope > OO scopes
+
+liveview and live dashboard are 🔥🤘
+
+contexts > models
+
+response times are in the micro vs milli seconds
+
+Phoenix saw webpacker for the 💩 it was and quick pivoted to a sane alternative in esbuild, Rails might have it all sorted out with Propshaft but right now it's an absolute dumpster fire if you're upgrading a older rails app, i.e. asset pipeline -> webpacker or asset pipeline or import maps -> propshaft?
+
+benchmarking
+
+testing & code analysis (credo, dialyzer)
+
+immutability
+
+ex doc is insanely easier to use vs rdoc et al
+
+runs on significantly fewer resources
+
+OTP
+
+hex is better than bundler
+
+deployment (releases)
+
+cross platform (ruby has come a long way on windows from what it was but...)
+
+stable API vs the OCD of ruby/rails
+
+multi core (no GIL in ELixir)
+
+
 https://elixirforum.com/t/regretting-questioning-my-current-stack-flutter-elixir-as-solo-dev-for-mobile-app/55731/36
   - lots of great info about contemporary web app making
 

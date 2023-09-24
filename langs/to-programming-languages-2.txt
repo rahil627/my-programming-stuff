@@ -1,79 +1,129 @@
 TODO!: move to prog langs notes
 
 conclusion:
-bash script > fish script
-  - simple scripts, automation
+bash script + fish script
+  - batch commands, extremely simple scripts (in bash)
+  - basic shell functions (currently in fish)
+  - bash for portability, fish for personal use
 ruby > python
-  - scripting (console apps), automation, devops, hacking
+  - simple web apps (back-end), simple apps, scripting (console apps), automation, devops, hacking
+  - jekyll (github pages) for static, sinatra/roda for simple dynamic
+  - ruby on rails for quickly making a large or rich ui web app
+  - metasploit for hacking
+  - github ci automation?
+  - (python for ai/ml/stats/math/etc. sciences)
+    - could probably just port what you need, adding to ruby's libraries
 elixir
   - functional
   - can also write scripts with it! (functional contemporary alt to ruby)
-  - web framework (phoenix > sinatra/roda & ruby on rails)
-    + template html (Eex) + css framework (tailwind)
-  - concurrency
-crystal == nim == haxe >= OCaml(?) == go
-  - llvm compiled for speed
+  - scalable web framework (phoenix > sinatra/roda & ruby on rails)
+    - concurrency
+    - better written / more manageable once it's big due to functional programming design patterns
+haxe == crystal == nim ~= OCaml(?) >= go
+  - all use llvm compiler and are comparable in speed (magnitudes faster than scripting langs)
+  - haxe/crystal/nim all have more features than go
+  - scripts/apps more portable due to compiled executable binary
+  - [crystal] TODO: test LSP crystalline for autocomplete
+    - community may be too small :(
 special cases:
-  - crystal/haxe?
-    - interop with C
-  - haxe/nim/dart
+  - haxe/nim/dart/ruby
     - transpile to js/wasm or many other langs (don't write js!)
   - Ocaml
-    - parsing/compilers
-    - pattern matching, deep type system
+    - parsing/compilers, and other solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data
   - rust >>> C++
     - low-level, memory management
   - C
     - low-low-level
 
-scripting:
-**ruby**
-  - the standard language "made for humans"
-**elixir**
-  - "you must remember, that it looks like Ruby, but it’s not Ruby at all” said the creator of the language
-  - https://elixirforum.com/t/ruby-in-2023-can-and-should-elixir-replace-ruby-for-simple-scripting/58214
-  - not a big enough program to make use of functional programming?
-  - "Ruby has considerably more libraries and this is IMO at this point the only reason, other than being mandated or wanting to write ruby, that I would still use it over Elixir. The edge for everything else IMO goes to Elixir."
-    - concurrency, FP scope > OO scopes, liveview and live dashboard are 🔥🤘, contexts > models, response times are in the micro vs milli seconds, Phoenix saw webpacker for the 💩 it was and quick pivoted to a sane alternative in esbuild, benchmarking, testing & code analysis (credo, dialyzer), immutability, ex doc is insanely easier to use vs rdoc et al, runs on significantly fewer resources, OTP, hex is better than bundler, deployment (releases), cross platform (ruby has come a long way on windows from what it was but...), stable API vs the OCD of ruby/rails
-**crystal**
-  - truly 95% the same as ruby syntax!
-  - with ai to generate libs, it should be easy to catch-up
-  - with solid C interop, better than go?, makes it the most ideal lang ever (can use for games!! :) )
-  - Kemal lib seems a good replacement for Sinatra (for super simple web apps)
-  - llvm fast
 
-multi core (no GIL in ELixir)
-  - with threse three, can really have it all(!): scripting, compiled/fast/C-interop, functional
-  - a single language syntax to memorize really helps (us humans, at least)
-  - also, they all share a great *positive community vibe*
+https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_scripting_in_2023_decision/
+  - i asked in /r/AskProgramming
 
-**python** (google)
-  - undeniably better readability than ruby
-  - has that google feel to it: it works, but that's it
 
-**lua**
-  - still sick, maybe just lacking the library that ruby 'n python have, but still can do the basics!
-
-wren
-  - the example generated was pretty bad, but gave the reason that it's typically used as an embedded language, without libs for console app stuff
-
-javascript (with node.js)
-  - surprisingly might just be the most readable one!
-
-**OCaml**
-  - also god-like, 19loc
-  - strange 'let' ... 'in' syntax
+for everything??:
+  - scripting, systems, embedded, and functional!
 
 common lisp
   - 19 loc!
+  - http://www.randomhacks.net/2005/12/03/why-ruby-is-an-acceptable-lisp/
+    - compares ruby to lisp
+  - start with steel bank compiler
 schema (lisp)
   - seems less lispy, more like a general systems lang
+
+red
+  - seems like a dream lang!!
+  - https://www.red-lang.org/p/about.html
+
+
+scripting:
+**ruby**
+  - the standard language "made for humans"
+  - https://bundler.io/blog/2023/01/31/rust-gem-skeleton.html
+    - glue rust to ruby(!!), with new bundler update
+  - DSL galore thanks to meta-programming
+  - libs have far more elegant and novel solutions than python's libs due to opposing styles
+  - open-source, most used lang in Japan
+
+**python**
+  - loops are more readable
+  - has that google feel to it: it works, but that's it
+  - if it's a new project, can use julia instead, which has a python ffi, just not for scripting
+  - Google
+
+javascript (with node.js)
+  - surprisingly might just be the most readable one!
+  - i still *abhore* it though
 
 perl
   - $a $little $cryptic, but not as bad as i thought!
 
 
+
+
+embedded scripting:
+**lua**
+  - still sick, maybe just lacking the libraries that ruby 'n python have, but still can do the basics!
+  - extremely small, embedded devices
+
+wren
+  - the example generated was pretty bad, but gave the reason that it's typically used as an embedded language: without libs for console app stuff
+  - can add libuv (a contemporary cross-platform std C lib) to it, as in Luxe
+
+
+
+
 functional:
+**elixir**
+  - **the most practical functional language**
+  - "you must remember, that it looks like Ruby, but it’s not Ruby at all” said the creator of the language
+  - https://elixirforum.com/t/ruby-in-2023-can-and-should-elixir-replace-ruby-for-simple-scripting/58214
+  - not a big enough program to make use of functional programming?
+  - "Ruby has considerably more libraries and this is IMO at this point the only reason, other than being mandated or wanting to write ruby, that I would still use it over Elixir. The edge for everything else IMO goes to Elixir."
+    - concurrency, FP scope > OO scopes, liveview and live dashboard are 🔥🤘, contexts > models, response times are in the micro vs milli seconds, Phoenix saw webpacker for the 💩 it was and quick pivoted to a sane alternative in esbuild, benchmarking, testing & code analysis (credo, dialyzer), immutability, ex doc is insanely easier to use vs rdoc et al, runs on significantly fewer resources, OTP, hex is better than bundler, deployment (releases), cross platform (ruby has come a long way on windows from what it was but...), stable API vs the OCD of ruby/rails
+
+TODO: lost data: multi core (no GIL in ELixir)
+
+**OCaml**
+  - also god-like, 19loc
+  - functional, imperative, and object-oriented
+    - can mix 'n match functional and imperative programming, and reap the benefits of both
+  - functional
+    - immutable vars by default (final keyword in other langs), good compiler warnings against mutable things
+  - pattern matching feature ensures all control paths are complete via compiler warnings, and a great type system (strong yet inferred) that also helps with compiler warnings
+  - http://roscidus.com/blog/blog/2014/02/13/ocaml-what-you-gain/
+    - polymorphic variants, ADTs, cycle-free dependencies, immutable data structures...
+
+  - amongst the most practical of functional langs, used for compilers
+  - https://caml.inria.fr/pub/docs/oreilly-book/html/index.html
+  - https://www.reddit.com/r/ocaml/comments/12no1vq/what_makes_ocaml_good_for_programming_language/
+    - having pattern matching and immutability by default makes it easier to write software that operates on tree structures (ASTs, some IRs, etc). you can just write a particular compiler pass as a function that takes in a tree and outputs a new tree.
+
+    compared to writing it in another language like Java or CPP, there's much less boilerplate, no need to deal with things like visitor pattern, copying nodes around and worrying about mutation, etc.
+    - What hasn't been said in other comments is its rich type system. If you want to represent an AST of your language in a type-safe way, that is, in such a way to write the eval function without resorting to errors or exceptions, you have the right tool for that in OCaml: Generalized Algebraic Data Types (GADTs). Haskell also has official support for GADTs via a compiler extension.
+
+    (By the way, if the object language is more expressive than the metalanguage, this beautiful trick stops working. One example is dependent types, which are irrepresentable as an OCaml data type.)
+
 erlang
   - python-esque tab-delimited? no keyword or brace to signify end..
 
@@ -84,16 +134,30 @@ haskell
 systems:
 **haxe**
   - a clean systems lang
+    - actionscript syntax! <3
   - macros!
   - **made for games!**
   - although there's a little community around frameworks in it, the dev team is rather closed off
+  - **low-key best lang of all time**
+
+**crystal**
+  - truly 95% the same as ruby syntax!
+  - just as scripty as ruby!!, no main function needed
+  - with ai to generate libs, it should be easy to catch-up
+  - better C interop than go??
+  - Kemal lib seems a good replacement for Sinatra (for super simple web apps)
+  - **no MS Windows support**
+  - llvm fast
+  - https://crystal-lang.org/reference/1.3/getting_started/cli.html
+    - a cli example in the main tutorial
+  - better, smaller community
 
 **go** (google)
-  - a cleaner C# / systems lang
+  - a high-level C
+    - simple, zen-focused programming
   - feels very scripty! no static/explicit declarations?
-
-dart
-  - feels less scripty, more boring, lots of 'final' keywords (like 'var')
+  - compiles/builds to a 2MB+ executable binary which contains the runtime (including the garbage collector)
+  - no advanced features (generics, macros, etc.)
 
 **rust** (mozilla/open-source?)
   - explicit about memory references (&), otherwise the same!
@@ -105,8 +169,12 @@ dart
   - brings the disgusting whitespace-delimited syntax of python to systems langs
   - https://forum.nim-lang.org/t/1880
 
+dart
+  - feels less scripty, more boring, lots of 'final' keywords (for 'var')
+  - held up by Google's flutter framework, which has hot re-load
+
 scala
-  - eh, the same as the others..?
+  - eh..?
 
 C# (microsoft)
   - might actually be the most readable for me
@@ -114,19 +182,41 @@ C# (microsoft)
 C++
   - not too bad!
   - llvm fast
-C
+**C**
+  - the standard language between all high-level languages and machine languages
   - no string class! =O
   - llvm fast
 
-zig
+**zig**
+  - a C replacement
   - explicit about using the allocator to allocate the heap...
 
 
+
+
+
+older interesting things:
+Logo
+  - lisp without parenthesis!!
+  - geared toward education
+  - influenced smalltalk, scratch, etc.
+  - MIT
+  - https://en.wikipedia.org/wiki/Logo_(programming_language)
+
+
+
 other:
-julia
+**julia**
   - **maybe the best syntax, combining the best of all**
   - "Fortran for Python developers (more scientific-oriented community and lib, like R)
   - llvm fast
+  - Julia has foreign function interfaces for C, Fortran, C++, **Python**, R, Java, Mathematica, Matlab, and many other languages
+  - https://www.reddit.com/r/Julia/comments/10p33sf/is_julia_suitable_today_as_a_scripting_language/
+    - doesn't compile to binary? must compile every-time it's run, which takes 1-2 seconds because JIT compiler?? like elixir?
+    - https://github.com/brenhinkeller/StaticTools.jl
+    - https://julialang.github.io/PackageCompiler.jl/stable/apps.html
+    - interpreter less important than compiler (just-in-time compiler based on LLVM ORCJITv2 is used to generate native machine code)
+  - due to it's very specific domain use of science, it's just no good for everything i'm interested in: scripting, small cli apps, web, games, etc.
 
 swift (apple crap)
   - uses old Apple Foundation library (NS...)
@@ -136,10 +226,17 @@ kotlin (java crap)
   - uses old java library
   - ew.
 
+
+
+
+
+
+
+
 ref:
 https://madnight.github.io/githut/#/pull_requests/2023/2
 https://github.com/dwyl/learn-elixir/issues/102
 https://www.reddit.com/r/elixir/comments/zd9o07/comparing_phoenix_to_rails_in_december_2022/
 https://www.quora.com/Is-learning-the-Phoenix-web-framework-easier-for-experienced-Ruby-on-Rails-developers
   - a great answer about thinking in the way of Elixir is *simpler*
-  
+
