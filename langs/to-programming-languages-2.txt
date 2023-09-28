@@ -50,6 +50,14 @@ common lisp
   - start with steel bank compiler
 schema (lisp)
   - seems less lispy, more like a general systems lang
+closure (lisp)
+  - opinionated/constricted like Go
+  - java impl
+    - interop with java
+    - leads to true parallelism?
+  - dynamic and functional dialect
+    - and thus leads to easier concurrency
+  - community-made interpreter for scripting (babashka)
 
 red
   - seems like a dream lang!!
@@ -174,7 +182,7 @@ dart
   - held up by Google's flutter framework, which has hot re-load
 
 scala
-  - eh..?
+  - java people tend to like this the most, perhaps the most expressive??
 
 C# (microsoft)
   - might actually be the most readable for me

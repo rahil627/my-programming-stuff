@@ -1,0 +1,27 @@
+
+compiled langs
+  - compared to interpreted langs don't have restrictions for parallelism
+
+ruby
+  - thread
+    - OS threads not for parallelism, more for running async, switching between threads
+    - still useful for IO though, or other places where a process is stuck/locked/waiting
+  - ractors
+    - parallelism, but you must adopt it's coding style: not passing mutable data/memory between threads
+    - it's a specification for which language implementations can follow to create
+      - Jruby and truffleruby both are java based, thus have object-oriented garbage collection (via destructors), and don't suffer from garbage colletor problems
+      - Jruby and truffleruby also don't have a GVL/GIL, so can run multiple threads
+      - ruby allows changing class methods/vars during run-time (duck-typing?), so this creates a race condition
+  - The language itself does support interactive programming because monkey patching is a thing.
+
+python
+  - multiprocessing module
+    - running multiple processes with multiple interpreters
+
+
+https://www.reddit.com/r/ruby/comments/10i6pr7/is_parallel_threading_never_going_to_be_a_thing/
+  - My understanding is that the engine is built in C/SDL and uses Ruby as an extension language, so it probably hot loads code changes by recompiling your game logic as a dynamic library. You could look into doing something like that as well.
+
+https://www.hanyoung.uk/blog/ruby-ractor-and-parallelism-in-interpreted-languages/
+
+https://stackoverflow.com/questions/65505576/are-ruby-ractors-the-same-as-pythons-multiprocessing-module
