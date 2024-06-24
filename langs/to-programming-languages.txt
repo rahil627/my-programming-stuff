@@ -1,5 +1,18 @@
 # the opinions of more experienced programmers
 
+
+## Jon Blow's opinion
+https://www.youtube.com/watch?v=y2Wmz15aXk0
+  - the idea of using a scripting language in a game was a failed experiment
+
+
+https://www.youtube.com/watch?v=klE9bzWJbHc
+  - video of some millenial streamer that tries jai, but it works
+  
+https://www.youtube.com/watch?v=baClkzcfxu0
+  - jai > zig from the same streamer
+
+
 ## Robert's opinion
 
 Robert has ported CrossCode to every popular platform, including two generations of consoles, in addition to writing a JS AOT(?) compiler, a super-powered low level framework (Kha), and basically the next SDL (Kinc)
@@ -30,17 +43,19 @@ Rust is great
 
 ## main list
 
+**Jai** to replace Haxe
+
 **Haxe** for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community
 
 **Ruby** (or hscript [haxe-script] or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
 
 **C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
 
-Wren (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
+x/Wren (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
 
-Lua for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
+x/Lua for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
 
-Ruby or whatever the shell's language is (bash, zsh, fish, etc.) for shell scripting, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
+x/shell languages (bash, zsh, fish, etc.) for shell scripting, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
 
 
 ## special mentions
