@@ -123,6 +123,7 @@ ai is amazing for building skeletons/boiler-plate code, and just building enough
 
 just some notes:
 https://elixirforum.com/t/rails-and-phoenix-as-one-person-frameworks/44779/4
+(my post!)
 Overall, I agree with DHH, that we have seen a huge ramp-up in complexity in the last decade when it comes to web development. Much of it was necessary and caused by improvements in standards and practices around security, privacy, user experiences, etc.
 
 However, some of this complexity was brought by moving the logic to the client, which naturally creates a split between client and server. The movement started with Phoenix+LiveView shows the server is equally capable of powering rich and interactive user experiences. And now, with esbuild, sass, and tailwind-standalone, we can get rid of npm and limit JavaScript to the front-end only, as it was 10 years ago.
