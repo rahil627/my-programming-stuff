@@ -10,9 +10,16 @@ imperative
 procedural
   - groups instructions into procedures
   - C
-object-oriented
+pure object-oriented
+  - messages are passed between objects (via a VM) using a dispatch system, and *everything* really is an object (via metaclasses)
+    - (which allows it to be completely reflective, and perhaps alterable at run-time too)
+  - there are no values, even primitive types are objects
+    - example: 3+4. + is the message. 3 and 4 are objects
+  - there are no control structures
+    - example: result:= a>b will send back an ifTrue/ifFalse message, and Boolean is the object(?)
+"object-oriented"
   - groups instructions with the part of the state they operate on
-  - C++, smalltalk
+  - C++
 declarative
   - declares properties of the desired result (what the program should do), but not how to compute it
   - SQL
