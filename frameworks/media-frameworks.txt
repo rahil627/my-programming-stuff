@@ -1,0 +1,6 @@
+
+todo: find notes on this
+
+p5.js
+  - processing for web, by the processing foundation
+
