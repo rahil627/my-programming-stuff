@@ -1,0 +1,19 @@
+
+
+words of widsom:
+
+https://news.ycombinator.com/item?id=28863079
+
+  - https://x.com/Jonathan_Blow/status/1427358365357789199
+    - "ECS *only* starts to make sense when you are big enough to have multiple teams, with one team building the engine and the other using the engine to make the game; or you are an engine company and your customer makes the game. If that is not your situation, do not rathole... Because it is far more complicated, thus takes far more work, than what you actually need to do. That work has a large opportunity cost."
+	- "One struct per entity type, with a base struct that is common to all of them."
+    - THANK GOODNESS. i'm not crazy! i'm sticking to composition forever!
+
+  - https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
+    - rant: entity systems and the rust borrow checker ... or something
+
+  - https://csherratt.github.io/blog/posts/specs-and-legion/
+  - good look into how ECSs work (also to see how crazy rust people are about optimization)
+
+
+
