@@ -1,11 +1,20 @@
 TODO!: move to prog langs notes
 
+todo:
+clojure-like repl:
+https://www.reddit.com/r/ruby/comments/10i6pr7/is_parallel_threading_never_going_to_be_a_thing/
+https://github.com/clojure-emacs/cider/discussions/3422
+https://www.reddit.com/r/Clojure/comments/sm80ed/why_is_clojures_repl_better_than_other_dynamic/
+
+
+
+
 conclusion:
-bash script + fish script
+bash script (+ fish script for shell functions)
   - batch commands, extremely simple scripts (in bash)
   - basic shell functions (currently in fish)
-  - bash for portability, fish for personal use
-ruby > python
+  - bash for portability (fish for personal use)
+ruby > python (> shell langs)
   - simple web apps (back-end), simple apps, scripting (console apps), automation, devops, hacking
   - jekyll (github pages) for static, sinatra/roda for simple dynamic
   - ruby on rails for quickly making a large or rich ui web app
@@ -19,7 +28,7 @@ elixir
   - scalable web framework (phoenix > sinatra/roda & ruby on rails)
     - concurrency
     - better written / more manageable once it's big due to functional programming design patterns
-haxe == crystal == nim ~= OCaml(?) >= go
+haxe >= crystal == nim ~= OCaml(?) >= go
   - all use llvm compiler and are comparable in speed (magnitudes faster than scripting langs)
   - haxe/crystal/nim all have more features than go
   - scripts/apps more portable due to compiled executable binary
@@ -43,7 +52,7 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
 for everything??:
   - scripting, systems, embedded, and functional!
 
-common lisp
+**common lisp**
   - 19 loc!
   - http://www.randomhacks.net/2005/12/03/why-ruby-is-an-acceptable-lisp/
     - compares ruby to lisp
@@ -58,6 +67,9 @@ closure (lisp)
   - dynamic and functional dialect
     - and thus leads to easier concurrency
   - community-made interpreter for scripting (babashka)
+  - CIDER
+    - (Clojure Interactive Development Environment that Rocks for Emacs)
+    - https://github.com/clojure-emacs/cider
 
 red
   - seems like a dream lang!!
@@ -81,7 +93,7 @@ scripting:
 
 javascript (with node.js)
   - surprisingly might just be the most readable one!
-  - i still *abhore* it though
+  - ...i still *abhore* it though
 
 perl
   - $a $little $cryptic, but not as bad as i thought!
@@ -90,6 +102,9 @@ perl
 
 
 embedded scripting:
+why unreal engine dropped unrealscript:
+One of the key moments in Unreal Engine 4's development was, we had a series of debates about UnrealScript – the scripting language I'd built that we'd carried through three generations. And what we needed to do to make it competitive in the future. And we kept going through bigger and bigger feature lists of what we needed to do to upgrade it, and who could possibly do the work, and it was getting really, really unwieldy. And there was this massive meeting to try and sort it out, and try to cut things and decide what to keep, and plan and...there was this point where I looked at that and said 'you know, everything you're proposing to add to UnrealScript is already in C++. Why don't we just kill UnrealScript and move to pure C++? You know, maximum performance and maximum debuggability. It gives us all these advantages.'
+
 **lua**
   - still sick, maybe just lacking the libraries that ruby 'n python have, but still can do the basics!
   - extremely small, embedded devices
@@ -159,6 +174,7 @@ systems:
   - https://crystal-lang.org/reference/1.3/getting_started/cli.html
     - a cli example in the main tutorial
   - better, smaller community
+  - conclusion: just not enough deep changes to create a new langauge, as it's features are on the same level of haxe/nim/julia, though, i don't doubt the ruby community in trying to make the most ideal languages and libs
 
 **go** (google)
   - a high-level C
@@ -198,6 +214,9 @@ C++
 **zig**
   - a C replacement
   - explicit about using the allocator to allocate the heap...
+
+odin
+  - a C replacement
 
 
 
