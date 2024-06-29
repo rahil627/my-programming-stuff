@@ -1,5 +1,9 @@
 
 todo:
+use ai to gen commands:
+https://github.com/TheR1D/shell_gpt
+  - there's surely other ones.. but this does have a ton of features!
+
 go through the docs
   - https://fishshell.com/docs/current/tutorial.html
   - they're really good
@@ -9,17 +13,19 @@ https://github.com/pry/pry
 
 
 conclusion:
-use any cool contemporary shell for personal use (zsh, fish, ion, etc.) but write scripts in bash (or ruby! :) ) for portability
+use any cool contemporary shell for personal use (zsh, fish, ion, etc.) but write the simplest scripts (basically just executing multiple commands and maybe a few control structures) in bash for portability, and everything else in your favorite general programming language (scripting or compiled). It's not worth adding another language to your memory, when it could be much better used toward a remembering single general programming langauge.
 
-CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/env lang' (general "scripting languages": ruby, python, etc., and even Lua), or even a *slight* bit extra code from compiled languages might be okay in cases of larger scripts. **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language, and now with the recent additin of being cross-platform, bash has no benefits, save for the fact it was used since the beginning of computers. For people that are neiher a fan of .NET or even Microsoft, however, that choice doesn't make much sense, and it is best to choose a general scripting languge: basically, Ruby or Python, and my personal preference is Ruby, as it is perhaps my favorite programming language.*
+CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/env lang' (general "scripting languages": ruby, python, etc., and even lua), or even a *slight* bit extra code from compiled languages might be okay in cases of larger scripts. **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language, and now with the recent addadditionitin of being cross-platform, bash has no benefits, save for the fact it was used since the beginning of computers. For people that are neither a fan of .NET (or Microsoft as a whole), however, that choice doesn't make much sense, and it is best to choose a general programming languge: for me, that's Haxe (hscript?) and Ruby.*
 
 Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
 
 Windows, i feel, isn't as CLI heavy, so you won't be using it as often--you'd be using GUI apps--, and when you do, it's probably more in a programming way/feel (writing a program) rather than a quick script way/feel (that just runs a chain of commands--linux cli programs).
 
-For Windows, you'd get more familiar with the .NET standard library, which'll transfer into C#. For Linux, you'd need to be savvy enough to be able to find useful CLI programs (could be written in bash or *any* other programming language*) in package managers or github, be able to use them, and then execute them in a script. As far as i know, Bash doesn't really have a standard library to do stuff(??). Whereas for Powershell, you can do everhything that Bash does, but you'd be more inclined to leverage it's programming power and it's standard library more, rather than rely on other CLI programs, written in god know whats langauge.
+For Windows, you'd get more familiar with the .NET standard library, which'll transfer into C#. For Linux, you'd need to be savvy enough to be able to find useful CLI programs (could be written in bash or *any* other programming language*) in package managers (https://archlinux.org/packages/) or github, be able to use them, and then execute them in a script. As far as i know, Bash doesn't really have a standard library to do stuff(??). It wasn't really meant for general programming. Whereas for Powershell, you can do everything that Bash does, but you'd be more inclined to leverage it's programming power and it's standard library more, rather than rely on other CLI programs, written in god know whats langauge. But at that point, you might as well choose your favorite programming language, thus making Powershell quite useless.
 
 Linux is a mess of CLI programs and scripts, written in *tons* of different languages. Windows is a lot more insular, with just powershell (although of course you can install any language and run any script too). That's just the feeling i get.
+
+Nowadays, Windows has Windows Sub-system for Linux (WSL), so that you can retain all of your linux tools, memory, knowledge, 'n habits.
 
 
 
@@ -53,7 +59,7 @@ https://fishshell.com/docs/current/tutorial.html
 
 ## thoughts
 
-bash (and i believe even zsh??) is janky, with strange things for basic if statements (if [statement]; then, and even that is different when it's on a new line), basic switch statemtns, strings (escape with "" or $"" or $"$v"??), math, and old syntax using `$` everywhere, including for special vars `$#`, making it feel something closer to Perl or PHP, both of which are old and cryptic to me (see the ~"fish for bash users" link for a good overview of the many problems of bash). A ton of things are confused due to syntax, especially sub-shells vs command substitutions (parenthesis vs back-ticks vs square brackets). **Yeah... fuck bash. Even zsh seems like garbage, changing only a little, and further confusing it's own syntax with bash syntax. It's either super basic bash/sh batch scripts (a list of commands), some better newly designed scripting language (fish, kitty?, elvish, etc.), or a proper scripting language, with my personal preference toward a proper scripting language, such as ruby**
+bash (and i believe even zsh??) has janky syntax, with strange things for basic if statements (if [statement]; then, ...) and even that is different when it's on a new line, basic switch statements, strings (escape with "" or $"" or $"$v"??), math, and old syntax using `$` everywhere, including for special vars `$#`, making it feel something closer to Perl or PHP, both of which are old and cryptic to me (see the ~"fish for bash users" link for a good overview of the many problems of bash). A ton of things are confused due to syntax, especially sub-shells vs command substitutions (parenthesis vs back-ticks vs square brackets). **Yeah... fuck bash. Even zsh seems like garbage, changing only a little, and further confusing it's own syntax with bash syntax. It's either super basic bash/sh batch scripts (a list of commands), some better newly designed scripting language (fish, kitty?, elvish, etc.), or a proper scripting language, with my personal preference toward a proper scripting language, such as ruby**
 
 **perhaps can even find some way to use ruby as the main shell language...**
   - irb
@@ -70,6 +76,32 @@ https://stackoverflow.com/questions/11369522/bash-utility-script-library#1136993
   - i think i was pondering on why there's no bash standard library
   - the answer points out bash's limitations really well, mainly:
   - "**Bash functions don't return anything; they only produce output streams. Every reasonable method of capturing that stream and either assigning it to a variable or passing it as an argument requires a SubShell, which breaks all assignments to outer scopes.** (See also BashFAQ/084 for tricks to retrieve results from a function.) **Thus, libraries of reusable functions are not feasible, as you can't ask a function to store its results in a variable whose name is passed as an argument** (except by performing eval backflips)."
+
+https://askubuntu.com/questions/20414/find-and-replace-text-within-a-file-using-commands
+  - recommneded to use sed (Stream EDitor)/awk/favorite scripting language instead
+  - Bash isn't really meant for text processing, but simple substitutions can be done via parameter expansion , in particular here we can use simple structure ${parameter/old_string/new_string}:
+
+#!/bin/bash
+while IFS= read -r line
+do
+    case "$line" in
+       *blue*) printf "%s\n" "${line/blue/azure}" ;;
+       *) printf "%s\n" "$line" ;;
+    esac
+done < input.txt
+
+https://stackoverflow.com/questions/4397412/read-edit-and-write-a-text-file-line-wise-using-ruby
+  - In general, there's no way to make arbitrary edits in the middle of a file. It's not a deficiency of Ruby. It's a limitation of the file system: Most file systems make it easy and efficient to grow or shrink the file at the end, but not at the beginning or in the middle. So you won't be able to rewrite a line in place unless its size stays the same.
+
+the simple way:
+# just read it all into memory, modify it, and write it back out
+path = '/tmp/foo'
+lines = IO.readlines(path).map do |line|
+  'Kilroy was here ' + line
+end
+File.open(path, 'w') do |file|
+  file.puts lines
+end
 
 
 
