@@ -1,9 +1,24 @@
 # the opinions of more experienced programmers
 
 
+
 ## Jon Blow's opinion
+https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
+  - Jon Blow's rant on rust
+  - **the main problem of programming languages, especially for games**:
+    - most langauges that aim for being memory safe use a garbage collector that doesn't allow you to manually alter memory.. (and you want memory safety for when a reference/pointer is pointing to a memory that was de-allocated or re-used, or worse: the page of memory was removed by the OS causing a page fault and thus crashing the app)
+        - crashes are actually better than not-crashing and being silent about having the wrong data in memory
+      - smart pointer (reference counting? ew.) doesn't solve it, as you wouldn't want to authorize the class holding the reference to keep that referenced thing alive
+      - weak pointer doesn't solve it either, as the systems to nullify it would get complex and add cost, and adding checking for null adds more chances for errors, until you add some sort of pointer system, which ends up costing the same as looking up an ID
+      - example: object a is following object b, thus needs a reference to it
+      - one common solution: a container of entities is stored, then looked up (hashmap or array). this guarantees memory safety at the cost of an object a looking for object b (within the container) every frame(!!)
+      - a more complicated solution: in an ECS, dynamic arrays ("vec") of components are stored, this guarantees memory safety at the cost of an object looking for a component of object b every frame (in some generated index of a dynamic array)
+      - the main point of the video: rust's borrow checker didn't save the programmer from memory problems, rather, the programmer simply refactored the code in a way that the borrow checker won't check (pointers were changed to indicies of a dynamic array): the borrow checker is confused and doesn't know that the programmer is allocated memory theirself (via dynamic arrays). (or does the programmer simply turn off the borrow checker?? lmao!)
+      - **in the Witness, it's literally just an array of indexes (or array index?)**
+      - **in the sokobon game, the id uses 32-bits, the top bits for user id and the bottom bits for the entity id, and use a hashmap for it, because that would be a really big array, because the high-bits are set**
 https://www.youtube.com/watch?v=y2Wmz15aXk0
   - the idea of using a scripting language in a game was a failed experiment
+  - scripting languages are "slow, bug-proned, impossbile to debug"
 
 
 https://www.youtube.com/watch?v=klE9bzWJbHc
@@ -45,9 +60,11 @@ Rust is great
 
 **Jai** to replace Haxe
 
-**Haxe** for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community
+**Haxe** for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community, simple actionscript syntax
 
-**Ruby** (or hscript [haxe-script] or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
+**Ruby** (or hscript [haxe-script] or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games; much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!); its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
+  - admittedly, it is a hurdle of complexity to learn compared to C# or haxe
+  - gets a lot of inspiration, in a good way, from Smalltalk (everthing is an object) and Lisp (metaprogramming)
 
 **C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
 
@@ -65,9 +82,10 @@ Zig and Odin, although C-replacements such as these exist, all clearly much supe
 
 the next two lack libraries and support compared to other contemporary langugages, but, as both have C FFI, so, they both still can be used for whatever individual projects
 
-Racket, an intro dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?) and just plain cli scripting
+**Common Lisp (CBCL)**, an intro dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?) and just plain cli scripting
+   - an alt to ruby for many cases
 
-Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
+Pharo or Squeak or Cuis, the main three Smalltalk dialects, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
 
 
 
@@ -287,7 +305,10 @@ Smalltalk
     - **browse any object** (not class, but the underlying data
   - when you save a project, you just save an "image" of all the code, there are no files
   - however, because there are no files, and that you are forced to use it's only IDE, often which looks like it's stuck in the 80s or 90s, it detracts most people
+  - https://squeak-dev.squeakfoundation.narkive.com/wuWIwY6M/game-programming-in-squeak
+    - discussion why it isn't good for games
   - dialects:
+    - "Hardly you will find very large infrastructure "industry-bent" projects as Pharo's in Squeak or Cuis because the focus is different. Said in poor words, and at the best of my understanding, the aim of Squeak and Cuis is the dynabook, a creativity tool, the aim of Pharo is more like to make a Smalltalk competitive with Python / Java."
     - **Pharo**
       - forked from Squeak in 2008, it is far more contemporary, with a great site, docs, etc., leveraging the power of github, newer ui, an uprising of creating new libs including low-level gpu api and low-level ui framework, pretty awesome!
       - https://pharo.org/documentation
@@ -300,6 +321,7 @@ Smalltalk
         - <https://wiki.squeak.org/squeak/1414>
       - croquet is an example of FFI use for OpenGL
         - <https://github.com/NikolaySuslov/croquet-squeak/blob/master/OpenGL-Core.package/OpenGL.class/class/example.st>
+      - the Morphic interface is basically what Scratch, the educational game'ish programming app, is
   - made in a MIT lab in 1980, huge influence in all programming langs: VM -> Java VM, objective-c, all "object-oriented" paradigms, etc.
 
 
@@ -625,6 +647,9 @@ Nim
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
 
 **Rust**
+  - Jon Blow's take
+    - https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
+      - the ownership model: "compile-time enforced permissions model that determine what you can and can't do with various pieces of memory", and thus by nature is overly restrictive. There are somethings that you could do that are correct that it won't let you do, because it can't prove they're correct... you have to fight the borrow checker, and it's very frustrating, but it's good because it pushes you into patterns that are better anyway
   - **like C/C++ but safe--no run-time errors(!?!?)**, **no garbage collector**, instead, using a specific memory management system, wherein you still have fine control of memory but it's easier(?) and guaranteed to be safe. you *must* learn and use this system to handle the memory yourself (just as you must learn Obj-C's reference counting, or C++'s pointers and smart pointers), thus if ever there's a problem with a garbage collector you'll either write that portion of code in C/C++ or just end up re-writing the whole thing with Rust
     - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
     - mutability: https://doc.rust-lang.org/std/keyword.mut.html, https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
