@@ -6,9 +6,8 @@
 
 # TODO: move to notes.txt
 
-# TODO: make this code platform independent
-# if arch, use 'pacman -S'
-
+# x/make this code platform independent?
+#   - nah... stick to one distribution (mac or openSUSE or archlinux only)
 
 # how to install stuff
 # sudo pacman -S ./package-name # for fedora
@@ -28,6 +27,8 @@ pacman -Syu # TODO: read the arch-wiki maintenance article
 
 # main stuff
 source setup-shell.sh # not sure if this is the proper way to execute other scripts...
+source config-chromebook.sh # laptop specific stuff
+pacman -S fig # TODO: need to test; adds auto-complete to any terminal!
 
 # core shell apps
 
@@ -45,6 +46,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # hot damn, why oh why did i waste all that time using commands to go through directories!?!? holy fuck.
 # better than gui, incredible
 # TODO: try them all!
+sudo pacman -S broot # go through installation script upon first run
 sudo pacman -S lf # might have to manually install
 # lf # like ranger but written in go, less bloated too
 # nnn
@@ -87,6 +89,7 @@ tldr -u
 sudo pacman -S nano
 sudo pacman -S vi # for a minimal nvim (nvim --noplugin threw errors for me)
 sudo pacman -S neovim
+sudo pacman -S helix # kakoune inspired
 
 sudo pacman -S wl-clipboard # make nvim clipboard work with wayland TODO: move to nvim config?
 
@@ -160,8 +163,8 @@ fc-cache -fv
 #fc-list
 
 
-
-
+# copy scripts and add to $PATH
+# source install-scripts.sh # source or bash?
 
 
 # optional: install langs as you need them
