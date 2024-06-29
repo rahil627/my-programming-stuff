@@ -25,8 +25,25 @@ makepkg -si
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)
 https://wiki.archlinux.org/title/system_maintenance#Unused_packages_(orphans)
 
-pacman -Qtdq | pacman -Rns
-yay --clean
+# remove all the cached packages that are not currently installed, and the unused sync databases, execute:
+# Warning: One should avoid deleting from the cache all past versions of installed packages and all uninstalled packages unless one desperately needs to free some disk space. This will prevent downgrading or reinstalling packages without downloading them again.
+pacman -Sc
+
+yay -Sc # seems to combine the above command
+
+# clean out home dir cache
+rm ~/.cache/* -r
+
+# list packages installed by user
+# https://unix.stackexchange.com/questions/409895/pacman-get-list-of-packages-installed-by-user
+# note: this is a bash command
+# bash -c "command goes here"
+comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base-devel | sort | uniq)
+
+# list packages by size (without using expac)
+pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | paste - - | column -t | sort -nrk 2 | grep MiB | less
+
+
 
 # update mirrors
 # sudo reflector -n 100 --sort score -c US --save /etc/pacman.d/mirrorlist
