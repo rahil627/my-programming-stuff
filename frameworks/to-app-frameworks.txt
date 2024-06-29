@@ -1,5 +1,12 @@
 
 
+conclusion:
+phoenix framework
+i chose web-app frameworks that provides a systems programming like experience, for the longevit of web. BUT, i'm not convinced that game engines aren't good for web-apps.
+
+see web-app-frameworks.txt
+
+
 
 https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-immediate-mode
 
@@ -17,10 +24,11 @@ conclusion:
       - seems to be another layer of abstraction between io engine and ui
     - react-hx
       - haxe bindings for react native
+  - TODO: **why not just use a game engine like heaps?**
 1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??) thus quite limiting(??) nor if your focus is on web (due to limited styling by widgets provided?? and slow??), faster compiled language, simpler by design, **covers most use cases**
-  - alts: Avalonia, Uno
-2. React Native for the **huge open-source javascript libraries and community**, *nasty* HTML/CSS ui language, although maybe not the best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
-  - alts: MAUI
+  - C# alts: Avalonia, Uno
+2. React Native for the **huge open-source javascript libraries and community**, *nasty* raw HTML/CSS ui language, although maybe not the best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
+  - C# alts: MAUI
 ?. Qt, with official python bindings, maybe can write C++ code to access native componenets?, but that would be *grooosss*, but definitely safer long-term investment as Qt is the oldest and Google abandons all of their products
 
 it seems in general that **Flutter is amazing with an excited new community, quite like React Native was in the past, but limited, whereas React Native still lives on, native support for everything, now including Microsoft covering the Windows and even MacOS targets (surely a big stab at Apple's closed source nature). Flutter can be used for most simple cases. React Native can be used for more technical, experimental, custom cases that requires much native component access, and doesn't constrain.
