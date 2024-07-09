@@ -1,0 +1,47 @@
+
+formats:
+
+plain text files
+  - my own personal notes' format
+  - can write a simple markup for it to preview it
+  - easy to sift through with linux commands
+
+**jekyll**
+  - a static-site generator written in ruby and used by github for github programmers
+    - i use this for my personal sites (plural!), especially for my blog/philosophical writings
+    - tons of plugins
+      - also can just write beautiful ruby scripts to do whatever you want
+    - allows you to create your own custom markup template, so you can keep your own personal writing format
+  + front-matter
+  + folder 'n file structure
+
+obsidian
+  - current king of note-taking
+
+joplin
+  - open-source obsidian?
+  - works on all platforms, and has a good linux cli  
+
+**dendron**
+  + front-matter
+  + file 'n file-name structure
+    - parent.parent.file
+    - no folders
+      - makes it a pain to sift through without a dendron editor (vs code)
+      - all hierarchies are files, which is strange when you just want a folder..?
+  - a vscode plugin, no standalone app
+    - although, this may just be the best app for programmers that use vs code..
+    - also can just edit using your favorite simple text editors and cli
+
+bear
+  - more of a markdown editor turned note-taking app
+  - great markup/preview, especially for mobile OSs
+
+x/notion
+  - historically, a great push for note-taking apps
+  - a very clean note-taking app with tons of markup ability
+  - **need internet to access!?**
+  - slow for a notes taking app
+
+  onenote, evernote, etc.
+    - old propietary note file format?
