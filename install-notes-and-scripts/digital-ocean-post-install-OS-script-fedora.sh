@@ -1,4 +1,6 @@
 #!/bin/bash
+# this is the install script from the tutorial by DigitalOcean
+
 set -euo pipefail
 
 USERNAME=ra # TODO: Customize the sudo non-root username here
