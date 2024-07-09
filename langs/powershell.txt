@@ -1,0 +1,13 @@
+
+see windows-cli.txt
+
+notes here are related to solely the language itself
+
+seems to be case insensitive, which is great as .net uses caps heavily
+
+# environment vars
+$Env:PSModulePath -split (';')
+
+# learn x in y minutes
+Invoke-Expression -Command "ls"
+

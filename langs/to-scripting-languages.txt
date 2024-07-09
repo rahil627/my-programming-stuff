@@ -1,15 +1,19 @@
 
 
+# post-windows powershell update
+powershell is what i was looking for. You get the .net framework, and a very neat and organized shell-scripting language. It's refreshing, clear, easy-to-understand, and infinitely more organized compared to linux shell scripts, which feels like a bunch of glue of open-source crap. Finally, a solid general-purpose lang made for shells! Yeah, it's verbose, it's got all that .net ilk, but it just feels lightyears better than the old linux stuff. Instead of glueing small linux apps together (sed/awk, head, tail, cat, etc.), you just have a very simple standard library. The only thing missing is the ruby syntax. If ever there was a place that needed standards, it was shell-scripting!
+
+
 # conclusion
 so basically,
 
-**for C/C++ embedding, Lua is better than Python, and much better than Ruby, yet, for the more specific task of embedding into a game, there might be better options such as Squirrel and Wren, both of which have object-oriented paradigm built-in. Otherwise, if embedding to C/C++ isn't the worry, then just choose the one you like! :)**
+**for C/C++ embedding, it might be best to just use/earn C/C++, or wait until Jai, or use Haxe or something that interops with C (everything?), as running a VM/byte-code interpreter has a cost that's not worth it for embedded/performace applications such as games** 
 
-All of them have standard libraries, though, Lua with it's goal of minimal size, is the smallest, though in a charming in it's own charming way (see the very simple one-web-page manual). **Python's and Ruby's standard librares are literally *the* standards by now, untouchable.**
+All of them have standard libraries, though, Lua with it's goal of minimal size, is the smallest, though in a charming in it's own charming way (see the very simple one-web-page manual). **Python's and Ruby's standard librares solid after decades of use, but def feels less standard compared to compiles languages, making breaking changes.**
 
 Lua's like a primitive language that can build features that other languages have, but, it's not built-in, it's all dynamic-feeling, so overall it feels janky, imo. **For general scripting use, not embedding, I much prefer Ruby or Python over Lua, and Ruby over Python**. **Lua is made for embedding,** and it's great at that, whereas **Ruby and Python are made for scripting.**
 
-So, in the end, it'll just be a preference between Ruby vs Python. *Or*: the bajillion newer languages such as Crystal (compiled, static-typed Ruby), Nim (compiled, static-typed Python), Elixer (Ruby + Erlang), or good ol' Haxe, and whatever else out there. Nowadays most compiled languages also have an interpreter, as the interpreter is *much* simpler to create than a compiler.
+So, in the end, it'll just be a preference between one's favorite general-purpose scripting langauge: ruby, python, powershell, or: just whatever general-purpose langauge one is most familar with at the time, as nowadays many compiled languages also have an interpreter, as the interpreter is *much* simpler to create than a compiler.
 
 
 
@@ -29,7 +33,7 @@ also, you might just be able to use programming languages within a shell!
       - pry main:/home/john $ .cat #{Dir['*.*'].sample} | wc -l
         44
 
-basically my conclusion was that the shell scripting languages are limited, simple, domain-specific (DSL), and in the end, i think i imagine i will end up reaching out for a more general-purpose scripting language (ruby, python, lua?, etc.) for both the more extensive standard library and the pop libraries in the package manager.
+basically, my conclusion was that the shell scripting languages are limited, simple, domain-specific (DSL), and in the end, i think i imagine i will end up reaching out for a more general-purpose scripting language (ruby, python, lua?, etc.) for both the more extensive standard library and the pop libraries in the package manager.
 
 in addition, the bash-like shells (all except fish) have a bit of cryptic syntax, especially using the $. It's not bad however, considering how tiny the language is, but using $ for vars is hella old. Also there's a problem with escaping quotes ("$var" vs $var vs one more way...). Crap like that just sucks.
 
