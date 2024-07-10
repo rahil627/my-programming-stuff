@@ -17,10 +17,30 @@ plain text files
 
 obsidian
   - current king of note-taking
+  - closed-source
+  - great interface
+    - like a specialized vs-code, with an intuitive command pallete
+  - diagram-making thing
+  - graph view
+  - views for outline by headings, tags, backlinks, etc.
+  - bookmarks
+    - seems useful!
+  - **no metadata by default**, just clean plain text!
+    - **maybe can use this when i want to, without destroying my notes structure**
 
 joplin
   - open-source obsidian?
   - works on all platforms, and has a good linux cli  
+  - simple, takes a few seconds to get started
+  - "notebooks" and tags
+  - strange tracking metadata by default??
+    - latitude: 37.91613260
+    - longitude: -122.31076500
+    - altitude: 0.0000
+  - simple tags metadata:
+    - tags:
+    - test
+    - test2
 
 **dendron**
   + front-matter
