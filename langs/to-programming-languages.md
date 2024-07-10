@@ -1,61 +1,71 @@
-# the opinions of more experienced programmers
 
+# todo:
+jai
+  - try to get beta
+red
+  - seems like a dream lang!!
+  - https://www.red-lang.org/p/about.html
 
-## Jon Blow's opinion
-https://www.youtube.com/watch?v=y2Wmz15aXk0
-  - the idea of using a scripting language in a game was a failed experiment
-
-
-https://www.youtube.com/watch?v=klE9bzWJbHc
-  - video of some millenial streamer that tries jai, but it works
-  
-https://www.youtube.com/watch?v=baClkzcfxu0
-  - jai > zig from the same streamer
-
-
-## Robert's opinion
-
-Robert has ported CrossCode to every popular platform, including two generations of consoles, in addition to writing a JS AOT(?) compiler, a super-powered low level framework (Kha), and basically the next SDL (Kinc)
-
-Lisp, no language ever been so simple yet so powerful, contemporary languages (as of 2022) still have not caught up, and macros are easier to write
-
-Smalltalk, most readable language, you can alter *any* part of it while it's running making a killer dev experience
-
-Java had good marketing, otherwise, it stole from Smalltalk (VM, object-oriented) and dumbed down the object-oriented part from true objects to mere class prototypes
-
-Basic was the Java of it's time
-
-
-## Zeta's opinion
-
-Zeta has written: a game engine on top of Robert's Kinc lib, and is now writing an ARM assembler (for Hashlink), and is tinkering with writing an OS
-
-Java is bad
-C# is like Java owned but by Microsoft, and thus doubly bad
-
-C is good
-Haxe is very good
-Rust is great
+# conclusion:
+(ordered from basic to general)
+**powershell core** > fish > bash/zsh
+  - batch commands, extremely simple scripts (in bash/powershell) for portability
+  - personal basic shell functions (powershell > fish; fish script is now useless)
+  - automation, especially windows automation (powershell)
+  - bigger scripts (powershell or other fav general-purpose lang, scripting or compiled)
+    - note: powershell is powerful enough to do just about anything, thanks to the dotnet framework
+**ruby** > python (notable: haxe's hscript)
+  - great from simple everyday scripting to any size projects
+  - simple web apps (back-end), simple apps, scripting (console apps), automation, devops, hacking
+    - community pioneered proeducts for  hacking (metasploit), sysadmin/automation (puppet 'n chef config management, jenkins ci, etc.), rake
+  - jekyll (github pages) for static, sinatra/roda for simple dynamic
+  - ruby on rails for quickly making a large or rich ui web app
+    - replaced by elixir's phoenix framework
+  - the open-source language with the biggest support by big companies (github, shopify)
+  - (still need python for ai/ml/stats/math/etc. data sciences)
+    - could probably just port what you need, adding to ruby's libraries
+  - with mRuby, Crystal, can keep favorite syntax and use for nearly everything
+  - restriction: not performant enough for real-time interaction such as games or embedded devices (though there's mRuby)
+**jai** > **haxe** == **C#** = Ocaml(?) >= crystal == nim > go
+  - general all-round use, covers most cases
+  - haxe always had cross-platform in mind
+    - c# took a long long time to reach c# core (previously mono)
+  - all use llvm compiler and are comparable in speed (magnitudes faster than scripting langs)
+  - all use a garbage collector, so C/C++ code will be written seperately and then called
+  - resulting programs more portable/cross-platform due to compiled executable binary
+  - all are powerful (except go) in features: macros, ADTs, etc. metaprogramming, generics
+special cases:
+  **elixir**
+    - functional
+    - particularly useful for any kind of **concurrent/parallel computing**, since it runs on awesome Erlang VM (BEAM). Used for distributed/fault tolerant/highly available systems (such as Discord and WhatsApp).
+    - can also be used to write beautiful scripts with it! (merges the beauty of ruby syntax with functional paradigm)
+    - has a contemporary **scalable web framework** (phoenix > sinatra/roda & ruby on rails)
+      - concurrency
+      - better written / more manageable once it's big due to functional programming design patterns
+  - lua, mRuby, wren, squirrel
+    - embedded (into C) scripting
+    - not worth the tradeoff in games (hence why unreal engine stopped using it)
+  - haxe/c#/nim/ruby/etc.
+    - transpile to js/wasm or many other langs (don't write js!, and stay in the compiled world)
+  - crystal/nim
+    - for porting ruby/python for performance, keeping the same syntax
+  - Ocaml
+    - parsing/compilers, and other solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data
+  - javascript (and typescript)
+    - the standard browser language
+      - can't run from it, though we can keep trying!
+  - rust > C++
+    - low-level, memory management
+    - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!)
+  - zig = odin > **C**
+    - low-low-level
+    - best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
 
 
 
 # my choices
-
 ## main list
-
-**Jai** to replace Haxe
-
-**Haxe** for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community
-
-**Ruby** (or hscript [haxe-script] or Haxe) from simple everyday scripting to any size project as long as it doesn't require real-time interaction such as games, much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like langugages
-
-**C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
-
-x/Wren (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
-
-x/Lua for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
-
-x/shell languages (bash, zsh, fish, etc.) for shell scripting, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
+**Ruby** , much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like languages
 
 
 ## special mentions
@@ -70,16 +80,13 @@ Racket, an intro dialect of Lisp, for god-like macros and *zen way of programmin
 Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
 
 
-
 ## notes
 although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, Crystal has good C api and can maybe use Ruby as a scripting languages (via Anyolite lib), and Ruby might have C and Java api (among the most libs and implementations). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt improves.
 
 it seems like Ruby is still better for general scripting. As for Elixer, once you include another file, you basically have to create a project for it. For Crystal, you must either compile it every time in order to run it (just adds a second) or save the compiled binary (i'm not sure if the eval interpreter is enough...). For Haxe you have all of those choices plus more (interpreter, VM bytecode, LLVM-optimized C binary), you just need to make sure you have a Main class ;). However, it's still nice as it contains about 80% of the same syntax as Ruby.
 
 
-
 # what langauge is best for my needs?
-
 ## my needs (or wants?)
 
 it should be "high-level" (specifically, not forced to handle pointers, references, and const), preferrably wiith many cool contemporary features
@@ -100,7 +107,6 @@ for games (and other "creative" applications that use various input/output hardw
   
   
 ## answers and some thoughts
-
 ### the cross-platform problem
 as far as i know, only Haxe (indie), Rust (Mozilla, an open-source company), C# (Microsoft), Dart (Google) fit all of the above requirements above. The need for cross-platform "target" compilers (at the least, to C) and cross-platform standard libs really narrow down the choices, as most newer languages just won't have neither the library nor compilers, *yet*--they have the potential tho. It's really up to the people, including big corporations, to build them up, along with building various frameworks using them, and then to maintain them... Only time will tell. Beyond those languages though, i haven't really seen many good cross-platform libraries... *note:* Rust is included, but a bit special, in that it had a newer way of handling memory that's supposively not too bad. (*todo: I'd have to look into the C# and Haxe FFI like, is it easy to just call a C# function that calls the native (C/C++/obj-C) iOS function for "share"? If so, then *that's major*, for me, a game-breaker, really. Otherwise, you'd have to maintain an entire set of iOS bindings, and bindings for every platform!*)
 
@@ -124,15 +130,12 @@ Over time, people who use the language will create libraries, *hopefully* many o
 Languages often have their own package managers: haxelib for Haxe, RubyGems for Ruby, NuGet for C#. Just by looking at the package manger, you can get a pretty good idea of what that language is mostly used for, and the power of the big frameworks in it. So, in RubyGems, the Rails web framework is a huge force, and much of Ruby is indeed used for web dev, along with general scripting / cli. In Haxelib, game 'n app frameworks such as OpenFL and NME are by far the biggest forces, with game frameworks and game-related libraries following after Htodo: check out NuGet). **I think checking what's in the package manager, in the library, is a good way to compare languages, instead of comparing the features of the language itself**, as it's the people that make the languages, not vice versa.
 
 
-
 # important changes in dev tech
-
 ## WebGL is dead. Long live native dev.
 with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run native apps (machine code?) in the web-browser :o :O luckily, i've never cared about web-targets, but now it's finally really dead! :) No Flash. No HTML5/WebGl. *Long live native dev.*
 
 ## Microsoft <3 games *and* now open-source too?
 .NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, and so *the people* created Mono as an open-source cross-platform version of .NET, but now, the new .NET Core can truly be used to make *everything*! (I guess Mono is dead..? Or maybe it was used as a base for .NET Core??) *The C#/.NET stock is rising...* Thus, app frameworks like **Avalonia** and **Uno** can compete with Google's Flutter, and the game frameworks like **Unity** and **MonoGame** (based on Microsoft's own XNA framework used in the original Xbox) are still respectively the *the kings of indie game engines*. Microsoft is doing well. All of that, alongside open-source-made VS Code, and the fact that Windows always had a monopolty on games. Microsoft has always been closer to games than both Google and Apple have ever have been, and now it's really showing.
-
 
 ## move from dynamically-typed to static-typed
 "imo, not having static typing is a real pain for anything bigger than a small script, as it introduces a lot of potential bugs" - CRobes, from the haxe discord
@@ -148,8 +151,8 @@ python -> mypy and others (type checker)
 ruby /w sorbet (type checker)
 
 
-
-# compare languages by reading them
+# compare languages' sytnax by reading them
+but do note: it's the language's capabilites that matter, not it's snytactical beauty
 
 https://learnxinyminutes.com/
 
@@ -193,33 +196,7 @@ OCaml
     - brain-exploding example of Haxe's compiler
 
 
-
-historical intrigues:
-BASIC (well, some variant of it)
-  - "the java of it's time"
-    - because Bill Gates sold BASIC to nearly every platform during the 80's (Commodore, Atari, Apple, etc.)
-  - https://github.com/wls/Wumpus.bci/blob/master/wumpus.bci
-    - 'let' keyword for dynamic types?? :o
-  - surprisingly simple and readable, almost like it was specifically made for simple game programming! :o 
-  - many people cite this an their first prgramming language as a child
-  
-Commodore64 (c64)
-  - https://github.com/lvcabral/retaliate64/blob/master/source/gameData.asm
-  - everything is a "co-routine"
-  - three-letter terse commands make it feel closer to asssembly
-
-assembly
-  - each platform probably has it's own assembly language and assembler
-  - https://github.com/Herringway/ebsrc
-    - re-creation of earthbound in SNES's assembly
-  
-https://github.com/flipacholas/Architecture-of-consoles/
-  - console architectures
-
-
-
 # a little info
-
 see meta-programming.txt
 
 https://en.m.wikipedia.org/wiki/Dynamic_programming_language :
@@ -231,12 +208,19 @@ Most dynamic languages are also dynamically typed, but not all are. Dynamic lang
 
 
 
-# a few contemporary languages, old and new
 
-order of traits:
+
+
+
+
+# the main list
+## a few contemporary languages, old and new
+
+order of notes:
 simple summary
 frameworks
 the rest
+owner
 
 ## god-like, but not popular
 Lisp
@@ -320,6 +304,13 @@ Smalltalk
   - frameworks like OpenFL, NME, Heaps ensures it's shared cross-platform code is in good condition, though not .NET level
   - haxelib package manager
   - **my fav :)**
+
+
+
+
+## scripting langs
+https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_scripting_in_2023_decision/
+  - i asked in /r/AskProgramming
 
   
 **Ruby**
@@ -415,6 +406,9 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
     - Ruby is dead. Long live Ruby...What’s happened to Ruby is that it’s matured. It doesn’t have a bunch of folks jumping up and down saying “do everything in Ruby!” … what it does have is lots of people quietly getting lots of shit done in Ruby … just like a ton of other languages that nobody’s super-excited about anymore.
     - Ruby is anything but simple. Simple would imply a single way of doing something. Ruby gives you five ways of doing everything. I legit think it's one of the most complex languages that's in common use.
 
+
+
+## systems langs
 
 ML (Meta Language)
   - functional, purely?
@@ -615,6 +609,70 @@ Nim
   - https://discord.com/blog/why-discord-is-switching-from-go-to-rust
     - this article tells of a single example of many where Discord replaced Rust because they were hitting the limit of Go's garbage collector, and to their surprise, beyond that problem, it outperformed go in every way anyway
   - Mozilla, and as always, open-source
+
+
+
+## TODO: combine with the above
+**haxe**
+  - a clean systems lang
+    - actionscript syntax! <3
+  - macros!
+  - **made for games!**
+  - although there's a little community around frameworks in it, the dev team is rather closed off
+  - **low-key best lang of all time**
+
+**crystal**
+  - truly 95% the same as ruby syntax!
+  - just as scripty-feeling as ruby!!, no main function needed
+  - with ai to generate libs, it should be easy to catch-up
+  - better C interop than go??
+  - kemal lib seems a good replacement for Sinatra (for super simple web apps)
+  - **no MS Windows support**
+  - ayolite lib for ruby to call crystal
+    - **unfortunately, no lib to call ruby code :(**
+  - llvm fast
+  - https://crystal-lang.org/reference/1.3/getting_started/cli.html
+    - a cli example in the main tutorial
+  - better, smaller community
+
+**go** (google)
+  - a high-level C
+    - simple, zen-focused programming
+  - feels very scripty! no static/explicit declarations?
+  - compiles/builds to a 2MB+ executable binary which contains the runtime (including the garbage collector)
+  - no advanced features (generics, macros, etc.)
+
+**rust** (mozilla/open-source?)
+  - explicit about memory references (&), otherwise the same!
+  - terrible class::function syntax
+  - llvm
+
+**nim**
+  - "C for Python developers"
+  - brings the disgusting whitespace-delimited syntax of python to systems langs
+  - https://forum.nim-lang.org/t/1880
+
+dart
+  - feels less scripty, more boring, lots of 'final' keywords (for 'var')
+  - held up by Google's flutter framework, which has hot re-load
+
+scala
+  - java people tend to like this the most, perhaps the most expressive??
+
+C# (microsoft)
+  - might actually be the most readable for me
+  - has that clunky microsoft boring weighty feel
+C++
+  - not too bad!
+  - llvm fast
+**C**
+  - the standard language between all high-level languages and machine languages
+  - no string class! =O
+  - llvm fast
+
+**zig**
+  - a C replacement
+  - explicit about using the allocator to allocate the heap...
   
 
 
@@ -622,20 +680,29 @@ Nim
 
 
 
-languages created by and for their own corporate products:
+#### languages created by and for their own corporate products:
   - **avoid these** unless you must make products on their devices
+
 Dart
   - considered pretty dull, but it works; open-source, **designed to be cross-platform**
+    - very similar to Haxe, but was developed much later
+    - Dart can compile to native machine code for macOS, Windows, and Linux as command line tools. Dart can compile apps with user interfaces to the web, iOS, Android, macOS, Windows, and Linux using the Flutter framework.
+      - javascript transpiler
   - Flutter, and this is really all it's got behind it
   - Google
 
+Kotlin
+  - actually developed by JetBrains (the IDE maker), but the language eventually was chosen by Google to be the main language for Android app devs
+  - interops with Java
+
 Swift
   - Apple's native language, replacing Objective-C, and i believe a lot of code was rewritten using it
+    - they still kept the old crap: Apple Foundational Library (NSobject, etc.)
   - looks really good actually, simple yet powerful, like Haxe, and most importantly:
   - probably has extremely good interopability between C/C++/Obj-C
-  - open-source (surprisingly!)
-  - **meant to be cross-platforn... but, what's the point when all of Apple's frameworks are closed products?..**
-    - "core libraries" seem to be the same as .NET core libraries
+  - strangely open-source (obviously made for Apple's own products, yet open-source to take from the open-source world)
+    - **advertises to be cross-platform... but, what's the point when all of Apple's frameworks are closed products?..**
+    - "core libraries" seem to be the same as .NET core libraries, probably followed Microsoft's footsteps, but lacks the game-making and huge C#/.NET communities
     - https://www.swift.org/core-libraries/
     - https://www.swift.org/about/
       - "One of the most exciting aspects of developing Swift in the open is knowing that it is now free to be ported across a wide range of platforms, devices, and use cases.
@@ -643,35 +710,58 @@ Swift
   - also, **like Google, Apple sucks with community / documentation / etc. A lot of power really comes from open-source popularity...**
   - Apple
 
-Kotlin
-  - the language to replace java for Androids
   
   
 
 
 
 
+## others: not for useful for games or otherwise specialized
+
+### embedded scripting:
+**lua**
+  - still sick, maybe just lacking the "standard" libraries that ruby 'n python have, but still can do everything
+  - extremely simple, most performant
+
+wren
+  - modern sytnax with object-oriented features
+  - modular / doesn't come with a std lib
+    - can add libuv (a contemporary cross-platform std C lib) to it, as in Luxe
+
+squirrel
+  - was used by a few game companies as a general scripting lang for games that even ran on consoles
 
 
-## others: not for useful for games, or just history
-
-### magics
-Lisp
-  - magic
-  
-Schema
-  - meta-magic
-
+### magical languages
+common lisp
+  - 19 loc!
+  - http://www.randomhacks.net/2005/12/03/why-ruby-is-an-acceptable-lisp/
+    - compares ruby to lisp
+  - start with steel bank compiler
+schema (lisp)
+  - seems less lispy, more like a general systems lang
+closure (lisp)
+  - opinionated/constricted like Go
+  - java impl
+    - interop with java
+    - leads to true parallelism?
+  - dynamic and functional dialect
+    - and thus leads to easier concurrency
+  - community-made interpreter for scripting (babashka)
 
 ### functional languages
-
 "Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
     - this basically applies to most functional languages
-    
+
+#### the current state of things
+https://www.reddit.com/r/ocaml/comments/m634t8/thoughts_onexperiences_with_f/
+  - "The tiny community and obscurity of OCaml made things difficult, and it was just hard to justify F# when it's future isn't as promising as rust or typescript or even elm or elixer. These days I use the ever-advancing typescript systems to emulate what I got from OCaml while taking advantage of the much larger platform, community, and ecosystem. When something is lacking, the TS system is advanced enough to (mostly) allow you to code it in. It's got its faults, but I was able to create a variant types library I'm very happy with so it's good enough for now."
+
+
 note: the following languages have very different community use cases:
 OCaml for compilers
 Haskell for math, language
-Elixer for server-side
+Elixir for server-side (and thus the most productive)
 
 OCaml
   - in the functional to object-oriented/procedural sprectrum, OCaml is closer to functional, whereas Haxe is closer to object-oriented/procedural, giving i very good profile and balance, making it far more practical than more functional languages
@@ -680,6 +770,12 @@ OCaml
   - has reference types, "a mutable container for a value"
   - for those two reasons and more, it's not purely functional
   - based on the functional language ML
+
+F#
+  - Microsoft's OCaml in the .NET world
+  - really well-regarded, except that there isn't much use for it in the current state of language choices
+  - no multi-core support?
+  - kinda feels abandoned
 
 Haskell
   - **magical feeling to write**
@@ -708,7 +804,69 @@ Haskell
 
 
 
-### server-side specialization (concurrency, functional)
+TODO: merge below with above
+**elixir**
+  - **the most practical functional language**
+  - "you must remember, that it looks like Ruby, but it’s not Ruby at all” said the creator of the language
+  - https://elixirforum.com/t/ruby-in-2023-can-and-should-elixir-replace-ruby-for-simple-scripting/58214
+  - not a big enough program to make use of functional programming?
+  - "Ruby has considerably more libraries and this is IMO at this point the only reason, other than being mandated or wanting to write ruby, that I would still use it over Elixir. The edge for everything else IMO goes to Elixir."
+    - concurrency, FP scope > OO scopes, liveview and live dashboard are 🔥🤘, contexts > models, response times are in the micro vs milli seconds, Phoenix saw webpacker for the 💩 it was and quick pivoted to a sane alternative in esbuild, benchmarking, testing & code analysis (credo, dialyzer), immutability, ex doc is insanely easier to use vs rdoc et al, runs on significantly fewer resources, OTP, hex is better than bundler, deployment (releases), cross platform (ruby has come a long way on windows from what it was but...), stable API vs the OCD of ruby/rails
+  - multi-core (no GIL in Elixir; as opposed to python/ruby?? not sure..)
+
+#### TODO: move elsewhere
+ref:
+https://madnight.github.io/githut/#/pull_requests/2023/2
+https://github.com/dwyl/learn-elixir/issues/102
+https://www.reddit.com/r/elixir/comments/zd9o07/comparing_phoenix_to_rails_in_december_2022/
+https://www.quora.com/Is-learning-the-Phoenix-web-framework-easier-for-experienced-Ruby-on-Rails-developers
+  - a great answer about thinking in the way of Elixir is *simpler*
+
+
+**OCaml**
+  - also god-like, 19loc
+  - functional, imperative, and object-oriented
+    - can mix 'n match functional and imperative programming, and reap the benefits of both
+  - functional
+    - immutable vars by default (final keyword in other langs), good compiler warnings against mutable things
+  - pattern matching feature ensures all control paths are complete via compiler warnings, and a great type system (strong yet inferred) that also helps with compiler warnings
+  - http://roscidus.com/blog/blog/2014/02/13/ocaml-what-you-gain/
+    - polymorphic variants, ADTs, cycle-free dependencies, immutable data structures...
+
+  - amongst the most practical of functional langs, used for compilers
+  - https://caml.inria.fr/pub/docs/oreilly-book/html/index.html
+  - https://www.reddit.com/r/ocaml/comments/12no1vq/what_makes_ocaml_good_for_programming_language/
+    - having pattern matching and immutability by default makes it easier to write software that operates on tree structures (ASTs, some IRs, etc). you can just write a particular compiler pass as a function that takes in a tree and outputs a new tree.
+
+    compared to writing it in another language like Java or CPP, there's much less boilerplate, no need to deal with things like visitor pattern, copying nodes around and worrying about mutation, etc.
+    - What hasn't been said in other comments is its rich type system. If you want to represent an AST of your language in a type-safe way, that is, in such a way to write the eval function without resorting to errors or exceptions, you have the right tool for that in OCaml: Generalized Algebraic Data Types (GADTs). Haskell also has official support for GADTs via a compiler extension.
+
+    (By the way, if the object language is more expressive than the metalanguage, this beautiful trick stops working. One example is dependent types, which are irrepresentable as an OCaml data type.)
+
+erlang
+  - python-esque tab-delimited? no keyword or brace to signify end..
+
+haskell
+  - i dig the arrows: input -> output, content <- readFile
+
+
+
+
+**julia**
+  - **maybe the best syntax, combining the best of all**
+  - "Fortran for Python developers (more scientific-oriented community and lib, like R)
+  - llvm fast
+  - Julia has foreign function interfaces for C, Fortran, C++, **Python**, R, Java, Mathematica, Matlab, and many other languages
+  - https://www.reddit.com/r/Julia/comments/10p33sf/is_julia_suitable_today_as_a_scripting_language/
+    - doesn't compile to binary? must compile every-time it's run, which takes 1-2 seconds because JIT compiler?? like elixir?
+    - https://github.com/brenhinkeller/StaticTools.jl
+    - https://julialang.github.io/PackageCompiler.jl/stable/apps.html
+    - interpreter less important than compiler (just-in-time compiler based on LLVM ORCJITv2 is used to generate native machine code)
+  - due to it's very specific domain use of science, it's just no good for everything i'm interested in: scripting, small cli apps, web, games, etc.
+
+
+
+### server-side specialization (concurrency)
 Go
   - compiled python, intended to replace python in high-performance areas
   - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
@@ -724,7 +882,20 @@ Go
 
 
 ### old / history
-Perl
+#### intriguing things from the past:
+Logo
+  - lisp without parenthesis!!
+  - geared toward education
+  - influenced smalltalk, scratch, etc.
+  - MIT
+  - https://en.wikipedia.org/wiki/Logo_(programming_language)
+
+
+#### past langs:
+java
+  - see below under #### meh
+
+perl
   - cryptic text-processer with a heavy emphasis on regex DSL turned into a general programming langauge
   - note: awk is similar, but never turned into a programming langauge
   
@@ -739,8 +910,32 @@ ActionScript (3)
   - my second love, leading me to Haxe
 
 
+#### history:
+BASIC (well, some variant of it)
+  - "the java of it's time"
+    - because Bill Gates sold BASIC to nearly every platform during the 80's (Commodore, Atari, Apple, etc.)
+  - https://github.com/wls/Wumpus.bci/blob/master/wumpus.bci
+    - 'let' keyword for dynamic types?? :o
+  - surprisingly simple and readable, almost like it was specifically made for simple game programming! :o 
+  - many people cite this an their first prgramming language as a child
+  
+Commodore64 (c64)
+  - https://github.com/lvcabral/retaliate64/blob/master/source/gameData.asm
+  - everything is a "co-routine"
+  - three-letter terse commands make it feel closer to asssembly
 
-### meh
+assembly
+  - each platform probably has it's own assembly language and assembler
+  - https://github.com/Herringway/ebsrc
+    - re-creation of earthbound in SNES's assembly
+  
+https://github.com/flipacholas/Architecture-of-consoles/
+  - console architectures
+
+
+
+
+##### meh
 Java / JVM world:
   - never was interested in this
   - java came up because of cross-platform VM and marketing
@@ -949,8 +1144,41 @@ https://wren.io/performance.html
 
 # resources
 
-## good reads
+## the opinions of more experienced programmers
+## Jon Blow's opinion
+https://www.youtube.com/watch?v=y2Wmz15aXk0
+  - **the idea of using a scripting language in a game was a failed experiment**
 
+https://www.youtube.com/watch?v=klE9bzWJbHc
+  - video of some millenial streamer that tries jai, but it works
+  
+https://www.youtube.com/watch?v=baClkzcfxu0
+  - jai > zig from the same streamer
+
+
+## Robert's opinion
+Robert has ported CrossCode to every popular platform, including *two generations of consoles(!)*, in addition to writing a JS AOT(?) compiler, a super-powered low level framework (Kha), and basically the next SDL (Kinc)
+
+Lisp, no language ever been so simple yet so powerful, contemporary languages (as of 2022) still have not caught up, and macros are easier to write
+
+Smalltalk, most readable language, you can alter *any* part of it while it's running making a killer dev experience
+
+Java had good marketing, otherwise, it stole from Smalltalk (VM, object-oriented) and dumbed down the object-oriented part from true objects to mere class prototypes
+
+Basic was the Java of it's time
+
+
+## Zeta's opinion
+Zeta has written: a game engine on top of Robert's Kinc lib, and is now writing an ARM assembler (for Hashlink), and is tinkering with writing an OS
+
+Java is bad
+C# is like Java owned but by Microsoft, and thus doubly bad
+
+C is good
+Haxe is very good
+Rust is great
+
+## good reads
 https://ziglang.org/learn/why_zig_rust_d_cpp/
   - a good little critique other systems languages (and how to learn from them)
 
