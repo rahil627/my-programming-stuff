@@ -3,11 +3,15 @@ see windows-cli.txt
 
 notes here are related to solely the language itself
 
+# naming conventions
 seems to be case insensitive, which is great as .net uses caps heavily
+doesn't like '-', or any special characters except '_' 
 
 # environment vars
 $Env:PSModulePath -split (';')
 
 # learn x in y minutes
 Invoke-Expression -Command "ls"
-
+$array = @("stuff");
+$hash = @{key = "value"}
+Export-ModuleMember -Function * -Alias * -Variable *
