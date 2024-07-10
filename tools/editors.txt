@@ -24,15 +24,16 @@ terminal editors:
 mostly for the key-bindings, then can use an extension on vscode
 
 **helix**
-  - the best of both worlds: vim and emacs
+  - the best of all past worlds: vim, doom-emacs, and kakoune
   - many pop-up menus similar to doom-emacs
-  - based on kakoune
+  - vim-like key-bindings, but more intuitive, lower learning curve, and less key-strokes
+  - "helix for vscode" extension
 
 old standards:
 neovim
   - lua scripting for configs 'n plugins!
-    - used to be terrible vimscript
-  - various packages
+    - used to be in an archaic language: vimscript
+  - pre-set configs due to complexity of starting out from scratch
   - bad learning curve
 emacs
   - elisp macros
@@ -41,10 +42,11 @@ emacs
   - org-mode
   - "m-x is godsend"
   - slow startup time
-  - **doom**
-     - intuitive space-bar menu to ease learning 
-     - evil-mode to use vim-keybindings
-  - space
+  - some pre-set configs:
+    - **doom-emacs**
+      - intuitive space-bar menu to ease learning 
+      - evil-mode to use vim-keybindings
+    - space-macs
     - ?
 
 
