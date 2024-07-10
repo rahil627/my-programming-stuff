@@ -109,7 +109,7 @@ function setup_shell {
 
 function setup_git {
     Invoke-Expression -C git config --global user.name "ra"
-    Invoke-Expression -C git config --global user.email rahil627@gmail.com
+    Invoke-Expression -C git config --global user.email "1132053+rahil627@users.noreply.github.com"
 }
 
 function setup_browser {
