@@ -479,35 +479,6 @@ No static typing, which is in itself great thing, but not on the scale of big pr
   - No helpful IDEs. It's hard to reason about dynamic code before you run it, so it's very hard to write tools to help you reason about it.
 
 
-Java / JVM world
-Scala
-  - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
-  - much loved
-  - just as featureful and powerful as most of the newer contemporary lanugages
-  
-Groovy
-  - "Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk. It can be used as both a programming language and a scripting language for the Java Platform"
-  - "Most valid Java files are also valid Groovy files. Although the two languages are similar, Groovy code can be more compact, because it does not need all the elements that Java needs.[15] This makes it possible for Java programmers to learn Groovy gradually by starting with familiar Java syntax before acquiring more Groovy programming idioms."
-
-Java
-  - C/C++ power without memory management, a classic systems language (along with C/C++) but *much* easier to use
-  - frameworks include: LibGDX... (todo: ??)
-  - the vibe i get is strange... there seems to be only an old cult that like it, one that's business-class or "enterprise"-class
-  - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
-  - **adds a garbage collector, making it feel "high-level"**
-    - but no pointers *at all*, **all objects are references and all objects are passed by references** (basically every high-level language after this does this)
-      - thus perhaps making fine-tuning of memory impossible?
-    - a good comparison between C++'s pointers and Java's magic
-      - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
-  - feels neat, like an early C#, but heavy too
-    - although the modules/class seem like 5 folder deep??
-  - no header files? :o
-  - object-oriented, direct contender to C++
-  - adds lambdas (maybe this was added later on..)
-  - can interop with C through JNI (java native interface)
-  - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/  
-    - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#.
-  - like C#, it's similarly bulky, with interfaces, tons of classes, project files, and just making it feel like the opposite of the freedom of a scripting language
 
 C++
   - frameworks: ??, maybe C++ people don't rely on frameworks: they build it! :p
@@ -647,7 +618,12 @@ Nim
   
 
 
-  
+
+
+
+
+languages created by and for their own corporate products:
+  - **avoid these** unless you must make products on their devices
 Dart
   - considered pretty dull, but it works; open-source, **designed to be cross-platform**
   - Flutter, and this is really all it's got behind it
@@ -655,8 +631,8 @@ Dart
 
 Swift
   - Apple's native language, replacing Objective-C, and i believe a lot of code was rewritten using it
-  - looks really good actually, simple yet powerful, like Haxe, and most importantly
-  - probably has extremely good interopability with C/C++/Obj-C
+  - looks really good actually, simple yet powerful, like Haxe, and most importantly:
+  - probably has extremely good interopability between C/C++/Obj-C
   - open-source (surprisingly!)
   - **meant to be cross-platforn... but, what's the point when all of Apple's frameworks are closed products?..**
     - "core libraries" seem to be the same as .NET core libraries
@@ -666,6 +642,9 @@ Swift
          Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next."
   - also, **like Google, Apple sucks with community / documentation / etc. A lot of power really comes from open-source popularity...**
   - Apple
+
+Kotlin
+  - the language to replace java for Androids
   
   
 
@@ -689,7 +668,7 @@ Schema
 "Elixir is a functional language; its data structures are immutable. This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."
     - this basically applies to most functional languages
     
-note: the following languages have very different use cases:
+note: the following languages have very different community use cases:
 OCaml for compilers
 Haskell for math, language
 Elixer for server-side
@@ -703,8 +682,8 @@ OCaml
   - based on the functional language ML
 
 Haskell
-  - magical feeling to write
-  - many people really like this one
+  - **magical feeling to write**
+    - many people really like this one
   - *purely functional*, meaning, there is *absolutely no way to mutate data* (vars and functions)
     - this makes it very limiting in practice, and more of a theoretical interest
   - because it is purely functional, it can do things that no other non-purely-functional languages can do
@@ -717,7 +696,7 @@ Haskell
   - "there are ways of interacting with the real world, such as printing to a console, but this is done in an absolutely controlled environment" - CRobes
     - soo, i'm guessing limited to formal sciences: math, languages, etc.
 
-Elixer
+**Elixer**
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
     - proably not the most performance-oriented (for native apps), but it being new, it has much better concurrency, and the VM ensures it's much faster than python/ruby!
   - again, very Ruby-eque, but really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
@@ -731,15 +710,15 @@ Elixer
 
 ### server-side specialization (concurrency, functional)
 Go
+  - compiled python, intended to replace python in high-performance areas
   - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
   - **at the speed of C too! :o**
-  - **not object-oriented**, or not meant to be
+  - **object-oriented features**, and not meant to be
     - this kills it for games
   - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
   - simple, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it far less appealing for hobbyists (that like *natural* languages) and game-makers (that like lots of features and object-oriented paradigm)
-  - this seems to have influenced a lot of languages, especially it's concurrency features
+  - noted for bringing it's concurrency features to the mainstream
   - Google, but open-source
-    - basically replaced a bunch of slow python code
 
 
 
@@ -760,10 +739,51 @@ ActionScript (3)
   - my second love, leading me to Haxe
 
 
+
+### meh
+Java / JVM world:
+  - never was interested in this
+  - java came up because of cross-platform VM and marketing
+  - VM makes it less interesting for games/performance, though it's the most performant VM in history
+  
+Scala
+  - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
+  - much loved
+  - just as featureful and powerful as most of the newer contemporary lanugages
+  
+Groovy
+  - "Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk. It can be used as both a programming language and a scripting language for the Java Platform"
+  - "Most valid Java files are also valid Groovy files. Although the two languages are similar, Groovy code can be more compact, because it does not need all the elements that Java needs.[15] This makes it possible for Java programmers to learn Groovy gradually by starting with familiar Java syntax before acquiring more Groovy programming idioms."
+
+Java
+  - C/C++ power without memory management, a classic systems language (along with C/C++) but *much* easier to use
+  - frameworks include: LibGDX... (todo: ??)
+  - the vibe i get is strange... there seems to be only an old cult that like it, one that's business-class or "enterprise"-class
+  - **compiles to bytecode that is then processed by VM that must be installed on the target device, whereas C/C++ directly accesses memory**
+  - **adds a garbage collector, making it feel "high-level"**
+    - but no pointers *at all*, **all objects are references and all objects are passed by references** (basically every high-level language after this does this)
+      - thus perhaps making fine-tuning of memory impossible?
+    - a good comparison between C++'s pointers and Java's magic
+      - https://stackoverflow.com/questions/1750106/how-can-i-use-pointers-in-java#1750197
+  - feels neat, like an early C#, but heavy too
+    - although the modules/class seem like 5 folder deep??
+  - no header files? :o
+  - object-oriented, direct contender to C++
+  - adds lambdas (maybe this was added later on..)
+  - can interop with C through JNI (java native interface)
+  - this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it just didn't have a good IDE compared to C++'s Visual Studio; i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/  
+    - however, now looking at it again, it's strange that this isn't used more! It looks like a much neater version of C++, like a pre-cursor to C#.
+  - like C#, it's similarly bulky, with interfaces, tons of classes, project files, and just making it feel like the opposite of the freedom of a scripting language
+
+
+
+
+
+
+
+
+
 https://www.atatus.com/blog/rust-vs-golang/
-
-
-
 
 
 # TODO: merge with the above
