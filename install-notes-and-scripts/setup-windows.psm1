@@ -55,7 +55,8 @@ $apps_to_try =  @( # array
 $apps = @{ # enum won't work, and psobject seems like a hassle
     dropbox = "Dropbox.Dropbox"
     # todo: choose a browser
-    # ungoogled_chromium # with uBlock
+    browser = eloston.ungoogled-chromium # with uBlock
+    # setup_browser
     # brave # comes with adblocker, privacy, etc.
     # thorium # maintained by one person
     # cromite
@@ -83,7 +84,8 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
  } #| foreach {winget install -e --id $_}
 
 function install_app($id) { # restriction: '-' is a special char for powershell commands
-    $cmd = "winget install --id "+$id # to avoid command substitution
+    $cmd = "winget install --id "+$id # store string to avoid command substitution
+    # without id, i think it will run into multiple choices/sources
     # todo: --source winget
     Invoke-Expression -Command $cmd
 }
@@ -109,6 +111,19 @@ function setup_git {
     Invoke-Expression -C git config --global user.name "ra"
     Invoke-Expression -C git config --global user.email rahil627@gmail.com
 }
+
+function setup_browser {
+    # copy ungoogled chromium settings?
+    #   - https://superuser.com/questions/149032/where-is-the-chrome-settings-file
+    #   - file:///C:/Users/rahil/AppData/Local/Chromium/User%20Data/Default/Preferences
+    #   - a giant json file, may have to do it manually :/
+    #   - i don't even see the search engine setting
+    # startpage as default search engine (delete others)
+    #  - an ungoogled google search engine
+    # follow instructions on the first screen to set up a way to install apps from the chrome web store
+    # uBlock origin
+}
+
 function install_winget {
     #Based on this gist: https://gist.github.com/crutkas/6c2096eae387e544bd05cde246f23901
     $hasPackageManager = Get-AppPackage -name 'Microsoft.DesktopAppInstaller'
