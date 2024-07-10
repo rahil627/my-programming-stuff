@@ -1,5 +1,9 @@
 
+
 useful key-bindings:
+can just download an extension for your favorite key-bindings
+  - helix (kakoune) > doomemacs > vim
+
 c+p
   - find file in project
 

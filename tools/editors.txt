@@ -3,29 +3,50 @@
 gui editors:
 
 newer stuff:
-lapce
-  - rust
-  - has vscode-like extensions
+x/lapce
+  - a vs-code copy in rust
+    - in development
+    - incredible speed
+    - likely will become abandoned after the rust-wave
 
-
-vs code
-  - the standard post sublime and atom
+current standard:
+**vs code**
 
 old standards:
-sublime
-
-atom
-
-
-
+x/sublime
+x/atom
+  - i missed out on this generation
+notepad++
+  - same as ever, still cute and functional for an old 90s thing
 
 
 terminal editors:
+mostly for the key-bindings, then can use an extension on vscode
+
+**helix**
+  - the best of both worlds: vim and emacs
+  - many pop-up menus similar to doom-emacs
+  - based on kakoune
+
+old standards:
 neovim
-  - various
+  - lua scripting for configs 'n plugins!
+    - used to be terrible vimscript
+  - various packages
+  - bad learning curve
 emacs
-  - doom
-helix
+  - elisp macros
+    - actually a joy to use (especially when compared to vimscript!)
+  - mature, well-written plugins
+  - org-mode
+  - "m-x is godsend"
+  - slow startup time
+  - **doom**
+     - intuitive space-bar menu to ease learning 
+     - evil-mode to use vim-keybindings
+  - space
+    - ?
+
 
 
 
@@ -36,6 +57,7 @@ generally adds these features: integrated interactive debugger, profiler, advanc
 
 vs studio
   - C++/C#
+  - the most advanced features
 
 various IDEs by JetBrains
   - rubymine
