@@ -2,6 +2,7 @@
 
 conclusion:
 vs-code is indisputable
+  - todo: can try sublime-text
 vs-studio for it's advanced features: deep debugging, run-time stuff, etc.
 helix (or other fav terminal editor) for quick general use, along with terminal tools, remote terminal use
 notepad (windows) for plain text
@@ -11,27 +12,50 @@ knowledge-base software for bigger, conceptually-linked sets of text
 
 gui editors:
 
-newer stuff:
+newer, simpler, things to try:
 x/lapce
   - a vs-code copy in rust
     - in development
     - incredible speed
     - likely will become abandoned after the rust-wave
+kate
+  - linux, open-source
+
 
 current standard:
 **vs code**
-  - made in electron (web stack rendered by chromium/node.js)
+  - made using electron (web stack rendered by chromium/node.js)
+  - so dominant that it made most other editors abandonware
+    - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
 
 old standards:
-x/sublime
+(note: i missed out on the atom vs sublime generation)
+**sublime text**
+  - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's community
+  - "It's a much nicer editor but clunky vscode has a better on boarding experience (I see you coding x, would you like to install this extension to help with x). Whereas with subl you have to do a lot of hunting and manual installation to get all set up with extensions.
+    And frankly vscode is where the community is at, which means that's where almost all the extension dev is happening.
+    There is some effort to piggyback off vscode in sublime via language servers which is hopeful. Vscode's extension in sublime would be best of both worlds.
+    I bought sublime before vscode existed. I use both. Working on a Hugo static website right now and use vscode for html & css but sublime for the markdown based content."
+      - https://www.reddit.com/r/SublimeText/comments/m1g9x9/newbie_is_sublime_text_better_than_visual_studio/
+  - **designed for speed and simplicity**
+    - **written in C++**, scripted in python
+  - shareware (not open-source, but free?)
 x/atom
   - the electron framework was created in the process of making this
-  - i missed out on this generation
+  - ...people don't seem to have liked this one..
+(probably missing some others here)
+
+classics:
 notepad++
-  - same as ever, still cute and functional for an old 90s thing
+  - a windows classic, same as ever, still cute and functional for an old 90s thing
+textmate
+  - a mac classic
+notepad2
+  - a great replacement for notepad
 
 
-terminal editors:
+
+cli/terminal editors:
 mostly for the key-bindings, then can use an extension on vscode
 
 **helix**
@@ -40,14 +64,18 @@ mostly for the key-bindings, then can use an extension on vscode
   - vim-like key-bindings, but more intuitive, lower learning curve, and less key-strokes
   - "helix for vscode" extension
 
-old standards:
+classics:
 neovim
+  - vim
+    - modal (normal, insert, visual/select, command)
+    - *heavily* key-board input user interface focused
   - lua scripting for configs 'n plugins!
     - used to be in an archaic language: vimscript
   - some starter configs due to time wasted starting out from scratch
   - bad learning curve, especially from vanilla neovim
     - reminds me of the terrible linux config experience
 emacs
+  - much more than a text editor, it's basically an OS!
   - elisp macros
     - actually a joy to use (especially when compared to vimscript!)
     - because it's lisp, you're basically writing the program itself, not merely some plugin manager
@@ -73,20 +101,28 @@ mostly langauge-specific
 generally adds these features: integrated interactive debugger, profiler, advanced code completion, advanced refactoring, better file navigation (go to definition in deep libraries 'n back), tasks runner (including tests), database integration
 
 vs studio
-  - the most advanced IDE with the most features
-  - C/C++/C#/others??
+  - the standard advanced IDE with the most features
+  - seems to be mostly focused on C/C++/C# compared to other langs..??
   - microsoft
+    - therefore took a long time before making vs-mac
 
 various IDEs by JetBrains
+seems to fill the gap vs-studio has left with other languages
 recently seperated into language specific IDEs:
 https://www.jetbrains.com/ides/
   - rubymine
     - (ruby)
+  - rider
+    - c#, games?
   - intellij
     - java, jvm langs?
   - pycharm
     - (python)
   - etc.
+
+
+https://pawelgrzybek.com/the-joy-of-learning-helix-and-probably-other-modal-terminal-based-editors/
+  - todo: read
 
 
 
