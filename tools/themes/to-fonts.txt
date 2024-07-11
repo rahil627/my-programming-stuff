@@ -1,20 +1,17 @@
 
+
+# recommendations
+https://www.reddit.com/r/vscode/comments/17whogu/what_is_your_favorite_programming_font/
+
 # download
-from fonts.google.com
+fonts.google.com
+github
+private site
 
 # install
-
 ## windows
 open the font-name-variable.wght file and click install
   - it will install all of the fonts (found in the 'static' folder) automatically
-
-
-
-vs-code
-  - font-size ~13
-  - consolas looks better than source code pro and fira code
-
-
 
 ## arch-linux
 for arch, just use package managers to install them
@@ -32,6 +29,8 @@ fc-list | fzf
 
 the way to install without using package manager, for other distros:
 /usr/share/fonts or a local dir (/.fonts/ is deprecated)
+
+
 
 # lists of fonts
 https://www.programmingfonts.org/
@@ -51,23 +50,6 @@ https://archlinux.org/packages/?sort=&repo=Extra&q=ttf&maintainer=&flagged=
 https://github.com/ryanoasis/nerd-fonts
   - another good pop collection
 
-chromeos terminal
-  - size 13-16
-  - noto sans mono, 16
-  - change font color to be slightly transparent (terminal settings -> appearance)
-
-vs code
-  - size 11-14, but has custom dpi (exec on start)
-  - source code pro, 11
-  - fira mono
-    - for some reaason, fira mono is more seriphy than noto sans mono on terminal, and the inverse is true for vs code
-
-chrome (browser/OS?)
-font size: 18
-strandard: carlito
-serif: georgia
-sans: arimo
-fixed-width: roboto
 
 https://kinsta.com/blog/best-programming-fonts/
   - TODO: the one's that cost money might just be even better!!
@@ -93,29 +75,130 @@ https://fonts.adobe.com/search?query=code
   - code saver
 
 
+
+
+# settings
+
+## windows, OLED laptop
+vs-code
+  - font-size: 11-13
+  - font-weight: light (300?) to regular-light (350) on OLED screen
+  - consolas looks better than source code pro, but it doesn't have a lighter weight
+
+terminal
+  - mononoki
+  - font-size: 10
+
+
+## arch-linux, shitty chromebook
+chromeos terminal
+  - size 13-16
+  - noto sans mono, 16
+  - change font color to be slightly transparent (terminal settings -> appearance)
+
+vs code
+  - size 11-14, but has custom dpi (exec on start)
+  - source code pro, 11
+  
+chrome (browser/OS?) defaults(?):
+font size: 18
+strandard: carlito
+serif: georgia
+sans: arimo
+fixed-width: roboto
+
+
+
+
 current favorites:
-**meslo**
-  - better than source code pro!?
-  - terminal: size 10, 10.5, 11
-  - also really good, competitive to source code pro
+
+need to find consolas in a lighter weight
+or a more narrow source code pro
+
+**consolas**
+  - 12
+  - a classic on Windows
+  - still looks the best on windows, especially vs-code, where it is the default
+  - damn near impossible to beat
+  - small horizontal space between characters
+  - 1-2 font sizes smaller than others (marketing?)
+  - **comes with only one weight: regular, no light?**
+  - strongly associated with vs-studio and c#
 
 **source code pro / hasklig**
-  - a long-time standard
-  - terminal: size 10-11, thickness: medium
-  - vscode: size 13, thickness: (default) regular
+  - terminal: size 10-11, weight: regular/normal
+  - vscode: size 11, weight: light
+  - best/most comfy for my eyes long-term
+  
+**meslo (LG S) / NF**
+  - terminal: size 10, 10.5, 11
+  - also really good
+  - wayyyy more seriphy than source code pro
 
-mononoki
-  - trying in terminal
+
+trying:
+
+hack
+  - same size as open source code
+  - no other font weights
+  - very close to consolas
+
+**mononoki**
+  - 12
+  - maybe too funky for long-term use
+  - using in terminal
+
+agave
+  - very simple, very cute, maybe too cute..
+  - even more funky than mononoki
+  - even smaller than mononoki!
+
+monaspace neon/argon var
+  - i might like this better than meslo!
+
+monaspace krypton var
+  - a little lower-resolution for terminal
 
 
 
-hasklig <- source code pro
+progressions:
+monaspace neon <- hasklig ~= source code pro
+mononoki & agave
+
+cascadia code ~= fira code <- anonymous pro (seriphy)
 mesloLGS nf ~= fira mono <- dejavu sans mono
-hack <- dejavu sans mono & fira
+hack <- source code pro & dejavu sans mono & fira
 jetbrains (sans) mono <- dejavu sans mono
-mononoki > cascadia code ~= fira code > anonymous pro (seriphy)
+  - all of these are tall'ish like dejavu
 
 
+
+main list:
+agave
+  - very simple, very cute
+  - even smalelr than mononoki!
+
+cascadia mono/code
+  - has a light version
+  - feels more roman and seriphy than source code pro
+  - but it does have better/narrower character width
+
+monaspace
+  - a collection by github
+  - neon
+    - a bigger, bolder source code pro with some more seriphy-ness
+    - very good, roundy
+    - good character height, not abnormally tall like dejavu-derived ones
+  - argon
+    - a less seriphy neon, feels roman
+  - xenon
+    - a more seriphy neon
+
+  - radon
+    - sharpie marker style!
+  - krypton
+    - lower-resolution/roboty, but not pixely
+  
 MesloLSG NF
   - NF = nerd font
   - just fixes smybol positions from dejavu sans mono
@@ -123,11 +206,18 @@ MesloLSG NF
 
 hasklig
   - source code pro + ligatures (->, =>, etc.)
+  - other weights:
+    - https://github.com/ryanoasis/nerd-fonts/tree/master/src/unpatched-fonts/Hasklig
+      - somewhere in-between source code pro regular and light
 
 mononoki
-  - a cute seriphy, game'ish font
+  - a cute, unique, small font
+  - a more open-feeling consolas
   - the bold is great, very sans-serif
   - designed for code review, as "every character is designed to be clearly distinguishable
+
+iosevka
+  - slender: thin 'n tall, reminds me of monaco on a mac
 
 cascadia code
   - very gamey 'n seriphy, like mononoki and fira code
@@ -135,7 +225,7 @@ cascadia code
   - high quality, showing surprising thickness like consolas
   - used by Microsoft for it's terminal
 
-fira code
+fira code =? jetbrains mono
   - adds space width, adds some serif-ness, probably has code-related glyphs
   - i prefer mono
 
@@ -162,8 +252,10 @@ PowerLine (bundle)
 
 source code pro
   - a classic
-  - more sans than dejavu! very clear 'n spacey
+  - more sans than dejavu! very clear, roundy, 'n spacey
+  - easier on the eyes as the regular weight is light
   - great in small sizes
+  - squashed vertical space between lines
   - by Adobe (but i guess it's now open-source)
   - git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
   - fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
@@ -192,10 +284,6 @@ Inconsolata
   - open source consolas, though not as good as the original
   - maybe too scrunched up? tall? round
   - something always felt wrong about this one...
-
-**consolas**
-  - a classic
-  - on Windows computers, closed-source? i think it came with VS Studio... it's the C# font
 
 Monaco
   - and old Apple Mac OS X font, used in XCode
