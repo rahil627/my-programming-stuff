@@ -1,5 +1,22 @@
 
+# download
+from fonts.google.com
+
 # install
+
+## windows
+open the font-name-variable.wght file and click install
+  - it will install all of the fonts (found in the 'static' folder) automatically
+
+
+
+vs-code
+  - font-size ~13
+  - consolas looks better than source code pro and fira code
+
+
+
+## arch-linux
 for arch, just use package managers to install them
 see https://wiki.archlinux.org/title/fonts
 
@@ -176,7 +193,7 @@ Inconsolata
   - maybe too scrunched up? tall? round
   - something always felt wrong about this one...
 
-consolas
+**consolas**
   - a classic
   - on Windows computers, closed-source? i think it came with VS Studio... it's the C# font
 
