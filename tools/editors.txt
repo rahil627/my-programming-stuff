@@ -1,5 +1,14 @@
 
 
+conclusion:
+vs-code is indisputable
+vs-studio for it's advanced features: deep debugging, run-time stuff, etc.
+helix (or other fav terminal editor) for quick general use, along with terminal tools, remote terminal use
+notepad (windows) for plain text
+knowledge-base software for bigger, conceptually-linked sets of text
+
+
+
 gui editors:
 
 newer stuff:
@@ -11,10 +20,12 @@ x/lapce
 
 current standard:
 **vs code**
+  - made in electron (web stack rendered by chromium/node.js)
 
 old standards:
 x/sublime
 x/atom
+  - the electron framework was created in the process of making this
   - i missed out on this generation
 notepad++
   - same as ever, still cute and functional for an old 90s thing
@@ -33,21 +44,25 @@ old standards:
 neovim
   - lua scripting for configs 'n plugins!
     - used to be in an archaic language: vimscript
-  - pre-set configs due to complexity of starting out from scratch
-  - bad learning curve
+  - some starter configs due to time wasted starting out from scratch
+  - bad learning curve, especially from vanilla neovim
+    - reminds me of the terrible linux config experience
 emacs
   - elisp macros
     - actually a joy to use (especially when compared to vimscript!)
+    - because it's lisp, you're basically writing the program itself, not merely some plugin manager
   - mature, well-written plugins
   - org-mode
   - "m-x is godsend"
   - slow startup time
-  - some pre-set configs:
-    - **doom-emacs**
-      - intuitive space-bar menu to ease learning 
-      - evil-mode to use vim-keybindings
-    - space-macs
-    - ?
+  - **doom-emacs**
+    - a great starter config that makes a really nice onboarding experience
+    - i really really liked this, found it very quick to find and precisely just what i needed
+    - intuitive space-bar menu to ease learning
+    - evil-mode to use vim-keybindings
+  - prelude
+      - a light-weight starter kit closer to vanilla emacs, in case doom is too much
+    
 
 
 
@@ -58,14 +73,20 @@ mostly langauge-specific
 generally adds these features: integrated interactive debugger, profiler, advanced code completion, advanced refactoring, better file navigation (go to definition in deep libraries 'n back), tasks runner (including tests), database integration
 
 vs studio
-  - C++/C#
-  - the most advanced features
+  - the most advanced IDE with the most features
+  - C/C++/C#/others??
+  - microsoft
 
 various IDEs by JetBrains
+recently seperated into language specific IDEs:
+https://www.jetbrains.com/ides/
   - rubymine
-    - (for ruby)
+    - (ruby)
   - intellij
     - java, jvm langs?
+  - pycharm
+    - (python)
+  - etc.
 
 
 

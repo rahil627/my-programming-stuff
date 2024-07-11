@@ -13,6 +13,20 @@ c+sh+p
 file -> preferences ...
   - main settings
 
+control(+shift)+tab
+  - cycle through opened buffers/tabs
+
+f+up/down
+  - page up/down
+
+alt+left/right
+  - go to previous/next place you went to
+
+alt+up/down
+  - move current line up/down
+
+  
+
 
 # backup settings
 https://gist.github.com/MaxAtoms/b30163855bc6995588a5af9e88b28e51

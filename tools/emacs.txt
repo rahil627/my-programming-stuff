@@ -10,20 +10,20 @@ zaiste video series
 beginner bundles:
 https://github.com/emacs-tw/awesome-emacs#starter-kit
 
-spacemacs
-  - "a community-drive emacs distro"
-  - sounds like 'oh my zsh', which is not good
-DOOM
+
+**DOOM**
+  - i had a great initial experience using this, felt wayyyy easier and way more intuitive than using neovim!
   - tailored for Emacs bankruptcy veterans who want less framework in their frameworks, a modicum of stability (and reproducibility) from their package manager, and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite operating system."
   - "fast, closer to metal, opinionated, no forced plug-ins, nix/guix"
   - 150 modules!
   - "If you want something closer to what you know, and less involved to customize (less barebones basically), doom is what you want."
   - I have tried them both and vanilla as well. I like doom the best - it has better shortcuts out the box, less buggy, uses traditional elisp for configuration as opposed to spacemacs which uses a proprietary thing you have to learn.
-
 prelude
   - way more stripped down, much closer to vanilla emacs
   - Prelude is basically a very light starter kit, whereas doom is a whole garage full of tools. (This does not mean doom has more utility, it just comes with more going on out of the box)
-
+spacemacs
+  - "a community-drive emacs distro"
+    - sounds like 'oh my zsh', which is *not* good
 
 
 doom install:

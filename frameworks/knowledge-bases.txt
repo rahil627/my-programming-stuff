@@ -25,7 +25,7 @@ obsidian
   - views for outline by headings, tags, backlinks, etc.
   - bookmarks
     - seems useful!
-  - **no metadata by default**, just clean plain text!
+  - **no front-matter/metadata by default**, just clean ol' plain text!
     - **maybe can use this when i want to, without destroying my notes structure**
 
 joplin
@@ -44,11 +44,12 @@ joplin
 
 **dendron**
   + front-matter
-  + file 'n file-name structure
+  + **a specific file 'n file-name structure**:
     - parent.parent.file
-    - no folders
-      - makes it a pain to sift through without a dendron editor (vs code)
-      - all hierarchies are files, which is strange when you just want a folder..?
+      - no folders!
+      - this is actually a neat solution
+      - will be interesting to sift through without a dendron editor (vs code), yet might rid the need of searching through folders!
+      - all hierarchies are files, no need for folders!
   - a vscode plugin, no standalone app
     - although, this may just be the best app for programmers that use vs code..
     - also can just edit using your favorite simple text editors and cli
