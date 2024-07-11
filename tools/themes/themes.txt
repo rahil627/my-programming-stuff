@@ -1,0 +1,20 @@
+
+windows:
+
+vs-code:
+
+see vs-code-extensions.txt
+
+**aura**
+  - dark (soft text)
+tokyonight
+  - a very well-executed blue'ish theme
+jellyfish
+  - a nice monokai variant
+synthwave '84
+  - syntax color scheme is too wild
+
+
+terminal:
+https://windowsterminalthemes.dev/
+  - cyberpunk 2077
