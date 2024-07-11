@@ -79,6 +79,8 @@ https://fonts.adobe.com/search?query=code
 
 # settings
 
+NOTE: the color theme of the editor effects the text's contrast which can feel like the font-weight!
+
 ## windows, OLED laptop
 vs-code
   - font-size: 11-13
@@ -110,7 +112,7 @@ fixed-width: roboto
 
 
 
-current favorites:
+# current favorites:
 
 need to find consolas in a lighter weight
 or a more narrow source code pro
@@ -125,34 +127,31 @@ or a more narrow source code pro
   - **comes with only one weight: regular, no light?**
   - strongly associated with vs-studio and c#
 
-**source code pro / hasklig**
+**source code pro / hasklig (light)**
   - terminal: size 10-11, weight: regular/normal
-  - vscode: size 11, weight: light
+  - vscode: size 11-12, weight: light
   - best/most comfy for my eyes long-term
-  
+
+**hack**
+  - 11, same size as source code pro
+  - taller than source code pro, dejavu-like
+  - only one font weight
+
+**mononoki**
+  - 12, same size as consolas
+  - slightly more wider and less seriphy than consolas, and therefore more comfy, but less readable
+  - a little more funky
+  - only one font weight
+  - using in terminal
+ 
 **meslo (LG S) / NF**
   - terminal: size 10, 10.5, 11
   - also really good
+  - tall like dejavu
   - wayyyy more seriphy than source code pro
 
 
 trying:
-
-hack
-  - same size as open source code
-  - no other font weights
-  - very close to consolas
-
-**mononoki**
-  - 12
-  - maybe too funky for long-term use
-  - using in terminal
-
-agave
-  - very simple, very cute, maybe too cute..
-  - even more funky than mononoki
-  - even smaller than mononoki!
-
 monaspace neon/argon var
   - i might like this better than meslo!
 
@@ -173,10 +172,11 @@ jetbrains (sans) mono <- dejavu sans mono
 
 
 
-main list:
+# main list:
 agave
-  - very simple, very cute
-  - even smalelr than mononoki!
+  - very simple, very cute, maybe too cute..
+  - even more funky than mononoki
+  - even smaller than mononoki!
 
 cascadia mono/code
   - has a light version
@@ -185,12 +185,14 @@ cascadia mono/code
 
 monaspace
   - a collection by github
-  - neon
-    - a bigger, bolder source code pro with some more seriphy-ness
+  - **neon**
+    - a bigger source code pro with some more seriphy-ness
     - very good, roundy
     - good character height, not abnormally tall like dejavu-derived ones
+    - i think hack is still better
   - argon
     - a less seriphy neon, feels roman
+    - competes with hack, but i think hack is better
   - xenon
     - a more seriphy neon
 
@@ -198,10 +200,16 @@ monaspace
     - sharpie marker style!
   - krypton
     - lower-resolution/roboty, but not pixely
+
+hack
+  - meslo LG S with fewer seriphs
+  - somewhere between dejavu and fira's serphiness
+  - very close to consolas, similar small size font with space between lines
+
   
-MesloLSG NF
+Meslo LG S NF
   - NF = nerd font
-  - just fixes smybol positions from dejavu sans mono
+  - just fixes symbol positions from dejavu sans mono
   - The recommended font is the product of many individuals. Its origin is Bitstream Vera Sans Mono, which has given birth to Menlo, which in turn has spawned Meslo. Finally, extra glyphs have been added to Meslo with scripts forked from Nerd Fonts. The final font is released under the terms of Apache License.
 
 hasklig
@@ -214,6 +222,7 @@ mononoki
   - a cute, unique, small font
   - a more open-feeling consolas
   - the bold is great, very sans-serif
+  - slightly wider and less seriphy than consolas, making it feel more comfortable
   - designed for code review, as "every character is designed to be clearly distinguishable
 
 iosevka
@@ -232,9 +241,6 @@ fira code =? jetbrains mono
 JetBrains (sans) mono
   - a cute robotic version of dejavu, with long characters shortened nicely
 
-hack
-  - a contemporary version of dejavu
-  - somewhere between dejavu and fira's serphiness
 
 dejavu sans mono == noto sans mono? ~= roboto mono
   - tall'ish
@@ -286,7 +292,7 @@ Inconsolata
   - something always felt wrong about this one...
 
 Monaco
-  - and old Apple Mac OS X font, used in XCode
+  - and old Apple Mac OS X font, default in XCode and textmate
 
 DejaVu Sans Mono
 Andale Mono
