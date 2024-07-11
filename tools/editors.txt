@@ -2,10 +2,9 @@
 
 conclusion:
 vs-code is indisputable
-  - todo: can try sublime-text
 vs-studio for it's advanced features: deep debugging, run-time stuff, etc.
 helix (or other fav terminal editor) for quick general use, along with terminal tools, remote terminal use
-notepad (windows) for plain text
+sublime text or notepad (windows) for plain text
 knowledge-base software for bigger, conceptually-linked sets of text
 
 
@@ -31,6 +30,7 @@ current standard:
 old standards:
 (note: i missed out on the atom vs sublime generation)
 **sublime text**
+  - the best simple gui text editor, replacing notepad++
   - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's community
   - "It's a much nicer editor but clunky vscode has a better on boarding experience (I see you coding x, would you like to install this extension to help with x). Whereas with subl you have to do a lot of hunting and manual installation to get all set up with extensions.
     And frankly vscode is where the community is at, which means that's where almost all the extension dev is happening.
