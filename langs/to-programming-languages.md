@@ -761,7 +761,8 @@ https://www.reddit.com/r/ocaml/comments/m634t8/thoughts_onexperiences_with_f/
 note: the following languages have very different community use cases:
 OCaml for compilers
 Haskell for math, language
-Elixir for server-side (and thus the most productive)
+Elixir for server-side concurrency/parallelism (and thus the most productive)
+  - https://www.reddit.com/r/elixir/comments/ao3dp6/usecases_for_elixir/
 
 OCaml
   - in the functional to object-oriented/procedural sprectrum, OCaml is closer to functional, whereas Haxe is closer to object-oriented/procedural, giving i very good profile and balance, making it far more practical than more functional languages
@@ -776,6 +777,7 @@ F#
   - really well-regarded, except that there isn't much use for it in the current state of language choices
   - no multi-core support?
   - kinda feels abandoned
+  - https://www.reddit.com/r/ocaml/comments/m634t8/thoughts_onexperiences_with_f/
 
 Haskell
   - **magical feeling to write**
