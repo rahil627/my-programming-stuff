@@ -16,6 +16,15 @@ file -> preferences ...
 control(+shift)+tab
   - cycle through opened buffers/tabs
 
+alt+left-click file in file explorer
+  - open in a split window (right)
+
+c+left/right
+  - previous/next word
+
+c+backspace
+  - delete word
+
 f+up/down
   - page up/down
 
