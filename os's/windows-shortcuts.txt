@@ -1,6 +1,9 @@
 
 
-interaction:
+powertoy's keyboard manager
+  - remap keys
+  - remap shortcuts (in-app key-combos)
+
 
 touchpad shortcuts:
 (until i upgrade to a touch-screen laptop)
