@@ -41,11 +41,11 @@
 # then can run it interactively
 
 $apps_to_try =  @( # array
-    "Microsoft.PowerToys" # couldn't use enum because label has a '.' in it
     "SomePythonThings.WingetUIStore"
-    "GitHub.GitHubDesktop"
+    "GitHub.GitHubDesktop" # compare with github cli
     "Microsoft.PCManager"
 
+    # dendron is a vs-code extension
     "Obsidian.Obsidian"
     "Joplin.Joplin"
     
@@ -53,6 +53,19 @@ $apps_to_try =  @( # array
 )
 
 $apps = @{ # enum won't work, and psobject seems like a hassle
+
+    # OS essentials
+    # 260mb!
+    # currently need it to remap caps lock to escape (at the OS level)
+    # "fancy zones" window manager looks great too!
+    # a windows shortcuts cheatsheet too!
+    # there's actually a lot of gui goodies in here...
+    powertoys = "Microsoft.PowerToys" # couldn't use enum because label has a '.' in it
+    media-player = "VideoLAN.VLC"
+    
+    # essential apps
+    simple-gui-text-editor = "SublimeHQ.SublimeText" # todo: --include-unknown
+    terminal-text-editor = "Helix.Helix"
     dropbox = "Dropbox.Dropbox"
     # todo: choose a browser
     browser = eloston.ungoogled-chromium # with uBlock
@@ -68,14 +81,13 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
 
     steam = "Valve.Steam"
 
-    media_player = "VideoLAN.VLC"
-
+    # programming-related
     powershell = "Microsoft.Powershell" # strangely, windows 11 ships with v1, currently at v7!!
     # make it the default terminal
     #   - open terminal -> click on the down-arrow near new tab location -> set startup/default profile
     # todo: no way to do this via command line? :/
     vscode = "Microsoft.VisualStudioCode"
-    dotnet_framework = "Microsoft.dotNetFramework" # needed for powershell lsp
+    dotnet-framework = "Microsoft.dotNetFramework" # needed for powershell lsp
     git = "Git.Git" #winget install --id Git.Git -e --source winget
 
 
@@ -105,6 +117,11 @@ function setup_shell {
     # todo: catch error then try
     #Invoke-Expression -C "Update-Help -Verbose -Force -ErrorAction SilentlyContinue"
 
+    # TODO: save/load settings file?
+    # copy-item windows-dotfiles/powershell/settings.json -destination C:\Users\rahil\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+    #  - the theme is contained in the settings file under schema
+    #  - note: not sure what will happen with a font that's not installed..
+    # TODO: what does windows backup save?
 }
 
 function setup_git {
@@ -125,7 +142,12 @@ function setup_browser {
 }
 
 function install_winget {
-    #Based on this gist: https://gist.github.com/crutkas/6c2096eae387e544bd05cde246f23901
+    # this solution uses specific version for dependencies :/
+
+    # https://gist.github.com/Ketyow/daac17e30060025f1dd4a55099b5d68b
+    # this one looks better, along with the rest of the script!
+        
+    # based on this gist: https://gist.github.com/crutkas/6c2096eae387e544bd05cde246f23901
     $hasPackageManager = Get-AppPackage -name 'Microsoft.DesktopAppInstaller'
     if (!$hasPackageManager -or [version]$hasPackageManager.Version -lt [version]"1.10.0.0") {
         "Installing winget Dependencies"
