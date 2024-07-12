@@ -1,0 +1,34 @@
+http://rad.batnag.org/2011/07/migrating-to-macvim-from-textmate/
+
+font
+	andale mono
+	bitstream vera sans mono - same as dejavu sans mono?
+	consolas***** - came with visual studio 2008? size 10-11 in notepad++, the new standard, size 9 in FlashDevelop
+	courier new - notepad++ default? or was it lucida console?
+	dejavu sans mono***** - same as bitstream, comments are more italic than bitstream, size 10 is stretched vertically
+	kooteney*** - small tabs, yet consolas look, not monospaced
+	monoco - ew, mac OS default for textmate
+	inconsolata - free consola-like, looks faded
+	prestige elite std - similar lines strain eye
+	open symbol - unique, has different symbols
+	ocr a std - too console-ish
+	proggysquare - looks nice!
+	lucida console - 10 in notepad/notepad2, 11 in notepad++
+	tahoma***** - windows default, very quick to read in studies, non-monospaced
+	calibri - microsoft word's default, also easy to read, non-monospaced
+	droid sans mono**** - like consolas, but a bit longer vertically, tough competition with consolas
+	
+themes
+	textmate - monokai - sexiest theme ever
+	notepad++ - bespin, monokai
+	vim - wombat
+	visual studio - ragnarok gray by Tomas Restrepo		
+	komodo - gray
+
+flashdevelop
+http://www.flashdevelop.org/community/viewtopic.php?f=7&t=2860
+		
+		
+		
+
+			

@@ -1,0 +1,21 @@
+to add to DBML:
+drag table from database explorer
+click yes or no (doesn't matter)
+select the properties of the DataContext by clicking in the whitespace
+under connection string, select none
+delete any entries in the settings.settings file
+right click, layout diagram
+
+to see dbml class (when it becomes difficult to see in the GUI):
+in properties, select drop down menu
+
+to regenerate dml:
+right click dbml file, run custom tool
+
+to see if a column is auto-incremented:
+in properties, indentity specification
+
+to add a field to the dbml:
+edit dbml with a text editor, add field, right click dbml in VS, run custom tool, right click dbml project, build
+
+

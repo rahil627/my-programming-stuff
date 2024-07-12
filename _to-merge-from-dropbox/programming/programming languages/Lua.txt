@@ -1,0 +1,13 @@
+tables:
+
+accessing a property:
+object["myName"] 
+
+http://www.lua.org
+http://lua-users.org/wiki/
+
+OO in Lua:
+https://github.com/kikito/middleclass/wiki/Quick-Example
+http://lua-users.org/wiki/SimpleLuaClasses
+http://blog.anscamobile.com/2011/09/tutorial-modular-classes-in-corona/
+http://www.erix.it/progutil/gpeddler2/help/oo.html

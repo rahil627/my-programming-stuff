@@ -1,0 +1,8 @@
+security
+
+Dropbox uses 256-bit AES
+
+iCloud uses “at least 128-bit AES”
+  - iCloud secures your information by encrypting it when it's in transit, storing it in iCloud in an encrypted format, and **using secure tokens for authentication. For certain sensitive information, Apple uses end-to-end encryption. This means that only you can access your information, and only on devices where you’re signed into iCloud. No one else, not even Apple, can access end-to-end encrypted information.
+In some cases, your iCloud data may be stored using third-party partners’ servers—such as Amazon Web Services or Google Cloud Platform—but these partners don’t have the keys to decrypt your data stored on their servers.
+End-to-end encryption requires that you have two-factor authentication turned on for your Apple ID. Keeping your software up-to-date and using two-factor authentication are the most important things that you can do to maintain the security of your devices and data.**

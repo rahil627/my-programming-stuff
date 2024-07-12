@@ -1,0 +1,3 @@
+http://en.wikipedia.org/wiki/Objective_c
+
+uses message passing like Smalltalk (Qt/EventHandlers in ActionScript) instead of Simuli (C/C++/C#/Java)

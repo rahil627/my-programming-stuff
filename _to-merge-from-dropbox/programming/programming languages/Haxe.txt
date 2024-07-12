@@ -1,0 +1,149 @@
+
+
+install:
+https://haxe.org/download/linux/
+install haxe:
+sudo add-apt-repository ppa:haxe/releases -y
+sudo apt-get update
+sudo apt-get install haxe -y
+mkdir ~/haxelib && haxelib setup ~/haxelib
+--
+
+
+# old:
+research:
+Haxe is fucking amazing. Be sure to read the [fucking] manual to really see all of the things you can do with it!
+
+from features page:
+features to remember: (ordered by usefulness)
+properties
+  - this avoids writing a separate function for whenever a value is changed
+local functions
+  - this avoids a jump when reading code
+anonymous data struct(ure)s
+  - var point = {x:1, y:2}
+  - this also avoids a jump when reading code
+algebraic data types (general and normal)
+  - enums, but with steriods
+  - (enums are probably favorite data type, along with bit fields, so this is nice to see)
+pattern matching
+  - this seems really really useful, but I don’t quite understand the workings of it...
+abstract classes
+  - figured out during run-time compilation?
+  - it provides an abstraction to those basic libraries, which is really useful for common non-standard (not included with the language) basic libraries such as math structures (vectors, matrices) which can have different implementations dependent on the target or even just dependent on the person who wrote it
+compilation conditionals
+  - useful for multiple targets: #if cplusplus ...
+  - also useful for debugging
+  - also a better alternative than commenting / un-commenting giant blocks of code
+array comprehension :O... holy shit
+  - var evenNumbers = [ for (i in 0...100) if (i%2==0) i ];
+inline calling
+  - prevents a function call, replacing the call with the actual code
+metadata
+  - to be used by compiler, run-time classes, ...
+  - allows you to associate useful data (data that’s useful to you) to expressions
+  - useful for when the program compiles and runs fine, but values are off, out of the   expected range
+
+advanced, rarer things:
+partial function application
+  - this is nutty
+type parameters, variants, constraints
+  - no clue...
+
+
+—
+Haxe and iOS workflow:
+  - code in FlashDevelop on windows
+  - test in Flash using mouse
+  - build for iOS in windows
+  - change to Mac and run "nme update ios"
+  - setup debug log for iOS testing
+  - have a project file for Mac ready, or at least a simple HaXe text editor
+  - test input and frame rate
+  
+debugging:
+  - http://haxeflixel.com/forum/help/using-visual-c-debugging-cpp-target-breakpoints
+  - http://www.joshuagranick.com/blog/?p=1122
+
+use:
+  - syntax
+    - http://haxe.org/ref/syntax
+    - https://books.openfl.org/as3-conversion-guide/comparing-haxe-and-actionscript/
+  - Type, HaXe reflection API, including getClass
+  - Lambda
+    - http://haxe.org/doc/cross/lambda
+  - Std
+    - primitive data parsing
+  - Iterators
+    - if the class has an iterator property, then you can use a for loop (like for each) to access it, or just square brackets (I think)
+  - cheat sheet from AS3
+    - http://www.nme.io/developer/guides/actionscript-developers/
+
+
+      
+  mac:
+    - http://www.matthijskamstra.nl/blog/index.php/2012/04/19/installing-haxe-and-nme-on-osx/
+      
+set up HaxePunk
+  - http://haxepunk.com/learn/tutorial/getting-started and https://github.com/HaxePunk/HaxePunk readme
+  - haxelib install HaxePunk
+  - haxelib run HaxePunk new [folder]
+    - current directory invalid when executing the command haxelib
+      - run command prompt as administrator
+  - cd new [folder]'s directory
+  - nme test build.nmml flash or just run it in FlashDevelop
+  
+  - http://kpulv.com/107/FlashDevelop_with_HaXe_NME_and_HaXePunk/
+    - installs using local copy of HaxePunk
+    
+  - mac:
+  - nme test sample.nmml ios -simulator
+  - nme test sample.nmml ios (don't use this?)
+  - nme update sample.nmml ios
+    - have to run the project file in Xcode yourself
+    
+editors:
+  - pc:
+    - FlashDevelop
+      - add debugging to FlashDevelop
+        - http://www.nme.io/community/forums/installing-nme/breakpoints-not-working-in-flashdevelop/
+  - mac:
+    - textmate
+      - http://haxe.org/com/ide/textmate/sugar_hx_textmate
+      - https://github.com/kevinweil/protobuf.tmbundle/issues/1
+    - sublime text
+      - http://haxeflixel.com/articles/sublime-text-ide-and-haxe
+    
+    
+Haxelib:
+  - add libraries:
+    - project properties, add classpath
+    - project properties, add compiler options
+
+  - locations:
+    - windows, Program\ Files\ \(x86\)/Motion-Twin/haxe/lib
+    - mac, /usr/lib/haxe/lib
+
+resources:
+  - http://haxe.org/doc/start/cpp
+  
+    
+
+
+notes:
+
+engines:
+HaxePunk
+HaxeFlixel
+
+tools:
+HaxeLib
+
+libraries:
+http://haxe.org/doc/libraries
+deepnight's library
+ 
+resources:
+http://blog.skialbainn.com/
+  - really useful and recent listing of Haxe practical usage
+  

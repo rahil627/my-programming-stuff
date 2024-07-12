@@ -1,0 +1,56 @@
+
+
+http://nickgravgaard.com/elastictabstops/ - solution to tabs vs spaces for indents
+http://stackoverflow.com/questions/268538/tab-versus-space-indentation-in-c-sharp - "non-leading tabs are evil"/"initial line indentation must be tabs, no other tabs are allowed"
+
+braces on new line - http://programmers.stackexchange.com/questions/2715/should-curly-braces-appear-on-their-own-line
+
+http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html
+4 space indents
+no tabs
+one blank line between funtions
+two blank lines between classes?
+
+http://opensource.adobe.com/wiki/display/flexsdk/Coding+Conventions ?
+
+
+http://blogs.msdn.com/b/brada/archive/2005/01/26/361363.aspx
+
+http://www.codinghorror.com/blog/2004/06/hungarian-wars.html
+
+My approach has changed a bit since I wrote this. I use the "add the type to the end of the variable" style most often now:
+
+CancelButton
+ClickEvent
+
+I think this is a lot more .NET friendly than the "classic" 3-character prefix eg
+
+btnCancel
+evtClick
+
+I've also stopped trying to distingish strings and integers. In the above example,
+
+_CustomerName
+CustomerID
+
+
+I agree, I've switched to extremely short name / short scope local variables, too.
+
+
+"If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program" - Linus Torvalds
+
+my naming conventions
+MyClass
+runFunction
+_privateVariable or _private_variable
+publicVariable or publicVariable
+global/static?
+btnSubmit - used for UI elements and non-obvious differences
+
+runFunction() {
+	print "I'm running already!"
+}
+//blank line?
+
+use this/self when possible
+

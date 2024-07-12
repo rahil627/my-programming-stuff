@@ -1,0 +1,54 @@
+optimizations:
+  - just be sure to latest version of AIR
+  - nice optimization guides:
+    - http://sierakowski.eu/list-of-tips/86-building-mobile-games-in-adobe-air-optimization-techniques-used-in-jumping-droid-game.html
+    - http://www.flash-3d.net/2011/03/air-2-6-game-development/
+  - iPad 3 retina
+http://www.overdigital.com/2012/05/08/the-new-retina-ipad-and-adobe-air/
+
+building:
+documentation - http://help.adobe.com/en_US/air/build/index.html
+handle user input - http://help.adobe.com/en_US/flex/mobileapps/WSe11993ea1bd776e5-13e27e4812a431dbafc-8000.html
+
+more set up:
+change screen size
+  - in Run.bat, set projector size to match selected screen size
+support iPad:
+  - uncomment <string>2</string> in application.xml
+
+set up:
+  - see the AIR iOS readme generated in the root directory when you create an AIR iOS project with FlashDevelop
+http://help.adobe.com/en_US/air/build/WS901d38e593cd1bac1e63e3d1295c1072d7-8000.html
+
+http://help.adobe.com/en_US/air/build/WSfffb011ac560372f3cb56e2a12cc36970aa-8000.html
+
+http://www.untoldentertainment.com/blog/2011/11/30/flash-to-ios-a-step-by-step-tutorial-part-2/
+http://connorullmann.com/2011/04/air-2-6-and-ios/
+
+- get .p12 certificate from Mac through Keychain
+  - does not work, http://stackoverflow.com/questions/6642170/error-could-not-retreive-certificate-chain-from-keystore
+  - use OpenSSL as shown in the first tutorial
+- create ID for app
+- create provisioning profile with app ID, certficate, and device IDs
+- setup FlashDevelop
+
+- use * for App ID
+- in FlashDevelop, use anything for App ID, ignore the SDFS324S34 like string in front of the App ID
+
+
+convert mac .cer and .p12 file to windows .p12 file:
+http://stackoverflow.com/questions/6642170/error-could-not-retreive-certificate-chain-from-keystore
+
+cd "C:\Program Files (x86)\OpenSSL-Win32\bin"
+
+openssl x509 -in developer_identity.cer -inform DER -out developer_identity.pem -outform PEM
+openssl x509 -in "C:\Users\Rahil\Desktop\iPhone Developer- Rahil Patel (XKQ97UN977).cer" -inform DER -out "C:\Users\Rahil\Desktop\iPhone Developer- Rahil Patel (XKQ97UN977).pem" -outform PEM
+
+openssl pkcs12 -nocerts -in mykey.p12 -out mykey.pem
+openssl pkcs12 -nocerts -in "C:\Users\Rahil\Desktop\Rahil Patel Development Private Key.p12" -out "C:\Users\Rahil\Desktop\Rahil Patel Development Private Key.pem"
+
+openssl pkcs12 -export -inkey mykey.key -in developer_identity.pem -out iphone_dev.p12
+openssl pkcs12 -export -inkey "C:\Users\Rahil\Desktop\Rahil Patel Development Private Key.pem" -in "C:\Users\Rahil\Desktop\iPhone Developer- Rahil Patel (XKQ97UN977).pem" -out "C:\Users\Rahil\Desktop\Rahil Patel Development Private Key Windows.p12"
+
+[general password] for Mac p12 file
+[general password] for windows p12 file

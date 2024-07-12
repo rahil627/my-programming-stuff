@@ -1,0 +1,167 @@
+http://www.softwareqatest.com/qatfaq1.html#FAQ1_1
+
+remember to delete pointer objects
+
+
+Coding Rules and Guidelines
+The basic coding rules for B A B A R can be summarised as follows:
+
+    * C++ should conform to the ANSI C++ (draft) standard. No extensions are allowed.
+    * FORTRAN should conform to the ANSI FORTRAN-77 standard. No extensions to this standard are allowed.
+
+In practice there are three deviations from these basic rules:
+
+1.
+    C++ statements/features are restricted to that subset of the ANSI standard which is supported by the GNU C++ compiler, g++ (the reference version for B A B A R is currently 2.6.3)
+2.
+    FORTRAN-77 is allowed in the context of the GEANT3 based simulation programs. This is is only context in which new FORTRAN code should be developed.
+3.
+    Some VAX extensions to FORTRAN currently exist in B A B A R FORTRAN code. These will remain, BUT DO NOT USE THEM IN ANY NEW CODE.
+4.
+    Some C preprocessor directives are allowed in FORTRAN programs:
+
+        * #include
+        * #ifdef .... #endif
+
+    The first is to support a common method for include files (common block and other definitions). The second is to allow for platform dependent code and should only be used for supported platforms.
+
+Although, the B A B A R default is not to compile FORTRAN with the compiler switches for force F77 compliance, doing this yourself will ensure that you write standard FORTRAN-77.
+
+Detailed guidelines have been drawn up to cover all aspects of B A B A R FORTRAN and C++ coding. A very brief summary of the guidelines is given below.
+Rules for C++ code
+
+    * C++ include files have the extension .hh (true for B A B A R files but not necessarily for external packages)
+    * C include files have the extension .h
+    * C++ source files have the extension .cc
+    * C source files have the extension .c
+    * Use a separate .cc and corresponding .hh file for each C++ class. The filename should be identical to the class name.
+    * Do not create classes/files whose names differ only by case.
+    * Include directives should be of the form
+
+      #include "<package>/file.hh"
+
+    * Data members should have names beginning with a leading underscore.
+    * Use existing classes where possible. A list of available classes can be found on the reconstruction web page.
+
+Rules for FORTRAN code
+
+1.
+    Write ANSI standard FORTRAN-77
+2.
+    Pure FORTRAN source files have the extension .f
+3.
+    FORTRAN source files which include C preprocessor directives (e.g. # include directives) have the extension .F
+4.
+    FORTRAN include files have the extension .inc
+
+General Guidelines
+
+1.
+    Provide plenty of comments.
+2.
+    Avoid clever tricks; and see point 1.
+3.
+    Code for clarity rather than efficiency
+4.
+    Write linear code (code that starts at the beginning, goes through the middle and ends at the end).
+5.
+    Code defensively, check return codes and don't assume success.
+6.
+    Use meaningful names ( not i, ii, iii and j)
+7.
+    Indent nested blocks (by 4 spaces).
+8.
+    Avoid implicit data-type conversions, use explicit conversions.
+9.
+    Avoid complicated ``if'' constructs, use nested blocks.
+10.
+    Avoid global variables.
+11.
+    There should be no architecture-specific if's in the GNUmakefiles.
+
+   
+C++ Guidelines
+
+1.
+    Encapsulate (your) global variables, constants, enumerated types and typedefs in a class.
+2.
+    Avoid overloading functions and operators unless it brings clear improvements.
+3.
+    Do not treat pointers as Booleans, i.e. never implicitly compare pointers to nonzero.
+4.
+    Make comparisons explicit. e.g. `while ( 0 != (ptr=func() )` rather than `while (ptr=func())`
+5.
+    Use ``//'' for comments rather than ``/* ... */''
+6.
+    Never overlay a fortran name with C++ code. This includes using f2c to merely translate an existing routine. Reason: The linker can pick either the new C++ or original F77, and its impossible to guarantee that the two are equivalent.
+7.
+    Use the standard link support, including the standard link command line and recolibs.mk. This will permit compiler changes, needed to use of automated leaker checkers, etc.
+8.
+    Routines that do not have a void return type should always return something (i.e. no "return;" statements or running off the end of the procedure body).
+9.
+    Preconditions and postconditions are checked with assert( "condition" ). These may later be compiled out. Whereever possible, these should be at the beginning and end of a routine, respectively, and commented.
+10.
+    If checks for internal logic errors are outside an assert, they should call abort(), not assert(0) when they fail. This way the action and check will have the same behavior in test and production versions.
+11.
+    Be careful about self-assignment, i.e. you will probably have to have special purpose code to handle the case "aObject = aObject;", as in that case memory management has to be careful not to delete things that its going to use later.
+12.
+    Long, complex in-line member functions should be avoided. They reduce clarity, make it take longer to compile and harder to debug, and the performance gain from making them inline is small for large routines. It is bad design to make a function inline if that requires additional header files to be referenced by #include. In particular, one or more compilers have restrictions that make it unacceptable to inline:
+
+        * functions with multiple returns (except the simplest 'if...return x; else...return y;', and the 'else' *must* be present).
+        * functions with 'while' or 'for' statements
+        * functions with aggregate initialization ('array = a1,a2,...an;')
+        * value returning functions which call non-value- returning functions.
+
+    To avoid future problems, do not inline:
+
+        * functions calling member functions of other classes
+        * functions call virtual member functions of this class
+        * functions calling templated functions
+
+    In effect, don't inline anything that calls something else, or involves significant control structures.
+13.
+    Use "bool", not "int", for true/false data items.
+14.
+    Use enums for small named constants within classes. Do not use #define for this because it can result in name collisions in other people code. Unfortunately, use of "const int nlay=15;" inside a class is not supported by some compiler(s), so don't use this either. This is the recommended form:
+
+     
+                    enum { nlay=15 };
+
+15.
+    cpp macros that generate code are generally not acceptable. One exception is "assert" and similar system-provided macros.
+16.
+    Use size_t as the type for array indices instead of int or unsigned int. (See the prior item about enums for small constants, including array dimensions).
+17.
+    Use classes, not arrays when passing arguments and return values. You need a really good reason, better than "performance", to pass an array of objects instead of a list. You have to have extremely good reasons to pass "double v(3)" instead of a Hep3Vector object.
+18.
+    Use "const" whenever possible. In particular, it should be always used with input arguments to functions that are passed as pointers or via references. This allows the compiler to optimize, and clues the user that there will be no side-effects. Also, if you nest calls without "const" on the arguments:
+
+             A&  inside ();
+             void outside(A& a);
+
+    the compiler will be forced to create an extra temporary variable so it can pass a reference to a copy of the object returned from "inside".
+19.
+    Never use #include when a simple forward declaration ("class foo;") will do. Most header files should not need to include many others. You only need the full declaration if creating or destroying an object of that class (e.g. using as a member variable), inheriting from the class, or actually invoking a member function. Pointers, references and use as arguments in declarations do not require the header file be present. If header files from another package must be #included to make a member function "inline", do not make the function inline.
+20.
+    Declaring a member function both "inline" and "virtual" is problematic; there are very few places where a compiler can actually do the inlining. Also, a class containing "inline virtual" methods must have at least one method that is "virtual", but not "inline", due to limitations of the way the g++ compiler and AIX linker interact. This member must be defined in a correctly-named .cc file. Note that this means that templates, which must generally have all their code in the .hh file, generally cannot have virtual methods until we get better compilers.
+21.
+    Use pointers, not references, for relationships to other objects stored as member variables. This will simplify later conversion to a database representation.
+22.
+    If a list of some type of objects must be in a particular order, for example hits on a track which might have to be in ascending order by pathlength, the documentation for the list should clearly specify this, and the member function used to add hits to the list should check it as a precondition. Also consider making access to the list "const" to prevent it from being reordered or changed.
+23.
+    On 64-bit machines, you get a warning when you convert from pointer to int. In particular, this will happen when iPtr is a pointer in
+
+                  assert(iPtr);
+
+    which is better written as
+
+                  assert(iPtr != 0);
+
+24.
+    Some systems do not have a header file called "ostream.h", so its better to '#include <iostream.h>' regardless of what types of streams you are referencing.
+25.
+    When including a non-system header file, its important that it be written as
+
+          #include "packgename/filename.hh"
+
+    If you omit the packagename part, there will be trouble with template instantiations. 

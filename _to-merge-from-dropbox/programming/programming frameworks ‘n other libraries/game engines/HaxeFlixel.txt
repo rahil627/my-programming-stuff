@@ -1,0 +1,15 @@
+meh, decided to use HaxePunk for everything
+
+learn:
+  - google extend FlxObject or FlxBasic, like CCNode?* GOOGLE THIS
+    - then use FlxObject.x and FlxObject.y
+    - even if you add it, you still have to call sprite.update, sprite.destroy, sprite.draw, the x and y is not linked to this object, FlxObject does not contain a list of FlxBasic like FlxGroup does, for now, just extend FlxSprite and keep the code in there, although it does not make sense
+    - have to use FlxGroup (a glorified array) to change the values of multiple objects easily
+    - should add the child object to the state within the parent class, and alter whatever you need to within it, if needed
+
+two nme.display.Sprite class instances:
+camera._effectsLayer?
+FlxG.flashSprite?
+
+HaxePunk vs HaxeFlixel:
+  - http://forum.haxepunk.com/index.php?topic=385.0

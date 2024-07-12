@@ -1,0 +1,16 @@
+“If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program.”
+  - an interesting maxim to abide, but, maybe ‘causes too much refactoring!
+
+
+naming conventions:
+avoid using the shift modifier key
+- hyphens > underscores
+- thingGroups > groupOfThings
+  - thingGroup, thingSuperGroup is easier to auto-complete than groupOfThings, superGroupOfThings. Though the second way feels right to say English, the first way is better.
+
+structure of a class / data bundle:
+  - variables on top... make it possible to read from top to bottom being able to understand everything that’s going on without scrolling down. Let the auto-generated IDE stuff tell you the public API.
+
+single header-file ideal:
+  - try to put everything in one file, so that there are no dependencies beyond that one file. This makes it highly portable / distributable.
+

@@ -1,0 +1,39 @@
+http://www.snorkl.tv/2011/04/tweenlite-meets-flash-drawing-api-for-animated-line-drawing-fun/
+
+generating ASdocs in SWC:
+  - http://gauravj.com/blog/2010/01/creating-swc-files-with-asdoc-comments/
+  - http://livedocs.adobe.com/flex/3/html/help.html?content=asdoc_1.html
+  - http://help.adobe.com/en_US/flex/using/WSd0ded3821e0d52fe1e63e3d11c2f44bc36-7ffa.html#WS53d845b1b545acea-5be52e771266b3f5fd0-8000
+
+Nape:
+http://napephys.com/help/manual.html
+
+Box2d:
+http://www.box2dflash.org/docs/2.0.2/manual
+http://www.emanueleferonato.com/2009/01/27/box2d-tutorial-for-the-absolute-beginners/
+
+Citrus Engine:
+https://gist.github.com/alamboley
+http://citrusengine.com/tutorials/
+be sure to batch draws by using a texture atlas
+  - http://forum.starling-framework.org/topic/starlingcitrus-vs-cocos2d-x-performance-benchmarks
+  - http://wiki.starling-framework.org/manual/performance_optimization
+    - includes AS3 best practices
+
+Starling:
+http://wiki.starling-framework.org/extensions/start
+
+http://esdot.ca/site/2012/performance-showdown-starling-vs-nd2d-vs-genome2d-vs-haxe-nme
+
+physics engines comparison on AS3
+  - http://forum.starling-framework.org/topic/box-2d-vs-nape-2-on-mobile
+
+https://www.iforce2d.net/rube/#
+
+http://wiki.starling-framework.org/extensions/start
+
+http://www.investronic.net/-studioAs3-/blog/?page_id=417
+
+https://github.com/unwrong/Starling-Extension-Graphics
+https://github.com/asaia/StarlingPunk
+http://stage3d.flashdaily.net/

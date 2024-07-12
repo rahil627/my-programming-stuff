@@ -1,0 +1,15 @@
+high level -> Assembly -> Machine
+wages = 5; -> load wages; store 5; -> 100100 100010
+	compiler	assembler
+
+source code -> object program
+linker - combines libraries with the object program
+
+editor -> compile -> link -> load -> execute
+
+build/make - link object code with resources to create an executable
+
+structured programming - divide into subproblems
+object oriented programming - identify objects, determine how they interact, specify members and methods
+
+stopped. Just keep the damn notes.

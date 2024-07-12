@@ -1,0 +1,497 @@
+data-driven design
+  - anti-object-oriented programming
+  - see HandmadeCon / Handmade Hero
+  - basically: just solve the problem. Don't try to fit things into logical abstractions. Abstractions have no real functionality. Abstractions are for us, humans, the computer doesn't care.
+  - when things are programmed quickly, that's basically data-driven design. The results of game jams, quick solutions, etc. The shit that gets things done. Usually done in one large file, right there in the main loop. No need for classes or separate files. Just structs as needed, right there, in the same file.
+  - instead of objects, there are just bundles of data. It's a lot more vague, but a lot more flexible, as it isn't limited by trying to fit some abstract object. The vague bundle of data it is, is actually a much neater solution than writing a bunch of abstractions.
+
+
+object pool
+  - http://www.haxeflixel.com/articles/bullet-manager-part-1 
+
+https://github.com/richardlord/Asteroids/tree/master/src/starling/net/richardlord/asteroids
+  - why entity is overkill for 2d games without an editor like Unity
+
+http://www.richardlord.net/blog/what-is-an-entity-framework
+  - really good read
+
+inheritance vs composition vs components
+  - http://www.learn-cocos2d.com/2010/06/prefer-composition-inheritance/
+  - http://stackoverflow.com/questions/7085130/should-i-subclass-ccsprite-ccnode-or-nsobject
+
+dx, dy = -dy, dx; //simultaneous assignment, can use this to swap variables
+
+before entering data into a database, ensure it is how you want it, add error handling (try/catch)
+
+0x10 = 16, 0x20 = 32 ...
+
+COM, interface, loose coupling - http://www.codeproject.com/KB/COM/COMBasics.aspx
+also can inherit an interface to extend it. For example, ISprite, ISuperSprite, I SuperDuperSprite.
+
+http://www.joelonsoftware.com/articles/fog0000000043.html - the joel test
+
+http://en.wikipedia.org/wiki/Creational_pattern
+
+reflection - In computer science, reflection is the process by which a computer program can observe (do type introspection) and modify its own structure and behavior at runtime. http://en.wikipedia.org/wiki/Reflection_%28computer_science%29
+
+http://en.wikipedia.org/wiki/Object_copy
+A good answer about copying objects - http://stackoverflow.com/questions/3913189/as3-impossible-to-copy-displayobjects-with-content
+
+
+Purely functional - a term in computing used to describe algorithms, data structures or programming languages that exclude destructive modifications (updates). According to this restriction, variables are used in a mathematical sense, with identifiers referring to immutable, persistent values.
+
+interface - A interface defines, which method a class has to implement.
+This way - if you want to call a method defined by an interface - you don't need to know the exact class type of an object, you only need to know that it implements a specific interface.
+
+data structures
+http://lab.polygonal.de/as3ds/
+array
+multi-dimensional array - 
+queue - FIFO (first in first out), not really a structure, just a way of accessing not store
+stack - FILO (first in last out)
+
+tree - node-based structure. Every tree starts with a single node (the root node). The root node can contain children, and that node can contain children and so on.
+binary Tree - a specific type of tree, in which each node can only have upto two children
+Binary Search Tree - stores data that can be retrieved quickly with a key, like a hash table, except BST uses a recursive apporach
+linked list
+heap - loose node-based structure in which every node is larger than its child nodes
+priority queue - builds upon the heap
+hash - builds upon an array
+graph - loose node-based structure. Nodes are connected by arcs. Used for path-finding
+bit vector - an array of bits, very efficient
+
+linked list vs dynamic array - Linked lists have several advantages over dynamic arrays. Insertion or deletion of an element at a specific point of a list, assuming that we have a pointer to the node (before the one to be removed, or before the insertion point) already, is a constant-time operation, whereas insertion in a dynamic array at random locations will require moving half of the elements on average, and all the elements in the worst case. While one can "delete" an element from an array in constant time by somehow marking its slot as "vacant", this causes fragmentation that impedes the performance of iteration.
+
+linked list vs array - The principal benefit of a linked list over a conventional array is that the list elements can easily be inserted or removed without reallocation or reorganization of the entire structure because the data items need not be stored contiguously in memory or on disk. Linked lists allow insertion and removal of nodes at any point in the list, and can do so with a constant number of operations if the link previous to the link being added or removed is maintained during list traversal.
+On the other hand, simple linked lists by themselves do not allow random access to the data, or any form of efficient indexing. Thus, many basic operations  such as obtaining the last node of the list (assuming that the last node is not maintained as separate node reference in the list structure), or finding a node that contains a given datum, or locating the place where a new node should be inserted  may require scanning most or all of the list elements.
+
+-Arrays assume every element is the same size, often limiting the data types to the primitives
+-linked lists can be sorted
+
+list
+get is O(n)
+add is O(1)
+remove is O(n)
+Iterator.remove is O(1)
+For ArrayList
+
+array
+get is O(1)
+add is O(1) amortized, but O(n) worst-case since the array must be resized and copied
+remove is O(n)
+
+method overriding - features that allows a child class to provide a specific implementation of a method that is already provided in one of its parent classes
+method overloading - creating several methods with the same name that differ from each other in terms of input and output
+polymorphism - the ability to create a variable/function/object that has more than one form. Examples: operator overloading, late-binding, dynamic-binding
+dynamic binding - the process of mapping a message to a specific sequence of code (the method) at runtime. Examples: Objective-C, Smalltalk, Javasript and Python too?
+unified type system - hence ToString, all data types inherit from a base class
+interface - ?
+
+
+conceptual knowledge > language specific
+for language specifics, use the internet, or a cookbook
+
+
+
+The shell is the program which actually processes commands and returns output. Most shells also manage foreground and background processes, command history and command line editing. These features (and many more) are standard in bash, the most common shell in modern linux systems.
+
+A terminal refers to a wrapper program which runs a shell. Decades ago, this was a physical device consisting of little more than a monitor and keyboard. As unix/linux systems added better multiprocessing and windowing systems, this terminal concept was abstracted into software. Now you have programs such as Gnome Terminal which launches a window in a Gnome windowing environment which will run a shell into which you can enter commands.
+
+The console is a special sort of terminal. Historically, the console was a single keyboard and monitor plugged into a dedicated serial console port on a computer used for direct communication at a low level with the operating system. Modern linux systems provide for virtual consoles. These are accessed through key combinations (e.g. alt+F1) which are handled at low levels of the linux operating system -- this means that there is no special service which needs to be installed and configured to run. Interacting with the console is also done using a shell program.
+
+abstract data type - in theoretical computer science, a mathematical model for certain class of data structures that have similar behavior
+
+tuple - an ordered list of elements, like the index of arrays
+
+http://en.wikipedia.org/wiki/Container_(data_structure)
+array - similar to vector, fixed number of indices, indices can be computed at runtime
+	matrix - an array with two indicies
+list or sequence - ordered collation of values
+map (associative array, dictionary, index) - add, reassign, remove, lookup. Indexed by keys instead of a range of numbers. Lookup O(1).
+	hash table
+	self-balancing binary search tree - 
+	b-tree - 
+queue - first in first out, insert from the back, pop from the front,
+	double ended queue (deque) - elements can be added or removed from the front or back
+	priority queue - insertWithPriority (set a priority) and pullHighestPriorityElement
+set - a hash of items, no index
+stack - last in first out, insert to front, pop from front
+string - a finite sequence of symbols that are chosen from a set (i.e. alphabet)
+table
+tree - hierarchical tree structure with a set of linked node, acyclic
+vector
+
+sorting
+bubble
+heap
+
+
+associative array - like array, except the index can be any data type, not just integer. The most important operation is lookup - finding the value associated to the key. the lookup is optimized by memorization.
+
+hash function - converts large data into a small data, usually an integer, that may serve as in index (cf. associative array).
+
+hash table...
+the average cost for each lookup is independent to the number of elements stored in the table
+
+
+
+
+
+	interpreted language - execute without compilation
+	has structured programming syntax (if, while, etc.)
+	no scoping, use 'let'
+	dynamic typing
+	object based
+	case sensitive
+
+strongly typed
+garbage handling - don't need to destruct classes
+no need for function prototypes
+
+during SDLC, there are four types of errors:
+Machine errors				processor dependent, ex. 1/3=3.3333, the processor must truncate it
+Compile-time errors 		easy to find out, mistakes in syntax
+Run-time errors 			occurs during program execution, usually due to uninitialized variables
+Logical and design errors	the programmer's fault, maybe wrong order of operation, ex. If ( ! recSet.IsEOF() && recSet.IsBOF() ) instead of If ( ! ( recSet.IsEOF() && recSet.IsBOF() ) )
+
+debug and release builds
+debug - Full symbolic debugging information in Microsoft format No optimization
+release - No symbolic debugging information , Optimized for maximum speed
+
+purely functional
+a term in computing used to describe algorithms, data structures or programming languages that exclude destructive modifications (updates). According to this restriction, variables are used in a mathematical sense, with identifiers referring to immutable, persistent values.
+for example: if you wanted to add a node far down a binary tree, you would have to create many duplicate nodes before adding the node
+garbage collection is commonly found to free up nodes which have no live references
+
+lazy evaluation (opposed to eager)
+
+
+encapsulation
+in an object-oriented programming language, encapsulation is used to refer to one of two related but distinct notions, and sometimes to the combination[1][2] thereof:
+A language mechanism for restricting access to some of the object's components.[3][4]
+A language construct that facilitates the bundling of data with the methods operating on that data.[5][6]
+Programming language researchers and academics generally use the first meaning alone or in combination with the second as a distinguishing feature of object oriented programming. The second definition is motivated by the fact that in many OOP languages hiding of components is not automatic or can be overridden; thus information hiding is defined as a separate notion by those who prefer the second definition.
+
+or hiding implementation
+
+
+loose coupling
+Coupling refers to the degree of direct knowledge that one class has of another. This is not meant to be interpreted as encapsulation vs. non-encapsulation. It is not a reference to one class's knowledge of another class's attributes or implementation, but rather knowledge of that other class itself.
+
+Strong coupling occurs when a dependent class contains a pointer directly to a concrete class which provides the required behavior. Loose coupling occurs when the dependent class contains a pointer only to an interface, which can then be implemented by one or many concrete classes. Loose coupling provides extensibility to designs. A new concrete class can easily be added later that implements that same interface without ever having to modify and recompile the dependent class. Strong coupling does not allow this
+
+inheritence
+
+abstraction
+
+object oriented programming
+
+procedural programming
+
+information hiding
+The principle of segregation of design decisions in a computer program that are most likely to change, thus protecting other parts of the program from extensive modification if the design decision is changed
+
+encapsulation (used interchangably with information hiding)
+A language mechanism for restricting access to some of the object's components.
+A language construct that facilitates the bundling of data with the methods operating on that data
+
+Hiding the internals of the object protects its integrity by preventing users from setting the internal data of the component into an invalid or inconsistent state. A benefit of encapsulation is that it reduces system complexity and thus increases robustness, by limiting the interdependencies between software components.
+
+the process of compartmentalizing the elements of an abstraction that constitute its structure and behavior; encapsulation serves to separate the contractual interface of an abstraction and its implementation
+
+example - Encapsulating software behind an interface allows the construction of objects that mimic the behavior and interactions of objects in the real world. For example, a simple digital alarm clock is a real-world object that a lay person can use and understand. They can understand what the alarm clock does, and how to use it through the provided interface (buttons and screen), without having to understand every part inside of the clock. Similarly, if you replaced the clock with a different model, the lay person could continue to use it in the same way, provided that the interface works the same.
+
+
+
+software development methods
+agile
+waterfall
+
+const
+Like most keywords in C++, the const modifier has many shades of meaning, depending on context. Used to modify variables, const (not surprisingly) makes it illegal to modify the variable after its initialization.
+Thus, const can replace the use of the #define to give names to manifest constants. Since preprocessor macros don't provide strong compile-time type checking, it is better to use const than #define. Moreover, some debugging environments will display the symbol which corresponds to a const value, but for #define constants, they will only display the value.
+The const keyword is more involved when used with pointers. A pointer is itself a variable which holds a memory address of another variable - it can be used as a "handle" to the variable whose address it holds. Note that there is a difference between "a read-only handle to a changeable variable" and a "changeable handle to a read-only variable".
+
+What's the difference between a definition and a declaration?
+simply: declaration tells the program to expect a function, whereas a function actually reserves memory for it. "a forward reference"
+You have to declare functions, structures and variable because the compiler needs to know how much memory (or stack space) to reserve for these things (based on type, size, parameters).
+int myFunction(int x, char c) //function prototype. tell the compiler myfunction is going to use 5 bytes, when it is defined.
+extern int a //declaration for global variable.
+definition = declaration + space reservation
+int myFunction(int x, char c){return c+x;} //function definition. 
+int a //definition
+
+taken from - http://www.mactech.com/articles/mactech/Vol.09/09.10/CPPBasics/index.html
+
+In the C language, the struct is the most sophisticated bundling mechanism available.
+
+const vs #define - You may have noticed the use of const instead of a #define. Believe it or not, const is part of the ANSI C standard and is not just found in C++. Though many C programmers prefer to use #defines to define a constant, C++ programmers always use const. The major advantage of using const is that a typed constant is created. If you pass a const as a parameter to a function, for example, C++'s parameter checking will ensure that you are passing a constant of the correct type. A #define just does a simple text substitution during the first pass of the compiler.
+
+classes bundle data members and functions together. data members are allocated together, but the functions point to the real function allocated elsewhere.
+
+creating objects
+object myObject		definition objects, memory is allocated (on the stack) and deallocated automatically
+
+Although automatic objects are simple to create, they do have a downside. Once they drop out of scope, they cease to exist. If you want your object to outlive its scope, take advantage of C++'s new operator (and delete).
+'new' takes a type instead of a number of bytes.
+
+object* objectPtr	defines an object pointer. pointer declaration?
+objectPtr = new object	creates an object. allocates memory (on the heap/free store) for your object. returns a pointer to the newly created object [requires above statement]
+
+if you have 2 new objectPtr, both objects have it's own copy of the object's data members, but the function pointers point to the same function.
+
+pointer objects should always be deleted, regardless of which control path is taken, or if exceptions are thrown. memory will leak if pointers objects are not deleted
+
+stack - where all local variables go. limited memory, if you allocate too many objects on the stack, you risk stack overflow
+heap/free store - where objects go.
+
+If you'd like to return a pointer to your object from a function, you must use new
+
+employeeSalary = 400; //in a class function, it's the same as this->employeeSalary = 400;
+
+Just as a variable is based on a type definition, an object is based on a class definition.
+
+the constructor is C++'s built in initilization for classes. generally, it initializes each data member. when you create an object, the constructor is invoked (if it exists). it's not a good idea to allocate memory inside your constructor* cannot return a value.
+"two stage construction" - Employee employee; employee.init(); init can be used to allocate memory, or perform other initializations that could fail. could then check the return status of init(), and delete the object if init fails.
+
+destructor is called when you use "delete object;". for automatic objects it is called when the function ends, or when you call ~object();
+destructor is used deallocate any additional memory your object may have allocate
+
+global variables and objects are constructed at the beginning of the program and destructed at the end of the program
+
+Whether you use two-stage initialization or not, it's a good idea to keep your constructor and destructor in sync. If you allocated extra memory, be sure your destructor has some way of knowing about it. For example, it's good practice to initialize your pointers to null. If your destructor encounters a non-null pointer, it knows that additional memory has been allocated that must be deallocated.
+
+
+
+char	1 byte (1byte = 8 bits = 2^8 = 256)
+short	2
+int		4 (signed: -2147483648 to 2147483647)
+long	4
+float	4 bytes (~7 digits)
+double	8 bytes (15-16 digits)
+decimal	16 bytes 28-29 decimal places
+
+Escape Characters
+\'	 Single Quote
+\"	 Double Quote
+\\	 Backslash
+\0	 Null, not the same as the C# null value
+\a	 Bell
+\b	 Backspace
+\f	 form Feed
+\n	 Newline
+\r	 Carriage Return
+\t	 Horizontal Tab
+\v	 Vertical Tab
+
+Category (by precedence)	 Operator(s)	 Associativity
+Primary	 	x.y  f(x)  a[x]  x++  x--  new  typeof  default  checked  unchecked delegate	 left
+Unary	 	+  -  !  ~  ++x  --x  (T)x	 left
+Multiplicative	 *  /  %	 left
+Additive	 +  -	 left
+Shift	 	<<  >>	 left
+Relational	 <  >  <=  >=  is as	 left
+Equality	 ==  !=	 right
+Logical AND	 &	 left
+Logical XOR	 ^	 left
+Logical OR	 |	 left
+Conditional AND	 &&	 left
+Conditional OR	 ||	 left
+Null Coalescing	 ??	 left
+Ternary	 ?:	 right
+Assignment	 =  *=  /=  %=  +=  -=  <<=  >>=  &=  ^=  |=  =>	 right
+
+associativity, operations are read left to right, assignments are evaluated right to left
+
+pre-increment/decrement vs post-increment/decrement
+
+
+guidelines
+use 'this'
+don't use 'using', write out the namespace path
+
+preprocessors
+#include - includes the file, but if a file is includes twice, it will cause a compilation error
+
+include/macro guards:
+should always use them. be sure to have a coherent naming scheme, so you don't duplicate include guard names
+
+#ifndef FILESYSTEM_H
+#define FILESYSTEM_H
+...
+#endif
+
+#pragma once - ensure the file will be included once. C++ only, still has a fault
+#import - the best implementation. like include, but only includes a file once. - objective-c/java/python
+
+forward declaration:
+use it when you want to use a reference or pointer to an object
+don't use it when you want to use an object or inherit an object
+http://www.eventhelix.com/realtimemantra/HeaderFileIncludePatterns.htm
+
+A.h
+#include "abase.h"
+#include "b.h"
+class C;
+class D;
+class A : public aBase {B bee; C* cee; D* dee}
+
+A.cpp
+#include "a.h"
+#include "b.h"
+#include "d.h"
+
+void A::setC(C* c){cee=c}
+C* A::getC() const{return cee}
+void A::modifyD(D* d){d->SetX(0); dee=d;}
+
+A header file should be included only when a forward declaration would not do the job. - forward declaration
+The header file should be so designed that the order of header file inclusion is not important.
+The header file inclusion mechanism should be tolerant to duplicate header file inclusions. - include guards
+
+control statements:
+if/else
+switch - more optimal then a long chain of if else
+break
+continue - skip following remaining statements, and continue to next iteration
+goto
+
+loops:
+while
+do/while - A do loop is similar to the while loop, except that it checks its condition at the end of the loop. This means that the do loop is guaranteed to execute at least one time. example - presenting a menu
+for - includes initialization of a iteration variable
+foreach(<type> <iteration variable> in <list>) { <statements> } - used on arrays or collections, ex. foreach(string person in school){Console.WriteLine(person)}, person is each element
+
+methods: - seperate logic into units, can pass information, can return values
+
+accepting command-line input
+for example - Notepad.exe MyFile.txt //MyFile.txt is the parameter
+static void Main(string[] args)
+args[0] //=MyFile.txt
+
+to use a class's methods, you must instantiate (create) an object
+
+static vs instance (normal)
+instance classes can have mutliple instances
+static classes only have one definition
+static objects can be called at anytime
+instance objects must be instantiated before using its methods
+
+OneMethod om = new OneMethod(); //instance of the oneMethod class references by om
+
+
+4 parameters - out, ref, params, value
+
+value - return data;
+ref - void function (ref object1) - changes to local object1, changes the caller reference's object
+out - used to return multiple variables
+params - allows methods to accept a variable number of arguments ex. void viewAddresses(params string[] names)
+
+namespaces:
+used to help organize programs
+usually contains multiple data structures (classes, structures, interfaces, enumerations, delegates)
+
+can have nested namespaces
+namespace1{namespace11{class1{}}}
+namespace1.namespace11{class1{}} //shortcut
+
+namespace1.namespace11{class2{}} could be added in another file!
+
+Namespaces don't correspond to file or directory names. If naming directories and files to correspond to namespaces helps you organize your code, then you may do so, but it is not required.
+
+using - using namespace1.namespace11 - allows you to call methods without typing the 'fully qualified name', the full namespace path
+alias - alias n11 = namespace1.namespace11 - shorten a long namespace 
+
+classes
+constructor - used for initializing class memeber, always has the same name as the class, cannot return a value, not mandatory
+can have multiple constructors, calls depend on the number/type of parameters
+instance and static members (fields and methods) - static members must be called via className.staticMethod(); as opposed to objectName.method();, used in calculations or anything that doesn't require an intermediate step
+changing default constructor - public OutputClass() : this("Default Constructor String") { }, ensures fields are initialized during instantiation
+
+inheritance
+
+polymorphism
+
+properties
+
+indexers
+
+structs
+
+interfaces
+
+delegates and events
+
+exception handling
+try...catch - allows you to test a block of code for errors. The try block contains the code to be run, and the catch block contains the code to be executed if an error occurs.
+throw - creates an exception. often used in conjunction with try...catch, to create accurate error messages.
+try...except...else - 
+
+try:
+  z=5/0
+except ZeroDivisionError: #catches this specific error
+  print "divide by zero"
+
+try:
+  stuff
+except: #catches everything
+  stuff
+
+try:
+  do_some_stuff()
+except:
+  rollback()
+  raise
+else:
+  commit()
+
+Sometimes, you want to catch all errors that could possibly be generated, but usually you don't.In most cases, you want to be as specific as possible ("Catch What You Can Handle")
+
+raise - generates exceptions
+finally - placed at the end of try..except..else, always runs
+
+attributes
+
+enumerations
+
+overloading operators
+
+encapsulation
+
+collections
+
+anonymous methods
+
+C# type
+
+nullable types
+
+
+
+
+
+
+Bar::Bar(int foo, int otherFoo): foo(foo), otherFoo(otherFoo) {...} //That way you know for sure that the foo var is initialized before anything else happens.
+
+vocab
+accessors - getters and setters
+getters
+setter
+parsing (syntactic analysis) - the process of analyzing a text, made of a sequence of tokens (for example, words), to determine its grammatical structure with respect to a given (more or less) formal grammar.
+regular expression - A regular expression is an object that describes a pattern of characters. can be used for searching, parsing, format checking, and substitution. modifiers: g=global, i=case insensitive, .test(), .exec(), etc.
+A command-line interpreter (also command line shell, command language interpreter) - is a computer program that reads lines of text entered by a user and interprets them in the context of a given operating system or programming language.
+multitier architecture (n-tier) - 
+inline function - tells the compiler to insert the complete body of the function in every place in the code where that function is used. higher runtime performance, larger code
+
+
+runtime/run-time - the time at which the program is executing or--running
+
+process
+compile
+link
+load
+execute
+
+type checking - process of verifying and enforcing constraints of types. May occur at compile time or run-time depending whether the language is strongly or weakly typed
+
+static - you can call methods inside it without instantiating (creating an object, using new) it. this is why Main is static. when you do this, the program creates an instance of the class when upon execution.

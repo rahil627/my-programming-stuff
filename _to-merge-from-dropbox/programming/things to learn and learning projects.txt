@@ -1,0 +1,74 @@
+code to check:
+motiah
+
+cheat sheets - http://www.visibone.com/products/everythingbook.html
+
+http://www.joelonsoftware.com/articles/fog0000000043.html
+Do you use source control?
+Can you make a build in one step?
+Do you make daily builds?
+Do you have a bug database?
+Do you fix bugs before writing new code?
+Do you have an up-to-date schedule?
+Do you have a spec?
+Do programmers have quiet working conditions?
+Do you use the best tools money can buy?
+Do you have testers?
+Do new candidates write code during their interview?
+Do you do hallway usability testing?
+
+
+buy books? FUCK THAT
+	algorithm books:
+		Introduction to Algorithms - tough read, but essential
+		Algorithm Design Manual - a joy to read?
+		Algorithm Designs by Jon Kleinberg - easier to read
+		Art of Computer Programming by Knuth - series, easy to read, not just algorithms
+		Algorithms by Sedgewick - the best?
+
+	reference books/"cookbooks" - head first series, C# in a nutshell
+	practical books - that i would want to read, general programming
+
+
+	http://www.codinghorror.com/blog/archives/001108.html
+	http://www.codinghorror.com/blog/archives/000020.html
+	http://www.joelonsoftware.com/navLinks/fog0000000262.html
+
+	coding horror & joel:
+
+	code craftmanship
+	*****Code Complete: A Practical Handbook of Software Construction - encyclopedia of good programming practice, writing 'clean code'
+	The Pragmatic Programmer: From Journeyman to Master - not sure what to do with programming skills? read this
+
+	software management:
+	*****Peopleware: Productive Projects and Teams 
+	The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition (2nd Edition) - computers change, but people don't
+	Rapid Development: Taming Wild Software Schedules
+
+	UI design
+	Don't Make Me Think
+
+?
+facts and fallacies
+
+Joel on Software: And on Diverse and Occasionally Related Matters That Will Prove of Interest to Software Developers, Designers, and Managers, and to Those Who, Whether by Good Fortune or Ill Luck, Work with Them in Some Capacity
+
+	not from joel
+		Programming Pearls (2nd Edition)
+		refactoring
+		Design Patterns: Elements of Reusable Object-Oriented Software
+		Structure and Interpretation of Computer Programs (2nd Edition)
+		types and programming languages
+		The Art of Computer programming
+
+	Compilers: Principles, Techniques, and Tools
+	Unix Power Tools, Third Edition
+
+	The C/C++ programming Language (special edition) by Bjarne Stroustrup
+
+
+
+a program that outputs the file structure of a hard drive to a text file
+-include directories, filenames and its extensions
+-customize level of depth (to see my artists/albums)
+-can choose folders only

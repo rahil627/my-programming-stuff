@@ -1,0 +1,94 @@
+cross-platform frameworks:
+Flutter
+
+Avalonia
+Uno
+Xamarin
+
+wxWidgets
+
+React (Native)
+Ionic
+
+notes:
+1. Flutter
+  - dart, Google’s new stuff
+  - hot-reload
+  - supports native widgets and web
+  - mobile as main target, but works on everything!
+  - renders/draws using Skia graphics lib
+  - most loved framework on the SO survey
+
+2. Avalonia
+  - renders widgets with Skia (like Flutter)
+  - uses one of the C#/.NET WinForms-like api to build widgets
+  - more desktop-oriented
+  - "cleanest" code-base
+  
+2. Uno
+  - renders widgets using the platform's primitives
+  - uses one of the C#/.NET WinForms-like api to build widgets
+  - hot re-load
+  - more mobile-oriented
+
+3. wxWidgets
+  - a very old but solid open-source C++ project
+  - **mobile support is pretty non-existant**
+  - there are many bindings for it, including one for haxe! HaxeUI contains it as a build option!!
+    - http://haxeui.org/getting-started/hello-world/
+      - pretty sick, just change build target and bam! but surely mobile support is lacking. :(
+
+3. Maui <- Xamarin
+  - .net / c# world, uses native ui
+  - two ways to do ui: forms library can be used for completely code-shared ui, or, ios and android specific libraries can be accessed making for more complex platform-specific ui
+  - there is only ‘fast deployment’ for android devices via android studio; there is no live-reloading
+  - old-school build ‘n deploy process
+  - **of the big 3 (Flutter, Xamarin, React), this was the least loved**
+
+3. React
+  - javascript world, a web framework, but also has a native framework (React Native)
+  - most popular, therefore many libraries, tutorials, support
+  - live-reload (no need to build, deploy, etc.)
+  - completely code shared, ‘build once, run everywhere’
+  - you sorta build "components" (widgets) with HTML syntax (ew)
+  - made by Facebook? (*vomit*)
+  - as of 2022, still the most popular
+
+x/Ionic
+  - typescript, angular, uses cordova (aka phonegap) to port web code to devices, uses web (html, css) for ui
+  - because it uses web for ui, it just can’t look good as native ui apps
+  - can now be used with any javascript front-end (react, angular, vue, etc.)?
+
+
+
+
+# my answer to a reddit question:
+https://www.reddit.com/r/AskProgramming/comments/sqk6id/avalonia_vs_uno_vs_maui_vs_flutter/
+
+tldr: try Avalonia or Uno so that you can stick to C#, then, if they end up being problematic, fallback to Flutter. Maui, well... i was never a fan of Xamarin, but i’m glad they changed that horrible name!
+
+i was just looking at this too... maybe there’s some C# bindings for wxWidgets? I found one for my language: haxe via haxeui lib... It just seems like one of those old solid libs that’ll never die, like many good C++ libs... This way, you don’t have to learn a whole ‘nother api, framework, way of doing, language, or anything! :)
+
+although... now looking at the repo... i just don’t see much mobile support... even the iOS readme says it’s just for “a base for simple apps”... :(
+
+https://github.com/wxWidgets/wxWidgets
+https://github.com/wxWidgets/wxWidgets/tree/master/docs/ios
+
+poop.
+
+... yeahhhhh, it might be better to go for the newer stuff (Avalonia, Uno, Maui) or solid stuff (Google’s Flutter)...
+
+i found this, to help choose which one:
+https://github.com/robloo/PublicDocs/blob/master/XAMLFrameworkComparison.md
+though, do note, written in june 2021, and now Avalonia might have decent mobile too? (still in beta)
+
+
+
+sources:
+https://insights.stackoverflow.com/survey
+
+https://insights.stackoverflow.com/survey/2021#technology
+
+https://insights.stackoverflow.com/survey/2020#technology-other-frameworks-libraries-and-tools-all-respondents3
+
+https://medium.com/swlh/xamarin-vs-ionic-vs-react-native-differences-under-the-hood-6b9cc3d2c826

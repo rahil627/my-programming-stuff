@@ -1,0 +1,7 @@
+https://gist.github.com/alamboley
+
+custom display objects
+  - http://wiki.starling-framework.org/manual/custom_display_objects
+
+filters
+  - http://blog.onebyonedesign.com/actionscript/filters-in-starling/

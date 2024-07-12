@@ -1,0 +1,18 @@
+TODO:
+  - create a sample application with visual studio
+  - try oFBox2d
+    - https://github.com/vanderlin/ofxBox2d/
+  - play osmos
+    - google osmos code
+  - begin creating game
+
+http://yoppa.org/oftaipei12
+http://www.users.muohio.edu/jamiespa/teaching/ECE_387/Bob__Harrison__David__Mark-May_25_2011/aa79352b927facb1904c0d3014c7c025.html
+http://www.gamedev.net/page/resources/_/technical/general-programming/organizing-code-files-in-c-and-c-r1798
+http://wiki.openframeworks.cc/index.php?title=OF_Start_Up_Guide
+http://en.cppreference.com/w/
+http://www.openframeworks.cc/download/
+
+install on VS 2010
+  - http://www.users.muohio.edu/jamiespa/teaching/ECE_387/Bob__Harrison__David__Mark-May_25_2011/aa79352b927facb1904c0d3014c7c025.html
+  - show included files, There is a C/C++ -> Advanced project setting "show Includes". That will generate the tree. It maps to the compiler switch /showIncludes

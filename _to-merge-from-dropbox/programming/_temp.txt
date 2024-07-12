@@ -1,0 +1,203 @@
+other
+
+long int vs int
+Standard guarantees only that int is at least 16-bit and long is at
+least 32-bit and sizeof(int) <= sizeof(long).
+
+So for example on typical 32-bit platform are int and long both 32-bit,
+on 64-bit Linux can be int 32-bit and long 64-bit etc
+
+for (int i=1; i<10000; i+=2) //dont forgot about that third parameter
+
+
+controversial
+The only "best practice" you should be using all the time is "Use Your Brain"
+Programmers who don't code in their spare time for fun, will never become as good as those that do -  Meaning that they do little projects on the side, or just mess with lots of different languages and ideas in their spare time.
+Most comments in code are in fact a pernicious form of code duplication. - make code readable. code tells how, comments tell why
+Not all programmers are created equal, even with same level experience.
+XML is overrated. only use it what it is designed for - transporting data between different applications.
+googling is okay!
+if you only know one [type of] language, no matter how well you know it, you're not a great programmer. - imperative (java, C++, python), functional (haskell, erlang), concatenative (factor, forth, cat, joy), logic (prolog, mercury), dataflow (labview, estereel, lustre, verilog, pure data, max/msp). shows languages are radically different
+performance matters - as opposed to the "we can always buy more RAM" sayers
+!!! [skipped one]
+Print statements are a valid way to debug code
+getters and setters are highly overused - private fields + public accessors != encapsulation
+Opinion: SQL is code. Treat it as such - sqlinform.com, "There's no code change required. We just need to tweak the SQL"!
+
+
+
+Your job is to put yourself out of work. [well written]
+When you're writing software for your employer, any software that you create is to be written in such a way that it can be picked up by any developer and understood with a minimal amount of effort. It is well designed, clearly and consistently written, formatted cleanly, documented where it needs to be, builds daily as expected, checked into the repository, and appropriately versioned.
+If you get hit by a bus, laid off, fired, or walk off the job, your employer should be able to replace you on a moment's notice, and the next guy could step into your role, pick up your code and be up and running within a week tops. If he or she can't do that, then you've failed miserably.
+Interestingly, I've found that having that goal has made me more valuable to my employers. The more I strive to be disposable, the more valuable I become to them.
+
+
+when to use private over public?
+
+std::string bar() const { return _bar; } 
+
+getters and setters
+advantages and disadvantages of get/set functions for private/protected variables
+advantages:
+You can change implementation details for the get and set functions, so instead of returning a private field you can return something more interesting (display or more calculation).
+You can remove a get/set later on and make it read/write only (but for a public facing interface, this seems, not good).
+able to change data type
+disadvantages:
+time to type
+ruins encapsulation and information hiding
+UML diagrams are overrated - sketch on notepad
+Design patterns are hurting good design more than they're helping it.
+Write small methods. It seems that programmers love to write loooong methods where they do multiple different things. I think that a method should be created wherever you can name one.
+It's ok to write garbage code once in a while - just be sure to refactor later!
+Less code is better than more! - If the users say "that's it?", and your work remains invisible, it's done right. Glory can be found elsewhere.
+PHP sucks - proof in the pudding
+code == design - reinfornces readability, documentation and UMLs shouldn't be needed
+I also think there's nothing wrong with having binaries in source control.. if there is a good reason for it.
+Every developer should be familiar with the basic architecture of modern computers
+Software Architects/Designers are Overrated - coders should be the 'architects'
+There is no "one size fits all" approach to development - Things I've seen being touted as the correct approach for any project - before any information is known about it - are things like the use of Test Driven Development (TDD), Domain Driven Design (DDD), Object-Relational Mapping (ORM), Agile (capital A), Object Orientation (OO), etc. etc. encompassing everything from methodologies to architectures to components. All with nice marketable acronyms, of course. - Choosing the correct methodologies and architectures and components, etc., is something that should be done on a per-project basis, and depends not only on the type of project you're working on and its unique requirements, but also the size and ability of the team you're working with.
+A degree in computer science does not---and is not supposed to---teach you to be a programmer.
+The world needs more GOTOs - That said, they aren't really necessary in 99% of the code you'll ever write.
+A degree in Computer Science or other IT area DOES make you a more well rounded programmer - qualifications are indicators of commitment
+Opinion: Never ever have different code between "debug" and "release" builds
+Lazy Programmers are the Best Programmers - find ways to decrease time spent writing code (using tools/workflows/code generator)
+Don't use inheritance unless you can explain why you need it.
+Opinion: developers should be testing their own code
+Well-written code in dynamically typed languages follows static-typing conventions - do not change the variable's type
+Pagination is never what the user wants - show all results, need a search option
+Objects Should Never Be In An Invalid State - [myClass c = new MyClass();//invalid c.setId(12345)] vs [myClass c = new MyClass(12345)//valid]
+avoid indentation/nested loops, use returns - if(!passed)for(if(...)...)) vs if(!passed)return 0, for(if(...)...)
+
+Unit Testing won't help you write good code - good generalization
+The only reason to have Unit tests is to make sure that code that already works doesn't break. Writing tests first, or writing code to the tests is ridiculous. If you write to the tests before the code, you won't even know what the edge cases are. You could have code that passes the tests but still fails in unforeseen circumstances.
+And furthermore, good developers will keep cohesion low, which will make the addition of new code unlikely to cause problems with existing stuff.
+In fact, I'll generalize that even further,
+Most "Best Practices" in Software Engineering are there to keep bad programmers from doing too much damage.
+They're there to hand-hold bad developers and keep them from making dumbass mistakes. Of course, since most developers are bad, this is a good thing, but good developers should get a pass.
+
+
+
+prvate with getter/setter vs public
+"First of all: anyone who uses public fields deserves jail time"
+
+"There is a reason that we keep our variables private. We don't want anyone else to depend on them. We want the freedom to change their type or implementation on a whim or an impulse. Why, then, do so many programmers automatically add getters and setters to their objects, exposing their private fields as if they were public?"
+
+people have their IDE automatically add getter/setters for EVERY member
+Answer:
+I think getters and setters are evil if used excessively (by that I mean, when it's not necessary and would break the business model), but why shouldn't we have a function called GetBalance()?
+
+Surely this would be far more versatile than PrintBalance(); what if I wanted to show it to the user in another way than as the class wanted me to? Now, in some sense GetBalance() may not be relevant enough to argue that "getters and setters are good" because it doesn't (or maybe, shouldn't) have an accompanying setter, and speaking of which, a function called SetBalance(float f) could be bad (in my opinion) because it would imply to the implementer of the function that the account must be manipulated out side of the class, which is not a good thing.
+
+Very evil: public fields.
+Somewhat evil: Getters and setters where they're not required.
+Good: Getters and setters only where they're really required - make the type expose "larger" behaviour which happens to use its state, rather than just treating the type as a repository of state to be manipulated by other types.
+
+don't get into habit to writing for every data member
+
+many variables should be set in the constructor
+
+There is also the point of view that most of the time, using setters still breaks encapsulation by allowing you to set values that are meaningless. As a very obvious example, if you have a score counter on the game that only ever goes up, instead of
+// Game
+private int score;
+public void setScore(int score) { this.score = score; }
+public int getScore() { return score; }
+// Usage
+game.setScore(game.getScore() + ENEMY_DESTROYED_SCORE);
+it should be
+
+// Game
+private int score;
+public int getScore() { return score; }
+public void addScore(int delta) { score += delta; }
+// Usage
+game.addScore(ENEMY_DESTROYED_SCORE);
+This is perhaps a bit of a facile example. What I'm trying to say is that discussing getter/setters vs public fields often obscures bigger problems with objects manipulating each others' internal state in an intimate manner and hence being too closely coupled.
+
+The idea is to make methods that directly do things you want to do. An example would be how to set enemies' "alive" status. You might be tempted to have a setAlive(boolean alive) method. Instead you should have:
+
+private boolean alive = true;
+public boolean isAlive() { return alive; }
+public void kill() { alive = false; }
+The reason for this is that if you change the implementation that things no longer have an "alive" boolean but rather a "hit points" value, you can change that around without breaking the contract of the two methods you wrote earlier:
+
+private int hp; // Set in constructor.
+public boolean isAlive() { return hp > 0; } // Same method signature.
+public void kill() { hp = 0; } // Same method signature.
+public void damage(int damage) { hp -= damage; }
+
+group setters and getters
+
+1. Allowing future changes without modification to code that uses the modified class.
+2. Enforcing the means by which the object can be manipulated.
+public int[] getArray()
+{
+    return myArray.clone();
+}
+
+With all the advantages of getters and setters said, if the getter is merely returning the value of the private variable and the setter is merely accepting a value and assigning it to a private variable, it seems the getters and setter are just extraneous and really a waste. If the class is going to be just for internal use by an application that is not going to be used by others, using getters and setters extensively may not be as important as when writing a public API.
+
+usually use get not set. to make an object immutable
+
+
+
+
+
+
+
+
+
+
+
+
+int x=0;
+int *p = &x;//p holds the address of x
+int &r(x);//r is a reference to x
+//From this point *p == r == x
+*p = 3;//change x to 3
+r = 4;//change x to 4
+//Up until now
+int y=0;
+p = &y;//p now holds the address of y instead.
+
+references - must delete?
+pointers - 
+smart/shared pointers - in C++ only? auto_ptr?
+
+initializing a reference
+class Foo
+{
+public:
+    Foo(Bar &rBar) : bar2(rBar), bar3(NULL)
+    {
+    }
+
+    Bar bar1;
+    Bar &bar2;
+    Bar *bar3;
+}
+
+What is evil is making a reference to a dynamically allocated object and losing the original pointer.
+
+
+
+
+if(condition1){if(condition2){if(condition3){//do something}}}
+vs
+if(!condition1||!condition2||condition3) return 0;
+or
+try{...}
+catch(exception e){//do stuff}
+
+swallowing exceptions and displaying message boxes is bad because you don't know when some other code is going to call yours and have no idea an exception occurred.
+
+naming convention: booleans isEnabled
+
+
+vocab (C++ only)
+const data	stores string literals and other data whose values are known at compile time
+stack		stores automatic variables. typically allocation faster than dynamic storage (heap or free store). constructed/destroyed immediately after allocation/deallocation.
+free store	dynamic memory allocated/freed by new/delete. object lifetime can be less than allocation time; objects can be allocated without being initialized or destroyed without being deallocated.
+heap		another dynamic memory area. allocated/freed by malloc/free and their variants.
+global/static	-variables and objects.
+
+malloc		subroutine for performing dynamic memory allocation

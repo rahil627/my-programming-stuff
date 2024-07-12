@@ -1,0 +1,68 @@
+http://edkeith.blogspot.com/2007/01/programming-languages.html
+
+core languages
+	***C - microsoft, old but many business still use it, partially low level
+	*****Java - sun, matured and still doing great, garbage collection, applets, swing, large library
+	*****C++ - object-oriented C, type-safe, can keep learning your whole life
+	*****C# - microsoft's modern java killer, simple, great IDE, type-safe, object oriented, runs in windows only (except ASP, Mono Framework, Silverlight), can use pointers, has memory management
+	****Go - Google's open source programming language. "Go aims to provide the efficiency of a statically-typed compiled language with the ease of programming of a dynamic language." Only 2 years old.
+
+scripting languages
+	***Ruby - new, takes the best concepts of python and perl
+	*****Python - syntactically minimal, utilizes automatic memory management, dynamically typed, whitespace filled syntax
+	***Perl - still hanging in there..?, like unix commands, regular expressions
+	****PHP - most popular web programming language
+	*****JavaScript - small scripts are embedded in so many web pages. While it is the only language for DHTML, it can also be used to develop .NET assemblies, to script either Windows (WSH) or Macintosh (OSA), as a server side scripting language (Whitebeam), and there is a wxWidgets interface to it (wxJS).
+
+other languages
+	Erlang - supports fine grained concurrency/transparent distribution/fault detection/persistence/hot code replacement
+	Haskell - polymorphically typed?, lazy - does not evaluate function parameters until needed, purely functional - stateless
+	Assembler - nice to know since all code translates to assembler, hardware programming
+	D - successor to C, adds some improvements like garbage collection/true modules/closures/lazy evaluation, not used much
+	Eiffel - ?
+	Ada - large scale programming?
+	Lua - light-weight
+
+old languages
+	Fortran - oldest language still in use
+	Lisp - second oldest, famous and infmaous for it's syntax
+	COBOL - thrid oldest, has decimal arithmetic
+	Pascal/Delphi - ?
+	Visual Basic - ew
+
+user interfaces
+	Qt - C++ based cross-platform widget toolkit, great editor, well-documented, WSYIWYG UI
+	Java's Swing - more sophisticated than Java's AWT
+
+web application framework
+	****AJAX (Asynchronous JavaScript and XML) - new, hard to learn, can do cool stuff! successor of javascript
+	***Ruby on Rails - new, claims 10x faster to make a website
+	ASP.NET - meh
+	Coldfusion - bleh
+	Sharepoint - a good CMS for small groups (100-200 users) document collaboration and sharing, bad for maintaining content on public websites or intranets.
+
+markup
+	HTML - basis of web programming, displays web pages duh!
+	XML - designed to transport and store data (not display like HTML)
+	XSLT - used to transform XML documents
+	CSS - style sheet
+	XHTML - XML + HTML
+	DHTML - Dynamic HTML
+
+operating systems
+	windows XP & Vista & Server
+	mac OS X
+	*****linux - most servers use some distribution of this
+	*****UNIX - should be very familiar with this
+
+database systems
+	list by date (old to new)
+	Source		Common Name
+	Microsoft	T-SQL
+	Oracle 		PL/SQL - large business
+	MySQL		MySQL - really simple and popular
+	PostgreSQL 	PL/pgSQL - more features than mysql
+
+other
+	NSIS (Nullsoft Scriptable Install System) - windows installation system by nullsoft (winamp)
+

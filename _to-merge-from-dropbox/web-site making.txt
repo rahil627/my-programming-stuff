@@ -1,0 +1,16 @@
+web dev
+
+# static site generators
+https://www.staticgen.com/
+  - tracks current popularity of SSGs
+
+https://v2.docusaurus.io/docs/introduction/
+  - contains a good round-up of the problems of other SSGs, and seeds of why Docusaurus is needed
+
+conclusion:
+I would choose Hugo and/or Docusaurus.
+
+Docusaurus seems the best of both worlds: out-of-the-box solutions *and* powerful open-source APIs (React.js, etc.).
+
+Those seem to be the top “out-of-the-box” solutions. The others are more for building sites, and thus require much work. Most of them use React.js (Hexo, Gatsby, etc.).
+

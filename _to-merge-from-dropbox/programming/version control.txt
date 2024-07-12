@@ -1,0 +1,9 @@
+git:
+Slowly took over and has a monopoly on version control systems. I believe it took over thanks to GitHub, a place where code is to be shared.
+
+https://www.progclub.net/~key720/tutorials/git_bitbucket/
+  - great guide to use git on windows
+
+need to learn how to update a fork
+  - reset current branch -> pull -> merge?
+

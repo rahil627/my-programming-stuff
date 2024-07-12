@@ -1,0 +1,21 @@
+ping [servername]
+nslookup
+  server 8.8.8.8
+  [host name/ip]
+  
+telnet [hostname/ip] [port]
+
+
+windows commands - http://mypchell.com/guides/69-156-useful-run-commands
+	calc
+	certmgr.msc
+	chkdsk
+	cmd
+	regedit
+	msconfig
+	mstsc /v:[location]	?
+	sfc /scannow
+
+cmd commands
+	ipconfig /all
+	ping [ip address]

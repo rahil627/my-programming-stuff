@@ -1,0 +1,184 @@
+vim, vi, and all their newer incarnations..
+
+install vim:
+https://github.com/neovim/neovim
+apt install neovim
+
+install vim-plug:
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim
+
+install a vim package manager:
+https://github.com/junegunn/vim-plug/wiki/tutorial
+vim-plug (a "minimalist" package manager):
+
+install vim-plug:
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+create a config file:
+With vim-plug, you declare the list of plugins you want to use in your Vim configuration file. It's ~/.vimrc for ordinary Vim, and ~/.config/nvim/init.vim for Neovim.
+
+add this to the config file:
+```
+" Plugins will be downloaded under the specified directory.
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+```
+
+plugins:
+https://github.com/Shougo/deoplete.nvim
+  - autocomplete
+  - these change over-time, so just have to check GitHub repo for the current program
+
+For vim-plug:
+```
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+```
+
+
+settings:
+tabstop=4
+set shiftwidth=4
+set expandtab “(optional) 4-spaces instead of Tab indentation
+
+
+
+themes:
+
+find a theme:
+https://github.com/rafi/awesome-vim-colorschemes
+  - these comes in the plugin managers, so no need to manually install crap
+
+
+https://vimcolorschemes.com/morhetz/gruvbox
+  - fucking amazing themes!!
+
+Plug 'morhetz/gruvbox’ “#1 for a reason
+Plug 'sonph/onehalf', { 'rtp': 'vim' } “like gruvbox but with slightly lighter contrast
+Plug 'junegunn/seoul256.vim' “even less contrast than onehalfdark
+Plug 'NLKNguyen/papercolor-theme' “more contrast than gruvbox!
+Plug ‘sainnhe/everforest’ “error
+Plug ‘sainnhe/gruvbox-material’ “error
+Plug ‘romainl/flattened’ “error
+
+install a theme:
+note: there are already many themes installed, just press tab!
+desert is pretty, but too bright
+
+https://github.com/morhetz/gruvbox/wiki/Installation
+add "Plug 'morhetz/gruvbox'" to your vim config file
+
+in vim:
+:PlugUpdate
+
+in vim or in the config file:
+:colorscheme gruvbox //not working for many themes...
+:set bg=light
+:set bg=dark
+
+:colorscheme onehalflight
+:colorscheme onehalfdark
+
+set t_Co=256   " This is may or may not needed.
+set background=light
+colorscheme PaperColor
+
+
+
+set default theme:
+add ":colorscheme gruvbox" to the config file
+  - somewhere above or below the plugins part
+
+for example:
+:set number
+:set t_Co=256
+:call plug#begin('~/.vim/plugged')
+:Plug 'morhetz/gruvbox'
+:call plug#end()
+:colorscheme gruvbox
+:set backgroundcolor=dark
+
+
+
+
+found in deoplete’s giant help text file:
+==============================================================================
+EXTERNAL SOURCES				*deoplete-external-sources*
+
+Please see https://github.com/Shougo/deoplete.nvim/wiki/Completion-Sources
+
+neco-vim: "vim" source for Vim script
+https://github.com/Shougo/neco-vim
+
+neosnippet: "neosnippet" source
+https://github.com/Shougo/neosnippet.vim
+
+neoinclude: "include" and "file/include" sources
+https://github.com/Shougo/neoinclude.vim
+
+neco-syntax: "syntax" source
+https://github.com/Shougo/neco-syntax
+
+deoplete-zsh: "zsh" source for Zsh
+https://github.com/deoplete-plugins/deoplete-zsh
+
+deoplete-lsp source for neovim builtin LSP features
+https://github.com/deoplete-plugins/deoplete-lsp
+
+deoplete-tags: "tag" source for tag files
+https://github.com/deoplete-plugins/deoplete-tag
+
+deoplete-dictionary: "dictionary" source for dictionary files
+https://github.com/deoplete-plugins/deoplete-dictionary
+
+==============================================================================
+EXTERNAL PLUGINS				*deoplete-external-plugins*
+
+These are my recommended plugins for deoplete.
+
+context_filetype.vim:
+It adds the context filetype feature.
+https://github.com/Shougo/context_filetype.vim
+
+neopairs.vim:
+It inserts the parentheses pairs automatically.
+https://github.com/Shougo/neopairs.vim
+
+echodoc.vim:
+It prints the documentation you have completed.
+https://github.com/Shougo/echodoc.vim
+
+neoinclude.vim:
+You can completes the candidates from the included files and included path.
+https://github.com/Shougo/neoinclude.vim
+
+FastFold:
+Speed up the updating folds when you use auto completion plugins.
+https://github.com/Konfekt/FastFold
+
+						*deoplete-external-omnifuncs*
+
+These are my recommended omnifuncs for deoplete.
+
+phpcomplete: PHP omnifunc
+https://github.com/shawncplus/phpcomplete.vim
+
+phpcd.vim: another PHP omnifunc. Faster.
+https://github.com/php-vim/phpcd.vim
+
+==============================================================================

@@ -1,0 +1,200 @@
+Komodo Default Key Bindings
+Windows/Linux Scheme
+
+Code Browser:
+Locate current scope... = Ctrl+K, Ctrl+L
+
+Code Intelligence:
+Find Symbol = Ctrl+K, Ctrl+F
+
+Debugger:
+Clear All Breakpoints = Ctrl+F9
+Disable/Enable Breakpoint = F9
+New Session = Ctrl+Shift+F5
+Run Script = F7 = Ctrl+F7
+Run to Cursor = Shift+F10 = Ctrl+Shift+F10
+Show Current Statement = Alt+*
+Start = F5 = Ctrl+F5
+Start/Find/Hide Default Interactive Shell = F12
+Step In = F11 = Ctrl+F11
+Step Out = Shift+F11 = Ctrl+Shift+F11
+Step Over = F10 = Ctrl+F10
+Stop = Shift+F5
+
+Editor:
+Back = Shift+Backspace
+Backspace = Backspace
+Beginning of Line (first char/first column) = Home
+Cancel AutoComplete = Escape
+Copy = Ctrl+C = Ctrl+Insert
+Cut = Ctrl+X = Shift+Delete = Ctrl+Shift+X
+Delete = Delete
+Delete Word Left = Ctrl+Backspace
+Delete Word Right = Ctrl+Delete
+End of Line = End
+Go to End of Document = Ctrl+End
+Go to End of word = Ctrl+E
+Go to Line... = Ctrl+G
+Go to Next Bookmark = F2
+Go to Next Line = Down
+Go to Previous Bookmark = Shift+F2
+Go to Previous Line = Up
+Go to Top of Document = Ctrl+Home
+Insert Newline = Return
+Insert Newline (align with current line) = Ctrl+Shift+Return
+Insert Newline (continue comments) = Shift+Return
+Insert Newline (no favors) = Ctrl+Return
+Insert Next Key as Literal Character = Ctrl+M
+Join current and next lines = Ctrl+K, Ctrl+J
+Move Back Part of Word = Alt+Right
+Move Forward Part of Word = Alt+Left
+Move Left One Character = Left
+Move One Character Right = Right
+Move One Word Left = Ctrl+Left
+Move One Word Right = Ctrl+Right
+Page Down = Page_Down
+Page Up = Page_Up
+Paste = Ctrl+V = Shift+Insert
+Paste and Select = Ctrl+Shift+V
+Redo = Ctrl+Y
+Reflow paragraph(s) = Ctrl+Q
+Remove All Bookmarks = Ctrl+Shift+F2
+Repeat next keystroke N times = Ctrl+K, Ctrl+U
+Scroll One Line Down = Ctrl+Down
+Scroll One Line Up = Ctrl+Up
+Select All = Ctrl+A
+Select Next Character = Shift+Right
+Select Next Part of Word = Alt+Shift+Right
+Select Next Word = Ctrl+Shift+Right
+Select Page Down = Shift+Page_Down
+Select Page Up = Shift+Page_Up
+Select Previous Character = Shift+Left
+Select Previous Part of Word = Alt+Shift+Left
+Select Previous Word = Ctrl+Shift+Left
+Select to Beginning of Line (first char/first column) = Shift+Home
+Select to Beginning of word = Ctrl+Shift+W
+Select to End of Document = Ctrl+Shift+End
+Select to End of Line = Shift+End
+Select to Next Line = Shift+Down
+Select to Previous Line = Shift+Up
+Select to Top of Document = Ctrl+Shift+Home
+Toggle Bookmark = Ctrl+F2
+Toggle Overtype/Insert Mode = Insert
+Transpose Current and Previous Characters = Ctrl+T
+Trigger preceding autocomplete list or calltip = Ctrl+J
+Undo = Ctrl+Z
+Zoom Font Size Down = Ctrl+Shift+-
+Zoom Font Size Up = Ctrl+Shift+= = Ctrl+Shift++
+
+Find:
+Find Next = F3
+Find Next Result = Ctrl+Shift+F3
+Find Next Selected = Ctrl+F3
+Find Previous = Shift+F3
+Find in Files... = Ctrl+Shift+F
+Find... = Ctrl+F
+Incremental Search = Ctrl+I
+Incremental Search Backwards = Ctrl+Shift+I
+Replace... = Ctrl+H
+
+General:
+Close Window = Ctrl+W = Ctrl+F4
+Edit Properties = Alt+Return
+Least Recently Viewed File = Ctrl+Shift+F6
+Most Recently Viewed File = Ctrl+F6
+New File (default type) = Ctrl+Shift+N
+New File... = Ctrl+N
+Next File = Ctrl+Page_Down
+Open File... = Ctrl+O
+Open Project... = Ctrl+Shift+J
+Previous File = Ctrl+Page_Up
+Refresh Status = Ctrl+K, R
+Save = Ctrl+S
+Save All = Ctrl+Shift+S
+
+Help:
+Alternate Help on Selection = Ctrl+F1
+Help... = F1
+Language-Specific Help on Selection = Shift+F1
+
+Macro:
+End Recording = Ctrl+K, )
+Execute Last Macro = Ctrl+K, _
+Start/Resume Recording = Ctrl+K, (
+
+Source Code:
+Comment Region = Ctrl+3
+Complete Word = Ctrl+Space
+Complete Word (backwards) = Ctrl+Shift+Space
+Convert Selection to Lower Case = Ctrl+Shift+U
+Convert Selection to Upper Case = Ctrl+U
+Find All Functions = Ctrl+F8
+Find Next Function = F8
+Find Previous Function = Shift+F8
+Jump to Matching Brace = Ctrl+]
+Select Block = Ctrl+B
+Select to Matching Brace = Ctrl+Shift+]
+Un-comment Region = Ctrl+Shift+3
+
+Source Control:
+Add File = Ctrl+K, A
+Add Folder = Ctrl+K, Shift+A
+Commit Changes = Ctrl+K, C
+Commit Changes in Folder = Ctrl+K, Shift+C
+Compare = Ctrl+K, D
+Compare Files in Folder = Ctrl+K, Shift+D
+Edit = Ctrl+K, E
+Remove File = Ctrl+K, O
+Revert Changes = Ctrl+K, V
+Revert Changes in Folder = Ctrl+K, Shift+V
+Update = Ctrl+K, U
+Update Folder = Ctrl+K, Shift+U
+
+Tools:
+Run Command... = Ctrl+R
+
+User Interface:
+Browser Preview = Ctrl+K, Ctrl+V
+Focus on Editor = Ctrl+Shift+E
+Show/Hide Code Browser Tab = Ctrl+Shift+C
+Show/Hide End of Lines = Ctrl+Shift+7
+Show/Hide Output Pane = Ctrl+Shift+O
+Show/Hide Projects Tab = Ctrl+Shift+P
+Show/Hide Toolbar Button Text = Ctrl+Shift+B
+Show/Hide Toolbox Tab = Ctrl+Shift+T
+Show/Hide Whitespace = Ctrl+Shift+8
+View Source = Ctrl+K, Ctrl+S
+View/Hide Indentation Guides = Ctrl+Shift+5
+View/Hide Line Numbers = Ctrl+Shift+4
+Word-wrap long lines = Ctrl+Shift+9
+
+Snippets:
+<b> Bold = Ctrl+K, Ctrl+H, B
+<i> Italic = Ctrl+K, Ctrl+H, I
+<u> Underline = Ctrl+K, Ctrl+H, U
+<br/> Break Line = Ctrl+K, Ctrl+H, Return
+<h1> Header 1 = Ctrl+K, Ctrl+H, 1
+<h2> Header 2 = Ctrl+K, Ctrl+H, 2
+<h3> Header 3 = Ctrl+K, Ctrl+H, 3
+<h4> Header 4 = Ctrl+K, Ctrl+H, 4
+<h5> Header 5 = Ctrl+K, Ctrl+H, 5
+<h6> Header 6 = Ctrl+K, Ctrl+H, 6
+<li> List Item = Ctrl+K, Ctrl+H, L
+<ol> Ordered List = Ctrl+K, Ctrl+H, Ctrl+O
+<ul> Unordered List = Ctrl+K, Ctrl+H, Ctrl+U
+<p> Paragraph w/Dialog = Ctrl+K, Ctrl+H, Ctrl+P
+<p> Paragraph = Ctrl+K, Ctrl+H, P
+<table> Table 1 row 1 col = Ctrl+K, Ctrl+H, Ctrl+T
+<tr> Table Row = Ctrl+K, Ctrl+H, R
+<td> Table Cell = Ctrl+K, Ctrl+H, D
+<pre> Preformated Text = Ctrl+K, Ctrl+H, T
+<A> URI Link w/Dialog = Ctrl+K, Ctrl+H, Ctrl+A
+<A> URI Link = Ctrl+K, Ctrl+H, A
+<form> Form w/Dialog = Ctrl+K, Ctrl+H, Ctrl+F
+<input/> Form Input w/Dialog = Ctrl+K, Ctrl+H, Ctrl+I
+<select> Form Select w/Dialog = Ctrl+K, Ctrl+H, Ctrl+S
+<option> Form Option w/Dialog = Ctrl+K, Ctrl+H, O
+<textarea> Form Text Area w/Dialog = Ctrl+K, Ctrl+H, Ctrl+Q
+
+----------
+End of Document:

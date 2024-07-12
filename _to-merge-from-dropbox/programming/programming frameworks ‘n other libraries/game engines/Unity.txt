@@ -1,0 +1,122 @@
+Unity:
+solution is created by unity?
+
+remember to save scene
+  - also saves prefab changes
+
+learned:
+http://answers.unity3d.com/questions/14081/nested-coroutines.html
+
+problem.
+3.5 re-test portrait navbar
+  - on iPhone
+4. rename files and associate urls to local file paths
+
+
+Monodevelop:
+  - preferences -> source analysis
+
+work optimization:
+  - get a console application for c# logic testing
+    - LINQpad or CsharpRepl
+
+
+
+
+
+
+
+
+NGUI notes (replaced by Unity):
+ngui -> add 2d root
+delete main camera
+ngui -> legacy manager -> create widgets
+attach scripts on on click method
+
+add textures
+ngui ->open -> atlas maker
+
+use unity fonts
+
+refresh NGUI by clicked screen size drop down
+
+use UISprite’s anchors, not UIAnchor
+
+
+
+
+
+
+
+tutorials:
+pixelnest
+  - awesome, and I think also recommended by Jon
+http://catlikecoding.com/unity/tutorials/
+  - recommended by Jon
+
+
+things learned during the secret jam:
+  - MonoDevelop sucks, try to use Visual Studio. This will save a lot of time looking through documentation.
+  - Unity is extremely modular. Have to read the documentation or see an example game to get the gist of many things.
+    - http://docs.unity3d.com/Documentation/Manual/ExecutionOrder.html
+    - http://docs.unity3d.com/Documentation/ScriptReference/Behaviour.html
+  - when using 2d with a rigidbody, it may be necessary to freeze the z position and x and y rotation.
+  - attach any scripts you want to auto-run to camera
+  - GameObject contains general static functions which can also be accessed by just writing the function
+    - find with tag or type
+  - need at least one rigidbody to trigger collisions?
+
+todo:
+  - deploy protean to iOS
+  - see his code as an example
+  - https://bitbucket.org/invicticide/protean/src/962d5e22f90d/Assets/Scripts/Game?at=default
+
+examples:
+  - http://unity3d.com/gallery/demos/demo-projects
+
+
+
+draw line
+  - just create a plane (or sprite) you fucking noob!*****
+  - bought Vectrosity
+  - http://www.everyday3d.com/blog/index.php/2010/03/15/3-ways-to-draw-3d-lines-in-unity3d/
+  - http://answers.unity3d.com/questions/315524/how-to-draw-a-line-between-two-points-in-unity.html
+    - line renderer, GL.Lines, a mesh using MeshTopology.Lines (in Unity 4), or Vectrosity.
+      - line renderer, http://docs.unity3d.com/Documentation/Components/class-LineRenderer.html
+      - http://answers.unity3d.com/questions/318602/draw-line-in-2d-space-using-linerender.html
+      - procedural example, http://u3d.as/content/unity-technologies/procedural-examples/3zu
+      - see mesh renderer and trail renderer in the procedural demo examples?
+
+
+good Unity blogs:
+  - http://www.third-helix.com/
+
+concepts:
+  - Unity is a 3d engine
+    - to create a 2d image, a 3d plane consistiing of 2 triangles (quad) is created and a texture (containing the bitmap) is applied to it
+    - 2d primitives do not exist. To draw a line, you stretch a mesh. To draw a triangle, you can either create a custom mesh? or use a quad. With a quad, you would have to create your own set of colliders to create a triangle shape.
+
+iOS development tutorials:
+  - http://docs.unity3d.com/Documentation/Manual/iphone-GettingStarted.html
+    - includes optimizations
+  - http://docs.unity3d.com/Documentation/Manual/unity-remote.html
+    - perfect for quickly testing input
+
+2D tutorial:
+  - pixelnest
+
+tools:
+  - Rage Spline
+  - iTween
+  - EZGUI
+  - NGUI
+  - Texture Packer
+  - https://hutonggames.fogbugz.com/?W714
+    - a neat list
+
+  
+  Resources:
+  - https://gist.github.com/prime31/3333887, contains a good comparison
+  - http://www.thesecretpie.com/2012/07/comparison-of-2d-frameworks-for-unity-3d.html
+  - http://www.makegamessa.com/discussion/426/using-unity-for-2d-game-development/p1
+  - http://www.software7.com/blog/tag/sprite/

@@ -1,0 +1,90 @@
+my conventions
+__even-higher!
+_pretty-good
+0-top-top
+1-top
+1these
+2are
+3ordered
+most
+files
+go
+here
+z-bottom
+zz-bottomest
+~doesnt-always-work
+Ω-game-over
+
+order for for most os’s, generally:
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+
+symbols - i like to use ‘-‘ because it’s readable and one click, but ‘~’ and ‘_’ are good too
+numbers - very useful because they are ordered by number!
+alphabet - can use ‘z’ to put a file in the end
+strange and foreign characters
+
+**unfortunately, i used spaces in most of my filenames... :(**
+  - **as long as the folder names don’t have spaces, things should be pretty easy though**
+
+
+https://www.cyberciti.biz/faq/linuxunix-rules-for-naming-file-and-directory-names/  
+  - case sensitive
+  - forbidden characters
+  - generally should avoid ‘.’ (dot) and ‘/‘
+
+
+
+
+the tilde ‘~’ doesn’t seem to put it at the end for me...
+
+https://stackoverflow.com/questions/1976007/what-characters-are-forbidden-in-windows-and-linux-directory-names?rq=1
+  - very good post
+  - see forbidden list below:
+
+The forbidden printable ASCII characters are:
+
+Linux/Unix:
+  / (forward slash)
+
+Windows:
+  < (less than)
+  > (greater than)
+  : (colon - sometimes works, but is actually NTFS Alternate Data Streams)
+  " (double quote)
+  / (forward slash)
+  \ (backslash)
+  | (vertical bar or pipe)
+  ? (question mark)
+  * (asterisk)
+
+
+macOS:
+: and forward slash / depending on context are not permitted (e.g. Finder supports slashes, terminal supports colons)
+
+
+
+https://stackoverflow.com/questions/8086375/what-character-to-use-to-put-an-item-at-the-end-of-an-alphabetic-list
+  - z and zz are still the best
+  - Ω is good, and easy to type: option+z on mac/ios, but, might cause problems elsewhere!
+
+
+windows:
+windows has some symbols that are forbidden! be careful. Linux doesn’t have this restriction.
+
+https://stackoverflow.com/questions/4290541/what-is-the-first-character-in-the-sort-order-used-by-windows-explorer
+  - windows order
+
+Windows goes by the order of the ascii table
+space - no spaces in linux
+!
+symbols
+numbers
+big letters
+a few symbols
+small letters
+~
+{
+}
+
+

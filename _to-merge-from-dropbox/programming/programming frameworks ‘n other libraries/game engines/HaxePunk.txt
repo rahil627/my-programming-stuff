@@ -1,0 +1,39 @@
+create posts:
+  - iOS setup
+    - the default project file auto-rotates the screen and HXP.screen.width and HXP.screen.height are not adjusted accordingly
+    - something is wrong with HXP.screen.height*
+      - try setting to landscape mode*
+  - iOS workflow
+    - nme build ios builds a 200MB file, I've got a SSD, I hope you do too
+    - nme clean ios, when shit goes down or when update does not detect changes
+    - nme update ios, for everything else
+    - nme update iOS does not detect changes in the nmml file*
+  - integrating nme
+  - integrating physics
+
+HXP.sprite is just for reuse, it's not actually added to the Engine (Sprite) class
+can add nme.display.sprite to either HXP.stage or HXP.engine
+
+contacts:
+http://forum.haxepunk.com/index.php?action=profile;u=605
+http://forum.haxepunk.com/index.php?action=profile;u=632
+
+HaxePunk vs HaxeFlixel:
+  - http://forum.haxepunk.com/index.php?topic=385.0
+
+iOS workflow:
+  - http://forum.haxepunk.com/index.php?topic=371.msg1005#msg1005
+  
+shoulds:
+  - use bitmap drawings and just scale them in game. When the size is figured out, then resize the image. This is much better than creating vector graphics with flash.
+  
+gotchas:
+  - centering the registration point is weird
+    - you have to use image.centerOrigin, then set the entity's graphic
+  - can't use this.scene in new constructor of an entity, have to use in added or HXP.scene
+  - can't use getClass or similar scene-entity functions until the entities are added, which occurs the frame after you exectute scene.add
+  - creating an entity doesn't automatically create a hitbox, and so entity.width and entity.height return 0
+  
+code:
+		//var bd:BitmapData = new BitmapData(50, 50, true, 0xFF0000FF);
+		//var image:Image = new Image(bd);
