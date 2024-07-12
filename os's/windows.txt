@@ -1,60 +1,5 @@
 
 
-interaction:
-
-touchpad shortcuts:
-(until i upgrade to a touch-screen laptop)
-windows key -> touchpad
-
-old, don't use these:
-press lower-left corner of touchpad
-  - left-mouse-click
-press lower-right corner of touchpad
-  - right-mouse-click
-
-tap
-  - left-mouse-click
-two-finger-tap
-  - right-mouse-click
-double-tap, drag
-  - multi-select
-
-gestures:
-two-finger, move up/down
-  - scroll (inverted)
-pinch
-  - zoom, or scroll entire document quickly
-
-three/four-fingers
-  - up
-    - view apps and workspaces
-  - down
-    - show desktop
-      - up (after show desktop), restore desktop
-
-three-fingers
-left/right
-  - change apps
-
-four-fingers
-left/right
-  - change workspace
-
-
-keyboard shortcuts:
-alt+tab
-  - show apps (in current workspace) and select next app
-  + alt+tab again to move selection to next app
-  + alt+shift+tab to move selection to previous app
-c+s
-  - save
-c+w
-  - close
-f2
-  - rename
-
-
-
 package managers:
 winget
   - added to windows 10 sometime
@@ -78,3 +23,5 @@ chocolatey vs windows store for others
 
 
 https://daftdev.blog/2024/04/01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use/
+
+
