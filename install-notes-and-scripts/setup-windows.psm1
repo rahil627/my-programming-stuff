@@ -70,7 +70,7 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     terminal_text_editor = "Helix.Helix"
     dropbox = "Dropbox.Dropbox"
     # todo: choose a browser
-    browser = eloston.ungoogled-chromium # with uBlock
+    browser = "eloston.ungoogled-chromium" # with uBlock
     # setup_browser
     # brave # comes with adblocker, privacy, etc.
     # thorium # maintained by one person
