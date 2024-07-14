@@ -147,6 +147,7 @@ function setup_browser {
 }
 
 function backup_vscode {
+    # just use settings -> settings sync
     code --list-extensions > extensions-list.txt
 }
 function setup_vscode {
