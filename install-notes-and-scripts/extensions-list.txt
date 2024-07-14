@@ -1,0 +1,15 @@
+daltonmenezes.aura-theme
+dendron.dendron
+dendron.dendron-markdown-shortcuts
+dendron.dendron-paste-image
+enkia.tokyo-night
+github.copilot
+github.copilot-chat
+haxefoundation.haxe-hl
+jasew.vscode-helix-emulation
+ms-vscode.powershell
+nadako.vshaxe
+pawelborkar.jellyfish
+redhat.vscode-yaml
+robbowen.synthwave-vscode
+shopify.ruby-lsp
