@@ -117,6 +117,9 @@ function setup_shell {
     # todo: catch error then try
     #Invoke-Expression -C "Update-Help -Verbose -Force -ErrorAction SilentlyContinue"
 
+    # copy $profile
+    Invoke Expression -C "cp .\Microsoft.PowerShell_profile.ps1 $profile"
+    
     # TODO: save/load settings file?
     # copy-item windows-dotfiles/powershell/settings.json -destination C:\Users\rahil\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
     #  - the theme is contained in the settings file under schema

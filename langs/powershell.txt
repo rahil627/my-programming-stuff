@@ -9,9 +9,25 @@ doesn't like '-', or any special characters except '_'
 
 # environment vars
 $Env:PSModulePath -split (';')
+$PROFILE # your powershell's settings go here
 
 # learn x in y minutes
 Invoke-Expression -Command "ls"
 $array = @("stuff");
 $hash = @{key = "value"}
+
+
+# put this at the end of a "module" (.psm1)
 Export-ModuleMember -Function * -Alias * -Variable *
+
+# check output properties of an object
+this-function-outputs-an-object | Get-Member
+or-this-way | select
+
+# then select the object's properties/columns you want to output
+some-function | select name, definition, description
+
+# properties and values? TODO
+or-this | Format-List Property *
+
+
