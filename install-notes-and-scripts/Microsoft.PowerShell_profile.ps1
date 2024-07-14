@@ -6,6 +6,7 @@
 # functions here magically become commands
 
 # powershell comes with a bunch of aliases for linux users
+# (although, keep in mind: powershell works on objects, linux works on text/strings!)
 # Get-Alias | select name, definition
 #
 # Name    Definition

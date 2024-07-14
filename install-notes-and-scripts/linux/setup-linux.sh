@@ -84,9 +84,10 @@ tldr -u
 
 
 # some text editors
-sudo pacman -S nano
-sudo pacman -S vi # for a minimal nvim (nvim --noplugin threw errors for me)
-sudo pacman -S neovim
+#sudo pacman -S nano
+#sudo pacman -S vi # for a minimal nvim (nvim --noplugin threw errors for me)
+#sudo pacman -S neovim
+sudo pacman helix
 
 sudo pacman -S wl-clipboard # make nvim clipboard work with wayland TODO: move to nvim config?
 

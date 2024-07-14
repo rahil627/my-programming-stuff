@@ -16,9 +16,8 @@ enable trash!!
     - search for trash
 
 change font
-  - TODO: find a way to increase DPI of display
   - from terrible Tinos to something else!
-  - in chrome browser -> settings -> search for apperance
+  - in chrome browser -> settings -> search for appearance
 
 change terminal appearance
   - terminal -> terminal settings (in the ui)

@@ -1,8 +1,10 @@
 # windows 11
 
-# don't need this so much since windows store is the ui for this
+# don't need this so much since windows store is the ui for this??
 
-# also doubles as a test of powershell dev (vs ruby)
+# also doubles as a test for powershell language (vs ruby)
+
+# TODO: see setup-linux.sh
 
 # put this script into memory
 # (automatically exports/imports functions to current session of powershell)
@@ -61,11 +63,11 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     # a windows shortcuts cheatsheet too!
     # there's actually a lot of gui goodies in here...
     powertoys = "Microsoft.PowerToys" # couldn't use enum because label has a '.' in it
-    media-player = "VideoLAN.VLC"
+    media_player = "VideoLAN.VLC" # also hash keys can't have a '-' in it
     
     # essential apps
-    simple-gui-text-editor = "SublimeHQ.SublimeText" # todo: --include-unknown
-    terminal-text-editor = "Helix.Helix"
+    simple_gui_text_editor = "SublimeHQ.SublimeText" # todo: --include-unknown
+    terminal_text_editor = "Helix.Helix"
     dropbox = "Dropbox.Dropbox"
     # todo: choose a browser
     browser = eloston.ungoogled-chromium # with uBlock
@@ -87,7 +89,7 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     #   - open terminal -> click on the down-arrow near new tab location -> set startup/default profile
     # todo: no way to do this via command line? :/
     vscode = "Microsoft.VisualStudioCode"
-    dotnet-framework = "Microsoft.dotNetFramework" # needed for powershell lsp
+    dotnet_framework = "Microsoft.dotNetFramework" # needed for powershell lsp
     git = "Git.Git" #winget install --id Git.Git -e --source winget
 
 
@@ -142,6 +144,13 @@ function setup_browser {
     #  - an ungoogled google search engine
     # follow instructions on the first screen to set up a way to install apps from the chrome web store
     # uBlock origin
+}
+
+function backup_vscode {
+    code --list-extensions > extensions-list.txt
+}
+function setup_vscode {
+    get-content extensions.list |ForEach-Object { code --install-extension $_}
 }
 
 function install_winget {
