@@ -19,6 +19,8 @@
 
 # clean install windows 11
 # https://www.microsoft.com/en-us/software-download/windows11
+# find key using this powershell command:
+# (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
 
 
 # some inspiration
@@ -112,6 +114,11 @@ function install_all_apps($apps) { # todo: is this casting a dynamic var?
     foreach ($app in $apps) {
         install-app($app); # app.ToString() by default
     }
+}
+
+function backup_terminal_settings {
+    $filepath = $home+"\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+    copy-item $filepath .
 }
 
 function setup_shell {

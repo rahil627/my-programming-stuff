@@ -1,0 +1,392 @@
+{
+   "checksum": "8e2f3655c3681718178887d9e1b3088c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13365113403098624",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13365245400126127",
+                  "date_last_used": "0",
+                  "guid": "bd3385a3-28b7-408a-9046-bc4bd6cda999",
+                  "id": "7",
+                  "name": "ungoogled-chromium first run page",
+                  "type": "url",
+                  "url": "chrome://ungoogled-first-run/"
+               }, {
+                  "date_added": "13365245400126189",
+                  "date_last_used": "0",
+                  "guid": "b6a3ad67-5acd-4ecd-b4c2-59a0786a1d39",
+                  "id": "8",
+                  "name": "5 tips to supercharge your developer career in 2024 - The GitHub Blog",
+                  "type": "url",
+                  "url": "https://github.blog/2024-05-01-5-tips-to-supercharge-your-developer-career-in-2024/"
+               }, {
+                  "date_added": "13365245400126252",
+                  "date_last_used": "0",
+                  "guid": "013f4a68-129e-4b8d-86c3-30e0b7ed916d",
+                  "id": "9",
+                  "name": "How to get in the flow while coding (and why it’s important) - The GitHub Blog",
+                  "type": "url",
+                  "url": "https://github.blog/2024-01-22-how-to-get-in-the-flow-while-coding-and-why-its-important/"
+               }, {
+                  "date_added": "13365245400126953",
+                  "date_last_used": "0",
+                  "guid": "23148c79-6c5d-4449-8d12-40df9ccb7b64",
+                  "id": "10",
+                  "name": "10 unexpected ways to use GitHub Copilot - The GitHub Blog",
+                  "type": "url",
+                  "url": "https://github.blog/2024-01-22-10-unexpected-ways-to-use-github-copilot/"
+               }, {
+                  "date_added": "13365245400127018",
+                  "date_last_used": "0",
+                  "guid": "cb0f5590-4213-4d34-a720-9e701d4341a9",
+                  "id": "11",
+                  "name": "A developer’s second brain: Reducing complexity through partnership with AI - The GitHub Blog",
+                  "type": "url",
+                  "url": "https://github.blog/2024-01-17-a-developers-second-brain-reducing-complexity-through-partnership-with-ai/"
+               }, {
+                  "date_added": "13365245400127129",
+                  "date_last_used": "0",
+                  "guid": "107b3daa-61d7-4a31-a61a-2eb559d614f2",
+                  "id": "12",
+                  "name": "Email settings",
+                  "type": "url",
+                  "url": "https://github.com/settings/emails"
+               }, {
+                  "date_added": "13365245400127179",
+                  "date_last_used": "0",
+                  "guid": "153368e7-b6ba-497e-8766-11dee119ef56",
+                  "id": "13",
+                  "name": "Helix Keyboard Shortcuts by HiddenMonkey - Download free from Cheatography - Cheatography.com: Cheat Sheets For Every Occasion",
+                  "type": "url",
+                  "url": "https://cheatography.com/hiddenmonkey/cheat-sheets/helix/"
+               }, {
+                  "date_added": "13365245400127239",
+                  "date_last_used": "0",
+                  "guid": "69cd4996-0635-4675-8190-310889cefe82",
+                  "id": "14",
+                  "name": "Battle of the Text Editors",
+                  "type": "url",
+                  "url": "https://matduggan.com/battle-of-the-text-editors/"
+               }, {
+                  "date_added": "13365245400127317",
+                  "date_last_used": "0",
+                  "guid": "b6da1b91-3b59-4c35-b6a3-f91d5b9566bd",
+                  "id": "15",
+                  "name": "The joy of learning Helix (and probably other modal, terminal-based editors) | pawelgrzybek.com",
+                  "type": "url",
+                  "url": "https://pawelgrzybek.com/the-joy-of-learning-helix-and-probably-other-modal-terminal-based-editors/"
+               }, {
+                  "date_added": "13365245400127386",
+                  "date_last_used": "0",
+                  "guid": "efceb506-71df-46f7-9cf2-c7eaace51870",
+                  "id": "16",
+                  "name": "WinGet and font support · microsoft/winget-cli · Discussion #4515",
+                  "type": "url",
+                  "url": "https://github.com/microsoft/winget-cli/discussions/4515"
+               }, {
+                  "date_added": "13365245400127439",
+                  "date_last_used": "0",
+                  "guid": "7ba2162e-fb4e-4408-9a17-68ab12f3db44",
+                  "id": "17",
+                  "name": "Releases · subframe7536/maple-font",
+                  "type": "url",
+                  "url": "https://github.com/subframe7536/maple-font/releases"
+               }, {
+                  "date_added": "13365245400127475",
+                  "date_last_used": "0",
+                  "guid": "26f824ef-2e9b-475b-8f68-86e9add8b4cb",
+                  "id": "18",
+                  "name": "IBM Plex Mono - Google Fonts",
+                  "type": "url",
+                  "url": "https://fonts.google.com/specimen/IBM+Plex+Mono/tester"
+               }, {
+                  "date_added": "13365245400127515",
+                  "date_last_used": "0",
+                  "guid": "2f36278e-50da-4809-b177-5801504608d3",
+                  "id": "19",
+                  "name": "Settings - Default browser",
+                  "type": "url",
+                  "url": "chrome://settings/defaultBrowser"
+               }, {
+                  "date_added": "13365245400127549",
+                  "date_last_used": "0",
+                  "guid": "f15378f0-7b58-472d-91a3-7d28caab1d89",
+                  "id": "20",
+                  "name": "Startpage Search Results",
+                  "type": "url",
+                  "url": "https://www.startpage.com/sp/search?query=reddit+best+way+to+store+passwords&cat=web&pl=opensearch&language=english"
+               }, {
+                  "date_added": "13365245400127598",
+                  "date_last_used": "0",
+                  "guid": "93c516e5-3e09-468d-907b-bd6794254117",
+                  "id": "21",
+                  "name": "Startpage Search Results",
+                  "type": "url",
+                  "url": "https://www.startpage.com/sp/search"
+               }, {
+                  "date_added": "13365245400127636",
+                  "date_last_used": "0",
+                  "guid": "649f5031-cfab-411c-907c-e1fef909a1b8",
+                  "id": "22",
+                  "name": "Open Source Password Managers (Questions) : r/fossdroid",
+                  "type": "url",
+                  "url": "https://www.reddit.com/r/fossdroid/comments/17yhgsd/open_source_password_managers_questions/"
+               }, {
+                  "date_added": "13365245400127682",
+                  "date_last_used": "0",
+                  "guid": "1031af5f-6e41-4880-a3ab-4ad97f29d1ce",
+                  "id": "23",
+                  "name": "Startpage Search Results",
+                  "type": "url",
+                  "url": "https://www.startpage.com/sp/search"
+               }, {
+                  "date_added": "13365245400127716",
+                  "date_last_used": "0",
+                  "guid": "98b7d9d8-f0e7-4093-a37a-b99b86a59152",
+                  "id": "24",
+                  "name": "How to Back Up and Restore Your Windows Terminal Settings",
+                  "type": "url",
+                  "url": "https://www.makeuseof.com/back-up-restore-windows-terminal-settings/"
+               }, {
+                  "date_added": "13365245400127759",
+                  "date_last_used": "0",
+                  "guid": "b3e2c85b-8a81-486b-9114-3466ab8f4251",
+                  "id": "25",
+                  "name": "Startpage Search Results",
+                  "type": "url",
+                  "url": "https://www.startpage.com/sp/search?query=helix+set+line+number+off&cat=web&pl=opensearch&language=english"
+               }, {
+                  "date_added": "13365245400127804",
+                  "date_last_used": "0",
+                  "guid": "fee8b404-70e4-4fb1-9d2f-ab9ed1d0f2e4",
+                  "id": "26",
+                  "name": "Configuration",
+                  "type": "url",
+                  "url": "https://docs.helix-editor.com/master/configuration.html#editor-section"
+               }, {
+                  "date_added": "13365245400127844",
+                  "date_last_used": "0",
+                  "guid": "8d5bac63-9cb6-492b-be21-7cd26a8a889b",
+                  "id": "27",
+                  "name": "Startpage Search Results",
+                  "type": "url",
+                  "url": "https://www.startpage.com/sp/search?query=copy+file+in+powershel&cat=web&pl=opensearch&language=english"
+               }, {
+                  "date_added": "13365245400127886",
+                  "date_last_used": "0",
+                  "guid": "54b09dab-3bf7-4991-b16a-4312ae202fe9",
+                  "id": "28",
+                  "name": "Copy-Item (Microsoft.PowerShell.Management) - PowerShell | Microsoft Learn",
+                  "type": "url",
+                  "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-7.4#examples"
+               }, {
+                  "date_added": "13365245400127933",
+                  "date_last_used": "0",
+                  "guid": "125284c1-d80a-4532-ac66-69425c1a787b",
+                  "id": "29",
+                  "name": "Startpage Search Results",
+                  "type": "url",
+                  "url": "https://www.startpage.com/sp/search"
+               }, {
+                  "date_added": "13365245400127965",
+                  "date_last_used": "0",
+                  "guid": "272ba72a-da28-4c09-a2b1-b2e116bd8982",
+                  "id": "30",
+                  "name": "What is this new \"Windows Backup\" app : r/windows",
+                  "type": "url",
+                  "url": "https://www.reddit.com/r/windows/comments/16jbr38/what_is_this_new_windows_backup_app/"
+               } ],
+               "date_added": "13365245400126066",
+               "date_last_used": "0",
+               "date_modified": "13365245400127965",
+               "guid": "affb0546-b4f0-49b2-91ed-f1b8ddb2217b",
+               "id": "6",
+               "name": "save-all-tabs",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "children": [ {
+                     "date_added": "13365245418882733",
+                     "date_last_used": "0",
+                     "guid": "efe19c95-7058-4fe0-9aba-050c68dc7855",
+                     "id": "33",
+                     "name": "Wells Fargo - Thank you for visiting",
+                     "type": "url",
+                     "url": "https://connect.secure.wellsfargo.com/auth/secureLogout?st=1720734302&timeout=true&SAMLart=AAQCa%2BoEQCR14WDgSxaU4QNGCHpGcoS1PL02mL2AdG%2F9Uief4IRG5lM1rUs%3D&DestinationApp=loginapp"
+                  }, {
+                     "date_added": "13365245418882865",
+                     "date_last_used": "0",
+                     "guid": "e0b227cd-c746-4087-814f-06e36f08ec94",
+                     "id": "34",
+                     "name": "We suspended online access to protect your accounts - rahil627@gmail.com - Gmail",
+                     "type": "url",
+                     "url": "https://mail.google.com/mail/u/0/#search/wells+fargo/FMfcgzQVwnfPHgVvBwbdsHPChqJMhMph"
+                  }, {
+                     "date_added": "13365245418882948",
+                     "date_last_used": "0",
+                     "guid": "b2c5ab0c-8cd9-454d-a6c7-55840e767cb1",
+                     "id": "35",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=ucpath&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883031",
+                     "date_last_used": "0",
+                     "guid": "194f22a1-5d71-499e-ae51-8ccaed36e59e",
+                     "id": "36",
+                     "name": "Search | UCPath",
+                     "type": "url",
+                     "url": "https://ucpath.universityofcalifornia.edu/esearch#q=gmail&sort=relevancy"
+                  }, {
+                     "date_added": "13365245418883097",
+                     "date_last_used": "0",
+                     "guid": "3fc48896-2a61-47bf-b1e0-fdcdd2218aa5",
+                     "id": "37",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=berkeley+gmail&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883159",
+                     "date_last_used": "0",
+                     "guid": "2e06e89b-c141-4dee-84bc-97a0f5e6a579",
+                     "id": "38",
+                     "name": "Inbox (114) - rahil627@berkeley.edu - UC Berkeley Mail",
+                     "type": "url",
+                     "url": "https://mail.google.com/mail/u/1/#inbox"
+                  }, {
+                     "date_added": "13365245418883206",
+                     "date_last_used": "0",
+                     "guid": "b7b0c081-e7b8-488a-b815-546745791f31",
+                     "id": "39",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=venmo+purchases+for+rent&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883258",
+                     "date_last_used": "0",
+                     "guid": "9862a8ad-e4cd-4969-9876-8377e7f35e90",
+                     "id": "40",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=%22turn+on+purchases%22+venmo&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883312",
+                     "date_last_used": "0",
+                     "guid": "a3daed4f-93b5-4e0b-8c70-2a28d451bf33",
+                     "id": "41",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=venmo&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883357",
+                     "date_last_used": "0",
+                     "guid": "373cc0a3-6ce7-45b4-bb7a-de419021b63c",
+                     "id": "42",
+                     "name": "Venmo",
+                     "type": "url",
+                     "url": "https://account.venmo.com/settings/payment-methods/bankaccounts/add"
+                  }, {
+                     "date_added": "13365245418883400",
+                     "date_last_used": "0",
+                     "guid": "24ff6224-5da9-472b-a703-65053c99c101",
+                     "id": "43",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=wells+fargo+how+to+set+up+digital+card&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883454",
+                     "date_last_used": "0",
+                     "guid": "a7712209-5d1e-4008-ae11-e6e98693ef6d",
+                     "id": "44",
+                     "name": "Wells Fargo Bank | Financial Services & Online Banking",
+                     "type": "url",
+                     "url": "https://www.wellsfargo.com/"
+                  }, {
+                     "date_added": "13365245418883498",
+                     "date_last_used": "0",
+                     "guid": "996fadfd-b97b-497a-bec8-493d634bd394",
+                     "id": "45",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=what+payment+methods+does+venmo+accept&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883546",
+                     "date_last_used": "0",
+                     "guid": "a5a9140c-d1f8-48ac-8daf-adb8b4963297",
+                     "id": "46",
+                     "name": "Venmo - Share Payments",
+                     "type": "url",
+                     "url": "https://venmo.com/legal/us-payment-method-rights/"
+                  }, {
+                     "date_added": "13365245418883592",
+                     "date_last_used": "0",
+                     "guid": "79ff99ce-f92a-4da0-87c0-6af546e37ce4",
+                     "id": "47",
+                     "name": "Startpage Search Results",
+                     "type": "url",
+                     "url": "https://www.startpage.com/sp/search?query=helix+turn+off+auto+format&cat=web&pl=opensearch&language=english"
+                  }, {
+                     "date_added": "13365245418883646",
+                     "date_last_used": "0",
+                     "guid": "beb69eb8-83fa-4ddc-8498-efb55a16d963",
+                     "id": "48",
+                     "name": "Make format on save optional · Issue #756 · helix-editor/helix",
+                     "type": "url",
+                     "url": "https://github.com/helix-editor/helix/issues/756"
+                  } ],
+                  "date_added": "13365245418882676",
+                  "date_last_used": "0",
+                  "date_modified": "13365245418883646",
+                  "guid": "67a04ce8-5feb-4553-9c31-42550daea80a",
+                  "id": "32",
+                  "name": "save-all-tabs-2",
+                  "type": "folder"
+               } ],
+               "date_added": "13365245418882447",
+               "date_last_used": "0",
+               "date_modified": "13365245418883798",
+               "guid": "321b6ebd-ebb8-4cef-800f-59b5d8730e2d",
+               "id": "31",
+               "name": "New folder",
+               "type": "folder"
+            } ],
+            "date_added": "13365245400123246",
+            "date_last_used": "0",
+            "date_modified": "13365245400128089",
+            "guid": "81491ef8-7592-4e18-a7d0-bf0dd4575a7e",
+            "id": "5",
+            "name": "New folder",
+            "type": "folder"
+         } ],
+         "date_added": "13365113403098630",
+         "date_last_used": "0",
+         "date_modified": "13365124043551942",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13365113403098631",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
