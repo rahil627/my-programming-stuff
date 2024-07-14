@@ -17,6 +17,10 @@
 
 
 
+# clean install windows 11
+# https://www.microsoft.com/en-us/software-download/windows11
+
+
 # some inspiration
 # https://gist.github.com/brandonkal/0ababb7eaf65e97234b21d50c88edce8
 # https://github.com/Kugane/winget
