@@ -5,7 +5,7 @@ notes here are related to solely the language itself
 
 # naming conventions
 seems to be case insensitive, which is great as .net uses caps heavily
-doesn't like '-', or any special characters except '_' 
+doesn't like '-', or any special characters except '_'
 
 # environment vars
 $Env:PSModulePath -split (';')
@@ -15,6 +15,8 @@ $PROFILE # your powershell's settings go here
 Invoke-Expression -Command "ls"
 $array = @("stuff");
 $hash = @{key = "value"}
+
+"string substitution is easy as $string $array-value $hash-value"
 
 
 # put this at the end of a "module" (.psm1)
@@ -29,5 +31,4 @@ some-function | select name, definition, description
 
 # properties and values? TODO
 or-this | Format-List Property *
-
 

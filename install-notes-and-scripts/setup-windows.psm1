@@ -48,124 +48,34 @@
 # instead of writing a script, put things into objects
 # then can run it interactively
 
-$apps_to_try =  @( # array
-    "SomePythonThings.WingetUIStore"
-    "GitHub.GitHubDesktop" # compare with github cli
-    "Microsoft.PCManager"
 
-    # dendron is a vs-code extension
-    "Obsidian.Obsidian"
-    "Joplin.Joplin"
-    
-    "appmakes.Typora"
-)
-
-$apps = @{ # enum won't work, and psobject seems like a hassle
-
-    # OS essentials
-    # 260mb!
-    # currently need it to remap caps lock to escape (at the OS level)
-    # "fancy zones" window manager looks great too!
-    # a windows shortcuts cheatsheet too!
-    # there's actually a lot of gui goodies in here...
-    powertoys = "Microsoft.PowerToys" # couldn't use enum because label has a '.' in it
-    media_player = "VideoLAN.VLC" # also hash keys can't have a '-' in it
-    
-    # essential apps
-    simple_gui_text_editor = "SublimeHQ.SublimeText" # todo: --include-unknown
-    terminal_text_editor = "Helix.Helix"
-    dropbox = "Dropbox.Dropbox"
-    # todo: choose a browser
-    browser = "eloston.ungoogled-chromium" # with uBlock
-    # setup_browser
-    # brave # comes with adblocker, privacy, etc.
-    # thorium # maintained by one person
-    # cromite
-    # librewolf or betterfox # firefox with sane defaults
-    spotify = "Spotify.Spotify"
-    discord = "Discord.Discord" #"SlackTechnologies.Slack"
-    #Telegram.TelegramDesktop # just use phone app
-    #Microsoft.Skype
-
-    steam = "Valve.Steam"
-
-    # programming-related
-    powershell = "Microsoft.Powershell" # strangely, windows 11 ships with v1, currently at v7!!
-    # make it the default terminal
-    #   - open terminal -> click on the down-arrow near new tab location -> set startup/default profile
-    # todo: no way to do this via command line? :/
-    vscode = "Microsoft.VisualStudioCode"
-    dotnet_framework = "Microsoft.dotNetFramework" # needed for powershell lsp
-    git = "Git.Git" #winget install --id Git.Git -e --source winget
-
-
-    #tightnvc?
-
- } #| foreach {winget install -e --id $_}
-
-function install_app($id) { # restriction: '-' is a special char for powershell commands
-    $cmd = "winget install --id "+$id # store string to avoid command substitution
-    # without id, i think it will run into multiple choices/sources
-    # todo: --source winget
-    Invoke-Expression -Command $cmd
-}
-
-function install_all_apps($apps) { # todo: is this casting a dynamic var?
-    foreach ($app in $apps) {
-        install-app($app); # app.ToString() by default
-    }
-}
-
+# backup
 function backup_terminal_settings {
     $filepath = $home+"\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
     copy-item $filepath .
 }
 
-function setup_shell {
-    #Microsoft.Powershell # strangely, windows 11 ships with v1, currently at v7!!
-    # make it the default terminal
-    #   - open terminal -> click on the down-arrow near new tab location -> set startup/default profile
-    # todo: no way to do this via command line? :/
-    Invoke-Expression -C "update-help";
-    # todo: catch error then try
-    #Invoke-Expression -C "Update-Help -Verbose -Force -ErrorAction SilentlyContinue"
+# install apps
+import-module .\setup-windows-install-apps.psm1
 
-    # copy $profile
-    Invoke Expression -C "cp .\Microsoft.PowerShell_profile.ps1 $profile"
-    
-    # TODO: save/load settings file?
-    # copy-item windows-dotfiles/powershell/settings.json -destination C:\Users\rahil\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
-    #  - the theme is contained in the settings file under schema
-    #  - note: not sure what will happen with a font that's not installed..
-    # TODO: what does windows backup save?
-}
+# uninstall apps / debloat
+import-module .\setup-windows-debloat.psm1
 
-function setup_git {
-    Invoke-Expression -C git config --global user.name "ra"
-    Invoke-Expression -C git config --global user.email "1132053+rahil627@users.noreply.github.com"
-}
-
-function setup_browser {
-    # copy ungoogled chromium settings?
-    #   - https://superuser.com/questions/149032/where-is-the-chrome-settings-file
-    #   - file:///C:/Users/rahil/AppData/Local/Chromium/User%20Data/Default/Preferences
-    #   - a giant json file, may have to do it manually :/
-    #   - i don't even see the search engine setting
-    # startpage as default search engine (delete others)
-    #  - an ungoogled google search engine
-    # follow instructions on the first screen to set up a way to install apps from the chrome web store
-    # uBlock origin
-}
-
-function backup_vscode {
-    # just use settings -> settings sync
-    code --list-extensions > extensions-list.txt
-}
-function setup_vscode {
-    get-content extensions.list |ForEach-Object { code --install-extension $_}
-}
-
+# setup
 function install_winget {
+
+    # TODO: winget was pre-installed, but it didn't work
+    # go to windows store, install "app installer"
+    # https://apps.microsoft.com/detail/9nblggh4nns1
+
+
+  # https://github.com/microsoft/winget-cli/issues/3832
+  #Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile winget.msixbundle
+  #Add-AppxPackage winget.msixbundle
+  #del winget.msixbundle
+
+
+    # deprecated?
     # this solution uses specific version for dependencies :/
 
     # https://gist.github.com/Ketyow/daac17e30060025f1dd4a55099b5d68b
@@ -173,7 +83,7 @@ function install_winget {
         
     # based on this gist: https://gist.github.com/crutkas/6c2096eae387e544bd05cde246f23901
     $hasPackageManager = Get-AppPackage -name 'Microsoft.DesktopAppInstaller'
-    if (!$hasPackageManager -or [version]$hasPackageManager.Version -lt [version]"1.10.0.0") {
+    if (!$hasPackageManager -or [version]$hasPackageManager.Version -lt [version]"1.10.0.0") { # not sure what's wrong with v1.10
         "Installing winget Dependencies"
         Add-AppxPackage -Path 'https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx'
 
@@ -190,6 +100,86 @@ function install_winget {
         "winget already installed"
     }
 }
+
+# powershell -executionpolicy bypass
+
+function setup_shell {
+    install_app($apps.shell) # windows 11 ships with windows powershell v1(??), not the more recent open-source powershell (v5+)
+	
+    # TODO: maybe saves from windows backup
+    # make it the default terminal
+    #   - open terminal -> click on the down-arrow near new tab location -> set startup/default profile
+    # todo: no way to do this via command line? :/
+    update-help
+    # todo: catch error then try
+    #Invoke-Expression -C "Update-Help -Verbose -Force -ErrorAction SilentlyContinue"
+
+    # copy $profile
+    copy-item .\Microsoft.PowerShell_profile.ps1 $profile
+    
+    # TODO: save/load settings file?
+    # copy-item windows-dotfiles/powershell/settings.json -destination C:\Users\rahil\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+    #  - the theme is contained in the settings file under schema
+    #  - note: not sure what will happen with a font that's not installed..
+    # TODO: what does windows backup save?
+}
+
+function setup_git {
+    install_app($apps.git)
+
+# TODO
+# reload path vs start a new session andd pass the rest of the commands in
+# function reload path
+# https://stackoverflow.com/questions/17794507/reload-the-path-in-powershell
+# $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+
+    git config --global user.name "ra"
+    git config --global user.email "1132053+rahil627@users.noreply.github.com"
+}
+
+function setup_browser {
+    install_app($apps.browser)
+    # copy ungoogled chromium settings?
+    #  - hopefully windows backup / appdata saves this
+    #   - https://superuser.com/questions/149032/where-is-the-chrome-settings-file
+    #   - file:///C:/Users/rahil/AppData/Local/Chromium/User%20Data/Default/Preferences
+    #   - a giant json file, may have to do it manually :/
+    #   - i don't even see the search engine setting
+
+    # settings -> on startup -> continue where you left off
+
+    # enable chromium web store
+    # https://github.com/NeverDecaf/chromium-web-store
+    #  - follow instructions on this page
+# Installation
+# Go to chrome://flags and search for the #extension-mime-request-handling flag and set it to Always prompt for install.
+# Download the .crx from Releases, you should be prompted to install the extension.
+#  - https://github.com/NeverDecaf/chromium-web-store/releases/latest
+    # pin then web store icon
+
+    # startpage as default search engine (delete others)
+    #  - an ungoogled google search engine
+    # follow instructions on the first screen to set up a way to install apps from the chrome web store
+    # uBlock origin
+}
+
+function backup_vscode {
+    # just use settings -> settings sync
+    code --list-extensions > extensions-list.txt
+}
+function setup_vscode {
+    install_app($vscode)
+
+    # must manually setup git/github with oauth?
+    #   - go to source control view
+    #   - clone repo
+    #   - on the top bar, a selection of open github should appear
+    #   - go through the process of github oauth
+    
+    get-content extensions.list |ForEach-Object { code --install-extension $_}
+}
+
+
 
 # by default all functions and aliases are exported into current session of powershell
 #Export-ModuleMember -Function install-everything
