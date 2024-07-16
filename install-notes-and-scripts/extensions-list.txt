@@ -1,15 +1,49 @@
+// i think vscodium avoids using windows to sync settings, and so you must save your extensions list and settings.json on your own
+
+// if an extension doesn't exist on the marketplace, then you must download and execute the .vsix file manually
+//  - i think there's a way to add it to the vscodium marketplace, instructions on the vscodium github somewhere
+
+//codium --list-extensions > extensions-list-current.txt
+
+// current extensions (automatically ordered by alphabet)
 daltonmenezes.aura-theme
 dendron.dendron
-dendron.dendron-markdown-shortcuts
-dendron.dendron-paste-image
+dendron.dendron-markdown-links
+elixir-lsp.elixir-ls
 enkia.tokyo-night
-github.copilot
-github.copilot-chat
-haxefoundation.haxe-hl
 jasew.vscode-helix-emulation
+khan.two-monokai
+koichisasada.vscode-rdbg
 ms-vscode.powershell
 nadako.vshaxe
+pantajoe.vscode-elixir-credo
 pawelborkar.jellyfish
+rebornix.ruby
 redhat.vscode-yaml
 robbowen.synthwave-vscode
 shopify.ruby-lsp
+sorbet.sorbet-vscode-extension
+victorbjorklund.phoenix
+wingrunr21.vscode-ruby
+
+// diff from before re-instaling windows
+//dendron.dendron-markdown-shortcuts
+//dendron.dendron-paste-image
+github.copilot
+// TODO: not working
+github.copilot-chat
+// TODO: not working
+//haxefoundation.haxe-hl
+// not working
+
+// diff from chromebook extensions list
+//bmalehorn.vscode-fish
+  - rip
+//crystal-lang-tools.crystal-lang
+  - rip
+//Shopify.ruby-extensions-pack
+  // missing from vscodium, but i have all of it's contents:
+  // rdbg, sorbet, ruby-lsp
+//castwide.solargraph
+  - older ruby lsp, replace by shopify.ruby-lsp
+
