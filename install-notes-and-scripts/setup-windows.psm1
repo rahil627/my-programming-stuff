@@ -80,7 +80,7 @@ function install_winget {
 
     # https://gist.github.com/Ketyow/daac17e30060025f1dd4a55099b5d68b
     # this one looks better, along with the rest of the script!
-        
+
     # based on this gist: https://gist.github.com/crutkas/6c2096eae387e544bd05cde246f23901
     $hasPackageManager = Get-AppPackage -name 'Microsoft.DesktopAppInstaller'
     if (!$hasPackageManager -or [version]$hasPackageManager.Version -lt [version]"1.10.0.0") { # not sure what's wrong with v1.10
@@ -91,7 +91,7 @@ function install_winget {
 
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
         $releases = Invoke-RestMethod -uri $releases_url
-        $latestRelease = $releases.assets | Where { $_.browser_download_url.EndsWith('msixbundle') } | Select -First 1
+        $latestRelease = $releases.assets | Where { $_.browser_download_url.EndsWith('msixbundle') } | Select-Object -First 1
 
         "Installing winget from $($latestRelease.browser_download_url)"
         Add-AppxPackage -Path $latestRelease.browser_download_url
@@ -105,7 +105,7 @@ function install_winget {
 
 function setup_shell {
     install_app($apps.shell) # windows 11 ships with windows powershell v1(??), not the more recent open-source powershell (v5+)
-	
+
     # TODO: maybe saves from windows backup
     # make it the default terminal
     #   - open terminal -> click on the down-arrow near new tab location -> set startup/default profile
@@ -116,7 +116,7 @@ function setup_shell {
 
     # copy $profile
     copy-item .\Microsoft.PowerShell_profile.ps1 $profile
-    
+
     # TODO: save/load settings file?
     # copy-item windows-dotfiles/powershell/settings.json -destination C:\Users\rahil\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
     #  - the theme is contained in the settings file under schema
@@ -131,7 +131,7 @@ function setup_git {
 # reload path vs start a new session andd pass the rest of the commands in
 # function reload path
 # https://stackoverflow.com/questions/17794507/reload-the-path-in-powershell
-# $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+# $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
     git config --global user.name "ra"
     git config --global user.email "1132053+rahil627@users.noreply.github.com"
@@ -167,6 +167,7 @@ function backup_vscode {
     # just use settings -> settings sync
     code --list-extensions > extensions-list.txt
 }
+
 function setup_vscode {
     install_app($vscode)
 
@@ -175,7 +176,7 @@ function setup_vscode {
     #   - clone repo
     #   - on the top bar, a selection of open github should appear
     #   - go through the process of github oauth
-    
+
     get-content extensions.list |ForEach-Object { code --install-extension $_}
 }
 
