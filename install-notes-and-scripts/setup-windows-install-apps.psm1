@@ -8,11 +8,14 @@ $apps_to_try =  @( # array
     # dendron is a vs-code extension
     "Obsidian.Obsidian"
     "Joplin.Joplin"
-    
+
     "appmakes.Typora"
 )
 
 $apps = @{ # enum won't work, and psobject seems like a hassle
+    # software needed to run apps
+    dotnet_framework = "Microsoft.dotNetFramework" # needed for powershell lsp
+    vcpp_restributable = "Microsoft.VCRedist.2015+.x64"
 
     # OS essentials
     shell = "Microsoft.Powershell"
@@ -23,7 +26,7 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     # there's actually a lot of gui goodies in here...
     powertoys = "Microsoft.PowerToys" # couldn't use enum because label has a '.' in it
     #media_player = "VideoLAN.VLC" # also hash keys can't have a '-' in it
-    
+
     # essential apps
     simple_gui_text_editor = "SublimeHQ.SublimeText" # todo: --include-unknown
     terminal_text_editor = "Helix.Helix"
@@ -48,7 +51,6 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     # todo: no way to do this via command line? :/
     # TODO: try vscodium
     #vscode = "Microsoft.VisualStudioCode"
-    dotnet_framework = "Microsoft.dotNetFramework" # needed for powershell lsp
     git = "Git.Git" #winget install --id Git.Git -e --source winget # TODO: what's the -e flag?
 
 
@@ -61,7 +63,7 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
 function install_app($id) { # restriction: '-' is a special char for powershell commands
     winget install --id $id --source winget # store string to avoid command substitution
     # without id, i think it will search by default and run into multiple choices/sources
-    # with --source winget, can consistently upgrade all apps via "winget --upgrade" instead of the windows store 
+    # with --source winget, can consistently upgrade all apps via "winget --upgrade" instead of the windows store
 }
 
 function install_all_apps($apps) { # todo: is this casting a dynamic var?
