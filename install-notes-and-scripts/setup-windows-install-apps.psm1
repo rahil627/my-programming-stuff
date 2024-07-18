@@ -1,5 +1,19 @@
+
+# winget >= msstore
+# msstore requires signing into microsoft
+# msstore used to require msix installers, which where standard/cleaner (kinda sandboxed), but now they accept everything
+# with winget, can update all packages via "winget --upgrade" as opposed to using the microsoft store/windows settings gui
+# it's more likely the open-source community are better at keeping packages up-to-date over msstore's small team
+# given that i'm aiming for more privacy, alternative apps (ungoogled chromium, vscodium) will never exist on msstore
+# from a comment on reddit: "I always use winget. Store versions aren't always current. Not sure if they get auto updated, as it's not installing them via the store, just using the store's repository. I also skip the store version because you have to be signed in to use it and I use this on machines that aren't tied to an MS account. They're definitely not sandboxed."
+
+# https://winstall.app/
+# simple site to search through winget repos
+
 $apps_to_try =  @( # array
-    # TODO: try in sandboxie
+    # TODO: try in windows sandbox/sandboxie
+
+    "SublimeHQ.SublimeText" # TODO: --include-unknown
 
     "SomePythonThings.WingetUIStore"
     "GitHub.GitHubDesktop" # compare with github cli
@@ -13,12 +27,28 @@ $apps_to_try =  @( # array
 )
 
 $apps = @{ # enum won't work, and psobject seems like a hassle
-    # software needed to run apps
-    dotnet_framework = "Microsoft.dotNetFramework" # needed for powershell lsp
-    vcpp_restributable = "Microsoft.VCRedist.2015+.x64"
+
+    # windows 11 pro?
+    # only adds features aimed at businesses except for these important ones:
+    # windows sandbox, windows remote desktop, hyper-v, bitlocker
+    # alternatives exist for all of them: sandboxie, anydesk/etc., virtualbox/vmware/etc., something
+    # but it's nice to have these features *just work*
+    # ~$35 new with dvd or ~$25 for a "retail key", def worth the price!
 
     # OS essentials
     shell = "Microsoft.Powershell"
+
+    # otherwise find some cheap keys on ebay for 'eset nod32'
+    # https://old.reddit.com/r/antivirus/wiki/index#wiki_anti-virus_.28aka_anti-malware.29_developers
+    # conclusion from reddit as of 2024: windows defender or bitdefender free or eset nod32 [paid]
+    # note: kaspersky, the best free lightweight av, is gone now due to political reasons
+    # bitdefender uses a bunch of ram (200-700mb of 16gb), but hopefully less cpu because of it
+    # eset nod32 is much lighter on resources
+    # eset keys can be found online quite cheap ($16/year), but then it's another thing to worry about..
+    # windows defender is actually good now, though just as resource-hungry as bitdefender and with windows sandbox, might be all you need
+    # can use another tool to configure windows defender more
+    anti_virus = "Bitdefender.Bitdefender"
+    
     # 260mb!
     # currently need it to remap caps lock to escape (at the OS level)
     # "fancy zones" window manager looks great too!
@@ -27,8 +57,12 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     powertoys = "Microsoft.PowerToys" # couldn't use enum because label has a '.' in it
     #media_player = "VideoLAN.VLC" # also hash keys can't have a '-' in it
 
+    # software needed to run apps
+    dotnet_framework = "Microsoft.dotNetFramework"
+    vcpp_restributable = "Microsoft.VCRedist.2015+.x64"
+    
     # essential apps
-    simple_gui_text_editor = "SublimeHQ.SublimeText" # todo: --include-unknown
+    #simple_gui_text_editor = "SublimeHQ.SublimeText"
     terminal_text_editor = "Helix.Helix"
     dropbox = "Dropbox.Dropbox"
     # todo: choose a browser
@@ -49,8 +83,8 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     # make it the default terminal
     #   - open terminal -> click on the down-arrow near new tab location -> set startup/default profile
     # todo: no way to do this via command line? :/
-    # TODO: try vscodium
     #vscode = "Microsoft.VisualStudioCode"
+    vscode = "VSCodium.VSCodium" # works the same!, just extensions rely on people  adding them to a list
     git = "Git.Git" #winget install --id Git.Git -e --source winget # TODO: what's the -e flag?
 
 
