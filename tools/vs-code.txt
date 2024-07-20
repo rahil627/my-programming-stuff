@@ -22,19 +22,27 @@ alt+left-click file in file explorer
 c+left/right
   - previous/next word
 
+f+left/right
+  - beginning/end of line
+
 c+backspace
   - delete word
 
 f+up/down
-  - page up/down
+  - beginning/end of buffer (page up/down)
 
 alt+left/right
-  - go to previous/next place you went to
+  - go to previous/next place you went to (includes other files!)
 
 alt+up/down
   - move current line up/down
 
-  
+
+# useful commands
+git: clone
+  - will clone from github, if it's setup
+
+
 
 
 # backup settings

@@ -2,17 +2,20 @@
 
 conclusion:
 vs-code is indisputable
-  - with "helix for vs code" extension
+  - with "helix for vs code" (or other fav key-bindings) extension
+helix (or other fav terminal editor / key-bindings) for quick general use, along with cli tools, remote terminal use
 vs-studio for it's advanced features: deep debugging, run-time stuff, etc.
-helix (or other fav terminal editor) for quick general use, along with terminal tools, remote terminal use
-sublime text or notepad (windows) for plain text
-knowledge-base software for bigger, conceptually-linked sets of text
+helix or sublime text or notepad (windows) for simple editing
+(TODO: knowledge-base software for bigger, conceptually-linked sets of text??)
 
 
 
 gui editors:
 
 newer, simpler, things to try:
+**focus (editor)**
+  - a simpler emacs-style editor
+  - made with jai
 x/lapce
   - a vs-code copy in rust
     - in development?
@@ -54,7 +57,7 @@ notepad++
 textmate
   - a mac classic
 notepad2
-  - a great replacement for notepad
+  - a classic windows notepad replacement
 
 
 
@@ -65,14 +68,16 @@ also provides a clutter/distraction-free experience
 **helix**
   - the best of all past worlds: vim, doom-emacs, and kakoune
   - many pop-up menus similar to doom-emacs
-  - vim-like key-bindings, but more intuitive, lower learning curve, and less key-strokes
+  - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
   - "helix for vscode" extension
+    - TODO: ...no pop-up menus tho..?
 
 classics:
 neovim
   - vim
     - modal (normal, insert, visual/select, command)
-    - *heavily* key-board input user interface focused
+    - *heavily* key-board input user interface
+      - i personally feel more comfy using a touch-screen/mouse/keyboard combo
   - lua scripting for configs 'n plugins!
     - used to be in an archaic language: vimscript
   - some starter configs due to time wasted starting out from scratch
@@ -94,7 +99,7 @@ emacs
     - evil-mode to use vim-keybindings
   - prelude
       - a light-weight starter kit closer to vanilla emacs, in case doom is too much
-    
+
 
 
 

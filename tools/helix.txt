@@ -5,20 +5,22 @@ https://www.youtube.com/watch?v=xHebvTGOdH8
 
 vim-like:
 hjlk / arrow keys
-wb
+wb, (w)ord and (b)ack
 d delete, but no d#/dd nor y#/yy combos
 y
 p
-f,char highlight upto and including char
-t,char highlight until char
+f/F,char highlight upto/back-to and including char
+t/T,char highlight un(t)il/back-until char
 [ and ]
 
+https://stackoverflow.com/questions/7409134/english-mnemonics-to-vims-shortcuts
+  - TODO: learn some more
 
 new:
-x highlight line, paragraph/until next empty line
+x highlight line, paragraph/until next empty line (c+l in vscode/emacs)
 R replace with yanked register
-c clear char and insert
-; ? clear selection?
+c change (clear char and insert)
+; clear selection
 , clear multiple cursors
 alt+. repeat motion
 [f and ]f prev/next function
@@ -32,7 +34,8 @@ modes:
 from vim:
 esc normal-mode
 : command-mode
-i/I/a/A insert-mode, from vim
+i/I/a/A/o/O insert-mode, from vim
+  - insert/append/over
 v visual-mode (select), from vim
   - note: can also make selections in normal-mode, from emacs
   - s select-mode, search within selected text
