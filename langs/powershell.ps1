@@ -32,6 +32,7 @@ $hash = @{key = "value"}
 "string substitution is easy as $string $array-value $hash-value"
 
 winget list | select-string "some-app" # pipe 'n grep
+$string -match "regex" # pattern match operater (when not piping)
 
 
 # put this at the end of a "module" (.psm1)

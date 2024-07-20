@@ -13,6 +13,17 @@
 $apps_to_try =  @( # array
     # TODO: try in windows sandbox/sandboxie
 
+    # TODO: move taskbar to the side
+    # ..wtf. microsoft
+    # https://github.com/valinet/ExplorerPatcher
+    #  - reddit says this has it, but may be buggy
+
+    # TODO: research launcher software like Enso from wayyyy back
+    # https://github.com/microsoft/PowerToys/issues/20825
+    # powertoys run (fork of wox), flow.launcher (C#), wox (not well maintained, cross-platform)
+    # https://github.com/hlaueriksson/awesome-powertoys-run-plugins
+    #  - everything plugin for powertoys run
+
     "SublimeHQ.SublimeText" # TODO: --include-unknown
 
     "SomePythonThings.WingetUIStore"
@@ -21,7 +32,8 @@ $apps_to_try =  @( # array
 
     # dendron is a vs-code extension
     "Obsidian.Obsidian"
-    "Joplin.Joplin"
+    #"Logseq.Logseq"
+    #"Joplin.Joplin"
 
     "appmakes.Typora"
 )
@@ -48,7 +60,9 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     # windows defender is actually good now, though just as resource-hungry as bitdefender and with windows sandbox, might be all you need
     # can use another tool to configure windows defender more
     anti_virus = "Bitdefender.Bitdefender"
-    
+    # TODO: automate this, or does it save to app settings/windows backup?
+    # settings -> turn off recommendation notifications and special offers
+
     # 260mb!
     # currently need it to remap caps lock to escape (at the OS level)
     # "fancy zones" window manager looks great too!
@@ -60,7 +74,7 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     # software needed to run apps
     dotnet_framework = "Microsoft.dotNetFramework"
     vcpp_restributable = "Microsoft.VCRedist.2015+.x64"
-    
+
     # essential apps
     #simple_gui_text_editor = "SublimeHQ.SublimeText"
     terminal_text_editor = "Helix.Helix"
@@ -87,6 +101,10 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     vscode = "VSCodium.VSCodium" # works the same!, just extensions rely on people  adding them to a list
     git = "Git.Git" #winget install --id Git.Git -e --source winget # TODO: what's the -e flag?
 
+    # more dev specific
+    erlang = "Erlang.ErlangOTP" # for elixir
+    sql = "postgresql" # TODO: add install by search, add --source winget
+    # "PostgreSQL.PostgreSQL 16"
 
     #tightnvc?
 
@@ -95,9 +113,20 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
 # example use:
 # install_app($apps.shell)
 function install_app($id) { # restriction: '-' is a special char for powershell commands
-    winget install --id $id --source winget # store string to avoid command substitution
-    # without id, i think it will search by default and run into multiple choices/sources
+    $output = winget install --id $id --source winget # store string to avoid command substitution
+    # without id, i think it will search by name by default and run into multiple choices/sources
     # with --source winget, can consistently upgrade all apps via "winget --upgrade" instead of the windows store
+
+    # if package exists, do nothing
+
+    # if no id, use name/string to search for package and install
+    if ($output -match "No package found matching input criteria." ) {
+        winget install --name $id --source winget
+
+        # if multiple packages exist, do nothing
+    }
+
+
 }
 
 function install_all_apps($apps) { # todo: is this casting a dynamic var?
