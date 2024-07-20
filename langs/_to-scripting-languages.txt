@@ -1,13 +1,13 @@
 
 
 # post-windows powershell update
-powershell is what i was looking for. You get the .net framework, and a very neat and organized shell-scripting language. It's refreshing, clear, easy-to-understand, and infinitely more organized compared to linux shell scripts, which feels like a bunch of glue of open-source crap. Finally, a solid general-purpose lang made for shells! Yeah, it's verbose, it's got all that .net ilk, but it just feels lightyears better than the old linux stuff. Instead of glueing small linux apps together (sed/awk, head, tail, cat, etc.), you just have a very simple standard library. The only thing missing is the ruby syntax. If ever there was a place that needed standards, it was shell-scripting!
+powershell is what i was looking for. You get the .net framework--if you need it--, and a very neat and organized shell-scripting language. It's refreshing, clear, easy-to-understand, and infinitely more organized compared to linux shell scripts, which feels like a bunch of glue of open-source crap. Finally, a solid general-purpose lang made for shells! Yeah, it's verbose, it's got all that .net ilk, but it just feels lightyears better than the old linux stuff. Instead of glueing small linux apps together (sed/awk, head, tail, cat, etc.), you just have a very simple standard library (get-content -first/-last 10). The only thing missing is the ruby syntax. If ever there was a place that needed standards, it was shell-scripting!
 
 
 # conclusion
 so basically,
 
-**for C/C++ embedding, it might be best to just use/earn C/C++, or wait until Jai, or use Haxe or something that interops with C (everything?), as running a VM/byte-code interpreter has a cost that's not worth it for embedded/performace applications such as games** 
+**for C/C++ embedding, it might be best to just use/earn C/C++, or wait until Jai, or use Haxe or something that interops with C (everything?), as running a VM/byte-code interpreter has a cost that's not worth it for embedded/performace applications such as games**
 
 All of them have standard libraries, though, Lua with it's goal of minimal size, is the smallest, though in a charming in it's own charming way (see the very simple one-web-page manual). **Python's and Ruby's standard librares solid after decades of use, but def feels less standard compared to compiles languages, making breaking changes.**
 
@@ -110,8 +110,8 @@ https://stackoverflow.com/questions/5327340/ruby-vs-lua-as-scripting-language-fo
    - "One thing Lua has going for it is its ability to shuttle data between C++ (or C) and itself very easily. Essentially you're just pushing/popping data onto a stack in order to communicate between the two. Having multiple Lua environments up and running at the same time is quite simple as well (should you need that functionality). Although Lua is a garbage collected language, it's easy to prevent it from doing so on data that needs to stick around in your C++ code. Creating an extensible plugin system should be easy with Lua once you lay the groundwork. Swapping plugins (in this case, scripts) in and out at runtime is also pretty trivial (although this may be true for Ruby as well, I'm not familiar enough with it to know)."
      "One thing to think about is how much object-oriented stuff you want your scripts to be able to handle. Lua uses functions, tables, metatables, and prototypes to implement OO-like programming. Some people like it, some don't; personally I found it interesting to use, if a bit clunky at times. Not having used Ruby, I can't speak for it, but you may want to weigh your need for object/class support."
      "I think in your situation you should also consider how fast you want to get your project up and running. As you and others have noted, Ruby is hard to embed in C++, whereas Lua is not. Time is always precious and if you want to get something working ASAP, Lua is probably your best bet."
-     
-     
+
+
 
 
 https://www.lua.org/manual/5.4/manual.html

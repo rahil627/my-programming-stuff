@@ -10,10 +10,10 @@ red
 (ordered from basic to general)
 **powershell core** > fish > bash/zsh
   - batch commands, extremely simple scripts (in bash/powershell) for portability
-  - personal basic shell functions (powershell > fish; fish script is now useless)
-  - automation, especially windows automation (powershell)
-  - bigger scripts (powershell or other fav general-purpose lang, scripting or compiled)
-    - note: powershell is powerful enough to do just about anything, thanks to the dotnet framework
+  - personal basic shell functions (powershell > fish; *fish script is now completely useless!*)
+  - automation, especially for windows
+  - bigger scripts (powershell with .net or other fav general-purpose lang, scripting or compiled)
+    - note: powershell is powerful enough to do just about anything, thanks to the .net framework
 **ruby** > python (notable: haxe's hscript)
   - great from simple everyday scripting to any size projects
   - simple web apps (back-end), simple apps, scripting (console apps), automation, devops, hacking
@@ -21,25 +21,26 @@ red
   - jekyll (github pages) for static, sinatra/roda for simple dynamic
   - ruby on rails for quickly making a large or rich ui web app
     - replaced by elixir's phoenix framework
+      - **elixir borrows a lot of ruby's syntax**
   - the open-source language with the biggest support by big companies (github, shopify)
   - (still need python for ai/ml/stats/math/etc. data sciences)
     - could probably just port what you need, adding to ruby's libraries
   - with mRuby, Crystal, can keep favorite syntax and use for nearly everything
   - restriction: not performant enough for real-time interaction such as games or embedded devices (though there's mRuby)
-**jai** > **haxe** == **C#** = Ocaml(?) >= crystal == nim > go
+**jai** > **haxe** >= **C#** = Ocaml(?) >= crystal == nim > go
   - general all-round use, covers most cases
   - haxe always had cross-platform in mind
     - c# took a long long time to reach c# core (previously mono)
   - all use llvm compiler and are comparable in speed (magnitudes faster than scripting langs)
   - all use a garbage collector, so C/C++ code will be written seperately and then called
   - resulting programs more portable/cross-platform due to compiled executable binary
-  - all are powerful (except go) in features: macros, ADTs, etc. metaprogramming, generics
+  - all are powerful (except go) in features: macros (or C#'s "source generator"), ADTs, etc. metaprogramming, generics
 special cases:
   **elixir**
     - functional
     - particularly useful for any kind of **concurrent/parallel computing**, since it runs on awesome Erlang VM (BEAM). Used for distributed/fault tolerant/highly available systems (such as Discord and WhatsApp).
     - can also be used to write beautiful scripts with it! (merges the beauty of ruby syntax with functional paradigm)
-    - has a contemporary **scalable web framework** (phoenix > sinatra/roda & ruby on rails)
+    - has a contemporary **scalable web framework: phoenix** (> sinatra/roda & ruby on rails)
       - concurrency
       - better written / more manageable once it's big due to functional programming design patterns
   - lua, mRuby, wren, squirrel
@@ -54,12 +55,14 @@ special cases:
   - javascript (and typescript)
     - the standard browser language
       - can't run from it, though we can keep trying!
-  - rust > C++
+  - **jai** > rust > C++
     - low-level, memory management
-    - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!)
-  - zig = odin > **C**
-    - low-low-level
+    - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!). But, it's not an end-all solution to memory-management, especially in the case for games
+      - skip rust, and wait for jai
+  - **jai?** > **zig** > odin > **C**
+    - low-low-level (not for me!)
     - best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
+    - zig is very very good here, but can just wait for jai
 
 
 
