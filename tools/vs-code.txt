@@ -54,5 +54,5 @@ Backup a copy of "~/.config/Code - OSS/User/settings.json"
 code --list-extensions > vs-code-extensions.txt
 
 # recover extensions
-ccat vs-code-extensions.txt | xargs -L 1 -n 1 code --install-extension
+cat vs-code-extensions.txt | xargs -L 1 -n 1 code --install-extension
 

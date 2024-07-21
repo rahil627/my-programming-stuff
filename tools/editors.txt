@@ -1,11 +1,25 @@
 
+looking for:
+sane defaults
+  - don't want to waste time configing all day, need to focus!
+inuititive learning experience
+  - quick to re-learn and jump deep into again
+unrestrictive
 
 conclusion:
-vs-code is indisputable
-  - with "helix for vs code" (or other fav key-bindings) extension
-helix (or other fav terminal editor / key-bindings) for quick general use, along with cli tools, remote terminal use
+focus (editor)
+  - TODO: try it
+doom emacs
+  - potential is unlimited by the ui
+helix (or other fav terminal editor / key-bindings) for quick general use, along with cli tools, remote terminal use, a good step towards emacs
+  - adds tree-sitter
+  - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
+    - an emacs user switches to helix and mentions some good plugins
+    - TODO: try them!
+vs-code is a great start
+  - can use fav key-bindings extension ("helix for vscode" extension), or customize keys yourself
 vs-studio for it's advanced features: deep debugging, run-time stuff, etc.
-helix or sublime text or notepad (windows) for simple editing
+sublime text or notepad (windows) for simple, non-key-oriented editing
 (TODO: knowledge-base software for bigger, conceptually-linked sets of text??)
 
 
@@ -67,22 +81,14 @@ also provides a clutter/distraction-free experience
 
 **helix**
   - the best of all past worlds: vim, doom-emacs, and kakoune
-  - many pop-up menus similar to doom-emacs
-  - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
+    - many pop-up menus similar to doom-emacs
+    - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
+    - kakoune style selection -> action flow (vs vim’s action -> selection flow)
+  - fantastic sane defaults with the most essential features already built-in
   - "helix for vscode" extension
     - TODO: ...no pop-up menus tho..?
 
 classics:
-neovim
-  - vim
-    - modal (normal, insert, visual/select, command)
-    - *heavily* key-board input user interface
-      - i personally feel more comfy using a touch-screen/mouse/keyboard combo
-  - lua scripting for configs 'n plugins!
-    - used to be in an archaic language: vimscript
-  - some starter configs due to time wasted starting out from scratch
-  - bad learning curve, especially from vanilla neovim
-    - reminds me of the terrible linux config experience
 emacs
   - much more than a text editor, it's basically an OS!
   - elisp macros
@@ -94,11 +100,23 @@ emacs
   - slow startup time
   - **doom-emacs**
     - a great starter config that makes a really nice onboarding experience
-    - i really really liked this, found it very quick to find and precisely just what i needed
-    - intuitive space-bar menu to ease learning
+    - *i really really liked this, found it very quick to find and precisely just what i needed*
+    - **intuitive space-bar menu to ease learning**
     - evil-mode to use vim-keybindings
-  - prelude
-      - a light-weight starter kit closer to vanilla emacs, in case doom is too much
+  - x/prelude
+      - a light-weight starter kit closer to vanilla emacs, in case doom is too much, or if i want to make my own
+  - every person that i've known that uses emacs is a great great programmer/problem-solver/maker
+
+(neo)vim
+  - vim
+    - modal (normal, insert, visual/select, command)
+    - *heavily* key-board input user interface
+      - i personally feel more comfy using a touch-screen/mouse/keyboard combo
+  - lua scripting for configs 'n plugins!
+    - used to be in an archaic language: vimscript
+  - horrendous amount of time wasted starting out from scratch, reminiscent of the terrible linux config experience, but worsened by archaic language and the unprofessional open-source community it attracts
+    - thus better to try various starter configs with sane defaults
+  - bad learning curve, especially from vanilla neovim
 
 
 
@@ -109,7 +127,7 @@ mostly langauge-specific
 
 generally adds these features: integrated interactive debugger, profiler, advanced code completion, advanced refactoring, better file navigation (go to definition in deep libraries 'n back), tasks runner (including tests), database integration
 
-vs studio
+**vs studio**
   - the standard advanced IDE with the most features
   - seems to be mostly focused on C/C++/C# compared to other langs..??
   - microsoft
@@ -125,9 +143,12 @@ https://www.jetbrains.com/ides/
     - c#, games?
   - intellij
     - java, jvm langs?
+    - i think this was their first/main editor that started their business
   - pycharm
     - (python)
   - etc.
+
+
 
 
 https://pawelgrzybek.com/the-joy-of-learning-helix-and-probably-other-modal-terminal-based-editors/
