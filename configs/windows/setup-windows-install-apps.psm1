@@ -1,3 +1,4 @@
+# just install apps, setup/load configs with another script
 
 # winget >= msstore
 # msstore requires signing into microsoft

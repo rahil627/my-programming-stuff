@@ -1,3 +1,5 @@
+# a possible solution, in case you deleted the wrong windows package
+
 # https://www.reddit.com/r/Windows11/comments/ozu33m/windows_widgets_processes_active_for_no_reason_i/
 
 param (
