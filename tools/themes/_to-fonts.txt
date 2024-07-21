@@ -79,11 +79,11 @@ https://fonts.adobe.com/search?query=code
 
 # settings
 
-NOTE: the color theme of the editor effects the text's contrast which can feel like the font-weight!
+NOTE: the color theme of the editor effects the text's color contrast which can feel like the font-weight!
 
 ## windows, OLED laptop
 vs-code
-  - font-size: 11-13
+  - font-size: 11-13 (14 is default)
   - font-weight: light (300?) to regular-light (350) on OLED screen
   - consolas looks better than source code pro, but it doesn't have a lighter weight
 
@@ -101,7 +101,7 @@ chromeos terminal
 vs code
   - size 11-14, but has custom dpi (exec on start)
   - source code pro, 11
-  
+
 chrome (browser/OS?) defaults(?):
 font size: 18
 strandard: carlito
@@ -143,7 +143,7 @@ or a more narrow source code pro
   - a little more funky
   - only one font weight
   - using in terminal
- 
+
 **meslo (LG S) / NF**
   - terminal: size 10, 10.5, 11
   - also really good
@@ -206,7 +206,7 @@ hack
   - somewhere between dejavu and fira's serphiness
   - very close to consolas, similar small size font with space between lines
 
-  
+
 Meslo LG S NF
   - NF = nerd font
   - just fixes symbol positions from dejavu sans mono
