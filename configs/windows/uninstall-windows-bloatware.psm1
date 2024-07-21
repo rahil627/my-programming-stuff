@@ -1,18 +1,28 @@
 # WARNING: be careful when removing ("tweaking") things from windows, often, it's not worth the damage it can do. Instead, look for ways to simply turn things off.
 # if you do remove the wrong package, use the reinstall-removed-package.ps1 script to add it back
 
-$apps_to_remove = @{
+$bloatware = @{
+
+    # winget list | select-string "app-name"
+    #  - to find the app's id/name
 
     # to try:
     # clipchamp
-    # solitaire & casual games
     # xbox
+
+    # ok:
+    # paint # still the best ms native app
+    # notepad
+    # calculator
+    # snipping tool (though it should be a powertoy)
 
     # non-microsoft bloat
     linkedin = "linkedin"
 
     # microsoft bloat
+    #edge # can't uninstall (neatly) :(
     outlook = "outlook (new)" # TODO: is it worth even trying..??
+    ms_games = "solitaire & casual games" # takes 114mb and doesn't even have the games installed..??
     xbox = "xbox" # TODO: free ultimate pass for 1 month, then trash it
 
     todo = "todo" # use simple text file
@@ -29,9 +39,14 @@ function uninstall_app($id) {
     winget uninstall --id $id # hash value .tostring?
 }
 
-function remove_all_bloatware($apps) {
+function uninstall_apps($apps) {
     foreach ($app in $apps) {
-        uninstall-app($app);
+        uninstall-app($app)
     }
+}
+
+# main script
+function remove-all-bloatware() {
+    uninstall_apps($bloatware)
 }
 

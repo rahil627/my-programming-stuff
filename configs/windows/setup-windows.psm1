@@ -48,18 +48,13 @@
 # instead of writing a script, put things into objects
 # then can run it interactively
 
-
-# backup
-function backup_terminal_settings {
-    $filepath = $home+"\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-    copy-item $filepath .
-}
-
-# install apps
-import-module .\setup-windows-install-apps.psm1
+# note: decided to put backup code next to setup code
 
 # uninstall apps / debloat
-import-module .\setup-windows-debloat.psm1
+import-module .\uninstall-windows-bloatware.psm1
+
+# install apps
+import-module .\install-apps.psm1
 
 # setup
 function install_winget {
@@ -102,6 +97,11 @@ function install_winget {
 }
 
 # powershell -executionpolicy bypass
+
+function backup_terminal_settings {
+    $filepath = $home+"\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+    copy-item $filepath .
+}
 
 function setup_shell {
     install_app($apps.shell) # windows 11 ships with windows powershell v1(??), not the more recent open-source powershell (v5+)

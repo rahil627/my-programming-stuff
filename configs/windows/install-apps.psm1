@@ -130,9 +130,13 @@ function install_app($id) { # restriction: '-' is a special char for powershell 
 
 }
 
-function install_all_apps($apps) { # todo: is this casting a dynamic var?
+function install_apps($apps) { # todo: is this casting a dynamic var?
     foreach ($app in $apps) {
         install-app($app); # app.ToString() by default
     }
 }
 
+# main script
+function install_all_apps() {
+    install_apps($apps)
+}
