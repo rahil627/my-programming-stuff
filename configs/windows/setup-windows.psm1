@@ -103,8 +103,15 @@ function backup_terminal_settings {
     copy-item $filepath .
 }
 
+function onedrive_is_on? {
+    $onedriveProcess = Get-Process -Name "OneDrive" -ErrorAction SilentlyContinue
+    return ($onedriveProcess -ne $null)
+}
+
 function setup_shell {
     install_app($apps.shell) # windows 11 ships with windows powershell v1(??), not the more recent open-source powershell (v5+)
+
+    install-module psreadline
 
     # TODO: maybe saves from windows backup
     # make it the default terminal
@@ -115,8 +122,9 @@ function setup_shell {
     #Invoke-Expression -C "Update-Help -Verbose -Force -ErrorAction SilentlyContinue"
 
     # copy $profile
-    copy-item .\Microsoft.PowerShell_profile.ps1 $profile
-
+    if (!onedrive_is_on?) { # copies to C:\Users\ra\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+        copy-item .\powershell\Microsoft.PowerShell_profile.ps1 $profile
+    }
     # TODO: save/load settings file?
     # copy-item windows-dotfiles/powershell/settings.json -destination C:\Users\rahil\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
     #  - the theme is contained in the settings file under schema
