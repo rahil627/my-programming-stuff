@@ -2,31 +2,98 @@
 
 https://www.youtube.com/watch?v=xHebvTGOdH8
 
+:tutor
+  - tutorial!
+  - currently at "5.1 MULTIPLE CURSORS"
 
-vim-like:
-hjlk / arrow keys
-wb, (w)ord and (b)ack
-d delete, but no d#/dd nor y#/yy combos
-y
-p
-f/F,char highlight upto/back-to and including char
-t/T,char highlight un(t)il/back-until char
-[ and ]
+
+helix for vs code:
+s+[ and s+]
+  - select block
+
+
+https://docs.helix-editor.com/keymap.html
+
+
+buffer navigation:
+  - these are just aliases for commands
+bn/bp - next/previous buffer
+bc[!]- close
+n - new buffer
+o - open file
+space,f/F - open file with the fuzzy-search file picker
+
+vs - vertical split
+vn - new vertical split
+hs - horizontal split
+hn - new horizontal split
+
+
+kakoune selection:
+select -> action
+"Your cursor is like a single-character selection."
+
+
+vim-like movement/"motions" key-bindings + kakoune selection:
+[#]hjlk / arrow keys
+  - mostly use hold-j/k for moving up/down
+[#]wbe/WBE, next word, back one word, end of word; until next/previous white-space
+home/end, beginning/end of line
+  - usually use I/A to insert or gh/gl goto
+  - w/e usually include a white-space, use w,b or b,e to select just the word only (no white-space)
+f/F, find next/previous char
+t/T, find un(t)il/back-until char
+
+; - deselect
+  - TODO: alt+; supposed to invert selection..?
+, - clear multiple cursors
+
+/ and ? - search regex forward/backward
+  - n/N - next/previous
+    - note: ? is superfluous, just use N
+
+v - selection mode
+  - v - press it again to go back to normal mode
+
+new:
+x - select line
+  - x,x add another line to selection (super useful!)
+  - X doesn't seem to do anything different.. TODO: maybe can re-map it to select to next paragraph (]p)
+[ and ] - pop-up menu for common goto next/previous tree-sitter/ast stuff
+
+
+
+
+also from vim:
+d delete
+  - remember: no vim d#/dd nor y#/yy combos, #[motion]d/y instead
+c change (or d,i to clear selection and insert)
+  - note: delete and change actions copy deleted text to the default yank register
+    - alt+d/c - don't copy deleted text to register
+
+y - yank (copy)
+p/P - paste before/after cursor
+  - note: helix doesn't use the system clipboard
+  - space,y/Y/p/P - yank/paste to system clipboard
+    - Y - yanks "main selection?" as opposed to selections??
+
+u/U - undo/redo
+
+</>, indent
+=, format
 
 https://stackoverflow.com/questions/7409134/english-mnemonics-to-vims-shortcuts
   - TODO: learn some more
 
 new:
-x highlight line, paragraph/until next empty line (c+l in vscode/emacs)
+x highlight line -> x paragraph/until next empty line (c+l in vscode/emacs)
 R replace with yanked register
-c change (clear char and insert)
-; clear selection
-, clear multiple cursors
 alt+. repeat motion
 [f and ]f prev/next function
 [c and ]c prev/next class
 [a and ]a prev/next parameter
 c+i/o previous/next jump point
+c+s save jump point
 
 theme
 
@@ -35,7 +102,7 @@ from vim:
 esc normal-mode
 : command-mode
 i/I/a/A/o/O insert-mode, from vim
-  - insert/append/over
+  - insert (word/line)/append or after (word/line)/over
 v visual-mode (select), from vim
   - note: can also make selections in normal-mode, from emacs
   - s select-mode, search within selected text
@@ -50,10 +117,12 @@ new:
   - r, rename symbol
 g goto-mode
   - will naturally teach you the motions, just have to go to visual mode
+  - a, **last accessed file**
+  - h/l, begin/end of line
   - d/D/i, definition/declaration/implementation
   - r, reference via picker
   - e, end
-  - p/n, previous/next buffer
+  - n/p, next/previous buffer
 ",char register list
   - yank something into a char/key-press's register
 
@@ -63,5 +132,3 @@ g goto-mode
 paste from clipboard
 c+s+p
 
-
-gh, gl
