@@ -8,33 +8,53 @@ conclusion:
 ruby minimal web frameworks (roda > sinatra)
   - **for minimalist apps**
   - for educational purposes: old school web app making in a minimalist style
+  - https://www.reddit.com/r/ruby/comments/16j7r1w/web_frameworks_actively_maintained_in_2023/
+    - list of web app frameworks currently maintained as of 2023
 
 front-end:
 **html/css/javascript**
   - until i figure out why the rest was made
   - note: phoenix automatically creates these for you..?
+**tailwind css**
+  - comes with phoenix apps by default
+  - https://www.reddit.com/r/webdev/comments/15chth7/is_css_frameworks_like_tailwind_is_really_better/
 svelte
   - makes front-end make sense to object-oriented programmers
+  - stateful
 react
   - "React is only concerned with the user interface and rendering components to the DOM"
   - for big stuff
   - paved way for state-based web app design
 
 all-in-one-solution?:
-flutter
-  - for mobile apps + web apps together! > react native (which requires using wrappers for native libs)
-  - for performance/graphics thanks to web assembly output?
+x/flutter
+  - great for mobile and desktop, not so much for web > react native (which requires using wrappers for native libs)
   - can use dart for back-end too
   - **for people that hate web dev (html/css/js)**
+  - people seems to dislike the web target
+    - https://www.reddit.com/r/FlutterDev/comments/180h020/why_is_flutter_not_as_popular_for_web_its_a_great/
+      - uses canvas to draw ui, thus horrible for SEO
+        - ...maybe updated to web assembly now..?
+      - "your app won't behave like a normal web app (eg: copy and paste, scrolling)"
+      - "you can't use most of the available javascript libraries"
+      - https://www.reddit.com/r/FlutterDev/comments/180h020/comment/ka6t3jj/
+        - a good comment here
+  - combining with phoenix would be too complicated
+    - https://elixirforum.com/t/regretting-questioning-my-current-stack-flutter-elixir-as-solo-dev-for-mobile-app/55731
+  - google :(
 **phoenix**
 **phoenix live view**
   - specifically for single-page dynamic apps that require a constant connection
   - phoenix live view native
-rails
+  - stateful backend
+  - live_svelte combines both
+    - https://blog.sequinstream.com/liveview-is-best-with-svelte/
+x/rails
   - for big stuff
-
-
-
+  - superceded by phoenix
+haxe (tink_web router/backend, bindings for all pop front-ends or haxe-ui-html5)
+  - ok for front-end bindings, but probably can't compete with phoenix's backend concurrency
+  - https://community.haxe.org/t/haxe-seems-great-but-not-for-webdevelopment/3028
 
 the frameworks:
 ruby on rails

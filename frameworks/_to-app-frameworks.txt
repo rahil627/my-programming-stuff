@@ -6,15 +6,48 @@ https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-i
 
 
 conclusion:
+in the end, i ditched the idea of native apps for web, see web-frameworks.txt . the browser just handles cross-platform for you.
+
+otherwise, perhaps cli and tui apps are a way to go for text-only apps. I personally *love* how lazygit looks in a themed terminal.
+  - cli
+    - ruby's native optparse lib
+    - several other option parsing dsl libs
+  - tui
+    - **tty-toolkit**
+      - modular, only add what you need
+        - tty-option
+          - yet another options parser
+        - tty-prompt
+          - most used
+    - cli-ui
+      - a framework by shopify
+
+
 0. Haxe
   - adds the benefits of haxe: cross-platform, export to anything and thus allowing you to use any target langauge libs, including stuff like python (for science libs), java and JVM langs, c#, c, c++, and so on
   - haxe has a few solutions
     - **Haxe-UI**
+      - wildly ambitious project supporting multiple frameworks and backends
       - works with **all** of the haxe frameworks including:
         - **Heaps**, you get the power of a complete game engine
+          - make apps with your game engine!
         - **NME**, you get a solid, stable simple io engine
+        - OpenFL & FeathersUI is yet another option, with ability to compile via hxcpp to mobile devices
+      - bad power consumption for mobile
+        - https://community.haxe.org/t/haxe-right-tools-for-ios-and-android-app-development/4179/6
+          - basically, anything running 60fps to draw widgets is no good
+          - android (native) on the way!
+      - https://raw.githubusercontent.com/haxeui/haxeui-guides/master/000-Getting%20Started/_assets/welcome-system.jpg
+        - this image shows the libs/platform support
+      - **html5 "backend" sounds great**
+      - **pdcurses!!! omg!**
+      - haxeui-hxwidgets for desktop OSs
+      - ios (native)
+        - https://github.com/rainyt/hx-ios-uikit
     - coconut
       - seems to be another layer of abstraction between io engine and ui
+    - hx-electron
+      - desktop OSs only
     - react-hx
       - haxe bindings for react native
 1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??) thus quite limiting(??) nor if your focus is on web (due to limited styling by widgets provided?? and slow??), faster compiled language, simpler by design, **covers most use cases**
