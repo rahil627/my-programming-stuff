@@ -28,7 +28,7 @@ $apps_to_try =  @( # array
     "SublimeHQ.SublimeText" # TODO: --include-unknown
 
     "SomePythonThings.WingetUIStore"
-    "GitHub.GitHubDesktop" # compare with github cli
+    "GitHub.GitHubDesktop" # compare with vs-code
     "Microsoft.PCManager"
 
     # dendron is a vs-code extension
@@ -101,7 +101,8 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     #vscode = "Microsoft.VisualStudioCode"
     vscode = "VSCodium.VSCodium" # works the same!, just extensions rely on people  adding them to a list
     git = "Git.Git" #winget install --id Git.Git -e --source winget # TODO: what's the -e flag?
-
+    lazygit = "JesseDuffield.lazygit" # TODO vs magit
+    
     # more dev specific
     erlang = "Erlang.ErlangOTP" # for elixir
     sql = "postgresql" # TODO: add install by search, add --source winget

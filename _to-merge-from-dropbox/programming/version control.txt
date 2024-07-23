@@ -1,9 +1,41 @@
+
+https://www.reddit.com/r/gamedev/comments/1bsptek/what_should_i_use_for_source_control_and_why_in/
+  - for games, the problem is non-code files: binaries and size limit (5gb)
+  - why git lfs?: "It has a “checkout” feature which forces all files to be read-only until you manually check them out (like a library book). This will sync with the server and allow your coworkers to see what files you are working on. It useful for large projects that involve a lot of binary files as they can’t be diff-merged anyway, so traditional source control loses some of its value in that regard.
+    When I used Unity I stuck to Git since the scene files are in YAML, but Unreal uses binary files for blueprints and levels so it makes more sense to use a tool designed for binary file support."
+  
+  - the old svn seems to hold (jon blow still uses it)
+    - supported by git?
+
+fossil (scm)
+  - written in C by the guy who wrote sqllite ("the most used database in the world")
+    - makes it infinitely better than the chaos of linux cli apps that git relies on
+  - basically a portable github, including wiki, even chat(!), etc.
+  - made for small, tight teams, not chaotic open-source pull-request stuff
+  - https://www.reddit.com/r/programming/comments/5yrhri/comment/desosfy/?st=j17tbcd3&sh=72751049
+    - in-depth comparison
+    - "Fossil targets a more specialized use case than Mercurial or Git and aims at handling that well. That use case is self-hosted repositories for small teams (say, up to a few dozen contributors) and individuals. To this end, it has built-in mechanisms for distributed ticket management and a wiki, for example. On the other hand, external contributions are a bit more cumbersome, though the bundle mechanism offers the equivalent of Mercurial's and Git's patch contributions."
+  
 git:
-Slowly took over and has a monopoly on version control systems. I believe it took over thanks to GitHub, a place where code is to be shared.
+  - Slowly took over and has a monopoly on version control systems. I believe it took over thanks to GitHub, a place where code is to be shared.
+  - a billion tools are now made for it: magit (emacs), lazygit (tui), every text-editor/ide must have a git extensions
+  - https://www.progclub.net/~key720/tutorials/git_bitbucket/
+   - great guide to use git on windows
+  - need to learn how to update a fork
+   - reset current branch -> pull -> merge?
 
-https://www.progclub.net/~key720/tutorials/git_bitbucket/
-  - great guide to use git on windows
+svn:
+https://www.reddit.com/r/gamedev/comments/17bkkfh/comment/k5juz4e/
+"I’ve used SVN for game development. Recently, even.
 
-need to learn how to update a fork
-  - reset current branch -> pull -> merge?
+If you try to use Git Flow in SVN you are going to be miserable. SVN has branches, but it’s not something you would do casually, like you do in Git. (IMO, Git Flow is kind of awful anyway—but that is more my opinion, and a much larger discussion.)
+
+You are probably going to want to self-host. You don’t have to, but it’s not like there’s a svnhub.com.
+
+Since SVN is fully centralized, you are always going to be limited by your connection to the server. If your server is on the internet, then maybe you have to wait a long time for that 2 GB change you made to upload. With Git, you can at least get a bunch of work done, and then push later.
+
+SVN may be better for dealing with large binary files, but it still lacks some features you may want for purging old versions of binary files that you are confident you won’t need in the future.
+
+The workflow I use is trunk-based development, where you have one main branch, and then you cut a release branch for each release. This is easy enough in both Git and SVN."
+
 
