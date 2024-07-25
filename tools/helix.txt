@@ -8,6 +8,8 @@ https://www.youtube.com/watch?v=xHebvTGOdH8
     - skipped parts of ch. 5
 
 
+
+
 my own key-mapping additions:
 TODO: in fuzzy-search (file picker), j/k - go down/up list
 TODO: X = ]p
@@ -19,19 +21,77 @@ s+[ and s+]
 
 https://docs.helix-editor.com/keymap.html
 
+terms:
+"picker" = fzf-like fuzzy searchable list
+
+not in the tutor(ial): TODO: PR add these the tutorial!
+shift+alt+'-/+' - open a h/v-split terminal 
+
+
+
+normal-mode
+all other modes
+  - esc - go back to normal mode
+    - note: re-map caps-lock to esc in the OS
+
+: command-mode
+  - provides a fuzzy search completion
+  -> o/open - open file
+  -> sh/run-shell-command - hmmm, brings up file tree..? TODO
+  -> theme
+  -> toggle-option
+  -> get/set-option
+
+doom-emacs-like space-bar pop-up menus:
+space - root pop-up menu leads to other pop-up menus, pickers, special lsp/ast actions
+  -> ? - **command pallette** (picker of all commands)
+  -> / - **grep in current folder**
+  
+  -> f/F/j/s/S/d/D - various pickers
+  -> ' - **open last picker**
+  
+  -> y/Y/p/P/R - yank/paste/replace using system clipboard
+  
+  -> c/C/a+c - comment/block/line comment selection
+  
+  -> a - **perform code action**
+  -> r - rename symbol
+  -> h - select symbol references
+  -> k - show docs for item under cursor
+
+
+windows/splits:
+  - note: a buffer is split into multiple "windows"
+s+w/c+w - window combo key/pop-up menu
+  -> n -> v/s / c+v/c+s - new split window TODO: c+v/s doesn't work
+  -> v/s - vertical/horizontal split current window TODO: github issue, why not h?
+  -> q/c+q - close split
+  -> o/c+o - close all other windows
+  -> f/F - goto file in selection v/h-split TODO: dunno
+
+  split navigation:
+  -> hjkl/c+hjkl
+  -> w/c+w - cycle to next window
+
+  -> HJKL - swap window
+
+  some common split aliases:
+  :vs - vertical split
+  :vn(ew) - new vertical split TODO: pull request for shortcut?
+  :hs - horizontal split
+  :hn - new horizontal split
+
 
 buffer navigation:
-  - these are just aliases for commands
-bn/bp - next/previous buffer
-bc[!]- close
-n - new buffer
-o - open file
-space,f/F - open file with the fuzzy-search file picker
+s+b - **buffer picker**
+  - simpler to use this for changing/searching buffers
 
-vs - vertical split
-vn - new vertical split
-hs - horizontal split
-hn - new horizontal split
+some common buffer aliases:
+:n - new buffer
+:bn/bp - next/previous buffer
+:bc[!]- close buffer
+:o - open file
+
 
 
 kakoune selection:
@@ -41,13 +101,31 @@ select -> action
 
 vim-like movement/"motions" key-bindings + kakoune selection:
 
-basic movement:
+basic movement (and selection):
 [#]hjlk / arrow keys
-  - mostly use hold-j/k for moving down/up
+  - **mostly use hold-j/k for moving down/up**
+[/] - goto pop-up menu for next/previous tree-sitter/ast stuff
+  -> p - **paragraph**
+    - the main one that doesn't require a lsp
+  -> f/t/a - function/type definition/argument (TODO: the menu says parameter instead of argument)
+g - goto pop-up menu
+  -> ., **last modification**
+  -> a, **last accessed file**
+  -> h/s/l, **begin/start/end of line**
+     - useful for deleting the rest of a line
+  -> d/D/i, definition/declaration/implementation
+  -> r, reference via picker
+  -> e, end
+  -> n/p, next/previous buffer
+
+basic selection:  
 [#]wbe/WBE, next word, back one word, end of word; until next/previous white-space
 home/end, beginning/end of line
-  - usually use I/A to insert or gh/gs/gl goto, especially as laptop key-boards may not have it)
+  - often use I/A to insert or gh/gs/gl goto, especially as laptop key-boards may not have it)
   - w/e usually include a white-space, use w,b or b,e to select just the word only (no white-space)
+x - select line (c+l in vscode/emacs(?))
+  - x,x add another line to selection (super useful!)
+  - X doesn't seem to do anything different.. TODO: maybe can re-map it to select to next paragraph (]p)
 f/F - (f)ind and select upto and including next/previous char
 t/T - find and select un(t)il/back-until char
   - useful when select repeating chars
@@ -63,6 +141,8 @@ t/T - find and select un(t)il/back-until char
     as long as the register isn't empty, you can use n/N to jump to the next/previous selection that matches the regex
   - note: regex may contain | (or operator)
 
+s+j - open jump-list picker
+  - intuitive way to see and understand how the jump-list works
 c+s - save a place to the jump-list
 c+i/o - jump to next/previous place in the jump-list
   - note: big jumps (including between buffers/files!!) are automatically saved to the jump-list, so try it out!
@@ -96,23 +176,14 @@ S - split selection (with regex)
   
 
 
-
-new:
-x - select line (c+l in vscode/emacs(?))
-  - x,x add another line to selection (super useful!)
-  - X doesn't seem to do anything different.. TODO: maybe can re-map it to select to next paragraph (]p)
-[ and ] - pop-up menu for common goto next/previous tree-sitter/ast stuff
-
-
-
-insert-mode
+insert-mode (vim-like):
 i/I - insert at beginning of selection/line
 a/A - insert at end of selection/line
 o/O - insert a new-line below/above and enter insert mode (i)
 . - **repeat last insert action**
   - /,r,. **search and replace one-by-one**
 
-also similar to vim:
+editing
 d - delete
   - remember: no vim d#/dd nor y#/yy combos, #[motion]d/y instead
 c - change (or d,i to clear selection and insert)
@@ -120,7 +191,7 @@ c - change (or d,i to clear selection and insert)
     - alt+d/c - don't copy deleted text to register
 r - replace
   - repeats char when the selection is bigger than a single char
-    - useful for ascii art/images
+    - only useful for special cases: ascii art/images
 R - replace selection with yanked text
   - TODO: may have to switch these keys around..
 
@@ -142,7 +213,7 @@ C/a+C - add a cursor below/above
 & - align
   - TODO: in chapter 5
 = - format?
-  - TODO
+  - TODO: ??
 c+a/c+x - increment/decrement number
     - **very cool interactivity idea, especially for game vars**
 ~/`/a+` - invert case/set to lower-case/set to upper-case
@@ -188,45 +259,5 @@ https://stackoverflow.com/questions/7409134/english-mnemonics-to-vims-shortcuts
 
 new:
 alt+. - repeat motion
-[f and ]f - prev/next function
-[c and ]c - prev/next class
-[a and ]a - prev/next parameter
-
-theme
-
-modes:
-from vim:
-esc normal-mode
-: command-mode
 
   
-v visual-mode (select), from vim
-  - note: can also make selections in normal-mode, from emacs
-  - s select-mode, search within selected text
-
-new:
-' ' space-mode, from emacs (or just doomemacs/spacemacs?)
-  - ?, command list
-  - a, code action list
-  - f, file picker like telescope
-  - s/S, symbol picker
-  - r, rename symbol
-  
-g goto-mode
-  - will naturally teach you the motions, just have to go to visual mode
-  - ., **last modification**
-  - a, **last accessed file**
-  - h/s/l, begin/start/end of line
-  - d/D/i, definition/declaration/implementation
-  - r, reference via picker
-  - e, end (f+down)
-  - n/p, next/previous buffer
-",char register list
-  - yank something into a char/key-press's register
-
-
-
-
-paste from clipboard
-c+s+p
-
