@@ -1,16 +1,36 @@
+backup settings:
+https://gist.github.com/MaxAtoms/b30163855bc6995588a5af9e88b28e51
+
+backup a copy of "~/.config/Code - OSS/User/settings.json"
+
+save a list of extensions:
+code --list-extensions > vs-code-extensions.txt
+
+recover extensions:
+cat vs-code-extensions.txt | xargs -L 1 -n 1 code --install-extension
 
 
+
+useful commands:
+git: clone
+  - will clone from github, if it's setup
+
+  
 useful key-bindings:
 can just download an extension for your favorite key-bindings
-  - helix (kakoune) > doomemacs > vim
+  - helix (kakoune) >? doomemacs > vim
 
-c+p
+main:
+c+p (s+f)
   - find file in project
 
-c+sh+p
+c+sh+p (s+?)
   - main command prompt
 
-file -> preferences ...
+c+s+f (s+/)
+  - find in file / grep
+
+c+,
   - main settings
 
 control(+shift)+tab
@@ -19,6 +39,27 @@ control(+shift)+tab
 alt+left-click file in file explorer
   - open in a split window (right)
 
+
+helix for vscode:
+c+w, q/c (normally only q)
+  - close window
+c+w, n (no split option)
+  - new window
+
+c+l
+  - similar to x?
+
+alt+k/j
+  - move line/selection up/down
+
+https://github.com/jasonwilliams/vscode-helix/tree/main/src/actions
+  - shortcuts listed in these files
+
+https://marketplace.visualstudio.com/items?itemName=jasew.vscode-helix-emulation
+
+
+
+classic-style movement:
 c+left/right
   - previous/next word
 
@@ -37,22 +78,4 @@ alt+left/right
 alt+up/down
   - move current line up/down
 
-
-# useful commands
-git: clone
-  - will clone from github, if it's setup
-
-
-
-
-# backup settings
-https://gist.github.com/MaxAtoms/b30163855bc6995588a5af9e88b28e51
-
-Backup a copy of "~/.config/Code - OSS/User/settings.json"
-
-# save a list of extensions
-code --list-extensions > vs-code-extensions.txt
-
-# recover extensions
-cat vs-code-extensions.txt | xargs -L 1 -n 1 code --install-extension
 
