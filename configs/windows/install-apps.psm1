@@ -11,6 +11,8 @@
 # https://winstall.app/
 # simple site to search through winget repos
 
+# TODO: prioritize scoop > winget (i think chocolatey is deprecated)
+
 $apps_to_try =  @( # array
     # TODO: try in windows sandbox/sandboxie
 
@@ -104,13 +106,24 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     lazygit = "JesseDuffield.lazygit" # TODO vs magit
     
     # more dev specific
-    erlang = "Erlang.ErlangOTP" # for elixir
+    # erlang = "Erlang.ErlangOTP" # for elixir
+    # elixir
+    #  - used scoop
     sql = "postgresql" # TODO: add install by search, add --source winget
     # "PostgreSQL.PostgreSQL 16"
 
     #tightnvc?
 
  } #| foreach {winget install -e --id $_}
+
+
+# used by scoop
+$app_names @(
+
+    # dev
+    "erlang",
+    "elixir",  
+)
 
 # example use:
 # install_app($apps.shell)
@@ -131,13 +144,21 @@ function install_app($id) { # restriction: '-' is a special char for powershell 
 
 }
 
-function install_apps($apps) { # todo: is this casting a dynamic var?
+function install_app_by_name($name) { # no function parameter overloading
+    scoop install $name
+}
+
+function install_apps($apps, $app_names) { # todo: is this casting a dynamic var?
     foreach ($app in $apps) {
-        install-app($app); # app.ToString() by default
+        install_app($app); # app.ToString() by default
+    }
+
+    foreach ($app in $app_names) {
+        install_app_by_name($app)
     }
 }
 
 # main script
 function install_all_apps() {
-    install_apps($apps)
+    install_apps($apps, $app_names)
 }
