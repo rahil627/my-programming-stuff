@@ -467,16 +467,18 @@ ML (Meta Language)
 **C#**
   - "Microsoft's Java": Java EE = ASP.NET, Java VM (JVM) = .NET CLR, etc. As vomit-inducing that may sound, it feels much better than the java world (partly due to eclipse ide sucking)
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat for general-use, but boring, and limited by it's java-like bytecode (managed code)\VM\GC implementation
-  - has frameworks for both games (Unity, MonoGame), not so much for cross-platform apps (Avalonia, Uno, ASP.core) where ASP.NET sucked for a long time
-    - and as long as these frameworks exist, it's cross-platform libraries will be in top-notch condition
+  - has frameworks for games (Unity, MonoGame)
+  - frameworks for apps were limited to windows (winforms, wpf, etc.), and so newer open-source cross-platform frameworks came out (Avalonia, Uno, ASP.core). ASP.NET, the main web-app framework sucked for a long time allowing others to gain popularity until ASP.core came out
+    - https://elixirforum.com/t/phoenix-vs-asp-net-core-performance/3599/8
+      - **describes the many reasons why even ASP.core is not the best for web**
   - *solid feature-set* for the language, the standard library (System, IO, etc.), and the .NET library
     - basically C# v3 (in 2007) set the standards for high-level languages with lambda expressions, anonymous functions, and LINQ via .NET, etc. (during my first programming job!), and didn't add much until v7 (in 2017) when it added pattern matching, tuples, local functions, etc., but that's okay as they are working on all three things: a language, a library, and a tool-set. By C# v10 now, the features are *overwhelming!*. There's really nothing to complain about here.
   - in 2014, open-source .NET core began, eventually becoming the main .NET framework
-  - despite supporting many languages, only a few held up: C#, F#, and some variant of C++. D lost in the language wars.
+  - despite supporting many languages, only a few have held up: C#, F#, and some variant of C++. D lost in the language wars.
   - always had a compiled approach instead of scripting, making it less popular in the web-dev world, which made it even better, as it keeps the serious native big game/app devs away from the horrendous temporal javascript/electron/html5 web-dev world
   - Microsoft, and very much *feels* like Microsoft: *heavy*: heavy dev environment (visual studio ide until code was released), heavy libraries, clunky standard coding convention, etc., yet very easy to read/understand coming from C-like languages
   - **after using this, it feels like there's really no reason to ever use a dynamically-typed language again, or one that doesn't provide ide-integrated debugging, reflection, etc.**
-  - has a contemporary **scripting** solutions!!?? :o :O
+  - has contemporary **scripting** solutions!!?? :o :O
     - Rosylyn compiler, csscript, dotnet-script
   - https://www.nuget.org/packages/MonoGame.Framework.WpfInterop/ - LOL, amazing! WPF UI with MonoGame behind it
   - nuget package library
@@ -777,6 +779,8 @@ Haskell for math, language
     - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
   - as these are my two main use cases, i don't really have any use for it :/
   - multi-core (no GIL in Elixir; as opposed to python/ruby?? not sure..)
+  - "BEAM/EVM barely has any JIT happening at all, but it is still very performant, however the language design combined with internal very low level async I/O allows the BEAM/EVM to outperform ‘almost’ anything on I/O (like networking, say, for webhosting) while being safer than any just about any language at all."
+  - "However, .NET Core has very little ability to debug production, you mostly have to rely on your logs or hook up a debugger that often stops-the-world. Compared to the BEAM/EVM that has introspection that would make any network or server admin just drool, but it is done in a different way than you would do it on .NET Core (mostly because debugging individual instruction is as you would on .NET is hell for a concurrently real-time system)."
   - "Ruby has considerably more libraries and this is IMO at this point the only reason, other than being mandated or wanting to write ruby, that I would still use it over Elixir. The edge for everything else IMO goes to Elixir."
     - concurrency, FP scope > OO scopes, liveview and live dashboard are 🔥🤘, contexts > models, response times are in the micro vs milli seconds, Phoenix saw webpacker for the 💩 it was and quick pivoted to a sane alternative in esbuild, benchmarking, testing & code analysis (credo, dialyzer), immutability, ex doc is insanely easier to use vs rdoc et al, runs on significantly fewer resources, OTP, hex is better than bundler, deployment (releases), cross platform (ruby has come a long way on windows from what it was but...), stable API vs the OCD of ruby/rails
   - https://elixirforum.com/t/ruby-in-2023-can-and-should-elixir-replace-ruby-for-simple-scripting/58214
