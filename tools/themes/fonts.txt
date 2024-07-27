@@ -125,7 +125,7 @@ or a more narrow source code pro
   - small horizontal space between characters
   - 1-2 font sizes smaller than others (marketing?)
   - **comes with only one weight: regular, no light?**
-  - strongly associated with vs-studio and c#
+  - shipped with vs-studio and thus strongly associated with c#
 
 **source code pro / hasklig (light)**
   - terminal: size 10-11, weight: regular/normal
@@ -288,15 +288,28 @@ Menlo
 
 Inconsolata
   - open source consolas, though not as good as the original
-  - maybe too scrunched up? tall? round
+  - maybe too scrunched up? tall? round. faded.
   - something always felt wrong about this one...
 
 Monaco
-  - and old Apple Mac OS X font, default in XCode and textmate
+  - ew, Apple Mac OS X default for XCode and textmate
 
 DejaVu Sans Mono
+  - same as bitstream vera sans mono?
 Andale Mono
 Vera Mono
+
+lucida console
+  - ships with windows os
+  - 10 in notepad/notepad2, 11 in notepad++
+
+
+non-mono-spaceed:
+tahoma*****
+  - windows default, very quick to read in studies, non-monospaced
+calibri
+  - shipped with and the default font for microsoft word
+
 
 others:
 hermit
@@ -319,3 +332,19 @@ proggy fonts
 
 https://betterwebtype.com/5-free-monospaced-fonts-with-coding-ligatures/#:~:text=Hasklig,and%20to%20correct%20problematic%20spacing.
 
+
+
+
+
+
+
+TODO: merge
+from an old file:
+
+font
+	andale mono
+	kooteney*** - small tabs, yet consolas look, not monospaced
+	open symbol - unique, has different symbols
+	ocr a std - too console-ish
+	proggysquare - looks nice!
+	droid sans mono**** - like consolas, but a bit longer vertically, tough competition with consolas

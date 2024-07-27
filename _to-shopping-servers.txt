@@ -2,7 +2,8 @@
 smaller, non-giant corporate server companies:
 these are nicer, quaint, more for indie devs (whereas the giant companies feel like for enterprise use only)
 
-Digital Ocean
+**Digital Ocean**
+  - incredible documentation that teaches you how to handle linux servers
 Linode
 Vultr
 ...

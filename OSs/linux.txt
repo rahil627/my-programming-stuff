@@ -1,3 +1,21 @@
+https://www.reddit.com/r/pop_os/comments/xuq2pm/can_someone_explain_to_me_like_im_five_why_linux/
+macOS and Windows has a single platform vendor, Apple and Microsoft.
+
+Apple has a complete vertical stack integration; they control both the hardware and software, so they can provide a tight experience for their consumers.
+
+In addition, Apple continuously update their APIs and guidelines for app design, rules, and issue platform-wide updates once a year with their annual software refreshes. This allows developers with predicable schedules and docs to update their apps. This also allows Apple to simplify the packaging experience, such as the DMG and PKG.
+
+Microsoft has both EXE, MSI but they're not as tight as Apple because of backward compat support, which means apps often have to deal with registry, hardware tech (32bit/64bit/arm) that macOS devs do not have to deal with. This is because Microsoft does not own the hardware stack, so they have to provide backward compat to ensure everyone can use any software compiled to Windows for the past few decades, not permitting an easy one-win solution like Apple.
+
+Linux is an open source community project, it belongs to the public with no restrictions. There's no single vendor (Linus is Benevolent dictator for life but he doesn't really fully control it). There are several standard bodies to try to centralize the work going into Linux like free desktop APIs, but no one is required to follow it. Since there's no enforcement at all levels, there's also no way to ensure a consistent packaging experience for all users either. We do have some universal packaging solution such as Flatpak, AppImage, Snap but they're not available in all distros, it is up to the public.
+
+However, note majority of users download their apps from the package manager; apt, dnf, etc or the software store apps that is available for their distro. So they don't have to deal with the packaging either.
+
+
+
+
+
+
 
 to install an app manually:
 copy the binary to /usr/bin/ for most distros
@@ -14,7 +32,7 @@ NixOS
   - NOTE: should use flakes
   - no games??
 
-arch
+**arch**
   - rolling release system-packages + user-maintained user-packages
     - meaning, you must update the entire system every time you want to get package that uses another package (dependency) that has a release newer than your system
       - aka **you must update your entire system nearly every-time you want to get a package!!**
@@ -32,6 +50,7 @@ openSUSE
     - otherwise, same as Tumbleweed
 
 debian
+  - the FOSS standard
   - it works, stable as it gets
   - to use more recent packages, just download them using snaps, docker, etc.
     - benefits from being safe too
@@ -136,4 +155,8 @@ remote access apps:
 chromeRDP
 noVNC
   - vnc is the open-source remote tech
+
+
+
+
 
