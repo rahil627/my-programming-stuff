@@ -38,13 +38,13 @@ red
   - general all-round use, covers most cases
   - haxe always had cross-platform in mind
     - c# took a long long time to reach c# core (previously mono)
-  - most use llvm compiler and are comparable in speed (magnitudes faster than scripting langs), except C#
+  - most use llvm compiler and are comparable in speed (magnitudes faster than scripting langs), except C#/java
   - all use a garbage collector, so C/C++ code will be written seperately and then called
   - **resulting programs more portable/cross-platform due to compiled executable binary**
-  - all are powerful (except go) in features: macros (or C#'s "source generator"), ADTs, etc. metaprogramming, generics
+  - all are powerful in features: macros (or C#'s "source generator"), ADTs, etc. metaprogramming, generics
   - able to contribute to a tiny game-oriented community (haxe, jai)
 **elixir**
-  - **has the current best scalable web framework: phoenix**
+  - **has the current best scalable and easily-maintainable web framework: phoenix**
     - suitable for both small web apps (roda) and massive web apps (rails)
     - concurrency
     - better written / more manageable once it's big due to functional programming design patterns
@@ -80,6 +80,8 @@ special cases:
 
 # my choices
 ## main list
+**Haxe**
+
 **Ruby** , much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like languages
 
 
@@ -96,7 +98,7 @@ Pharo, a Smalltalk dialect, for god-like productivity, can alter anything *any t
 
 
 ## notes
-although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, Crystal has good C api and can maybe use Ruby as a scripting languages (via Anyolite lib), and Ruby might have C and Java api (among the most libs and implementations). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting until Haxe's own hsrcipt improves.
+although having Ruby for scripting, Crystal for native, Elixer for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, Crystal has good C api and can maybe use Ruby as a scripting languages (via Anyolite lib), and Ruby's default implementation is C (though, it probably has the most implementation of all langauges). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting.
 
 it seems like Ruby is still better for general scripting. As for Elixer, once you include another file, you basically have to create a project for it. For Crystal, you must either compile it every time in order to run it (just adds a second) or save the compiled binary (i'm not sure if the eval interpreter is enough...). For Haxe you have all of those choices plus more (interpreter, VM bytecode, LLVM-optimized C binary), you just need to make sure you have a Main class ;). However, it's still nice as it contains about 80% of the same syntax as Ruby.
 
@@ -453,6 +455,10 @@ javascript
 
 ### garbage-collected
 there's too many in this area
+  - "I think the issue with Nim and Crystal is that if you want a language with garbage collection, you already have so many options out there. If you want a language without garbage collection, you’ve basically got C, C++, Rust, and Zig. If you think that C++ and Rust are too complicated, then you’ve really just got C and Zig."
+    -  https://www.reddit.com/r/ProgrammingLanguages/comments/10hu5md/why_is_zig_so_much_more_successful_than_crystal/
+      - many great comments on the state of languages
+      - basically, as languages came out, users flocked toward them, in particular: go, rust, elixir. Any language after them would have much catching up to do.
 
 #### compiles to a "native binary" executable
 **Haxe**
@@ -536,6 +542,7 @@ Nim
   - made for embedded systems?
   - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression, etc.
   - easy C binding
+  - garbage collector options: reference-counting, rust-like borrow-checker in-the-works
   - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
   - https://forum.nim-lang.org/t/1880
     - ?
@@ -559,9 +566,12 @@ ML (Meta Language)
     
 
 
-### semi-manual memory management?
+### C++ and its replacements
+**Jai**
+  - the only solution
+
 **Rust**
-  - **like C/C++ but safe--no run-time errors(!?!?)**, **no garbage collector**, instead, using a specific memory management system, wherein you still have fine control of memory but it's easier(?) and guaranteed to be safe. you *must* learn and use this system to handle the memory yourself (just as you must learn Obj-C's reference counting, or C++'s pointers and smart pointers), thus if ever there's a problem with a garbage collector you'll either write that portion of code in C/C++ or just end up re-writing the whole thing with Rust
+  - **like C++ but safe--no run-time errors(!?!?)**, **no garbage collector**, instead, using a specific memory management system, wherein you still have fine control of memory but it's easier(?) and guaranteed to be safe. you *must* learn and use this system to handle the memory yourself (just as you must learn Obj-C's reference counting, or C++'s pointers and smart pointers), thus if ever there's a problem with a garbage collector you'll either write that portion of code in C/C++ or just end up re-writing the whole thing with Rust
     - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
     - mutability: https://doc.rust-lang.org/std/keyword.mut.html, https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
     - https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
@@ -584,18 +594,29 @@ ML (Meta Language)
   - Mozilla, and as always, open-source
 
 
-### C and C++ replacements / manual memory management
+C++
+  - you poor, poor soul, you.
+  - frameworks: ??, maybe C++ people don't rely on frameworks: they build it! :p
+  - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
+    - and therefore pass function arguments by value or pointer or reference or smart pointer too
+  - adds **object-oriented design features (classes)** to C
+    - also adds the idea of allocating stuff during constructor and de-allocating during deconstructor
+  - adds references to C (i guess in C you just had to use pointers for everything..?)
+  - smart pointers (3 kinds) that generally delete themselves once the last reference falls out of scope
+    - this just makes it even more complex!! :( why worry about references and 3 kinds of smart pointers and raw pointers, when you can worry about raw pointers?
+  - header files are also annoying
+  - adds "standard library" including strings to C (before they were an array of "char"s)
+  - adds generics ("templates"), enums, and other now basic features..
+  - loved/hated, mostly hated, i think
+  - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
+  - also a problem of multiple compilers, each of which only work for certain version or certain features?? (gcc, vs, dev-cpp, etc.)
+  - segfaults, blue screen of deaths
+  - this first reddit thread illustrates the terrible flaws of C++
+    - https://www.reddit.com/r/rust/comments/4yz59h/cc_interop/
 
 
 
-
-### C and C replacements / manual memory management
-**Jai**
-  - the only solution
-
-V
-  - ?
-
+### C and its replacements / manual memory management
 **Zig**
   - a C replacement
   - explicit about using the allocator to allocate the heap...
@@ -643,30 +664,13 @@ Odin
   - like C, not object-oriented, with a belief that *data and procedures (functions) should be seperate, and that behaviors (class's functions/methods?) shouldn't even exist!* :o very rad
   - influenced by Go
 
+
+V
+  - C-like
+  - gc optional
+
 D
-  - dead? :(
-
-
-C++
-  - you poor, poor soul, you.
-  - frameworks: ??, maybe C++ people don't rely on frameworks: they build it! :p
-  - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
-    - and therefore pass function arguments by value or pointer or reference or smart pointer too
-  - adds **object-oriented design features (classes)** to C
-    - also adds the idea of allocating stuff during constructor and de-allocating during deconstructor
-  - adds references to C (i guess in C you just had to use pointers for everything..?)
-  - smart pointers (3 kinds) that generally delete themselves once the last reference falls out of scope
-    - this just makes it even more complex!! :( why worry about references and 3 kinds of smart pointers and raw pointers, when you can worry about raw pointers?
-  - header files are also annoying
-  - adds "standard library" including strings to C (before they were an array of "char"s)
-  - adds generics ("templates"), enums, and other now basic features..
-  - loved/hated, mostly hated, i think
-  - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
-  - also a problem of multiple compilers, each of which only work for certain version or certain features?? (gcc, vs, dev-cpp, etc.)
-  - segfaults, blue screen of deaths
-  - this first reddit thread illustrates the terrible flaws of C++
-    - https://www.reddit.com/r/rust/comments/4yz59h/cc_interop/
-
+  - C-like
 
 C
  - **a *very* simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
@@ -683,22 +687,21 @@ C
 
 
 
-Pony
-  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
   
 
 
 
 
 
-### cool idea!
+### cool ideas!
 Streem
   - "a stream based concurrent scripting language. It is based on a programming model similar to the shell, with influences from Ruby, Erlang, and other functional programming languages."
   - https://github.com/matz/streem
     - by the maker of Ruby
   - seems kinda abandonded, but rad idea! :D
 
-
+Pony
+  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
 
 
 
