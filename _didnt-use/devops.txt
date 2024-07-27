@@ -1,5 +1,15 @@
 
 
+
+
+"However the industry is moving to immutable infrastructure where you don't even need to worry about VMs at all.
+In that case Terrafom, Pulumi, Helm are the go-to tools."
+
+
+
+
+
+
 conclusion:
 just skip to nix, it's a paradigm shift ahead of the rest
 
@@ -55,15 +65,19 @@ traditional automation tools:
 
 terraform
   - ??
-ansible
-  - the easiest to use compared to the others
+**ansible**
+  - the easiest to setup and use compared to the others
   - doesn't scale as massively as the others due to implementation
 puppet
   - ruby, complex
+  - "The CEO of puppet labs prides himself in never finishing a book. He gets the key concepts then puts the book away. This same mentality is evident in puppet because everything is half baked and designed with a ball of mud architecture."
 chef
   - ruby, simpler?
+  - windows enterprise
 salt
   - python
+
+https://www.reddit.com/r/devops/comments/18fleds/ansible_vs_chef_vs_puppet/
 
 
 others:

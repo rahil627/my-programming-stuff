@@ -1,3 +1,24 @@
+from notes from another file:
+high level -> Assembly -> Machine
+wages = 5; -> load wages; store 5; -> 100100 100010
+	compiler	assembler
+
+source code -> object program
+linker - combines libraries with the object program
+
+editor -> compile -> link -> load -> execute
+
+build/make - link object code with resources to create an executable
+
+structured programming - divide into subproblems
+object oriented programming - identify objects, determine how they interact, specify members and methods
+
+stopped. Just keep the damn notes.
+
+
+
+
+original file:
 data-driven design
   - anti-object-oriented programming
   - see HandmadeCon / Handmade Hero
@@ -7,7 +28,7 @@ data-driven design
 
 
 object pool
-  - http://www.haxeflixel.com/articles/bullet-manager-part-1 
+  - http://www.haxeflixel.com/articles/bullet-manager-part-1
 
 https://github.com/richardlord/Asteroids/tree/master/src/starling/net/richardlord/asteroids
   - why entity is overkill for 2d games without an editor like Unity
@@ -46,7 +67,7 @@ This way - if you want to call a method defined by an interface - you don't need
 data structures
 http://lab.polygonal.de/as3ds/
 array
-multi-dimensional array - 
+multi-dimensional array -
 queue - FIFO (first in first out), not really a structure, just a way of accessing not store
 stack - FILO (first in last out)
 
@@ -109,8 +130,8 @@ array - similar to vector, fixed number of indices, indices can be computed at r
 list or sequence - ordered collation of values
 map (associative array, dictionary, index) - add, reassign, remove, lookup. Indexed by keys instead of a range of numbers. Lookup O(1).
 	hash table
-	self-balancing binary search tree - 
-	b-tree - 
+	self-balancing binary search tree -
+	b-tree -
 queue - first in first out, insert from the back, pop from the front,
 	double ended queue (deque) - elements can be added or removed from the front or back
 	priority queue - insertWithPriority (set a priority) and pullHighestPriorityElement
@@ -218,7 +239,7 @@ You have to declare functions, structures and variable because the compiler need
 int myFunction(int x, char c) //function prototype. tell the compiler myfunction is going to use 5 bytes, when it is defined.
 extern int a //declaration for global variable.
 definition = declaration + space reservation
-int myFunction(int x, char c){return c+x;} //function definition. 
+int myFunction(int x, char c){return c+x;} //function definition.
 int a //definition
 
 taken from - http://www.mactech.com/articles/mactech/Vol.09/09.10/CPPBasics/index.html
@@ -400,7 +421,7 @@ namespace1.namespace11{class2{}} could be added in another file!
 Namespaces don't correspond to file or directory names. If naming directories and files to correspond to namespaces helps you organize your code, then you may do so, but it is not required.
 
 using - using namespace1.namespace11 - allows you to call methods without typing the 'fully qualified name', the full namespace path
-alias - alias n11 = namespace1.namespace11 - shorten a long namespace 
+alias - alias n11 = namespace1.namespace11 - shorten a long namespace
 
 classes
 constructor - used for initializing class memeber, always has the same name as the class, cannot return a value, not mandatory
@@ -425,7 +446,7 @@ delegates and events
 exception handling
 try...catch - allows you to test a block of code for errors. The try block contains the code to be run, and the catch block contains the code to be executed if an error occurs.
 throw - creates an exception. often used in conjunction with try...catch, to create accurate error messages.
-try...except...else - 
+try...except...else -
 
 try:
   z=5/0
@@ -480,7 +501,7 @@ setter
 parsing (syntactic analysis) - the process of analyzing a text, made of a sequence of tokens (for example, words), to determine its grammatical structure with respect to a given (more or less) formal grammar.
 regular expression - A regular expression is an object that describes a pattern of characters. can be used for searching, parsing, format checking, and substitution. modifiers: g=global, i=case insensitive, .test(), .exec(), etc.
 A command-line interpreter (also command line shell, command language interpreter) - is a computer program that reads lines of text entered by a user and interprets them in the context of a given operating system or programming language.
-multitier architecture (n-tier) - 
+multitier architecture (n-tier) -
 inline function - tells the compiler to insert the complete body of the function in every place in the code where that function is used. higher runtime performance, larger code
 
 
