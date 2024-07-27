@@ -18,3 +18,30 @@ synthwave '84
 terminal:
 https://windowsterminalthemes.dev/
   - cyberpunk 2077
+
+
+
+
+
+
+# these were the themes i liked, from when i used linux/nvim from an ipad mini 2
+
+# base16 shell themes
+base16-gruvbox-dark-pale.sh
+base16-gruvbox-light-soft.sh
+base16-monokai.sh
+base16-papercolor-dark.sh
+base16-papercolor-light.sh
+base16-tomorrow-night-eighties.sh
+base16-tomorrow-night.sh
+base16-tomorrow.sh
+base16-zenburn.sh
+
+# from some old file
+
+themes
+	textmate - monokai - sexiest theme ever
+	notepad++ - bespin, monokai
+	vim - wombat
+	visual studio - ragnarok gray by Tomas Restrepo
+	komodo - gray

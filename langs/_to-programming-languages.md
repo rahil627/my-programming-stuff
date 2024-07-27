@@ -1,3 +1,8 @@
+check SO yearly surveys
+  - https://insights.stackoverflow.com/survey/2021#technology
+  - but beware, this only covers most popular stuff, and is extremely web-oriented and C#/.NET-oriented; little to nothing for specialities like game programming or quality indie apps
+  
+
 
 # todo:
 jai

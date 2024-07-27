@@ -13,6 +13,7 @@ doom emacs
   - potential is unlimited by the ui
 helix (or other fav terminal editor / key-bindings) for quick general use, along with cli tools, remote terminal use, a good step towards emacs
   - adds tree-sitter
+  - lsp (vim) and dap (emacs)!!
   - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
     - an emacs user switches to helix and mentions some good plugins
     - TODO: try them!
@@ -46,6 +47,13 @@ current standard:
     - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
   - has extensions for all of the classic key-bindings
     - **"helix for vs-code"** is amazing, merging helix bindings with vs-code bindings and gui cursor
+
+iOS:
+**WorkingCopy**
+  - the standard for mobile os`s
+Kodex
+Koder
+  - one of these are free, usable..
 
 old standards:
 (note: i missed out on the atom vs sublime generation)

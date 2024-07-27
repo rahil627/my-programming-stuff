@@ -120,7 +120,7 @@ or a more narrow source code pro
 **consolas**
   - 12
   - a classic on Windows
-  - still looks the best on windows, especially vs-code, where it is the default
+  - **still looks the best on windows**, especially vs-code, where it is the default
   - damn near impossible to beat
   - small horizontal space between characters
   - 1-2 font sizes smaller than others (marketing?)
