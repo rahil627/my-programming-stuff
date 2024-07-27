@@ -14,6 +14,7 @@ $bloatware = @{
     # xbox
 
     # ok:
+    # discord # microsoft can't buy out products made with love!
     # paint # still the best ms native app
     # notepad
     # maps # this is actually ok!
@@ -22,12 +23,15 @@ $bloatware = @{
     # snipping tool (though it should be a powertoy)
 
     # non-microsoft bloat
-    linkedin = "linkedin"
+    
+    # - vendor-specific
+    # acer 
 
     # microsoft bloat
     #edge # can't uninstall (neatly) :(
     outlook = "outlook (new)" # TODO: is it worth even trying..??
     ms_games = "solitaire & casual games" # takes 114mb and doesn't even have the games installed..??
+    linkedin = "linkedin" # microsoft bought it
     movies = "movies & tv" # just plain terrible cash-grab
     xbox = "xbox" # TODO: free ultimate pass for 1 month, then trash it
 

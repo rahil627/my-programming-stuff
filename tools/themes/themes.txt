@@ -21,6 +21,18 @@ https://windowsterminalthemes.dev/
 
 
 
+# from vim
+
+# my top 3
+Plug 'sonph/onehalf', { 'rtp': 'vim' } “like gruvbox but with slightly lighter contrast
+  - onehalflight and onehalfdark
+Plug 'junegunn/seoul256.vim' “even less contrast than onehalfdark
+Plug 'NLKNguyen/papercolor-theme' “more contrast than gruvbox!
+
+Plug 'morhetz/gruvbox’ “#1 for a reason
+Plug ‘sainnhe/everforest’ “error
+Plug ‘sainnhe/gruvbox-material’ “error
+Plug ‘romainl/flattened’ “error
 
 
 

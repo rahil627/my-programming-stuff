@@ -1,3 +1,6 @@
+note: the config files are more recent than the stuff in here
+
+
 vim, vi, and all their newer incarnations..
 
 install vim:
