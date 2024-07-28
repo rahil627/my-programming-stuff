@@ -1,10 +1,10 @@
 
 formats:
 
-plain text files
-  - my own personal notes' format
-  - can write a simple markup for it to preview it
-  - easy to sift through with linux commands
+**plain text files**
+  - **my own personal notes' format**
+  - **TODO: can write a simple markup for it to preview it**
+  - **easy to sift through with cli**
 
 **jekyll**
   - a static-site generator written in ruby and used by github for github programmers
@@ -30,7 +30,7 @@ obsidian
 
 joplin
   - open-source obsidian?
-  - works on all platforms, and has a good linux cli  
+  - works on all platforms, and has a good linux cli
   - simple, takes a few seconds to get started
   - "notebooks" and tags
   - strange tracking metadata by default??
@@ -62,7 +62,7 @@ x/notion
   - historically, a great push for note-taking apps
   - a very clean note-taking app with tons of markup ability
   - **need internet to access!?**
-  - slow for a notes taking app
+  - *slow* for a notes taking app
 
-  onenote, evernote, etc.
-    - old propietary note file format?
+onenote, evernote, etc.
+  - old propietary note file format?
