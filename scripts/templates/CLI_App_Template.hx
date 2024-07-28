@@ -46,7 +46,7 @@ class CLI_App_Template {
 					Sys.println("    -flag              change something");
 					Sys.println("    -add string        input a string");
 				// case "-main": // ignore haxe flags?
-				// see haxe.macro.Context.getDefines()
+				// TODO: see haxe.macro.Context.getDefines()
 				case _:
 					Sys.println('unknown arg: "$arg"');
 			}

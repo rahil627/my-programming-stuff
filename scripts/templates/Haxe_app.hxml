@@ -1,7 +1,7 @@
 # same as comman arguments, but line seperated, and one '-' only?
 
 # entry point to a Class
--main Template
+-main Haxe_app
 
 # location of source folder?
 #-cp src

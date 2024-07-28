@@ -21,7 +21,7 @@ public static function Process_Template() {
     }
 
     // an entire bash command / script in the arguments parameter!
-    var output = new Process("bash", ["-c 'echo rootS_PASswoRd | sudo -S ifconfig'"]).stdout.readAll().toString();
+    var output = new sys.io.Process("bash", ["-c 'echo rootS_PASswoRd | sudo -S ifconfig'"]).stdout.readAll().toString();
         trace("output:::"+output);
 
  }

@@ -1,5 +1,5 @@
 
-class File-io-scipt-template {
+class File_io_script_template {
 
 	static function main() {
 
@@ -17,7 +17,7 @@ class File-io-scipt-template {
 		trace(c);
 
 		// do stuff
-		
+
 
 		// write
 		sys.io.File.saveContent('file-path',c);

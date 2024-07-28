@@ -1,6 +1,3 @@
-
-
 puts "meow"
 `echo woof`
-
 
