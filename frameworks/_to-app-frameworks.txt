@@ -6,9 +6,12 @@ https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-i
 
 
 conclusion:
-in the end, i ditched the idea of native apps for web apps and cli/tui apps, see web-frameworks.txt . the browser just handles cross-platform for you.
+in the end, i ditched the idea of native apps for web apps and cli/tui apps, see web-frameworks.txt and cli-and-tui-app-frameworks.txt. the browser and terminal just handles cross-platform for you, and aren't going to die any-time soon.
 
-otherwise, perhaps cli and tui apps are a way to go for text-only apps. I personally *love* how lazygit looks in a themed terminal.
+cli and tui apps are a way to go for text-only simple-input apps. I absolutely *love* how lazygit looks in a terminal.
+
+Haxe is perfect for making cli apps (and has tui potential) as it can compile to a binary (via hashlink/c -> gcc). Just add haxe-ui/html5 for a quick gui.
+
 
 
 0. Haxe

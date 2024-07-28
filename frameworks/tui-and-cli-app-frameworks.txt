@@ -2,36 +2,49 @@
 https://jesseduffield.com/Lazygit-5-Years-On/#weighing-in-on-the-cli-ui-debate
   - a good read, by the person that made lazygit
 
+https://news.ycombinator.com/item?id=32331367
+  - TODO: to read
 
+
+my thoughts:
 the main problem is that your program (cli or tui) is only runnable from a terminal, which really really limits the users and even devices that can run It
 
-however, the overhead of cli is trivial: an options parser is often even included in the std lib, and if not, is also trivial to do
+however, the overhead of cli is trivial: an options parser is often even included in the std lib, and if not, is also trivial or just plain unnecesary
 
 tui is a bit more work, usually requiring working with curses/ncurses, or some lib on top of that, making cross-platform apps (flutter, haxe-ui) just as appealing
 
 
+frameworks and langs:
+[your fav language]
+  - anything can be used to make a cli app, but the language should be able to compile to a native executable binary to make it easily portable. If the app requires input, then the terminal (or some ui) is needed
+
+**haxe**
+  - my fav lang :)
+  - **just use hashlink/c (or cppia) to compile to native**
+
 ruby
-    - cli
-        - **ruby's native "optparse" lib**
-          - **just use ai to generate it**
-        - several other option parsing dsl libs, but adds a rather trivial lib/gem
-          - https://github.com/postmodern/command_kit.rb
-            - this one looks good
-          - thor
-            - heard this is overkill
-    - tui
-    - **tty-toolkit**
-        - modular, only add what you need
-          - **can use it for cli-only stuff too:**
-        - tty-option
-            - yet another options parser
-        - tty-prompt
-            - most used component
-    - cli-ui
-        - a framework by shopify
+  - solid library for quick scripting
+  - cli
+      - **ruby's native "optparse" lib**
+        - **just use ai to generate it**
+      - several other option parsing dsl libs, but adds a rather trivial lib/gem
+        - https://github.com/postmodern/command_kit.rb
+          - this one looks good
+        - thor
+          - heard this is overkill
+  - tui
+  - **tty-toolkit**
+      - modular, only add what you need
+        - **can use it for cli-only stuff too:**
+      - tty-option
+          - yet another options parser
+      - tty-prompt
+          - most used component
+  - cli-ui
+      - a framework by shopify
 
 go
-  - for performance
+  - for performance, great std lib
   tui:
     - **bubbletea**
       - mvc pattern
@@ -43,7 +56,9 @@ go
     - cobra, cli, go-args libs
 
 rust
-  - not worth the dev time
+ - not worth the dev time, just use haxe or go
+ - ratatui
+    - currrent fork of rs-tui
 
 python
   - pytermgui
