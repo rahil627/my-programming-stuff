@@ -6,21 +6,9 @@ https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-i
 
 
 conclusion:
-in the end, i ditched the idea of native apps for web, see web-frameworks.txt . the browser just handles cross-platform for you.
+in the end, i ditched the idea of native apps for web apps and cli/tui apps, see web-frameworks.txt . the browser just handles cross-platform for you.
 
 otherwise, perhaps cli and tui apps are a way to go for text-only apps. I personally *love* how lazygit looks in a themed terminal.
-  - cli
-    - ruby's native optparse lib
-    - several other option parsing dsl libs
-  - tui
-    - **tty-toolkit**
-      - modular, only add what you need
-        - tty-option
-          - yet another options parser
-        - tty-prompt
-          - most used
-    - cli-ui
-      - a framework by shopify
 
 
 0. Haxe
