@@ -1,6 +1,16 @@
 
 
-install:
+# install:
+
+## windows
+scoop install haxe # or winget
+  output:
+  Linking ~\scoop\apps\haxe\current => ~\scoop\apps\haxe\4.3.5
+  Creating shim for 'haxe'.
+  Creating shim for 'haxelib'.
+  Adding ~\scoop\apps\haxe\current to your path.
+
+## linux
 https://haxe.org/download/linux/
 install haxe:
 sudo add-apt-repository ppa:haxe/releases -y
@@ -60,7 +70,7 @@ Haxe and iOS workflow:
   - setup debug log for iOS testing
   - have a project file for Mac ready, or at least a simple HaXe text editor
   - test input and frame rate
-  
+
 debugging:
   - http://haxeflixel.com/forum/help/using-visual-c-debugging-cpp-target-breakpoints
   - http://www.joshuagranick.com/blog/?p=1122
@@ -80,10 +90,10 @@ use:
     - http://www.nme.io/developer/guides/actionscript-developers/
 
 
-      
+
   mac:
     - http://www.matthijskamstra.nl/blog/index.php/2012/04/19/installing-haxe-and-nme-on-osx/
-      
+
 set up HaxePunk
   - http://haxepunk.com/learn/tutorial/getting-started and https://github.com/HaxePunk/HaxePunk readme
   - haxelib install HaxePunk
@@ -92,16 +102,16 @@ set up HaxePunk
       - run command prompt as administrator
   - cd new [folder]'s directory
   - nme test build.nmml flash or just run it in FlashDevelop
-  
+
   - http://kpulv.com/107/FlashDevelop_with_HaXe_NME_and_HaXePunk/
     - installs using local copy of HaxePunk
-    
+
   - mac:
   - nme test sample.nmml ios -simulator
   - nme test sample.nmml ios (don't use this?)
   - nme update sample.nmml ios
     - have to run the project file in Xcode yourself
-    
+
 editors:
   - pc:
     - FlashDevelop
@@ -113,8 +123,8 @@ editors:
       - https://github.com/kevinweil/protobuf.tmbundle/issues/1
     - sublime text
       - http://haxeflixel.com/articles/sublime-text-ide-and-haxe
-    
-    
+
+
 Haxelib:
   - add libraries:
     - project properties, add classpath
@@ -126,8 +136,8 @@ Haxelib:
 
 resources:
   - http://haxe.org/doc/start/cpp
-  
-    
+
+
 
 
 notes:
@@ -142,8 +152,7 @@ HaxeLib
 libraries:
 http://haxe.org/doc/libraries
 deepnight's library
- 
+
 resources:
 http://blog.skialbainn.com/
   - really useful and recent listing of Haxe practical usage
-  

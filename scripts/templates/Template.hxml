@@ -10,7 +10,7 @@
 #-lib heaps
 
 # build targets
--interp
+--interp
 #-hl build.hl
 #-js app.js
 #-cpp bin

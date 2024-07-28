@@ -7,10 +7,10 @@ https://github.com/Dvergar/awesome-haxe-gamedev
 
 https://github.com/nadako/awesome-haxe
   - more personal, toward developing the haxe langauge
-  
+
 the codebook is especially good for learning bit-by-bit, especially for macros!
 
-  
+
 # forums
 just a note: i've got quite a few posts on the Heaps forum... but the Discord is a *much much* better place
 
@@ -22,13 +22,13 @@ just a note: i've got quite a few posts on the Heaps forum... but the Discord is
 
 https://github.com/jeremyfa/interpret/
   - modify and execute haxe code during run-time, like a scripting language!
-  
+
 https://github.com/RblSb/KhaHotReload
   - hot reload for js targets
-  
+
 https://github.com/Aurel300/hx-objc-externs
   - also includes UIKit and other Apple stuff
-  
+
 https://github.com/RobertBorghese/Haxe-MagicArrayTools
   - turn ds.map/filter/select into efficient for loops! :o
 
@@ -46,15 +46,15 @@ https://github.com/HaxeFoundation
 https://github.com/haddock7/hlimgui
   - imgui bindings
     - wait for Yanrish to release an example of imgui with Heaps
-  
+
 https://code.haxe.org/category/macros/add-parameters-as-fields.html
   - macros are nuts!!!
-  
+
 tink
   - macro heaven
-  
-  
-  
+
+
+
 
 
 
@@ -95,7 +95,7 @@ php target, for old CMSs?? lol
 
 transpilers:
   - with trasnpiling, can then use any target!
-go2hx, for **Go libs**, 
+go2hx, for **Go libs**,
 
 binding generators:
   - with bindings, you are limited to that specific target language
@@ -112,27 +112,28 @@ C++?
 most of the targets are *very* fast (except python, and that's not haxe's fault)
 
 
-  
+
 
 # haxe cli
 can either use the cli or create an hxml file, where each line is a command argument
 
 haxe --main MainClass --interp
   - for interpreter
-  
+
 or, via buildFile.hxml file:
 --interp
 --main MainClass
 -lib heaps (installed via haxelibs)
 -cp sourceFolder
 
-then run haxe buildFile.hxml
-  
-  
+then run:
+haxe buildFile.hxml
+
+
 haxe --main MainClass -js app.js
   - results in app.js and app.map.js (or something like that)
   - then you need to create a basic HTML page to include the script
-  
+
 haxe --main MainClass -hl build.hl
   - be sure to `haxelib install hashlink`
   - results in a single file build.hl containing bytecode
@@ -155,7 +156,7 @@ a newer, smarter alt to haxelib
   - tracks the version of all dependencies (over time?)
   - https://github.com/lix-pm/lix.client
 
-  
+
 hashlink profiler:
 from a discord message:
 
@@ -192,13 +193,13 @@ wrapper method: hxp
     - then can use `hxp script-file` to run it
     - extend hxp.Script to get CLI-like argument handling, perhaps a bit more complex than just the Sys.args() string
       - **i personally wouldn't go this route as it creates a dependency on hxp for all of your scripts! :/, it's better to just use a CLI parsing lib only when you need it, and use `import CLILib`**
-    
+
 
 haxelib method
   - i was told of this in Discord
   - you'd still need a json file to set the haxelib though, so, same problem, no? How is this different or better than just having an hxml file?
   - maybe you could run it from anywhere..? `haxelib ScriptClass` will work anywhere?
-  
+
 
 hscript
   - https://lib.haxe.org/p/hscript/
@@ -210,13 +211,13 @@ hscript
     - not only can you parse a script and run it, but you can set variables of the interpreter!
       - **thus seperating variable/configs from the actual script/program** *whoa..*
 
-```    
+```
 var parser = new hscript.Parser();
-var program = parser.parseString(script); // can just read a file to get the script's string 
+var program = parser.parseString(script); // can just read a file to get the script's string
 var interp = new hscript.Interp();
 interp.variables.set("Math",Math); // share the Math class
 interp.variables.set("angles",[0,1,2,3]); // set the angles list
-trace( interp.execute(program) ); 
+trace( interp.execute(program) );
 ```
 
 

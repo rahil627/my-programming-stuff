@@ -104,7 +104,7 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
     vscode = "VSCodium.VSCodium" # works the same!, just extensions rely on people  adding them to a list
     git = "Git.Git" #winget install --id Git.Git -e --source winget # TODO: what's the -e flag?
     lazygit = "JesseDuffield.lazygit" # TODO vs magit
-    
+
     # more dev specific
     # erlang = "Erlang.ErlangOTP" # for elixir
     # elixir
@@ -118,11 +118,12 @@ $apps = @{ # enum won't work, and psobject seems like a hassle
 
 
 # used by scoop
-$app_names @(
+$app_names = @(
 
     # dev
     "erlang",
-    "elixir",  
+    "elixir",
+    "haxe"
 )
 
 # example use:
