@@ -72,11 +72,12 @@ ruby/grape
   - "opinionated"
   - between roda and rails
 
-**ruby/roda>sinatra**
+**ruby/roda (a sinatra replacement)**
   - the prettiest solution (see generated app.rb), no MVC pattern
   - even includes a choice of **templating** system (just as jekyll does): simplify writing html/js/css, and with your choice in style!
   - you'd still have to write html/js though :(
   - see this example: https://github.com/katleiahramos/Sinatra-Capsule-Wardrobe-App/tree/master
+  - "Roda was developed mostly to address common frustrations people had with sinatra. While I appreciate sinatra's seminal role in popularizing the "microframework" routing approach, which can still be felt outside of ruby, it really didn't do much to address that point where your barebones POC needs to be a bit more robust, at which point you'd have to rewrite everything from scratch in a new framework. Roda excels at that, by providing the vanilla "microframework" XP from the get go, while providing the more robust features as "opt in" plugins that you can pick up as you need."
 
 **elixir/phoenix**
   - compact
