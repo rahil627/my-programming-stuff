@@ -398,3 +398,35 @@ font
 	ocr a std - too console-ish
 	proggysquare - looks nice!
 	droid sans mono**** - like consolas, but a bit longer vertically, tough competition with consolas
+
+
+
+
+notes:
+
+otf vs ttf:
+
+basically: mac os doesn't care for ttf, all look the same. windows will render ttf. ttf is capable of better hinting code but requires more effort on part of the font designers 
+
+https://www.reddit.com/r/typography/comments/ci4nwk/comment/ev1jy42/
+  "In the modern era of font development, OTF and TTF are very, very similar.
+
+  OTF stands for Postscript-flavored OpenType.
+  TTF stands for Truetype-flavored Opentype.
+
+  They both share the same capabilities and general structure (literally, the tables within a font are near identical). Here's a general sense of the differences that matter the most:
+
+  Math. OTF uses Cubic curves, TTF uses Quadratic. In the old days this mattered a lot more since printers were more limited, but nowadays this doesn't matter much.
+
+  Hinting. Hinting is code that helps the OS achieve consistent rendering across the font at different point sizes. OTF supports alignment zones / blue zones, which marks stems, and key parts of the glyphs to enable the OS to render the letters. TTF uses full-on hinting, which is much more involved than the zones in OTF.
+
+  So what matters more, is what the OS does with an OTF or TTF file.
+
+  Mac (for the most part) ignores hinting entirely and renders all fonts the same. This works fairly well on high-end screens with high resolutions, but falls apart at smaller sizes on low resolution screens.
+
+  Windows prioritizes achieving high contrast character rendering, and thus does not assume that all fonts should be rendered the same. So it relies on hinting code to achieve good results. As a result, you'll often see well-hinted TTF fonts render really crisp and clearly on Windows, whereas OTF seem a bit blurry. Do note, though, that badly-hinted TTF fonts will look terrible on Windows. So I suppose there's a bit more risk with TTFs in having good quality—best to purchase them from quality type foundries who know what they're doing.
+
+  As a type designer, I tend to like OTF because they're simpler and easier to get out the door. But as someone who also cares about consistent, quality rendering across all devices, TTF is a significantly better option."
+
+  
+
