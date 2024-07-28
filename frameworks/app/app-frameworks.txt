@@ -1,16 +1,29 @@
-
-
-
-https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-immediate-mode
-
-
-
 conclusion:
 in the end, i ditched the idea of native apps for web apps and cli/tui apps, see web-frameworks.txt and cli-and-tui-app-frameworks.txt. the browser and terminal just handles cross-platform for you, and aren't going to die any-time soon.
 
 cli and tui apps are a way to go for text-only simple-input apps. I absolutely *love* how lazygit looks in a terminal.
 
-Haxe is perfect for making cli apps (and has tui potential) as it can compile to a binary (via hashlink/c -> gcc). Just add haxe-ui/html5 for a quick gui.
+Haxe is perfect for making cli apps (and has tui potential) as it can compile to a binary (via hashlink/c -> gcc). Just add haxe-ui/html5 or haxe-ui-wxwidgets for a quick web or desktop gui.
+
+otherwise, if you really need a gui, especially for a mobile target, Flutter is indeed the way to go, lightyears better than it's competition (react native and avalonia), though, it could very possibly be abandonded, along with all the other cross-patform solutions (hence web/terminal)
+
+
+
+
+https://www.reddit.com/r/iOSProgramming/comments/190b4b6/cross_platform_frameworks_in_2024/
+question:
+  "If you were to build a medium-sized app today (and native isn't an option), which cross platform framework would you use? Priority #1 being able to easily update/fix things without issues outside of your control over the next 3-5+ years."
+
+answer:
+  | without issues outside of your control
+
+  "IMHO this is the #1 issue against non-native: you don't have control, the framework folks have control and you have to wait on them to update and fix lots of things, entirely outside of your control.
+
+  The point being, no one can offer you that kind of guarantee for years, that' just not how this stuff works. That'd be a hard ask even in the native world: tech and APIs change, and there's bugs, all of it is stuff out of your control. Non-native adds another layer on top of all of that that's out of your control.
+
+  You're asking for the impossible."
+
+
 
 
 
@@ -87,6 +100,14 @@ Ruby
 # "hybrid"
 basically bindings to native components (UIKit for iOS, Win32 api for Windows, etc.). This is the first solution that came to my mind when i thought cross-platform ui/apps : just provide bindings, and then a common framework on top of that. **The main trade-off is this: it will not constrain as you always have acces to native APIs, but you must understand the inner APIs of each target: UIKit for Apple, Win32 for Windows, and so on. Thus, this is definitely not for the casual or even the indie devs.** Indies should go one step up, to "owner-drawn" non-native frameworks.
 
+wxWidgets
+  - a very old but solid open-source C++ project
+  - **mobile support is pretty non-existant**
+  - there are many bindings for it, including one for haxe! HaxeUI contains it as a build option!!
+    - http://haxeui.org/getting-started/hello-world/
+      - pretty sick, just change build target and bam! but surely mobile support is lacking. :(
+
+
 React-Native
   - the grand-daddy of hybrid frameworks?, and still perhaps the most popular (as of 2022)
   - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
@@ -101,11 +122,30 @@ React-Native
   - Facebook (abandoned to open-source?)
   - Microsoft..? https://microsoft.github.io/react-native-windows/
 
-MAUI (Xamarin)
+React (web)
+  - javascript world, a web framework, but also has a native framework (React Native)
+  - most popular, therefore many libraries, tutorials, support
+  - live-reload (no need to build, deploy, etc.)
+  - completely code shared, ‘build once, run everywhere’
+  - you sorta build "components" (widgets) with HTML syntax (ew)
+  - as of 2022, still the most popular
+  - made by Facebook? (*vomit*)
+
+Maui <- Xamarin
+  - .net / c# world, uses native ui
+  - two ways to do ui: forms library can be used for completely code-shared ui, or, ios and android specific libraries can be accessed making for more complex platform-specific ui
+  - there is only ‘fast deployment’ for android devices via android studio; there is no live-reloading
+  - old-school build ‘n deploy process
+  - **of the big 3 (Flutter, Xamarin, React), this was the least loved**AUI (Xamarin)
   - C#/.NET WinForms(?) api
 
 Uno?
   - C#/.NET WPF api
+  - renders widgets using the platform's primitives
+  - uses one of the C#/.NET WinForms-like api to build widgets
+  - hot re-load
+  - more mobile-oriented
+
 
 RubyMotion
   - closed source, made by the same people that made DragonRuby, the cross-platform game framework
@@ -116,7 +156,7 @@ RubyMotion
 
 
 # non-native
-for a single, indie dev, these are the way to go. Well, either this or web (React, without the Native), which is inherently cross-platform.
+for a single, indie dev, these are the way to go. Well, either this or web (React, without the Native), which is inherently cross-platform
 
 Qt
   - the grand-daddy of all non-native ui frameworks
@@ -130,10 +170,21 @@ Qt
   - the contempory banger, quickly rose in popularity, equaling React-Native to become top 2
   - hot-reload works on all devices, it's quite the killer feature
   - Dart has VM during development and AOT compilation for production, basically like Haxe
-  - *tiny* minimum app size, like 2MB for Android
+  - *tiny* minimum
+  - hot-reload
+  - supports native widgets and web
+  - mobile as main target, but works on everything!
+  - renders/draws using Skia graphics lib
+  - most loved framework on the SO surveyapp size, like 2MB for Android
+  - Google, but no propietary crap like apple and microsoft
 
 Avalonia
   - C#/.NET version of Flutter
+  - renders widgets with Skia (like Flutter)
+  - uses one of the C#/.NET WinForms-like api to build widgets
+  - more desktop-oriented
+  - "cleanest" code-base
+  - "We've had huge companies adopt Avalonia for their desktop apps, including JetBrains, GitHub, KLM and more."
 
 
 
@@ -149,8 +200,9 @@ Electron
 
 
 
-# native
 
+
+# not interested / corporate folks faking and abusing open-source folks
 SwiftUI
   - Apple's newer (2019?) tool for making native ui apps for Apple platforms (MacOS, iOS, etc.)
   - https://developer.apple.com/xcode/swiftui/#
@@ -165,8 +217,6 @@ SwiftUI
   - Apple
 
 
-
-# not interested
 Jetpack Compose
   - Google Android's version of SwiftUI ?? *gross* :vomiting_face:
   - still too new (as of 2022)
@@ -178,9 +228,10 @@ Kotlin MultiFramework
 
 
 # old
-Cordova
-Ionic
-Xamarin -> MAUI
+x/Ionic
+  - typescript, angular, uses cordova (aka phonegap) to port web code to devices, uses web (html, css) for ui
+  - because it uses web for ui, it just can’t look good as native ui apps
+  - can now be used with any javascript front-end (react, angular, vue, etc.)?
 
 
 
@@ -190,6 +241,50 @@ Xamarin -> MAUI
   - 500 build minute free per month
   - supports: native iOS/Android, Flutter, React Native, Unity, and some older ui frameworks
   - https://codemagic.io/start/
+
+
+
+
+
+
+
+https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-immediate-mode
+  - TODO: to read?
+
+
+
+# my answer to a reddit question:
+https://www.reddit.com/r/AskProgramming/comments/sqk6id/avalonia_vs_uno_vs_maui_vs_flutter/
+
+tldr: try Avalonia or Uno so that you can stick to C#, then, if they end up being problematic, fallback to Flutter. Maui, well... i was never a fan of Xamarin, but i’m glad they changed that horrible name!
+
+i was just looking at this too... maybe there’s some C# bindings for wxWidgets? I found one for my language: haxe via haxeui lib... It just seems like one of those old solid libs that’ll never die, like many good C++ libs... This way, you don’t have to learn a whole ‘nother api, framework, way of doing, language, or anything! :)
+
+although... now looking at the repo... i just don’t see much mobile support... even the iOS readme says it’s just for “a base for simple apps”... :(
+
+https://github.com/wxWidgets/wxWidgets
+https://github.com/wxWidgets/wxWidgets/tree/master/docs/ios
+
+poop.
+
+... yeahhhhh, it might be better to go for the newer stuff (Avalonia, Uno, Maui) or solid stuff (Google’s Flutter)...
+
+i found this, to help choose which one:
+https://github.com/robloo/PublicDocs/blob/master/XAMLFrameworkComparison.md
+though, do note, written in june 2021, and now Avalonia might have decent mobile too? (still in beta)
+
+
+
+sources:
+https://insights.stackoverflow.com/survey
+
+https://insights.stackoverflow.com/survey/2021#technology
+
+https://insights.stackoverflow.com/survey/2020#technology-other-frameworks-libraries-and-tools-all-respondents3
+
+https://medium.com/swlh/xamarin-vs-ionic-vs-react-native-differences-under-the-hood-6b9cc3d2c826
+
+
 
 
 
