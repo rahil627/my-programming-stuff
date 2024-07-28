@@ -1,15 +1,8 @@
-
-
-# recommendations
-https://www.reddit.com/r/vscode/comments/17whogu/what_is_your_favorite_programming_font/
-
-# download
-fonts.google.com
-github
-private site
-
 # install
 ## windows
+double-click .ttf file -> install button
+  - usually four files: regular, bold, italic, bolditalic
+
 open the font-name-variable.wght file and click install
   - it will install all of the fonts (found in the 'static' folder) automatically
 
@@ -32,14 +25,22 @@ the way to install without using package manager, for other distros:
 
 
 
-# lists of fonts
+# contemporary lists of fonts
 https://www.programmingfonts.org/
-  - try fonts here!
+  - perfect editor view
+  - contains most popular contemporary fonts
+  - links to place to download it (usually github)
 
 fonts.google.com
   - use this site to check out contemporary pop fonts
   - although you can download them here, for linux, should use package managers
   - in order to use with crostini apps, might have to put them into the linux folders (see archwiki)
+  - https://fonts.google.com/?preview.size=12&category=Monospace
+    - compare fonts here
+
+x/www.nerdfonts.com/font-downloads
+  - long single page web page contains all fonts to download
+  - nerd fonts contain a massive, unnecessary amount of symbols that take up a massive amount of space (2mb with ligatures vs 100mb nerd font version)
 
 https://wiki.archlinux.org/title/fonts
   - also a great resource, listing some pop font packages and more resources
@@ -50,18 +51,71 @@ https://archlinux.org/packages/?sort=&repo=Extra&q=ttf&maintainer=&flagged=
 https://github.com/ryanoasis/nerd-fonts
   - another good pop collection
 
+https://www.reddit.com/r/vscode/comments/17whogu/what_is_your_favorite_programming_font/
+
+
 
 https://kinsta.com/blog/best-programming-fonts/
   - TODO: the one's that cost money might just be even better!!
 also see powerline fonts
-https://fonts.google.com/?preview.size=13&category=Monospace
-  - compare fonts here
 
 
-to try:
-DM Mono
-Ubuntu Mono
-Liberation Mono
+# fonts to try:
+gamey fonts
+bigblue terminal
+  - arcade font
+fixedsys
+  - arcadey front from 1984
+effects eighty
+  - futurey from the 80s
+
+pixelly bitmap:
+cozette
+envy code b
+
+proggy / good in small sizes
+bedstead
+
+main programming:
+0xproto
+  - closer to cascadia code
+anonymous pro
+aurlent mono
+comingocode
+  - looks very eye-pleasing
+code new roman
+comic mono
+  - surprisingly good, like monaco
+commit mono
+  - looks perfect!
+  - maybe upgraded from cousine
+fantasque
+fragment mono
+geist
+go mono
+  - feels non-monospaced!
+heterodox mono
+  - feels really non-monospaced!
+julia mono
+  - much better choices than jetbrains mono
+liberation mono
+lekton
+  - surprisingly pleasing..
+maple
+  - nice 'n thick TODO: try the "light" version
+**monofoki**
+  - less seriphy, bolder mononoki, good choices
+  - can try both in terminal
+**office code pro**
+  - forked from source code pro, combines a lot of good things from other fonts
+  - possibly my current favorite
+red hat mono
+  - pleasing
+saxmono
+  - looks really well executed..
+ubuntu sans mono
+  - looks cute 'n small
+
 
 commercial fonts:
 Input Mono
@@ -77,12 +131,14 @@ https://fonts.adobe.com/search?query=code
 
 
 
-# settings
+# current settings
 
-NOTE: the color theme of the editor effects the text's color contrast which can feel like the font-weight!
+NOTE: the color theme of the editor effects the text's color contrast which can feel like the font-weight! (try Aura Dark (soft text) color theme in vs-code)
 
 ## windows, OLED laptop
 vs-code
+  - office code pro 11
+  - consolas 12
   - font-size: 11-13 (14 is default)
   - font-weight: light (300?) to regular-light (350) on OLED screen
   - consolas looks better than source code pro, but it doesn't have a lighter weight
@@ -92,19 +148,9 @@ terminal
   - font-size: 10
 
 
-## arch-linux, shitty chromebook
-chromeos terminal
-  - size 13-16
-  - noto sans mono, 16
-  - change font color to be slightly transparent (terminal settings -> appearance)
-
-vs code
-  - size 11-14, but has custom dpi (exec on start)
-  - source code pro, 11
-
-chrome (browser/OS?) defaults(?):
+chrome (browser/OS?) defaults (for reference):
 font size: 18
-strandard: carlito
+standard: carlito
 serif: georgia
 sans: arimo
 fixed-width: roboto
@@ -172,7 +218,8 @@ jetbrains (sans) mono <- dejavu sans mono
 
 
 
-# main list:
+# main list
+
 agave
   - very simple, very cute, maybe too cute..
   - even more funky than mononoki
@@ -205,6 +252,7 @@ hack
   - meslo LG S with fewer seriphs
   - somewhere between dejavu and fira's serphiness
   - very close to consolas, similar small size font with space between lines
+  - same as hasklig with more seriphy i,t,f,etc.
 
 
 Meslo LG S NF
@@ -227,6 +275,7 @@ mononoki
 
 iosevka
   - slender: thin 'n tall, reminds me of monaco on a mac
+  - ...i don't like it at all! feels scrunched by width
 
 cascadia code
   - very gamey 'n seriphy, like mononoki and fira code
@@ -290,6 +339,7 @@ Inconsolata
   - open source consolas, though not as good as the original
   - maybe too scrunched up? tall? round. faded.
   - something always felt wrong about this one...
+  - still retains the nice small font created a sense of spaciousness around it
 
 Monaco
   - ew, Apple Mac OS X default for XCode and textmate
