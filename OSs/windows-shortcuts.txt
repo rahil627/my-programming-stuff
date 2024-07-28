@@ -2,8 +2,10 @@
 
 powertoy's keyboard manager
   - remap keys
+    - caps lock -> escape
   - remap shortcuts (in-app key-combos)
-
+    - TODO: find fav terminal key-bindings for windows OS
+      - helix...
 
 touchpad shortcuts:
 (until i upgrade to a touch-screen laptop)
