@@ -1,0 +1,33 @@
+
+
+interaction:
+https://learn.microsoft.com/en-us/powershell/module/psreadline/about/about_psreadline_functions?view=powershell-7.4#completion-functions
+fish-like autosuggestion:
+"complete"
+  - tab
+    - then tab/s+tab again to cycle next/previous completion
+"menucomplete"
+  - c+space
+  - TODO: should be automatically done
+"possiblecompletions"
+  - a+=
+    - wtf?
+
+
+
+
+
+# install powershell
+#  - doesn't require dotnet framework?
+# install winget
+
+
+winget search -q discord
+# winget install [[-q] <query>...] [<options>]
+winget install Discord.Discord
+
+
+
+
+	
+

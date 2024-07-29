@@ -1,6 +1,0 @@
-
-
-puts "meow"
-`echo woof`
-
-

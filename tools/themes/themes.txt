@@ -1,0 +1,59 @@
+
+windows:
+
+vs-code:
+
+see vs-code-extensions.txt
+
+**aura**
+  - dark (soft text)
+tokyonight
+  - a very well-executed blue'ish theme
+jellyfish
+  - a nice monokai variant
+synthwave '84
+  - syntax color scheme is too wild
+
+
+terminal:
+https://windowsterminalthemes.dev/
+  - cyberpunk 2077
+
+
+
+# from vim
+
+# my top 3
+Plug 'sonph/onehalf', { 'rtp': 'vim' } “like gruvbox but with slightly lighter contrast
+  - onehalflight and onehalfdark
+Plug 'junegunn/seoul256.vim' “even less contrast than onehalfdark
+Plug 'NLKNguyen/papercolor-theme' “more contrast than gruvbox!
+
+Plug 'morhetz/gruvbox’ “#1 for a reason
+Plug ‘sainnhe/everforest’ “error
+Plug ‘sainnhe/gruvbox-material’ “error
+Plug ‘romainl/flattened’ “error
+
+
+
+# these were the themes i liked, from when i used linux/nvim from an ipad mini 2
+
+# base16 shell themes
+base16-gruvbox-dark-pale.sh
+base16-gruvbox-light-soft.sh
+base16-monokai.sh
+base16-papercolor-dark.sh
+base16-papercolor-light.sh
+base16-tomorrow-night-eighties.sh
+base16-tomorrow-night.sh
+base16-tomorrow.sh
+base16-zenburn.sh
+
+# from some old file
+
+themes
+	textmate - monokai - sexiest theme ever
+	notepad++ - bespin, monokai
+	vim - wombat
+	visual studio - ragnarok gray by Tomas Restrepo
+	komodo - gray

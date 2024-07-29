@@ -1,0 +1,43 @@
+linq find - http://stackoverflow.com/questions/1175645/find-an-item-in-list-by-linq
+data type aliases - http://stackoverflow.com/questions/215255/string-vs-string-in-c-sharp
+use Debug.WriteLine() over Console.Writeline() - http://stackoverflow.com/questions/3012822/whats-the-difference-between-console-writeline-vs-debug-writeline
+
+http://stackoverflow.com/questions/98606/favorite-visual-studio-keyboard-shortcuts
+
+sanity check - build -> configuration manager -> x86 (Any CPU did not work for me)
+right click project -> add reference -> browse -> add .NET assemblies
+
+naming conventions - http://msdn.microsoft.com/en-us/library/ms229045.aspx
+
+
+helpful sites/tutorials:
+http://stackoverflow.com/questions/646409/is-it-possible-to-do-clickonce-deployment-with-apache
+http://msdn.microsoft.com/en-us/library/31kztyey.aspx
+
+in case ClickOnce is not good, try http://www.codeproject.com/KB/TipsnTricks/ApplicationAutoUpdate.aspx#_comments
+
+
+C#/.NET:
+whoa - http://msdn.microsoft.com/en-us/library/bb384062.aspx
+
+visual studio:
+file does not appear in build - select a file in a project -> property -> build object - set to compile or content
+control+k, control+d - reformat code
+control+e, control+w - word wrap
+
+tips on creating an installer:
+create a new project, windows installer
+set the build order so that it is forces everything to build before it
+add any references used
+add any files to be added to the application folder
+
+release process:
+set to release
+build
+publish
+commit and push
+
+creating and using a shared library:
+create a new project using "shared library"
+in the main project, add a reference to the shared library
+after updating the shared library project, be sure to build that project

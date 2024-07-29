@@ -1,0 +1,26 @@
+10/2020
+
+general:
+https://www.digitalocean.com/docs/droplets/quickstart/
+  - this “quickstart” guide for digital ocean pretty much covers how contemporary web servers work, with current cloud computing features
+
+
+
+
+ssh keys:
+https://www.vultr.com/docs/how-do-i-generate-ssh-keys/
+  - Vultr recommends to use the OpenSSH tool to create a rsa 4096-bit key
+
+https://docs.termius.com/termius-handbook/connecting-to-a-host/keychain
+  - can use Termius to generate a key on iOS
+
+https://www.ssh.com/ssh/passphrase
+  - says most keys are passphrase-less, so, I guess you can just make one without a passphrase? This seems most secure, as there is no one-way encryption, just a random key ‘n lock set (private ‘n public key)
+
+vnc/rdp:
+https://www.namecheap.com/support/knowledgebase/article.aspx/9975/48/how-to-set-up-a-vnc-client-with-a-vps-hosting
+  - setting up vnc with a Namecheap VPS web server
+  - **this is a cool idea: just using the web-server as my main computer!**
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04
+  - though for digital ocean, maybe the same for any server running ubuntu

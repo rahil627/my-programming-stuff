@@ -1,0 +1,61 @@
+visual studio shortcuts - http://stackoverflow.com/questions/98606/favorite-visual-studio-keyboard-shortcuts
+why isn't this on by default!? - http://msdn.microsoft.com/en-us/library/d14azbfh.aspx
+
+value types - http://msdn.microsoft.com/en-us/library/s1ax56ch.aspx 
+when you assign a non-value type, it only assigns the reference
+
+all objects are passed by value by default
+
+
+
+
+
+
+
+
+
+from notes when working at Segin:
+
+catches:
+
+view -> components
+
+IQueryable is case insensitive, IEnumerable is case sensitive
+
+
+C#/.NET:
+nullable variable.value to get non-null value
+extension method - static f(this datatype) { ... }
+"" == String.empty == (stringVar.length == 0)
+datatype keywords are associated to classes - int == int32, short == int16, try to use the class
+parameterized queries - avoids SQL injection
+data context - contains data classes and stored procedures
+entity framework - object relational mapping (ORM), supports all databases, has more features
+
+
+
+Visual Studio:
+to replace leading spaces:
+select all, tab, untab
+
+to delete a file:
+open solution, right click file in solution explorer, exclude file, save all, delete from versioning software
+
+to debug a service:
+run in debug mode, debug -> attach process
+
+to copy a source code file for reuse [in another solution?]:
+copy file in solution explorer, paste on solution file in solution explorer
+
+to run a project within a solution of multiple projects:
+right click project, set as startup project
+
+to duplicate source code and database:
+right click disk backup in SQL Management
+publish solutions from visual studio to ftp
+change connection strings and test email address in web.config(s)
+right click restore in SQL management studio
+
+
+tricks and tips:
+debug and wat

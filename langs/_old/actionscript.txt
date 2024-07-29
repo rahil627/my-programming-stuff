@@ -1,0 +1,145 @@
+http://www.java2s.com/Code/Flash-Flex-ActionScript/CatalogFlash-Flex-ActionScript.htm
+
+*****see ludum dare sources for code examples
+
+CONFIG::debug {
+  FlxG.debug = true;
+}
+
+like #if debug!
+
+http://blog.richardolsson.se/blog/2009/01/the-unusual-actionscript-logical-or-operator - using logical or to check null
+
+http://pushbuttonengine.com/v1/Lesson-01-FlashDevelop.html
+
+There's no way in AS3 to delete an object (remove it from memory) manually. The programmer must rely on the garbage collector. And of course for an object to be collected, there must not be any references to it, so it's best to create a destructor that removes all of the references and call that from a parent class.
+
+http://gskinner.com/blog/archives/2006/06/as3_resource_ma.html - how AS3 garbage collection works
+
+http://emanueleferonato.com/
+
+no function overloading
+
+http://manishjethani.com/blog/2008/07/31/using-weak-references-in-actionscript-3
+http://en.wikipedia.org/wiki/Weak_reference
+weak reference:
+object = new Object();
+objectContainer = new ObjectContainer();
+
+public function ObjectContainer(o:object) {
+  ref = new WeakReference(o);
+}
+
+public function someFunction() {
+  var o:Object = ref.getObject() as Object;
+  if (!o) {
+      // o has been garbage collected. Forget it.
+      return;
+  }
+  //continue with method
+}
+
+to clear the weak reference, set o = null
+
+ActionScript passes primitive data types (int, string?, etc.) by value, but objects always by reference
+to make a copy of an object, use var newObj:Object = Object(ObjectUtil.copy(oldObj));
+
+"Copies the specified Object and returns a reference to the copy. The copy is made using a native serialization technique. This means that custom serialization will be respected during the copy.
+
+This method is designed for copying data objects, such as elements of a collection. It is not intended for copying a UIComponent object, such as a TextInput control. If you want to create copies of specific UIComponent objects, you can create a subclass of the component and implement a clone() method, or other method to perform the copy."
+
+http://livedocs.adobe.com/flex/3/langref/mx/utils/ObjectUtil.html#copy()
+
+can pass in functions! And parameters without a type!
+
+protected var _callback:Function;
+protected var _argument:*;
+ 
+public function Button(callback:Function, argument:*, x:Number = 0, y:Number = 0)
+{
+    super(x, y);
+ 
+    _callback = callback;
+    _argument = argument;
+}
+ 
+protected function clicked():void
+{
+    if (!_argument)
+    {
+        _callback();
+    }
+    else
+    {
+        _callback(_argument);
+    }
+}
+
+for each (var value:* in object){
+	trace(value);
+}
+
+for (var key:String in object){
+	trace(key + ": " + object[key]); // object[key] is value
+}
+
+polygonal data structures
+
+http://www.flashdevelop.org/wikidocs/index.php?title=AS3:FlexAndFlashCS3Workflow
+http://www.flashdevelop.org/wikidocs/index.php?title=Configuration
+http://www.iguanademos.com/Jare/wp/?m=20111006
+
+http://en.wikipedia.org/wiki/ActionScript
+
+flash
+document class - main class, code begins here, click anywhere on the stage UI to see the properties of it
+the class
+
+
+objects can be converted to a symbol and exported to actionscript as a class, and instances (objects within the object) inherit from it's parent object
+
+fonts - can embed, or vectorize if it's static, use pixel font for small non-anti-aliased fonts
+
+shape tween - making a fluid motion of an object between two frames
+ease - -100, cause tween to move slow at first then speed up
+
+adding objects to the game and applying graphics to them
+moving in 2d, xy coordinates
+use timers to delay things
+
+
+everything should be very object oriented, remember to delete objects
+, game -> ship -> bullets
+
+tips:
+avoid using events and accessing global vars such as stage and root
+avoid creating movieclips in Flash IDE, if you do, publish the swc, add the swc to FD's library, inherit the class in AS3
+use OO programming!
+
+super() - calls the parent's (inheritance) constructor
+
+timeline
+movieclip - a sprite with a timeline
+sprite - a display object
+
+movieclips/sprites can be created in flash and linked to a class in ActionScript
+
+http://www.kirupa.com/forum/showthread.php?223798-ActionScript-3-Tip-of-the-Day/page15
+stage - contains everything, only one instance
+root - can possibly have multiple roots
+document class - the first class to run. Attached to the stage upon initialization
+
+display object - cannot access the stage or root until it is added to the stage. If stage is needed, use the ADDED_TO_STAGE event
+non display objects - cannot access the stage root. Must pass it in.
+
+event
+bubbling - subsequently call on each parent up to the stage
+	target - the class that dispatched the event
+	current target - the current class the event is calling on
+cancelable - cancels the bubbling/propogation
+	stopPropogation - stops it for the ancestors of the class it's called in
+	stopImmediatePropogation - stops it for the ancestors of the class it's called in and itself
+
+quirks:
+can only catch events from self, parents, and children
+when you addChild, it references the instance used?

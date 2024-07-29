@@ -1,0 +1,224 @@
+
+# links / pinned
+https://github.com/Dvergar/awesome-haxe-gamedev
+  - very good
+  - lists all current engines and frameworks
+  - lists many useful game dev libraries
+
+https://github.com/nadako/awesome-haxe
+  - more personal, toward developing the haxe langauge
+
+the codebook is especially good for learning bit-by-bit, especially for macros!
+
+
+# forums
+just a note: i've got quite a few posts on the Heaps forum... but the Discord is a *much much* better place
+
+
+# libs
+**hxnew**
+  - to create a new project from the cli
+    - (normally you'd use the VS Code extension to do this for you)
+
+https://github.com/jeremyfa/interpret/
+  - modify and execute haxe code during run-time, like a scripting language!
+
+https://github.com/RblSb/KhaHotReload
+  - hot reload for js targets
+
+https://github.com/Aurel300/hx-objc-externs
+  - also includes UIKit and other Apple stuff
+
+https://github.com/RobertBorghese/Haxe-MagicArrayTools
+  - turn ds.map/filter/select into efficient for loops! :o
+
+https://github.com/tobil4sk/haxe-git-submodule-manager/blob/main/src/Run.hx
+
+tween
+  - slide
+  - actuate
+  - tweenx (old)
+
+https://github.com/HaxeFoundation
+  - contains the language, all compiler/target code, the entire site (site, manual, codebook, docs, etc.), and more goodies
+  - can easily edit these to update anything: the language, site, whatever!
+
+https://github.com/haddock7/hlimgui
+  - imgui bindings
+    - wait for Yanrish to release an example of imgui with Heaps
+
+https://code.haxe.org/category/macros/add-parameters-as-fields.html
+  - macros are nuts!!!
+
+tink
+  - macro heaven
+
+
+
+
+
+
+# interop
+
+## magical library linking
+
+for c# and java only:
+apparently you can just do something like
+`-lib java filePath`
+to link a target library, and you even get autocompletion!! :o
+
+
+## target code injection
+
+it sounds like you should avoid this, but it's possible to just inject code in your target language!
+  - https://haxe.org/manual/target-syntax.html
+
+
+## targets, bindings, transpilers, etc.
+
+main, native, C/C++/VM:
+hashlink, can choose from two compile options:
+  - hl/C, LLVM-optimized slow compilation / fast run-time
+    - note: "hashlink can interact with C++ libraries, look at hldx for example."
+  - hl, VM/JIT fast compilation / slow run-time, all in a single bytecode file for convenience too
+hxcpp, used to compile to mobile devices, also very fast, not sure how it compares to hl/C
+  - generates several C++ files which takes time without a compilation server
+neko, old, don't use this?
+
+other targets:
+js target, for **web ("front-end" and "back-end")**, **js/npm libs**, also for **node.js server-side use and it's libs**
+c# target, for **C#/Nuget libs**
+java target, for **java libs**
+  - JVM target, ? direct to JVM bytecode?
+python target, for **ai / machine learning libs**
+php target, for old CMSs?? lol
+
+transpilers:
+  - with trasnpiling, can then use any target!
+go2hx, for **Go libs**,
+
+binding generators:
+  - with bindings, you are limited to that specific target language
+dts2hx, for **typescript (and javascript??)**
+
+manual bindings:
+  - most languages??
+C
+obj-C
+C++?
+...others?
+
+
+most of the targets are *very* fast (except python, and that's not haxe's fault)
+
+
+
+
+# haxe cli
+can either use the cli or create an hxml file, where each line is a command argument
+
+haxe --main MainClass --interp
+  - for interpreter
+
+or, via buildFile.hxml file:
+--interp
+--main MainClass
+-lib heaps (installed via haxelibs)
+-cp sourceFolder
+
+then run:
+haxe buildFile.hxml
+
+
+haxe --main MainClass -js app.js
+  - results in app.js and app.map.js (or something like that)
+  - then you need to create a basic HTML page to include the script
+
+haxe --main MainClass -hl build.hl
+  - be sure to `haxelib install hashlink`
+  - results in a single file build.hl containing bytecode
+  - todo: maybe has other arguments for generating a C binary
+
+haxe --main MainClass -cpp build
+  - be sure to `haxelib install hashlink`
+  - results with a folder build, including generated C++ sources and bin(aries)
+
+
+
+# package management
+
+## haxelibs
+haxelib searchRegEx
+haxelib install someLibrary
+
+## lix
+a newer, smarter alt to haxelib
+  - tracks the version of all dependencies (over time?)
+  - https://github.com/lix-pm/lix.client
+
+
+hashlink profiler:
+from a discord message:
+
+here's what I did:
+created some code - some Test.hx
+haxe --main Test --hl test.hl
+hl --profile 10000 .\test.hl
+hl ..\..\HLProfiler\profiler.hl
+
+Load the converted hlprofile.dump into Chrome Performance tab
+
+
+
+
+# scripting?:
+you can't do #!/usr/haxe or whatever to make proper shell scripts, but:
+
+i think Haxe has top-level functions, so don't even need a class?
+
+since Haxe comes with an interpreter, it's pretty simple to run a script using the haxe command:
+`haxe --main ScriptName --interp`
+
+and if that't too much, or if you don't want to remember the command arguments, you can just create an hxml file. Though it's a little inconvenient to have two files... **It's probably just best to add the haxe command *in* the script file itself, on the top of the file, commented out.**
+`haxe build-file.hxml`
+
+otherwise, there are the following options for more scripting power:
+
+wrapper method: hxp
+  - https://github.com/haxelime/hxp
+    - you can put the followin directly in the script file, thereby removing the need for a hxml build file
+    - `var hxml = new HXML ({ cp: ["src"], main: "Main", js: "bin/index.js" });`
+      `hxml.build ();`
+      - now thinking about it, **i might just prefer seperating the script from building after all.. I don't think i'd want to add this code to every script file.. :/**
+    - then can use `hxp script-file` to run it
+    - extend hxp.Script to get CLI-like argument handling, perhaps a bit more complex than just the Sys.args() string
+      - **i personally wouldn't go this route as it creates a dependency on hxp for all of your scripts! :/, it's better to just use a CLI parsing lib only when you need it, and use `import CLILib`**
+
+
+haxelib method
+  - i was told of this in Discord
+  - you'd still need a json file to set the haxelib though, so, same problem, no? How is this different or better than just having an hxml file?
+  - maybe you could run it from anywhere..? `haxelib ScriptClass` will work anywhere?
+
+
+hscript
+  - https://lib.haxe.org/p/hscript/
+    - "Parser and interpreter for Haxe expressions"
+    - written by Nicholas, includes:
+    - this is contains and optional library for super super advanced stuff... it's something similar to the level of Haxe macros... like AST level stuff :o
+      - "`hscript.Macro` : convert Haxe macro into hscript Expr"
+    - contains sub-set of haxe?? Like haxe without classes? dynamically typed
+    - not only can you parse a script and run it, but you can set variables of the interpreter!
+      - **thus seperating variable/configs from the actual script/program** *whoa..*
+
+```
+var parser = new hscript.Parser();
+var program = parser.parseString(script); // can just read a file to get the script's string
+var interp = new hscript.Interp();
+interp.variables.set("Math",Math); // share the Math class
+interp.variables.set("angles",[0,1,2,3]); // set the angles list
+trace( interp.execute(program) );
+```
+
+
+

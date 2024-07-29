@@ -1,0 +1,33 @@
+
+smaller, non-giant corporate server companies:
+these are nicer, quaint, more for indie devs (whereas the giant companies feel like for enterprise use only)
+
+**Digital Ocean**
+  - incredible documentation that teaches you how to handle linux servers
+Linode
+Vultr
+...
+many other smaller ones
+
+
+
+free servers?:
+these are usually just a crap virtual machine
+
+Google Compute Engine
+
+from my discord message:
+as it turns out, the free "e2-micro" google compute machine is limited, *very limited*:
+> When you use E2 shared-core machine types, your VM runs two vCPUs simultaneously shared on one physical core for a specific fraction of time depending on the machine type. Each vCPU can burst up to 100% of CPU time, for short periods, before returning to the time limitations described in the preceding section.
+> ...
+> e2-micro sustains 2 vCPUs, each for 12.5% of CPU time totaling 25% vCPU time.
+🤔
+
+
+
+server service for apps:
+many of the corporate giants have free service for PaaS apps sort of stuff:
+Google Firebase
+Oracle
+Amazon (...maybe?)
+etc.

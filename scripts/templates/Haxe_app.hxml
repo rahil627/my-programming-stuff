@@ -1,0 +1,16 @@
+# same as comman arguments, but line seperated, and one '-' only?
+
+# entry point to a Class
+-main Haxe_app
+
+# location of source folder?
+#-cp src
+
+# link libraries located in haxelib
+#-lib heaps
+
+# build targets
+--interp
+#-hl build.hl
+#-js app.js
+#-cpp bin

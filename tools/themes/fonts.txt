@@ -1,0 +1,432 @@
+# install
+## windows
+double-click .ttf file -> install button
+  - usually four files: regular, bold, italic, bolditalic
+
+open the font-name-variable.wght file and click install
+  - it will install all of the fonts (found in the 'static' folder) automatically
+
+## arch-linux
+for arch, just use package managers to install them
+see https://wiki.archlinux.org/title/fonts
+
+pacman -S adobe-source-code-pro-fonts
+yay -S ttf-meslo
+...
+
+see all fonts installed by package:
+pacman -Qs ttf
+
+see names of fonts, needed to set string in config files
+fc-list | fzf
+
+the way to install without using package manager, for other distros:
+/usr/share/fonts or a local dir (/.fonts/ is deprecated)
+
+
+
+# contemporary lists of fonts
+https://www.programmingfonts.org/
+  - perfect editor view
+  - contains most popular contemporary fonts
+  - links to place to download it (usually github)
+
+fonts.google.com
+  - use this site to check out contemporary pop fonts
+  - although you can download them here, for linux, should use package managers
+  - in order to use with crostini apps, might have to put them into the linux folders (see archwiki)
+  - https://fonts.google.com/?preview.size=12&category=Monospace
+    - compare fonts here
+
+x/www.nerdfonts.com/font-downloads
+  - long single page web page contains all fonts to download
+  - nerd fonts contain a massive, unnecessary amount of symbols that take up a massive amount of space (2mb with ligatures vs 100mb nerd font version)
+
+https://wiki.archlinux.org/title/fonts
+  - also a great resource, listing some pop font packages and more resources
+
+https://archlinux.org/packages/?sort=&repo=Extra&q=ttf&maintainer=&flagged=
+  - ttf search of the arch package repo
+
+https://github.com/ryanoasis/nerd-fonts
+  - another good pop collection
+
+https://www.reddit.com/r/vscode/comments/17whogu/what_is_your_favorite_programming_font/
+
+
+
+https://kinsta.com/blog/best-programming-fonts/
+  - TODO: the one's that cost money might just be even better!!
+also see powerline fonts
+
+
+# fonts to try:
+gamey fonts
+bigblue terminal
+  - arcade font
+fixedsys
+  - arcadey front from 1984
+effects eighty
+  - futurey from the 80s
+
+pixelly bitmap:
+cozette
+envy code b
+
+proggy / good in small sizes
+bedstead
+
+main programming:
+0xproto
+  - closer to cascadia code
+anonymous pro
+aurlent mono
+comingocode
+  - looks very eye-pleasing
+code new roman
+comic mono
+  - surprisingly good, like monaco
+commit mono
+  - looks perfect!
+  - maybe upgraded from cousine
+fantasque
+fragment mono
+geist
+go mono
+  - feels non-monospaced!
+heterodox mono
+  - feels really non-monospaced!
+julia mono
+  - much better choices than jetbrains mono
+liberation mono
+lekton
+  - surprisingly pleasing..
+maple
+  - nice 'n thick TODO: try the "light" version
+**monofoki**
+  - less seriphy, bolder mononoki, good choices
+  - can try both in terminal
+**office code pro**
+  - forked from source code pro, combines a lot of good things from other fonts
+  - possibly my current favorite
+red hat mono
+  - pleasing
+saxmono
+  - looks really well executed..
+ubuntu sans mono
+  - looks cute 'n small
+
+
+commercial fonts:
+Input Mono
+PragmataPro
+Consolas
+Operator Mono
+Dank Mono
+try medium thickness for all fonts!
+https://fonts.adobe.com/search?query=code
+  - calling code
+  - code saver
+
+
+
+
+# current settings
+
+NOTE: the color theme of the editor effects the text's color contrast which can feel like the font-weight! (try Aura Dark (soft text) color theme in vs-code)
+
+## windows, OLED laptop
+vs-code
+  - office code pro 11
+  - consolas 12
+  - font-size: 11-13 (14 is default)
+  - font-weight: light (300?) to regular-light (350) on OLED screen
+  - consolas looks better than source code pro, but it doesn't have a lighter weight
+
+terminal
+  - mononoki
+  - font-size: 10
+
+
+chrome (browser/OS?) defaults (for reference):
+font size: 18
+standard: carlito
+serif: georgia
+sans: arimo
+fixed-width: roboto
+
+
+
+
+# current favorites:
+
+need to find consolas in a lighter weight
+or a more narrow source code pro
+
+**consolas**
+  - 12
+  - a classic on Windows
+  - **still looks the best on windows**, especially vs-code, where it is the default
+  - damn near impossible to beat
+  - small horizontal space between characters
+  - 1-2 font sizes smaller than others (marketing?)
+  - **comes with only one weight: regular, no light?**
+  - shipped with vs-studio and thus strongly associated with c#
+
+**source code pro / hasklig (light)**
+  - terminal: size 10-11, weight: regular/normal
+  - vscode: size 11-12, weight: light
+  - best/most comfy for my eyes long-term
+
+**hack**
+  - 11, same size as source code pro
+  - taller than source code pro, dejavu-like
+  - only one font weight
+
+**mononoki**
+  - 12, same size as consolas
+  - slightly more wider and less seriphy than consolas, and therefore more comfy, but less readable
+  - a little more funky
+  - only one font weight
+  - using in terminal
+
+**meslo (LG S) / NF**
+  - terminal: size 10, 10.5, 11
+  - also really good
+  - tall like dejavu
+  - wayyyy more seriphy than source code pro
+
+
+trying:
+monaspace neon/argon var
+  - i might like this better than meslo!
+
+monaspace krypton var
+  - a little lower-resolution for terminal
+
+
+
+progressions:
+monaspace neon <- hasklig ~= source code pro
+mononoki & agave
+
+cascadia code ~= fira code <- anonymous pro (seriphy)
+mesloLGS nf ~= fira mono <- dejavu sans mono
+hack <- source code pro & dejavu sans mono & fira
+jetbrains (sans) mono <- dejavu sans mono
+  - all of these are tall'ish like dejavu
+
+
+
+# main list
+
+agave
+  - very simple, very cute, maybe too cute..
+  - even more funky than mononoki
+  - even smaller than mononoki!
+
+cascadia mono/code
+  - has a light version
+  - feels more roman and seriphy than source code pro
+  - but it does have better/narrower character width
+
+monaspace
+  - a collection by github
+  - **neon**
+    - a bigger source code pro with some more seriphy-ness
+    - very good, roundy
+    - good character height, not abnormally tall like dejavu-derived ones
+    - i think hack is still better
+  - argon
+    - a less seriphy neon, feels roman
+    - competes with hack, but i think hack is better
+  - xenon
+    - a more seriphy neon
+
+  - radon
+    - sharpie marker style!
+  - krypton
+    - lower-resolution/roboty, but not pixely
+
+hack
+  - meslo LG S with fewer seriphs
+  - somewhere between dejavu and fira's serphiness
+  - very close to consolas, similar small size font with space between lines
+  - same as hasklig with more seriphy i,t,f,etc.
+
+
+Meslo LG S NF
+  - NF = nerd font
+  - just fixes symbol positions from dejavu sans mono
+  - The recommended font is the product of many individuals. Its origin is Bitstream Vera Sans Mono, which has given birth to Menlo, which in turn has spawned Meslo. Finally, extra glyphs have been added to Meslo with scripts forked from Nerd Fonts. The final font is released under the terms of Apache License.
+
+hasklig
+  - source code pro + ligatures (->, =>, etc.)
+  - other weights:
+    - https://github.com/ryanoasis/nerd-fonts/tree/master/src/unpatched-fonts/Hasklig
+      - somewhere in-between source code pro regular and light
+
+mononoki
+  - a cute, unique, small font
+  - a more open-feeling consolas
+  - the bold is great, very sans-serif
+  - slightly wider and less seriphy than consolas, making it feel more comfortable
+  - designed for code review, as "every character is designed to be clearly distinguishable
+
+iosevka
+  - slender: thin 'n tall, reminds me of monaco on a mac
+  - ...i don't like it at all! feels scrunched by width
+
+cascadia code
+  - very gamey 'n seriphy, like mononoki and fira code
+    - too seriphy
+  - high quality, showing surprising thickness like consolas
+  - used by Microsoft for it's terminal
+
+fira code =? jetbrains mono
+  - adds space width, adds some serif-ness, probably has code-related glyphs
+  - i prefer mono
+
+JetBrains (sans) mono
+  - a cute robotic version of dejavu, with long characters shortened nicely
+
+
+dejavu sans mono == noto sans mono? ~= roboto mono
+  - tall'ish
+  - more line space on odd numbers, compare size 12 and 13
+  - size 14 is nice 'n big, i dig it
+
+PowerLine (bundle)
+  - bundle of fonts from the popular PowerLevel10k zsh bundle
+  - https://github.com/powerline/fonts
+  - contains all of the fonts here!
+  - TODO: try some of these, then uninstall this, keeping only what you need
+  - source code pro for powerline uses a more bold font (medium?) and adds:
+    - bad: bottom serif to 'i', lowers the '_',
+    - good: otherwise does many good things like: a better 'g', bigger symbols, aligned symbols, etc.
+
+source code pro
+  - a classic
+  - more sans than dejavu! very clear, roundy, 'n spacey
+  - easier on the eyes as the regular weight is light
+  - great in small sizes
+  - squashed vertical space between lines
+  - by Adobe (but i guess it's now open-source)
+  - git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
+  - fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
+
+Cantarell
+  - used by Manjaro for ui elements
+
+Cousine
+  - squashes the f and l, i prefer it longer
+  - too wide
+
+Anonymous Pro
+  - a bit serify, gothic, very round
+
+Meslo
+  - open-source customized menlo
+  - AUR packages are "Meslo LG [S/M/L]" and ttf-menlo-nerd
+    - nerd take 160mb :(
+
+Menlo
+  - a customized Bitstream Vera Sans Mono
+  - Apple Font
+    - used by Apple's dev tools 'n terminal
+
+Inconsolata
+  - open source consolas, though not as good as the original
+  - maybe too scrunched up? tall? round. faded.
+  - something always felt wrong about this one...
+  - still retains the nice small font created a sense of spaciousness around it
+
+Monaco
+  - ew, Apple Mac OS X default for XCode and textmate
+
+DejaVu Sans Mono
+  - same as bitstream vera sans mono?
+Andale Mono
+Vera Mono
+
+lucida console
+  - ships with windows os
+  - 10 in notepad/notepad2, 11 in notepad++
+
+
+non-mono-spaceed:
+tahoma*****
+  - windows default, very quick to read in studies, non-monospaced
+calibri
+  - shipped with and the default font for microsoft word
+
+
+others:
+hermit
+  - future gui feel, but really nice! unique
+lilex
+  - eh.. has some seriphy robotiness to it
+
+
+
+
+vintage terminal style fonts:
+Dina
+  - https://github.com/zshoals/Dina-Font-TTF-Remastered
+
+proggy fonts
+  - old school
+
+
+
+
+https://betterwebtype.com/5-free-monospaced-fonts-with-coding-ligatures/#:~:text=Hasklig,and%20to%20correct%20problematic%20spacing.
+
+
+
+
+
+
+
+TODO: merge
+from an old file:
+
+font
+	andale mono
+	kooteney*** - small tabs, yet consolas look, not monospaced
+	open symbol - unique, has different symbols
+	ocr a std - too console-ish
+	proggysquare - looks nice!
+	droid sans mono**** - like consolas, but a bit longer vertically, tough competition with consolas
+
+
+
+
+notes:
+
+otf vs ttf:
+
+basically: mac os doesn't care for ttf, all look the same. windows will render ttf. ttf is capable of better hinting code but requires more effort on part of the font designers 
+
+https://www.reddit.com/r/typography/comments/ci4nwk/comment/ev1jy42/
+  "In the modern era of font development, OTF and TTF are very, very similar.
+
+  OTF stands for Postscript-flavored OpenType.
+  TTF stands for Truetype-flavored Opentype.
+
+  They both share the same capabilities and general structure (literally, the tables within a font are near identical). Here's a general sense of the differences that matter the most:
+
+  Math. OTF uses Cubic curves, TTF uses Quadratic. In the old days this mattered a lot more since printers were more limited, but nowadays this doesn't matter much.
+
+  Hinting. Hinting is code that helps the OS achieve consistent rendering across the font at different point sizes. OTF supports alignment zones / blue zones, which marks stems, and key parts of the glyphs to enable the OS to render the letters. TTF uses full-on hinting, which is much more involved than the zones in OTF.
+
+  So what matters more, is what the OS does with an OTF or TTF file.
+
+  Mac (for the most part) ignores hinting entirely and renders all fonts the same. This works fairly well on high-end screens with high resolutions, but falls apart at smaller sizes on low resolution screens.
+
+  Windows prioritizes achieving high contrast character rendering, and thus does not assume that all fonts should be rendered the same. So it relies on hinting code to achieve good results. As a result, you'll often see well-hinted TTF fonts render really crisp and clearly on Windows, whereas OTF seem a bit blurry. Do note, though, that badly-hinted TTF fonts will look terrible on Windows. So I suppose there's a bit more risk with TTFs in having good quality—best to purchase them from quality type foundries who know what they're doing.
+
+  As a type designer, I tend to like OTF because they're simpler and easier to get out the door. But as someone who also cares about consistent, quality rendering across all devices, TTF is a significantly better option."
+
+  
+

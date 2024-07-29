@@ -1,0 +1,48 @@
+
+ohhhh iOS... how i love you so... but why can't i use you for *everything??*
+
+programming:
+**working copy**
+  - the standard for mobile os`s
+github.com
+kodex? (or koder?)
+  - free, usable
+  - no autocomplete server?
+
+
+terminals:
+**termius**
+  - *perfect!*
+
+
+linux sandbox:
+ish
+  - alpine linux distro, busybox, super fast cute little local cli linux
+  - had problems with nvim (colors? keyboard keys?? don't remember...)
+
+
+blink.sh
+  - requires iOS 15 :(
+  - incredible feature-set, made for techies
+  - keyboard re-mappings
+  - VS Code connection support (through various ways: VS Code web, etc.)
+
+
+mobile remote desktop clients:
+noVNC
+  - in browser, free
+screens
+  - app, $20
+chrome remote desktop
+  - app, free
+
+
+# others
+paper, sketching / drawing
+ulysses vs bear vs etc.
+noto? for a simple text editor
+
+
+
+
+https://arslan.io/2019/01/07/using-the-ipad-pro-as-my-development-machine/

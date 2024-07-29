@@ -1,0 +1,350 @@
+2/2022 update:
+see my fighting game anarchy repo wiki for the "resrouces for game-making..." page
+
+TODO: combine notes from here to the wiki
+
+8/2020 update:
+see my GutHub account’s starred projects
+huge youtube playlist covering all game engine and new languages too
+
+most indie frameworks use the SDL (C) library for input, OS-related stuff, output(?).
+
+basic frameworks / libraries:
+
+C/C++:
+SDL(2)
+  - most popular
+  - C
+  - used to port the first Unreal Tournament and the Orange Box / Source engine to Linux / Mac
+
+SFML(2)
+  - neater, #2 most popular
+  - C++, object-oriented paradigm
+
+Allegro
+  - similar to SDL AND SFML, but actually a game framework, as it provides sprites, drawing, etc., in addition to i/o stuff
+  - C(?)
+
+Haxe:
+**NME**
+  - Native Media Engine
+  - **Haxe**
+  - **Flash-inspired**
+OpenFL
+  - open-source cross-platform Flash library (display, display3D, etc.)
+   - only supports WebGL / Canvas, there’s no native support
+  - the Flash inheritance paradigm should be avoided though, as it’s probably inefficient
+  - great for vector drawing
+  - Haxe
+Lime
+  - Haxe native  graphics wrapper for openGL, GL ES, etc., often used together with OpenFL
+**Kha**
+  - a lightweight multi-media library for Haxe, possibly better than openFL, as it’s not just a copy of Flash’s design
+
+GLFW
+  - a light-weight graphics framework, with OpenGL / OpenGL ES / Vulkan as it’s main focus, yet also providing some input, windowing, etc.
+  - unlike SDL, it’s mostly focused on graphics
+  - newer and much loved
+
+
+many great indie games use either MonoGame or created their own engine atop SDL or SFML
+
+game “foundations”
+MonoGame
+  - open-source cross-platform XNA
+  - does way more?
+  - not really an engine, but rather, an environment (Mono, the open-source .net, OpenTK for DirectX and OpenGL graphics, input, etc.)
+  - has a discourse community forums 
+
+
+
+
+game programming languages
+  - Beef by PopCap games dev
+    - between C# and C++
+    - no / manual memory management, because it allows game optimization
+  - Jai by Jonathan Blow
+
+
+game engines:
+
+ones I like, / closest to my ideal:
+Godot
+  - indie Unity, simpler, great for 2D
+
+Heaps.io
+  - made by the maker of Haxe
+  - has 2D and 3D libraries
+
+**HaxePunk**
+  - on top of OpenFL & Lime or **NME** (have a choice)
+  - quite abandoned, but probably still works! Need to use dev branch of repo
+  - some people might be porting it to use Kha as the foundation library
+  - KhaPunk
+
+HaxeFlixel
+  - the more popular brother of HaxePunk, but, just like the original Flixel, it’s much sloppier, made by the  public rather than a single powerful individual
+  - on top of OpenFL & Lime
+
+experimental:
+
+FlashPunk port for MonoGame
+  - someone did this...
+
+
+
+—
+
+https://itch.io/game-development/engines/most-projects
+  - very cool site to see popular contemporary game engine, software frameworks, and game-making tools
+  - Godot doing surprising well in 2019!
+  - new frameworks like Phaser and pixiJS crush everything else. OpenFL is still there, holding flash alive, with Haxe not far behind. Monogame too.
+—
+
+old (long, long time ago):
+conclusion:
+  - Could learn and use Unity for everything, but there's an initial learning curve, which isn't too bad
+  - Haxe (and HaxePunk or HaxeFlixel) or Unity (and 2dToolKit and iTween and Vectrosity) or Construct 2 or Cocos2d
+  - Citrus Engine or GameMaker for prototyping and Unity (and 2dToolKit and SmoothMoves) for release. Keep OpenFrameworks for weird uses too.
+  - The ideal engine should start with nothing, but be able to do anything.
+  - The design of a game determines the game engine, never the other way around. Looking for one to cover everything may have been a bad move. In contrast, learning a new framework every time and recreating libraries is no fun.
+  - Modern PCs and computers have GPUs which are optimized to draw in 3d as opposed to 2d, which is handled by the CPU. 3d engines such as Unity, MonoGame, and Starling perform well because of this. I shouldn't be looking for a 2d engine, just a 2d game framework, such as Starling.
+  - Moving on to Citrus Engine. Turns out one can write in object-oriented manner with Citrus. It also has integration with physics engines. This should be good enough for the iOS games I want to make. By the time I'm done with them, Unity will have added 2d features, or someone would have created a popular MonoGame framework, and the overhead on iOS devices will be gone with the next generation.
+  - StarlingPunk is my ideal 2d game engine. I know how Flash works, I prefer FlashPunk's code structure, I'm familiar with FlashPunk's engine code, it draws primitives, it works on mobile devices. I guess FlashPunk is in between Flash and a component structured game engine such as Citrus. I should be able to write a game using components. Maybe I'm too lazy? Or maybe I prefer the agility of something lighter, not as programmatically perfect. Engines should not matter. I should be able to implement my design with any Engine. Yet, it somehow matters to me. Subjective.
+  - Flash is the way to go. Start with StarlingPunk. Try even adding Box2d to it. Or use Citrus Engine.
+  - Unity feels like the wrong tool for the job. Everything is done in 3d (rotate), drawing a line requires some library knowledge, the assets takes a few more steps to set up, procedural generation will always be done in code  so a lot of my games won't benefit from having an editor
+  - Unity seems perfect. The only thing I'm unsure of is the performance and drawing primitives, and it's performance of doing so.
+  - all 2d frameworks accomplish the same task. The only differences are language capabilities, native library (components like collision, physics), performance, support, and current status
+  
+  - Unity
+    + C# / Mono (.NET)
+    + good IDEs (Visual Studio and integrated MonoDevelop)
+    + great core framework including collision detection, camera, path finding
+      + component paradigm results in robust code and easy team work
+      + amazing stuff goes on beneath there such as occlusion culling
+    + great asset management through the editor
+    + editable GUI/editor
+    + advance features such as rendering (lighting, animations), physics
+    + remote testing for mobile devices over wi-fi
+      + allows testing in Windows using Visual Studio
+    + multi-platform
+    + vast library
+    + large community
+    - $400 for iOS, $1500 + $1500 / platform for Pro, + $400 / upgrade, no yearly payment?
+    - 3d game programming for 2d games
+    - performance overhead?
+    - OpenGL access is limited?
+    - have to learn many nuances
+
+  - MonoGame
+    + C# / Mono (.NET)
+    + good IDEs (Visual Studio and MonoDevelop)
+    + 2d programming
+    + 3d programming
+    + access to OpenGL (to me, this supersedes low level 2d frameworks such as OpenFrameworks)
+      - unsure how easy it is to write
+    + advanced features such as shaders, lighting
+    + good Box2d port (Farseer Physics)
+      - unsure of mobile performance
+    + multi-platform
+    + XCode integration for Jon
+    - $400 includes on year of updates, $250 / subsequent year
+    - does not include a prototyping framework for things like asset management, screen management, collision detection, physics, saving and loading, etc.*
+      - many can be found on the internet, basic classes are in the samples, there are a few prototyping frameworks, can create one yourself quite easily
+    - lacks native primitive drawing library
+      + might have some library for drawing
+        + see cocos2d-x for XNA
+      + can use Farseer Physics
+    - likely has the second greatest performance, next to OpenFrameworks
+    - testing seems like it would take time, no remote testing, hopefully launches Xcode to run simulator or the game*
+
+  - Flash
+    + great IDE (FlashDevelop, Windows only)
+    + good core library
+      - I don't like event propagation
+    + great support and libraries
+    + free
+   	+ great primitive drawing API
+    + Box2d port
+    + good game engine libraries
+    - abstracted more, limited to Adobe's API without access to openGL, therefore creating performance limits
+    - AIR performance not so great
+    - Flash has halted development
+    
+    + FlashPunk
+      + great prototyping framework
+      - not optimized for mobile devices (due to bitmap blitting rendering)
+      - does not come with optional physics integration, although it seems easy to add
+      
+   	+ Citrus Engine
+   	  + able to choose rendering engine
+   	    + Starling is optimized for mobile devices
+   	  + able to choose physics engine
+   	  + able to choose programming paradigm, object-oriented or component based
+   	  + most active Stage3D game engine with a sub-forum on Starling forums
+   	  = flash.graphics.drawing implemented by someone
+   	  - not as convenient as a prototyping framework, requires knowledge of underlying libraries (Starling)
+   	  - some sacrifices made in order to make the framework so flexible
+   	  - created by one person with the help of a few others
+   	  
+   	+ Ash
+   	  + entity-based framework
+   	  - not a game engine
+   	  
+   	+ StarlingPunk
+   	  + Starling makes it optimized for mobile devices
+   	  + FlashPunk-like code structure that I am comfortable with
+   	    + includes scene management, simple collision, combines with Starling's API to avoid overlap
+   	  - created by one person, slow updates, behind HaxePunk
+   	  - does not include an easy way to add physics
+   	  
+   	+ ND2D
+   	  + based on Starling
+   	  - no native physics extension
+   	  - stopped development in August 2012
+   	  
+   	+ Axel
+   	  - no physics
+   	  - small community
+   	
+   	+ Genome2D
+   	  + based on Starling
+   	  + Nape physics extension
+   	  - small community
+
+  - Haxe and NME
+   + based on flash API
+   + cross-platform, natively, creating C++ code
+   + haxe has more features than AS3
+   + current language and current engines (HaxePunk and HaxeFlixel)
+   - see no reason to choose this over a C# / OpenGL engine, except that it has current popular game engines
+   - mediocre iOS workflow
+   - no access to OpenGL?
+   - writing shaders is odd
+   - somewhat small community, but may be taking over flash soon
+   - poor documentation
+
+     - HaxePunk
+       + current
+       + less bloat
+       - no just pressed or just reelased for touch input
+       - smaller community, poor website, no demos, few tutorials
+
+     - HaxeFlixel
+       + current
+       + Nape
+       + basic physics and collision
+       + larger community than HaxePunk
+       + extra libraries displayed on the website
+       - bloated
+
+     - awe6
+
+     - https://github.com/ralcr/sdk.ralcr
+     - https://github.com/ralcr/cocos2d-haxe
+
+     - http://lib.haxe.org/t/game
+
+
+  - Cocos2d
+    + performance for iOS
+    + good support and libraries
+    + integrates nicely with box2d and chipmunk
+      + includes collision detection
+    + good core game framework?
+      + scene management, animation, camera
+    + easy access to OpenGL
+    - objective-C (memory management, data structures, syntax)
+    - requires knowledge of a large library, some of which is written in C and C++
+      + Cocos2d-x (C++)
+        + better syntax
+        + cross-platform support
+        = easy to port from Cocos2d
+        - still need to handle memory and data structures
+        - "it's more like writing objective-c code in C++ syntax"
+          - confirmed, has objective-c data structures and iOS memory management, so it seems to have been created purely for porting to other platforms
+      - development time
+
+Prototype engines / 2D engines with editors:
+
+  - Scratch
+    + an extremely fun way to learn programming
+    + proves the usefulness of creative tools fostering play and experimentation
+      = The name Scratch derived from the turntablism's technique of scratching (Mixing Sounds) and stresses the similarity of the process of programming to the process of mixing/scratching instead of its similarity to the processes of writing (i.e. scripting).
+    = based on Flash
+    - very limited in features
+    - development stopped in 2009
+
+  - Game Salad
+    - no programming
+      + has a good expression editor
+    
+  - Stencyl
+    + events based on Scratch's design
+    + "code mode" to write behaviors
+    + shows preview of code that is generated
+    = based on Flash and Box2d, and soon HTML5
+    
+  - Construct 2
+    + extremely well designed
+    + can create "plugins" for custom behaviors
+    + great website, documentation, and community
+    + regular updates
+    = based on javascript / HTML 5
+    - Windows only (written in .NET)
+    
+  - Gamemaker
+    + simple editor
+    + good support and community
+    + fast development
+    + cheap
+    ? limiting?
+    + can program
+    
+  prototyping engines:
+    
+  - OpenFrameworks
+    + simple API
+    + direct access to everything (openGL and whatever else)
+    + perfect for experimental work, not so fun for boiler-plate code, although as an expirimental game designer, you shouldn't be using any, you have to create everthing!
+    + probably feels better coding in this due to the lack of libraries included
+    + cannot become outdated
+    + likely has the greatest performance of all engines
+    - C++
+    - not a game engine, and does not have a popular one
+    - takes a bit more effort to port to mobile?
+    
+  - Processing
+    = see OpenFrameworks
+    - Java makes it less portable
+     - there a more core libraries written in C++, and other libraries
+    
+   - VVVV
+     ? uh
+    
+  - Delta Engine
+    + C#
+    + multi-platform
+    - no iOS support yet
+
+  resources:
+    - http://zx-81.com/
+    - http://www.reddit.com/r/gamedev/comments/14yxys/advantage_of_unity3d_ovr/er_haxe_or_moai_for_2d/
+    - http://www.reddit.com/r/gamedev/comments/1acetq/any_good_multiplatform_2d_engines_for_pciosandroid/
+    - http://www.occasionalgamer.com/2012/12/31/xna-vs-monogame-vs-unity/
+    - http://www.neogaf.com/forum/showthread.php?t=491431
+    - http://www.cocos2d-x.org/projects/cocos2d-x/wiki
+    - https://github.com/Beeblerox/nme-runnermark
+    - https://github.com/esDotDev/RunnerMark/blob/master/results/Results.txt
+    - http://philippe.elsass.me/2011/11/nme-ready-for-the-show/
+    - https://www.scirra.com/blog/59/construct-2-vs-gamemaker-vs-gamesalad-vs-stencyl
+    - http://emrahozer.wordpress.com/2013/04/21/my-nme-adventure/
+
+  want to make:
+    - Doodle Tangle
+    - ColorPad
+    - Jenga
+    - Audio Runner
+    - Battle
+    - Mime
+    - Pinkies Up

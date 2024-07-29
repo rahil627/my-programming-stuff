@@ -1,0 +1,159 @@
+todo:
+  - reply to http://monogame.codeplex.com/discussions/430740
+  - is it worth the time to use / create a game engine like FlashPunk? What are the benefits?
+    - screen management, input management, collision detection, camera, 2D sprite related things such as color, events (add, remove), libraries for math (movement)
+
+
+
+  - FIND A WAY TO TEST MONOGAME ON IOS
+  - GOOGLE FARSEER PHYSICS SAMPLES RUNNING ON iOS
+
+
+  - find method to draw primitives
+  - draw a filled polygon (angled rectangles)
+  - test primitive libraries
+    - https://github.com/cocos2d/cocos2d-x-for-xna/blob/master/cocos2d-xna/CCDrawingPrimitives.cs *
+    - able to draw filled polygon? If so, steal point in polygon function
+    - use plain XNA to draw a triangle strip
+    x/- primitive batch
+        - test the version in MonoGame Samples first
+          - only supports LineList and TriangleList
+    - shapes library
+    - something on top of XNA drawing?
+    - test Farseer physics
+      - test point in polygon
+    - choose one and add to Mime
+
+    - primitives:
+      - plain XNA (PrimitiveDataTypes: LineList, LineStrip, TriangleList, TriangleStrip)
+        - http://www.bit-101.com/blog/?p=2832
+        - http://msdn.microsoft.com/en-us/library/bb196414.aspx
+      - Drawing Helper
+      - http://www.gdchaos.net/node/136
+        - draw in 2d
+      - https://github.com/cocos2d/cocos2d-x-for-xna/blob/master/cocos2d-xna/CCDrawingPrimitives.cs
+        - port of Cocos2d DrawingPrimitives using plain XNA*
+      - http://bobobobo.wordpress.com/2009/02/16/drawing-primitives-in-xna-from-a-vertex-buffer/
+        - efficient drawing*
+      - Farseer Physics (Box2d port)
+        - can turn off simulation?
+        - getting comfortable with Box2d is a good thing!
+      - http://primitivebatch.codeplex.com/
+      - http://shapes.codeplex.com/
+        - quite advanced, drawing shapes, collision, just missing physics, perfect?
+      - https://bitbucket.org/C3/2d-xna-primitives/wiki/Home
+        - no polygon or rotated rectangle
+      - http://stackoverflow.com/questions/270138/how-do-i-draw-lines-using-xna
+
+
+
+
+http://www.youtube.com/watch?v=Nmbw6i-z3j4
+
+
+Prototypy frameworks:
+  - http://nuclexframework.codeplex.com/
+  - http://xnaxen.codeplex.com/ - great
+  - yna - good and current
+  - https://github.com/cocos2d/cocos2d-x-for-xna
+    - https://github.com/totallyevil/cocos2d-xna
+  - MonoPunk - outdated, but simple
+  - AngelXNA
+  - SunBurn
+  - FlixelXNA (https://github.com/StAidan/X-flixel, 
+  
+Examples from recent game competitions:
+  - https://github.com/DeadlyBrad42/ludumdare-25/tree/master/ludumdare-25/ludumdare-25/Classes
+
+iOS development:
+  - http://www.vimov.com/isimulate/
+    - can tether device to simulator
+
+MonoGame:
+  - build troubleshooting:
+    - MonoGame Framework reference from the MonoDevelop add-in does not work, reference a .dll file instead
+    - set the build action of content files to "Content"
+    - Microsoft.Xna.Framework.Content.ContentLoadException: Could not load Effects/BloomExtract asset as a non-content file!
+      - You cannot use custom effect XNBs built with the VS2010 with MonoGame.
+
+  - should add the MonoGame framework project to the solution, so when you check declarations, you can see the source code and comments
+    - check out http://darkgenesis.zenithmoon.com/xna-and-beyond-the-notable-mentions/
+      - has some nice prototyping libraries, like YNA
+
+  - https://github.com/mono/MonoGame/wiki/MonoGame-Content-Processing
+    - need Visual Studio 2010 (and Windows) for content processing
+    - http://www.jmawebtechnologies.com/company-blog/april-2012/porting-an-xna-game-to-ios-(iphone,-ipad)
+
+  - performance related stuff:
+    -  http://www.hitcents.com/blog/post/draw-stickman-epic-monogame-adventure
+      - very useful tricks
+
+  - references:
+    - https://github.com/mono/MonoGame/wiki
+
+XNA:
+  - http://blog.gneu.org/2012/04/xna-components-better-structure-and-organization/
+    - describes game loop
+  - http://msdn.microsoft.com/en-us/library/bb203893.aspx
+    - describes the game loop
+  - can't add a game collection to another game collection
+    - only one level of update? No children?
+      - http://gamedev.stackexchange.com/questions/9642/using-components-in-the-xna-game-state-management-example
+  - should make viewport static, or check the ScreenManager class?
+  - this.Game (like World) is automagically set by GameComponent
+  - this.GraphicsDevice.Viewport is like Screen in FlashPunk
+    - Vector2 center = new Vector2(GraphicsDevice.Viewport.Width /2, GraphicsDevice.Viewport.Height /2);
+
+  - should use MonoPunk as a framework when a games needs to be completed. Prototyping without it is okay.*****
+
+  - libraries:
+    - https://bitbucket.org/C3/2d-xna-primitives/wiki/Home
+    - Farseer Physics* - current
+
+
+
+MonoDevelop:
+  - will be using this for both MonoGame and Unity
+  - command + .
+  - control + space
+  - "quick fix"
+  - "code generation"
+  - http://stackoverflow.com/questions/11171752/refactor-keyboard-shortcuts-in-monodevelop
+
+C#/.NET
+  - will be using this for both MonoGame and Unity
+
+library:
+  - MonoGame contains XNA, MonoTouch, Mono (.NET)
+
+creating a new project:
+  - re-reference MonoGame framework and Lindgren.Network 
+    - are the references for MonoGame framework and Lindgren.Network platform dependent?
+
+tutorials
+  - http://xbox.create.msdn.com/en-US/education/tutorial/2dgame/getting_started
+    - a great shooter tutorial that goes over a lot of basics
+
+resources:
+https://github.com/mono/MonoGame/wiki
+  - tutorials to help install and run
+    - http://www.facepuncher.com/blogs/10parameters/?p=32
+
+https://github.com/CartBlanche/MonoGame-Samples
+  - useful classes
+    - ScreenManager
+  
+https://github.com/kungfubanana/MonoGame-StarterKits
+  - useful simple game examples
+    - includes classes from MonoGame-Samples
+
+see game jams, especially ludum dare for exceptional samples
+
+
+http://darkgenesis.zenithmoon.com/xna-and-beyond-the-notable-mentions/
+  - useful tools and frameworks as of 1/2013
+
+box2d
+  - http://box2dxna.codeplex.com/discussions/207760?ProjectName=box2dxna
+draw primitives
+  - http://forums.create.msdn.com/forums/t/7414.aspx

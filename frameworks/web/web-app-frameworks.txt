@@ -8,29 +8,53 @@ conclusion:
 ruby minimal web frameworks (roda > sinatra)
   - **for minimalist apps**
   - for educational purposes: old school web app making in a minimalist style
+  - https://www.reddit.com/r/ruby/comments/16j7r1w/web_frameworks_actively_maintained_in_2023/
+    - list of web app frameworks currently maintained as of 2023
 
 front-end:
-**svelte**
+**html/css/javascript**
+  - until i figure out why the rest was made
+  - note: phoenix automatically creates these for you..?
+**tailwind css**
+  - comes with phoenix apps by default
+  - https://www.reddit.com/r/webdev/comments/15chth7/is_css_frameworks_like_tailwind_is_really_better/
+svelte
   - makes front-end make sense to object-oriented programmers
+  - stateful
 react
   - "React is only concerned with the user interface and rendering components to the DOM"
   - for big stuff
   - paved way for state-based web app design
 
-full stack?:
-flutter
-  - for mobile apps + web apps together! > react native (which requires using wrappers for native libs)
-  - for performance/graphics thanks to web assembly output?
+all-in-one-solution?:
+x/flutter
+  - great for mobile and desktop, not so much for web > react native (which requires using wrappers for native libs)
   - can use dart for back-end too
   - **for people that hate web dev (html/css/js)**
-phoenix live view
+  - people seems to dislike the web target
+    - https://www.reddit.com/r/FlutterDev/comments/180h020/why_is_flutter_not_as_popular_for_web_its_a_great/
+      - uses canvas to draw ui, thus horrible for SEO
+        - ...maybe updated to web assembly now..?
+      - "your app won't behave like a normal web app (eg: copy and paste, scrolling)"
+      - "you can't use most of the available javascript libraries"
+      - https://www.reddit.com/r/FlutterDev/comments/180h020/comment/ka6t3jj/
+        - a good comment here
+  - combining with phoenix would be too complicated
+    - https://elixirforum.com/t/regretting-questioning-my-current-stack-flutter-elixir-as-solo-dev-for-mobile-app/55731
+  - google :(
+**phoenix**
+**phoenix live view**
   - specifically for single-page dynamic apps that require a constant connection
   - phoenix live view native
-rails
+  - stateful backend
+  - live_svelte combines both
+    - https://blog.sequinstream.com/liveview-is-best-with-svelte/
+x/rails
   - for big stuff
-
-
-
+  - superceded by phoenix
+haxe (tink_web router/backend, bindings for all pop front-ends or haxe-ui-html5)
+  - ok for front-end bindings, but probably can't compete with phoenix's backend concurrency
+  - https://community.haxe.org/t/haxe-seems-great-but-not-for-webdevelopment/3028
 
 the frameworks:
 ruby on rails
@@ -48,11 +72,12 @@ ruby/grape
   - "opinionated"
   - between roda and rails
 
-**ruby/roda>sinatra**
+**ruby/roda (a sinatra replacement)**
   - the prettiest solution (see generated app.rb), no MVC pattern
   - even includes a choice of **templating** system (just as jekyll does): simplify writing html/js/css, and with your choice in style!
   - you'd still have to write html/js though :(
   - see this example: https://github.com/katleiahramos/Sinatra-Capsule-Wardrobe-App/tree/master
+  - "Roda was developed mostly to address common frustrations people had with sinatra. While I appreciate sinatra's seminal role in popularizing the "microframework" routing approach, which can still be felt outside of ruby, it really didn't do much to address that point where your barebones POC needs to be a bit more robust, at which point you'd have to rewrite everything from scratch in a new framework. Roda excels at that, by providing the vanilla "microframework" XP from the get go, while providing the more robust features as "opt in" plugins that you can pick up as you need."
 
 **elixir/phoenix**
   - compact
@@ -68,7 +93,7 @@ ruby/grape
 
 phoenix liveview
   - "Phoenix[ LiveView] is actually both. In short it handles things a bit differently. Each client gets a websocket connection to the server where the state lives, Phoenix adds some JS glue on the front-end so that when state on the server changes it streams a diff to the front-end that updates the state on the front-end. It's actually very very cool! Gives you a bunch of advantages."
-   
+
    - livesvelte
       - small project
       - "These are the advantages as I see them. Please correct me if I’m wrong:

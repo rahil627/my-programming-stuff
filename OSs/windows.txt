@@ -1,0 +1,65 @@
+
+file structure:
+~($home)
+  windows default folders:
+  - \Documents (local)
+    - programs throw their user-facing files here (and their non-user-facing data in AppData)
+      - so, should create your own main folder in $home dir
+  - \OneDrive (cloud, 5tb free)
+    - documents
+    - desktop
+    - pictures
+  - 'My Documents\Pictures\Videos\etc.' (shortcuts to ~\Documents\[My ...])
+  - \Saved Games
+  - ...some more crap by windows (Searches??, Favorites??, etc.)
+
+  - ...a ton of other crap added by other programs:
+  - .hidden-app-folders
+
+  my custom folders:
+  - \stuff
+    - \repos
+
+
+
+my stuff vs stuff vs _my-stuff vs -my-stuff
+  x/- \my-stuff (conflicts name with the old 'My ...' shortcuts)
+    - this was my original folder in linux/mac/dropbox
+    - 'my-' is enough for terminal to guess it
+  x/- \_my-stuff has _ and -
+  x/- \-my-stuff will work well in terminals and folder priority over the other crap...
+    - update: nope! doesn't work with windows, as it looks like a command-line flag
+  - \stuff
+    - simple, good, works in terminals, just the folder priority in gui`s suck
+
+
+file and folder naming conventions:
+stick to 'names with spaces' and let terminal do it's magic
+  - feels good to be back to spaces :)
+
+this-might-suck for windows's built-in search functions
+
+
+package managers:
+winget
+  - added to windows 10 sometime
+  - installs to system, requires admin rights
+chocolatey
+  - community-organized
+  - installs to system, requires admin rights
+scoop
+  - doesn't use msi installers which mess with the registry
+  - thus oriented toward portable apps
+  - installs to ~/scoop/, sounds similar to snap
+
+note: there's also windows sandbox to install stuff in temporarily
+
+conclusion:
+scoop for sandboxing/trying apps?
+winget for essentials to be integrated into windows, allowing windows to backup your settings
+chocolatey for others apps not on winget/windows store
+
+
+https://daftdev.blog/2024/04/01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use/
+
+

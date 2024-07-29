@@ -1,0 +1,162 @@
+https://www.reddit.com/r/pop_os/comments/xuq2pm/can_someone_explain_to_me_like_im_five_why_linux/
+macOS and Windows has a single platform vendor, Apple and Microsoft.
+
+Apple has a complete vertical stack integration; they control both the hardware and software, so they can provide a tight experience for their consumers.
+
+In addition, Apple continuously update their APIs and guidelines for app design, rules, and issue platform-wide updates once a year with their annual software refreshes. This allows developers with predicable schedules and docs to update their apps. This also allows Apple to simplify the packaging experience, such as the DMG and PKG.
+
+Microsoft has both EXE, MSI but they're not as tight as Apple because of backward compat support, which means apps often have to deal with registry, hardware tech (32bit/64bit/arm) that macOS devs do not have to deal with. This is because Microsoft does not own the hardware stack, so they have to provide backward compat to ensure everyone can use any software compiled to Windows for the past few decades, not permitting an easy one-win solution like Apple.
+
+Linux is an open source community project, it belongs to the public with no restrictions. There's no single vendor (Linus is Benevolent dictator for life but he doesn't really fully control it). There are several standard bodies to try to centralize the work going into Linux like free desktop APIs, but no one is required to follow it. Since there's no enforcement at all levels, there's also no way to ensure a consistent packaging experience for all users either. We do have some universal packaging solution such as Flatpak, AppImage, Snap but they're not available in all distros, it is up to the public.
+
+However, note majority of users download their apps from the package manager; apt, dnf, etc or the software store apps that is available for their distro. So they don't have to deal with the packaging either.
+
+
+
+
+
+
+
+to install an app manually:
+copy the binary to /usr/bin/ for most distros
+then you should be able to run the binary via command line
+
+# distros
+https://www.reddit.com/r/openSUSE/comments/x7ge7j/thinking_about_moving_from_arch_based_to_opensuse/
+https://www.reddit.com/r/NixOS/comments/zwqaxz/arch_user_convince_me_to_hop_to_nix/
+
+NixOS
+  - **reproducible env** via declarative configs
+  - steep learning curve
+    - uses a functional lang
+  - NOTE: should use flakes
+  - no games??
+
+**arch**
+  - rolling release system-packages + user-maintained user-packages
+    - meaning, you must update the entire system every time you want to get package that uses another package (dependency) that has a release newer than your system
+      - aka **you must update your entire system nearly every-time you want to get a package!!**
+  - great wiki: documentation on everything, great way to learn linux
+  - need to install your own backup software (BtrFs, etc.)
+
+openSUSE
+  - Tumbleweed
+    - rolling release distro of openSUSE
+    - OBS, OpenQA, snapper, BtrFs by default, YasT
+    - AUR (arch's user repo) > OBS
+
+  - **Leap**
+    - **intervalled release**
+    - otherwise, same as Tumbleweed
+
+debian
+  - the FOSS standard
+  - it works, stable as it gets
+  - to use more recent packages, just download them using snaps, docker, etc.
+    - benefits from being safe too
+  - the main community-based distro
+
+
+
+
+
+# customization (gui packages)
+NOTE: cli apps 'n setup are listed in the-tui-dream.txt and setup.sh
+the linux world is full of customization, like the way kids do for desktop computer hardware, bicycles, motorcycles, and cars.
+
+https://www.reddit.com/r/unixporn/wiki/themeing/dictionary/#wiki_rice/
+  - /r/unixporn is full of ricers suping up their desktop environments
+
+
+package managers:
+native package managers:
+  - each linux distro has it's own package manager: apt for debian, dnf for fedora, etc.
+  - checked by the people that maintain the distro
+native
+nix
+
+app (like windows) package managers:
+  - unchecked, includes all dependencies, making it easier for app-devs to maintain, good for bigger apps (like how Windows works?)
+  - often sandboxed to make it safe from affecting the rest of the os
+flatpak
+x/snap(d)
+  - has political problems tied to Canonical (company of Ubuntu), forcing certain apps to use snap on Ubuntu
+
+
+
+
+desktop environments (DE):
+  - contain everything: a windows manager, a taskbar, widgets, etc.
+
+main:
+KDE (Plasma)
+  - highly customizable
+mate
+  - also well-received
+cinnamon
+gnome
+  - used by ubuntu, old feeling
+
+lightweight:
+xfce
+  - often used for servers 'n old computers just to be remoted into
+lxqt
+
+
+custom:
+compositers / WMs:
+  - to put windows in the write place
+sway
+i3
+wayland
+  - used by chromeos
+..?
+
+
+tui file-managers:
+see the-tui-dream.txt and setup.sh
+
+gui file-managers:
+https://www.reddit.com/r/swaywm/comments/ja93ss/comment/g8ojr1a/?utm_source=reddit&utm_medium=web2x&context=3&rdt=48122
+They all suck in their own way.
+
+vifm
+  - quirky and feels slower than python-based ranger.
+
+nnn
+  - fast, but too unconfigurable and unusable.
+
+mc
+  - old school midnight commander
+
+pcmanfm
+  - too basic, thunar is too basic, QT-based (pcmanfm-qt, dolphin) suffer from a disappearing menus QT bug, and dolphin is kinda bloated and practically pulls in the whole KDE suite.
+
+Choose something you like, I prefer ranger and use pcmanfm when I have to.
+
+
+krusader
+
+task-bar:
+polybar
+  - easy to customize
+
+...
+
+
+
+# linux apps (create a new file?)
+
+gui text editors:
+code (vs code)
+kate
+
+remote access apps:
+chromeRDP
+noVNC
+  - vnc is the open-source remote tech
+
+
+
+
+

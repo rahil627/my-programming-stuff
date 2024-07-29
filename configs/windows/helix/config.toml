@@ -1,0 +1,79 @@
+# backup
+# cp C:\Users\ra\AppData\Roaming\helix\config.toml .
+
+# started with a copy of this one
+# https://github.com/eichiarakaki/helix/blob/main/config.toml
+
+theme = "boo berry"
+
+# Remapping some Keymaps
+[keys.normal]
+C-s = ":w" # Maps the Ctrl-s to the typable command :w which is an alias for :write (save file)
+C-q = ":q"
+# TODO: missing save position to jump-list
+C-h = "move_prev_word_end"
+C-l = "move_next_word_start"
+C-a = "select_all"
+C-c = "yank_joined_to_clipboard"
+C-v = "paste_clipboard_after"
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+C-left = "move_prev_word_start"
+C-right = "move_next_word_end"
+
+# set-option softwrap.enable
+
+[editor]
+line-number = "relative"
+
+# TODO: testing
+cursorline = true
+color-modes = true
+
+[editor.cursor-shape]
+# normal = "block"
+insert = "bar"
+select = "underline" # doesn't seem to work..?
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+# same as defaults but neatly aligned
+left = ["mode", "spinner"]
+center = ["file-name", "diagnostics"]
+right = ["selections", "position"]
+separator = "│"
+mode.normal = "normal" # "NOR" by default
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+# File explorer configuration
+[editor.file-picker]
+hidden = false # TODO: test overhead of searching through .git folder
+parents = false # rid \. and \..
+
+[editor.whitespace]
+render = "none"
+
+[editor.indent-guides]
+render = false
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+# LSP Server configuration
+[editor.lsp]
+display-messages = true
+auto-signature-help = true
+display-signature-help-docs = true
+
+# Auto-pairs
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+

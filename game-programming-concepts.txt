@@ -1,0 +1,48 @@
+Some of the best samples can be found in game jam games. Just check Ludum Dare for the framework you are interested in, and possibly even a game that does what you want to.
+
+object-oriented model vs component model
+  - http://www.openchord.org/wordpress/2011/09/unity-and-the-component-model/
+    - a simple explanation
+
+http://www.openframeworks.cc/tutorials/maths/001_vector_maths.html
+
+moving in 2d in a non-orthoganal direction
+			//get the directional vector
+			var dx:Number = (target.x - this.x);
+			var dy:Number = (target.y - this.y);
+					
+			//normalize the vector
+			var magnitude:int = Math.sqrt(dx * dx + dy * dy);
+			dx = dx / magnitude;
+			dy = dy / magnitude;
+			
+			//move at an angle
+			//vx = SPEED * dx * FP.elapsed;
+			//vy = SPEED * dy * FP.elapsed;
+			//x += vx;
+			//y += vy;
+			
+			other method?
+			//dx = Math.sin(angle * Flash.RADIAN);
+			//dy = Math.cos(angle * Flash.RADIAN);
+
+game update
+  player update
+    player's children updates
+      etc.
+  enemy update
+    enemy's children updates
+      etc.
+  etc.
+  
+  as opposed to enter_frame event? The only difference is that there is an order.
+
+while( user doesn't exit ) {
+for each frame {
+  check for user input
+  run AI
+  resolve collisions (move bacK, remove, etc)
+  draw graphics (?)
+  play sounds
+}
+}

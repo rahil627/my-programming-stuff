@@ -1,0 +1,106 @@
+{
+  "workbench.colorTheme": "JellyFish", // aura dark (soft), tokyo night, jellyfish
+  //"workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  // see fonts.txt
+  "editor.fontFamily": "consolas, hasklig, source code pro, hack, meslo lg s, mono",
+
+  "editor.fontSize": 14,
+  "editor.padding.top": 30,
+  "editor.indentSize": "tabSize",
+
+  //"editor.tabSize": 2, // vs 4
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  //"editor.acceptSuggestionOnEnter": "off",
+
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": false, // false is default
+  "files.trimTrailingWhitespace": true,
+
+
+  // the following is from the settings file on the chromebook
+
+  //"window.titleBarStyle": "custom", // needed for linux?
+
+  // langs and lang extensions
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+
+  //"editor.formatOnSave": true, // annoying for other files/formatters, best to do it for each lang
+
+  // ruby
+  // outdated: https://code.visualstudio.com/docs/languages/ruby
+
+  // choose lsp: ruby (extension) or solargraph or ruby LSP (by shopify)
+
+  // ruby extension by rebornix
+  //"ruby.codeCompletion": "rcodetools", // hella old, must install rcodetools gem
+  //"ruby.intellisense": "rubyLocate",
+  //"ruby.useLanguageServer": true, // use built-in lsp
+
+  // solargraph extension enables most things by default, so there isn't much to set
+  //"solargraph.diagnostics": true, // seems core
+  //"solargraph.formatting": true, // replaces ruby.format, experimental, kinda jank
+  //"solargraph.autoformat": true, // replaces editor.formatOnType
+
+  //"ruby.useBundler": true,
+  //"ruby.lint": {
+    //"rubocop": true,
+    //"ruby": true, //Runs ruby -wc
+    // other linters
+  //},
+  //"ruby.lintDebounceTime": 500,
+  //"ruby.format": "rubocop", // "rubocop", "standard", "rufo", "rubyfmt", "prettier"
+
+  "[ruby]": {
+    //"editor.formatOnSave": true, // otherwise run it manually: ctrl+shift+l
+    //"editor.formatOnSaveMode": "modificationsIfAvailable",
+    //"editor.formatOnSaveTimeout": 2500,
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    //"editor.formatOnType": true, // format by line // TODO: TESTING
+    "editor.formatOnPaste": true,
+    // "editor.rulers": [
+    //   120
+    // ],
+    "editor.semanticHighlighting.enabled": true,
+  },
+
+  // shopify's ruby lsp extension
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true
+  },
+
+  "[elixir]": {
+    //"editor.formatOnSave": true
+  },
+
+  "[HTML (Eex)]": {
+    //"editor.formatOnSave": true,
+    //"editor.tabSize": 2
+  },
+
+  // crystal
+  // "crystal-lang.server": "/home/rahil627/my-stuff/downloads/crystalline",
+  // "crystal-lang.completion": true,
+  // "crystal-lang.hover": true,
+  // "crystal-lang.implementations": true,
+
+
+  // TODO: WATCHOUT, settings are appended to the end!
+}

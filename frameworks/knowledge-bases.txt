@@ -1,0 +1,68 @@
+
+formats:
+
+**plain text files**
+  - **my own personal notes' format**
+  - **TODO: can write a simple markup for it to preview it**
+  - **easy to sift through with cli**
+
+**jekyll**
+  - a static-site generator written in ruby and used by github for github programmers
+    - i use this for my personal sites (plural!), especially for my blog/philosophical writings
+    - tons of plugins
+      - also can just write beautiful ruby scripts to do whatever you want
+    - allows you to create your own custom markup template, so you can keep your own personal writing format
+  + front-matter
+  + folder 'n file structure
+
+obsidian
+  - current king of note-taking
+  - closed-source
+  - great interface
+    - like a specialized vs-code, with an intuitive command pallete
+  - diagram-making thing
+  - graph view
+  - views for outline by headings, tags, backlinks, etc.
+  - bookmarks
+    - seems useful!
+  - **no front-matter/metadata by default**, just clean ol' plain text!
+    - **maybe can use this when i want to, without destroying my notes structure**
+
+joplin
+  - open-source obsidian?
+  - works on all platforms, and has a good linux cli
+  - simple, takes a few seconds to get started
+  - "notebooks" and tags
+  - strange tracking metadata by default??
+    - latitude: 37.91613260
+    - longitude: -122.31076500
+    - altitude: 0.0000
+  - simple tags metadata:
+    - tags:
+    - test
+    - test2
+
+**dendron**
+  + front-matter
+  + **a specific file 'n file-name structure**:
+    - parent.parent.file
+      - no folders!
+      - this is actually a neat solution
+      - will be interesting to sift through without a dendron editor (vs code), yet might rid the need of searching through folders!
+      - all hierarchies are files, no need for folders!
+  - a vscode plugin, no standalone app
+    - although, this may just be the best app for programmers that use vs code..
+    - also can just edit using your favorite simple text editors and cli
+
+bear
+  - more of a markdown editor turned note-taking app
+  - great markup/preview, especially for mobile OSs
+
+x/notion
+  - historically, a great push for note-taking apps
+  - a very clean note-taking app with tons of markup ability
+  - **need internet to access!?**
+  - *slow* for a notes taking app
+
+onenote, evernote, etc.
+  - old propietary note file format?

@@ -1,0 +1,314 @@
+# how to start 
+1. **the quickest way to make a game is: well.. to make one! Making a top-down 2D game such as a shoot ‘em up (shmup) is the best way that I know how to learn.** Every game engine should have a top-down 2D tutorial to get you started. Use that as the base, then go from there, adding cool projectiles, player movement, etc. I suggest starting with one of the much-loved simpler 2D-centric game engines (see *much loved first game engines*). After that
+
+2. try the Godot tutorial and make a shmup yet again to quickly get familiar with the editor-style workflow and api, but this time, after that’s complete, make it one more time, in 3D! :O Even if you don’t like it, it’s worth trying the editor-entity-component style for a week or two, or at least a weekend game jam! Then
+
+3. the choice between a simple 2D game engine, a complete game-making environment, or a bare-bones build-as-you-go base will become more clear, depending on the project needs.
+
+I’d suggest sticking to the modern language route, particularly C#; or, if you are like me and *need* a social community for every passion that you have, choose a small language such as Haxe. If you’re really feelin’ it, go with the more experimental engine/language combo such as: Wren/Luxe (preview/open beta), Jai (when Jon releases his engine), or Beef. You could actually be a part of something cool, rather than being just another slave for the-u-word. For a long time C# has been dominated by MonoGame/FNA/XNA (and the-u-word), but surely by now, there are some simple yet wonderful little non-XNA engines out there...??
+
+
+### a quick note about the engines i listed:
+much of it is merely out of personal personal taste and gut feeling, yet, there are some underlying reasons: game engines that are either written in C, or can talk (_embed_) to C (Lua, Wren), or can compile (_transpile_) down to C (Haxe, Dart?) are chosen because they enable the engine to have the potential to be cross-platform, since most hardware devices use C and the most popular open-source low-level library, SDL, is written in C. I also favored languages that are fast, performing at near-C speeds (update: as it turns out, the GPU code is probably the most important, and it doesn’t really matter what language sends the GPU instructions, because those instructions are the same). Thus, there are no engines listed that use pop programmer languages such as python (pygame), javascript (i *loathe* web dev and it’s entire trajectory), ruby (i read that it’s *extremely* slow, causing problems in even simple non-game apps), or anything like that. Also, i just don’t care about super duper engines with a complexity of Unreal, as i am but a mere mortal.
+
+
+# a list of video game engines
+
+## the big boys
+### 3D, with 2D
+  - Unity(3D), Mono, C#, custom UnityScript, **3d emphasis along with solid 2D** (even with mobile devices—**it has a bajillion optimizations**), **the best cross-platform solution—truly one-click!!**, _**the titan** of all game engines_ for individuals, although closed-source the C# code is available for “reference” on github (the C++ code is not); although it doesn’t reek of immoral people, it has the stench of bloated-ness, advertising, and an asset store deeply trenched in capitalism (though nowhere near as immoral or awful as Roblox); yet, if you stay sane, you can make anything with it, likely without touching the asset store
+   - **Godot**, **C/C++ core**, custom GDScript, custom? VisualScript , janky community-maintained C#/Mono bindings, **2d emphasis _along with great 3d_**, open-source, small 20mb standalone size, the C/C++ core makes it a really really cool way to get handle of C++, using it as leaping stone to more DIY-style modular engines, yet also retaining all of the programming power of C# through bindings
+    - Unreal, C++, seems like you need a very advanced team to use it?? lol, *reeks* of shit “AAA” (*what does even that mean??*) games and human-labor-abusing companies
+
+### 2D _only_
+_all of these **reek** of the nasty smell of degrading immoral mobile “game” companies, god-awful Facebook “games”, and gambling companies (in shady places like Russia and China); i think for that reason alone, i’ve avoided these_
+  - Defold, 2D/slight 3D, Lua, became open source rather recently (2020?), **great for mobile**, modular building results in a tiny executable, great tutorials, easy to get started, no-autocomplete in the provided IDE’s code editor??, **perhaps the best alternative to Godot** (but must really research adecide if the company is truly evil: are their games evil? is their work culture evil? ..and so on)
+  - Cocos2D, C++, open-source, used to make shitty 2D mobile games for over a decade, now comes with a complete IDE (Cocos Creator), the Obj-c version was especially popular to make iOS games back in the day, **i personally used this once for a local-networked iOS game, and after that, i stopped using a computer for a decade**, how much of that was actually causal is a philosophical problem :D
+  - Solar2D (aka CoronaSDK, lol), open-source, C/Lua, also used to make shitty 2D mobile games for over a decade, no editor?
+
+
+## programming-only first game engines people have fond memories of <3 <3:
+these make good first engines for programmers, as the engine size is tolerable, readable, and simple, yet abstracting the low-level stuff away from youthful eyes
+  - **HaxePunk**, 2D, Haxe, OpenFL?, *abandoned*, FlashPunk was **my favorite engine** but it never seemed to stay alive, though, it seems to have transcended with the users, as people made their own engines resembling FlashPunk; i think many of the original Punks initially ran to MonoGame, then further down a level to building their own C/C++ engines... although abandoned, it’s probably just fine, just some years of OpenFL updates, cross-platform, however, would require quite a bit of work..
+    - note: inactive since *at least* 2018, likely further back, *but* OpenFL, it’s back-end, is still alive ‘n well, so, it’s probably still just fine
+  - **HaxeFlixel**, 2D, Haxe, OpenFL?, all off the Flash programmers probably ran here, **still active as of 2022!!!**— that’s incredible really..., seems to even have kept up Switch support (one console is *more than enough* imo), though Flixel has always been the rather fat bloated big brother of HaxePunk, there’s no doubt that it’s the most beginner-friendly, with documentation written for beginners, a great debug console, etc. etc.
+  - **Love(2D)**, Lua, a small engine that many people seem to... love! Sounds like **a great start to Lua** too!
+  - **Raylib**, 2D?, C/C++, **this is probably the best step into making games with C/C++**, after making a few things with that, then, you should be able to just use any C/C++ library and make stuff!... and that’s really special!
+  - Gideros(Mobile), Lua, 2D, mobile-focused, comparable to Corona / Cocos2D / Defold, but with a tiny non-commercial-backed community, apparently the code is so stable that games made in 2012 still work, yet it is still being updated as of 2022!, also the android support and exe size are excellent
+
+
+## second engines, coding-first-style / non-game-editor:
+these are more programmer-oriented, **more freedom—the ability to make anything without constraints**, but at the cost of game engine features, and i mean *features*!!! Instead, they are more _**modular**_-oriented, so, instead of providing you with a collision system, tweening system, a physics system, etc., you will have to integrate (or make) these libs yourself. It’s a sort of **assemble your own engine approach**... Unlike the big 2D-only engines and most of the “first-love” 2d game engines, these make for better jumps to 3D, and well, to the path of becoming a true game and game engine programmer. With these there really are **no limitations**, you have access to *everything*,.. it’ll just take time. If you’ve got a big project, then these are the way to go, as these engines will never constrain or limit the scope of your project. If you just want to quickly prototype something that uses commonly used game features, then these are not the way to go (use the loved first engines or big boys). However, if your prototype is rather experimental, innovative, requires low-level access, or has design that’s just too different, then these are the way to go.
+  - **MonoGame**, 2D/3D, C#, an indie darling all the way back to Fez, to Stardew Valley, up-to Celeste, started as an open-source port of Microsoft Xbox’s XNA framework, but be warned: *it’s barely even an io framework**, still alive ‘n well, still perhaps the main alternative to the big boy engines
+    - MonoGame Extended, *you’ll need this*, or something like this for the actual game-part of framework (at the least it’s entity system, scene system, and collision system)
+    - FNA, open-source XNA 4.0(?), rock stable frozen version kept for porting and longevity
+  - **Heaps**, **2D/3D complete separate modules**, **Haxe** (then to C++ or bytecode via HashLink), **made by the maker of the Haxe programming language**, contains a rather bare framework who’s 2D module resembles HaxePunk’s core without it’s features (no collision/“masks”, no entity, no tween lib, etc.) and without it’s extra helper functions. It however does include essential features such as scene handling and a scene tree, placing it’s features-set somewhere between MonoGame and MonoGame Extended. This would have been my personal choice (until a better modern C# engines come out), but, unfortunately, there is almost no community, the documentation is spartan, and it seems everyone wastes time looking for the right functions in the right class, and trial and error (this is partly due to everything having public functions, in order to make everything accessible / modifiable). It is used as an in-house engine for a game company, and it feels that way. Having said that, it’s still an amazing framework, and you have access to anything, all the way down to the SDL graphics wrapper, and you can modify anything as it’s open-source. Examples: Dead Cells
+  - **Luxe**, C/C++/Wren, well-designed stuff by the snowkit collective’s ruby0x1, stuck in closed-beta for a long long time, but **appears to be the game engine of my dreams**, the original one was much loved for it’s design
+    - follow https://luxeengine.com/
+  - a ton of new C/C++/new language indie-made game engines (see below)
+  - custom game engines, **i’m guessing all of the great fighting games had engines built specifically for the game and even specifically for the target console; because of this there aren’t any good public fg specific engines [that I know of] [todo: make one!]**; it’s also unfortunate because no individual would want to write networking code
+
+
+## third engines, new experimental indie modern C++ engines or new game-oriented languages
+most of these aim for minimalism, portability, independency 
+many rely on pop C/C++ libs such as: SDL, GLFW (for OpenGL and Vulkan?), bgfx(?), openAL, imgui, etc.
+
+### experimental indie-made engines:
+#### made with love by FlashPunk OGs
+  - all of these are kinda experimental, but they are written so simply and so well, i personally feel i can jump into any. :)
+  - **Foster**, super clean modern C#, up-to-date as of 2022, basically just a giant interface for different backends (SDL, GLFW, Vulkan, etc.): **a modern io framework**, similar to MonoGame but written much more simply and far for flexible / future-proof, no game features whatsoever making it even more bare than the already skeletal MonoGame
+  - Rise, abandoned?, by the FlashPunk man himself, looks like a C#/SDL successor to FlashPunk, or a pre-cursor to Foster
+  - blah, C++, up-to-date as of 2021?, maybe newer than Foster? or simultaneous? seems more experimental
+  - StrawberryBF, **Beef programming language**, up-to-date as of 2021?, also seems quite experimental, made by Maddy, an absolutely disgusting name tho, ew :/
+    - the old tool-set: https://celestegame.tumblr.com/tools
+      - their sound tool, FMOD, became a tutorial!
+        - https://www.fmod.com/resources/documentation-studio?version=2.02&page=appendix-a-celeste.html
+  - Luxe
+
+#### everything else
+  - Beef2D, beef, 2d, included in the main Beef language repo
+  - Pile, beef, more like Foster: modular renderer
+  - Dinghy, C#, in development, very new as of 2021, built on top of Kinc (which makes it a little different from Foster, as Kinc does the job of handling and supporting io stuff)
+    - https://dinghy.xyz/
+    - he also made this JSON editing tool similar to Nicholas’s (of Haxe ‘n Heaps) CastleDB
+      - https://github.com/afterschoolstudio/Depot
+
+
+### experimental technical stuff
+these just seem too technical for me, toward the modern C++ independency header-only trend. Have to be careful of these, as it gets easier to make game engines, programmer-personality people just seem to make them naturally, without much reason, and often lack any sort of vision or long-term mentality, often becoming abandoned school projects. It’s better to stick with indie game devs whom have a serious life-long passion motivating their works, or at-least some games they plan to keep forever.
+  - EntTT, C++, just an entity system??, used in Minecraft and the Diablo II remake
+  - nCine, Lua, more along the level of i/o engines like SFML *i think*
+  - nimGL, Nim, graphics layer?
+  - ?, Crystal, *i think there was one in written in Crystal...*
+  - Halley, C++, inspired Foster
+  - Kha, Haxe, self-claimed to be low-level, this one is kinda esoteric, a very quirky man is behind it, lol, used in Armory
+
+
+### 3D
+i have no clue about these
+  - Urho3d, C++, inspired by Ogre3d (and sounds like an ogre’s name too! 👹)
+  - Panda3d, ?
+  - Armory(3d?), a game engine inside the industrial animation software Blender??, sounds very specific... like for making Ghibli level games?
+
+
+
+## non-programming interfaces:
+  - Construct, **no programming**, back in 2013 **this thing worked like a dream, even on console!**, I have no clue how it is now...
+  - GameMaker, **with and without programing**—this allowed people who don’t know programming to learn in a very intuitive way and most importantly by following intrinsic passion, custom scripting language, examples: Rivals of Aether (Dan had to wait for the big GM2 update before releasing it on the Switch, and even then, it took 3 years to port), Hyper Light Drifter
+  - GDevelop, a newer one worth looking at
+  - Stencyl, not sure if this one’s still alive... **made in Haxe!, and maybe can even use Haxe to actually write code!?!?** that alone makes it a top pick imo! <3
+
+
+## specialized:
+  - **Pico-8**, a “fantasy console”, just from [this page about the development of voxatron](https://www.lexaloffle.com/voxatron.php?page=dev), full of little GIFs that display truly awesome little features, what’s there not to love?—well, for one, i’m not a pixel, and definitely not a voxel (_vomit_) lover :(. Beyond that though, this is truly a charming little world, possibly even a model for any game-maker community project
+
+### genre-specific stuff:
+despite that limitation, these are quite popular in game jams, where content > programming-needed design
+  - M.U.G.E.N., fighting games!!!, but likely old and limiting :(
+  - RPG game maker
+  - adventure game maker
+  - etc.
+
+
+
+
+
+# software frameworks
+these can be used or combined to help you make your own game engine
+
+## media frameworks, media layers, foundational frameworks, io frameworks, back-ends, etc.
+these provide access to the platform’s input and output (graphics, “contexts”, etc.), windowing, and often including audio and font rendering too
+not ordered
+
+### classics:
+  - **SDL(2)**, C, **_the_ de facto library**, usually used as a core library, then accessed through a higher-level language, *serves as the base of most game engines**, written in straight C that can be difficult to understand, has a history of porting games to Linux (and therefore the beginning of games for Linux, often open-source), supported by Valve, there’s really no competition
+  - SFML, C++, for object-oriented thinking people, more accessible for creative / DIY people who want to tinker really low-level stuff, but it seems no one likes it...
+  - GLFW, only handles input and graphical output and windowing, no audio/font/etc., low-level people seem to really like this one
+  - Allegro, Java?, ?
+
+### the new old:
+  - Kinc, “low-level game library and hardware abstraction”, used as the base of Kha
+  - LWJGL, Java, maybe the new LibGDX?, OpenGL/OpenAL/OpenCL
+  - Sokol, C stb style, **this rides that minimal C wave but really does seem fantastic**, metal/dx3d11/etc. new stuff
+
+### high-level io frameworks:
+probably could also be used like a “creative” framework to make just about anything, but providing a more familiar game engine feel to it, making integrations of common game-related features much easier / common
+  - **MonoGame**, Mono, open-source copy of Microsoft XNA’s api, this seems like a solid foundation for those super organized systems-thinking C# people; people find this to be very similar to LibGDX
+  * - FNA, Mono, an actively maintained copy of XNA 4.0 api which enables longevity... because... who knows how long a software framework will last? (This is why it’s best to choose SDL or something built on top of that...)
+  - Heaps.io, Haxe, easy to understand for such a powerful engine, **probably my personal choice to start at this level, along with oF**
+    - HashLink, Heaps.io’s back-end?, optional SDL integration?
+  - OpenFL, Haxe, uses Lime as it’s back-end, of these io frameworks this might provide the highest level api, flash-like api
+  - LibGDX, Java, Java’s answer to SFML?, and just as old and solid too, this one is *much loved*, sorta has a cult fan community like OpenFrameworks
+ - Beef’s corelib folder, just a wrapper over SDL?
+
+
+### “creative” frameworks:
+often uses in new media art, installations, hardware devices, etc.
+- OpenFrameworks, C++, SFML, made for new media artists, far more diverse community, also has a New York base and community, used by Zack Gage to make iOS games back in the day, including helping Vlambeer making Ridiculous Fishing
+- Cinder, C++, ?
+- PolyCode, Ivan’s stuff, abandoned?
+- Allegro, C++, (not sure if this belongs here or with SDL)
+
+
+### Haxe “back-ends”: 
+this needs it’s own section because thi part of the Haxe world, unfortunately, is hella confusing and probably the main cause of deflecting people away from Haxe
+  - Lime, **the back-end for OpenFL**, uses SDL for native targets?, low-level, no renderer / only various renderer contexts are provided, a core component of OpenFL
+  - NME, like the SDL of Haxe, high-level flash-like api, unlike Lime this library doesn’t separate the graphics side from the i/o side(?), i actually don’t know... i’ve always confused this one with Lime
+  - Kha, high and low level apis, good performance but for some reason criminally unpopular, served as **the base Armory game engine**
+  - snow, was the back-end for the original _luxe_ engine, probably a simple & clean layer over SDL
+
+
+## graphics back-ends
+these provide abstractions to access various graphics apis (i have no clue what’s going on at the level)
+  - GLFW, C?, OpenGL api, the standard for OpenGL renderer
+  - BGFX, C?, modular? (OpenGL, Vulkan, DirectX, etc.)
+  - Veldrid, C#, graphics-agnostic renderer, *solely uses C#/.NET5, no dependencies*?
+  - Diligent Engine, C++14
+    - * “Diligent Engine Direct3D12, Vulkan and Metal, while supporting older platforms via Direct3D11, OpenGL and OpenGLES...uses HLSL as universal shading language on all platforms and rendering back-ends. Platform-specific shader representations (GLSL, DX bytecode or SPIRV) can be used with corresponding back-ends...”
+  - GLAD, this just generates bindings of various OpenGL or Vulkan for you, to several languages
+
+## an example of a bunch of independent libs used to make a simple game engine
+from TidyEngine, a tiny engine made by college kid
+  - https://github.com/AntiSC2/TidyEngine
+* CMake, used for building the project
+* assimp, used for 3D mesh loading
+* GLFW, used for handling windows and the input
+* glad, used for OpenGL rendering. (glad is already included in this repository)
+* glm, used for vectors and matrixes
+* stb_image.h, used for bitmap loading
+* OpenAL, used for audio
+* libogg & libvorbis, used for loading sound samples
+* LuaJIT, used for Lua scripting
+* Freetype2, used for font loading and rendering
+
+todo: Dome Engine also makes a good example of a minimal game engine
+
+
+## game engine “front-end”
+this is the part you make!
+
+### top-down approach of learning: dive into the deep end, make some stuff, and then *you just know*
+though you make this part yourself by simply adding what you need, it can help to look at other simple open-source engines to get an idea. I’d suggest looking at the following engines, ordered from simplest to most complex:
+  - FlashPunk/HaxePunk, 2d, simple flash-like api combined with a 2d engine: 2d scene graph, layers, entities, simple 2d collision, collision helper functions, math helper functions, camera, composition (minimal single-level inheritance, but no components)
+  - Nez, 2d, a 2d framework on top of MonoGame, provides you with everything you need: ecs, collision, optional physics system, etc.
+  - Monocle Engine, 2d, an indie alternative to Nez but with no guarantees or support or anything like that, a great FlashPunk user made this in MonoGame, there seems to be components for: graphics, collision, physics, etc.
+  - Luxe, 2d>3d, ecs, written really well, the original version was abandoned, but that doesn’t mean you can’t learn from it!
+  - Godot, 2d>3d, entity-component, with a game editor, although much smaller than Unity it’s already quite complex, so you can just imagine what Unity or Unreal is like...!
+  - Unity, 2d<3d, entity-component, with a game editor, although not open-source (? does that mean you can see the core code??), it’s worth trying the most complete free-to-use engine
+
+So, start with a media framework in your favorite language, then build-up as you need from there.
+
+
+### bottom-up approach of learning; making from “scratch”
+okay, well, not scratch scratch, but *assembling a game engine* is actually less crazy than i had first thought. Now with so many good, simple, open-source libraries, you can just throw a bunch together in your own favorite language and make an engine. This way, you aren’t burdened by a massive framework you didn’t write. Everything in it exists because you yourself wrote it, and you yourself can always change it. Hopefully you wrote it out of a specific need for it. It’s specific (to your needs) as opposed to general.
+  - SDL
+    - although the main file is like 6000+ lines, it’s much simpler than it seems; just glance at the api docs, and you’ll be like, “oh yeah, right on right on..”
+  - Zach Barth’s “minimalist game framework” is barely more than a SDL wrapper for C#, which gives off a rather powerful feeling of *freedom*
+    - https://github.com/zachbarth/minimalist-game-framework
+  - Beef’s corelib module/folder, contains a wrapper for SDL, and the SDL functions are used directly in the sample “Space Game” provided, which makes for a really cool **“low-level” api through high-level language way of making**
+    - Beef’s Beef2D module/folder is the natural next step
+    - **Pile**, inspired by Noel Berry’s Foster and Microsoft’s XNA framework, uses SDL for “system” stuff (i/o, window, etc.), contains a packager ‘n resource/asset loading and batching ‘n buffers like XNA, and built in a way to support multiple renderers like Foster (although, at the moment, only supports OpenGL)
+      - https://github.com/EinScott/Pile
+  - **Foster**, by Noel Berry, is like SDL for C#, with the OpenGL renderer portion being optional / modular, and the goal being to maximize the use of C#/.NET as opposed to relying on SDL/C
+
+
+# languages
+personally, languages don’t bother me *too* much. As long as it can at least do ActionScript3 did, I’m alright. Just not... objective-c. 😨 Otherwise, some features or traits i much prefer: static typing, object-oriented functionalities, general-purpose (so that you can use it to make anything, beyond games!), references by default but ability to use pointers ‘n references ‘n control memory, game-oriented garbage collection choices, somehow can interact with C/C++ (“interop”, embed, “transpile”, etc.). See [Beef’s design foreward](https://www.beeflang.org/docs/foreward/)
+
+the C/C++ world is a stable one, as **the most crucial low-level cross-platform libraries SDL (and SFML) are written in C or C++**, but, the engines made in purely C/C++ are often more geared toward code-only non-editor skilled game programmers that want to assemble or build their own engine
+
+the C# world is supported by the big boys (Unity, Godot through bindings) and indies alike (MonoGame), and it’s quite easy to write “interop” code for C/C++, in case you do need to use a C++ library or just a few functions, making it rather ideal for indies, hobbyists, and game-designers; also, .NET is just a super powerful language with a fuck-ton of features...
+
+the Haxe world is a really cool alt to Microsoft’s massive C#, involving a rad little community of loner hobbyist hackers ‘n makers. With a community, and unlike C#, you can feel like you make a differences, as many of the things made in this world are made by people like yourself: an artist. Like C#, it’s very easy to write bindings for C/C++ or even just rewrite libraries completely, yet, it’s libraries (via package manager haxelibs) are rather lacking, so you might just have to DIY. Thankfully, it’s a very game-oriented world, thanks to the mass migration of people from the Flash world to OpenFl, the open-source cross-platform version of Flash, which is written in Haxe. Though a small community, there’s certainly nothing wrong with the code. It works. It works quite well too. The language itself is maintained fantastically by the Haxe foundation; OpenFl is maintained by another group; And Heaps is maintained by the maker of Haxe, who himself runs a game company, using his own engine, Heaps, with Haxe. The language magically transpiles into anything, has its own super optimized VM, and so on, much before Google’s Dart, and somehow far more performant than both Dart and C#. Whereas C# becomes a massive monster supporting everything, along the same path as Unity, Haxe is generally *minimal, modular, dependency-free, written squeaky clean*. Everything is written this way because we are humans, and we can only handle so much, therefore, the code must be simple enough for a hobbyist to understand. Having said that, the Haxe world is great for game programmers, but can be intimidating for people that rely on big game engines complete with an editor and all tools and libs that come together—with the exception of HaxeFlixel.
+
+I don’t know much about the Java world. LibGDX seems to be exceptional though, loved by many. Where SDL may be daunting, LibGDX may be a more creative alternative. Similar to Haxe it uses a VM, JVM, to transform the high-level code into hardware-level byte-code, making it cross-platform.
+
+I also don’t have experience with Lua, but i at-least know it can embed into C (via “C api”). It’s also a tiny, extremely minimalistic language that performs extremely fast (through VM?), perhaps only Wren can compete, with Haxe just a little more behind. “It's widely considered to be one of the fastest dynamic language implementations.” says the LuaJIT.org site. It’s like the most general—no, *meta*— language that’s i know of. Like, _“tables”_ are the main data structure, and with _tables_ you can _do anything_, including making most of the language features found in more complex languages, such as classes and inheritance! This shit is crazy! (i wonder if this makes it difficult for auto-complete to work though...) It’s also dynamically typed, which probably makes debugging a pain?
+
+Newer things like Wren (like a modern Lua), Nim, or even game-specific Beef, Jai, are all in their infancy. But, given how modular common libraries have become, there’s no reason to be scared, as long as they are using SDL or something similar at it’s core, then it’s just as stable as any other engine! You just have to trust their makers. For example, I have extremely high faith in in Ruby0x1 and Bob for their development of Wren, and Jon Blow for his development of Jai (i don’t know who made Nim or Beef... yet?). I trust these individuals over any open-source project.
+
+
+
+## game-specific
+these are worth looking at for long-term game-makers, as it’s quite an investment in time. Game-specific languages probably have these features: a memory management system that’s good for game-making, ways to express game-specific things, and debugging features for game-specific problems.
+- **jai**, Jonathan Blow’s baby, built alongside it’s IDE and even alongside his next game, the IDE itself might be written in Jai(?), closed-source (while in dev at least..)
+- **beef**, built with it’s IDE to provide debug features (at the cost of being less supportive of other pop IDEs?), the maker of it has habit of using horrible code conventions: mVariable for member variables and gVariable for global variables 🤮, open-source
+
+## general:
+try to focus on languages that can communicate to C
+
+https://github.com/learn-anything/programming-languages#multi-paradigm
+
+### newer small general languages:
+in general, most of these languages are just a combination of the maker’s favorite languages mixed together. None are really innovative. Only only a few will catch on, become popular, have libraries, and live on... but that doesn’t mean they shouldn’t be used. Use whatever makes you happy! :) Anyway, it can be really cool making your own little world in your favorite language... As long as it works with C/C++, the worst case is you have to write some “interop” or otherwise “wrapper” code. 
+- **nim**, “statically-typed **python syntax with perl expressiveness**, aims for efficiency, then expressiveness, then elegance, has metaprogramming too, in that order;” *sounds nice to me!*
+- **crystal**, **for ruby lovers** that want to be able to **embed into C**
+- **wren**, **“Think Smalltalk in a Lua-sized package with a dash of Erlang and wrapped up in a familiar, modern syntax.”**, looks like **a really cute alternative to Lua**, in case Lua is too meta-level / minimal for you and you feel safer hiding behind classes ‘n object-oriented paradigms; used ‘n heavily contributed by the maker of the Luxe engine and made by the guy who wrote the game programming patterns book / site
+  - **dome engine**, a very cool simple game engine! :)
+    - https://github.com/domeengine/dome
+    - **domepunk**, the punks never die! :p
+      - https://github.com/NinjasCL/domepunk#project-explanation
+- **ring**, seems like a pretty awesome *flexible* language: **keywords can be changed**, **doesn’t enforce a coding style on you** (doesn’t use neither tab nor braces!), something like Lua and Wren (20k loc interpreter ‘n VM), all containers are a “list”, already has bindings for RayLib, SDL, etc.
+- odin, another cute scripting language for C, plus it parses emoticons!! 😮
+
+### newer pop or corporate-backed general languages
+- rust, **C++ without the problems of memory management(??)** thanks to it’s “borrow-checker solution”; **memory-safe, performant, and concurrent** (for threading?); i have no clue if this is good for games or not... but what the programmer mass trend-seekers love often doesn’t align with what game devs need, so, can’t be sure..
+- Dart, Google’s version of Haxe?
+  - i mean, Flutter is a top-notch cross-platform app solution, so why haven’t i seen any game engines..?
+- ECMAscript?
+- Kotlin, Google’s replacement for Java
+- Swift, Apple’s replacement for god-forsaken Objective-C
+
+
+
+
+
+
+
+# resources:
+wandering around github
+
+people that make games
+
+people in various game-making-related discord servers
+
+games from scratch (youtube series and web-site)
+
+[itch.io game engines used list sorted by popularity](https://itch.io/game-development/engines/most-projects)
+  - a _current_ list of game engines used by itch.io game jammers sorted by most used / popular. This is also a very good place to see source code of various simple games, before they become too large or too abstracted (often unnecessary refactoring of code); this is probably **the quickest way to _understand_ how a game is made**. But _beware_, game jammers aren’t the best programmers, and so they’re going to focus on tools specifically made for jamming, such as genre-specific tools which require no programming at all!
+
+https://thomasgervraud.com/best-2d-game-engine/
+  - a good starting point on making a list
+
+https://www.slant.co/topics/341/~best-2d-game-engines
+https://www.slant.co/topics/1495/~best-3d-game-engines
+  - pretty generic no life site, but it’s a list! and the pros and cons work!
+
+https://notes.underscorediscovery.com/
+  - the blog of the maker of Luxe engine
+
+https://blog.kylekukshtel.com/csharp-game-engine-dotnet-5-kinc-monogame-xna-dinghy/
+  - talks about making an engine on top of Kinc, slightly different from Foster
+  - https://dinghy.xyz/posts/experts-and-beginners/
+    - talks about the design of a simple framework, something very particular, yet, really pinpoints the differences between frameworks people love and people don’t
+
+https://www.bayustudio.com/en/finding-the-perfect-2d-game-engine/
+  - more on the big 2d engines (godot, defold, cocos, corona/solar2d)
+https://www.bayustudio.com/en/godot-vs-defold-which-one-is-better-for-me/
+  - godot vs defold (very close ‘n comparable!)
+
+https://love2d.org/forums/viewtopic.php?t=92556&p=246175
+
+awesome cpp
+  - https://github.com/fffaraz/awesome-cpp#frameworks
+  - https://github.com/fffaraz/awesome-cpp#game-engine
+  - this is a pretty good place to keep track of “modern” C/C++ game engines, which is all the craze now
+  - otherwise, it’s just through searching github..
+
+https://www.reddit.com/r/haxe/comments/4ojgtc/haxe_vs_c_syntax/
+  - the GPU is the fastest way to render objects, so an "objects per second" test is really more of a test of the GPU installed in the test machine. For the record, **both C++ code and C# code run on the CPU, and they have the same options available for passing instructions to the GPU. This reduces the advantage of C++ code.**
+
+    But that isn't the whole story either. It's possible to use the GPU efficiently or inefficiently. A good library might be able to render many more objects than a bad one, so it depends how well-optimized Kha, OpenFL, and Monogame are.
+
+http://forum.giderosmobile.com/discussion/7977/what-are-the-core-benefits-you-feel-gideros-delivers-better-than-other-development-systems
+  - just checking the forums...

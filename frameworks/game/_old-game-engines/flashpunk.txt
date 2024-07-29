@@ -1,0 +1,11 @@
+http://active.tutsplus.com/tutorials/games/an-introduction-to-flashpunk-the-basics/
+
+this.world.add(generatedLaser.copy(this.x, this.y)); //TODO: LESSON: in flashpunk, are all entitites added to the world, or are you still able to add children? Nope, but you can pass a reference of this to the child
+
+that's quite different from Flash and Cocos2d, which are hierarchal
+
+Draw.graphic(new Image(Global.player.combinedUpgradesBitmapDataWithShip), x, y); //memory leak! //TODO: LESSON: holy shit, amazing! Draw a graphic straight to the screen using this entity's position
+
+bitmapData.setPixel32(Input.mouseX - this.x, Input.mouseY - this.y, pencilColor); //can use lock/unlock if having fps problems //TODO: LESSON: holy crap, took forever to figure out setPixel's alpha value is retained (instead of FF)
+ 
+FP.buffer.draw(border); //render the border to the screen //TODO: LESSON: rendering in FlashPunk!

@@ -1,0 +1,149 @@
+
+
+
+
+"However the industry is moving to immutable infrastructure where you don't even need to worry about VMs at all.
+In that case Terrafom, Pulumi, Helm are the go-to tools."
+
+
+
+
+
+
+conclusion:
+just skip to nix, it's a paradigm shift ahead of the rest
+
+nix resources:
+https://old.reddit.com/r/NixOS/comments/15ibqop/hello_nixos_beautiful_people/juuibmd/
+
+also, self-host > cloud servers
+  - cost is a fraction
+  - learn true devops!
+
+
+https://world.hey.com/dhh/our-cloud-exit-has-already-yielded-1m-year-in-savings-db358dea
+  - (personally-owned) server > (enterprised-owned) cloud
+
+https://kamal-deploy.org/
+  - deploy to servers (not clouds!)
+  - made by RoR maker (above)
+
+
+
+resources:
+https://www.reddit.com/r/selfhosted/
+  - https://www.reddit.com/r/selfhosted/comments/bsp01i/welcome_to_rselfhosted_please_read_this_first/
+https://github.com/awesome-selfhosted/awesome-selfhosted
+https://github.com/awesome-foss/awesome-sysadmin
+
+tools:
+
+cockpit
+  - wordpress-like web interface for servers
+  - a good way to learn about servers without the command line!
+  - ships with RHEL servers, lacks some functionality on other distros
+  - 45drive's navigator plugin
+    - adds a file browser interface
+
+
+**nix**:
+
+nix tools:
+hercules CI + Effects
+
+
+nix vs traditional automation tools:
+https://news.ycombinator.com/item?id=26758310
+  - nix makes past solutions look like an interative, stateful hack
+  - only tough part is that you must be good at nix to solve problems when they come
+https://news.ycombinator.com/item?id=31080893
+  - nix > chef
+
+https://discourse.nixos.org/t/nixos-vs-ansible/16757/2
+> Ansible playbooks are sequential steps taken to reach a hopefully desired end-state.
+
+> NixOS configurations are a “manifest” of the end-state you want, and then the nixos modules will contain the logic around their slice of the system configuration.
+
+...
+
+> NixOS on the other hand is really complex at first (I needed a few weeks to get my basic system running) and painful at times if you try to run software that is not yet packaged. But, with determination to live with the constant effort when getting new things to run, it ends up with a much more enjoyable system than Ansible, Salt or Puppet could ever achieve.
+
+
+
+https://www.reddit.com/r/sysadmin/comments/2fmkvq/vagrat_saltstack_ansible_docker_chef_puppet/
+
+
+automation tools:
+
+
+
+
+
+
+traditional automation tools:
+  - They let you configure your servers. Install packages, write config files, git checkouts, users, etc. They're expandable, in that you can write new resources to manage. And they usually come with some sort of search feature, so you can populate nagios checks by querying the configuration set. They're designed to run repeatedly after an intial vanilla linux deploy.
+  - declarative configs
+
+terraform
+  - ??
+**ansible**
+  - the easiest to setup and use compared to the others
+  - doesn't scale as massively as the others due to implementation
+puppet
+  - ruby, complex
+  - "The CEO of puppet labs prides himself in never finishing a book. He gets the key concepts then puts the book away. This same mentality is evident in puppet because everything is half baked and designed with a ball of mud architecture."
+chef
+  - ruby, simpler?
+  - windows enterprise
+salt
+  - python
+
+https://www.reddit.com/r/devops/comments/18fleds/ansible_vs_chef_vs_puppet/
+
+
+others:
+**vagrant**
+  - automates dev environments
+  - a single file is used configure a VM
+  - can be used with Docker (although Docker has it's own config file)
+  - Vagrant: VirtualBox is difficult to configure correctly for dev environments. Vagrant lets you distribute a simple config file to repeatably create a VM from a base disk golden image, set up networking (and other options), and run a configuration management tool like Puppet on the VM. This way everyone has the same dev environment, and the build process is under revision control.
+  - easiest way to jump into automating!
+
+foreman
+  - used in conjunction with the traditional automation tools
+  - https://www.reddit.com/r/linuxadmin/comments/e5cqx8/anyone_using_foreman/
+    - pretty bad reviews
+
+
+
+copy image software:
+  - Docker, Packer: These tools take a 'golden image' approach. Docker does some magic using LXC (now their own libcontainer) containers, while Packer attempts to target pretty much everything.
+
+docker
+packer
+
+bento
+test-kitchen (part of chef?)
+
+
+
+
+containers:
+  - like light-weight VMs
+
+https://www.reddit.com/r/docker/comments/f0jld8/whats_the_relation_between_kubernetes_docker/
+
+**podman**
+  - **open-source**
+  - works with kubernetes
+kubernetes
+  - manage containers across multiple machines
+  - open-source
+docker
+  - a container platform
+  - linux only
+  - isolates kernel resources so that you have something like a virtual machine without its own kernel
+  - compose
+    - for a single machine
+  - swarm
+    - for multiple machines, competitive to kubernetes

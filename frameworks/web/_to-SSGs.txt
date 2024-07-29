@@ -1,0 +1,13 @@
+i'd personally choose between one of these two:
+
+Nice, haxe, a simple one!, including a cli
+  - https://github.com/gmisail/Nice
+
+Zero Static, haxe, another simple one, about 5 files, lol
+  - https://github.com/01010111/zero-static
+
+
+
+research:
+https://staticgen.com -> https://jamstack.org/generators/
+  - list of SSGs (and headless CMSs) by github stars

@@ -1,3 +1,14 @@
+windows:
+Linking ~\scoop\apps\ruby\current => ~\scoop\apps\ruby\3.3.4-1
+Adding ~\scoop\apps\ruby\current\bin to your path.
+Adding ~\scoop\apps\ruby\current\gems\bin to your path.
+
+TODO:
+Install MSYS2 via 'scoop install msys2' and then run 'ridk install' to
+install the toolchain!
+'ruby' suggests installing 'msys2'.
+
+
 
 language specific:
 https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/to-ruby-from-python/
