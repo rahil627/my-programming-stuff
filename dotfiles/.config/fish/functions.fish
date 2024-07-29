@@ -52,6 +52,7 @@ function cdi --wraps="cd" --description "interactive cd that offers to create di
 			end
 		end
 
+		# TODO: move to mkcd
 		# Now that's out of the way
 		cd $argv
 		set cd_status $status
@@ -72,6 +73,7 @@ function cdi --wraps="cd" --description "interactive cd that offers to create di
 end
 funcsave cdi
 
+# TODO: maybe obsoleted by the above function
 function mkcd --description "create a directory and change to it"
   mkdir -pv $argv;
   cd $argv;

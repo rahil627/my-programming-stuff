@@ -1,5 +1,9 @@
 
 install:
+
+no dropbox? :(
+https://www.reddit.com/r/Crostini/comments/e8o6es/dropbox_within_linux_for_chromeos/
+
 move taskbar to the side (to free up vertical screen space)
   - right click taskbar...
 

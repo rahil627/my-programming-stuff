@@ -19,9 +19,21 @@ sudo pacman -S base-devel
 makepkg -si
 
 
+# update
+
+# updates entire OS, including all packages
+sudo pacman -Syu
+
+# in case keys are corrupted
+sudo pacman -Sy archlinux-keyring && sudo pacman -Su
+
+# update user-made packages
+yay -Sua
+
+
 # maintenance
 
-# periodically remove unused packages
+# periodically remove unused/cached packages
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)
 https://wiki.archlinux.org/title/system_maintenance#Unused_packages_(orphans)
 

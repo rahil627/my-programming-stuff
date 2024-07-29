@@ -1,12 +1,24 @@
 
 
-GET BACKUP SOFTWARE FOR ARCH!!
+GET BACKUP SOFTWARE FOR ARCH!!<--
 
 replace server distro with openSUSE (leap) and try using nix package manager for most packages
   - then change to nixOS
 
 update personal distro arch -> openSUSE leap
   - start with nix the package manager first via 'determinate nix installer'
+
+how to fzf hidden files? is there a way within fzf, or is it a command flag?
+  - update c+f and c+a+f bindings to show hidden files
+
+create a ~/bin folder and link (soft or hard?) it to my scripts 'n cli apps
+
+install luxe
+
+setup heaps and imgui
+
+try imgui with ruby!
+  - https://github.com/vaiorabbit/ruby-imgui
 
 port old vim configs to NVChad/lua
 

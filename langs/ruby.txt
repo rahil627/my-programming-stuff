@@ -7,9 +7,16 @@ https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/to-ruby-fro
 https://github.com/martinmurciego/good-books/
   - a few ruby books, along with a few others
 
+try.ruby-lang:
+method!
+  - '!' denotes the object is altered/mutated
+
 
 
 practice:
+https://try.ruby-lang.org/
+  - simple little interactive lang tutorial
+
 https://learnbyexample.github.io/books/
  - practice examples 'n exercises for common cli stuff using ruby! :D  - ruby -e 'command' can be used to replace grep/sed/awk, and more
   - ruby one-liners cookbook
