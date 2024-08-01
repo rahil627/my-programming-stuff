@@ -1,17 +1,25 @@
-herro
-
 # install
 https://wiki.archlinux.org/title/Elixir
 
+# windows
+scoop install erlang
+scoop install elixir
+
+# linux
 sudo pacman -S elixir
 # depends on erlang, so it should install it too
 
 #export PATH="$PATH:/path/to/elixir/bin"
-which elixir
-fish_add_path /usr/sbin/elixir
 
-# install hex package manager (using elixir!)
+fish_add_path (which elixir)
+
+
+# post-install
+# install elixir's hex package manager
 mix local.hex
+
+# list all cli tasks
+mix help
 
 
 

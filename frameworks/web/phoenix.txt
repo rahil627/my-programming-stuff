@@ -1,40 +1,100 @@
-herro
-
 https://learn-elixir.dev/blogs/creating-reusable-ecto-code
   - to re-create the magic of RoR
 
-# install
-https://hexdocs.pm/phoenix/installation.html
-
 # install elixir
-# see elixir.txt#install
+# see elixir.txt
+# https://hexdocs.pm/phoenix/installation.html
+scoop install erlang
+scoop install elixir
+scoop install postgresql
 
-# double-check version that was installed
-elixir -v
-
-# linux only
+# linux only additional step:
 # install a file-system watcher in order to have live-reloading to work completely
 pacman -S inotify-tools
 
 # in case you need a db (can choose any)
 #sudo pacman -S postgresql
 
+# Run run 'pg_ctl start' or 'pg_ctl stop' to start and stop the database or register it as a service by running 'pg_ctl register -N PostgreSQL' from an elevated shell.
 
-# setup basic app
+# install elixir's package manager
+mix local.hex
+
+# install phoenix's new project generator
+mix archive.install hex phx_new
+
+
+
+
+# get a server up and runnin'
 # https://hexdocs.pm/phoenix/up_and_running.html
 
-# create a new project via cli
-mix phx.new hello
-# check for flags such as --database (postgresql by default) or --no-ecto (for no database), --no-live, --no-gettext, --no-mailer, --no-tailwind (uses tailwind css framework by default), --no-esbuild (uses esbuild by default), --no-html, etc.
-# see https://hexdocs.pm/phoenix/directory_structure.html
-cd hello
+# check options before creating a new project. Although it seems like a lot is added by default (tailwind, esbuild, liveview, etc.), it's best to just use the defaults as it's a very "batteries-included" framework; try not to worry about starting minimalist/modular
+# (great documentation via cli!)
+# uses postgressql by default
+# can try bandit http server over the default cowboy
+#   - cowboy is written in erlang, bandit was written specifically for plug, in elixir, and therefore phoenix, ridding some unused bloat
+# --no-live just comments out live-view-related stuff, so hopefully can uncomment it when it's needed
+mix help phx.new
+
+mix phx.new my_project --adapter bandit --no-live
+
+cd my_project
+
+# if you didn't make the git repo already..
 git init
 
-
 # create database
+# check/edit database config (db user/pass, host, port, etc.) if needed in dev.exs and run:
+# before this though, make sure the database is running locally:
+pg_ctl start
+# can check with pg_isready
 mix ecto.create
-# can edit config/dev.exs for db user/pass, host, port, etc.
 
+# start your Phoenix app with:
+# ensure you are running the terminal as admin on windows
+mix phx.server
+
+# you can also run your app inside iex (interactive elixir):
+# TODO: try this another time
+iex -S mix phx.serverate
+
+# check it out! yay!! :)
+http://localhost:4000/
+
+
+
+
+
+
+
+
+
+
+https://thephoenixtutorial.org/book/ch1_from_zero_to_deploy
+  - looks like a simple, one-page-html tutorial..
+
+The Hex packages used by your app are found in the mix. exs file
+
+# installs dependencies
+# (asked when creating a new project)
+mix deps.get
+
+SKIPPING TUTORIAL, just go with ai and make the app
+
+
+
+
+
+
+
+
+
+TODO: merge from last time
+# see https://hexdocs.pm/phoenix/directory_structure.html
+
+
+# TODO: move this out
 # for archlinux
 # follow https://wiki.archlinux.org/title/PostgreSQL
 sudo -i -u postgres
