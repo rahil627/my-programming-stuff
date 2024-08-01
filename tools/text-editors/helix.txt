@@ -63,15 +63,16 @@ space - root pop-up menu leads to other pop-up menus, pickers, special lsp/ast a
 windows/splits:
   - note: a buffer is split into multiple "windows"
 s+w/c+w - window combo key/pop-up menu
-  -> n -> v/s / c+v/c+s - new split window TODO: c+v/s doesn't work
+  -> n -> v/s / c+v/c+s - new split window
+      - currently binded to paste/save
   -> v/s - vertical/horizontal split current window TODO: github issue, why not h?
   -> q/c+q - close split
   -> o/c+o - close all other windows
   -> f/F - goto file in selection v/h-split TODO: dunno
 
   split navigation:
+  -> w/c+w - **cycle to next window**
   -> hjkl/c+hjkl
-  -> w/c+w - cycle to next window
 
   -> HJKL - swap window
 
@@ -83,8 +84,14 @@ s+w/c+w - window combo key/pop-up menu
 
 
 buffer navigation:
+note: opened buffers can be loaded into any window/split (the logic is a little different from tabbed editors)
+try cycling through buffers (left/right arrows) on the right vertically split window
+get used to quickly opening new window splits, selecting a buffer, 'n closing it
+
 s+b - **buffer picker**
   - simpler to use this for changing/searching buffers
+
+right/left arrows - **next/previous buffers**
 
 some common buffer aliases:
 :n - new buffer
