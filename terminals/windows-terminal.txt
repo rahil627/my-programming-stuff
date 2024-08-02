@@ -1,0 +1,24 @@
+
+generally use c+s for shortcuts
+  - TODO: update all c shortcuts to be c+s
+  - new tab (t), new window (n), copy/paste (c/v), find (f), etc.
+
+c+,
+  - settings
+c+s+,
+  - settings.json
+c+a+,
+  - open default settings.json
+
+c+s+d
+  - duplicate tab
+
+
+split window panes:
+a+s+'+/-'
+  - split vertically/horizontally
+  - kinda strange, but might share shortcut with vs-code
+  - TODO: maybe change to c+v/s or c+v/h to match helix
+
+alt+arrows
+  - window pane navigation
