@@ -1,36 +1,74 @@
 
+naming conventions:
+in general, spaces are fine and is the norm for windows at least since '95
+for programming, however:
+no spaces to avoid quoting in cli
+  - also no spaces for uri reasons
+no hyphen in the beginning as it gets conflated with cli options
+underscores are good for putting at the top of the sorted list, in addition, it seperates the concept of wanting a file on top vs a subtitute for spaces--which is what i use hyphens for
+  - however, it can make it harder to find in terminals, as you'd have to know the file has a _ in front of it and type _ first as opposed to the first letter of the file-name in order to trigger auto-complete, though, fuzzy search solves this. In general, it just makes paths a bit more funky. And every folder/file that starts with a _ will add a bit more funk into the path
+
+limits:
+cannot use: <>:"/\|?*
+260 char limit for path
+no trailing space or period
+file-names are not case-sensitive, but the case is preserved
+
+
 file structure:
-~($home)
+$home = C:\Users\ra
+  my custom folders:
+  - \OneDrive\my-stuff-on-a-cloud
+    - vs my-cloudy-stuff
+      - i prefer my-stuff-... as auto-complete will reveal the rest
+    - ALL FILES TO SYNC GO HERE
+      - TODO: vs a temporary folder on dropbox
+      - WARNING: all your data are belong to Microsoft!!
+  - \my-stuff
+    - ALL FILES TO NOT SYNC GO HERE
+    - \repos
+      - to avoid adding .git folder to the cloud
+
+
   windows default folders:
   - \Documents (local)
-    - programs throw their user-facing files here (and their non-user-facing data in AppData)
-      - so, should create your own main folder in $home dir
+    - if using onedrive, this will be empty, but if you stop using onedrive, the documents folder on the cloud will be moved here
+      - so, keep this empty for now
   - \OneDrive (cloud, 5tb free)
-    - documents
-    - desktop
-    - pictures
+    - these three are added/synced by default:
+    - Documents
+      - programs throw their user-facing files here (and their non-user-facing data in AppData)
+        - good to backup user-settings
+    - Desktop
+      - good to backup temp files
+    - Pictures
+      - always good to backup!
   - 'My Documents\Pictures\Videos\etc.' (shortcuts to ~\Documents\[My ...])
   - \Saved Games
-  - ...some more crap by windows (Searches??, Favorites??, etc.)
+  - ... a ton of hidden windows shortcuts
+    - my documents, start menu, sendto, recent, etc.
+  - ntuser.dat, ntuser.dat.log1, ntuser.datlog2
 
-  - ...a ton of other crap added by other programs:
-  - .hidden-app-folders
 
-  my custom folders:
-  - \stuff
-    - \repos
 
+
+can't exclude folders to sync in microsoft onedrive:
+https://www.reddit.com/r/onedrive/comments/e0oj41/how_can_i_get_onedrive_to_exclude_a_local_folder/https://www.reddit.com/r/onedrive/comments/e0oj41/how_can_i_get_onedrive_to_exclude_a_local_folder/
+  - "I know you can exclude folders from sync - but this appears to exclude cloud folders from syncing locally, not vice versa"
+  - "You can‘t exclude a subfolder of a folder that is syncing to the cloud."
+  - might be done by design, so that you are compelled to buy more cloud storage.. :/
 
 
 my stuff vs stuff vs _my-stuff vs -my-stuff
-  x/- \my-stuff (conflicts name with the old 'My ...' shortcuts)
+conclusion: i still prefer 'my-stuff' over 'stuff'
+  - \my-stuff (conflicts name with the legacy 'My Documents' shortcut)
     - this was my original folder in linux/mac/dropbox
     - 'my-' is enough for terminal to guess it
   x/- \_my-stuff has _ and -
   x/- \-my-stuff will work well in terminals and folder priority over the other crap...
     - update: nope! doesn't work with windows, as it looks like a command-line flag
   - \stuff
-    - simple, good, works in terminals, just the folder priority in gui`s suck
+    - simple, good, fits windows 11 naming conventions, works in terminals, just the folder priority in gui`s suck
 
 
 file and folder naming conventions:
