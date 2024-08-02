@@ -3,24 +3,50 @@
 
 # started with a copy of this one
 # https://github.com/eichiarakaki/helix/blob/main/config.toml
+# then merged this one
+# https://github.com/clo4/dotfiles/blob/main/dot_config/helix/config.toml
 
 theme = "boo berry"
 
-# Remapping some Keymaps
+
+# re-map some keys
+# only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful'
 [keys.normal]
 C-s = ":w" # Maps the Ctrl-s to the typable command :w which is an alias for :write (save file)
 C-q = ":q"
 # TODO: missing save position to jump-list
-C-h = "move_prev_word_end"
-C-l = "move_next_word_start"
+# C-h = "move_prev_word_end"
+# C-l = "move_next_word_start"
 C-a = "select_all"
 C-c = "yank_joined_to_clipboard"
 C-v = "paste_clipboard_after"
 
+left = ":buffer-previous"
+right = ":buffer-next"
+
+C-r = ":reload" # Reload the current document from disk
+A-f = ":format"
+
+# select within the line bounds, useful for quick whole-line changes
+X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"]
+
+# change everything from the cursor to the end of the line
+A-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
+
+# delete from cursor to line end
+C-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
+
+
 [keys.insert]
+C-space = "completion"
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 C-left = "move_prev_word_start"
 C-right = "move_next_word_end"
+
+
+[keys.normal.space]
+d = ":buffer-close"
+
 
 # set-option softwrap.enable
 
@@ -28,13 +54,16 @@ C-right = "move_next_word_end"
 line-number = "relative"
 
 # TODO: testing
+completion-trigger-len = 1
 cursorline = true
 color-modes = true
+true-color = true
+bufferline = "multiple"
 
 [editor.cursor-shape]
 # normal = "block"
 insert = "bar"
-select = "underline" # doesn't seem to work..?
+select = "underline"
 
 [editor.soft-wrap]
 enable = true
@@ -42,33 +71,24 @@ enable = true
 [editor.statusline]
 # same as defaults but neatly aligned
 left = ["mode", "spinner"]
-center = ["file-name", "diagnostics"]
-right = ["selections", "position"]
+center = ["file-name", "diagnostics", "workspace-diagnostics"]
+right = ["selections", "position-percentage"]
 separator = "│"
 mode.normal = "normal" # "NOR" by default
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
-# File explorer configuration
-[editor.file-picker]
-hidden = false # TODO: test overhead of searching through .git folder
-parents = false # rid \. and \..
+[editor.whitespace.render]
+newline = "all"
 
-[editor.whitespace]
-render = "none"
+[editor.whitespace.characters]
+newline = "↵"
 
 [editor.indent-guides]
-render = false
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
-skip-levels = 1
+render = true
+character = "┊" # Some characters that work well: ▏ ┆ ┊ ⸽ ╎
+#skip-levels = 1
 
-# LSP Server configuration
-[editor.lsp]
-display-messages = true
-auto-signature-help = true
-display-signature-help-docs = true
-
-# Auto-pairs
 [editor.auto-pairs]
 '(' = ')'
 '{' = '}'
@@ -76,4 +96,15 @@ display-signature-help-docs = true
 '"' = '"'
 '`' = '`'
 '<' = '>'
+
+
+[editor.file-picker]
+hidden = false
+parents = false # rid \. and \..
+
+[editor.lsp]
+display-messages = true
+auto-signature-help = true
+display-signature-help-docs = true
+
 
