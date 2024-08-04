@@ -1,12 +1,23 @@
+# hx $profile
 
 # NOTE: after modifying, re-run this:
 # . $profile
 
+# then, back it up
+# cp $profile C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\powershell\
+
 # there's no need for making a module,
 # functions here magically become commands
 
+# an example from about_profiles from help/docs
+function Get-CmdletAlias ($cmdletname) {
+  Get-Alias |
+    Where-Object -FilterScript {$_.Definition -like "$cmdletname"} |
+      Format-Table -Property Definition, Name -AutoSize
+}
+
+
 # powershell comes with a bunch of aliases for linux users
-# (although, keep in mind: powershell works on objects, linux works on text/strings!)
 # Get-Alias | select name, definition
 #
 # Name    Definition
