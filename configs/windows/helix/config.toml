@@ -1,5 +1,10 @@
+# :config-open
+
 # backup
-# cp C:\Users\ra\AppData\Roaming\helix\config.toml .
+# cp C:\Users\ra\AppData\Roaming\helix\config.toml C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\helix\
+
+# default config:
+# https://github.com/helix-editor/helix/issues/1210
 
 # started with a copy of this one
 # https://github.com/eichiarakaki/helix/blob/main/config.toml
@@ -18,11 +23,27 @@ C-q = ":q"
 # C-h = "move_prev_word_end"
 # C-l = "move_next_word_start"
 C-a = "select_all"
-C-c = "yank_joined_to_clipboard"
+C-c = "yank_joined_to_clipboard" # default was toggle_comments
+"C-/" = "toggle_comments"
 C-v = "paste_clipboard_after"
+
+# TODO: figure out navigation
+C-j = "page_down"
+C-k = "page_up"
+
+# these are the defaults:
+# C-b = "page_up" # in z/view
+# C-f = "page_down" # in z/view
+# "C-u" = "half_page_up"
+# "C-d" = "half_page_down"
+# "C-i" = "jump_forward"
+# "C-o" = "jump_backward"
+
 
 left = ":buffer-previous"
 right = ":buffer-next"
+# down = ":buffer-close" # or keep for navigating up and down
+# up = ??
 
 C-r = ":reload" # Reload the current document from disk
 A-f = ":format"
@@ -47,6 +68,9 @@ C-right = "move_next_word_end"
 [keys.normal.space]
 d = ":buffer-close"
 
+[keys.normal.m]
+a = "surround_add" # default was s
+o = "select_textobject_around" # o for outside; default was a for around
 
 # set-option softwrap.enable
 
