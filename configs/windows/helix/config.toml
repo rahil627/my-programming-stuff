@@ -19,6 +19,7 @@ theme = "boo berry"
 [keys.normal]
 C-s = ":w" # Maps the Ctrl-s to the typable command :w which is an alias for :write (save file)
 C-q = ":q"
+C-A-q = ":q!"
 # TODO: missing save position to jump-list
 # C-h = "move_prev_word_end"
 # C-l = "move_next_word_start"
@@ -27,9 +28,6 @@ C-c = "yank_joined_to_clipboard" # default was toggle_comments
 "C-/" = "toggle_comments"
 C-v = "paste_clipboard_after"
 
-# TODO: figure out navigation
-C-j = "page_down"
-C-k = "page_up"
 
 # these are the defaults:
 # C-b = "page_up" # in z/view
@@ -40,10 +38,45 @@ C-k = "page_up"
 # "C-o" = "jump_backward"
 
 
-left = ":buffer-previous"
-right = ":buffer-next"
-# down = ":buffer-close" # or keep for navigating up and down
-# up = ??
+C-j = "page_down" # C-f, C-d
+C-k = "page_up" # C-b, C-u
+C-h = "goto_first_nonwhitespace" # gh
+# TODO: figure this conflict out
+# C-l = "goto_line_end" # gl; C-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
+# i think C-l is also somehow used for deleting the rest of a line
+
+# view/split/pane movement
+C-S-h = "jump_view_left"
+C-S-j = "jump_view_down"
+C-S-k = "jump_view_up"
+C-S-l = "jump_view_right"
+
+# buffer shortcuts are missing??
+# NOTE: control+shift commonly used by windows terminal. TODO: better to change all windows terminal shortcuts to alt and alt-shift for consistency
+C-S-A-h = ":new" # h is further away/less commonly used command; TODO: change to buffer-new
+C-S-A-j = ":buffer-next" # jk to move through
+C-S-A-k = ":buffer-previous"
+C-S-A-l = ":buffer-close" # more commonly used than new buffer
+# C-S-A-l = ":buffer-close!"
+
+# left = ":buffer-previous" # bp (alias)
+# right = ":buffer-next" # bn
+# down = ":buffer-close" # bc; vs keep for navigating up and down
+# up = ":new" # n
+
+
+# terminal view/pan handled by terminal
+# C-j = add a split below
+# C-l = add a splot to the right
+# "C--" = default for windows terminal/vscode
+# "C-+" = default for windows terminal/vscode
+
+# A-hjkl # my keymaps
+# C-left/down/up/right # default for windows terminal
+
+# re-size split/pane
+# A-S-hjkl
+
 
 C-r = ":reload" # Reload the current document from disk
 A-f = ":format"
@@ -60,7 +93,7 @@ C-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
 
 [keys.insert]
 C-space = "completion"
-j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock; TODO: testing
 C-left = "move_prev_word_start"
 C-right = "move_next_word_end"
 
