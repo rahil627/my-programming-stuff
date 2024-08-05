@@ -1,0 +1,49 @@
+// cp C:\Users\ra\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json $home\my-stuff\repos\my-programming-stuff\configs\windows\terminal\
+
+// copy the following bits of json
+
+"initialCols": 75,
+
+"profiles":
+{
+    "defaults": {
+        "colorScheme": "CyberPunk2077",
+        "font":
+        {
+            "face": "mononoki",
+            "size": 10.0,
+            "weight": "normal"
+        }
+    },
+}
+
+// https://windowsterminalthemes.dev/
+"schemes":
+[
+    {
+        {
+            "name": "CyberPunk2077",
+            "black": "#272932",
+            "red": "#710000",
+            "green": "#1AC5B0",
+            "yellow": "#FDF500",
+            "blue": "#9381FF",
+            "purple": "#742D8B",
+            "cyan": "#00D0DB",
+            "white": "#D1C5C0",
+            "brightBlack": "#7b8097",
+            "brightRed": "#C71515",
+            "brightGreen": "#40FFE9",
+            "brightYellow": "#fff955",
+            "brightBlue": "#37EBF3",
+            "brightPurple": "#CB1DCD",
+            "brightCyan": "#37EBF3",
+            "brightWhite": "#C1DEFF",
+            "background": "#272932",
+            "foreground": "#E455AE",
+            "selectionBackground": "#742D8B",
+            "cursorColor": "#FDF500"
+        }
+    }
+]
+

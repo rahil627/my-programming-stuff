@@ -1,8 +1,18 @@
 
+
+NOTE: settings.json is auto-generated (maybe whenever settings are changed?), so no point of editing the file
+
+path:
+C:\Users\ra\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+
+backup:
+cp C:\Users\ra\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json $home\my-stuff\repos\my-programming-stuff\configs\windows\terminal\
+
 generally use c+s for shortcuts
-  - TODO: update all c shortcuts to be c+s
+  - TODO: update all control shortcuts to be alt
   - new tab (t), new window (n), copy/paste (c/v), find (f), etc.
 
+some defaults:
 c+,
   - settings
 c+s+,
@@ -14,11 +24,14 @@ c+s+d
   - duplicate tab
 
 
+my shortcuts:
+
+generally change all modifier-key shortcuts to alt (+alt-shift, alt-control-shift), so it doesn't conflict with terminal apps, especially helix/text-editors
+
 split window panes:
-a+s+'+/-'
+a+s+'+/-' -> a-s-j/l (TODO: maybe v/h is better, to preserve for resize pane shortcuts)
   - split vertically/horizontally
   - kinda strange, but might share shortcut with vs-code
-  - TODO: maybe change to c+v/s or c+v/h to match helix
 
 alt+arrows
   - window pane navigation
