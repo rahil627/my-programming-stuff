@@ -1,7 +1,7 @@
 # :config-open
 
 # backup
-# cp C:\Users\ra\AppData\Roaming\helix\config.toml C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\helix\
+# cp C:\Users\ra\AppData\Roaming\helix\config.toml C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\helix
 
 # default config:
 # https://github.com/helix-editor/helix/issues/1210
@@ -11,8 +11,13 @@
 # then merged this one
 # https://github.com/clo4/dotfiles/blob/main/dot_config/helix/config.toml
 
-theme = "boo berry"
 
+# issues
+# why paste is slow:
+# https://github.com/helix-editor/helix/issues/1021#issuecomment-963353157
+#  - as a work-around, it literally types one character at a time
+
+theme = "boo berry"
 
 # re-map some keys
 # only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful'
@@ -38,13 +43,13 @@ C-v = "paste_clipboard_after"
 # "C-o" = "jump_backward"
 
 
+# TODO: C+hjkl vs default g, hjkl
 C-j = "page_down" # C-f, C-d
 C-k = "page_up" # C-b, C-u
 C-h = "goto_first_nonwhitespace" # gh
-# TODO: figure this conflict out
-# C-l = "goto_line_end" # gl; C-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
-# i think C-l is also somehow used for deleting the rest of a line
+C-l = "goto_line_end" # gl
 
+# TODO: switch these with buffer navigation? wait 'til i determine which i use more frequently
 # view/split/pane movement
 C-S-h = "jump_view_left"
 C-S-j = "jump_view_down"
@@ -53,28 +58,23 @@ C-S-l = "jump_view_right"
 
 # buffer shortcuts are missing??
 # NOTE: control+shift commonly used by windows terminal. TODO: better to change all windows terminal shortcuts to alt and alt-shift for consistency
-C-S-A-h = ":new" # h is further away/less commonly used command; TODO: change to buffer-new
-C-S-A-j = ":buffer-next" # jk to move through
-C-S-A-k = ":buffer-previous"
-C-S-A-l = ":buffer-close" # more commonly used than new buffer
+C-S-A-h = ":new" # bp; h is further away/less commonly used command; TODO: change to buffer-new
+C-S-A-j = ":buffer-next" # bn jk to move through
+C-S-A-k = ":buffer-previous" # bp
+C-S-A-l = ":buffer-close" # bc; more commonly used than new buffer
 # C-S-A-l = ":buffer-close!"
 
-# left = ":buffer-previous" # bp (alias)
-# right = ":buffer-next" # bn
-# down = ":buffer-close" # bc; vs keep for navigating up and down
-# up = ":new" # n
-
-
-# terminal view/pan handled by terminal
-# C-j = add a split below
-# C-l = add a splot to the right
+# terminal view/pane handled by terminal
+# A-S-j = add a split below
+# A-S-l = add a splot to the right
 # "C--" = default for windows terminal/vscode
 # "C-+" = default for windows terminal/vscode
 
+# terminal navigation
 # A-hjkl # my keymaps
 # C-left/down/up/right # default for windows terminal
 
-# re-size split/pane
+# re-size terminal split/pane
 # A-S-hjkl
 
 
@@ -84,12 +84,11 @@ A-f = ":format"
 # select within the line bounds, useful for quick whole-line changes
 X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"]
 
-# change everything from the cursor to the end of the line
-A-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
-
 # delete from cursor to line end
-C-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
+A-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
 
+# change everything from the cursor to the end of the line
+A-C-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"] # macros?? :o
 
 [keys.insert]
 C-space = "completion"
