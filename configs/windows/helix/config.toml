@@ -26,8 +26,6 @@ C-s = ":w" # Maps the Ctrl-s to the typable command :w which is an alias for :wr
 C-q = ":q"
 C-A-q = ":q!"
 # TODO: missing save position to jump-list
-# C-h = "move_prev_word_end"
-# C-l = "move_next_word_start"
 C-a = "select_all"
 C-c = "yank_joined_to_clipboard" # default was toggle_comments
 "C-/" = "toggle_comments"
@@ -48,13 +46,30 @@ C-j = "page_down" # C-f, C-d
 C-k = "page_up" # C-b, C-u
 C-h = "goto_first_nonwhitespace" # gh
 C-l = "goto_line_end" # gl
+# C-h = "move_prev_word_end"
+# C-l = "move_next_word_start"
+
+
 
 # TODO: switch these with buffer navigation? wait 'til i determine which i use more frequently
 # view/split/pane movement
-C-S-h = "jump_view_left"
-C-S-j = "jump_view_down"
-C-S-k = "jump_view_up"
-C-S-l = "jump_view_right"
+# C-S-h = "jump_view_left"
+# C-S-j = "jump_view_down"
+# C-S-k = "jump_view_up"
+# C-S-l = "jump_view_right"
+
+# use cycle view shortcut instead
+# and combine with new split shortcuts
+C-S-j = "rotate_view"
+# C-S-h = "counter-rotate_view" # dunno command for this
+C-S-h = ":hsplit-new"
+C-S-l = ":vsplit-new"
+
+
+# TODO: still testing/figuring this out..
+C-S-s = ":vsplit-new" # s for split, fits c+w, s
+# C-r = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
+# C-d = ":hsplit-new"
 
 # buffer shortcuts are missing??
 # NOTE: control+shift commonly used by windows terminal. TODO: better to change all windows terminal shortcuts to alt and alt-shift for consistency
@@ -65,8 +80,6 @@ C-S-A-l = ":buffer-close" # bc; more commonly used than new buffer
 # C-S-A-l = ":buffer-close!"
 
 # terminal view/pane handled by terminal
-# A-S-j = add a split below
-# A-S-l = add a splot to the right
 # "C--" = default for windows terminal/vscode
 # "C-+" = default for windows terminal/vscode
 
