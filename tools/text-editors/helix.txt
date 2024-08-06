@@ -1,4 +1,8 @@
 
+https://www.reddit.com/r/HelixEditor/comments/14vqm19/share_your_helix/
+  - TODO: edit config some more
+  - add languages.toml file
+
 
 https://www.youtube.com/watch?v=xHebvTGOdH8
 
@@ -60,12 +64,13 @@ space - root pop-up menu leads to other pop-up menus, pickers, special lsp/ast a
   -> k - show docs for item under cursor
 
 
-windows/splits:
-  - note: a buffer is split into multiple "windows"
-s+w/c+w - window combo key/pop-up menu
-  -> n -> v/s / c+v/c+s - new split window
-      - currently binded to paste/save
-  -> v/s - vertical/horizontal split current window TODO: github issue, why not h?
+windows/splits/panes:
+  - note: the app can be split into multiple "windows", seperate from buffers
+  - note: i created my own key-maps for navigating, opening, 'n closing panes
+c+w - window combo key/pop-up menu
+  -> n -> v/s / c+v/c+s - split current pane vertically/horizontally
+      - NOTE: currently binded to paste/save
+  -> v/s - vertical/horizontal split current pane TODO: github issue, why not h?
   -> q/c+q - close split
   -> o/c+o - close all other windows
   -> f/F - goto file in selection v/h-split TODO: dunno
@@ -74,7 +79,7 @@ s+w/c+w - window combo key/pop-up menu
   -> w/c+w - **cycle to next window**
   -> hjkl/c+hjkl
 
-  -> HJKL - swap window
+  -> HJKL - swap panes
 
   some common split aliases:
   :vs - vertical split
@@ -84,11 +89,12 @@ s+w/c+w - window combo key/pop-up menu
 
 
 buffer navigation:
+note: i created my own key-maps for navigating, opening, 'n closing buffers
 note: opened buffers can be loaded into any window/split (the logic is a little different from tabbed editors)
 try cycling through buffers (left/right arrows) on the right vertically split window
 get used to quickly opening new window splits, selecting a buffer, 'n closing it
 
-s+b - **buffer picker**
+space+b - **buffer picker**
   - simpler to use this for changing/searching buffers
 
 right/left arrows - **next/previous buffers**
@@ -148,7 +154,7 @@ t/T - find and select un(t)il/back-until char
     as long as the register isn't empty, you can use n/N to jump to the next/previous selection that matches the regex
   - note: regex may contain | (or operator)
 
-s+j - open jump-list picker
+space+j - open jump-list picker
   - intuitive way to see and understand how the jump-list works
 c+s - save a place to the jump-list
 c+i/o - jump to next/previous place in the jump-list
