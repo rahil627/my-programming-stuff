@@ -4,6 +4,38 @@
     "actions": 
     [
         {
+            "command": "unbound",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": "unbound",
+            "keys": "enter"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+d"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            },
+            "keys": "alt+h"
+        },
+        {
             "command": 
             {
                 "action": "newWindow",
@@ -20,6 +52,14 @@
             "keys": "alt+c"
         },
         {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "alt+up"
+        },
+        {
             "command": "paste",
             "keys": "alt+v"
         },
@@ -30,10 +70,19 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "down"
+                "action": "resizePane",
+                "direction": "left"
             },
-            "keys": "alt+h"
+            "keys": "alt+left"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+d"
         },
         {
             "command": 
@@ -46,11 +95,10 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
+                "action": "resizePane",
+                "direction": "right"
             },
-            "keys": "alt+d"
+            "keys": "alt+right"
         },
         {
             "command": "closePane",
@@ -71,30 +119,6 @@
                 "direction": "previousInOrder"
             },
             "keys": "alt+k"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "alt+up"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "keys": "alt+left"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "right"
-            },
-            "keys": "alt+right"
         },
         {
             "command": 
