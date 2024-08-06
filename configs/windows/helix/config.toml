@@ -17,6 +17,9 @@
 # https://github.com/helix-editor/helix/issues/1021#issuecomment-963353157
 #  - as a work-around, it literally types one character at a time
 
+
+# NOTE: press space, ? to open the command picker
+
 theme = "boo berry"
 
 # re-map some keys
@@ -31,6 +34,8 @@ C-c = "yank_joined_to_clipboard" # default was toggle_comments
 "C-/" = "toggle_comments"
 C-v = "paste_clipboard_after"
 
+C-r = ":reload" # Reload the current document from disk
+A-f = ":format"
 
 # these are the defaults:
 # C-b = "page_up" # in z/view
@@ -45,63 +50,77 @@ C-v = "paste_clipboard_after"
 C-j = "page_down" # C-f, C-d
 C-k = "page_up" # C-b, C-u
 C-h = "goto_first_nonwhitespace" # gh
-C-l = "goto_line_end" # gl
+C-l = "goto_line_end" # gl; NOTE: uses a common key-map for alter line (from emacs?)
+# TODO: goto_line_end doesn't work with v-selection?? :/
 # C-h = "move_prev_word_end"
 # C-l = "move_next_word_start"
 
 
-
-# TODO: switch these with buffer navigation? wait 'til i determine which i use more frequently
-# view/split/pane movement
-# C-S-h = "jump_view_left"
-# C-S-j = "jump_view_down"
-# C-S-k = "jump_view_up"
-# C-S-l = "jump_view_right"
-
-# use cycle view shortcut instead
-# and combine with new split shortcuts
-C-S-j = "rotate_view"
-# C-S-h = "counter-rotate_view" # dunno command for this
-C-S-h = ":hsplit-new"
-C-S-l = ":vsplit-new"
+# matches terminal split and nav shortcuts
+C-S-A-j = "rotate_view"
+C-S-A-k = "rotate_view_reverse"
+C-S-A-h = ":hsplit-new"
+C-S-A-l = ":vsplit-new"
+"C-S-A-;" = ":quit" # closes current view
+"C-S-A-w" = ":quit" # closes current view
 
 
 # TODO: still testing/figuring this out..
-C-S-s = ":vsplit-new" # s for split, fits c+w, s
+# C-s used by save
+# C-v used by paste
+# C-S-s = ":vsplit-new" # s for split, fits c+w, s
+# C-S-v = ":vsplit-new" # s for split, fits c+w, s
+# C-S-h = ":hsplit-new" # s for split, fits c+w, s
 # C-r = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
 # C-d = ":hsplit-new"
 
 # buffer shortcuts are missing??
-# NOTE: control+shift commonly used by windows terminal. TODO: better to change all windows terminal shortcuts to alt and alt-shift for consistency
-C-S-A-h = ":new" # bp; h is further away/less commonly used command; TODO: change to buffer-new
-C-S-A-j = ":buffer-next" # bn jk to move through
-C-S-A-k = ":buffer-previous" # bp
-C-S-A-l = ":buffer-close" # bc; more commonly used than new buffer
+# can use buffer picker (space,b) instead.., but shouldn't have to
+# NOTE: control+shift commonly used by windows terminal, so i changed it to alt and alt+shift
+C-S-j = ":buffer-next" # bn jk to move through
+C-S-k = ":buffer-previous" # bp
+# C-S-h = ":new" # bp; h is further away/less commonly used command; TODO: change to buffer-new
+# - often use file picker (space,f) instead
+C-S-h = "file_picker"
+# C-S-l = # NOTE: bound to alter line macro
+"C-S-;" = ":buffer-close" # bc; more commonly used than new buffer;
+C-S-w = ":buffer-close"
 # C-S-A-l = ":buffer-close!"
 
+# TODO: bring back the arrow-key buffer shortcuts
+# left = ":buffer-previous"
+# right = ":buffer-next"
+# up = ":new" # ?, don't remember; or file picker
+# down = ":buffer-close"
+
 # terminal view/pane handled by terminal
+# A-S-h - split horizontal (down)
+# A-S-l - split vertical (right)
 # "C--" = default for windows terminal/vscode
 # "C-+" = default for windows terminal/vscode
 
 # terminal navigation
-# A-hjkl # my keymaps
+# A-j - next view
+# A-k - previous view
 # C-left/down/up/right # default for windows terminal
 
 # re-size terminal split/pane
 # A-S-hjkl
+# A-arrow-keys
+# A-S-arrow-keys # default for windows terminal
 
 
-C-r = ":reload" # Reload the current document from disk
-A-f = ":format"
-
+# macros!! :o
 # select within the line bounds, useful for quick whole-line changes
 X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"]
 
 # delete from cursor to line end
-A-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
+C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
 
 # change everything from the cursor to the end of the line
-A-C-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"] # macros?? :o
+# TODO: conflicts with terminal shortcut
+# A-C-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
+
 
 [keys.insert]
 C-space = "completion"
