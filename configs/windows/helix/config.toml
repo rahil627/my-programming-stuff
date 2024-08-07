@@ -8,7 +8,7 @@
 
 # started with a copy of this one
 # https://github.com/eichiarakaki/helix/blob/main/config.toml
-# then merged this one
+# TODO: working on this one, it's quite custom..
 # https://github.com/clo4/dotfiles/blob/main/dot_config/helix/config.toml
 
 
@@ -18,24 +18,49 @@
 #  - as a work-around, it literally types one character at a time
 
 
-# NOTE: press space, ? to open the command picker
+# NOTE: press space,? to open the command picker, then can see all of the commands that can be mapped to a key (or macro!)
 
-theme = "boo berry"
+theme = "boo berry" # a better version of the 'default' theme
+
 
 # re-map some keys
-# only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful'
+# NOTE: only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful'
+
 [keys.normal]
-C-s = ":w" # Maps the Ctrl-s to the typable command :w which is an alias for :write (save file)
-C-q = ":q"
-C-A-q = ":q!"
+# common windows OS shortcuts
+C-s = ":write" # Maps the Ctrl-s to the typable command :w which is an alias for :write (save file)
+C-q = ":quit"
+C-A-q = ":quit!"
 # TODO: missing save position to jump-list
-C-a = "select_all"
+C-a = "select_all" # not so useful..
 C-c = "yank_joined_to_clipboard" # default was toggle_comments
 "C-/" = "toggle_comments"
 C-v = "paste_clipboard_after"
 
 C-r = ":reload" # Reload the current document from disk
 A-f = ":format"
+
+
+# TODO: think about basic movements
+# dfjk for left,right,down,up?
+#  - not supposed to use left/right often
+# qw for back/forward one word
+#  - opens up b for buffer pop-up menu
+# ft?
+# a-. is strange for repeat last motion... change it back to ;?
+# need this for repeat f/t/m/[/]
+#  - need ; to clear selection, which is used often in kakaoune-style always select
+# . repeat last insert is kinda wierd too..
+#  - save you from copy-paste
+
+
+# extend selection
+# shift commonly signifies extend selection
+B = "extend_prev_word_start" # or long_word
+W = "extend_next_word_start"
+E = "extend_next_word_end"
+H = "extend_to_first_nonwhitespace" # matches c-h
+L = "extend_to_line_end" # matches c-l
 
 # these are the defaults:
 # C-b = "page_up" # in z/view
@@ -56,13 +81,15 @@ C-l = "goto_line_end" # gl; NOTE: uses a common key-map for alter line (from ema
 # C-l = "move_next_word_start"
 
 
-# matches terminal split and nav shortcuts
+# matches terminal split and nav shortcuts (a-hjkl, a-w)
+# TODO: make a pop-up menu, or edit c+w "window" pop-up menu
+# use these less often than moving around buffers, so mapped it to an additional modifier key
 C-S-A-j = "rotate_view"
 C-S-A-k = "rotate_view_reverse"
 C-S-A-h = ":hsplit-new"
 C-S-A-l = ":vsplit-new"
-"C-S-A-;" = ":quit" # closes current view
-"C-S-A-w" = ":quit" # closes current view
+"C-S-A-;" = ":quit" # closes current view # TODO: not working
+C-S-A-w = ":quit" # closes current view
 
 
 # TODO: still testing/figuring this out..
@@ -75,17 +102,25 @@ C-S-A-l = ":vsplit-new"
 # C-d = ":hsplit-new"
 
 # buffer shortcuts are missing??
+# g,n/p = goto_next_buffer/goto_previous_buffer
 # can use buffer picker (space,b) instead.., but shouldn't have to
 # NOTE: control+shift commonly used by windows terminal, so i changed it to alt and alt+shift
-C-S-j = ":buffer-next" # bn jk to move through
-C-S-k = ":buffer-previous" # bp
+# TODO: create a buffer pop-up menu
+C-S-j = "goto_next_buffer" # bn jk to move through
+C-S-k = "goto_previous_buffer" # bp
 # C-S-h = ":new" # bp; h is further away/less commonly used command; TODO: change to buffer-new
 # - often use file picker (space,f) instead
 C-S-h = "file_picker"
 # C-S-l = # NOTE: bound to alter line macro
-"C-S-;" = ":buffer-close" # bc; more commonly used than new buffer;
+"C-S-;" = ":buffer-close" # bc; more commonly used than new buffer; # TODO: not working
+
 C-S-w = ":buffer-close"
 # C-S-A-l = ":buffer-close!"
+C-S-n = ":new"
+
+C-S-f = "file_picker"
+C-f = "file_picker" # default: page_down
+
 
 # TODO: bring back the arrow-key buffer shortcuts
 # left = ":buffer-previous"
@@ -111,11 +146,17 @@ C-S-w = ":buffer-close"
 
 
 # macros!! :o
+
+# TODO: think of a key to create a pop-up menu for macros
+#       currently, m = match pop-up
+
+# x without the newline?
 # select within the line bounds, useful for quick whole-line changes
 X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"]
 
 # delete from cursor to line end
-C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
+# common in many editors, maybe back to emacs
+C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"] # c-l binded to goto_line_end
 
 # change everything from the cursor to the end of the line
 # TODO: conflicts with terminal shortcut
@@ -125,18 +166,25 @@ C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection
 [keys.insert]
 C-space = "completion"
 j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock; TODO: testing
+
+# common gui editor key-maps
 C-left = "move_prev_word_start"
 C-right = "move_next_word_end"
-
 
 [keys.normal.space]
 d = ":buffer-close"
 
 [keys.normal.m]
-a = "surround_add" # default was s
-o = "select_textobject_around" # o for outside; default was a for around
+a = "surround_add" # default is s
+o = "select_textobject_around" # o for outside; default was a
 
 # set-option softwrap.enable
+
+
+
+
+
+
 
 [editor]
 line-number = "relative"
@@ -171,6 +219,7 @@ newline = "all"
 
 [editor.whitespace.characters]
 newline = "↵"
+tab = "⇥"
 
 [editor.indent-guides]
 render = true
@@ -194,5 +243,6 @@ parents = false # rid \. and \..
 display-messages = true
 auto-signature-help = true
 display-signature-help-docs = true
+display-inlay-hints = true
 
 
