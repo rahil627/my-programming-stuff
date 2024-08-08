@@ -1,7 +1,17 @@
 
 
+# post-windows update
+welp, glad i ended up never ended up using scripting langauges!
+
+though i prefer much of ruby's design (blocks, mix-ins, syntax, etc.), it's just not worth installing it to run in it for most people. The advent of go and rust (and haxe before them!) has shown the importance of compiling to machine code to build binaries that work everywhere. Now, Windows has all of linux's superior programs re-written in rust, go, 'n zig; So much so, that there's no need for linux anymore. And building for Windows is crucial--as i use it myself!! So, it's best to stick to compiled languages, where things are guaranteed to work, build everywhere, and provides a good debugging experience...
+
+the biggest difference will be the libraries and the succintness. Haxe and go have similarly minimal standard libraries whereas ruby's libraries are quite powerful, and have a lot of character: often elegance, a bit of quirkiness, and a good amount of magic. In go, you just write/program straight-forwardly, like the languages itself. Also in go, there's a bunch of error handling code (by design) that takes up space and hinders readability. Both python and ruby (and even typescript) scripts will be more succint, easier to read, but maybe not by a large enough margin to outweigh the ability to create portable executables for every platform.
+
+
 # post-windows powershell update
-powershell is what i was looking for. You get the .net framework--if you need it--, and a very neat and organized shell-scripting language. It's refreshing, clear, easy-to-understand, and infinitely more organized compared to linux shell scripts, which feels like a bunch of glue of open-source crap. Finally, a solid general-purpose lang made for shells! Yeah, it's verbose, it's got all that .net ilk, but it just feels lightyears better than the old linux stuff. Instead of glueing small linux apps together (sed/awk, head, tail, cat, etc.), you just have a very simple standard library (get-content -first/-last 10). The only thing missing is the ruby syntax. If ever there was a place that needed standards, it was shell-scripting!
+powershell is what i was looking for. You get the .net framework--if you need it--, and a very neat and organized shell-scripting language. It's refreshing, clear, easy-to-understand, and infinitely more organized compared to linux shell scripts, which feels like a bunch of glue of open-source crap. Finally, a solid general-purpose lang made for shells! Yeah, it's verbose, it's got all that .net ilk, but it just feels lightyears better than the old linux stuff. Instead of glueing small linux apps together (sed/awk, head, tail, cat, etc.), you just have a very simple standard library (get-content -first/-last 10 vs head/tail) with a great standard help feature. If ever there was a place that needed standards, it was shell-scripting!
+
+
 
 
 # conclusion
