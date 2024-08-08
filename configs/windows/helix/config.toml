@@ -6,10 +6,21 @@
 # default config:
 # https://github.com/helix-editor/helix/issues/1210
 
-# started with a copy of this one
+# started with a copy of this one:
 # https://github.com/eichiarakaki/helix/blob/main/config.toml
-# TODO: working on this one, it's quite custom..
+# also merged in these
+# https://github.com/x448/helix-editor-config-toml/blob/main/config.toml
+# https://github.com/ravsii/.helix/blob/main/config.toml
+# TODO: working on merging this one
+# https://gitlab.com/obxhdx/dotfiles/-/blob/main/config/config/helix/config.toml
+# TODO: this one looks quite custom..
+# it seems very left-handed, motions with left-hand, which frees the right-hand to use mouse/touch-pad/touch-screen?
+# but why? it would be one or the other
 # https://github.com/clo4/dotfiles/blob/main/dot_config/helix/config.toml
+
+# awesome helix
+# https://github.com/rajasegar/awesome-helix?tab=readme-ov-file
+#   - also contains many configs to borrow from
 
 
 # issues
@@ -25,13 +36,17 @@ theme = "boo berry" # a better version of the 'default' theme
 
 # re-map some keys
 # NOTE: only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful'
+# NOTE: use no_op for unmapped keys, to be explicit and know what isn't mapped
+
+# https://docs.helix-editor.com/keymap.html
+# https://docs.helix-editor.com/remapping.html
+
 
 [keys.normal]
 # common windows OS shortcuts
-C-s = ":write" # Maps the Ctrl-s to the typable command :w which is an alias for :write (save file)
-C-q = ":quit"
-C-A-q = ":quit!"
-# TODO: missing save position to jump-list
+C-s = ":write" # default was save_selection (to jump-list)
+C-q = ":quit" # TODO: or quit-all
+C-A-q = ":quit!" # quit-all!
 C-a = "select_all" # not so useful..
 C-c = "yank_joined_to_clipboard" # default was toggle_comments
 "C-/" = "toggle_comments"
@@ -52,27 +67,39 @@ A-f = ":format"
 #  - need ; to clear selection, which is used often in kakaoune-style always select
 # . repeat last insert is kinda wierd too..
 #  - save you from copy-paste
+# uio for jump-list movement, to match jk
+C-u = "save_selection" # defualt was page_up
+# ,. for next/previous buffer? TODO: should have many of these key-pairs to cycle next/previous
 
+# sensible stuff
+ret = ["move_line_down", "goto_first_nonwhitespace"] # unmapped by default
 
 # extend selection
 # shift commonly signifies extend selection
 B = "extend_prev_word_start" # or long_word
 W = "extend_next_word_start"
 E = "extend_next_word_end"
+# JK select to next/previous line isn't practical so the defaults are different:
+# TODO: maybe add/remove line
+# J = "insert_newline_below" # or add_newline_above/below; goes against modal philosophy, should add in insert-mode
+# J default is join_selections (into one line)
+# K default is keep_selections (selections matching the regex)
 H = "extend_to_first_nonwhitespace" # matches c-h
 L = "extend_to_line_end" # matches c-l
 
 # these are the defaults:
-# C-b = "page_up" # in z/view
-# C-f = "page_down" # in z/view
-# "C-u" = "half_page_up"
-# "C-d" = "half_page_down"
+# NOTE: these four are free to map
+C-b = "no_op" # "page_up" # in z/view
+# C-f = "no_op" # "page_down" # in z/view; mapped to file-picker, similar to old terminal fzf
+# "C-u" = "half_page_up" # mapped to save jump point
+"C-d" = "no_op" # "half_page_down"
+
 # "C-i" = "jump_forward"
 # "C-o" = "jump_backward"
 
 
 # TODO: C+hjkl vs default g, hjkl
-C-j = "page_down" # C-f, C-d
+C-j = "page_down" # C-f, C-d TODO: ["page_down", "goto_window_center"]
 C-k = "page_up" # C-b, C-u
 C-h = "goto_first_nonwhitespace" # gh
 C-l = "goto_line_end" # gl; NOTE: uses a common key-map for alter line (from emacs?)
@@ -80,6 +107,8 @@ C-l = "goto_line_end" # gl; NOTE: uses a common key-map for alter line (from ema
 # C-h = "move_prev_word_end"
 # C-l = "move_next_word_start"
 
+"C-[" = "goto_prev_paragraph"
+"C-]" = "goto_next_paragraph"
 
 # matches terminal split and nav shortcuts (a-hjkl, a-w)
 # TODO: make a pop-up menu, or edit c+w "window" pop-up menu
@@ -106,20 +135,20 @@ C-S-A-w = ":quit" # closes current view
 # can use buffer picker (space,b) instead.., but shouldn't have to
 # NOTE: control+shift commonly used by windows terminal, so i changed it to alt and alt+shift
 # TODO: create a buffer pop-up menu
-C-S-j = "goto_next_buffer" # bn jk to move through
-C-S-k = "goto_previous_buffer" # bp
+C-S-j = "goto_next_buffer" # gn, :bn jk to move through
+C-S-k = "goto_previous_buffer" # gp, :bp
 # C-S-h = ":new" # bp; h is further away/less commonly used command; TODO: change to buffer-new
 # - often use file picker (space,f) instead
-C-S-h = "file_picker"
-# C-S-l = # NOTE: bound to alter line macro
+# C-S-h = "file_picker" # NOTE: mapped to kill_to_line_start, use C-f or space,f/F
+# C-S-l = # NOTE: mapped to kill_to_line_end
 "C-S-;" = ":buffer-close" # bc; more commonly used than new buffer; # TODO: not working
 
 C-S-w = ":buffer-close"
 # C-S-A-l = ":buffer-close!"
 C-S-n = ":new"
 
-C-S-f = "file_picker"
-C-f = "file_picker" # default: page_down
+C-S-f = "file_picker_in_current_buffer_directory"
+C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_picker_in_current_directory)?
 
 
 # TODO: bring back the arrow-key buffer shortcuts
@@ -145,40 +174,113 @@ C-f = "file_picker" # default: page_down
 # A-S-arrow-keys # default for windows terminal
 
 
-# macros!! :o
+
+
+# commonly used commands (including macros!! :o)
+
 
 # TODO: think of a key to create a pop-up menu for macros
-#       currently, m = match pop-up
-
+#       currently, m = match pop-up, 
+         
 # x without the newline?
 # select within the line bounds, useful for quick whole-line changes
-X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"]
+X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] # TODO: make it extend to next line, like x does
+# select_line_below? # how does this work..?
+# TODO: C-x - delete/cut line?
+# TODO: C-S-x - delete/cut from first non-white-space?
 
 # delete from cursor to line end
 # common in many editors, maybe back to emacs
-C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"] # c-l binded to goto_line_end
+# L = "select_to_line_end" # default
+# C-l = "goto_line_end" # defined alongside movement key-maps
+C-S-l = "kill_to_line_end" # NOTE: nearly conflicts with buffer shortcuts
+# C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"] # TODO: compare with kill_to_line_end
+# C-A-S-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
 
-# change everything from the cursor to the end of the line
-# TODO: conflicts with terminal shortcut
-# A-C-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
+# from cursor to line start / first non-white-space
+# H
+# C-h
+C-S-h = "kill_to_line_start" # actually deletes upto first non-white-space; NOTE: nearly conflicts with buffer shortcuts
 
 
 [keys.insert]
+esc = ["collapse_selection", "normal_mode"] # keeping the selection while inserting is kinda weird..
 C-space = "completion"
-j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock; TODO: testing
+# j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock
+
+# C-j = "insert_newline" # default; alt to enter-key
+C-j = "add_newline_below"
+C-k = "add_newline_above" # or C-S-j?
+C-S-j = "move_line_down"
+C-S-k = "move_line_up"
+# C-k = "kill_line_to_end" # default
+C-h = "goto_first_nonwhitespace" # C-u by default
+C-a = "goto_first_nonwhitespace" # an extra key that makes sense
+C-l = "goto_line_end" # delete char by default
+C-S-h = "kill_to_line_start"
+# backspace = "delete_char" # default
+# C-d = "delete_char_forward" # default
+C-S-D = "delete_char_backward"
+# C-w = "delete_word_backward" # default is inverted
+C-S-w = "delete_word_forward"
+C-b = "delete_word_backward" # an extra key that makes sense
+C-backspace = "delete_word_backward"
+C-S-backspace = "delete_word_forward"
+
+# https://gitlab.com/obxhdx/dotfiles/-/blob/main/config/config/helix/config.toml
+# lots of useful stuff here TODO: map these
+# maybe a way to invoke normal-mode shortcuts from insert-mode?
+# A-b = ["move_prev_word_start", "collapse_selection"]
+# A-f = ["move_next_word_end", "move_char_right"]
+# C-b = "move_char_left"
+# C-e = "goto_line_end_newline"
+# C-f = "move_char_right"
+
+
+# remove arrow-key training wheels
+# create all shortcuts within the main key-pad area
+# up = "no_op"
+# down = "no_op"
+# left = "no_op"
+# right = "no_op"
+# pageup = "no_op"
+# pagedown = "no_op"
+# home = "no_op"
+# end = "no_op"
 
 # common gui editor key-maps
 C-left = "move_prev_word_start"
 C-right = "move_next_word_end"
 
+[keys.select]
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # keep selection by default
+
+
+
+# pop-up menus
+# edit existing pop-up menus
 [keys.normal.space]
-d = ":buffer-close"
+q = ":buffer-close" # or x or d
+Q = ":buffer-close!"
+
+[keys.normal.g]
+q = ":buffer-close" # goto pop-up menu has buffer next and previous, but no close or new
+Q = ":buffer-close!"
+
+[keys.normal."]"]
+"]" = "goto_next_paragraph" # make paragraph the default thing
+[keys.normal."["]
+"[" = "goto_prev_paragraph" # TODO: standardize 'prev' or 'previous' in the helix repo
 
 [keys.normal.m]
 a = "surround_add" # default is s
 o = "select_textobject_around" # o for outside; default was a
 
-# set-option softwrap.enable
+# a new config- pop-up menu
+[keys.normal."C-backspace"]
+r = [":config-reload", ":reload-all"]
+o = ":config-open"
+l = ":o ~/.config/helix/languages.toml"
 
 
 
@@ -203,12 +305,13 @@ select = "underline"
 
 [editor.soft-wrap]
 enable = true
+max-wrap = 10 # increase value to reduce forced mid-word wrapping
 
 [editor.statusline]
 # same as defaults but neatly aligned
 left = ["mode", "spinner"]
 center = ["file-name", "diagnostics", "workspace-diagnostics"]
-right = ["selections", "position-percentage"]
+right = ["version-control", "selections", "position-percentage"]
 separator = "│"
 mode.normal = "normal" # "NOR" by default
 mode.insert = "INSERT"
@@ -218,9 +321,12 @@ mode.select = "SELECT"
 newline = "all"
 
 [editor.whitespace.characters]
-newline = "↵"
-tab = "⇥"
-
+# space = "·"
+newline = "↵" # ⏎
+tab = "⇥" # →
+tabpad = "·" # tabs will look like "→···"
+nbsp = "⍽"
+            
 [editor.indent-guides]
 render = true
 character = "┊" # Some characters that work well: ▏ ┆ ┊ ⸽ ╎
