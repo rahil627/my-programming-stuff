@@ -19,6 +19,10 @@
 #  $home\my-stuff otherwise it would be $homemy-stuff
 #  cp $profile "$configs\powershell\" throws an error
 
+# run it / import it
+. .\backup_configs.ps1
+import-module .\install_apps.psm1
+
 # environment vars
 ls $env:
 $env:psmodulepath -split (';')
