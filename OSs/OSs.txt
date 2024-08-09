@@ -1,0 +1,33 @@
+
+TODO: merge original file
+
+**windows**
+  - games.
+    - gamer community
+  - graphics.
+  - powershell.
+    - the best shell
+  - winget/scoop
+    - a singular (no distros), native, secured package manager
+    - scoop may just be the best portable app package manager
+  - WSL
+    - a powerful native VM for linux, running at near natively-installed performance
+  - doesn't care about how the apps look! You can download anything from the internet and run it
+  - phone link
+  - with pro: native sandbox, bitlocker
+
+linux
+  - good to learn the ancient ways of cli
+  - good for building reproducible configs
+  - non-corporate / pro free and open-source software (foss) community
+    - not sure if this is a pro..
+
+mac
+  - no games / graphics
+  - propietary crap
+    - architecture
+	  - ARM, powerpc
+	- cables
+	- additional hardware
+  - makes it difficult for developers to make apps
+    - requires apps to be native-looking (and thus runs into the cross-platform ui problem)
