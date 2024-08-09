@@ -52,42 +52,46 @@ red
     - **jekyll (github pages) for static web site**
     - roda for simple dynamic web site
     - ruby on rails for quickly making a large or rich ui web app
-      - replaced by elixir's phoenix framework
+      - both replaced by elixir's phoenix framework
     - tty-toolkit atop ncurses(?) for cli/tui apps
+      - doesn't make sense due to lack of portabile executable
   - open-source language not run by a corporate giant, yet used by and supported by giants (github)
   - (still need python for ai/ml/stats/math/etc. data sciences)
     - could probably just port what you need, adding to ruby's libraries
   - with mRuby, Crystal, can keep favorite syntax and use for nearly everything
   - restriction: not performant enough for real-time interaction such as games or embedded devices (though there's mRuby), and not the most performant for web either
-  - restriction: no simple cross-platform compiled binary executable (no current packaging tool either?), dynamically-typed
+  - restrictions: no simple cross-platform compiled binary executable (no current packaging tool either?), dynamically-typed and meta-programming (and therefore tough debugging and auto-completion problems)
 **jai** > **haxe** >= crystal == nim >? C# > java/kotlin
   - general all-round use, covers most cases
   - haxe always had cross-platform in mind
     - c# took a long long time to reach c# core (previously mono)
+  - haxe is the ultimate "kitchen-sink" language
   - most use llvm compiler and are comparable in speed (magnitudes faster than scripting langs), except C#/java
   - all use a garbage collector, so C/C++ code will be written seperately and then called
   - **resulting programs more portable/cross-platform due to compiled executable binary**
   - all are powerful in features: macros (or C#'s "source generator"), ADTs, etc. metaprogramming, generics
+  - many come with multiple compile options for quick testing/running: interpreter, bytecode/vm (haxe/hl), in addition to standard compilation
   - able to contribute to a tiny game-oriented community (haxe, jai)
 **elixir**
   - **has the current best scalable and easily-maintainable web framework: phoenix**
     - suitable for both small web apps (roda) and massive web apps (rails)
-    - concurrency
+    - makes good use of the VM/language's concurrency
     - better written / more manageable once it's big due to functional programming design patterns
   - functional
-  - particularly useful for any kind of **concurrent/parallel computing**, since it runs on awesome Erlang VM (BEAM). Used for distributed/fault tolerant/highly available systems (such as Discord and WhatsApp).
+  - particularly useful for any kind of **concurrent/parallel computing**, since it runs on *awesome* Erlang VM (BEAM). Used for distributed/fault tolerant/highly available systems (such as Discord and WhatsApp)
   - can also be used to write beautiful programs with it! (merges the beauty of ruby syntax with functional paradigm)
+    - pretty terrible for cli-apps though, as it requires installing the VM to run it (compiled to bytecode), and has some start-up time (200ms), so best used in situations where the VM is constantly running (servers)
 special cases:
-  - **go**
-    - zen systems programming, especially web back-end and cli-apps
+  - go
+    - zen systems programming
+    - very limited in use-cases: small programs ("micro-services") often in web back-end and cli-apps
+    - " Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."
   - haxe
     - transpile to js/wasm or many other langs (don't write js!, and stay in the compiled world)
       - https://haxe.org/documentation/introduction/compiler-targets.html
         - tier 1: **js**, hashlink (bytecode), eval (interpreter), jvm (bytecode), php7
         - tier 2: **c++**, lua
-  - **crystal**/nim
-    - for porting ruby/python for performance, keeping the same syntax
-    - good if you have ruby syntax in mind and don't want to use Go
+    - suffers from lack of community/libraries, though it is amongst the longest living contemporary languages and constantly updated and improving
   - Ocaml
     - parsing/compilers, and other problem/solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data
   - javascript (and typescript)
@@ -97,10 +101,14 @@ special cases:
     - low-level, memory management
     - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!). But, it's not an end-all solution to memory-management, especially in the case for games
       - skip rust, and wait for jai
+    - "Rust is a kitchen-sink language that can do anything well if you're willing to put in the time to learn how to control it."
   - **zig** > odin > **C**
     - low-low-level (not for me!)
     - best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
     - zig is very very good here, but can just wait for jai
+   - crystal/nim
+      - for porting ruby/python code for performance and/or building binaries, keeping the same syntax
+        - good if you have ruby/python syntax in mind and don't want to use Go
 
 
 
