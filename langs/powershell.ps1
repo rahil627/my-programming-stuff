@@ -13,12 +13,19 @@
 #  - etc.
 
 # naming conventions
-seems to be case insensitive, which is great as .net uses caps heavily
-doesn't like '-', or any special characters except '_'
+# seems to be case insensitive, which is great as .net uses CamelCase heavily
+# doesn't like '-', or any special characters except '_'
+# don't end folder paths with \
+#  $home\my-stuff otherwise it would be $homemy-stuff
+#  cp $profile "$configs\powershell\" throws an error
 
 # environment vars
-$Env:PSModulePath -split (';')
-$PROFILE # your powershell's settings go here
+ls $env:
+$env:psmodulepath -split (';')
+
+$profile # path to powershell settings profile
+
+
 
 # learn x in y minutes
 ls # can simply run a command like this!
@@ -27,24 +34,31 @@ if (!(Test-Path $path)) { # or -not
     # note: requires () and {}
 }
 $array = @("stuff");
-$hash = @{key = "value"}
+$array[0]
 
-"string substitution is easy as $string $array-value $hash-value"
+$hash = @{key = "value"}
+$hash['key']
+
+"string substitution is as easy as $string"
+
+"string interpolation: $($array[0]) $($hash['key'])"
 
 winget list | select-string "some-app" # pipe 'n grep
 $string -match "regex" # pattern match operater (when not piping)
 
 
 # put this at the end of a "module" (.psm1)
-Export-ModuleMember -Function * -Alias * -Variable *
+export-modulemember -function * -alias * -variable *
 
 # check output properties of an object
-this-function-outputs-an-object | Get-Member
+this-function-outputs-an-object | get-member
 or-this-way | select
+$profile | select-object * # even env vars are just objects
 
 # then select the object's properties/columns you want to output
 some-function | select name, definition, description
 
 # properties and values? TODO
-or-this | Format-List Property *
+or-this | format-list property *
+
 

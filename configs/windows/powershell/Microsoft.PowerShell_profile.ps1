@@ -3,7 +3,12 @@
 # NOTE: after modifying, re-run this:
 # . $profile
 
-# then, back it up
+# WARNING: don't edit the config file ($profile) directly, it keeps disappearing, then have to restart PC in order to gain access to the folder.. TODO: maybe due to OneDrive messing up :/
+
+# copy this file to the system
+# cp .\Microsoft.PowerShell_profile.ps1 C:\Users\ra\OneDrive\Documents\PowerShell\
+
+# then, back it up (when it's working properly)
 # cp $profile C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\powershell\
 
 # there's no need for making a module,
@@ -15,6 +20,49 @@ function Get-CmdletAlias ($cmdletname) {
     Where-Object -FilterScript {$_.Definition -like "$cmdletname"} |
       Format-Table -Property Definition, Name -AutoSize
 }
+
+# begin
+
+# naming convention
+# $my_ prefix
+# MyInvocation comes first :(
+
+# store paths here
+
+# my paths
+# $home is set by default
+
+$my_paths = @{
+my_stuff = "$home\my-stuff"
+stuff = "$home\my-stuff"
+repos = "$home\my-stuff\repos"
+my_programming_stuff = "$home\my-stuff\repos\my-programming-stuff"
+programming = "$home\my-stuff\repos\my-programming-stuff"
+configs = "$home\my-stuff\repos\my-programming-stuff\configs\windows" # NOTE: not cross-platform, can use $iswindows
+}
+
+# put most commonly-used paths in session-level vars
+# this allows you to use simple string subsitution as opposed to verbose string interpolation: "$my_stuff" vs $($my_paths['my_stuff'])"
+$my_stuff = $my_paths['my_stuff']
+$stuff = $my_paths['my_stuff']
+$my_repos = $my_paths['repos']
+$repos = $my_paths['repos']
+$my_programming_stuff = $my_paths['my_programming_stuff']
+$programming = $my_paths['my_programming_stuff']
+$configs = $my_paths['configs']
+$my_configs = $my_paths['configs']
+
+# store in a data structure for scoping and easy auto-complete? (although, $[tab] does provide auto-complete)
+$config_paths = @{
+# paths to config files
+# use: fetch hash-table with $my_configs['text_editor']
+
+shell = $profile # $profile is set by default
+terminal = "$home\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+text_editor = "$home\AppData\Roaming\helix\config.toml"
+}
+
+# end
 
 
 # powershell comes with a bunch of aliases for linux users
