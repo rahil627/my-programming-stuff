@@ -38,6 +38,9 @@ red
   - https://www.red-lang.org/p/about.html
 
 # conclusion:
+languages sorted by their use cases
+
+## general langs
 (ordered from basic to general)
 **powershell (v7+)** > fish > bash/zsh
   - batch commands, extremely simple scripts (in bash/powershell) for portability
@@ -45,9 +48,10 @@ red
   - automation, especially for windows
   - bigger scripts (powershell with .net or other fav general-purpose lang, scripting or compiled)
     - note: powershell is powerful enough to do just about anything, thanks to the .net framework
-**ruby** > python (notable: haxe's hscript)
-  - **great for quick, simple everyday small scripting to large size projects** thanks to it's **great battle-tested modular libs**
-  - **great simple-to-get-started/prototype frameworks 'n libs: web-app (back-end), cli, (not gui-apps?), automation, devops, hacking**
+**ruby**
+  - **great for quick, simple everyday small scripting to pretty large size projects** thanks to it's **great battle-tested modular libs**
+    - runs as simply as a shell script, no main class or anything needed
+  - **great simple-and-quick-to-get-started/prototype frameworks 'n libs: web-app (back-end), cli, (not gui-apps?), automation, devops, hacking**
     - community pioneered frameworks and products for hacking (metasploit), sysadmin/automation (chef config management, jenkins ci, etc.), rake
     - **jekyll (github pages) for static web site**
     - roda for simple dynamic web site
@@ -61,7 +65,7 @@ red
   - with mRuby, Crystal, can keep favorite syntax and use for nearly everything
   - restriction: not performant enough for real-time interaction such as games or embedded devices (though there's mRuby), and not the most performant for web either
   - restrictions: no simple cross-platform compiled binary executable (no current packaging tool either?), dynamically-typed and meta-programming (and therefore tough debugging and auto-completion problems)
-**jai** > **haxe** >= crystal == nim >? C# > java/kotlin
+(**jai** >) **haxe** >= crystal == nim >? C# > java/kotlin
   - general all-round use, covers most cases
   - haxe always had cross-platform in mind
     - c# took a long long time to reach c# core (previously mono)
@@ -72,49 +76,55 @@ red
   - all are powerful in features: macros (or C#'s "source generator"), ADTs, etc. metaprogramming, generics
   - many come with multiple compile options for quick testing/running: interpreter, bytecode/vm (haxe/hl), in addition to standard compilation
   - able to contribute to a tiny game-oriented community (haxe, jai)
+  
+## special cases:
+go
+  - **zen systems programming**
+    - **a great way to get back into programming, and getting shit done, without being overwhelmed by features (haxe, ruby, 'n especially rust all suffer from this in their own way)**
+      - though, i still prefer haxe.. and haxe's little community <3
+  - very limited in use-cases: small, portable programs ("micro-services") often in web back-end and cli-apps
+    - no games, no ui apps?, etc.
+  - "Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."
+  - concurrency
+  - quick building binaries
+javascript (and typescript)
+  - the standard browser language
+    - can't run from it, though i can keep trying!
 **elixir**
   - **has the current best scalable and easily-maintainable web framework: phoenix**
     - suitable for both small web apps (roda) and massive web apps (rails)
-    - makes good use of the VM/language's concurrency
+    - makes good use of the VM's concurrency and provides an elegant way to handle it
     - better written / more manageable once it's big due to functional programming design patterns
   - functional
   - particularly useful for any kind of **concurrent/parallel computing**, since it runs on *awesome* Erlang VM (BEAM). Used for distributed/fault tolerant/highly available systems (such as Discord and WhatsApp)
-  - can also be used to write beautiful programs with it! (merges the beauty of ruby syntax with functional paradigm)
-    - pretty terrible for cli-apps though, as it requires installing the VM to run it (compiled to bytecode), and has some start-up time (200ms), so best used in situations where the VM is constantly running (servers)
-special cases:
-  - go
-    - zen systems programming
-    - very limited in use-cases: small programs ("micro-services") often in web back-end and cli-apps
-    - " Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."
-  - haxe
-    - transpile to js/wasm or many other langs (don't write js!, and stay in the compiled world)
-      - https://haxe.org/documentation/introduction/compiler-targets.html
-        - tier 1: **js**, hashlink (bytecode), eval (interpreter), jvm (bytecode), php7
-        - tier 2: **c++**, lua
-    - suffers from lack of community/libraries, though it is amongst the longest living contemporary languages and constantly updated and improving
-  - Ocaml
-    - parsing/compilers, and other problem/solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data
-  - javascript (and typescript)
-    - the standard browser language
-      - can't run from it, though we can keep trying!
-  - **jai** > rust > C++
-    - low-level, memory management
-    - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!). But, it's not an end-all solution to memory-management, especially in the case for games
-      - skip rust, and wait for jai
-    - "Rust is a kitchen-sink language that can do anything well if you're willing to put in the time to learn how to control it."
-  - **zig** > odin > **C**
-    - low-low-level (not for me!)
-    - best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
-    - zig is very very good here, but can just wait for jai
-   - crystal/nim
-      - for porting ruby/python code for performance and/or building binaries, keeping the same syntax
-        - good if you have ruby/python syntax in mind and don't want to use Go
+  - can also be used to write beautiful programs with it! (merges the beauty of ruby syntax with functional paradigm
+    - pretty terrible for cli-apps though, as it requires installing the VM to run it (compiled to bytecode), has some start-up time (200ms), so best used in situations where the VM is constantly running (servers)
+haxe
+  - transpile to js/wasm or many other langs (don't write js!, and stay in the compiled world)
+    - https://haxe.org/documentation/introduction/compiler-targets.html
+      - tier 1: **js**, hashlink (bytecode/**c**), eval (interpreter), jvm (bytecode), php7
+      - tier 2: **c++**, lua
+  - suffers from lack of community/libraries, though it is amongst the longest living contemporary languages and constantly updated and improving, with a very solid std lib like go
+**jai** > rust > C++
+  - low-level, memory management
+  - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!). But, it's not an end-all solution to memory-management, especially in the case for games
+    - **skip rust, and wait for jai**
+  - "Rust is a kitchen-sink language that can do anything well if you're willing to put in the time to learn how to control it."
+**zig** > odin > **C**
+  - low-low-level (not for me!)
+  - best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
+  - zig is very very good here, but i hope i never have to go down to this level
+Ocaml
+  - parsing/compilers, and other problem/solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data too
+  - resulting programs are quite pretty thanks to it's functional paradigm side and concise syntax
+crystal/nim
+  - for porting ruby/python code for performance and/or building binaries, keeping the same syntax
+    - good if you have ruby/python syntax in mind and don't want to use Go, or want more features than go
 
 
 
 # my choices
 ## main list
-
 **Jai** to replace Haxe
 
 **Haxe** for general all-round use, **cross-platform in mind**, garbage collected, powerful (**lisp-level macros**, **ADTs**, metadata, etc.), small Flash-game-oriented community, simple actionscript syntax
@@ -123,13 +133,8 @@ special cases:
   - admittedly, it is a hurdle of complexity to learn compared to C# or haxe
   - gets a lot of inspiration, in a good way, from Smalltalk (everthing is an object) and Lisp (metaprogramming)
 
-**C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and innovative Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
+**C** (or Zig), manual memory management, although with newer C replacements (Zig, Odin, etc.) and Rust, it's best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
 
-x/Wren (or Squirrel) for object-oriented embedded scripting and particularly game scripting, a better suited alt to Lua, but unlike Lua, it doesn't have a standard library
-
-x/Lua for general-purpose embedded scripting (embedding into C), for it's unprecendted speed (...how many years now?), and it's simple std library, just tough to beat in many performant embedding scripting cases
-
-x/shell languages (bash, zsh, fish, etc.) for shell scripting, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
 
 **Ruby** , much more fun and magnitudes more expressive and powerful than Python, and it contains my favorite syntax(!), its the closest i'll ever get to a functional language; includes mRuby: a minimal implementation for embedded devices(!), *clean*-design-oriented cult commmunity, meta-programming abound (DSLs, etc.) making it a good step toward the god-like languages
 
@@ -145,6 +150,11 @@ the next two lack libraries and support compared to other contemporary langugage
    - an alt to ruby for many cases
 
 Pharo or Squeak or Cuis, the main three Smalltalk dialects, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
+
+## no
+x/embedded scripting langs (lua, wren) don't really have a place now that rust and C-replacements like zig are here
+
+x/shell languages (bash, zsh, fish, etc.) for shell scripting, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
 
 
 ## notes
@@ -212,7 +222,7 @@ i don't know the reason why this exists, save a very minor convenience of not ph
 i'm just guessing in the special case of server-side: server-client api, it has some special reason? like to talk to javascript maybe?? i dunno..
 
 AS2 -> AS3/haxe (a whole new language and compiler)
-js -> ts (type checker bundle?)
+js -> ts (transpiles to js)
 php -> hack (type checker bundle?)
 python -> mypy and others (type checker)
 ruby /w sorbet (type checker)
@@ -300,7 +310,8 @@ Lisp
   - **the simplest sytax**: '(word arg)', that's it!
     - thus **easy to parse / interpret / compile**
   - dialects:
-    - Common Lisp
+    - **Common Lisp**
+      - the true way
       - a spec from 84 (finished in 94?) of which there are a ton of implementations
       - https://en.m.wikipedia.org/wiki/Common_Lisp
         - used in Deep Space and Mars Rover
@@ -308,12 +319,12 @@ Lisp
     - **Scheme**
       - a minimal dialect
         - the core seems to be rigorously thought out and is now a standard used as a base for newer dialects
-        - beyond the core, there arre similarly rigoriously thought out extensions to the lang
+        - beyond the core, there are similarly rigoriously thought out extensions to the lang
       - this sounds more in tune with the spirit of Lisp, whereas other newer dialects just add more syntax/keywords, when the point is to be simple
      - Clojure
        - Rob said it "adds syntax" and that "it should be burned with fire"
        - uses JVM
-     - **Racket**
+     - Racket
        - a contemporary one based off of one of the Scheme standards, full of contemporary features
        - more like a whole tool-set, used to create your own langauge! Now this is the spirit!
          - "The language platform provides a self-hosted IDE named DrRacket, a continuation-based web server, a graphical user interface, and other tools. As a viable scripting tool with libraries like common scripting languages, it can be used for scripting the Unix shell. It can parse command line arguments and execute external tools."
@@ -362,6 +373,8 @@ Smalltalk
 
 
 ## scripting langs
+see scripting-languages.txt
+
 https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_scripting_in_2023_decision/
   - i asked in /r/AskProgramming
 
@@ -539,11 +552,34 @@ there's too many in this area
 
 
 Go (golang)
-  - seems to be targeted for web back-end services
-  - also works really well for performant, easy-to-read/easy-to-maintain cli programs
-  - **it's simple language feature-set makes it rather useless for my needs: frameworks to make games, web-apps, cross-platform gui apps**
+  - seems to be targeted for web back-end "micro-services"
+  - perfect for performant, easy-to-read/maintain small programs, especially cli
+    - **it's simple language feature-set makes it rather useless for my needs: frameworks to make games, web-apps, cross-platform gui apps**
   - https://github.com/rromulos/command-vault/blob/master/cmdvault/cmd/main.go
     - a good example of a simple cli app
+  - https://www.reddit.com/r/golang/comments/14vvwon/when_would_you_not_recommend_go_over_rust/
+    - "The tooling ecosystem for Go is really good. Debugging in Delve is way simpler than debugging in Rust. The compiler is so insanely fast that it might as well be an interpreter."
+    - "number one killer feature is goroutines. They're incredibly simple to use and the runtime does an excellent job multiplexes work across coroutines and threads. It allows easily scaling concurrent workloads."
+    - "Simplicity as a feature. Go is so simple that I find it really easy to elevate my thinking from the language or small-scale problem up to architectural concerns. Because I spend more time with my head in this place, I often find I end up with better overarching solutions. The unique niche of simple, high-level, but not obscuring the implementation details often makes my architectures even better than Python or Javascript."
+    - "On Rust's side, the number one killer feature is correctness. Go has nil panics, goroutines stomping on shared memory, etc. In Go, you still have to program defensively, similar (but not nearly as bad) as writing good Python code. With error return values and being such a simple language this quickly becomes second nature, but it's still unnecessary cognitive load."
+    - "As as making the right choice for yourself, unless GC matters, personally, I'd start with Go, just because it's going to be incredibly easy to pick up for a Python dev, and immediately brings a lot to the table. Once you write some Go and start bumping up against the dark corners (every language has these), you'll develop an appreciation for why you might want Rust and have a better sense of if and when the learning investment is worth it for you."
+
+TODO: merge with above
+Go
+  - specialized for procedural programming
+  - compiled python, or a high-level C, intended to replace python in high-performance areas
+  - simple, zen-focused programming
+    - no advanced features (generics, macros, etc.)
+  - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
+  - **at the speed of C too! :o**
+  - **no object-oriented features**, and not meant to be
+    - this kills it for games
+  - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
+  - simple, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it far less appealing for hobbyists (that like *natural* languages) and game-makers (that like lots of features and object-oriented paradigm)
+  - compiles/builds to a 2MB+ executable binary which contains the runtime (including the garbage collector), which can be configured to be cut down further
+  - feels very scripty (in syntax)! no static/explicit declarations?
+  - noted for bringing it's concurrency features to the mainstream
+  - Google, but open-source
 
 
 Dart
@@ -561,8 +597,8 @@ Dart
   - Google
     - Google cannot but trusted for their products, but their programming languages seem to do alright! Perhaps the best poison of the four giants.
 
-**Crystal**
-  - better, smaller community
+Crystal
+  - **community seems to go against ruby's community as opposed to supporting it by enabling access to it's libraries**
   - **no MS Windows support**
   - like a compiled and static-typed ruby, along with being *much* faster, in fact, **at C++ speeds!?!?** :o :O
   - syntax and style *very very* similar to ruby, like 75% similar just as scripty-feeling as ruby too!!: no main function needed
@@ -626,6 +662,7 @@ Nim
   - a great and excited community
   - composition > inheritance
   - Go's concurrency/threading features
+  - "Where Go shines in simplicity, Rust shines in expressiveness. Rust's type system is far ahead of Go's, which allows for a workflow where you model your data almost before the implementation details. Code is often more concise. The dark side of this is that if you're not disciplined, concise can end up obfuscated. Even Python and JS are like this; consider list comprehensions embedded in more list comprehensions vs iterative loops. Sometimes I find myself doing things the Go way in Rust, because it's more readable. This is an option in Rust, but not the other way around."
   - brace-delimited style
   - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression…  
   - **people seem to really quite like this one**, many new game-frameworks are made with this, and it makes sense, as it has the right features for it
@@ -734,7 +771,7 @@ C
 **Rust**
   - Jon Blow's take
     - https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
-      - the ownership model: "compile-time enforced permissions model that determine what you can and can't do with various pieces of memory", and thus by nature is overly restrictive. There are somethings that you could do that are correct that it won't let you do, because it can't prove they're correct... you have to fight the borrow checker, and it's very frustrating, but it's good because it pushes you into patterns that are better anyway
+      - on the ownership model: "compile-time enforced permissions model that determine what you can and can't do with various pieces of memory", and thus by nature is overly restrictive. There are somethings that you could do that are correct that it won't let you do, because it can't prove they're correct... you have to fight the borrow checker, and it's very frustrating, but it's good because it pushes you into patterns that are better anyway
   - **like C/C++ but safe--no run-time errors(!?!?)**, **no garbage collector**, instead, using a specific memory management system, wherein you still have fine control of memory but it's easier(?) and guaranteed to be safe. you *must* learn and use this system to handle the memory yourself (just as you must learn Obj-C's reference counting, or C++'s pointers and smart pointers), thus if ever there's a problem with a garbage collector you'll either write that portion of code in C/C++ or just end up re-writing the whole thing with Rust
     - all of that of course comes with the cost of a slower development time (or at least having to be way more careful)
     - mutability: https://doc.rust-lang.org/std/keyword.mut.html, https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/mutability.html
@@ -777,7 +814,7 @@ F# for functional .NET, general-use
 Haskell for math, language
 
 
-**Elixer**
+**Elixir**
   - **the most practical functional language**
   - "you must remember, that it looks like Ruby, but it’s not Ruby at all”, said the creator of the language
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
@@ -810,6 +847,29 @@ Haskell for math, language
   - the switch/pattern matching is amazing, as it allows function arguments to magically work with it automatically (sorta like the opposite of how all functions return stuff)
   - either invented or first major use of static type with type-inferring compiler, and thus all dialects benefit it
 
+TODO: merge with above
+**OCaml**
+  - also god-like, 19loc
+  - functional, imperative, and object-oriented
+    - can mix 'n match functional and imperative programming, and reap the benefits of both
+  - functional
+    - immutable vars by default (final keyword in other langs), good compiler warnings against mutable things
+  - pattern matching feature ensures all control paths are complete via compiler warnings, and a great type system (strong yet inferred) that also helps with compiler warnings
+  - http://roscidus.com/blog/blog/2014/02/13/ocaml-what-you-gain/
+    - polymorphic variants, ADTs, cycle-free dependencies, immutable data structures...
+
+  - amongst the most practical of functional langs, used for compilers
+  - https://caml.inria.fr/pub/docs/oreilly-book/html/index.html
+  - https://www.reddit.com/r/ocaml/comments/12no1vq/what_makes_ocaml_good_for_programming_language/
+    - having pattern matching and immutability by default makes it easier to write software that operates on tree structures (ASTs, some IRs, etc). you can just write a particular compiler pass as a function that takes in a tree and outputs a new tree.
+
+    compared to writing it in another language like Java or CPP, there's much less boilerplate, no need to deal with things like visitor pattern, copying nodes around and worrying about mutation, etc.
+    - What hasn't been said in other comments is its rich type system. If you want to represent an AST of your language in a type-safe way, that is, in such a way to write the eval function without resorting to errors or exceptions, you have the right tool for that in OCaml: Generalized Algebraic Data Types (GADTs). Haskell also has official support for GADTs via a compiler extension.
+
+    (By the way, if the object language is more expressive than the metalanguage, this beautiful trick stops working. One example is dependent types, which are irrepresentable as an OCaml data type.)
+
+erlang
+  - python-esque tab-delimited? no keyword or brace to signify end.
 
 
 F#
@@ -936,48 +996,10 @@ https://www.quora.com/Is-learning-the-Phoenix-web-framework-easier-for-experienc
   - a great answer about thinking in the way of Elixir is *simpler*
 
 
-**OCaml**
-  - also god-like, 19loc
-  - functional, imperative, and object-oriented
-    - can mix 'n match functional and imperative programming, and reap the benefits of both
-  - functional
-    - immutable vars by default (final keyword in other langs), good compiler warnings against mutable things
-  - pattern matching feature ensures all control paths are complete via compiler warnings, and a great type system (strong yet inferred) that also helps with compiler warnings
-  - http://roscidus.com/blog/blog/2014/02/13/ocaml-what-you-gain/
-    - polymorphic variants, ADTs, cycle-free dependencies, immutable data structures...
-
-  - amongst the most practical of functional langs, used for compilers
-  - https://caml.inria.fr/pub/docs/oreilly-book/html/index.html
-  - https://www.reddit.com/r/ocaml/comments/12no1vq/what_makes_ocaml_good_for_programming_language/
-    - having pattern matching and immutability by default makes it easier to write software that operates on tree structures (ASTs, some IRs, etc). you can just write a particular compiler pass as a function that takes in a tree and outputs a new tree.
-
-    compared to writing it in another language like Java or CPP, there's much less boilerplate, no need to deal with things like visitor pattern, copying nodes around and worrying about mutation, etc.
-    - What hasn't been said in other comments is its rich type system. If you want to represent an AST of your language in a type-safe way, that is, in such a way to write the eval function without resorting to errors or exceptions, you have the right tool for that in OCaml: Generalized Algebraic Data Types (GADTs). Haskell also has official support for GADTs via a compiler extension.
-
-    (By the way, if the object language is more expressive than the metalanguage, this beautiful trick stops working. One example is dependent types, which are irrepresentable as an OCaml data type.)
-
-erlang
-  - python-esque tab-delimited? no keyword or brace to signify end.
 
 
 
 
-
-### server-side specialization (concurrency)
-Go
-  - compiled python, or a high-level C, intended to replace python in high-performance areas
-  - simple, zen-focused programming
-    - no advanced features (generics, macros, etc.)
-  - seems to be like a contemporary C, but with a garbage collector, yet you can still use pointers 'n references, it's just "safer"
-  - **at the speed of C too! :o**
-  - **no object-oriented features**, and not meant to be
-    - this kills it for games
-  - used by a ton of huge web companies, thanks to it's built-in concurrency (goroutines), making it very good for web APIs
-  - simple, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it far less appealing for hobbyists (that like *natural* languages) and game-makers (that like lots of features and object-oriented paradigm)
-  - compiles/builds to a 2MB+ executable binary which contains the runtime (including the garbage collector), which can be configured to be cut down further
-  - feels very scripty (in syntax)! no static/explicit declarations?
-  - noted for bringing it's concurrency features to the mainstream
-  - Google, but open-source
 
 
 
@@ -1224,30 +1246,31 @@ chatgpt, github copilot, vs studio intellisense
 # language compilation/interpretation speed
 just a very very very broad gut feeling, lol
 
-tier 1 (manual memory management):
+tier 1
+  - usually manual memory management
   - compiles to native machine code
 **Rust** (borrow-checker)
 C++
 C
-Go (manual?)
-Chapel (manual?)
+Go (GC)
+Chapel (??)
 
-tier 2 (garbage collected) for me! :)
+tier 2 
+  - usually garbage-collected
   - these are somehow comparable to the speeds of the non-gc languages... :o
-**Haxe**
+**Crystal** (llvm)
+**Haxe** (via transpiled c or c++)
   - not in the benchmark, and not sure where this goes.. but when compiled to C, it's probably very fast  
-**Crystal**
-  - Ruby syntax but with LLVM power!
-Java
+Java (fastest VM)
 **Dart**
 Kotlin
-Swift (manual? reference counting)
+Swift (llvm and/or reference-counting obj-c)
 
 tier 2:
   - usually bytecode/vm
 Scala
 C#
-Nim
+Nim (llvm)
 Lua (LuaJIT -j)
   - the interpreter that set the standard
 
@@ -1304,7 +1327,6 @@ Zeta has written: a game engine on top of Robert's Kinc lib, and is now writing 
 
 Java is bad
 C# is like Java owned but by Microsoft, and thus doubly bad
-
 C is good
 Haxe is very good
 Rust is great
