@@ -24,6 +24,7 @@
 
 
 # issues
+# TODO: i broke terminal copy/paste (a-c/v)
 # why paste is slow:
 # https://github.com/helix-editor/helix/issues/1021#issuecomment-963353157
 #  - as a work-around, it literally types one character at a time
@@ -36,14 +37,33 @@ theme = "boo berry" # a better version of the 'default' theme
 
 # re-map some keys
 # NOTE: only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful'
-# NOTE: use no_op for unmapped keys, to be explicit and know what isn't mapped
+#       though, it's okay to add multiple key-maps of the same action, as there are multiple conventions in my head
+# NOTE: use no_op for unmapped keys to be explicit and know what isn't mapped
 
 # https://docs.helix-editor.com/keymap.html
 # https://docs.helix-editor.com/remapping.html
 
+# repo files:
+# helix-term/src/keymap/default.rs # change the default key-map
+# src/commands.rs # add commands to the app here!
+
+# my conventions:
+# alt (and alt+shift) is reserved for terminal/tmux commands
+#   - (by default, windows terminal used control+shift)
+#   - might change once i begin using a tmux (zellij)
+# **function key is currently un-mapped**
+# control is the main modifier key to use
+# control+shift is often used to denote the opposite action as control+key
+# control+alt+shift is used in situtations where control+shift is used for a main action, and adding alt does an alt action
+# shift also symbolizes extending highlight/selection
+# caps-lock is re-mapped to escape on the OS-level
+# right-control and right-alt are unused
+
+
 
 [keys.normal]
 # common windows OS shortcuts
+# TODO: maybe can use alt for :commands
 C-s = ":write" # default was save_selection (to jump-list)
 C-q = ":quit" # TODO: or quit-all
 C-A-q = ":quit!" # quit-all!
@@ -79,6 +99,11 @@ ret = ["move_line_down", "goto_first_nonwhitespace"] # unmapped by default
 B = "extend_prev_word_start" # or long_word
 W = "extend_next_word_start"
 E = "extend_next_word_end"
+# defaults
+# "W" => move_next_long_word_start
+# "B" => move_prev_long_word_start
+# "E" => move_next_long_word_end
+
 # JK select to next/previous line isn't practical so the defaults are different:
 # TODO: maybe add/remove line
 # J = "insert_newline_below" # or add_newline_above/below; goes against modal philosophy, should add in insert-mode
@@ -98,15 +123,17 @@ C-b = "no_op" # "page_up" # in z/view
 # "C-o" = "jump_backward"
 
 
-# TODO: C+hjkl vs default g, hjkl
-C-j = "page_down" # C-f, C-d TODO: ["page_down", "goto_window_center"]
-C-k = "page_up" # C-b, C-u
-C-h = "goto_first_nonwhitespace" # gh
-C-l = "goto_line_end" # gl; NOTE: uses a common key-map for alter line (from emacs?)
-# TODO: goto_line_end doesn't work with v-selection?? :/
+# TODO: C+hjkl vs default g, hjkl; this would save the most used set of modified keys
+# NOTE: these don't highlight by default
+C-j = "page_down" # C-f, C-d; NOTE: goto_window_top by default
+C-k = ["page_up", "goto_window_top"] # C-b, C-u
+C-h = "goto_line_start" # gh # NOTE: does not select by default, use H/L key-maps
+C-l = "goto_line_end"  # gl;
 # C-h = "move_prev_word_end"
 # C-l = "move_next_word_start"
 
+# NOTE: these do select/highlight by default
+#       and i like that it selects
 "C-[" = "goto_prev_paragraph"
 "C-]" = "goto_next_paragraph"
 
@@ -147,7 +174,7 @@ C-S-w = ":buffer-close"
 # C-S-A-l = ":buffer-close!"
 C-S-n = ":new"
 
-C-S-f = "file_picker_in_current_buffer_directory"
+C-S-f = "file_picker_in_current_buffer_directory" # alt-f used for terminal find # TODO: add alt+/ key-map for terminal find
 C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_picker_in_current_directory)?
 
 
@@ -252,9 +279,13 @@ C-S-backspace = "delete_word_forward"
 C-left = "move_prev_word_start"
 C-right = "move_next_word_end"
 
+
 [keys.select]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # keep selection by default
 
+# TODO: is there a way to use normal shortcuts? function key?
+h = "extend_to_first_nonwhitespace"
+l = "extend_to_line_end"
 
 
 # pop-up menus
@@ -264,6 +295,8 @@ q = ":buffer-close" # or x or d
 Q = ":buffer-close!"
 
 [keys.normal.g]
+j = "page_down" # strangely simply move up/down one line by default TODO: change in repo
+k = ["page_up", "goto_window_top"]
 q = ":buffer-close" # goto pop-up menu has buffer next and previous, but no close or new
 Q = ":buffer-close!"
 
