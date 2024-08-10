@@ -17,7 +17,7 @@
 
 # TODO: prioritize scoop > winget (i think chocolatey is deprecated)
 
-$apps_to_try =  @( # array
+$apps_to_try =  @{ # hash-table
     # TODO: try in windows sandbox/sandboxie
 
     # TODO: move taskbar to the side
@@ -31,22 +31,23 @@ $apps_to_try =  @( # array
     # https://github.com/hlaueriksson/awesome-powertoys-run-plugins
     #  - everything plugin for powertoys run
 
-    "SublimeHQ.SublimeText", # TODO: --include-unknown
+    gui_text_editor = "SublimeHQ.SublimeText" # TODO: --include-unknown
 
-    "SomePythonThings.WingetUIStore",
-    "GitHub.GitHubDesktop", # love it for commit, until i try lazygit 'n magit..
-    "Microsoft.PCManager",
+    winget_ui = "SomePythonThings.WingetUIStore"
+    pc_manager = "Microsoft.PCManager"
 
     # dendron is a vs-code extension
-    "Obsidian.Obsidian",
+    obsidian = "Obsidian.Obsidian"
     #"Logseq.Logseq",
     #"Joplin.Joplin",
 
-    "appmakes.Typora"
-)
+    writing_text_editor = "appmakes.Typora"
+}
 
+
+# TODO: combine the following two data structures into a single hash-table named $apps
 # winget app ids
-$app_ids = @{ # hash-table; enum won't work, and psobject seems like a hassle
+$apps = @{ # hash-table; enum won't work, and psobject seems like a hassle
 
     # windows 11 pro?
     # only adds features aimed at businesses except for these important ones:
@@ -129,6 +130,7 @@ $app_ids = @{ # hash-table; enum won't work, and psobject seems like a hassle
     #vscode = "Microsoft.VisualStudioCode",
     vscode = "VSCodium.VSCodium" # works the same!, just extensions rely on people  adding them to a list
     git = "Git.Git" #winget install --id Git.Git -e --source winget # TODO: whatjs the -e flag?
+    github = "GitHub.GitHubDesktop" # love it for commit, until i try lazygit 'n magit..
     lazygit = "JesseDuffield.lazygit" # TODO vs tig vs magit
     # tig comes installed with 'git for windows' bundle
     #  - it also includes "git credential manager"
@@ -145,66 +147,6 @@ $app_ids = @{ # hash-table; enum won't work, and psobject seems like a hassle
 # used by scoop, but can work for winget too
 $app_names = @(
 
-# cli-apps (the best of linux, on windows! :) )
-# aim for contemporary binary replacements (rust/go/zig/etc.)
-
-# copied from setup-linux.sh:
-# TODO: try installing the ones i had on linux
-# core shell apps
-
-# fzf
-# holy shit, search entire OS with this!
-# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-# ~/.fzf/install
-# note: i have this exact two lines included in the nvim plug-in manager too
-# prompts:
-# autocomplete? yes
-# bindings? TODO
-# shell integration? nah (adds to .bashrc and some fish config file
-
-# file directory navigator
-# TODO: try them all!
-    "yazi", # vs lf (my previous app) vs nnn vs mc (classic)
-    #  - looks great upon first try!
-    # broot # a different way
-
-# replacement basic commands
-# TODO: not sure if these work for powershell
-    "eza", # ls; try lsd
-    "bat", # cat
-
-# replacement utilities
-# https://news.ycombinator.com/item?id=26561211
-# https://wiki.archlinux.org/title/core_utilities#Alternatives
-  # - great list
-    "ripgrep",
-# sudo pacman -S ripgrep # grep & ack
-# TODO: try fzf+ripgrep
-# https://github.com/junegunn/fzf#3-interactive-ripgrep-integration
-    "fd",
-# sudo pacman -S fd # find & parallel, fd-find package in debian
-# zoxide > cd
-    "delta", # diff
-# sudo pacman -S delta # diff
-# xh > curl & httpie
-# sudo pacman -S sd # sed
-
-# dust or ncdu > du
-    "dust", # ncdu > du; great for finding what's taking up disk space
-
-# procs > ps
-# bottom > top
-
-
-
-# essentials
-# simple community-sourced help for most commands, super practical
-    "tldr",
-# sudo pacman -S tldr # man
-# one time, it didn't update the dictionary upon install, so...
-# tldr -u
-
-
     # dev
     "erlang", # dependency for elixir
     "elixir", # web/phoenix
@@ -212,41 +154,108 @@ $app_names = @(
     # "ruby", # scripting, libs
     # go # ? # simpler alt to haxe
     # MSYS2 vs WSL
+
+
+
+    # cli-apps (the best of linux, on windows! :) )
+    # aim for contemporary binary replacements (rust/go/zig/etc.)
+
+    # copied from setup-linux.sh:
+    # TODO: try installing the ones i had on linux
+    # core shell apps
+
+    # essentials
+    # simple community-sourced help for most commands, super practical
+        "tldr",
+    # sudo pacman -S tldr # man
+    # one time, it didn't update the dictionary upon install, so...
+    # tldr -u
+
+    # fzf
+    # holy shit, search entire OS with this!
+    # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    # ~/.fzf/install
+    # note: i have this exact two lines included in the nvim plug-in manager too
+    # prompts:
+    # autocomplete? yes
+    # bindings? TODO
+    # shell integration? nah (adds to .bashrc and some fish config file
+
+    # file directory navigator
+    # TODO: try them all!
+        "yazi", # vs lf (my previous app) vs nnn vs mc (classic)
+        #  - looks great upon first try!
+        # broot # a different way
+
+    # replacement basic commands
+    # TODO: not sure if these work for powershell
+        "eza", # ls; try lsd
+        "bat", # cat
+
+    # replacement utilities
+    # https://news.ycombinator.com/item?id=26561211
+    # https://wiki.archlinux.org/title/core_utilities#Alternatives
+    # - great list
+        "ripgrep",
+    # sudo pacman -S ripgrep # grep & ack
+    # TODO: try fzf+ripgrep
+    # https://github.com/junegunn/fzf#3-interactive-ripgrep-integration
+        "fd",
+    # sudo pacman -S fd # find & parallel, fd-find package in debian
+    # zoxide > cd
+        "delta", # diff
+    # sudo pacman -S delta # diff
+    # xh > curl & httpie
+    # sudo pacman -S sd # sed
+
+    # dust or ncdu > du
+        "dust" # ncdu > du; great for finding what's taking up disk space
+
+    # procs > ps
+    # bottom > top
 )
 
-# use: install_app_by_id($app_ids.shell)
-# NOTE: uses winget
+
+# use: install_app_by_id($apps.shell)
+# NOTE: uses winget at the moment
 function install_app_by_id($id) { # restriction: '-' is a special char for powershell commands
-    $output = winget install --id $id --source winget # store string to avoid command substitution
-    # without id, i think it will search by name by default and run into multiple choices/sources
+    # $output =
+    winget install --id $id --source winget
+    # without --id, i think it will search by name by default and run into multiple choices/sources
     # with --source winget, can consistently upgrade all apps via "winget --upgrade" instead of the windows store
 
     # if package exists, do nothing
-
-    # if no id, use name/string to search for package and install
-    if ($output -match "No package found matching input criteria." ) {
-        winget install --name $id --source winget
-
-        # if multiple packages exist, do nothing
-    }
-
-
 }
 
 # use: install_app_by_name($app_names.haxe)
 # NOTE: uses scoop at the moment
-function install_app_by_name($name) { # no function parameter overloading
-    scoop install $name
+function install_app_by_name($name, $package_manager) {
+    # $package_manager install $name # no string interpolation when running commands directly
+    $cmd = "$package_manager install $name"
+    # winget and scoop happen to have the same options here
+    # winget happens to use name over id by default
+    # NOTE: winget install by name can run into multiple packages problem
+    #       it should provide options and not install anything
+    invoke-expression($cmd)
+}
+
+# main function
+# NOTE: uses scoop by default for name values
+function install_app([string]$name_or_id, [string]$package_manager = "scoop") {
+    $is_id = $name_or_id.contains('.')
+
+    if ($is_id) {
+        install_app_by_id($name_or_id) # (winget)
+    }
+    else {
+        install_app_by_name($name_or_id, $package_manager)
+    }
 }
 
 # main script
-function install_all_apps($app_ids, $app_names) { # todo: is this casting a dynamic var?
-    foreach ($app in $app_ids) {
-        install_app_by_id($app); # app.ToString() by default
-    }
-
-    foreach ($app in $app_names) {
-        install_app_by_name($app)
+# probably won't ever use tho..
+function install_all_apps($apps, $app_names) {
+    foreach ($app in $apps) {
+        install_app($app) # app.ToString() by default
     }
 }
-

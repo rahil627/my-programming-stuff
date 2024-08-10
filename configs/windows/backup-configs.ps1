@@ -13,3 +13,5 @@ $my_configs_path = $my_paths['configs']
 cp $config_paths['terminal'] "$my_configs_path\terminal"
 cp $config_paths['text_editor'] "$my_configs_path\helix"
 
+code --list-extensions > "$my_configs_path\vscodium\extensions-list.txt"
+
