@@ -1,8 +1,6 @@
 # windows 11
 
-# also doubles as a test for powershell language (vs ruby)
-
-# TODO: see setup-linux.sh
+# also doubles as a test for powershell language (vs ruby for shell scripting)
 
 # put this script into memory
 # (automatically exports/imports functions to current session of powershell)
@@ -11,8 +9,6 @@
 # import-module .\setup-windows.psm1
 # then you can run any function
 # typing $apps in powershell will cleanly print-out the object
-
-
 
 
 # clean install windows 11
@@ -36,22 +32,14 @@
 # - windows dotfiles, well-organized--windows style!
 
 
-# TODO: download and install winget package manager
-# https://github.com/microsoft/winget-cli/releases/latest
-# TODO: copy/pasta a script to install it
-# TODO: dunno about chocolatey 'n other package managers...
-
-
 # app sources
 # https://github.com/PSGitHubUser1/Windows-Essentials-Apps-Installer/blob/main/wea-v1.3/weai/wea_installer_v1.3_RUN-AS-ADMIN.cmd
 
-# instead of writing a script, put things into objects
-# then can run it interactively
-
-# note: decided to put backup code next to setup code
+# instead of writing a script, put things into objects 'n functions
+# then can run it interactively via cli as a "module"
 
 # uninstall apps / debloat
-import-module .\uninstall-windows-bloatware.psm1
+import-module .\remove-windows-bloatware.psm1
 
 # install apps
 import-module .\install-apps.psm1
@@ -96,6 +84,12 @@ function install_winget {
     }
 }
 
+function install_scoop {
+    # TODO: just ripped from ai, don't remember how i installed it!
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+}
+
 # powershell -executionpolicy bypass
 
 function onedrive_is_on? {
@@ -133,12 +127,10 @@ function setup_shell {
 
 function load_configs {
     # NOTE: requires running setup_shell first to get session vars for config paths
-    # TODO: unimpl
+    Write-Warning "load_configs is unimplemented!" # TODO
 }
 
 function setup_git {
-    install_app($apps.git)
-
 # TODO
 # reload path vs start a new session andd pass the rest of the commands in
 # function reload path
@@ -150,7 +142,6 @@ function setup_git {
 }
 
 function setup_browser {
-    install_app($apps.browser)
     # copy ungoogled chromium settings?
     #  - hopefully windows backup / appdata saves this
     #   - https://superuser.com/questions/149032/where-is-the-chrome-settings-file
@@ -176,8 +167,6 @@ function setup_browser {
 }
 
 function setup_vscode {
-    install_app($apps.vscode)
-
     # must manually setup git/github with oauth?
     #   - go to source control view
     #   - clone repo
@@ -185,6 +174,23 @@ function setup_vscode {
     #   - go through the process of github oauth
 
     get-content extensions.list |ForEach-Object { code --install-extension $_}
+}
+
+function setup_all_apps {
+    setup_git
+    setup_browser
+    setup_vscode
+}
+
+# main script
+function setup_windows {
+    remove_all_bloatware
+    install_winget
+    install_scoop
+    setup_shell
+    load_configs # requires setting up shell vars first (in setup_shell)
+    install_all_apps # from .\install-apps
+    setup_all_apps
 }
 
 # by default all functions and aliases are exported into current session of powershell

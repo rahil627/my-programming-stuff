@@ -23,9 +23,9 @@ $bloatware = @{
     # snipping tool (though it should be a powertoy)
 
     # non-microsoft bloat
-    
+
     # - vendor-specific
-    # acer 
+    # acer
 
     # microsoft bloat
     #edge # can't uninstall (neatly) :(
@@ -58,5 +58,6 @@ function uninstall_apps($apps) {
 # main script
 function remove-all-bloatware() {
     uninstall_apps($bloatware)
+    # may remove other stuff beyond mere uninstalling apps
 }
 

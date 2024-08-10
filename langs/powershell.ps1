@@ -73,6 +73,9 @@ function install_app2() {
     )
 }
 
+function simple { } # () is optional
+simple # () is optional??, ruby-esque!
+
 
 # put this at the end of a "module" (.psm1)
 export-modulemember -function * -alias * -variable *
