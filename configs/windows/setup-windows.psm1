@@ -1,7 +1,5 @@
 # windows 11
 
-# don't need this so much since windows store is the ui for this??
-
 # also doubles as a test for powershell language (vs ruby)
 
 # TODO: see setup-linux.sh
@@ -34,6 +32,8 @@
 #  - TODO: can try to mix linux and windows, getting the best of both worlds
 # https://gist.github.com/Code-Quake/ff3e25da5f7585a803e2d757bb2c3aac
 #  - this one looks good
+# https://github.com/jayharris/dotfiles-windows
+# - windows dotfiles, well-organized--windows style!
 
 
 # TODO: download and install winget package manager
@@ -98,11 +98,6 @@ function install_winget {
 
 # powershell -executionpolicy bypass
 
-function backup_terminal_settings {
-    $filepath = $home+"\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-    copy-item $filepath .
-}
-
 function onedrive_is_on? {
     $onedriveProcess = Get-Process -Name "OneDrive" -ErrorAction SilentlyContinue
     return ($onedriveProcess -ne $null)
@@ -121,15 +116,24 @@ function setup_shell {
     # todo: catch error then try
     #Invoke-Expression -C "Update-Help -Verbose -Force -ErrorAction SilentlyContinue"
 
-    # copy $profile
+    # copy shell config
     if (!onedrive_is_on?) { # copies to C:\Users\ra\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
         copy-item .\powershell\Microsoft.PowerShell_profile.ps1 $profile
+        # NOTE: contains session vars for common paths and config paths
+
+        # reload shell config
+        . $profile
     }
     # TODO: save/load settings file?
     # copy-item windows-dotfiles/powershell/settings.json -destination C:\Users\rahil\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
     #  - the theme is contained in the settings file under schema
     #  - note: not sure what will happen with a font that's not installed..
     # TODO: what does windows backup save?
+}
+
+function load_configs {
+    # NOTE: requires running setup_shell first to get session vars for config paths
+    # TODO: unimpl
 }
 
 function setup_git {
@@ -171,13 +175,8 @@ function setup_browser {
     # uBlock origin
 }
 
-function backup_vscode {
-    # just use settings -> settings sync
-    code --list-extensions > extensions-list.txt
-}
-
 function setup_vscode {
-    install_app($vscode)
+    install_app($apps.vscode)
 
     # must manually setup git/github with oauth?
     #   - go to source control view
@@ -187,8 +186,6 @@ function setup_vscode {
 
     get-content extensions.list |ForEach-Object { code --install-extension $_}
 }
-
-
 
 # by default all functions and aliases are exported into current session of powershell
 #Export-ModuleMember -Function install-everything
