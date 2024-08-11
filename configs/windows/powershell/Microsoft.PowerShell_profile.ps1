@@ -11,7 +11,6 @@
 # then, back it up (when it's working properly)
 # cp $profile C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\powershell\
 
-# there's no need for making a module,
 # functions here magically become commands
 
 # an example from about_profiles from help/docs
@@ -22,6 +21,68 @@ function Get-CmdletAlias ($cmdletname) {
 }
 
 # begin
+
+
+# TODO: WARNING: doesn't work, scoping issues
+# TODO: read about_scoping
+# maybe best to create a module and import it, as it will "load to the root-level global scope of the runspace by default"
+# use 'set-alias -scope global' # temp way
+function load_aliases {
+
+  # TODO: slowly merge the rest from my old fish config
+
+  # TODO: alt shortcuts for most commonly-used commands?
+  # fzf
+  # text-editor
+  
+  # basics
+  set-alias l ls
+  set-alias h help # TODO: still need tldr?
+
+  # apps
+  
+  set-alias shell pwsh
+  
+  set-alias -scope global f yazi_cd # NOTE: yazi_cd is a function
+  set-alias -scope global yazi yazi_cd
+  # abbr -a f 'lf'
+  # abbr -a f 'lfcd' # also c+f binding; NOTE: requires lfcd function
+  # WARNING: lfcd doesn't show autocomplete/autosuggest of lf flags
+
+  set-alias t hx
+  set-alias helix hx
+  # set-alias e 'doom run' # emacs
+  # set-alias emacs 'doom run' # works without this
+
+  # TODO: merging from my old fish session start-up script
+  #       just add as needed
+  
+  # contemporary replacements
+
+  # -i   --ignore-case
+  # TODO: try using select-string instead
+  # set-alias rg 'rg -i' # -> grep # note: ripgrep defaults might affect everything that uses it (fzf, nvim, etc.)
+  # set-alias rgh 'rg -i --hidden' # --no-ignore-dot ??, also the -i is duplicated to no ill effect
+  # set-alias ripgrep 'rg -i' # rg is the actual command for the ripgrep package
+  
+  # set-alias f 'fd' # -> find; currently f = file manager
+  
+  # set-alias d 'delta' # -> diff
+
+
+  # set-alias ai 'tgpt' # openai's chatGPT
+  # set-alias chatgpt 'tgpt'
+
+
+  # dev
+  # set-alias hx 'haxe' # used by helix :(
+  set-alias rb 'ruby'
+  # set-alias cr 'crystal'
+  set-alias ex 'elixir'
+
+}
+
+
 
 # naming convention
 # $my_ prefix
@@ -65,7 +126,7 @@ text_editor = "$home\AppData\Roaming\helix\config.toml"
 # end
 
 # have yazi (file manager) change directory (cd) upon exit
-function f {
+function yazi_cd {
   $tmp = [System.IO.Path]::GetTempFileName()
   yazi $args --cwd-file="$tmp"
   $cwd = Get-Content -Path $tmp
@@ -74,6 +135,21 @@ function f {
   }
   Remove-Item -Path $tmp
 }
+
+
+
+
+
+
+# main script
+load_aliases
+# load_paths # TODO: if you put it in a function, then liekly have to use '-scope global' flag
+
+
+
+
+
+
 
 
 # powershell comes with a bunch of aliases for linux users
