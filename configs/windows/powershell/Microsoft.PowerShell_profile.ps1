@@ -64,6 +64,17 @@ text_editor = "$home\AppData\Roaming\helix\config.toml"
 
 # end
 
+# have yazi (file manager) change directory (cd) upon exit
+function f {
+  $tmp = [System.IO.Path]::GetTempFileName()
+  yazi $args --cwd-file="$tmp"
+  $cwd = Get-Content -Path $tmp
+  if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
+      Set-Location -LiteralPath $cwd
+  }
+  Remove-Item -Path $tmp
+}
+
 
 # powershell comes with a bunch of aliases for linux users
 # Get-Alias | select name, definition
