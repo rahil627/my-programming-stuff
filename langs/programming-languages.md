@@ -48,11 +48,11 @@ languages sorted by their use cases
   - personal basic shell functions/"modules"/"cmdlets" (powershell > fish; *fish script is now completely useless!*)
   - automation, especially for windows
   - bigger scripts
-    - powershell is powerful enough to do just about anything, thanks to it's access to the .net framework
+    - powershell is powerful enough to do just about anything, and thanks to it's access to the .net framework, it actually can do anything
   - powershell is now cross-platform (since v7?)
 **ruby**
-  - **great for quick, simple everyday small scripting to pretty large size projects** thanks to it's **great battle-tested modular libs**
-    - runs as simply as a shell script, no main class or anything needed
+  - **great for quick, simple, everyday small scripting to pretty large size projects** thanks to it's **great battle-tested modular libs** (that's the benefit of old, popular languages)
+    - runs as simply as a shell script, no main class or anything needed, and looks beautiful too!
   - **great simple-and-quick-to-get-started/prototype frameworks 'n libs: web-app (back-end), cli? (not portable), (not gui-apps?), automation, devops, hacking**
     - community pioneered frameworks and products for hacking (metasploit), sysadmin/automation (chef config management, jenkins ci, etc.), rake
     - **jekyll (github pages) for static web site**
@@ -80,18 +80,19 @@ languages sorted by their use cases
   - able to contribute to a tiny game-oriented community (haxe, jai)
   
 ## special cases:
+javascript (and typescript?)
+  - the standard browser language
+    - can't run from it, though i can keep trying!
+  - i'm told it's much much better than it used to be
 go
   - **zen systems programming**
     - **a great way to get back into programming, and getting shit done, without being overwhelmed by features (haxe, ruby, 'n especially rust all suffer from this in their own way)**
       - though, i still prefer haxe.. and haxe's little community <3
-  - very limited in use-cases: small, portable programs ("micro-services") often in web back-end and cli-apps
+  - very very limited in use-cases: small, portable programs ("micro-services") often in web back-end and cli-apps
     - no games, no ui apps?, etc.
   - "Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."
   - concurrency
   - quick building binaries
-javascript (and typescript)
-  - the standard browser language
-    - can't run from it, though i can keep trying!
 **elixir**
   - **has the current best scalable and easily-maintainable web framework: phoenix**
     - suitable for both small web apps (roda) and massive web apps (rails)
@@ -107,11 +108,12 @@ haxe
       - tier 1: **js**, hashlink (bytecode/**c**), eval (interpreter), jvm (bytecode), php7
       - tier 2: **c++**, lua
   - suffers from lack of community/libraries, though it is amongst the longest living contemporary languages and constantly updated and improving, with a very solid std lib like go
-**jai** > rust > C++
+**jai** > **rust** > C++
   - low-level, memory management
   - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!). But, it's not an end-all solution to memory-management, especially in the case for games
     - **skip rust, and wait for jai**
   - "Rust is a kitchen-sink language that can do anything well if you're willing to put in the time to learn how to control it."
+  - anything is better than C++!
 **zig** > odin > **C**
   - low-low-level (not for me!)
   - best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
@@ -814,12 +816,13 @@ Haskell for math, language
   - "you must remember, that it looks like Ruby, but it’s not Ruby at all”, said the creator of the language
   - "Elixir is a dynamic, **functional** language for building scalable and maintainable applications." says it's home-page
     - proably not the most performance-oriented (for native apps), but it being new, it has much better concurrency, and the VM ensures it's much faster and safer/"fault-tolerant" than python/ruby!
-  - again, very Ruby-eque, but really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
-  - but as opposed to Ruby's focus on object-oriented paradigm, it focuses on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
-  - not really suitable for games, i think.. but a good alternstive to Go, i guess?
-  - not really suitable for quick scripting either
-    - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
-  - as these are my two main use cases, i don't really have any use for it :/
+  - although ruby-esque on the surface syntax, really a replacement of Erlang, of which it shares it's specific VM, thus allowing one to re-use Erlang's libraries
+  - but as opposed to Ruby's focus on object-oriented paradigm, it focuses more on Ruby's concise functional style: of creating very short easy-to-read simple often single-line functions
+    - **it's functional focus makes it *perfect* for web, where a billion threads are running little scripts (and where those billion threads must run side-by-side, never conflicting or sharing any bits of code with other threads)**. It's simply a much better solution than running simple interpreters, providing all the advanced features a compiled langauge and VM gives, yet doesn't require full compilation to run it. I can't think of a better use of bytecode/VM compilation.
+  - limited in use cases compared to more general languages:
+    - absolutely not suitable for games (through a game never crashing may be an interesting feature..??)
+    - not suitable for quick 'n simple scripting either, you'd need to build a whole project and then need the VM to start-up to just to run it:
+      - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
   - multi-core (no GIL in Elixir; as opposed to python/ruby?? not sure..)
   - "BEAM/EVM barely has any JIT happening at all, but it is still very performant, however the language design combined with internal very low level async I/O allows the BEAM/EVM to outperform ‘almost’ anything on I/O (like networking, say, for webhosting) while being safer than any just about any language at all."
   - "However, .NET Core has very little ability to debug production, you mostly have to rely on your logs or hook up a debugger that often stops-the-world. Compared to the BEAM/EVM that has introspection that would make any network or server admin just drool, but it is done in a different way than you would do it on .NET Core (mostly because debugging individual instruction is as you would on .NET is hell for a concurrently real-time system)."
