@@ -10,8 +10,8 @@ $my_configs_path = $my_paths['configs']
 
 # TODO: currently broken due to onedrive, see config file in $my_configs
 # cp $config_paths['shell'] "$my_configs_path\powershell"
-cp $config_paths['terminal'] "$my_configs_path\terminal"
-cp $config_paths['text_editor'] "$my_configs_path\helix"
+# cp $config_paths['terminal'] "$my_configs_path\terminal" # NOTE: auto-generated, so must load from here
+cp $config_paths['text_editor'] "$my_configs_path\helix" # NOTE: can edit directly via open-config command
 
 code --list-extensions > "$my_configs_path\vscodium\extensions-list.txt"
 

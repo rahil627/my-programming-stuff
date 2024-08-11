@@ -8,9 +8,24 @@ C:\Users\ra\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\Local
 backup:
 cp C:\Users\ra\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json $home\my-stuff\repos\my-programming-stuff\configs\windows\terminal\
 
-generally use c+s for shortcuts
-  - TODO: update all control shortcuts to be alt
+by default it generally uses c+s for shortcuts, but i changed it to use alt for most shortcuts
   - new tab (t), new window (n), copy/paste (c/v), find (f), etc.
+
+alo by default it uses ctrl for signals and two command-line-related shortcuts
+  - c+c, c+l, and every other letter
+    - send ^C, ^L signal
+    - TODO: can remap these to more command-line-only functions
+      - fzf
+        - fzf paths
+        - fzf history (see provided history searches)
+      - fzf env vars
+      - etc.
+  - c+r
+    - **reverse history search** (bck-i-search)
+  - c+s # TODO: why s?
+    - forward history search? (fwd-i-search)
+    
+
 
 some defaults:
 c+,

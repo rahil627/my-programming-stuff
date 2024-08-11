@@ -1,3 +1,15 @@
+
+
+// TODO:
+// how to change shortcuts for signals? (c+c, c+l, etc.)
+// check c+s+p for unmapped commands
+
+// try less opacity
+// didn't work, try ui settings
+// "antialiasingMode": "cleartype",
+// "useAcrylic": true,
+// "acrylicOpacity": 0.5,
+
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
