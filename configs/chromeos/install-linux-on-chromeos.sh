@@ -46,7 +46,7 @@ vmc container termina arch https://us.lxd.images.canonical.com/ archlinux/curren
 
 vsh termina
 lxc list
-lxc arch
+lxc arch # WARNING: changed to back to default "penguin" after some chromeos updates, or something like that
 
 
 

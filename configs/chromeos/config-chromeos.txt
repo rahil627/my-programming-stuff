@@ -36,3 +36,8 @@ increase dpi on vs code
   - Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--new-window %F"
   - Smaller value for --scale means more magnification. The fonts actually look sharp.
 
+# limit systemd journal log file size
+sed -i "s/SystemMaxUse=.*/SystemMaxUse=50M/" /etc/systemd/journald.conf
+
+# check it
+#grep "#SystemMaxUse" /etc/systemd/journald.conf
