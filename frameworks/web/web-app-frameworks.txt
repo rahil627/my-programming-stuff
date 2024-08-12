@@ -31,7 +31,7 @@ x/flutter
   - great for mobile and desktop, not so much for web > react native (which requires using wrappers for native libs)
   - can use dart for back-end too
   - **for people that hate web dev (html/css/js)**
-  - people seems to dislike the web target
+  - people seem to dislike the web target
     - https://www.reddit.com/r/FlutterDev/comments/180h020/why_is_flutter_not_as_popular_for_web_its_a_great/
       - uses canvas to draw ui, thus horrible for SEO
         - ...maybe updated to web assembly now..?
@@ -43,18 +43,24 @@ x/flutter
     - https://elixirforum.com/t/regretting-questioning-my-current-stack-flutter-elixir-as-solo-dev-for-mobile-app/55731
   - google :(
 **phoenix**
-**phoenix live view**
-  - specifically for single-page dynamic apps that require a constant connection
-  - phoenix live view native
-  - stateful backend
-  - live_svelte combines both
-    - https://blog.sequinstream.com/liveview-is-best-with-svelte/
+  particularly **phoenix live view**
+    - specifically for dynamic apps that require a constant connection
+    - **phoenix live view native??**
+      - https://github.com/liveview-native/live_view_native
+        - currently v0.2.0
+        - seems to be a very small team
+        - core written in rust
+    - stateful backend
+    - live_svelte combines both
+      - https://blog.sequinstream.com/liveview-is-best-with-svelte/
 x/rails
-  - for big stuff
   - superceded by phoenix
+  - for big stuff
 haxe (tink_web router/backend, bindings for all pop front-ends or haxe-ui-html5)
   - ok for front-end bindings, but probably can't compete with phoenix's backend concurrency
   - https://community.haxe.org/t/haxe-seems-great-but-not-for-webdevelopment/3028
+
+
 
 the frameworks:
 ruby on rails
