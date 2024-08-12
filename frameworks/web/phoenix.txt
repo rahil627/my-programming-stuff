@@ -6,13 +6,13 @@ https://learn-elixir.dev/blogs/creating-reusable-ecto-code
 # https://hexdocs.pm/phoenix/installation.html
 scoop install erlang
 scoop install elixir
-scoop install postgresql
 
-# linux only additional step:
+# if linux:
 # install a file-system watcher in order to have live-reloading to work completely
 pacman -S inotify-tools
 
 # in case you need a db (can choose any)
+scoop install postgresql
 #sudo pacman -S postgresql
 
 # Run run 'pg_ctl start' or 'pg_ctl stop' to start and stop the database or register it as a service by running 'pg_ctl register -N PostgreSQL' from an elevated shell.
@@ -36,8 +36,9 @@ mix archive.install hex phx_new
 #   - cowboy is written in erlang, bandit was written specifically for plug, in elixir, and therefore phoenix, ridding some unused bloat
 # --no-live just comments out live-view-related stuff, so hopefully can uncomment it when it's needed
 mix help phx.new
+#  - even the generated authentication can make use of live-view, so just keep it on
 
-mix phx.new my_project --adapter bandit --no-live
+mix phx.new my_project --adapter bandit
 
 cd my_project
 
@@ -63,6 +64,186 @@ iex -S mix phx.serverate
 http://localhost:4000/
 
 
+
+
+
+
+# set-up a database
+
+# can use this mix script to generate basic schemas
+# schemas are table-like data entities?
+# fields = columns of a database table
+mix phx.gen.schema Thing things field_name:type field_name2:type
+# generates the schema file and a file that contains a script to create the table:
+# creating lib/game_archive/thing.ex
+# creating priv/repo/migrations/20240731053228_create_things.exs
+
+# but i think you eventually have to edit the generated code to map relationships beyond simple foreign keys (field_name:reference:schema)
+
+# then "migrate" the data? (create tables)
+# ensure db is connected
+mix ecto.migrate
+
+
+# TODO: do some reading up on ecto
+# https://hexdocs.pm/ecto/Ecto.Schema.html#content
+# https://hexdocs.pm/ecto/Ecto.Schema.html#has_many/3-has_many-has_one-through
+# some notes:
+# By default, a schema will automatically generate a primary key which is named id and of type :integer
+# array in ecto = list in elixir (maybe ecto is from erlang?)
+# :map
+
+# relations
+# has_many(t)
+# has_one(t)
+# many_to_many(t)
+
+https://hexdocs.pm/ecto/Ecto.Schema.html#timestamps/1
+# timestamps() is a macro that generates inserted_at and updated_at fields
+# this was added automatically when i ran it:
+# timestamps(type: :utc_datetime)
+
+
+
+
+
+
+
+# creating a context/controller/views/templates
+
+def have to do some reading..
+go through all of the guides in the manual:
+https://hexdocs.pm/phoenix/1.4.3/adding_pages.html#content
+
+# mix phx.gen.html
+https://hexdocs.pm/phoenix/Mix.Tasks.Phx.Gen.Html.html#module-customizing-the-context-schema-tables-and-migrations
+  - "Generates controller with view, templates, schema and context for an HTML resource."
+
+holy shit, this is nuts!
+
+it generated pages for editing, updating, deleting data from a database!!!
+
+with these generated scripts, there isn't much phoenix-related code you need to write!
+
+
+https://hexdocs.pm/phoenix/contexts.html
+  - "Contexts are dedicated modules that expose and group related functionality. For example, anytime you call Elixir's standard library, be it Logger.info/1 or Stream.map/2, you are accessing different contexts...By giving modules that expose and group related functionality the name contexts, we help developers identify these patterns and talk about them. At the end of the day, contexts are just modules, as are your controllers, views, etc."
+  - "In Phoenix, contexts often encapsulate data access and data validation. They often talk to a database or APIs. Overall, think of them as boundaries to decouple and isolate parts of your application."
+
+  - NOTE: this page will lead you through finshing up phx.gen.html (which includes phx.gen.context and phx.gen.schema by default)
+
+
+for whatever reason my context (games.ex) wasn't completely generated, i had to copy from the docs for contexts
+
+
+
+
+
+read this for ecto/sql query dsl:
+https://hexdocs.pm/ecto/3.10.1/Ecto.Repo.html#query-api
+https://hexdocs.pm/ecto/3.10.1/Ecto.Repo.html#schema-api
+
+
+
+# some common db commands
+# TODO: move to postgressql.txt somewhere
+pg_ctl start/stop/restart?/status
+
+psql
+
+# NOTE:
+# ecto doesn't provide a simple way to do these things
+# though you can try via iex..
+# it's best to just use db cli tools such as psql
+
+# can also use a database-indepedent program in the future
+# this one is written in go, meant to be feature-compatible to psql
+# https://github.com/xo/usql
+
+# TODO: try some cli programs from archlinux package repo
+# TODO: pgcli?
+
+psql -d "game_archive_dev" -U "postgres"
+psql -h "hostname goes here" -U "postgres"
+# this enters a console/mode
+
+[run sql commands directly]
+select * from table_name; # remember the semi-colon!
+
+\?
+  - list commands
+\l
+  - list databases
+\d
+  - list tables, sequences, etc.
+  - \d table_name
+    - output table structure
+  - \dt
+    - list tables only
+
+\o output_file.txt
+  - start capturing the output to a file
+  - \o again to stop capturing
+\i input_file.txt
+  - run a psql script
+
+
+
+## generate some data
+# https://medium.com/geekculture/phoenix-understanding-how-to-seed-data-c2be863ddd1d
+#  - very good post teaching how to use seeds.exs, mix aliases, and faker lib
+
+
+
+
+
+# some common mix tasks
+
+# re-create db
+pg_ctl start
+mix ecto.drop
+mix ecto.create
+mix ecto.migrate
+
+
+mix ecto.create
+  - create the database which is used by your repository as backend
+mix ecto.migrate
+  - runs the pending migrations for your repository
+mix ecto.drop
+  - drops the database
+
+
+
+
+
+
+# naming conventions
+The convention is to have:
+plural for context: Games.ex
+singular for schema: Game.ex
+plural for table name: games
+singular for controller/view: GameController
+
+UpperCamelCase
+
+- https://elixirforum.com/t/context-module-name-and-ecto-schema-module-name-for-more-than-one-word-database-tables/44396/6?u=rahil627
+
+
+
+
+# file structure
+/
+  - mix.exs
+    - main project file
+    - dependencies
+    - lists aliases for mix tasks for the project
+/lib
+  - most files you edit go here
+/priv
+  - generated stuff, no need to touch
+  /migrations
+    - files with create table
 
 
 
@@ -139,11 +320,4 @@ tempalte = root layout +-> other layouts +-> template content
 # perhaps start with a minimalistic app base?
 # https://github.com/wojtekmach/mix_install_examples/blob/main/phoenix.exs
 
-
-# mix phx.gen.html
-holy shit, this is nuts!
-
-it generated pages for editing, updating, deleting data from a database!!!
-
-with these generated scripts, there isn't much phoenix-related code you need to write!
 
