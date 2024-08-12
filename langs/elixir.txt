@@ -21,8 +21,69 @@ mix local.hex
 # list all cli tasks
 mix help
 
+# run a script (.exs)
+elixir seeds.exs
+
+# build the app
+mix
 
 
+
+# setup language server (elixir-ls)
+## vs code
+simply install the extension: elixir-lsp.elixir-ls
+NOTE: in order for it to work, by default, you must open the folder where the project was generated, which has a .elixir_ls folder in it
+
+
+
+# https://learnxinyminutes.com/docs/elixir/
+
+# cli
+iex
+  - interactive elixir console
+
+elixirc
+  - compiler
+
+
+# syntax
+
+# Atoms are constants whose values are their own name. They start with `:`.
+:hello # atom
+# this. is. great.
+
+# Tuples that are stored contiguously in memory.
+{1,2,3} # tuple
+elem({1, 2, 3}, 0) #=> 1
+
+# To concatenate lists use `++`, for binaries use `<>`
+[1,2,3] ++ [4,5]     #=> [1,2,3,4,5]
+'hello ' ++ 'world'  #=> 'hello world'
+
+<<1,2,3>> <> <<4,5>> #=> <<1,2,3,4,5>>
+"hello " <> "world"  #=> "hello world"
+
+
+[1,2,3] # list
+[head | tail] = [1,2,3]
+
+# In Elixir, just like in Erlang, the `=` denotes pattern matching and
+# not an assignment.
+# {a, b, c} = {1, 2} #=> ** (MatchError) no match of right hand side value: {1,2}A
+
+# Ranges are represented as `start..end` (both inclusive)
+1..10 #=> 1..10
+
+# Maps are key-value pairs
+genders = %{"david" => "male", "gillian" => "female"}
+genders["david"] #=> "male"
+
+# Maps with atom keys can be used like this
+# NOTE: this is used very very often in phoenix!
+genders = %{david: "male", gillian: "female"}
+genders.gillian #=> "female"
+
+  
 
 
 https://github.com/wojtekmach/mix_install_examples/tree/main
