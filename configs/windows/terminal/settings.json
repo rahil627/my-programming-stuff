@@ -287,6 +287,10 @@
             }
         },
         {
+            "command": "resetFontSize",
+            "keys": "alt+0"
+        },
+        {
             "command": 
             {
                 "action": "newTab",
