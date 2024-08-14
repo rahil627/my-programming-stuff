@@ -1,0 +1,19 @@
+
+https://www.youtube.com/watch?v=a_1cV7hg5G8
+  - The Evolution of Web Apps 1992-2024
+  - static html
+    - plain old html, came first and still works great
+  - server-side rendering (cgi, asp.net, ruby, etc.)
+    - great, but expensive
+  - "plugins" (flash, java applets, etc.)
+    - iphone killed it by not allowing it, and enforcing everyone to use standard http
+  - ajax -> fetch
+    - an example: autocomplete
+      - a json is sent upon every keystroke
+  - single page apps
+  - made it to 9 minutes, gettin' sleepy
+
+https://www.youtube.com/watch?v=0gH-hSyWp9o
+  - Turns out REST APIs weren't the answer (and that's OK!)
+    - i still don't know what REST really means..??
+	  - an architectural style of using HTTP response headers?
