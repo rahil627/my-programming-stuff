@@ -1,0 +1,47 @@
+
+
+finally, my favorite syntax combined with my favorite program: a game-engine
+
+TODO: offline provided docs stuck on loading..?
+
+https://docs.dragonruby.org/static/docs.html
+
+
+# single-page-basic-html-docs written by a game-dev god
+
+# dir structure:
+\mygame
+  \app
+    \main.rb
+	  \tick()
+	\repl.rb
+	  - game dev console?
+
+just run dragonruby.exe and keep it open, as you change code, it'll auto reload
+
+set 60fps, no delta-time var to worry about
+
+
+
+"DragonRuby's philosophy is to provide multiple options across the "make it fast" vs "make it right" spectrum, with incremental/intuitive transitions between the options provided. A concrete example of this philosophy would be render primitives: the spectrum of options allows renderable constructs that take the form of tuples/arrays (easy to pickup, simple, and fast to code/prototype with), hashes (a little more work, but gives you the ability to add additional properties), open and strict entities (more work than hashes, but yields cleaner apis), and finally - if you really need full power/flexibility in rendering - classes (which take the most amount of code and programming knowledge to create)."
+
+debugging:
+LLDB? pry-like experience compatible with it?
+
+"DragonRuby is hot loaded which gives you a very fast feedback loop (if the game throws an exception, it's because of the code you just added). Use ./dragonruby mygame --record to create a game play recording that you can use to find the exception (you can replay a recording by executing ./dragonruby mygame --replay last_replay.txt or through the DragonRuby Console using $gtk.recording.start_replay "last_replay.txt"."
+
+"DragonRuby also ships with a unit testing facility. You can invoke the following command to run a test: ./dragonruby mygame --test tests/some_ruby_file.rb. Get into the habit of adding debugging facilities within the game itself. You can add drawing primitives to args.outputs.debug that will render on top of your game but will be ignored in a production release."
+
+"Debugging something that runs at 60fps is (imo) not that helpful. The exception you are seeing could have been because of a change that occurred many frames ago."
+
+
+
+performance tips/conventions:
+https://docs.dragonruby.org/static/docs.html#---troubleshoot-performance
+
+
+
+# object structure:
+args.state
+  - "is a place you can hang your own data. It's an open data structure that allows you to define properties that are arbitrarily nested. You don't need to define any kind of class."
+

@@ -1,3 +1,11 @@
+
+TODO: merge
+engines that don't support various rendering pipelines, and only opengl, will limit their targets to PC and the switch. All other consoles, handhelds, etc., have their own rendering pipline.
+
+
+
+
+
 # how to start 
 1. **the quickest way to make a game is: well.. to make one! Making a top-down 2D game such as a shoot ‘em up (shmup) is the best way that I know how to learn.** Every game engine should have a top-down 2D tutorial to get you started. Use that as the base, then go from there, adding cool projectiles, player movement, etc. I suggest starting with one of the much-loved simpler 2D-centric game engines (see *much loved first game engines*). After that
 
@@ -16,9 +24,10 @@ much of it is merely out of personal personal taste and gut feeling, yet, there 
 
 ## the big boys
 ### 3D, with 2D
-  - Unity(3D), Mono, C#, custom UnityScript, **3d emphasis along with solid 2D** (even with mobile devices—**it has a bajillion optimizations**), **the best cross-platform solution—truly one-click!!**, _**the titan** of all game engines_ for individuals, although closed-source the C# code is available for “reference” on github (the C++ code is not); although it doesn’t reek of immoral people, it has the stench of bloated-ness, advertising, and an asset store deeply trenched in capitalism (though nowhere near as immoral or awful as Roblox); yet, if you stay sane, you can make anything with it, likely without touching the asset store
-   - **Godot**, **C/C++ core**, custom GDScript, custom? VisualScript , janky community-maintained C#/Mono bindings, **2d emphasis _along with great 3d_**, open-source, small 20mb standalone size, the C/C++ core makes it a really really cool way to get handle of C++, using it as leaping stone to more DIY-style modular engines, yet also retaining all of the programming power of C# through bindings
-    - Unreal, C++, seems like you need a very advanced team to use it?? lol, *reeks* of shit “AAA” (*what does even that mean??*) games and human-labor-abusing companies
+   - **Godot**, **C/C++ core**, custom programming langauge: gdscript, custom visual programming langauge: visualscript, non-programming making-tool, janky community-maintained C#/Mono bindings, **2d emphasis _along with great 3d_**, open-source, small 20mb standalone size, the C/C++ core makes it a really really cool way to get handle of C++, using it as leaping stone to more DIY-style modular engines, yet also retaining all of the programming power of C# through bindings
+  - Unity(3D)
+    - C#, Mono (the FOSS C# runtime), custom UnityScript (gone..?), **3d emphasis along with solid 2D** (even with mobile devices—**it has a bajillion optimizations**), **the best cross-platform solution—truly one-click!!**, _**the titan** of all game engines_ for individuals, although closed-source the C# code is available for “reference” on github (the C++ code is not); although it doesn’t reek of immoral people, it has the stench of bloated-ness, advertising, and an asset store deeply trenched in capitalism (though nowhere near as immoral or awful as Roblox); yet, if you stay sane, you can make anything with it, likely without touching the asset store
+    - Unreal, C++, seems like you need a very advanced team to use it?? though, you can get very far using the visual programming thing ("blueprints"). lol, *reeks* of shit “AAA” (*what does even that mean??*) games and human-labor-abusing companies
 
 ### 2D _only_
 _all of these **reek** of the nasty smell of degrading immoral mobile “game” companies, god-awful Facebook “games”, and gambling companies (in shady places like Russia and China); i think for that reason alone, i’ve avoided these_
@@ -42,8 +51,14 @@ these are more programmer-oriented, **more freedom—the ability to make anythin
   - **MonoGame**, 2D/3D, C#, an indie darling all the way back to Fez, to Stardew Valley, up-to Celeste, started as an open-source port of Microsoft Xbox’s XNA framework, but be warned: *it’s barely even an io framework**, still alive ‘n well, still perhaps the main alternative to the big boy engines
     - MonoGame Extended, *you’ll need this*, or something like this for the actual game-part of framework (at the least it’s entity system, scene system, and collision system)
     - FNA, open-source XNA 4.0(?), rock stable frozen version kept for porting and longevity
+  - **Luxe**, C/C++/Wren, well-designed stuff by the snowkit collective’s ruby0x1 (a beautiful soul), stuck in closed-beta for a long long time, but **appears to be the game engine of my dreams**, the original one was much loved for it’s design
+  - **DragonRuby**
+    - uses a ruby-like language, a variant of mRuby (embedded), as it uses C heavily
+    - has it's own ruby runtime, the key of the project is in it: opcodes that align with llvm's register-based structure
+    - made by an indian (amir rajan)! that uses emacs!! yay.
+      - his talks/"content" always has info gems to glean on
+    - $48 on itch.io
   - **Heaps**, **2D/3D complete separate modules**, **Haxe** (then to C++ or bytecode via HashLink), **made by the maker of the Haxe programming language**, contains a rather bare framework who’s 2D module resembles HaxePunk’s core without it’s features (no collision/“masks”, no entity, no tween lib, etc.) and without it’s extra helper functions. It however does include essential features such as scene handling and a scene tree, placing it’s features-set somewhere between MonoGame and MonoGame Extended. This would have been my personal choice (until a better modern C# engines come out), but, unfortunately, there is almost no community, the documentation is spartan, and it seems everyone wastes time looking for the right functions in the right class, and trial and error (this is partly due to everything having public functions, in order to make everything accessible / modifiable). It is used as an in-house engine for a game company, and it feels that way. Having said that, it’s still an amazing framework, and you have access to anything, all the way down to the SDL graphics wrapper, and you can modify anything as it’s open-source. Examples: Dead Cells
-  - **Luxe**, C/C++/Wren, well-designed stuff by the snowkit collective’s ruby0x1, stuck in closed-beta for a long long time, but **appears to be the game engine of my dreams**, the original one was much loved for it’s design
     - follow https://luxeengine.com/
   - a ton of new C/C++/new language indie-made game engines (see below)
   - custom game engines, **i’m guessing all of the great fighting games had engines built specifically for the game and even specifically for the target console; because of this there aren’t any good public fg specific engines [that I know of] [todo: make one!]**; it’s also unfortunate because no individual would want to write networking code
