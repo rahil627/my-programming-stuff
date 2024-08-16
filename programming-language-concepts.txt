@@ -9,6 +9,7 @@ imperative
   - instructs the machine how to change its state
 procedural
   - groups instructions into procedures
+    - (procedures are functions that don't return a value or have an expression, usually mutating the state)
   - C
 pure object-oriented
   - messages are passed between objects (via a VM) using a dispatch system, and *everything* really is an object (via metaclasses)
@@ -17,8 +18,10 @@ pure object-oriented
     - example: 3+4. + is the message. 3 and 4 are objects
   - there are no control structures
     - example: result:= a>b will send back an ifTrue/ifFalse message, and Boolean is the object(?)
+  - smalltalk, objective-c
 "object-oriented"
   - groups instructions with the part of the state they operate on
+  - classes
   - C++
 declarative
   - declares properties of the desired result (what the program should do), but not how to compute it
