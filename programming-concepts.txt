@@ -1,7 +1,65 @@
+
+
+TODO: merge some notes from programming-language-concepts.txt?
+
+new:
+https://www.youtube.com/watch?v=7xsX2JP-Xxo
+  - Lessons Learned From The Last Decade Of Software Dev for Web, Mobile, Games, and Quantum Computing by Amir Rajan (maker of dragonruby)
+  - 2010:
+    - "a website without javascript is the best self-documenting rest api you can build"
+  - 2011:
+    - "a language cannot be slow, a runtime can"
+	  - C# has sever runtimes (core, mono, unity, etc.)
+	- C#. 4.5/5: lambas (and linq) changed the game
+  - 2012:
+    - JS frameworks
+	  - react
+	    - request-animation-frame() (basically game tick() at 60hz)
+	  - nodejs
+  - 2013:
+    - OSS burnout (companies should pay free software makers!)
+	- a simple cell-based grid layout simplifies mobile dev (24x12, 16:9)
+  - 2014:
+    - polygot (clojure, haskell, F# (Ocaml), scala, ruby)
+  - 2015:
+     - made "a dark room" for web, then used ruby motion to port it, and it sold 1mil+, then made a prequel that also sold well
+  - 2016:
+    - bought/aquired the tool-set/company he used to make the game: rubymotion from a guy who worked at apple and wanted to retire anyway, and re-named it dragonruby
+    - new space in tech: how what rubymotion built? previously he always used frameworks to make stuff. it's a runtime
+  - 2017-2018: the realization:
+    - study in isolation: how to build a runtime
+	- the open-source burnout year of 2013 provided the experience needed
+	- describes llvm / chris latiner
+	  - 2009: chris is at MIT, then goes to apple, when the year the iphone is released, using llvm
+	  - llvm is an infrastructure that seperates/decouples the langauge from the hardware
+	    - langauge -> IL/R -> bitocode/machine
+	  - 2010: iphone is a hit, intel wants to build chips for it, apple says you must make the chipset architecture compatible to llvm
+	    - IR -> opcodes for a chipset architecture (supplied by the hardware manufacturer) -> bit-code
+	  - 2016: chrome uses clang (the c compiler for llvm)
+	  - 2019
+	    - .net core (+clr) is released, which is basically a C# runtime implemented on llvm
+		  - a major turning point for microsoft, as they had the competing c++ runtime visual c++/msvc for a long long time
+		- android 26 uses clang
+		- chris goes to tesla, which therefore uses clang
+		- every giant company uses clang, and basically the entire world runs on clang
+	  - 2020: wasm builds a back-end for clang
+	  - 2021: apple m1 comes out
+	    - it performs well because the ir genereated by llvm directly maps to m1 arch op-codes, they were able to make it so due to the ubiquity of clang (and x86 arch)
+	- the realization: build run-time on clang
+	- made the game toolkit for rubymotion/dragonruby runtime
+  - 2019-2020:
+    - port games to nintendo switch, which also uses clang
+	    - thus the games he made back in 2012 on rubymotion, through a history of tech, works on nintendo switch
+  - quantum computing
+    - there are applications to encryption, but what about runtimes?
+	  
+
+
+
 from notes from another file:
 high level -> Assembly -> Machine
 wages = 5; -> load wages; store 5; -> 100100 100010
-	compiler	assembler
+compiler -> assembler
 
 source code -> object program
 linker - combines libraries with the object program
