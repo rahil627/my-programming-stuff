@@ -1,0 +1,36 @@
+
+# https://learnxinyminutes.com/docs/toml/
+
+# tables
+[table-1] # hash-map/dictionary
+# Under that, and until the next table or EOF are the key/values of that table.
+# Key/value pairs within tables are not guaranteed to be in any specific order.
+key1 = "some string"
+key2 = 123
+
+# Dots are prohibited in bare keys because dots are used to signify nested tables. Naming rules for each dot separated part are the same as for keys.
+
+# You don't need to specify all the super-tables if you don't want to. TOML knows.
+# how to do it for you.
+# [x] you
+# [x.y] don't
+# [x.y.z] need these
+[x.y.z.w] # for this to work
+
+
+# As long as a super-table hasn't been directly defined and hasn't defined a specific key, you may still write to it.
+[a.b]
+
+
+# **You cannot define any key or table more than once. Doing so is invalid.**
+
+# DO NOT DO THIS:
+[a]
+b = 1
+
+[a] # fail
+c = 2
+
+# DO NOT DO THIS EITHER
+[a.b] # fail
+c = 2

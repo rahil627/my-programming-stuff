@@ -7,11 +7,11 @@ inuititive learning experience
 unrestrictive
 
 conclusion:
-0. doom emacs
-  - potential is unlimited by the ui
-  - TODO: try it some more
-1. focus (editor)
-  - TODO: try it
+x/0. doom emacs
+  - potential is unlimited thanks to emacs, but emacs is not a wormhole i'm willing to invest in at my current later age
+  - TODO: still should try it some more
+?. focus (editor)
+  - TODO: try it, though it'll be tough for one person to beat the rust hive-mind helix has
 1. helix (or other fav terminal editor / key-bindings)
   - for quick general use, along with cli tools, remote terminal use, a good step towards emacs
   - adds tree-sitter
@@ -20,12 +20,15 @@ conclusion:
     - an emacs user switches to helix and mentions some good plugins
     - TODO: try them!
   - TODO: a version with a file-tree feature is on a git branch
-1. vs-code
+2. vs-code
   - a great start, especially when you haven't coded in a while
+  - easy to jump into where everything *just works* with "batteries-included"
   - can use fav key-bindings extension ("helix for vscode" extension), or customize keys yourself
 vs-studio
   - for it's advanced features: deep debugging, run-time stuff, etc.
-sublime text or notepad (windows) for simple, non-key-oriented editing
+sublime text or notepad (windows)
+  - for simple, non-key-oriented editing?
+  - TODO: try it
 
 (TODO: knowledge-base software for bigger, conceptually-linked sets of text??)
 
@@ -36,6 +39,9 @@ newer, simpler, things to try:
 **focus (editor)**
   - a simpler emacs-style editor
   - made with jai
+4coder
+  - part of the handmade-hero movement
+    - therefore written in C/C++, and also therefore **can be extended using just about any programming langauge**
 x/lapce
   - a vs-code copy in rust
     - in development?
@@ -61,7 +67,7 @@ old standards:
 **sublime text**
   - the best simple gui text editor, replacing notepad++
   - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's community
-  - "It's a much nicer editor but clunky vscode has a better on boarding experience (I see you coding x, would you like to install this extension to help with x). Whereas with subl you have to do a lot of hunting and manual installation to get all set up with extensions.
+  - "It's a much nicer editor but clunky vscode has a better on boarding experience (I see you coding x, would you like to install this extension to help with x). Whereas with sublime you have to do a lot of hunting and manual installation to get all set up with extensions.
     And frankly vscode is where the community is at, which means that's where almost all the extension dev is happening.
     There is some effort to piggyback off vscode in sublime via language servers which is hopeful. Vscode's extension in sublime would be best of both worlds.
     I bought sublime before vscode existed. I use both. Working on a Hugo static website right now and use vscode for html & css but sublime for the markdown based content."
@@ -117,6 +123,7 @@ emacs
   - x/prelude
       - a light-weight starter kit closer to vanilla emacs, in case doom is too much, or if i want to make my own
   - every person that i've known that uses emacs is a great great programmer/problem-solver/maker
+  - emacs itself is speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
 
 (neo)vim
   - vim
@@ -124,7 +131,7 @@ emacs
     - *heavily* key-board input user interface
       - i personally feel more comfy using a touch-screen/mouse/keyboard combo
   - lua scripting for configs 'n plugins!
-    - used to be in an archaic language: vimscript
+    - used to be in an archaic language: vimscript, which killed it
   - horrendous amount of time wasted starting out from scratch, reminiscent of the terrible linux config experience, but worsened by archaic language and the unprofessional open-source community it attracts
     - thus better to try various starter configs with sane defaults
   - bad learning curve, especially from vanilla neovim
@@ -151,12 +158,12 @@ seems to fill the gap vs-studio has left with other languages
 recently seperated into language specific IDEs:
 https://www.jetbrains.com/ides/
   - rubymine
-    - (ruby)
+    - ruby, the standard for it
   - rider
     - c#, games?
   - intellij
-    - java, jvm langs?
-    - i think this was their first/main editor that started their business
+    - java, jvm langs?, the standard for it
+      - i think this was their first/main editor that started their business
   - pycharm
     - (python)
   - etc.

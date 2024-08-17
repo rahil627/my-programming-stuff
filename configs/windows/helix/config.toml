@@ -32,7 +32,17 @@
 
 # NOTE: press space,? to open the command picker, then can see all of the commands that can be mapped to a key (or macro!)
 
+
+# structure:
+# theme
+# [keys]
+#  - for quick editing
+# [editor]
+
+
+
 theme = "boo berry" # a better version of the 'default' theme
+
 
 
 # re-map some keys
@@ -52,6 +62,14 @@ theme = "boo berry" # a better version of the 'default' theme
 #   - (by default, windows terminal used control+shift)
 #   - might change once i begin using a tmux (zellij)
 # **function key is currently un-mapped**
+# - vscode uses it for:
+# f1 = "command_pallete" # space,?
+# f2 = "rename_symbol" # space,r
+# f3 = "search_next" # n
+# S-f3 = "search_previous" N (S+n)
+# f5,f8-f11 = debugging stuff # space,g
+# f12 = "goto_definition" # g,d; A+f12 peek def
+  
 # control is the main modifier key to use
 # control+shift is often used to denote the opposite action as control+key
 # control+alt+shift is used in situtations where control+shift is used for a main action, and adding alt does an alt action
@@ -59,6 +77,9 @@ theme = "boo berry" # a better version of the 'default' theme
 # caps-lock is re-mapped to escape on the OS-level
 # right-control and right-alt are unused
 
+
+# see vs-code reference for shortcuts
+# https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 
 
 [keys.normal]
@@ -74,6 +95,13 @@ C-v = "paste_clipboard_after"
 
 C-r = ":reload" # Reload the current document from disk
 A-f = ":format"
+
+
+# TODO: change a few defaults that don't make sense
+# r<->R: r is useless for more than one char, whereas R is used more often, replacing a selection; can just use c to replace a single char, at the cost of one more key-press
+r = "replace_with_yanked" 
+R = "replace"
+
 
 
 # TODO: think about basic movements
@@ -233,6 +261,7 @@ C-S-h = "kill_to_line_start" # actually deletes upto first non-white-space; NOTE
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"] # keeping the selection while inserting is kinda weird..
 C-space = "completion"
+# C-S-space = trigger hints
 # j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock
 
 # C-j = "insert_newline" # default; alt to enter-key
@@ -291,6 +320,7 @@ l = "extend_to_line_end"
 # pop-up menus
 # edit existing pop-up menus
 [keys.normal.space]
+space = "command_palette" # ? by default
 q = ":buffer-close" # or x or d
 Q = ":buffer-close!"
 
@@ -309,6 +339,10 @@ Q = ":buffer-close!"
 a = "surround_add" # default is s
 o = "select_textobject_around" # o for outside; default was a
 
+[keys.select.m]
+a = "surround_add" # default is s
+o = "select_textobject_around" # o for outside; default was a
+
 # a new config- pop-up menu
 [keys.normal."C-backspace"]
 r = [":config-reload", ":reload-all"]
@@ -322,6 +356,8 @@ l = ":o ~/.config/helix/languages.toml"
 
 
 [editor]
+shell = ["pwsh", "-c"]
+
 line-number = "relative"
 
 # TODO: testing
@@ -341,14 +377,19 @@ enable = true
 max-wrap = 10 # increase value to reduce forced mid-word wrapping
 
 [editor.statusline]
-# same as defaults but neatly aligned
-left = ["mode", "spinner"]
-center = ["file-name", "diagnostics", "workspace-diagnostics"]
-right = ["version-control", "selections", "position-percentage"]
-separator = "│"
-mode.normal = "normal" # "NOR" by default
-mode.insert = "INSERT"
-mode.select = "SELECT"
+# vim stuff, interactive stuff
+left = ["mode", "register", "spinner", "diagnostics", "workspace-diagnostics"]
+
+# file-related
+center = ["file-name", "read-only-indicator", "file-modification-indicator", "version-control", "file-encoding", "file-line-ending"]
+
+# more info
+right = ["selections", "position-percentage"]
+
+separator = "│" # ":<:>:<:>:" 
+mode.normal = "normal"
+mode.insert = "insert"
+mode.select = "select"
 
 [editor.whitespace.render]
 newline = "all"
@@ -366,6 +407,8 @@ character = "┊" # Some characters that work well: ▏ ┆ ┊ ⸽ ╎
 #skip-levels = 1
 
 [editor.auto-pairs]
+# default: (){}[]''""``
+# TODO: so do these append or override defaults?
 '(' = ')'
 '{' = '}'
 '[' = ']'
@@ -373,9 +416,8 @@ character = "┊" # Some characters that work well: ▏ ┆ ┊ ⸽ ╎
 '`' = '`'
 '<' = '>'
 
-
 [editor.file-picker]
-hidden = false
+hidden = false # note: reads local and global .gitignore files by default
 parents = false # rid \. and \..
 
 [editor.lsp]
