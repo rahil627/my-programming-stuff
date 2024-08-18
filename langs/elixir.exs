@@ -1,3 +1,5 @@
+
+
 # install
 https://wiki.archlinux.org/title/Elixir
 
@@ -22,10 +24,17 @@ mix local.hex
 mix help
 
 # run a script (.exs)
+# is it really that simple to run a script!?
+# ...but i think you have to build it first..?
 elixir seeds.exs
 
 # build the app
+# NOTE: must be in the project's directory
 mix
+
+# build and run?
+# NOTE: must be in the project's directory
+mix run priv/repo/seeds.exs
 
 
 
@@ -34,6 +43,8 @@ mix
 simply install the extension: elixir-lsp.elixir-ls
 NOTE: in order for it to work, by default, you must open the folder where the project was generated, which has a .elixir_ls folder in it
 
+## helix
+# TODO: uh-oh
 
 
 # https://learnxinyminutes.com/docs/elixir/
@@ -46,7 +57,47 @@ elixirc
   - compiler
 
 
+
+# mix
+# mix.exs
+
+## dependencies
+
+# defp deps do
+# ...
+{:igdb, "~> 1.0", only: [:test, :dev]} # 1.0 will fetch the latest 1.0.x version
+
+mix deps
+# - list deps
+
+mix deps.get
+# - fetch deps
+
+
+
+
+
+
 # syntax
+
+def do_something do
+  do_something_else()
+end
+#  - function doesn't need (), but the call does
+
+# for loops
+# normally should never use it..?
+for n <- 1..10 do
+  Repo.insert!(GameMaker.gen_game())
+end
+
+# alt?
+Enum.each(1..10, f(x) -> x.do_something()) # TODO: just a guess..
+
+# normally use lamba style stuff on collections
+# TODO:
+
+
 
 # Atoms are constants whose values are their own name. They start with `:`.
 :hello # atom
@@ -83,6 +134,37 @@ genders["david"] #=> "male"
 genders = %{david: "male", gillian: "female"}
 genders.gillian #=> "female"
 
+# TODO: stopped here
+
+
+# looping
+for n <- 1..10 do
+  something()
+end
+
+data = 1..10
+Enum.each(data, f(item) -> something(item))
+
+data = ['a', 'list']
+data.map(f(x) -> something(x))
+
+
+
+
+# NOTE: can't define a function outside a module!
+# ..but you can define a module in a script!
+
+defmodule Tonberry do
+  def attack do
+    target(calc_dmg)
+  end
+  
+  defp calc_dmg do
+      length_of_knife
+  end
+end
+
+Tonberry.attack
   
 
 
