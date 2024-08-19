@@ -2,12 +2,16 @@
 
 finally, my favorite syntax combined with my favorite program: a game-engine
 
+
 TODO: offline provided docs stuck on loading..?
 
 https://docs.dragonruby.org/static/docs.html
+  - single-page-basic-html-docs written by a game-dev god
 
 
-# single-page-basic-html-docs written by a game-dev god
+# setup dev tools
+https://github.com/DSchaedler/dragonrubyautocomplete/releases
+  - vscode autocomplete extension
 
 # dir structure:
 \mygame
