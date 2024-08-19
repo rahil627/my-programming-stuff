@@ -32,6 +32,71 @@ then you should be able to run the binary via command line
 https://www.reddit.com/r/openSUSE/comments/x7ge7j/thinking_about_moving_from_arch_based_to_opensuse/
 https://www.reddit.com/r/NixOS/comments/zwqaxz/arch_user_convince_me_to_hop_to_nix/
 
+
+**arch linux**
+  - newer, community-made (and not the narrow FOSS community behind debian)
+  - "for people that want to install linux from nothing (or the most minimal amount of software)"
+    - though, there is an install script (archinstall) to help/guide newer users
+    - "Arch is very barebones once installed, you end up with a functioning terminal and only essential packages installed. For example, you won't even have sudo unless you install it. So if you want an ultra refined, customised setup where you're responsible for installing and configuring everything on your system, Arch. If you want to install your system with a DE and get to using it right away, Endeavour."
+    - have distros to ease this:
+      - **endevourOS**
+        - just adds installers, install scripts, etc. making life easier for installs, especially drivers
+      - manjaro
+        - less arch, some weird mish-mash of beginner-friendliness and arch
+  - rolling release system-packages + user-maintained user-packages, continuously / no release
+    - meaning, you must update the entire system every time you want to get package that uses another package (dependency) that has a release newer than your system
+      - aka **you must update your entire system nearly every-time you want to get a package!!**
+    - tested by a volunteer testing team
+  - great wiki: documentation on everything, great way to learn linux
+  - need to install your own backup software (BtrFs, etc.)
+  - "Arch recommends you check the wiki before every update to see if the update is going to break something. Tumbleweed just works"
+  - in general, to install or config apps, you read the wiki and manually config it yourself
+  - **if it crashes, you're screwed, so you def need to setup a backup system and backup frequently**
+
+**openSUSE**
+  - an old staple made by an enterprise server company
+  - for people that just want a hassle-free working system that doesn't want to waste time tinkering and building everything from scratch
+  - provides options to customize making a great out-of-the-box experience
+    - OBS, OpenQA, snapper, BtrFs by default, YasT
+      - **YaST**, an all-in-one system config tool
+      - "snapper saves your @$$"
+      - AUR (arch's user repo) > OBS
+      - BtrFs
+        - a file-system that allows quick 'n small snapshots, among many other contemporary disk-related features
+    
+  - Tumbleweed
+    - rolling release, 1 snapshot max per day, so more like release nearly every-day
+      - tested by a company
+    - "Tumbleweed feels like Fedora, works like arch and installs like Debian. The best of all."
+
+  - Leap
+    - intervalled release
+
+fedora
+  - by red hat enterprise
+    - (though not sure if RHEL exists anymore..)
+  - competed with debian for a long long time as most popular distro
+  - releases every 6 months
+  - dnf > apt
+    - dnf history list
+    - dnf history undo
+  - encourages using flatpaks (cross-platform, portable packages) over third-party repos
+
+debian
+  - releases every 2 years!!
+    - meaning your software will nearly always be out-dated!
+    - the debian security team only works on the current release, so you must update it (except for LTS versions, which have security updates for 5 years)
+  - can use unstable and testing/"sid" branches of the repo for latest, untested software
+  - the free and open-source (FOSS) standard
+  - the main community-based distro
+    - (as opposed to company-owned)
+  - to use more recent packages, just download them using snap, flatpak, etc.
+    - benefits from being safe too
+
+
+
+
+## special
 NixOS
   - **reproducible env** via declarative configs
   - https://www.felixsanz.dev/articles/nixos-made-me-go-back-to-windows
@@ -58,55 +123,6 @@ NixOS
   - no games??
   - can start with Home Manager
     - "NixOS manages system configuration but not user-related configuration. Home Manager, a project created by third parties, takes care of that."
-
-**arch linux**
-  - for people that want to install linux from nothing (or the most minimal amount of software)
-    - though, there is an install script (archinstall) to help/guide newer users
-  - rolling release system-packages + user-maintained user-packages, continuously / no release
-    - meaning, you must update the entire system every time you want to get package that uses another package (dependency) that has a release newer than your system
-      - aka **you must update your entire system nearly every-time you want to get a package!!**
-    - tested by a volunteer testing team
-  - great wiki: documentation on everything, great way to learn linux
-  - need to install your own backup software (BtrFs, etc.)
-  - "Arch recommends you check the wiki before every update to see if the update is going to break something. Tumbleweed just works"
-  - in general, to install or config apps, you read the wiki and manually config it yourself
-  - **if it crashes, you're screwed, so you def need to setup a backup system and backup frequently**
-
-**openSUSE**
-  - for people that just want a hassle-free working system that doesn't want to waste time tinkering and building everything from scratch
-  - provides options to customize making a great out-of-the-box experience
-    - OBS, OpenQA, snapper, BtrFs by default, YasT
-      - **YaST**, an all-in-one system config tool
-      - "snapper saves your @$$"
-      - AUR (arch's user repo) > OBS
-      - BtrFs
-        - a file-system that allows quick 'n small snapshots, among many other contemporary disk-related features
-    
-  - Tumbleweed
-    - rolling release, 1 snapshot max per day, so more like release nearly every-day
-      - tested by a company
-    - "Tumbleweed feels like Fedora, works like arch and installs like Debian. The best of all."
-
-  - Leap
-    - intervalled release
-
-fedora
-  - releases every 6 months
-  - dnf > apt
-    - dnf history list
-    - dnf history undo
-  - encourages using flatpaks (cross-platform, portable packages) over third-party repos
-
-debian
-  - releases every 2 years!!
-    - meaning your software will nearly always be out-dated!
-    - the debian security team only works on the current release, so you must update it (except for LTS versions, which have security updates for 5 years)
-  - can use unstable and testing/"sid" branches of the repo for latest, untested software
-  - the free and open-source (FOSS) standard
-  - the main community-based distro
-    - (as opposed to company-owned)
-  - to use more recent packages, just download them using snap, flatpak, etc.
-    - benefits from being safe too
 
 
 
