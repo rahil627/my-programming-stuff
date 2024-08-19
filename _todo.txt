@@ -1,0 +1,12 @@
+todo:
+
+add some top padding to helix
+change file associations to helix
+  - create a shortcut to windows terminal / helix
+
+
+TODO: test if ruby-lsp works, if not:
+installed msys2
+  - only 50mb!
+TODO: run 'ridk install'
+
