@@ -40,11 +40,12 @@ answer:
 
 
 
-0. RubyMotion
-  - maybe worth trying, if you just need mobile
 1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??) thus quite limiting(??) nor if your focus is on web (due to limited styling by widgets provided?? and slow??), faster compiled language, simpler by design, **covers most use cases**
   - C# alts: Avalonia, Uno
-2. Haxe
+?. RubyMotion
+  - can try it, though be weary
+?. Haxe?
+  - cna try it for ui app, though be weary
   - adds the benefits of haxe: cross-platform, export to anything and thus allowing you to use any target langauge libs, including stuff like python (for science libs), java and JVM langs, c#, c, c++, and so on
   - haxe has a few solutions
     - **Haxe-UI**
@@ -72,13 +73,13 @@ answer:
     - react-hx
       - haxe bindings for react native
   - TODO: **why not just use a game engine like heaps?**
-3. React Native for the **huge open-source javascript libraries and community**, *nasty* raw HTML/CSS ui language, although maybe not the best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
+2. React Native for the **huge open-source javascript libraries and community**, *nasty* raw HTML/CSS ui language, although maybe not the best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
   - C# alts: MAUI
 ?. Qt, with official python bindings, maybe can write C++ code to access native componenets?, but that would be *grooosss*, but definitely safer long-term investment as Qt is the oldest and Google abandons all of their products
 
 it seems in general that **Flutter is amazing with an excited new community, quite like React Native was in the past, but limited, whereas React Native still lives on, native support for everything, now including Microsoft covering the Windows and even MacOS targets (surely a big stab at Apple's closed source nature). Flutter can be used for most simple cases. React Native can be used for more technical, experimental, custom cases that requires much native component access, and doesn't constrain.
 
-SwiftUI is constrained by it's terrible MacOS/XCode dev environment: you basically need a Mac (hardware). I'd much rather just use VS Code or even straight up nvim for a relaxed scripting feel. :) happiness *matters*.
+SwiftUI is constrained by it's terrible MacOS/XCode dev environment: you basically need a Mac (hardware). I'd much rather just use VS Code or even straight up terminal editor for a relaxed scripting feel. :) happiness *matters*.
 
 also, although i haven't used javascript for a decade, i'm just not interested. Not then, not now. It sounds like a messs. A mess of shiity web devs. I personally don't need a million libraries. Just one good standard library is enough... *maybe.* Can always check npm for libs later on to compare... Or who knows, maybe Google/Dart will just build a javascript compiler, like Haxe (so that you can use javascript libraries)..
 
@@ -125,16 +126,19 @@ wxWidgets
     - http://haxeui.org/getting-started/hello-world/
       - pretty sick, just change build target and bam! but surely mobile support is lacking. :(
 
-**RubyMotion**
+RubyMotion
   - http://www.rubymotion.com/about/
   - **mac os x, ios, android platforms only**
     - thus, really mainly for mobile platforms only
     - because the ruby runtime was forked off or inspired by macruby
       - **thus doesn't use vanilla ruby, and thus won't work with most ruby gems :(**
-  - closed source, made by the same people that made DragonRuby, the cross-platform game framework
+        - thus very likely a few small community and small library system
+  - closed source?
   - *i think* it's a hybrid, basically just bindings to everything, wherein you'd have to develop specifically for each platform target
   - at the moment there's a free version ("starter"), then, perhaps after it is popular or for publishing to other devices you need to pay quite a bit..
   - llvm
+  - https://davetrollope.medium.com/i-found-the-holy-grail-in-cross-platform-mobile-development-915500c1c4ca
+    - "I released the iOS app and quickly acquired a number of users, so I moved on to developing an Android version. RubyMotion fell flat on this endeavor. I was unable to use get the app very far without considering new Java bindings for APIs I wanted. Not something that I consider a cross platform solution, from a users perspective."
   - basically run by 1 person: amir rajan
 
 React-Native
@@ -181,7 +185,7 @@ Uno?
 
 
 # non-native
-for a single, indie dev, these are the way to go. Well, either this or web (React, without the Native), which is inherently cross-platform
+for a single, indie dev, these are the way to go. Well, either this or web, which is inherently cross-platform
 
 Qt
   - the grand-daddy of all non-native ui frameworks
