@@ -40,8 +40,11 @@ answer:
 
 
 
-
-0. Haxe
+0. RubyMotion
+  - maybe worth trying, if you just need mobile
+1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??) thus quite limiting(??) nor if your focus is on web (due to limited styling by widgets provided?? and slow??), faster compiled language, simpler by design, **covers most use cases**
+  - C# alts: Avalonia, Uno
+2. Haxe
   - adds the benefits of haxe: cross-platform, export to anything and thus allowing you to use any target langauge libs, including stuff like python (for science libs), java and JVM langs, c#, c, c++, and so on
   - haxe has a few solutions
     - **Haxe-UI**
@@ -69,9 +72,7 @@ answer:
     - react-hx
       - haxe bindings for react native
   - TODO: **why not just use a game engine like heaps?**
-1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??) thus quite limiting(??) nor if your focus is on web (due to limited styling by widgets provided?? and slow??), faster compiled language, simpler by design, **covers most use cases**
-  - C# alts: Avalonia, Uno
-2. React Native for the **huge open-source javascript libraries and community**, *nasty* raw HTML/CSS ui language, although maybe not the best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
+3. React Native for the **huge open-source javascript libraries and community**, *nasty* raw HTML/CSS ui language, although maybe not the best performance for mobile, it's **still the best solution for web targets**, and **you get access to native components!!, allowing you to basically write native code on any OS at a high-level without ever touching native tools/languages/devices/etc.**
   - C# alts: MAUI
 ?. Qt, with official python bindings, maybe can write C++ code to access native componenets?, but that would be *grooosss*, but definitely safer long-term investment as Qt is the oldest and Google abandons all of their products
 
@@ -116,15 +117,28 @@ Ruby
 basically bindings to native components (UIKit for iOS, Win32 api for Windows, etc.). This is the first solution that came to my mind when i thought cross-platform ui/apps : just provide bindings, and then a common framework on top of that. **The main trade-off is this: it will not constrain as you always have acces to native APIs, but you must understand the inner APIs of each target: UIKit for Apple, Win32 for Windows, and so on. Thus, this is definitely not for the casual or even the indie devs.** Indies should go one step up, to "owner-drawn" non-native frameworks.
 
 wxWidgets
-  - a very old but solid open-source C++ project
+  - the grand-daddy of hybrid frameworks
+    - a very old but solid open-source C++ project
   - **mobile support is pretty non-existant**
+  - "produces apps with a distinctive 1990s feel"
   - there are many bindings for it, including one for haxe! HaxeUI contains it as a build option!!
     - http://haxeui.org/getting-started/hello-world/
       - pretty sick, just change build target and bam! but surely mobile support is lacking. :(
 
+**RubyMotion**
+  - http://www.rubymotion.com/about/
+  - **mac os x, ios, android platforms only**
+    - thus, really mainly for mobile platforms only
+    - because the ruby runtime was forked off or inspired by macruby
+      - **thus doesn't use vanilla ruby, and thus won't work with most ruby gems :(**
+  - closed source, made by the same people that made DragonRuby, the cross-platform game framework
+  - *i think* it's a hybrid, basically just bindings to everything, wherein you'd have to develop specifically for each platform target
+  - at the moment there's a free version ("starter"), then, perhaps after it is popular or for publishing to other devices you need to pay quite a bit..
+  - llvm
+  - basically run by 1 person: amir rajan
 
 React-Native
-  - the grand-daddy of hybrid frameworks?, and still perhaps the most popular (as of 2022)
+  - the most popular solution as of 2022
   - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
   - **uses native device componenets / wrappers**
   - javascript, but since haxe has bindings, perhaps there are other bindings?? :o
@@ -146,13 +160,14 @@ React (web)
   - as of 2022, still the most popular
   - made by Facebook? (*vomit*)
 
-Maui <- Xamarin
+Maui <- Xamarin(.Forms)
   - .net / c# world, uses native ui
   - two ways to do ui: forms library can be used for completely code-shared ui, or, ios and android specific libraries can be accessed making for more complex platform-specific ui
   - there is only ‘fast deployment’ for android devices via android studio; there is no live-reloading
   - old-school build ‘n deploy process
   - **of the big 3 (Flutter, Xamarin, React), this was the least loved**AUI (Xamarin)
   - C#/.NET WinForms(?) api
+  - maintained by .NET foundation
 
 Uno?
   - C#/.NET WPF api
@@ -162,11 +177,6 @@ Uno?
   - more mobile-oriented
 
 
-RubyMotion
-  - closed source, made by the same people that made DragonRuby, the cross-platform game framework
-  - *i think* it's a hybrid, basically just bindings to everything, wherein you'd have to develop specifically for each platform target
-  - at the moment there's a free version (not sure if it's a trial or not...), then, perhaps after it is populra or for publishing to other devices you need to pay quite a bit..
-  - basically run by a 2 people
 
 
 
@@ -177,16 +187,17 @@ Qt
   - the grand-daddy of all non-native ui frameworks
   - i didn't even know it still existed!!
   - impressive use history: from contemporary use in Linux's KDE desktop UI(!!!) to Valve's Source Engine
-  - official python bindings :o
+  - C++, but has official python bindings :o
   - non-official rust bindings
   - feels like a massive tool :(, like as big as Unity!
+  - renders controls using media graphics libs: opengl, directx, vulkan, etc.
 
 **Flutter**
   - the contempory banger, quickly rose in popularity, equaling React-Native to become top 2
   - hot-reload works on all devices, it's quite the killer feature
+  - web target sucks, but mobile is great, and desktop is really good, though feels mobile, as it uses the same graphics/ui
   - Dart has VM during development and AOT compilation for production, basically like Haxe
   - *tiny* minimum
-  - hot-reload
   - supports native widgets and web
   - mobile as main target, but works on everything!
   - renders/draws using Skia graphics lib
@@ -196,7 +207,7 @@ Qt
 Avalonia
   - C#/.NET version of Flutter
   - renders widgets with Skia (like Flutter)
-  - uses one of the C#/.NET WinForms-like api to build widgets
+  - uses one of the C#/.NET WinForms-like api (WPF) to build widgets
   - more desktop-oriented
   - "cleanest" code-base
   - "We've had huge companies adopt Avalonia for their desktop apps, including JetBrains, GitHub, KLM and more."
@@ -209,7 +220,7 @@ Electron
   - i'm not really sure if this even belongs here, but i think you can make anything with it..?
   - the major problem: it runs on top of a web browser: Chromium, meaning, each Electron application contains a copy of Chromium inside! :o
     - just based off this alone, it does not intrigue me... but:
-  - VS Code, Skype?, Slack?, etc.
+  - VS Code, Skype?, Slack?, etc., basically any app that started as a web-app used this to make a "native"'ish app
 
 
 
