@@ -1,8 +1,10 @@
 
 TODO: to merge
+
 conclusion:
 phoenix framework
-i chose web-app frameworks that provides a systems programming like experience, for the longevit of web. BUT, i'm not convinced that game engines aren't good for web-apps.
+  - i chose web-app frameworks that provide a systems programming like experience, and the longevity of web. BUT, i'm still not convinced that game engines aren't good for making ui-apps, or any app really
+  - also, just focusing on one target, the web, which is inherently cross-platform, avoids compiling/testing for multiple platforms, though flutter does seem really good, it's not so great for web, and limited in style, which is constrained to the style of mobile apps
 
 see web-app-frameworks.txt
 
