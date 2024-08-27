@@ -105,6 +105,23 @@ also provides a clutter/distraction-free experience
   - rust
     - much much much better than vim script (and lua), but not so sure how it compares to elisp, as lisp is quite the ideal langauge for providing a simple way to extend the program
 
+
+
+a new classic?:
+**glamourous toolkit**
+  - kind of **the emacs of smalltalk**, but made in ~2020?, after 6 years of dev, 14 years of research
+    - "It seems an editor/database query engine/ browser with a object oriented language Pharo as control/scripting language, while emacs is an editor with emcas-Lisp as the scripting language."
+  - *the moldable development environment*: uses the features of smalltalk, especially it's built-in IDE, as tools to create your own specific applications: like for code-base exploration/documentation, build an editor, etc.
+    - https://lepiter.io/feenk/what-exactly-is-glamorous-toolkit-v1-0--7sex44dze2dqlocqxwfz8ju0i/
+      - "Our goal is to make systems explainable by means of custom tools created for each problem. Glamorous Toolkit makes this possible by making the creation of custom tools inexpensive and seamless."
+      - "A central component in GT is Lepiter, the knowledge management system."
+  - built on Pharo, though it's a project of it's own
+    - renders crisply to retina displays compared to Pharo's native ui
+    - "GToolkit uses a completely parallel graphics stack to standard Pharo. The VM and library ecosystem are still there but the UI is rebuilt from scratch on a modern vector based toolkit.
+    
+      The productivity of the GToolkit developers is impressive."
+
+
 classics:
 emacs
   - much more than a text editor, it's basically an OS!
