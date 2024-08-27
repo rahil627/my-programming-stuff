@@ -10,10 +10,13 @@ zaiste video series
 beginner bundles:
 https://github.com/emacs-tw/awesome-emacs#starter-kit
 
+configs of great programmers:
+https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
+
 
 **DOOM**
   - i had a great initial experience using this, felt wayyyy easier and way more intuitive than using neovim!
-  - tailored for Emacs bankruptcy veterans who want less framework in their frameworks, a modicum of stability (and reproducibility) from their package manager, and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite operating system."
+  - "tailored for Emacs bankruptcy veterans who want less framework in their frameworks, a modicum of stability (and reproducibility) from their package manager, and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite operating system."
   - "fast, closer to metal, opinionated, no forced plug-ins, nix/guix"
   - 150 modules!
   - "If you want something closer to what you know, and less involved to customize (less barebones basically), doom is what you want."
