@@ -7,15 +7,14 @@ inuititive learning experience
 unrestrictive
 
 conclusion:
-x/0. doom emacs
-  - potential is unlimited thanks to emacs, but emacs is not a wormhole i'm willing to invest in at my current later age
-  - TODO: still should try it some more
+0. emacs (doom)
+  - potential is unlimited thanks to emacs, but it is indeed a rabbit hole
+    - TODO: still should try it some more, also will get the chance to try lisp (via elisp) and have the best lisp dev environment too (elisp, common lisp, clojure)
 ?. focus (editor)
   - TODO: try it, though it'll be tough for one person to beat the rust hive-mind helix has
 1. helix (or other fav terminal editor / key-bindings)
   - for quick general use, along with cli tools, remote terminal use, a good step towards emacs
-  - adds tree-sitter
-  - supports lsp and dap!!
+  - supports tree-sitter, lsp, and even dap
   - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
     - an emacs user switches to helix and mentions some good plugins
     - TODO: try them!
@@ -123,13 +122,22 @@ a new classic?:
 
 
 classics:
-emacs
+**emacs**
   - much more than a text editor, it's basically an OS!
   - elisp macros
     - actually a joy to use (especially when compared to vimscript!)
     - because it's lisp, you're basically writing the program itself, not merely some plugin manager
   - mature, well-written plugins
-  - org-mode
+    - **org-mode**
+      - the ultimate knowledge-base software, simple yet powerful
+      - **org-babel**
+        - can combine programming languages, using the output of one as the input of another, perhaps similar to the much much later jupyter notebooks
+    - magit
+      - the best git experience
+    - auctex
+      - the best latex experience
+    - slime (common lisp), geiser (scheme), cider (clojure)
+      - the best common lisp dev environemnts
   - "m-x is godsend"
   - slow startup time
   - **doom-emacs**
@@ -142,11 +150,14 @@ emacs
   - every person that i've known that uses emacs is a great great programmer/problem-solver/maker
   - emacs itself is speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
 
+  https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
+
 (neo)vim
   - vim
     - modal (normal, insert, visual/select, command)
     - *heavily* key-board input user interface
       - i personally feel more comfy using a touch-screen/mouse/keyboard combo
+      - it's legacy is based on it's key-mappings: modes, motions, actions, etc.
   - lua scripting for configs 'n plugins!
     - used to be in an archaic language: vimscript, which killed it
   - horrendous amount of time wasted starting out from scratch, reminiscent of the terrible linux config experience, but worsened by archaic language and the unprofessional open-source community it attracts
