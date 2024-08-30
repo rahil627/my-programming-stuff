@@ -1,22 +1,18 @@
-https://www.dropbox.com/s/bl9lzjuyvdk57l8/luxe_launcher-0.0.17-linux.zip?dl=0
 
+# setup
+install vs-code extension for luxe, which includes everything for wren too?
+  - https://marketplace.visualstudio.com/items?itemName=luxeengine.luxe
+  - also make sure this stupid setting is off:
+    - "editor.wordBasedSuggestions": "off",
 
-https://ruby0x1.itch.io/luxe/download/MeScnHS6IibYmLURCnyzkuMfxjgc8UuBxMKRT0Ty
+install luxe launcher
+  - install luxe-agent module
+    - provides auto-complete to the vscode extension
+  - install debug module
+    - provides a debug console
 
-(download the zip directly instead of using the itch app atm)
-
-**setup steps** here: (doc link is private of course): https://ruby0x1.ca/dev-lx/get/
-login: ||`luxe + create with luxe` - spaces included||
-
-the second step to make sure everything is good to go: 
-**follow all the steps on this page** to run via code + editor: https://ruby0x1.ca/dev-lx/tutorial/create-and-run-a-project/
-
-tell me if anything goes wrong
-
-
-
-
-
+https://luxeengine.com/docs/
+  - "create with luxe"
 you'd start here: https://ruby0x1.ca/dev-lx/guide/
 and then here https://ruby0x1.ca/dev-lx/tutorial/overview/
 
@@ -30,3 +26,197 @@ the guide is important for big picture, and the tutorial highly recommended as i
 - don't miss the code completion setup https://ruby0x1.ca/dev-lx/guide/workflow/#code-completion
 - you can file issues here https://github.com/luxeengine/preview/issues/
 - you can post an intro here, it's encouraged https://github.com/luxeengine/preview/discussions/1
+
+
+
+
+project structure:
+luxe.project
+  - modules.lx
+    - dependencies
+scene
+  - level.scene
+    - class.??.entity.lx
+      - contains the values of an entity class, which are the values of it's modifiers (transform, sprite, etc.)
+outline
+  - inputs
+    - inputs.input.lx
+      - very simple key-mappings for keyboard, mouse, gamepad!
+
+
+
+
+architecture notes:
+SomeClass.create() // constructor name is usually create
+  - Entity/Modifier/Scene.create()
+SomeClass.destroy()
+  - also usually provided by many classes
+
+
+https://luxeengine.com/docs/guide/concepts/
+  - API isn't object-oriented, often uses static functions instead of class instance public functions
+    - World.set_rate not world.set_rate
+    - sometimes these instances are called a "handle"
+    - "This makes it easier to find all call sites of any particular API, and instead of treating objects as instances which have a cost to create and maintain, they are treated as a primitive value. They're just like a number, making them light weight."
+  - commit (batch)
+    - for example: queueing up for drawing, then committing changes when done
+
+
+classes:
+    
+Asset
+  - Asset.scene(id)
+
+Prototype ("prefab" in unity)
+  - "Prototypes are similar to a Scene, they are pre-configured entities with their modifiers ready to create. They can be created dynamically, and they can be placed inside a scene, and inside of other prototypes. Each instance can have the values from the prototype overridden when placed that way."
+
+
+
+
+modifiers/prefabs:
+Transform
+    var scale = Transform.get_scale_world(entity_b)
+    var height = Arcade.get_height(entity_b) * scale.y
+    var top = Transform.get_pos_y_world(entity_b) + (height * 0.5)
+    var dist = (top - (Transform.get_pos_y_world(player) - 32))
+
+    if (dist > 32)
+      ...
+
+    
+
+
+  
+
+modules:
+can use the launcher to add modules to a project via a '+' button or just add the imports manually
+
+luxe modules:
+
+world module:
+World
+  - set_rate(world, 1)
+    - 0 to pause, 0-1 slow down, 1 normal speed, >1 faster speed
+
+Tags
+  - has_tag
+  - very interesting..: it's implementation seems similar to adding a modifier/componen-system: just no factory create function, but has access to all entities
+
+game module:
+Frame
+  - init -> sim -> visual -> debug -> end
+  - Frame.end { do-something() }
+  - Frame.before/after(section, priority)
+    - order execution with priority
+
+
+scene module:
+a world can have multiple scenes, which makes it useful for layering/grouping objects in a complex scene
+
+"Scenes are typically created with the luxe editor, but they're simple data inside of a folder. Take a look inside the scene/level.scene/ folder, and look inside any .entity.lx file!"
+    
+
+input module:
+Input
+  - basic input release/press
+"named input event" 
+  - name assigned to one or more inputs
+
+
+
+
+other official modules (not a part of luxe module):
+luxe-agent
+  - provides code completion
+  
+debug
+  - provides debug console
+  
+kenney
+  - a selection of assets from a nice free/contributed asset packs site
+  
+arcade
+  - Arcade, ShapeType, CollisionEvent..??
+    - Arcade includes velocity?, get_height (why?)
+    - note: colliders/collision-handling aren't a modifier/prefab
+
+shape
+  - draw simple 2d shapes
+
+camera
+
+
+
+
+
+
+two ways of making:
+from scratch "immediate-style api" (a la monogame, heaps, dragonruby, foster, and other minimalist/media frameworks) creating sprites or primitives and drawing them, or, an entity-componenty-system "world api", which is provided, and which is closely tied to the provided editor (a la unity, godot, etc.)
+
+"With the world system, we can create things in the world that will continue to draw as long as they're alive."
+
+
+
+# guide
+https://luxeengine.com/docs/guide/
+
+world
+  - "The world gives you the tools to manage your things, and lets you create spaces where your game can happen."
+  - "You also often have more than one world, like a UI world and a game world."
+
+entity
+  - a unique thing in a world
+
+modifier (component)
+  - ~"A modifier describes something you want the entity to be able to do. Just attach a modifier to it to do something. What an entity looks like, how it behaves, and what it actually is can change during the game, just by attaching and detaching modifiers."
+  - **it doesn't have to be a concept based on a real or single idea, it could be move-and-explode-and-delete**, and maybe that's why it's named modifier instead of component
+  - "Inside the tick method of our modifier, we are handed the entity that we're attached to. This entity is the prototype root of our instance, because that's the entity we attached it to."
+
+  TODO: move this to the architecture section
+  in a modifier file:
+  tick(delta: Num) {
+        each {|entity: Entity, pillar: Data|
+        
+            }
+              }
+  }
+
+  // TODO: system_in method fetches the system to call into??
+  var system: System = system_in(world)
+
+systems
+  - ~"are what power modifiers. The modifier is added to the entity via a world *system*. A modifier describes what you want, but the system is what actually makes it happen."
+  - "A modifier system sees all entities that is attached to, rather than on an individual entity level. We can see this in the tick method, it has an each method which will hand us each entity and the data for that entity."
+    - there is one system per world
+
+
+
+
+
+
+
+# tutorials
+
+## create a project
+use the luxe.exe launcher to create a project
+open the created project folder with vscode
+  - (make sure you have the luxe extension installed)
+    - the link to the .vsix file is somewhere on the right side
+open game.wren
+c+s+b to build
+
+
+## draw and input / breakout game
+goes over the game programming basics without using the ECS to make a primitive breakout game
+
+
+## world
+goes over the ECS-way of making games
+(see architecture notes)
+
+
+## editor
+https://luxeengine.com/docs/tutorials/editor/
+  - TODO: 404
+
+  

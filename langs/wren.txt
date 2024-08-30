@@ -30,4 +30,41 @@ https://github.com/wren-lang/wren-cli
   - test/io folder for file stuff
   
 
+
+
+TODO: https://luxeengine.com/docs/guide/wren-primer/
+
+design patterns:
+
+class In {
+    // class acts like an enum
+      static jump { "jump" }
+      }
+}
+
+
   
+syntax:
+
+// string interpolation
+Log.print("creating a pebble at `%(pebble.x) , %(pebble.y)`...")
+
+class Hello {
+    // **class fields must come first**
+    // **and must be initialized**. can use any expression
+    var value = 3
+
+    // constructor
+    construct new/create() {}
+    object.new/create() // like ruby!
+}
+
+each {|entity: Entity, pillar: Data|}
+
+// input is a function, but no ()?
+Frame.end { do-something() }
+
+// hmmmm... TODO: try to comprehend some more..
+Arcade.add_collision_callback(player) {|entity_a, entity_b, state, normal, overlap_dist|}
+
+
