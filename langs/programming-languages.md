@@ -18,8 +18,8 @@ https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
       - **in the sokobon game, the id uses 32-bits, the top bits for user id and the bottom bits for the entity id, and use a hashmap for it, because that would be a really big array, because the high-bits are set**
 
 https://www.youtube.com/watch?v=y2Wmz15aXk0
-  - the idea of using a scripting language in a game was a failed experiment
-  - scripting languages are "slow, bug-proned, impossbile to debug"
+  - **the idea of using a scripting language in a game was a failed experiment**
+  - scripting languages are "slow, bug-proned, impossibile to debug"
 
 # other junk
 https://www.youtube.com/watch?v=klE9bzWJbHc
@@ -42,14 +42,6 @@ red
 languages sorted by their use cases
 
 ## general langs
-(ordered from basic to general)
-**powershell (v7+)** > fish > bash/zsh
-  - batch commands, extremely simple scripts (in bash/powershell) for portability
-  - personal basic shell functions/"modules"/"cmdlets" (powershell > fish; *fish script is now completely useless!*)
-  - automation, especially for windows
-  - bigger scripts
-    - powershell is powerful enough to do just about anything, and thanks to it's access to the .net framework, it actually can do anything
-  - powershell is now cross-platform (since v7?)
 **lisp (common lisp, sbcl)**
   - **true zen programming**
   - used wherever one would use C or Go
@@ -69,27 +61,46 @@ languages sorted by their use cases
   - open-source language not run by a corporate giant, yet used by and supported by giants (github)
   - (still need python for ai/ml/stats/math/etc. data sciences)
     - could probably just port what you need, adding to ruby's libraries
-  - with mRuby, Crystal, can keep favorite syntax and use for nearly everything
+  - **with mRuby 'n Crystal, can keep favorite syntax and use for nearly everything**
+    - "mruby bytecode can be embedded in C code, and thus, can be compiled into a standalone executable." via normal c compilers (gcc/clang)
+    - has a virtual machine too, for quicker debugging/execution
   - restriction: not performant enough for real-time interaction such as games or embedded devices (though there's mRuby), and not the most performant for web either
   - restrictions: no simple cross-platform compiled binary executable (no current packaging tool either?), dynamically-typed and meta-programming (and therefore tough debugging and auto-completion problems)
+  
 (**jai** >) **haxe** >= crystal == nim >? C# > java/kotlin
   - general all-round use, covers most cases
   - haxe always had cross-platform in mind
     - c# took a long long time to reach c# core (previously mono)
   - haxe is the ultimate "kitchen-sink" language
   - most use llvm compiler and are comparable in speed (magnitudes faster than scripting langs), except C#/java
+    - c# didnt have a native compiler until 2024!! (.NET 8)
   - all use a garbage collector, so C/C++ code will be written seperately and then called
   - **resulting programs more portable/cross-platform due to compiled executable binary**
   - all are powerful in features: macros (or C#'s "source generator"), ADTs, etc. metaprogramming, generics
   - many come with multiple compile options for quick testing/running: interpreter, bytecode/vm (haxe/hl), in addition to standard compilation
   - able to contribute to a tiny game-oriented community (haxe, jai)
   
-## special cases:
+## specialized langs:
+**powershell (v7+)** > fish > bash/zsh
+  - batch commands, extremely simple scripts (in bash/powershell) for portability
+  - personal basic shell functions/"modules"/"cmdlets" (powershell > fish; *fish script is now completely useless!*)
+  - automation, especially for windows
+  - bigger scripts
+    - powershell is powerful enough to do just about anything, and thanks to it's access to the .net framework, it actually can do anything
+  - powershell is now cross-platform (since v7?)
+  - quite specialized for shell cases
+  
 javascript (and typescript?)
-  - the standard browser language
-    - can't run from it, though i can keep trying!
+  - not really special, just happens to be the standard browser language
+    - can't seem to run from it, though i can keep trying!
   - i'm told it's much much better than it used to be
+
+various custom scripting laguages (wren, gdscript, etc.)
+  - games, big apps
+  
+## special cases:
 go
+  - TODO: maybe replaced by lisp (common lisp, sbcl)!
   - **zen systems programming**
     - **a great way to get back into programming, and getting shit done, without being overwhelmed by features (haxe, ruby, 'n especially rust all suffer from this in their own way)**
       - though, i still prefer haxe.. and haxe's little community <3
@@ -124,12 +135,12 @@ haxe
   - best to stick to C as it is *the language* of nearly everything, including consoles, mobile devices, and embedded devices, one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
   - zig is very very good here, but i hope i never have to go down to this level
 Ocaml
-  - parsing/compilers, and other problem/solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data too
+  - often used for parsing/compilers (haxe, rust), and other problem/solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data too
   - resulting programs are quite pretty thanks to it's functional paradigm side and concise syntax
+  - ..i just personally really liked the feeling of it, seeing it in haxe's compiler
 crystal/nim
   - for porting ruby/python code for performance and/or building binaries, keeping the same syntax
-    - good if you have ruby/python syntax in mind and don't want to use Go, or want more features than go
-
+    - good if you have ruby/python syntax in mind and don't want to use Go, or want more features than go without learning/cognitive load of rust/C++
 
 
 # my choices
@@ -151,15 +162,15 @@ crystal/nim
 
 zig and odin, although C-replacements such as these exist, all clearly much superior to C, as far as consoles go, *i think* you'd still be restricted to using C/C++, and even then it'll be finnicky with hardware specific stuff, so i don't see much reason, *yet*
 
-**common lisp (cbcl)**, an intro dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting via embedding (perhaps some small, embeddable dialect?) and just plain cli scripting
+**common lisp (sbcl)**, a main dialect of Lisp, for god-like macros and *zen way of programming*, especially for super simple scripting purposes, such as extending a program (emacs), but also for writing just about any program!
    - an alt to ruby for many cases
 
 pharo or squeak or cuis, the main three Smalltalk dialects, for god-like productivity, can alter anything *any time* (while the program is running) making it really ideal for a game programming environment
 
-## no
-x/embedded scripting langs (lua, wren) don't really have a place now that rust and C-replacements like zig are here
+embedded scripting langs (lua, wren, custom scripting languages), good for domain-specific uses, often big apps such as games
 
-x/shell languages (bash, zsh, fish, etc.) for shell scripting, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
+## no
+x/older shell languages (bash, zsh, fish, etc.) for shell scripting, more like gluing, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but maybe Ruby can do this well too?..)
 
 
 ## notes
