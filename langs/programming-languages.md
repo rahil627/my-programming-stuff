@@ -1221,48 +1221,70 @@ chatgpt, github copilot, vs studio intellisense
 
 
 
-# language compilation/interpretation speed
+# language execution speed
 just a very very very broad gut feeling, lol
 
-tier 1
+note: benchmarks are usually impractical, only exacerbating very specific differences
+
+tier 1:
   - usually manual memory management
   - compiles to native machine code
-**Rust** (borrow-checker)
+**C** (clang)
+(Zig, V, etc.)
 C++
-C
-Go (GC)
+**Rust** - note: also the most complex and featureful language here
 Chapel (??)
 
-tier 2 
-  - usually garbage-collected
-  - these are somehow comparable to the speeds of the non-gc languages... :o
-**Crystal** (llvm)
-**Haxe** (via transpiled c or c++)
-  - not in the benchmark, and not sure where this goes.. but when compiled to C, it's probably very fast  
-Java (fastest VM)
-**Dart**
-Kotlin
-Swift (llvm and/or reference-counting obj-c)
+**common lisp (sbcl)** - note: garbage-collected
+Go - note: garbage-collected
+
 
 tier 2:
-  - usually bytecode/vm
-Scala
-C#
+  - usually garbage-collected, or otherwise memory-managed
+  - AOT compiled exe binary or jvm
+**Crystal** (llvm) - note: very slow compiles times
+C# (native?)
+**Haxe** (via transpiled c or c++)
+**OCaml** - suprising for a (impure) functional lang!
+Java (fastest vm) - an exception to binary
+**Dart** (dart2native?)
+Kotlin (jvm?)
+Swift (llvm and/or reference-counting obj-c)
 Nim (llvm)
-Lua (LuaJIT -j)
-  - the interpreter that set the standard
-
-Python (pypy)
-Elixer
+Mojo
+Scala (jvm)
 
 
 tier 3:
-  - usually interpreted
-Wren - between Ruby and LuaJIT, but closer to Ruby
-Ruby - ~5x slower
-Lua - ~5-15x slower
-Python - ~10-15x slower
-Perl - ~20+ slower
+  - very complex, contemporary bytecode/vm JIT implementations written by gods
+(some JIT lisp?)
+
+**Elixir** (BEAM) - note: the magical concurrency that occurs in BEAM puts it on top of most dynamic languages, especially when it come to real applications (not synthetic benchmarks, nor hand-written concurrency)
+
+**Julia** - super fast for a dynamic lang..??
+JS (bun, node)
+Lua (LuaJIT -j) - the interpreter that set the standard
+Dart (JIT) - surprisingly fast, or maybe not, since it's google
+(python/pypy and ruby/truffleruby would go here but are impractical)
+
+PHP
+Ruby (YJIT > MJIT) - an alt. runtime, practical too
+Ruby3 - 3x faster
+
+
+tier 4:
+  - simpler, earlier interpreted bytecode/vm impementations
+  - the differences here are much bigger, hence spacing
+Scheme (Chez)
+
+**Wren** - intentionally written to have a simple vm
+Ruby (CRuby/standard impl)
+Lua (LuaJIT -joff)
+
+Python3 (CPython/standard impl)
+Lua (stndard impl) - actually slower than i thought..
+
+Perl - slowww
 
 https://benchmarksgame-team.pages.debian.net/benchmarksgame/
   - a joke, and hard to read, because it's more of a competition in which people upload crazy optimized programs that use multiple-cores/threads, but you can kinda see the limits and means using the simple implementations
