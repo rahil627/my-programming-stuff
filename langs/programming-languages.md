@@ -931,13 +931,19 @@ Pony
   - embeds in to C
   - not worth the trade-off in games (hence why unreal engine stopped using it), as mentioned by jon blow
 
-**lua**
-  - extremely simple (only perhaps second to lisp), most performant vm, rock solid
+lua
+  - extremely simple (only perhaps second to lisp)
+  - the most performant vm/"luaJIT compiler" of all dynamic programming languages, pretty much thanks to the one guy that made it
+  - weird but powerful data structure: the table
 
-wren
-  - modern sytnax with object-oriented features
+**wren**
+  - modern sytnax with object-oriented features (classes)
+  - go-like concurrency via "fibers"
   - modular / doesn't come with a std lib
     - can add libuv (a contemporary cross-platform std C lib) to it, as in Luxe
+  - not luaJIT fast, but at least ruby speed
+  - perfect for games! :)
+  - made with <3
 
 squirrel
   - was used by a few game companies as a general scripting lang for games that even ran on consoles
