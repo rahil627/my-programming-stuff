@@ -174,9 +174,9 @@ x/older shell languages (bash, zsh, fish, etc.) for shell scripting, more like g
 
 
 ## notes
-although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, however, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixer can work with Erlang, Crystal has good C api and can maybe use Ruby as a scripting languages (via Anyolite lib), and Ruby's default implementation is C (though, it probably has the most implementation of all langauges). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting.
+although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can maybe use Ruby as a scripting languages (via Anyolite lib), and Ruby's default implementation is C (though, it probably has the most implementations of all langauges). Thus, its better to just stick with Haxe and maybe keep the original Ruby for scripting.
 
-it seems like Ruby is still better for general scripting. As for Elixer, once you include another file, you basically have to create a project for it. For Crystal, you must either compile it every time in order to run it (just adds a second) or save the compiled binary (i'm not sure if the eval interpreter is enough...). For Haxe you have all of those choices plus more (interpreter, VM bytecode, LLVM-optimized C binary), you just need to make sure you have a Main class ;). However, it's still nice as it contains about 80% of the same syntax as Ruby.
+it seems like Ruby is still better for general scripting, mostly thanks to it's vast industry-tested libs. As for Elixir, once you include another file, you basically have to create a project for it. For Crystal, you must either compile it every time in order to run it (just adds a second) or save the compiled binary (i'm not sure if the eval interpreter is enough...). For Haxe you have all of those choices plus more: interpreter, VM bytecode, LLVM-optimized C binary; you just need to make sure you have a Main class ;).
 
 
 # what langauge is best for my needs?
@@ -233,9 +233,9 @@ with WebAssembly now, can just skip the whole HTML5/WebGL crap and basically run
 ## move from dynamically-typed to static-typed
 "imo, not having static typing is a real pain for anything bigger than a small script, as it introduces a lot of potential bugs" - CRobes, from the haxe discord
 
-i don't know the reason why this exists, save a very minor convenience of not physically typing the type keyword, which is mostly avoided by *type inference* anyway...
+**i don't know the reason why this exists, save a very minor convenience of not physically typing the type keyword, which is mostly avoided by *type inference* anyway...**
 
-i'm just guessing in the special case of server-side: server-client api, it has some special reason? like to talk to javascript maybe?? i dunno..
+i'm just guessing in the special case of server-side: where perhaps it makes more sense for a server to run scripts as opposed to a single executable, which must be compiled every-time you want to update it
 
 AS2 -> AS3/haxe (a whole new language and compiler)
 js -> ts (transpiles to js)
