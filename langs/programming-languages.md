@@ -351,12 +351,15 @@ Smalltalk
   - however, because there are no files, and that you are forced to use it's only IDE, often which looks like it's stuck in the 80s or 90s, it detracts most people
   - https://squeak-dev.squeakfoundation.narkive.com/wuWIwY6M/game-programming-in-squeak
     - discussion why it isn't good for games
+  - made in a MIT lab in 1980, huge influence in all programming langs: VM -> Java VM, objective-c, all "object-oriented" paradigms, etc.
   - dialects:
+    - "Pharo has the lion’s share of Smalltalk attention in open source. I’d guess Glamourous Toolkit has much of the rest. Squeak is nearly moribund and Cuis is basically a one-man show."
+      - https://www.reddit.com/r/programming/comments/tws825/pharo_10_the_pure_objectoriented_language_and/
     - "Hardly you will find very large infrastructure "industry-bent" projects as Pharo's in Squeak or Cuis because the focus is different. Said in poor words, and at the best of my understanding, the aim of Squeak and Cuis is the dynabook, a creativity tool, the aim of Pharo is more like to make a Smalltalk competitive with Python / Java."
-    - **Pharo**
-      - forked from Squeak in 2008, it is far more contemporary, with a great site, docs, etc., leveraging the power of github, newer ui, an uprising of creating new libs including low-level gpu api and low-level ui framework, pretty awesome!
-      - https://pharo.org/documentation
-    - Squeak created some resurgence as it was made by the main makers of the lang (Alan Kays), but also dying out just as suddenly due to lack of community, perhaps most being of his age and similarly academic or scientific; it's web-site is composed of a messy wiki that is often out-dated by 15 years, and it's package manager is just as old and out-dated; it's UI looks like Windows 95
+    - https://www.reddit.com/r/smalltalk/comments/1did2s0/what_are_the_main_differences_between_squeak_and/
+      - pharo's philosophy is heresy, also: forked the opensmalltalkvm (used by squeak), depends on third party libs not written in smalltalk, also gets rid of morphic (gui)
+    - **Squeak**
+      - created some resurgence as it was made by the main makers of the lang (Alan Kays), but also dying out just as suddenly due to lack of community, perhaps most being of his age and similarly academic or scientific; it's web-site is composed of a messy wiki that is often out-dated by 15 years, and it's package manager is just as old and out-dated; it's UI looks like Windows 95
       - https://squeak.org/documentation/
         - squeak docs site contains free books for squeak, such as 'squeak by example', but also the original four smalltalk books from the 80s
       - http://wiki.squeak.org/squeak/2983
@@ -366,7 +369,26 @@ Smalltalk
       - croquet is an example of FFI use for OpenGL
         - <https://github.com/NikolaySuslov/croquet-squeak/blob/master/OpenGL-Core.package/OpenGL.class/class/example.st>
       - the Morphic interface is basically what Scratch, the educational game'ish programming app, is
-  - made in a MIT lab in 1980, huge influence in all programming langs: VM -> Java VM, objective-c, all "object-oriented" paradigms, etc.
+    - **Pharo**
+      - forked from Squeak in 2008, it is far more contemporary, with a great site, docs, etc., leveraging the power of github, newer ui, an uprising of creating new libs including low-level gpu api and low-level ui framework, pretty awesome!
+      - https://pharo.org/documentation
+      - https://www.pharo.org/features
+        - smalltalk is *insane*
+      - seaside
+        - web framework
+    - Cuis
+    - more specialized dialects:
+      - **Glamourous Toolkit**
+        - kind of **the emacs of smalltalk**
+          - "It seems an editor/database query engine/ browser with a object oriented language Pharo as control/scripting language, while emacs is an editor with emcas-Lisp as the scripting language."
+        - uses the features of smalltalk for specific applications like code-base exploration/documentation, build an editor, etc.
+        - built on Pharo, though it's a project of it's own
+      - Amber
+        - smalltalk live-coding environment for the web!
+        - implementation of smalltalk on the javascript runtime
+          - therefore can use javascript libs
+          - compiles to javascript
+        - https://lolg.it/amber/amber
 
 
 
