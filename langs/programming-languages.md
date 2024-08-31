@@ -50,6 +50,11 @@ languages sorted by their use cases
   - bigger scripts
     - powershell is powerful enough to do just about anything, and thanks to it's access to the .net framework, it actually can do anything
   - powershell is now cross-platform (since v7?)
+**lisp (common lisp, sbcl)**
+  - **true zen programming**
+  - used wherever one would use C or Go
+  - wish i knew about this earlier ;(
+  
 **ruby**
   - **great for quick, simple, everyday small scripting to pretty large size projects** thanks to it's **great battle-tested modular libs** (that's the benefit of old, popular languages)
     - runs as simply as a shell script, no main class or anything needed, and looks beautiful too!
@@ -303,7 +308,7 @@ owner
 Lisp
   - second-oldest language, after fortran
   - **at the same the the simplest syntax yet the most powerful language, still!**
-    - a history of programming languages reveal that they are only *just* now catching up to Lisp, and still, they've only caught up to it's features, but not it's implementation which allow the real wild stuff (see below), in addition to creating a lot more complex syntax
+    - **a history of programming languages reveal that they are only *just* now catching up to Lisp, and still, they've only caught up to it's features, but not it's implementation which allow the real wild stuff (see below), in addition to creating a lot more complex syntax**
     - macro heaven
       - "Thus, **Lisp functions can be manipulated, altered or even created within a Lisp program without lower-level manipulations.** This is generally considered one of the main advantages of the language with regard to its expressive power, and makes the language suitable for syntactic macros and metacircular evaluation."
     - unlimited metaprogramming (todo: get note)
@@ -311,24 +316,64 @@ Lisp
     - thus **easy to parse / interpret / compile**
   - dialects:
     - **Common Lisp**
-      - the true way
+      - **the true way**
+        - **true lisp macros**
+      - "Yes, while macros have been cited as the cool feature of lisps, there are several other good things about Common Lisp (SBCL in particular): stability; image-based development; dynamically scoped global variables (local variables are lexically scoped by default, yes!); conditions, restarts, and the ability to introspect the stack while it is still unwinded; CLOS, MOP, and multiple-dispatch; compile-time notes and warnings emitted by SBCL, performance provided by SBCL."
       - a spec from 84 (finished in 94?) of which there are a ton of implementations
-      - https://en.m.wikipedia.org/wiki/Common_Lisp
-        - used in Deep Space and Mars Rover
       - the web-site shows the extremely simple and bare syntax/features
+      - impractical for web
+      - old, robust, industry-tested libraries
+        - used in Deep Space and Mars Rover
+      - https://awesome-cl.com/
+        - awesome common lisp repo site
+      - implementations:
+        - **SBCL**
+          - the standard
+          - **native, extremely fast (compares to C and rust!!)**
+        - CCL/clozure
+          - <= 20% use this
+          - better C/obj-C interface
+          - faster compiler
+        - CLASP
+          - newer, llvm, c/c++ interop
     - **Scheme**
       - a minimal dialect
         - the core seems to be rigorously thought out and is now a standard used as a base for newer dialects
         - beyond the core, there are similarly rigoriously thought out extensions to the lang
       - this sounds more in tune with the spirit of Lisp, whereas other newer dialects just add more syntax/keywords, when the point is to be simple
-     - Clojure
+      - less practical / battle-tested than CL, perhaps better for personal use
+      - small-size makes it fit as an embedded language for C/C++
+      - "Scheme is simpler in a lot of ways: functions are just another value, which means there's a lot less overhead when using higher-order functions (compare CL's (funcall (make-function)) with the scheme equivalent ((make-function)), the language is literally quite a bit smaller (fewer rules, fewer functions, fewer special forms), and it's idiomatic to iterate with recursion instead of something like the (in)famously featureful loop macro.
+      
+        Do you like the functional programming style? Scheme. Do you want a large library ecosystem that Just Works? Common Lisp. Do you want a small language you can embed in a C program? Scheme. Do you want battle-tested industry tooling with decades of work behind it? Common Lisp. Do you want a language that is designed from first principles and exhibits a simple, mathematical elegance? Scheme. Do you want to just get shit done and don't mind a few messy but pragmatic compromises? Common Lisp.
+      
+        There's no wrong answer, though, both are lovely languages in their own way.)"
+        - implementations:
+          - bigloo
+            - can generate C, JVM, .NET bytecode
+            - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
+          - gambit
+            - generates C, **js**
+            - https://try.gambitscheme.org/
+          - chicken
+            - generates C
+     - x/Clojure
        - Rob said it "adds syntax" and that "it should be burned with fire"
-       - uses JVM
-     - Racket
+       - uses JVM, and thus allows using java libs (ew?) and **transpiling to javascript (clojurescript)**, making it a bit more practical
+        - https://clojurescript.org/community/libraries
+          - web libs for DOM, react, etc.
+            - possibly providing a better react experience than using js itself!
+       - **babashka**
+        - native scripting run-time that allows you to use clojure on the command-line!
+          - nbb: node.js babashka
+            - scripting on the web!
+        - also includes a lot of scripting tools: task runner, jvm threads, cli libs, in addition to clojure's libs
+     - x/Racket
        - a contemporary one based off of one of the Scheme standards, full of contemporary features
        - more like a whole tool-set, used to create your own langauge! Now this is the spirit!
          - "The language platform provides a self-hosted IDE named DrRacket, a continuation-based web server, a graphical user interface, and other tools. As a viable scripting tool with libraries like common scripting languages, it can be used for scripting the Unix shell. It can parse command line arguments and execute external tools."
        - used in more recent Naughty Dog games!
+       - seems to be targeted at newer programmers..
   
 "9. The whole language always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
