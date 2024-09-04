@@ -800,6 +800,13 @@ C++
 
 
 ### C and its replacements / manual memory management
+
+Nelua
+  - lua-like in many ways: syntax, minimal design / few features that can be used to create more features via meta-programming
+  - garbage collector is optional (on by default)
+  - compiles to C then native code
+  - compiler written in lua, and thus completely modifiable!
+
 **Zig**
   - a C replacement
   - explicit about using the allocator to allocate the heap...
