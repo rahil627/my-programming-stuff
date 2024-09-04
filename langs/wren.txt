@@ -1,11 +1,16 @@
 wren for normal non-embedded scripting?
+  - no! must be embedded to C (or C++)
 
 # conclusion
 because there is no standard library, i dont think this can really be used for neither programs nor even small scripts. Libuv seems nice, but even that is just a minimalist io module. Even a scripting language needs a good standard library. You shouldn't have to rewrite that, nor even select them / build up your own standard library. You will need things like regex, more helpful / end-user-oriented file io and networking, and all those things you'd normal use found in a common standard library.
 
 no is the answer
 
-however, for it's purpose, it kicks ass, much prettier in all ways (syntax, concurrency, classes) than Lua for game 'n ui app scripting and for general embedding into C (especially embedded devices).
+you'd have to create a C file, embed wren (and it's vm) into it, then link the C libs you need to wren (several ways provided)
+  - see end of https://wren.io/embedding/
+  - https://wren.io/embedding/calling-c-from-wren.html
+
+however, for it's purpose, it kicks ass, much prettier in all ways (syntax, concurrency, classes) than Lua for game 'n ui app scripting and for general embedding into C (/C++?), which is what all the game libs are written in. Lua only has a better "run-time": LuaJIT, but as that can't be used for many consoles, it's no use. The standard Lua interpreter is actually much slower.
 
 
 # what's included?
@@ -13,10 +18,10 @@ System class is bare, basically with just print(), gc(), and clock()
 
 optional modules Meta and Random can be added via compiler flags
   - Meta includes the interpreter and compiler functions
-  
+
 Fiber class is used for concurrency
-  
-the rest is the standard types (strings, etc.)
+
+the rest are just the standard types (strings, etc.)
 
 these are the things that are included in the VM, and nothing more
 
@@ -28,7 +33,7 @@ because there is no standard library, it used libuv for concurrent io
 https://github.com/wren-lang/wren-cli
   - test/os/process folder for process class and executing commands
   - test/io folder for file stuff
-  
+
 
 
 
@@ -36,15 +41,21 @@ TODO: https://luxeengine.com/docs/guide/wren-primer/
 
 design patterns:
 
+// no enums, use this:
 class In {
-    // class acts like an enum
-      static jump { "jump" }
-      }
+  static jump { "jump" }
 }
 
 
-  
+
 syntax:
+
+var x = 4
+var x:Num = 4 // type is inferred?
+// no constants!
+
+// no var += 1
+// no var++
 
 // string interpolation
 Log.print("creating a pebble at `%(pebble.x) , %(pebble.y)`...")
@@ -53,10 +64,17 @@ class Hello {
     // **class fields must come first**
     // **and must be initialized**. can use any expression
     var value = 3
+    var _field = 4 // TODO: maybe a C# property?
 
     // constructor
     construct new/create() {}
     object.new/create() // like ruby!
+}
+
+// no enums, use static vars in a class:
+class Input {
+  static left = "left"
+  static right = "right"
 }
 
 each {|entity: Entity, pillar: Data|}
@@ -66,5 +84,50 @@ Frame.end { do-something() }
 
 // hmmmm... TODO: try to comprehend some more..
 Arcade.add_collision_callback(player) {|entity_a, entity_b, state, normal, overlap_dist|}
+
+
+
+
+# C-binding
+https://wren.io/embedding/calling-c-from-wren.html
+https://wren.io/embedding/storing-c-data.html
+
+
+# standard lib classes:
+https://wren.io/modules/
+
+## object
+// these show up in auto-completion for all objects
+
+Object.same(o, o2) // same as == except it can't be overriden
+o == o2 // value-types compared by value, all other types compared by "identity" (reference?)
+o.is(o2) // also true if it contains any superclass
+o.type // returns it's class
+
+o.toString // used often via System.print(o)
+
+## function
+// "bare function when you don't want to immediately pass it as a block argument"
+var printer = Fn.new { |arg|
+  System.print(arg)     //> Hello world
+}
+
+printer.call("Hello world")
+
+
+## other stuff
+
+## num
+var n:Num = 3
+var n2:Num = 5
+n.abs/cos/sin/etc // TODO: can call function without ()?
+n.min(n2)/max(n2)/clamp(n2)
+n.floor/ceil
+n.sign
+... lots of other goodies for games
+
+// used to craete Range, most often used for loops
+n..n2 // not including end number
+n...n2 // including end number
 
 
