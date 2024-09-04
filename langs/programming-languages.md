@@ -143,6 +143,7 @@ crystal/nim
     - good if you have ruby/python syntax in mind and don't want to use Go, or want more features than go without learning/cognitive load of rust/C++
 
 
+# TODO: merge with above?
 # my choices
 ## main list
 **jai** to replace haxe
@@ -722,7 +723,7 @@ Nim
 
 
 
-### C++ and its replacements
+### C++ and its replacements / semi-manual memory-management
 **Jai**
   - the only solution
 
@@ -775,6 +776,9 @@ TODO: merge with above
   - https://discord.com/blog/why-discord-is-switching-from-go-to-rust
     - this article tells of a single example of many where Discord replaced Rust because they were hitting the limit of Go's garbage collector, and to their surprise, beyond that problem, it outperformed go in every way anyway
   - Mozilla, and as always, open-source
+
+
+
 
 
 C++
@@ -989,7 +993,15 @@ Streem
   - seems kinda abandonded, but rad idea! :D
 
 Pony
-  - lol, i like this idea, extremely statically typed, so that it's never a question, no concept of memory management
+  - uses actor model for concurrency (a long-term vision of swift)
+    - maybe the first langauge to do this, and therefore solve a really, really big problem
+    - https://www.ponylang.io/discover/why-pony/#isolated-data-is-safe
+    - "“reference capabilities”. Reference capabilities allow you to label different bits of data based on how that data can be shared. The Pony compiler will then verify that you are in fact correctly using the data based on the labels you provide. Reference capabilities combined with Pony’s actor model of concurrency makes for a powerful pairing."
+    - "The problem with concurrency is shared mutable data. If two different threads have access to the same piece of data then they might try to update it at the same time. At best this can lead to those two threads having different versions of the data. At worst the updates can interact badly resulting in the data being overwritten with garbage. The standard way to avoid these problems is to use locks to prevent data updates from happening at the same time. This causes big performance hits and is very difficult to get right, so it causes lots of bugs."
+    - "Any data that is immutable (i.e. it cannot be changed) is safe to use concurrently. Since it is immutable it is never updated and it’s the updates that cause concurrency problems."
+    - "If a block of data has only one reference to it then we call it isolated. Since there is only one reference to it, isolated data cannot be shared by multiple threads, so there are no concurrency problems. Isolated data can be passed between multiple threads. As long as only one of them has a reference to it at a time then the data is still safe from concurrency problems."
+    - "The code within a single actor is never run concurrently. This means that, within a single actor, data updates cannot cause problems. It’s only when we want to share data between actors that we have problems."
+    - "By sharing only immutable data and exchanging only isolated data we can have safe concurrent programs without locks. The problem is that it’s very difficult to do that correctly. If you accidentally hang on to a reference to some isolated data you’ve handed over or change something you’ve shared as immutable then everything goes wrong. What you need is for the compiler to force you to live up to your promises. Pony reference capabilities allow the compiler to do just that."
 
 
 
@@ -1149,25 +1161,44 @@ https://github.com/flipacholas/Architecture-of-consoles/
 #### languages created by and for their own corporate products:
   - **avoid these** unless you must make products on their devices
 
-
-##### compiles to machine code
 Swift
-  - Apple's native language, replacing Objective-C, and i believe a lot of code was rewritten using it
+  - Apple's native language, replacing Objective-C
     - they still kept the old crap: Apple Foundational Library (NSobject, etc.)
-  - looks really good actually, simple yet powerful, like Haxe, and most importantly:
+  - looks really good actually, simple yet powerful, like Rust but with less complexity, too bad it's controlled by Apple!
+  - **manual memory management / no garbage collector / no run-time**
+    - reference counting
+    - rust-like borrow-checker
+  - interops with C and more recently (v5.3) C++
+    - deep interop thanks to llvm, down to inline functions
+  - cross-compiler binary to everything similar to go and rust
+  - macros
   - probably has extremely good interopability between C/C++/Obj-C
   - strangely open-source (obviously made for Apple's own products, yet open-source to take from the open-source world)
     - **advertises to be cross-platform... but, what's the point when all of Apple's frameworks are closed products?..**
+      - https://www.reddit.com/r/rust/comments/180fsxk/swift_vs_rust/
+        - Apple's strict controls prevent true open-source community development
+        - "I love Swift, to me it's a nicer, friendlier version of Rust. The syntax looks better, it has more words and fewer sigils, parameter labels make some API calls look really nice, too. But I simply can't use it for anything I do, and this is true for most developers out there."
+      - https://dev.to/rhymu/swift-vs-rust-an-overview-of-swift-from-a-rusty-perspective-18c7
     - "core libraries" seem to be the same as .NET core libraries, probably followed Microsoft's footsteps, but lacks the game-making and huge C#/.NET communities
     - https://www.swift.org/core-libraries/
     - https://www.swift.org/about/
       - "One of the most exciting aspects of developing Swift in the open is knowing that it is now free to be ported across a wide range of platforms, devices, and use cases.
          Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next."
   - also, **like Google, Apple sucks with community / documentation / etc. A lot of power really comes from open-source popularity...**
+  - it forces you to name parameters in function calls, which makes code way more readable: attack(enemy: koopa, dmg: 1)
   - Apple
     - started propietary, then turned open-source
-
-
+    
+  https://www.youtube.com/watch?v=tzt36EGKEZo
+    - miguel de icaza (the maker of mono runtime) goes over the benefits of swift over c#
+      - great compiler that prevents a lot of errors
+      - mutable and immutable arrays/lists
+      - long-term vision is to aim for actors
+        - classes with their state completely isolated
+          - data flows via "sendable" data (thread-safe)
+          - only one thread can run inside actor code at a time. Other threads must wait in line. Plus, it's guaranteed by the compiler
+      - azul has a pauseless garbage collector for java, sold to big enterprises
+      - tried to add reference-counting to .NET, but due to "inner-pointers", by design could not implement it
 
 #### compiles to bytecode/intermediary lang
 https://www.reddit.com/r/dartlang/comments/1bbbexg/comment/ku8ct38/
@@ -1178,9 +1209,10 @@ https://www.reddit.com/r/webdev/comments/tisrh5/comment/kugqpis/
   
 
 ###### microsoft / .NET CLI world
-**C#**
+C#
   - "Microsoft's Java": Java EE = ASP.NET, Java VM (JVM) = .NET CLR, etc. As vomit-inducing that may sound, it feels much better than the java world (partly due to eclipse ide sucking)
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat for general-use, but boring, and limited by it's java-like bytecode\VM\GC implementation
+    - **all of it's garbage collector implementations cause game to stutter when it sweeps up memory**
   - has frameworks for games (Unity, MonoGame)
   - frameworks for cross-platform apps have sucked for it since the beginning. They were limited to windows (winforms, wpf, etc.), and so newer open-source cross-platform frameworks came out (Avalonia, Uno, ASP.core). ASP.NET, the main web-app framework sucked for a long time allowing others to gain popularity until ASP.core came out, and even now, Blazor may be better
     - https://elixirforum.com/t/phoenix-vs-asp-net-core-performance/3599/8
@@ -1379,7 +1411,10 @@ Perl - slowww
 
 https://benchmarksgame-team.pages.debian.net/benchmarksgame/
   - a joke, and hard to read, because it's more of a competition in which people upload crazy optimized programs that use multiple-cores/threads, but you can kinda see the limits and means using the simple implementations
-  
+
+https://github.com/attractivechaos/plb2
+  - someone's benchmarks
+
 https://wren.io/performance.html
 
 
