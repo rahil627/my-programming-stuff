@@ -1,6 +1,9 @@
 
+# temp
+get process kill-script, and run it when using the vs-code extension
+
 # setup
-install vs-code extension for luxe, which includes everything for wren too?
+install vs-code extension for luxe, which includes everything for wren too (there is no wren LSP at the moment, it comes from luxe-agent)
   - https://marketplace.visualstudio.com/items?itemName=luxeengine.luxe
   - also make sure this stupid setting is off:
     - "editor.wordBasedSuggestions": "off",
@@ -10,6 +13,10 @@ install luxe launcher
     - provides auto-complete to the vscode extension
   - install debug module
     - provides a debug console
+    - TODO: see steps in DMs
+
+install debugger (temp-fix)
+  - see notes in DMs
 
 https://luxeengine.com/docs/
   - "create with luxe"
@@ -18,12 +25,9 @@ and then here https://ruby0x1.ca/dev-lx/tutorial/overview/
 
 once you accept the github invite I sent (check email), there's this LD jam game, https://github.com/luxeengine/ld46 - https://ruby0x1.itch.io/the-ruins
 it's a little platformer with some scenes + some tilemaps if you want to open it in editor and look around some content.
-- magical ice cream thing https://luxeengine.com/1.0/k2020/ - https://github.com/luxeengine/icecream 
+- magical ice cream thing https://luxeengine.com/1.0/k2020/ - https://github.com/luxeengine/icecream
 - breakout game https://joeld42.itch.io/breaklchemy - https://github.com/luxeengine/breaklchemy
 
-the guide is important for big picture, and the tutorial highly recommended as it covers a whole lot, takes a few hours. if you have questions or thoughts definitely please share, here in DM is fine, there's also the private dev chat channels there or you can file issues. nothing is too small etc, all feedback is good
-
-- don't miss the code completion setup https://ruby0x1.ca/dev-lx/guide/workflow/#code-completion
 - you can file issues here https://github.com/luxeengine/preview/issues/
 - you can post an intro here, it's encouraged https://github.com/luxeengine/preview/discussions/1
 
@@ -31,6 +35,8 @@ the guide is important for big picture, and the tutorial highly recommended as i
 
 
 project structure:
+  - not sure if there's an actual structure, i think you can simply add files and it will auto-generate the things it needs in the same folder
+
 luxe.project
   - modules.lx
     - dependencies
@@ -63,7 +69,7 @@ https://luxeengine.com/docs/guide/concepts/
 
 
 classes:
-    
+
 Asset
   - Asset.scene(id)
 
@@ -83,10 +89,10 @@ Transform
     if (dist > 32)
       ...
 
-    
 
 
-  
+
+
 
 modules:
 can use the launcher to add modules to a project via a '+' button or just add the imports manually
@@ -114,13 +120,14 @@ scene module:
 a world can have multiple scenes, which makes it useful for layering/grouping objects in a complex scene
 
 "Scenes are typically created with the luxe editor, but they're simple data inside of a folder. Take a look inside the scene/level.scene/ folder, and look inside any .entity.lx file!"
-    
+
 
 input module:
 Input
   - basic input release/press
-"named input event" 
+"named input event"
   - name assigned to one or more inputs
+  - see inputs.lx file
 
 
 
@@ -128,13 +135,13 @@ Input
 other official modules (not a part of luxe module):
 luxe-agent
   - provides code completion
-  
+
 debug
   - provides debug console
-  
+
 kenney
   - a selection of assets from a nice free/contributed asset packs site
-  
+
 arcade
   - Arcade, ShapeType, CollisionEvent..??
     - Arcade includes velocity?, get_height (why?)
@@ -150,10 +157,23 @@ camera
 
 
 
-two ways of making:
+# two ways of making:
 from scratch "immediate-style api" (a la monogame, heaps, dragonruby, foster, and other minimalist/media frameworks) creating sprites or primitives and drawing them, or, an entity-componenty-system "world api", which is provided, and which is closely tied to the provided editor (a la unity, godot, etc.)
 
 "With the world system, we can create things in the world that will continue to draw as long as they're alive."
+
+## infinite ways of structuring:
+though there are just two api's, there are infinite ways of structuring your code:
+
+modifiers can be used as scripts for anything, whilst keeping the bulk of code in the rather procedural game class's `construct ready` and `tick` functions. Whether those procedures are seperated into other files is upto you. It's very possible to have all of the game's code in a single file!
+
+modifiers can be more object-oriented, representing an object in the game: an enemy, bullet, etc., keeping the bulk of code within the modifiers' `init` and `tick`. Though often a simple and easy-to-remember way of organizing code, there are times when this'll feel forced, as it's better to just write some wierdly-named script.
+
+or, best of all, just mix and match! :) For some modifiers, it may make sense to completely encapsulate a game object, for others, it can be a random *snippet of logic*.
+
+NOTE: modifiers are linked to the editor, in which you can change the values within `Data`, just like the `Transform` modifier. Though it's not necessary to use them, it's kinda the implicitly recommended way of doing things. It's especially useful for tuning game values, otherwise you'd have to create your own ui to easily alter settings..
+
+a thought: this is step up from the old Flashpunk, which coupled `Entity` with transform, graphic, collision, tween, 'n more. HaxePunk, iirc, seperated the code, but kept the helper functions on `Entity`, keeping the ease of Flashpunk, yet slightly decoupling systems, and adding more: scene, camera, layers. Heaps doesn't provide `Entity` class/system nor ECS system; It does however provide the components. Luxe seperates everything, including `Transform`, therefore Entity truly doesn't have anything in it, just as it should be!
 
 
 
@@ -176,7 +196,7 @@ modifier (component)
   in a modifier file:
   tick(delta: Num) {
         each {|entity: Entity, pillar: Data|
-        
+
             }
               }
   }
@@ -207,11 +227,11 @@ c+s+b to build
 
 
 ## draw and input / breakout game
-goes over the game programming basics without using the ECS to make a primitive breakout game
+goes over the game programming basics using Draw class to draw stuff directly to the screen/buffer
 
 
 ## world
-goes over the ECS-way of making games
+goes over the ECS-way of making games, while making a flappy-bird clone
 (see architecture notes)
 
 
@@ -219,4 +239,4 @@ goes over the ECS-way of making games
 https://luxeengine.com/docs/tutorials/editor/
   - TODO: 404
 
-  
+
