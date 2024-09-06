@@ -41,9 +41,31 @@ TODO: https://luxeengine.com/docs/guide/wren-primer/
 
 design patterns:
 
-// no enums, use this:
+// string enum
 class In {
   static jump { "jump" }
+}
+
+// int enum
+class GamepadEvent {
+    static unknown          { 0 }
+    static device_added     { 1 }
+    static device_removed   { 2 }
+    static device_remapped  { 3 }
+    static name(value) {
+        if(value == unknown)            return "unknown"
+        if(value == device_added)       return "device_added"
+        if(value == device_removed)     return "device_removed"
+        if(value == device_remapped)    return "device_remapped"
+        return "unknown %(value)"
+    }
+}
+
+class Singleton {
+  // to avoid circular references
+  // and to expose something that often imported
+  var random:Random = null // i think it's only needed once..
+  static random:Random { random }
 }
 
 
@@ -53,12 +75,17 @@ syntax:
 var x = 4
 var x:Num = 4 // type is inferred?
 // no constants!
+// no static vars? see enum design pattern
+
 
 // no var += 1
 // no var++
 
 // string interpolation
 Log.print("creating a pebble at `%(pebble.x) , %(pebble.y)`...")
+
+// no top-level functions as in ruby, must be in a class
+//  - also you don't import files, you import classes from files
 
 class Hello {
     // **class fields must come first**
