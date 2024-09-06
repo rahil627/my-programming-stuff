@@ -48,6 +48,12 @@ outline
   - inputs
     - inputs.input.lx
       - very simple key-mappings for keyboard, mouse, gamepad!
+system
+  - modifiers/systems go here!:
+    - do_something.modifier.wren
+    - do_something.modifier.api.wren
+      - generated and re-generated when modifier.wren is updated
+    - do_something.modifier.wren.meta.lx
 
 
 
@@ -68,7 +74,36 @@ https://luxeengine.com/docs/guide/concepts/
     - for example: queueing up for drawing, then committing changes when done
 
 
-classes:
+files 'n classes:
+
+Game is Ready
+
+modifier file:
+
+Data
+  - a struct for data, makes it feel nicely data-oriented
+  - shows up in the game-editor!
+
+Your_Modifer as API
+  - your public api goes here!
+    - static create(...) with various amount of parameters
+    - some_function
+  - Your_Modifier.create(some_entity)
+    - creates AND attaches Your_Modifier to some_entity
+    - (provided by default)
+  - Your_Modifier.get(some_entity).field
+    - get some field from the modifier's Data
+  - Your_Modifier.get(some_entity).data = 3
+    - setter works like this (no some_entity.set)
+
+
+System is Modifier
+  - init
+    - run once per system
+  - attach
+    - run once per entity
+  - detach
+  - tick
 
 Asset
   - Asset.scene(id)
@@ -158,7 +193,7 @@ camera
 
 
 # two ways of making:
-from scratch "immediate-style api" (a la monogame, heaps, dragonruby, foster, and other minimalist/media frameworks) creating sprites or primitives and drawing them, or, an entity-componenty-system "world api", which is provided, and which is closely tied to the provided editor (a la unity, godot, etc.)
+from scratch "immediate-style api" (a la monogame, dragonruby, drawing api of flash) drawing stuff to the buffer, or, an entity-componenty-system "world api" which renders 2d sprites or 3d models, which is provided, and which is closely tied to the provided editor (a la unity, godot, etc.)
 
 "With the world system, we can create things in the world that will continue to draw as long as they're alive."
 
@@ -167,13 +202,33 @@ though there are just two api's, there are infinite ways of structuring your cod
 
 modifiers can be used as scripts for anything, whilst keeping the bulk of code in the rather procedural game class's `construct ready` and `tick` functions. Whether those procedures are seperated into other files is upto you. It's very possible to have all of the game's code in a single file!
 
-modifiers can be more object-oriented, representing an object in the game: an enemy, bullet, etc., keeping the bulk of code within the modifiers' `init` and `tick`. Though often a simple and easy-to-remember way of organizing code, there are times when this'll feel forced, as it's better to just write some wierdly-named script.
-
-or, best of all, just mix and match! :) For some modifiers, it may make sense to completely encapsulate a game object, for others, it can be a random *snippet of logic*.
+modifiers can be more object-oriented, representing an object in the game: an enemy, bullet, etc., or better, a small, re-usable component, keeping the bulk of code within the modifiers' `attach` and `tick`. Mix and match however you like! :) For some modifiers, it may make sense to completely encapsulate a game object, for others, it can be a random *snippet of logic*. Sometimes, for performance reasons, you may have to put the code in the main game `tick`.
 
 NOTE: modifiers are linked to the editor, in which you can change the values within `Data`, just like the `Transform` modifier. Though it's not necessary to use them, it's kinda the implicitly recommended way of doing things. It's especially useful for tuning game values, otherwise you'd have to create your own ui to easily alter settings..
 
-a thought: this is step up from the old Flashpunk, which coupled `Entity` with transform, graphic, collision, tween, 'n more. HaxePunk, iirc, seperated the code, but kept the helper functions on `Entity`, keeping the ease of Flashpunk, yet slightly decoupling systems, and adding more: scene, camera, layers. Heaps doesn't provide `Entity` class/system nor ECS system; It does however provide the components. Luxe seperates everything, including `Transform`, therefore Entity truly doesn't have anything in it, just as it should be!
+a thought: this is step up from the old Flashpunk, which coupled `Entity` with transform, graphic, collision, tween, 'n more. HaxePunk, iirc, seperated the code, but kept the helper functions on `Entity`, keeping the ease of Flashpunk, yet slightly decoupling systems, and adding more: scene, camera, layers. Heaps doesn't provide `Entity` class/system nor ECS, it's up to you to decide and make one; It does however provide many of the components. Luxe provides you everything, but modularly: the components, an ECS, and a game editor. It's up to you to choose what you want, and code how you want.
+
+
+
+# structure / way of making
+seems like a stardard entity-component-system..
+
+start by writing to the main Game is Ready class?
+
+component systems ("modifiers", "scripts") should contain a bulk of the code
+  - components can create other components, though i'm not so sure if this is a good idea..
+  - put static functions in the API class
+    - static create(a, b, c, d)
+  - put data in Data
+    - especially data to be modified easily (in the editor)
+  - examples:
+    - 2d-top-down player controller, grow, shine, follow, collider, etc.
+
+over time, as components become large, they can be divided into smaller, more abstract components, which will naturally make them more re-usable (especially when compared to object-oriented design)
+
+use prototypes, which are just a combinations of components, as they can be easily added through the game editor
+
+
 
 
 
