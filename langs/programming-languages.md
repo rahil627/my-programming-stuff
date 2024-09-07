@@ -981,7 +981,11 @@ Haskell
   - i dig the arrows: input -> output, content <- readFile
 
 
-    
+
+## others, not sure about..
+Raku
+  - most influenced by Perl, though it doesn't FFI it
+  - **"Raku can call Ruby, Python, Perl, Brainfuck, Lua, C, C++, Go, Scheme (Guile, Gambit), and Rust"**
 
 
 
