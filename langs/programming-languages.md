@@ -1030,17 +1030,19 @@ Pony
 
 lua
   - extremely simple (only perhaps second to lisp)
-  - the most performant vm/"luaJIT compiler" of all dynamic programming languages, pretty much thanks to the one guy that made it
-  - weird but powerful data structure: the table
+  - the most performant vm/compiler of all dynamic programming languages: LuaJIT, pretty much thanks to the one guy that made it
+  - powerful meta-data-structure: the table, in which you can implement any other data structure, making it extremely modular
 
 **wren**
-  - modern sytnax with object-oriented features (classes)
+  - modern sytnax with object-oriented-style classes
   - go-like concurrency via "fibers"
-  - modular / doesn't come with a std lib
+  - meant for embedding to C so doesn't come with a std lib (lua does)
     - can add libuv (a contemporary cross-platform std C lib) to it, as in Luxe
-  - not luaJIT fast, but at least ruby speed
+  - not luaJIT fast, close to luaJIT -joff (luaJIT with JIT off) fast, but faster than the standard implementation of Lua, and now only marginally quicker than the more complex standard ruby and python C interpreters
+    - though, it's aim is to be simple: a highly-readable 4000 lines of code vm
   - perfect for games! :)
-  - made with <3
+    - use in luxe (game engine)
+  - made with <3 by rubyx01 (of luxe), though started by Bob of game design patterns / crafting interpreters fame, and a similar language is used in his books
 
 squirrel
   - was used by a few game companies as a general scripting lang for games that even ran on consoles
@@ -1321,24 +1323,24 @@ this is a great way to find good pop tech
 
 2024:
 https://survey.stackoverflow.co/2024/technology#admired-and-desired
-rust, elixir, zig
+**rust, elixir, zig**
 python, typescript, go, kotlin, swift, clojure, etc. are all about the same
 
-postregreql
+**postgresql**
 
 hetzner (cloud platform)
 
 **phoenix** > (by a wide margin) > asp.net core, svelte, htmx, astro
 
-rust (for embedded) (no competition!)
+**rust** (for embedded) (no competition!)
 
-docker, godot, vite, bun pacman, nix
+docker, **godot**, vite, bun, pacman, nix
 
-markdown, github discussions, obsidian, linear (docs)
+markdown, **github discussions**, **obsidian**, **linear (docs)**
 
-signal, matrix, discord, slack
+**signal**, **matrix**, **discord**, slack
 
-chatgpt, github copilot, vs studio intellisense
+**chatgpt**, **github copilot**, vs studio intellisense
   
 
 
@@ -1476,7 +1478,7 @@ https://www.youtube.com/watch?v=baClkzcfxu0
 
 
 ## Robert's opinion
-Robert has ported CrossCode to every popular platform, including *two generations of consoles(!)*, in addition to writing a JS AOT(?) compiler, a super-powered low level framework (Kha), and basically the next SDL (Kinc)
+Robert has ported CrossCode to every popular platform, including *two generations of consoles(!)*, in addition to writing a JS AOT compiler, a super-powered low level framework (Kha), and basically the next SDL (Kinc)
 
 Lisp, no language ever been so simple yet so powerful, contemporary languages (as of 2022) still have not caught up, and macros are easier to write
 
