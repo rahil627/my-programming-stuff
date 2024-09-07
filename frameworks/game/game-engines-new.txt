@@ -137,6 +137,10 @@ many rely on pop C/C++ libs such as: SDL, GLFW (for OpenGL and Vulkan?), bgfx(?)
         - https://www.fmod.com/resources/documentation-studio?version=2.02&page=appendix-a-celeste.html
 
 #### everything else
+  - trial
+    - **common lisp*
+    - made while making Kandria, a Celese-like metroidvania
+    - https://github.com/Shirakumo/trial
   - Beef2D
     - beef, 2d, included in the main Beef language repo
   - Pile
