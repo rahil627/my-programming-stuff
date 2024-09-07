@@ -1352,62 +1352,101 @@ note: benchmarks are usually impractical, only exacerbating very specific differ
 tier 1:
   - usually manual memory management
   - compiles to native machine code
-**C** (clang)
+  - no difference here really, just depends on the programmer's ability
+    - though, Rust's memory-management implementation does have it's caveats, at a certain point (games)
+**C** (clang > gcc)
 (Zig, V, etc.)
-C++
-**Rust** - note: also the most complex and featureful language here
 Chapel (??)
+(Fortran)
 
-**common lisp (sbcl)** - note: garbage-collected
-Go - note: garbage-collected
+C++ (clang++ > g++)
+**Rust**
+Swift (llvm, reference-counting or borrow-checker)
+
+tier 1.5:
+  - adds a garbage collector
+  - go's portable binary is also way bigger
+**common lisp (sbcl)** - great alternative to Go, perhaps even the original go!
+scheme (stalin)
+Go
 
 
 tier 2:
   - usually garbage-collected, or otherwise memory-managed
   - AOT compiled exe binary or jvm
-**Crystal** (llvm) - note: very slow compiles times
+  - compared to manual-managed memory, the memory of programs bloat until the garbage-collector runs
+    - **NOTE: can suffer from lag during garbage-collection in games**
+**Crystal** (llvm) - note: extremely slow compile times even for the most trivial hello world code, but incredible C speed for such an early language-runtime
+
+**Julia** (AOT?) - C-speeds, an incredible feat...
+Nim (clang) - clang speeds!
+
 C# (native?)
+D?
 **Haxe** (via transpiled c or c++)
 **OCaml** - suprising for a (impure) functional lang!
-Java (fastest vm) - an exception to binary
-**Dart** (dart2native?)
-Kotlin (jvm?)
-Swift (llvm and/or reference-counting obj-c)
-Nim (llvm)
+(Haskell?)
+Dart (dart2native)
 Mojo
-Scala (jvm)
+
+tier 2.5:
+  - though not compiled, their VMs have had so much work and money put into it that it performs just as well as compiled languages
+  - requires runtime/vm to run it
+  - also requires time to startup the vm
+Java (fastest vm)
+  - Kotlin, Scala, etc. jvm langs
+C# (CLR)
+  - F#, etc. CLR langs
 
 
 tier 3:
   - very complex, contemporary bytecode/vm JIT implementations written by gods
-(some JIT lisp?)
+  - **NOTE: many consoles and even iOS doesn't allow JIT compilers**
 
-**Elixir** (BEAM) - note: the magical concurrency that occurs in BEAM puts it on top of most dynamic languages, especially when it come to real applications (not synthetic benchmarks, nor hand-written concurrency)
-
-**Julia** - super fast for a dynamic lang..??
-JS (bun, node)
+**Julia** (JIT, but can AOT) - how the eff... as fast as JS??
+JS (bun, node) - surely the most complex vm in terms of optimization..??
 Lua (LuaJIT -j) - the interpreter that set the standard
-Dart (JIT) - surprisingly fast, or maybe not, since it's google
+Scheme (gambit)
+Dart (JIT, also has AOT) - surprisingly fast, or maybe not, since it's google
 (python/pypy and ruby/truffleruby would go here but are impractical)
 
-PHP
-Ruby (YJIT > MJIT) - an alt. runtime, practical too
-Ruby3 - 3x faster
+**Elixir** (BEAM) - particularly bad for simele CPU tasks used in becnharks but note: the magical concurrency that occurs in BEAM puts it on top of most dynamic languages, especially when it come to real applications (not synthetic benchmarks, nor hand-written concurrency)
+
+Ruby (YJIT > MJIT) - an alt. runtime yet practical too (unlike python's pypy)
+PHP - opcode/vm-like runtime, surprisingly slow..
+(Pascal?)
+
+tier 3.5:
+  - lisp just so happens to be so small 'n simple that it can be compiled on-the-fly
+    - "Chez compiles all code prior to execution and does not do any dynamic code generation during runtime."
+Scheme (Chez) - still as slow as ruby JIT
 
 
 tier 4:
   - simpler, earlier interpreted bytecode/vm impementations
-  - the differences here are much bigger, hence spacing
-Scheme (Chez)
+  - the differences here can be much bigger, but by 2024, they are all about the same, with python about 2x slower than the others
 
-**Wren** - intentionally written to have a simple vm
-Ruby (CRuby/standard impl)
-Lua (LuaJIT -joff)
+**Lua** (LuaJIT -joff) - still the fastest interpreter too!
+Racket
 
-Python3 (CPython/standard impl)
-Lua (stndard impl) - actually slower than i thought..
+**Wren** - intentionally written to have a simple vm, and performs really well too
+Clojure (Babashka interpreter)
+**Ruby** (3.0, CRuby/standard impl) - magical runtime by Japan. suprising for such a complex langauge. actually can use it for games now! very different from the early versions
+Lua (5.4) - the LuaJIT guy isn't too happy about this..
 
+Python3 (CPython/standard impl) - slow
+
+Tcl
 Perl - slowww
+
+https://github.com/jabbalaci/SpeedTests?tab=readme-ov-file
+
+
+https://github.com/kostya/benchmarks?tab=readme-ov-file
+  - test by writing interpreter for brainfuck lang
+
+https://muxup.com/2023q2/updating-wrens-benchmarks
+  - update bnechmark of simple standard interpreters
 
 https://benchmarksgame-team.pages.debian.net/benchmarksgame/
   - a joke, and hard to read, because it's more of a competition in which people upload crazy optimized programs that use multiple-cores/threads, but you can kinda see the limits and means using the simple implementations
