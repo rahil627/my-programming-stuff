@@ -69,6 +69,26 @@ class Singleton {
 }
 
 
+// remove callback from within a callback function?
+var callback = null // ?
+...
+attach(...) {
+    callback = Fn.new {|a, b, s, d|
+            handle_collision(a, b, s, d)
+              }
+
+                  Arcade.add_collision_callback(e, callback)
+                  }
+                  ...
+                  handle_collision(a, b, s, d) {
+                    ...
+                     Arcade.remove_collision_callback(entity_a, callback)
+                    ...
+                    }
+                  }
+}
+
+
 
 syntax:
 
@@ -98,13 +118,26 @@ class Hello {
     object.new/create() // like ruby!
 }
 
-// no enums, use static vars in a class:
-class Input {
-  static left = "left"
-  static right = "right"
+
+
+
+// callbacks (passing a funciton as a parameter) must use closures
+// example:
+class Test{
+  static on(fn){
+    fn.call("Hello")
+  }
+
+  static method(argument){
+    System.print(argument)
+  }
 }
 
-each {|entity: Entity, pillar: Data|}
+//Test.on(Test.method) // no!
+Test.on{|arg| Test.method(arg)} // yes!
+callback = Fn.new {|...| ...}
+Test.on(callback) // or this
+
 
 // input is a function, but no ()?
 Frame.end { do-something() }
