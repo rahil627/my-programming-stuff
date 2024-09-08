@@ -6,6 +6,17 @@ formats:
   - **TODO: can write a simple markup for it to preview it**
   - **easy to sift through with cli**
 
+**org-mode (emacs)**
+  - people prefer the .org markup
+  - **org-babel**
+    - ...this is incredible..!?
+  - file-export
+  - deep emacs integration
+    - and another reason to use lisp :)
+  - no mobile app, would just have to run emacs on it
+    - use a terminal app (termux, termius) and install emacs
+  - old
+    
 **jekyll**
   - note: not a knowledge-base
   - a static-site generator written in ruby and used by github pages
