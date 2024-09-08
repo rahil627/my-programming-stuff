@@ -7,29 +7,37 @@ formats:
   - **easy to sift through with cli**
 
 **jekyll**
-  - a static-site generator written in ruby and used by github for github programmers
+  - note: not a knowledge-base
+  - a static-site generator written in ruby and used by github pages
     - i use this for my personal sites (plural!), especially for my blog/philosophical writings
     - tons of plugins
       - also can just write beautiful ruby scripts to do whatever you want
     - allows you to create your own custom markup template, so you can keep your own personal writing format
   + front-matter
+    - but also have the option to simply upload an html file (which every knowledge-base app should be able to generate!)
   + folder 'n file structure
 
-obsidian
+bear
+  - more of a markdown editor turned note-taking app
+  - great markup/preview, especially for mobile OSs
+  
+x/obsidian
   - current king of note-taking
-  - closed-source
+  - **closed-source**
   - great interface
     - like a specialized vs-code, with an intuitive command pallete
+    - feels well-made
+    - unfortunately another electron app, so might as well use vs-code/dendron
+  - plugins
+  - works well on mobile devices
   - diagram-making thing
   - graph view
   - views for outline by headings, tags, backlinks, etc.
   - bookmarks
     - seems useful!
-  - **no front-matter/metadata by default**, just clean ol' plain text!
-    - **maybe can use this when i want to, without destroying my notes structure**
 
-joplin
-  - open-source obsidian?
+x/joplin
+  - poor man's open-source obsidian?
   - works on all platforms, and has a good linux cli
   - simple, takes a few seconds to get started
   - "notebooks" and tags
@@ -42,27 +50,24 @@ joplin
     - test
     - test2
 
-**dendron**
+dendron
+  - https://discord.gg/AE3NRw9
   + front-matter
   + **a specific file 'n file-name structure**:
     - parent.parent.file
-      - no folders!
-      - this is actually a neat solution
-      - will be interesting to sift through without a dendron editor (vs code), yet might rid the need of searching through folders!
-      - all hierarchies are files, no need for folders!
+      - **no folders! hierarchies are in the file-name**
+      - destroys my dropbox file-folder structure, which i much prefer
+      - **TODO: see if there's an option for folders**
   - a vscode plugin, no standalone app
     - although, this may just be the best app for programmers that use vs code..
-    - also can just edit using your favorite simple text editors and cli
-
-bear
-  - more of a markdown editor turned note-taking app
-  - great markup/preview, especially for mobile OSs
-
+    - can just edit using your favorite simple text editors, it's just that there's likely built-in functions made for vs-code via the vs-code extension
+  - seems well made by a small team, or just one person
+  
 x/notion
   - historically, a great push for note-taking apps
   - a very clean note-taking app with tons of markup ability
   - **need internet to access!?**
-  - *slow* for a notes taking app
+  - *slow* for a note-taking app
 
 onenote, evernote, etc.
   - old propietary note file format?
