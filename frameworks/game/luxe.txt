@@ -84,20 +84,26 @@ Data
   - a struct for data, makes it feel nicely data-oriented
   - shows up in the game-editor!
 
-Your_Modifer as API
+Your_Modifier as API
   - your public api goes here!
     - static create(...) with various amount of parameters
-    - some_function
-  - Your_Modifier.create(some_entity)
+    - static some_function
+
+  - often use these:
+  - Your_Modifier.create(entity)
     - creates AND attaches Your_Modifier to some_entity
     - (provided by default)
-  - Your_Modifier.get(some_entity).field
+  - Your_Modifier.get(entity).field
     - get some field from the modifier's Data
-  - Your_Modifier.get(some_entity).data = 3
-    - setter works like this (no some_entity.set)
+  - Your_Modifier.get(entity).data = 3
+    - setter, not entity.set()
+  - Your_Modifier.has(entity)
+  - Your_Modifier.system/system_in(entity/world)
+  - Your_Modifier.destroy(e)
 
 
 System is Modifier
+  - this.world
   - init
     - run once per system
   - attach
@@ -114,22 +120,42 @@ Prototype ("prefab" in unity)
 
 
 
-modifiers/prefabs:
+modifiers (components):
+
+Tags
+  - completely written in C
+  - create(e)
+  - add(e, "reflect")
+
 Transform
-    var scale = Transform.get_scale_world(entity_b)
-    var height = Arcade.get_height(entity_b) * scale.y
-    var top = Transform.get_pos_y_world(entity_b) + (height * 0.5)
-    var dist = (top - (Transform.get_pos_y_world(player) - 32))
+  - get/set_pos_world
+  - get/set_pos
+  - get/set_scale_world
+  - coordinate system
+    - up = 0
+    - right -90
+    - left = 90
+    - down = 180
 
-    if (dist > 32)
-      ...
-
-
+Sprite
+  - origin point is centered by default, so set the Transform x/y first, then set the Sprite width/height
+  - get/set_width
+  - get/set_height
 
 
 
 
 modules:
+Arcade
+  - create(e)
+  - set_solid(e, false) // true by default
+  - set_shape_type(e, ShapeType.rect) // or circle
+  - set_width(e, w)
+  - set_height(e, h)
+
+
+
+modules?:
 can use the launcher to add modules to a project via a '+' button or just add the imports manually
 
 luxe modules:
@@ -141,7 +167,7 @@ World
 
 Tags
   - has_tag
-  - very interesting..: it's implementation seems similar to adding a modifier/componen-system: just no factory create function, but has access to all entities
+  - very interesting..: it's implementation seems similar to adding a component-system: just no factory create function, but has access to all entities
 
 game module:
 Frame
@@ -206,6 +232,7 @@ modifiers can be more object-oriented, representing an object in the game: an en
 
 NOTE: modifiers are linked to the editor, in which you can change the values within `Data`, just like the `Transform` modifier. Though it's not necessary to use them, it's kinda the implicitly recommended way of doing things. It's especially useful for tuning game values, otherwise you'd have to create your own ui to easily alter settings..
 
+# TODO: to game engine programming
 a thought: this is step up from the old Flashpunk, which coupled `Entity` with transform, graphic, collision, tween, 'n more. HaxePunk, iirc, seperated the code, but kept the helper functions on `Entity`, keeping the ease of Flashpunk, yet slightly decoupling systems, and adding more: scene, camera, layers. Heaps doesn't provide `Entity` class/system nor ECS, it's up to you to decide and make one; It does however provide many of the components. Luxe provides you everything, but modularly: the components, an ECS, and a game editor. It's up to you to choose what you want, and code how you want.
 
 
@@ -213,21 +240,18 @@ a thought: this is step up from the old Flashpunk, which coupled `Entity` with t
 # structure / way of making
 seems like a stardard entity-component-system..
 
-start by writing to the main Game is Ready class?
+can start by writing direcrly to the main Game is Ready class, in `init and tick. Or can directly write custom components first, and then add them to entities using the editor. After writing a few, you can create prototypes for entities that frequently use a certain set of components
 
 component systems ("modifiers", "scripts") should contain a bulk of the code
-  - components can create other components, though i'm not so sure if this is a good idea..
+  - components can create other components
   - put static functions in the API class
     - static create(a, b, c, d)
-  - put data in Data
+  - put data fields in Data
     - especially data to be modified easily (in the editor)
   - examples:
-    - 2d-top-down player controller, grow, shine, follow, collider, etc.
+    - 2d-top-down player controller, grow, shine, follow, collider (Arcade), etc.
 
-over time, as components become large, they can be divided into smaller, more abstract components, which will naturally make them more re-usable (especially when compared to object-oriented design)
-
-use prototypes, which are just a combinations of components, as they can be easily added through the game editor
-
+over time, as components become large, they can be divided into smaller, more abstract components, which will naturally make them more re-usable (especially when compared to object-oriented design!)
 
 
 
