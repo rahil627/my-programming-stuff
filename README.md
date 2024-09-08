@@ -11,10 +11,10 @@ includes:
  - code editor configs
  - OS configs
    - server
-     - OpenSUSE leap (dotfiles or nix)
+     - OpenSUSE leap (dotfiles)
    - personal
      - Windows (powershell scripts, appdata?)
-     - ChromeOS with "crostini" Arch Linux container (dotfiles)
+     - OLD: ChromeOS with "crostini" Arch Linux container (dotfiles)
  - scripts
  - cli apps
-
+ - code play-ground
