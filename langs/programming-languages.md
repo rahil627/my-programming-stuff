@@ -1072,23 +1072,32 @@ Pony
 
 ### embedded scripting:
   - embeds in to C
-  - not worth the trade-off in games (hence why unreal engine stopped using it), as mentioned by jon blow
+  - maybe not worth the trade-off in games (hence why unreal engine stopped using it?), as mentioned by jon blow
+    - but unreal is developing another scripting language..: verse
+      - https://www.reddit.com/r/unrealengine/comments/1bzfnhb/verse_update_gdc_2024/
+        - concurrent garbage collection tied to objects (actor model?)
 
 lua
   - extremely simple (only perhaps second to lisp)
-  - the most performant vm/compiler of all dynamic programming languages: LuaJIT, pretty much thanks to the one guy that made it
-  - powerful meta-data-structure: the table, in which you can implement any other data structure, making it extremely modular
+  - the goat vm/compiler of all dynamic programming languages: LuaJIT, pretty much thanks to that one guy who made it
+  - an all-powerful meta-data-structure: the table (and meta-tables!), from which you can implement any other data structure, making it a rather modular language (also like lisp)
 
 **wren**
   - modern sytnax with object-oriented-style classes
+    - though, the classes here are fare more flexible, as the language is much simpler
   - go-like concurrency via "fibers"
   - meant for embedding to C so doesn't come with a std lib (lua does)
-    - can add libuv (a contemporary cross-platform std C lib) to it, as in Luxe
-  - not luaJIT fast, close to luaJIT -joff (luaJIT with JIT off) fast, but faster than the standard implementation of Lua, and now only marginally quicker than the more complex standard ruby and python C interpreters
-    - though, it's aim is to be simple: a highly-readable 4000 lines of code vm
+    - can add libuv (a contemporary cross-platform std C lib) to it, as in the wren cli bundle
+  - not luaJIT fast, not far from luaJIT -joff (luaJIT impl with JIT off) tho, equal or faster than the current standard implementation of Lua, and nowadays (2024) only marginally quicker than the more complex standard ruby and python C interpreters (non-JIT interpreters are all about the same)
+    - though, **it's aim is to be simple: a highly-readable ~7000+ lines of code vm** as opposed to javascript's v8 is 2,300,000 lines of code (as of 2024), more than 300x larger!
+      - https://github.com/wren-lang/wren/blob/main/src/vm/wren_vm.c
+        - 2000 loc
+      - https://github.com/lua/lua/blob/master/lua.c
+        - 700 loc
   - perfect for games! :)
     - use in luxe (game engine)
-  - made with <3 by rubyx01 (of luxe), though started by Bob of game design patterns / crafting interpreters fame, and a similar language is used in his books
+  - **made with <3 by rubyx01 (of luxe), though started by Bob/munificent** of game design patterns / crafting interpreters fame (a similar language is used in his books)
+  
 
 squirrel
   - was used by a few game companies as a general scripting lang for games that even ran on consoles
