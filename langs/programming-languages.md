@@ -160,10 +160,10 @@ haxe
   - rust guarantees memory safety at the cost of following their "borrower" convention, and is just much newer (by decades!). But, it's not an end-all solution to memory-management, especially in the case for games
     - **skip rust, and wait for jai**
   - "Rust is a kitchen-sink language that can do anything well if you're willing to put in the time to learn how to control it."
-  - anything is better than C++!
+  - "modern" C++ (>11) is actually legit
 **zig** > odin > **C**
   - low-level, even low-low level!, manual memory management, but with less features
-  - best to stick to C as it is *the language* of nearly everything, especially consoles, mobile devices, and embedded devices, and has libs for all of those devices. one cannot keep running away from it ;) anyway, it's nowhere near as bad as C++!
+  - best to stick to C as it is *the language* of nearly everything, especially consoles, mobile devices, and embedded devices, and has libs for all of those devices. one cannot keep running away from it ;) anyway, it's nowhere near as bad as the older C++!
   - zig is very very good here, but i hope i never have to go down to this level
 Ocaml
   - often used for parsing/compilers (haxe, rust), and other problem/solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data too
@@ -828,7 +828,20 @@ TODO: merge with above
 
 
 
-C++
+**C++**
+  - NOTE: went through big changes from C++11 and on, updating every 3 years: the advent of "modern C++"
+    - https://www.incredibuild.com/blog/modern-c-the-evolution-of-c
+    - mostly C++11:
+      - 'auto' (var), range-based loops and "structured binding", and lambda make it feel more like a modern dynamic language, but with better implementations
+        - also had type inference far before C#/java ~2011 vs ~2017/2018! return type inference too!
+      - variadic template
+      - decided on a memory model leading to standard multi-threading and concurrency
+    - C++20
+      - modules!!!
+        - no more #include!!
+      - coroutines (another way of concurrency?), maybe just had threads before?
+      - concepts
+      - ranges
   - *you poor, poor soul, you.*
   - frameworks: ??, maybe C++ people don't rely on frameworks: they build it! :p
   - manual memory management via pointers 'n references 'n "smart" pointers 'n the const key-word
@@ -839,12 +852,10 @@ C++
   - smart pointers (3 kinds) that generally delete themselves once the last reference falls out of scope
     - this just makes it even more complex!! :( why worry about references and 3 kinds of smart pointers and raw pointers, when you can worry about raw pointers?
   - header files are also annoying
-  - adds "standard library" including strings to C (before they were an array of "char"s)
+  - adds "standard library" including strings to C (before they were an array of "char"s!)
   - adds generics ("templates"), enums, and other now basic features..
   - loved/hated, mostly hated, i think
-  - strange development cycle, wherein cults choose which version they prefer the most (C++14, C++20, etc.)
-  - also a problem of multiple compilers, each of which only work for certain version or certain features?? (gcc, vs, dev-cpp, etc.)
-  - segfaults, blue screen of deaths
+  - also a problem of multiple compilers, each of which only work for certain version or certain features?? (gcc vs clang)
   - this first reddit thread illustrates the terrible flaws of C++
     - https://www.reddit.com/r/rust/comments/4yz59h/cc_interop/
 
