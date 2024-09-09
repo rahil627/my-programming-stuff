@@ -1,16 +1,15 @@
 wren for normal non-embedded scripting?
-  - no! must be embedded to C (or C++)
 
 # conclusion
-because there is no standard library, i dont think this can really be used for neither programs nor even small scripts. Libuv seems nice, but even that is just a minimalist io module. Even a scripting language needs a good standard library. You shouldn't have to rewrite that, nor even select them / build up your own standard library. You will need things like regex, more helpful / end-user-oriented file io and networking, and all those things you'd normal use found in a common standard library.
+no. must be embedded to C (or C++?)
 
-no is the answer
+because there is no standard library, this is neither suitable for general programs nor even small scripts. Libuv seems nice, but even that is just a minimalist io module, not a standard library replacement. Also, you'd need the user have to download the "wren cli" repo, which itself is rather experimental, maybe even abandoned, which makes it absolutely useless to most users.
 
 you'd have to create a C file, embed wren (and it's vm) into it, then link the C libs you need to wren (several ways provided)
   - see end of https://wren.io/embedding/
   - https://wren.io/embedding/calling-c-from-wren.html
 
-however, for it's purpose, it kicks ass, much prettier in all ways (syntax, concurrency, classes) than Lua for game 'n ui app scripting and for general embedding into C (/C++?), which is what all the game libs are written in. Lua only has a better "run-time": LuaJIT, but as that can't be used for many consoles, it's no use. The standard Lua interpreter is actually much slower.
+however, for it's purpose, it kicks ass, much prettier in all ways (syntax, concurrency, classes) than Lua for game 'n ui app scripting and for general embedding into C (/C++?), which is what all the game libs are written in. Lua only has a better "run-time": LuaJIT, but as that can't be used for many consoles and iOS, it's no use, and the standard Lua interpreter is actually just as slow or even slower than wren!
 
 
 # what's included?
@@ -91,6 +90,12 @@ attach(...) {
 
 
 syntax:
+
+https://wren.io/try/
+  - test wren code here
+  - otherwise need to download the cli bundle (interpreter + libuv)
+    - https://wren.io/cli/
+
 
 var x = 4
 var x:Num = 4 // type is inferred?
