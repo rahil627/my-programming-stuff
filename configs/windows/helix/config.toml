@@ -377,14 +377,14 @@ enable = true
 max-wrap = 10 # increase value to reduce forced mid-word wrapping
 
 [editor.statusline]
-# vim stuff, interactive stuff
-left = ["mode", "register", "spinner", "diagnostics", "workspace-diagnostics"]
+# text-editor info, interactive stuff
+left = ["mode", "selections", "register", "spinner", "diagnostics", "workspace-diagnostics"]
 
 # file-related
-center = ["file-name", "read-only-indicator", "file-modification-indicator", "version-control", "file-encoding", "file-line-ending"]
+center = ["file-name", "read-only-indicator", "file-modification-indicator", "version-control"]
 
-# more info
-right = ["selections", "position-percentage"]
+# more file info
+right = ["file-encoding", "file-line-ending", "position-percentage"]
 
 separator = "│" # ":<:>:<:>:" 
 mode.normal = "normal"
