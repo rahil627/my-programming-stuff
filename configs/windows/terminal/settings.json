@@ -375,9 +375,10 @@
             "colorScheme": "CyberPunk2077",
             "font": 
             {
-                "face": "mononoki",
-                "size": 10.0,
-                "weight": "normal"
+                "face": "Monofoki",
+                "size": 9.0,
+                "weight": "normal",
+                "cellHeight": "1",
             }
         },
         "list": 
