@@ -103,9 +103,6 @@ lekton
   - surprisingly pleasing..
 maple
   - nice 'n thick TODO: try the "light" version
-**monofoki**
-  - less seriphy, bolder mononoki, good choices
-  - can try both in terminal
 **office code pro**
   - forked from source code pro, combines a lot of good things from other fonts
   - possibly my current favorite
@@ -144,8 +141,14 @@ vs-code
   - consolas looks better than source code pro, but it doesn't have a lighter weight
 
 terminal
-  - mononoki
-  - font-size: 10
+  - monofoki
+    - NOTE: for this particular font, must override line-height: 1 to match mononoki
+    - font-size: 8-9
+  - cascadia code
+    - really nice thick-stroked font for terminals, though too thick for programming
+  - TODO: can play with turning off anti-aliasing
+    - powershell -> advanced -> text antialiasing
+    - without anti-aliasing it look clearer, but fonts with curves struggle
 
 
 chrome (browser/OS?) defaults (for reference):
@@ -182,6 +185,8 @@ or a more narrow source code pro
   - 11, same size as source code pro
   - taller than source code pro, dejavu-like
   - only one font weight
+
+
 
 **mononoki**
   - 12, same size as consolas
@@ -229,6 +234,7 @@ cascadia mono/code
   - has a light version
   - feels more roman and seriphy than source code pro
   - but it does have better/narrower character width
+  - **great in windows terminal**, showing **really thick strokes**
 
 monaspace
   - a collection by github
@@ -265,6 +271,11 @@ hasklig
   - other weights:
     - https://github.com/ryanoasis/nerd-fonts/tree/master/src/unpatched-fonts/Hasklig
       - somewhere in-between source code pro regular and light
+
+monofoki
+  - a lot of small changes, usually for the better
+    - not sure how i feel about this 'm' though..
+  - branches from mononoki, 50 commits behind, 200+ ahead
 
 mononoki
   - a cute, unique, small font
