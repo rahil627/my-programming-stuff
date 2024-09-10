@@ -4,11 +4,6 @@
 // how to change shortcuts for signals? (c+c, c+l, etc.)
 // check c+s+p for unmapped commands
 
-// try less opacity
-// didn't work, try ui settings
-// "antialiasingMode": "cleartype",
-// "useAcrylic": true,
-// "acrylicOpacity": 0.5,
 
 {
     "$help": "https://aka.ms/terminal-documentation",
@@ -372,7 +367,12 @@
     {
         "defaults": 
         {
-            "colorScheme": "CyberPunk2077",
+            
+// try less opacity
+// "antialiasingMode": "cleartype",
+"useAcrylic": false,
+"acrylicOpacity": 0.7,
+            "colorScheme": "CyberPunk2077", // "Aura Dark (Soft Text)",
             "font": 
             {
                 "face": "Monofoki",
