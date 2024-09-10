@@ -1,10 +1,27 @@
 
+to make the background transparent:
+create a themes folder in the helix config directory
+create a new theme: transparent_default.toml
+add these two lines in the file:
+  inherits = "default"
+  "ui.background" ={}
+
+in case you have a custom theme.toml, look for this line:
+  "ui.background" = { fg = "foreground", bg = "background" }
+remove the bg key
+  
+
 https://www.reddit.com/r/HelixEditor/comments/14vqm19/share_your_helix/
   - TODO: edit config some more
   - add languages.toml file
 
 
 https://www.youtube.com/watch?v=xHebvTGOdH8
+
+
+
+
+
 
 :tutor
   - tutorial!
@@ -16,7 +33,6 @@ https://www.youtube.com/watch?v=xHebvTGOdH8
 
 my own key-mapping additions:
 TODO: in fuzzy-search (file picker), j/k - go down/up list
-TODO: X = ]p
 
 helix for vs code:
 s+[ and s+]
