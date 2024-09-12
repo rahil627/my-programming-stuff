@@ -10,6 +10,17 @@ install-apps.ps1 <-- setup.sh
   - cli/tui apps i currently use
 
 
+https://wezfurlong.org/wezterm/what-is-a-terminal.html
+  - good short history and differentation between terminal, tty, shell
+  - terminal (nowadays, a computer)
+    - A computer terminal is a device that can be used for entering data into (input) and presenting data from (output) a computer system.
+  - tty
+    - "On unix operating systems, the kernel has a subsystem for managing Terminal TeletYpes (TTYs) which is essentially a stream of input data, a stream of output data, and some flow control and signal/interrupt management. A TTY is typically strongly associated with a physical serial communication device installed in the system."
+    - "The kernel doesn't know any details of the connected device as there isn't a defined way for it to do that; it only knows how to transmit data over that serial line."
+  - shell
+    - "The Terminal and TTY interface are essentially low-level hardware specifications for moving bytes around. On their own they don't provide any pre-defined function on the connected computer system. For them to do something there needs to be a program that can interpret the input and produce some output...That program is a shell program,"
+
+
 setup:
 see setup.sh
 
