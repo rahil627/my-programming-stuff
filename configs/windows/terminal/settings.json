@@ -370,10 +370,10 @@
         "defaults": 
         {
             
-// try less opacity
-// "antialiasingMode": "cleartype",
-"useAcrylic": false,
-"acrylicOpacity": 0.7,
+            // try less opacity
+            // "antialiasingMode": "cleartype",
+            "useAcrylic": false,
+            "acrylicOpacity": 0.7,
             "colorScheme": "CyberPunk2077", // "Aura Dark (Soft Text)",
             "font": 
             {
