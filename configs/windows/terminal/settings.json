@@ -36,6 +36,13 @@
             },
             "keys": "alt+h"
         },
+
+        // unmap keys
+        // especially ctrl+shift
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+space"
+        },
         {
             "command": "unbound",
             "keys": "ctrl+shift+w"
