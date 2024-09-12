@@ -27,7 +27,7 @@ pacman -Syu # TODO: read the arch-wiki maintenance article
 
 # main stuff
 source setup-shell.sh # not sure if this is the proper way to execute other scripts...
-source config-chromebook.sh # laptop specific stuff
+# source config-chromebook.sh # laptop specific stuff, see chromeos/config-chromebook.sh
 pacman -S fig # TODO: need to test; adds auto-complete to any terminal!
 
 # core shell apps
