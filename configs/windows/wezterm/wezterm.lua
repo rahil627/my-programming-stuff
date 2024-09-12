@@ -33,7 +33,7 @@ config.color_scheme = 'Aura (Gogh)'
 --   - this is why the file manager's icons show up!
 
 config.font = wezterm.font_with_fallback {
-  'Monofoki'
+  'Monofoki',
   'Consolas',
   -- 'DengXian',
 }
