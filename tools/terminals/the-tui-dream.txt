@@ -150,8 +150,12 @@ cd replacement
 file managers:
   - GUI > wasting human memory, also *way* better than typing ls/cd!!
   - todo: try them all!
+**yazi**
+  - used this on windows, it's great! sliding columns/folders feels good!
+  - previews for images 'n code?
+  - lots of advanced features built-in
 **lf**
-  - current best
+  - i used this on the chromebook, worked well
 ranger
   - most feature-rich / extensible
   - vim key bindings are used by
