@@ -40,9 +40,13 @@
 # [editor]
 
 
+theme = "boo_berry"
+#  - most similar to 'default', with much less contrast and no bold
+#  - better than default for code, but i might default more for non-code..
 
-theme = "boo berry" # a better version of the 'default' theme
-
+# temp programming themes until aura dark is ported
+# theme = "nightfox"
+# theme = "tokyonight"
 
 
 # re-map some keys
