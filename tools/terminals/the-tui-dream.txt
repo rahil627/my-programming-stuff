@@ -6,6 +6,8 @@ linux.txt
 setup.sh
   - tui apps i currently use
 
+install-apps.ps1 <-- setup.sh
+  - cli/tui apps i currently use
 
 
 setup:
