@@ -63,22 +63,22 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
       -- should change to win+space!
 
       
-    
+    -- BEGIN my additional mappings
     -- newly added bindings (not binded by default):
     
     -- will switch back to the last active tab
-    {
-      key = 'o', -- similar to vi/helix jump-list
-      mods = 'ALT',
-      action = wezterm.action.ActivateLastTab,
-    },
+    -- i/o similar to vi/helix mappings for jump-list
+    { key = 'o', mods = 'ALT', action = wezterm.action.ActivateLastTab },
 
   
     -- changes to original config:
 
 
     -- major features
-    -- TODO: find some keys for these
+
+    -- good defaults:
+    -- p, command pallete
+    -- f, find
 
     -- l was default, same as the browser shortcut for javascript debug console
     { key = 'd', mods = 'ALT', action = act.ShowDebugOverlay },
@@ -109,13 +109,13 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
 
     -- "Closes the current pane. If that was the last pane in the tab, closes the tab. If that was the last tab, closes that window. If that was the last window, wezterm terminates."
       -- the most sane defaults ever!! go wez wez wehhhhzz
-    {
-      key = 'w',
-      mods = 'ALT',
-      action = wezterm.action.CloseCurrentPane { confirm = true },
-    },
-    -- END OF MY CONFIG
+    { key = 'w', mods = 'ALT', action = wezterm.action.CloseCurrentPane { confirm = true }, },
+    -- END my additional mappings
+
+
+
     
+    -- BEGIN edited generated default mappings
     -- okay
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
     { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1) },
@@ -191,6 +191,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = '@', mods = 'CTRL', action = act.ActivateTab(1) },
     -- { key = '@', mods = 'SHIFT|CTRL', action = act.ActivateTab(1) },
 
+    -- MAIN FUNCTIONS
     { key = 'C', mods = 'ALT', action = act.CopyTo 'Clipboard' },
     -- { key = 'C', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
     { key = 'F', mods = 'ALT', action = act.Search 'CurrentSelectionOrEmptyString' },
@@ -377,6 +378,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
       { key = 'UpArrow', mods = 'NONE', action = act.CopyMode 'PriorMatch' },
       { key = 'DownArrow', mods = 'NONE', action = act.CopyMode 'NextMatch' },
     },
+    -- END of generated default mappings
 
   } -- keys
   -- return keys
