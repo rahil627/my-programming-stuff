@@ -2,11 +2,11 @@
 -- cp $my_configs\wezterm $home\.config\ -- TODO: test cp \ vs  \wezterm
 -- cp $my_configs\wezterm $home\.config\ -Recurse -Force
 
--- test configs via cli command:
 -- quickly test configs via cli command:
 -- wezterm --config config.color_scheme='Neon Night (Gogh)' -- TODO: not working...
 
 -- debug lua scripts via the debug console!! control+shift+l TODO: -> alt+l
+
 -- required
 local wezterm = require 'wezterm'
 local my_key_map = require 'my_key_map'
@@ -20,6 +20,7 @@ local config = wezterm.config_builder()
 
 -- config goes here
 
+-- keep most commonly altered settings on top
 -- confusing, i posted an docs issue about this..:
 -- https://github.com/wez/wezterm/issues/6130
 config.keys = my_key_map.get_my_key_map().keys
