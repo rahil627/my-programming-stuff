@@ -1,12 +1,19 @@
 -- wezterm show-keys --lua > show-keys.txt
 
 local wezterm = require 'wezterm'
+
+local module = {} -- the table to return/export to the main script (wezterm.lua)
 local act = wezterm.action
 
-return {
-  keys = {
+-- to use:
+-- config.key = my_key_map.keys
+-- config.key_tables = my_key_map.key_tables
+-- returns a table containing a 'keys' table and 'key_tables'
+function module.get_my_key_map() -- don't forget to add it to the module table!!
+return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
+    keys = {
 
-    -- NOTE: try not to move the shortcuts around, as it will likely generate the same way
+    -- NOTE: try not to move the shortcuts around, as it will likely generate the same way. it will also make it easier to diff 'n merge newer default key-mappings
 
     -- main shortcuts
     -- ActivateCopyMode 
@@ -15,14 +22,14 @@ return {
       -- should change to win+space!
 
     -- split panes and moving between them
-    { key = ';', mods = 'ALT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
     { key = 'h', mods = 'ALT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+    { key = 'l', mods = 'ALT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
 
     -- TODO: find the function for next/previous pane for j/k instead of directions
-    { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
+    -- { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
     { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
     { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
-    { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+    -- { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
     
     -- okay
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
@@ -176,8 +183,9 @@ return {
     -- copy/paste keys??
     { key = 'Copy', mods = 'NONE', action = act.CopyTo 'Clipboard' },
     { key = 'Paste', mods = 'NONE', action = act.PasteFrom 'Clipboard' },
-  },
+  }, -- keys TODO: comma is confusing...
 
+  -- table within 'keys' table?
   key_tables = {
     copy_mode = {
       { key = 'Tab', mods = 'NONE', action = act.CopyMode 'MoveForwardWord' },
@@ -257,5 +265,9 @@ return {
       { key = 'DownArrow', mods = 'NONE', action = act.CopyMode 'NextMatch' },
     },
 
-  }
-}
+  } -- keys
+  -- return keys
+} -- return
+end
+
+return module
