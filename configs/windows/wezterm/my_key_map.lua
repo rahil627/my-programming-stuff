@@ -47,6 +47,8 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- },
 
 
+
+    -- TODO: import my key-mappings for windows terminal
     
     -- functions to bind
     -- see https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
@@ -96,10 +98,13 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'h', mods = 'ALT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
     { key = 'l', mods = 'ALT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
 
-    -- TODO: find the function for next/previous pane for j/k instead of directions
+    -- find the function for next/previous pane for j/k instead of directions
+    -- https://wezfurlong.org/wezterm/config/lua/keyassignment/ActivatePaneDirection.html?h=activate+pane+next
+      -- NOTE: hidden within the same function!
+    -- NOTE: 'Prev' not 'Previous'
     -- { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
-    { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
-    { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
+    { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Next' },
+    { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Prev' },
     -- { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
 
     -- "Closes the current pane. If that was the last pane in the tab, closes the tab. If that was the last tab, closes that window. If that was the last window, wezterm terminates."
