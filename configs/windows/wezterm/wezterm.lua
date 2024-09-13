@@ -85,6 +85,9 @@ config.font_size = 9
 
 -- bold_brightens_ansi_colors = BrightAndBold/BrightOnly/No
 -- https://wezfurlong.org/wezterm/config/lua/config/bold_brightens_ansi_colors.html
+-- this is the feature that made text *pop* on mac os! :D
+
+
 
 
 
