@@ -89,7 +89,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'z', mods = 'ALT', action = act.ActivateCopyMode },
 
     -- TODO: see docs, don't quite understand how this works..
-    { key = 's', mods = 'SHIFT|CTRL', action = act.QuickSelect },
+    { key = 's', mods = 'ALT', action = act.QuickSelect },
 
 
 
