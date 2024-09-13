@@ -14,13 +14,84 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     keys = {
 
     -- NOTE: try not to move the shortcuts around, as it will likely generate the same way. it will also make it easier to diff 'n merge newer default key-mappings
+      -- add to a key_table? nah, still would have to remove the defaults (non-alt mods)..
 
-    -- main shortcuts
-    -- ActivateCopyMode 
+
+    -- some notes:
+    -- https://wezfurlong.org/wezterm/config/keys.html#configuring-key-assignments
+    -- CMD == WIN == SUPER
+    -- OPT == ALT == META
+    -- LEADER
+      -- special chording, only allows the bindings you set, eats up all other input
+      -- https://wezfurlong.org/wezterm/config/keys.html#leader-key
+
+    -- VoidSymbol
+      -- the key-code sent when a key is removed by os, such as caps lock
+
+    -- https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
+      -- see all the actions you can assign to a key
+
+    -- https://wezfurlong.org/wezterm/config/default-keys.html
+      -- see default keys
+      -- wezterm show-keys --lua
+        -- copy/pastable to config!
+  
+    -- was just an example, but keeping it so that the os minimizes everything except the terminal! :p
+    -- Turn off the default CMD-m Hide action, allowing CMD-m to
+    -- be potentially recognized and handled by the tab
+
+    -- {
+    --   key = 'm',
+    --   mods = 'CMD',
+    --   action = wezterm.action.DisableDefaultAssignment,
+    -- },
+
+
+    
+    -- functions to bind
+    -- see https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
+    -- TODO: go through the list
+
+    -- main features:
+    -- ActivateCopyMode
     -- ActivateCommandPalette
+      -- space -> space in helix
+      -- c+s+p in vs-code, and by default
     -- alt+space used by windows powertoys launcher
       -- should change to win+space!
 
+      
+    
+    -- newly added bindings (not binded by default):
+    
+    -- will switch back to the last active tab
+    {
+      key = 'o', -- similar to vi/helix jump-list
+      mods = 'ALT',
+      action = wezterm.action.ActivateLastTab,
+    },
+
+  
+    -- changes to original config:
+
+
+    -- major features
+    -- TODO: find some keys for these
+
+    -- l was default, same as the browser shortcut for javascript debug console
+    { key = 'd', mods = 'ALT', action = act.ShowDebugOverlay },
+
+    -- TODO: using z temporarily
+    -- x was default, c is used by copy, v (for vi-mode) used by paste
+    -- z for view pop-up by helix
+    { key = 'z', mods = 'ALT', action = act.ActivateCopyMode },
+
+    -- TODO: see docs, don't quite understand how this works..
+    { key = 's', mods = 'SHIFT|CTRL', action = act.QuickSelect },
+
+
+
+    
     -- split panes and moving between them
     { key = 'h', mods = 'ALT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
     { key = 'l', mods = 'ALT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
@@ -30,6 +101,15 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
     { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
     -- { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+
+    -- "Closes the current pane. If that was the last pane in the tab, closes the tab. If that was the last tab, closes that window. If that was the last window, wezterm terminates."
+      -- the most sane defaults ever!! go wez wez wehhhhzz
+    {
+      key = 'w',
+      mods = 'ALT',
+      action = wezterm.action.CloseCurrentPane { confirm = true },
+    },
+    -- END OF MY CONFIG
     
     -- okay
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
@@ -44,23 +124,31 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = '\"', mods = 'ALT|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
     -- { key = '\"', mods = 'SHIFT|ALT|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
 
-    { key = '#', mods = 'CTRL', action = act.ActivateTab(2) },
-    { key = '#', mods = 'SHIFT|CTRL', action = act.ActivateTab(2) },
-    { key = '$', mods = 'CTRL', action = act.ActivateTab(3) },
-    { key = '$', mods = 'SHIFT|CTRL', action = act.ActivateTab(3) },
-    { key = '%', mods = 'CTRL', action = act.ActivateTab(4) },
-    { key = '%', mods = 'SHIFT|CTRL', action = act.ActivateTab(4) },
+    -- just use next/previous tab instead
+    -- { key = '#', mods = 'CTRL', action = act.ActivateTab(2) },
+    -- { key = '#', mods = 'SHIFT|CTRL', action = act.ActivateTab(2) },
+    -- { key = '$', mods = 'CTRL', action = act.ActivateTab(3) },
+    -- { key = '$', mods = 'SHIFT|CTRL', action = act.ActivateTab(3) },
+    -- { key = '%', mods = 'CTRL', action = act.ActivateTab(4) },
+    -- { key = '%', mods = 'SHIFT|CTRL', action = act.ActivateTab(4) },
+
+    -- weird vim bindings?? or perl!?
     -- { key = '%', mods = 'ALT|CTRL', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
     -- { key = '%', mods = 'SHIFT|ALT|CTRL', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
-    { key = '&', mods = 'CTRL', action = act.ActivateTab(6) },
-    { key = '&', mods = 'SHIFT|CTRL', action = act.ActivateTab(6) },
+
+    -- { key = '&', mods = 'CTRL', action = act.ActivateTab(6) },
+    -- { key = '&', mods = 'SHIFT|CTRL', action = act.ActivateTab(6) },
+
+    -- weird vim bindings (cont.)
     -- { key = '\'', mods = 'SHIFT|ALT|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
-    { key = '(', mods = 'CTRL', action = act.ActivateTab(-1) },
-    { key = '(', mods = 'SHIFT|CTRL', action = act.ActivateTab(-1) },
-    { key = ')', mods = 'CTRL', action = act.ResetFontSize },
-    { key = ')', mods = 'SHIFT|CTRL', action = act.ResetFontSize },
-    { key = '*', mods = 'CTRL', action = act.ActivateTab(7) },
-    { key = '*', mods = 'SHIFT|CTRL', action = act.ActivateTab(7) },
+
+    -- { key = '(', mods = 'CTRL', action = act.ActivateTab(-1) },
+    -- { key = '(', mods = 'SHIFT|CTRL', action = act.ActivateTab(-1) },
+    -- { key = ')', mods = 'CTRL', action = act.ResetFontSize },
+    -- { key = ')', mods = 'SHIFT|CTRL', action = act.ResetFontSize },
+    -- { key = '*', mods = 'CTRL', action = act.ActivateTab(7) },
+    -- { key = '*', mods = 'SHIFT|CTRL', action = act.ActivateTab(7) },
+
     { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
     { key = '+', mods = 'SHIFT|CTRL', action = act.IncreaseFontSize },
     { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
@@ -69,121 +157,141 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = '0', mods = 'CTRL', action = act.ResetFontSize },
     { key = '0', mods = 'SHIFT|CTRL', action = act.ResetFontSize },
     { key = '0', mods = 'SUPER', action = act.ResetFontSize },
-    { key = '1', mods = 'SHIFT|CTRL', action = act.ActivateTab(0) },
-    { key = '1', mods = 'SUPER', action = act.ActivateTab(0) },
-    { key = '2', mods = 'SHIFT|CTRL', action = act.ActivateTab(1) },
-    { key = '2', mods = 'SUPER', action = act.ActivateTab(1) },
-    { key = '3', mods = 'SHIFT|CTRL', action = act.ActivateTab(2) },
-    { key = '3', mods = 'SUPER', action = act.ActivateTab(2) },
-    { key = '4', mods = 'SHIFT|CTRL', action = act.ActivateTab(3) },
-    { key = '4', mods = 'SUPER', action = act.ActivateTab(3) },
-    { key = '5', mods = 'SHIFT|CTRL', action = act.ActivateTab(4) },
-    -- { key = '5', mods = 'SHIFT|ALT|CTRL', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
-    { key = '5', mods = 'SUPER', action = act.ActivateTab(4) },
-    { key = '6', mods = 'SHIFT|CTRL', action = act.ActivateTab(5) },
-    { key = '6', mods = 'SUPER', action = act.ActivateTab(5) },
-    { key = '7', mods = 'SHIFT|CTRL', action = act.ActivateTab(6) },
-    { key = '7', mods = 'SUPER', action = act.ActivateTab(6) },
-    { key = '8', mods = 'SHIFT|CTRL', action = act.ActivateTab(7) },
-    { key = '8', mods = 'SUPER', action = act.ActivateTab(7) },
-    { key = '9', mods = 'SHIFT|CTRL', action = act.ActivateTab(-1) },
-    { key = '9', mods = 'SUPER', action = act.ActivateTab(-1) },
-    { key = '=', mods = 'CTRL', action = act.IncreaseFontSize },
-    { key = '=', mods = 'SHIFT|CTRL', action = act.IncreaseFontSize },
-    { key = '=', mods = 'SUPER', action = act.IncreaseFontSize },
-    { key = '@', mods = 'CTRL', action = act.ActivateTab(1) },
-    { key = '@', mods = 'SHIFT|CTRL', action = act.ActivateTab(1) },
 
-    -- TODO: likely can change most to use alt
-    { key = 'C', mods = 'CTRL', action = act.CopyTo 'Clipboard' },
-    { key = 'C', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
-    { key = 'F', mods = 'CTRL', action = act.Search 'CurrentSelectionOrEmptyString' },
-    { key = 'F', mods = 'SHIFT|CTRL', action = act.Search 'CurrentSelectionOrEmptyString' },
-    { key = 'K', mods = 'CTRL', action = act.ClearScrollback 'ScrollbackOnly' },
-    { key = 'K', mods = 'SHIFT|CTRL', action = act.ClearScrollback 'ScrollbackOnly' },
-    { key = 'L', mods = 'CTRL', action = act.ShowDebugOverlay },
-    { key = 'L', mods = 'SHIFT|CTRL', action = act.ShowDebugOverlay },
-    { key = 'M', mods = 'CTRL', action = act.Hide },
-    { key = 'M', mods = 'SHIFT|CTRL', action = act.Hide },
-    { key = 'N', mods = 'CTRL', action = act.SpawnWindow },
-    { key = 'N', mods = 'SHIFT|CTRL', action = act.SpawnWindow },
-    { key = 'P', mods = 'CTRL', action = act.ActivateCommandPalette },
-    { key = 'P', mods = 'SHIFT|CTRL', action = act.ActivateCommandPalette },
-    { key = 'R', mods = 'CTRL', action = act.ReloadConfiguration },
-    { key = 'R', mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
-    { key = 'T', mods = 'CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
-    { key = 'T', mods = 'SHIFT|CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
-    { key = 'U', mods = 'CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    { key = 'U', mods = 'SHIFT|CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
-    { key = 'V', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
-    { key = 'W', mods = 'CTRL', action = act.CloseCurrentTab{ confirm = true } },
-    { key = 'W', mods = 'SHIFT|CTRL', action = act.CloseCurrentTab{ confirm = true } },
-    { key = 'X', mods = 'CTRL', action = act.ActivateCopyMode },
-    { key = 'X', mods = 'SHIFT|CTRL', action = act.ActivateCopyMode },
-    { key = 'Z', mods = 'CTRL', action = act.TogglePaneZoomState },
-    { key = 'Z', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
-    { key = '[', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(-1) },
-    { key = ']', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(1) },
-    { key = '^', mods = 'CTRL', action = act.ActivateTab(5) },
-    { key = '^', mods = 'SHIFT|CTRL', action = act.ActivateTab(5) },
-    { key = '_', mods = 'CTRL', action = act.DecreaseFontSize },
-    { key = '_', mods = 'SHIFT|CTRL', action = act.DecreaseFontSize },
-    { key = 'c', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
-    { key = 'c', mods = 'SUPER', action = act.CopyTo 'Clipboard' },
-    { key = 'f', mods = 'SHIFT|CTRL', action = act.Search 'CurrentSelectionOrEmptyString' },
-    { key = 'f', mods = 'SUPER', action = act.Search 'CurrentSelectionOrEmptyString' },
-    { key = 'k', mods = 'SHIFT|CTRL', action = act.ClearScrollback 'ScrollbackOnly' },
-    { key = 'k', mods = 'SUPER', action = act.ClearScrollback 'ScrollbackOnly' },
-    { key = 'l', mods = 'SHIFT|CTRL', action = act.ShowDebugOverlay },
-    { key = 'm', mods = 'SHIFT|CTRL', action = act.Hide },
-    { key = 'm', mods = 'SUPER', action = act.Hide },
-    { key = 'n', mods = 'SHIFT|CTRL', action = act.SpawnWindow },
-    { key = 'n', mods = 'SUPER', action = act.SpawnWindow },
-    { key = 'p', mods = 'SHIFT|CTRL', action = act.ActivateCommandPalette },
-    { key = 'r', mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
-    { key = 'r', mods = 'SUPER', action = act.ReloadConfiguration },
-    { key = 't', mods = 'SHIFT|CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
-    { key = 't', mods = 'SUPER', action = act.SpawnTab 'CurrentPaneDomain' },
-    { key = 'u', mods = 'SHIFT|CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    { key = 'v', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
-    { key = 'v', mods = 'SUPER', action = act.PasteFrom 'Clipboard' },
-    { key = 'w', mods = 'SHIFT|CTRL', action = act.CloseCurrentTab{ confirm = true } },
-    { key = 'w', mods = 'SUPER', action = act.CloseCurrentTab{ confirm = true } },
-    { key = 'x', mods = 'SHIFT|CTRL', action = act.ActivateCopyMode },
-    { key = 'z', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
-    { key = '{', mods = 'SUPER', action = act.ActivateTabRelative(-1) },
-    { key = '{', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(-1) },
-    { key = '}', mods = 'SUPER', action = act.ActivateTabRelative(1) },
-    { key = '}', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(1) },
-    { key = 'phys:Space', mods = 'SHIFT|CTRL', action = act.QuickSelect },
+    -- { key = '1', mods = 'SHIFT|CTRL', action = act.ActivateTab(0) },
+    -- { key = '1', mods = 'SUPER', action = act.ActivateTab(0) },
+    -- { key = '2', mods = 'SHIFT|CTRL', action = act.ActivateTab(1) },
+    -- { key = '2', mods = 'SUPER', action = act.ActivateTab(1) },
+    -- { key = '3', mods = 'SHIFT|CTRL', action = act.ActivateTab(2) },
+    -- { key = '3', mods = 'SUPER', action = act.ActivateTab(2) },
+    -- { key = '4', mods = 'SHIFT|CTRL', action = act.ActivateTab(3) },
+    -- { key = '4', mods = 'SUPER', action = act.ActivateTab(3) },
+    -- { key = '5', mods = 'SHIFT|CTRL', action = act.ActivateTab(4) },
+
+    -- weird vim bindings (cont.)
+    -- { key = '5', mods = 'SHIFT|ALT|CTRL', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+
+    -- { key = '5', mods = 'SUPER', action = act.ActivateTab(4) },
+    -- { key = '6', mods = 'SHIFT|CTRL', action = act.ActivateTab(5) },
+    -- { key = '6', mods = 'SUPER', action = act.ActivateTab(5) },
+    -- { key = '7', mods = 'SHIFT|CTRL', action = act.ActivateTab(6) },
+    -- { key = '7', mods = 'SUPER', action = act.ActivateTab(6) },
+    -- { key = '8', mods = 'SHIFT|CTRL', action = act.ActivateTab(7) },
+    -- { key = '8', mods = 'SUPER', action = act.ActivateTab(7) },
+    -- { key = '9', mods = 'SHIFT|CTRL', action = act.ActivateTab(-1) },
+    -- { key = '9', mods = 'SUPER', action = act.ActivateTab(-1) },
+    -- { key = '=', mods = 'CTRL', action = act.IncreaseFontSize },
+    -- { key = '=', mods = 'SHIFT|CTRL', action = act.IncreaseFontSize },
+    -- { key = '=', mods = 'SUPER', action = act.IncreaseFontSize },
+    -- { key = '@', mods = 'CTRL', action = act.ActivateTab(1) },
+    -- { key = '@', mods = 'SHIFT|CTRL', action = act.ActivateTab(1) },
+
+    { key = 'C', mods = 'ALT', action = act.CopyTo 'Clipboard' },
+    -- { key = 'C', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
+    { key = 'F', mods = 'ALT', action = act.Search 'CurrentSelectionOrEmptyString' },
+    -- { key = 'F', mods = 'SHIFT|CTRL', action = act.Search 'CurrentSelectionOrEmptyString' },
+    { key = 'K', mods = 'ALT', action = act.ClearScrollback 'ScrollbackOnly' },
+    -- { key = 'K', mods = 'SHIFT|CTRL', action = act.ClearScrollback 'ScrollbackOnly' },
+    -- NOTE: changed mapping
+    -- { key = 'L', mods = 'ALT', action = act.ShowDebugOverlay },
+    -- { key = 'L', mods = 'SHIFT|CTRL', action = act.ShowDebugOverlay },
+    { key = 'M', mods = 'ALT', action = act.Hide },
+    -- { key = 'M', mods = 'SHIFT|CTRL', action = act.Hide },
+    { key = 'N', mods = 'ALT', action = act.SpawnWindow },
+    -- { key = 'N', mods = 'SHIFT|CTRL', action = act.SpawnWindow },
+    { key = 'P', mods = 'ALT', action = act.ActivateCommandPalette },
+    -- { key = 'P', mods = 'SHIFT|CTRL', action = act.ActivateCommandPalette },
+    { key = 'R', mods = 'ALT', action = act.ReloadConfiguration },
+    -- { key = 'R', mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
+    { key = 'T', mods = 'ALT', action = act.SpawnTab 'CurrentPaneDomain' },
+    -- { key = 'T', mods = 'SHIFT|CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
+    { key = 'U', mods = 'ALT', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
+    -- { key = 'U', mods = 'SHIFT|CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
+    { key = 'V', mods = 'ALT', action = act.PasteFrom 'Clipboard' },
+    -- { key = 'V', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
+    -- NOTE: replaced by CloseCurrentPane
+    -- { key = 'W', mods = 'ALT', action = act.CloseCurrentTab{ confirm = true } },
+    -- { key = 'W', mods = 'SHIFT|CTRL', action = act.CloseCurrentTab{ confirm = true } },
+    -- NOTE: replaced with another binding
+    -- { key = 'X', mods = 'ALT', action = act.ActivateCopyMode },
+    -- { key = 'X', mods = 'SHIFT|CTRL', action = act.ActivateCopyMode },
+    { key = 'Z', mods = 'ALT', action = act.TogglePaneZoomState },
+    -- { key = 'Z', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
+
+
+    
+    -- NOTE: SUPER, SHIFT|SUPER, SHIFT|CTRL key-modifiers start here
+
+    -- { key = '[', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(-1) },
+    -- { key = ']', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(1) },
+
+    -- why is this even here??
+    -- { key = '^', mods = 'CTRL', action = act.ActivateTab(5) },
+    -- { key = '^', mods = 'SHIFT|CTRL', action = act.ActivateTab(5) },
+
+    { key = '_', mods = 'ALT', action = act.DecreaseFontSize },
+    -- { key = '_', mods = 'SHIFT|CTRL', action = act.DecreaseFontSize },
+
+    -- { key = 'c', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
+    -- { key = 'c', mods = 'SUPER', action = act.CopyTo 'Clipboard' },
+    -- { key = 'f', mods = 'SHIFT|CTRL', action = act.Search 'CurrentSelectionOrEmptyString' },
+    -- { key = 'f', mods = 'SUPER', action = act.Search 'CurrentSelectionOrEmptyString' },
+    -- { key = 'k', mods = 'SHIFT|CTRL', action = act.ClearScrollback 'ScrollbackOnly' },
+    -- { key = 'k', mods = 'SUPER', action = act.ClearScrollback 'ScrollbackOnly' },
+    -- { key = 'l', mods = 'SHIFT|CTRL', action = act.ShowDebugOverlay },
+    -- { key = 'm', mods = 'SHIFT|CTRL', action = act.Hide },
+    -- { key = 'm', mods = 'SUPER', action = act.Hide },
+    -- { key = 'n', mods = 'SHIFT|CTRL', action = act.SpawnWindow },
+    -- { key = 'n', mods = 'SUPER', action = act.SpawnWindow },
+    -- { key = 'p', mods = 'SHIFT|CTRL', action = act.ActivateCommandPalette },
+    -- { key = 'r', mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
+    -- { key = 'r', mods = 'SUPER', action = act.ReloadConfiguration },
+    -- { key = 't', mods = 'SHIFT|CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
+    -- { key = 't', mods = 'SUPER', action = act.SpawnTab 'CurrentPaneDomain' },
+    -- { key = 'u', mods = 'SHIFT|CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
+    -- { key = 'v', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
+    -- { key = 'v', mods = 'SUPER', action = act.PasteFrom 'Clipboard' },
+    -- { key = 'w', mods = 'SHIFT|CTRL', action = act.CloseCurrentTab{ confirm = true } },
+    -- { key = 'w', mods = 'SUPER', action = act.CloseCurrentTab{ confirm = true } },
+    -- { key = 'x', mods = 'SHIFT|CTRL', action = act.ActivateCopyMode },
+    -- { key = 'z', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
+
+    -- { key = '{', mods = 'SUPER', action = act.ActivateTabRelative(-1) },
+    -- { key = '{', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(-1) },
+    -- { key = '}', mods = 'SUPER', action = act.ActivateTabRelative(1) },
+    -- { key = '}', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(1) },
+
+    -- { key = 'phys:Space', mods = 'SHIFT|CTRL', action = act.QuickSelect },
 
     -- special keys:
     -- i don't even think i have this on my laptop's keyboard..
     -- maybe can allow using non-alt mod keys here
     { key = 'PageUp', mods = 'SHIFT', action = act.ScrollByPage(-1) },
-    { key = 'PageUp', mods = 'CTRL', action = act.ActivateTabRelative(-1) },
-    { key = 'PageUp', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(-1) },
+    -- { key = 'PageUp', mods = 'CTRL', action = act.ActivateTabRelative(-1) },
+    -- { key = 'PageUp', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(-1) },
     { key = 'PageDown', mods = 'SHIFT', action = act.ScrollByPage(1) },
-    { key = 'PageDown', mods = 'CTRL', action = act.ActivateTabRelative(1) },
-    { key = 'PageDown', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(1) },
+    -- { key = 'PageDown', mods = 'CTRL', action = act.ActivateTabRelative(1) },
+    -- { key = 'PageDown', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(1) },
 
-    { key = 'LeftArrow', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Left' },
-    { key = 'LeftArrow', mods = 'SHIFT|ALT|CTRL', action = act.AdjustPaneSize{ 'Left', 1 } },
-    { key = 'RightArrow', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Right' },
-    { key = 'RightArrow', mods = 'SHIFT|ALT|CTRL', action = act.AdjustPaneSize{ 'Right', 1 } },
-    { key = 'UpArrow', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Up' },
-    { key = 'UpArrow', mods = 'SHIFT|ALT|CTRL', action = act.AdjustPaneSize{ 'Up', 1 } },
-    { key = 'DownArrow', mods = 'SHIFT|CTRL', action = act.ActivatePaneDirection 'Down' },
-    { key = 'DownArrow', mods = 'SHIFT|ALT|CTRL', action = act.AdjustPaneSize{ 'Down', 1 } },
+    -- { key = 'LeftArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
+    { key = 'LeftArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Left', 1 } },
+    -- { key = 'RightArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+    { key = 'RightArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Right', 1 } },
+    -- { key = 'UpArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
+    { key = 'UpArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Up', 1 } },
+    -- { key = 'DownArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
+    { key = 'DownArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Down', 1 } },
 
+    -- maybe an actually good case for using all the modifiers..
+    -- TODO: my keyboard has delete/insert key..
+    -- NOTE: PrimarySelection vs Clipboard
     { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom 'PrimarySelection' },
     { key = 'Insert', mods = 'CTRL', action = act.CopyTo 'PrimarySelection' },
 
     -- copy/paste keys??
     { key = 'Copy', mods = 'NONE', action = act.CopyTo 'Clipboard' },
     { key = 'Paste', mods = 'NONE', action = act.PasteFrom 'Clipboard' },
-  }, -- keys TODO: comma is confusing...
+  },
 
   -- table within 'keys' table?
   key_tables = {
