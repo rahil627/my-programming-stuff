@@ -3,11 +3,16 @@
 -- cp $my_configs\wezterm $home\.config\ -Recurse -Force
 
 -- test configs via cli command:
+-- quickly test configs via cli command:
 -- wezterm --config config.color_scheme='Neon Night (Gogh)' -- TODO: not working...
 
+-- debug lua scripts via the debug console!! control+shift+l TODO: -> alt+l
 -- required
 local wezterm = require 'wezterm'
-local config = {}
+local my_key_map = require 'my_key_map'
+
+-- local config = {}
+local config = wezterm.config_builder()
 
 -- some base configs
 -- https://alexplescan.com/posts/2024/08/10/wezterm/
@@ -15,6 +20,10 @@ local config = {}
 
 -- config goes here
 
+-- confusing, i posted an docs issue about this..:
+-- https://github.com/wez/wezterm/issues/6130
+config.keys = my_key_map.get_my_key_map().keys
+config.key_tables = my_key_map.get_my_key_map().key_tables
 config.launch_menu = {
   -- https://wezfurlong.org/wezterm/config/launch.html
   -- Each entry in launch_menu is an instance of a SpawnCommand object.   
