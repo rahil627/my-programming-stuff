@@ -1,4 +1,9 @@
 
+windows:
+powershell feels light-years ahead of unix / linux shell stuff
+
+
+
 todo:
 use ai to gen commands:
 https://github.com/TheR1D/shell_gpt
@@ -109,16 +114,35 @@ end
 # shells
 should choose one and stick to it
 
-Windows:
+## Windows:
 you have no choice, it's just powershell
 
 although, you can install Linux (via WSL), and i think there's a bash shell now too (though, without the linux tools, i'm not so sure how useful it would be..., so you'd be much better off just installing a desktop-less minimalistic linux distro, and get the best of both worlds)
 
-powershell
-  - more like a programming lanugage, like VB.NET, making it more comparable to python than bash
-  - have acess to the .NET library and a few other important libs (??), which makes it a nice step to C#
-  - has a pipeline operator
-  - "With Windows PowerShell, as far as I know, everything is an object. You can pass the result of a command to another as an object. This can be really powerful, but it does not have the simple concept (everything is a file) of Unix."
+**powershell**
+  - overall has a very *consistent* feel too it
+    - **GREAT help command with VERY consistent documentation**
+    - consistent naming conventions for the std lib, which makes them pretty easy to remember, and very easy to search (no ancient cryptic linux cli programs!)
+      - **consistent names used for cli flags!!!**
+    - just jumping to powershell is infinitely better than jumping into linux, which just feels like it's full of archaic crap
+    - this is one time where Microsoft's strict naming conventions really is a blessing, beating out the sloppy open-source mess that is unix
+  - structured data kicks butt
+    - structured data enables for the creation of a standard set of functions to alter data, which is done via pipeline operator, similar to sql and linq-to-sql:
+      - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-7.4
+        - Get-Process | Select-Object -Property ProcessName, Id, WS
+        - Get-Process Explorer | Select-Object -Property ProcessName -ExpandProperty Modules | Format-List
+      - Get-Process | Foreach-Object ProcessName | Group-Object
+      - Where-Object
+  - the language is closer to a general programming language, like VB.NET
+    - very nice 'n simple syntax for lists 'n hash-maps: @() and @{} (.NET arraylist/hashtable) and can iterate with foreach loops, lua-esque
+    - has fish-like comparison operators: -eq -lt -gt
+    - **LOVE the use of case-insensitive-snake-syntax!!**
+    - cmdlet is wierdly verbose.. but vs-code has great code-generation to make up for it
+    - install-module (from a pacakge repo)
+    - modules / import-module
+    - it even has classes, though, i personally wouldn't go that far...
+    - linux tools/commands required tldr to use
+  - have access to the .NET library and a few other important libs (??), which makes it a nice side-kick for people of the C#/Microsoft world
 
 
 
