@@ -1,5 +1,6 @@
-WARNING: the config files are more recent than the stuff in here
 
+
+WARNING: my config files are more recent than the stuff in here
 
 # from to_vim.txt:
 
