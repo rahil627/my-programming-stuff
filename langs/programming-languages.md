@@ -1081,6 +1081,7 @@ Pony
 
 ### embedded scripting:
   - embeds in to C
+  - i quite love these languages, as they reduce the complexity of general languages and are able to focus on their domain-specific needs: to provide scripting for a bigger program
   - maybe not worth the trade-off in games (hence why unreal engine stopped using it?), as mentioned by jon blow
     - but unreal is developing another scripting language..: verse
       - https://www.reddit.com/r/unrealengine/comments/1bzfnhb/verse_update_gdc_2024/
