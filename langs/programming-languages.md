@@ -584,13 +584,13 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
 
 
 Python
-  - perhaps the most popular and most loved scripting language, even as of 2022(!!), competitive to ruby
+  - perhaps the most popular and most loved scripting language, even as of 2022(!!), in direct competition to ruby
   - frameworks and libraries seems to be more scientific-oriented, with machine learning, ai, math, 'n so on
-  - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; around as slow as ruby, and without the rad features and rad community
+  - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; slower than ruby, and without the rad features and rad community
   - the syntax is among the most readable, and it shows by it's popularity and love from first-time programmers
     - although, it's just a preference... **i def prefer delimiters over whitespace delimiter**, and **i also prefer having my control statements with an ending delimiter**
       - there's also no real reason to limit to whitespace delimiting, as Haskell proves that it's possible to support both ways
-  - **pypy**, is an especially fast implmentation putting it at Lua speeds
+  - pypy, an especially fast runtime implmentation putting it at Lua speeds, but not so practical, as many libs many still not work with it
   - Google, although, even they probably rewrote a lot of stuff in Go
     - also in Google fashion, they broke the language-compatibility for the v3 update
     - Google just sucks at long-term vision, design, and maintenance.
@@ -1019,12 +1019,11 @@ TODO: merge with above
 
 
 Erlang
-  - python-esque tab-delimited? no keyword or brace to signify end.
-
+  - python-esque tab-delimited
 
 F#
   - Microsoft's OCaml in the .NET world
-  - really well-regarded / much-loved, except that there isn't much use for it in the current state of language choices
+  - really well-regarded 'n much-loved, except that there isn't much use for it in the current state of language choices
   - can also generate javascript and gpu code
   - no multi-core support?
   - kinda feels abandoned
@@ -1064,7 +1063,7 @@ Streem
   - seems kinda abandonded, but rad idea! :D
 
 Pony
-  - uses actor model for concurrency (a long-term vision of swift)
+  - uses actor model for concurrency
     - maybe the first langauge to do this, and therefore solve a really, really big problem
     - https://www.ponylang.io/discover/why-pony/#isolated-data-is-safe
     - "“reference capabilities”. Reference capabilities allow you to label different bits of data based on how that data can be shared. The Pony compiler will then verify that you are in fact correctly using the data based on the labels you provide. Reference capabilities combined with Pony’s actor model of concurrency makes for a powerful pairing."
