@@ -1,6 +1,9 @@
 
 IMPORTANT: use git mv to move or rename files, otherwise it'll deleted the old file, with all it's git history, and create a new one
 
+TIP: just use github desktop. it's fantastic. covers most cases. has an undo button.
+  - PRO-TIP: leave github desktop open, change files, and it will automatically select the changes you've made since you opened it
+
 how to push a new repo?
   - first create a repo on github
   - then, it will provide instructions on how to init, commit, and push the new repo

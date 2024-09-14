@@ -1,5 +1,8 @@
 
 
+TODO: my notes on keyboard movement, motions, might be in a note inside the iOS shell app iSH, or whatever that had apline linux.. that's the only thing that survived from vi. the rest of the program was trash.
+
+
 WARNING: my config files are more recent than the stuff in here
 
 # from to_vim.txt:
