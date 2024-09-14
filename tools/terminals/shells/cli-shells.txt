@@ -185,6 +185,12 @@ elvish
   - overall looks very cool! can try it out :)
 
 **fish**
+  - UPDATE:
+    - https://www.reddit.com/r/ProgrammingLanguages/comments/165co33/comment/jydbex4/
+      - "...This con doesn't actually say anything specific. Fish is honestly great for the 2020s and beyond. Excellent autocomplete and syntax highlighting out of the box, proper XDG base path specification support, excellent configurability via a GUI, the ability to easily modify environment variables and have them immediately reflected across all shells with no rc file fiddling needed, and the ability to source bash scripts using bass.
+
+      Fish is still updating itself to stay relevant in the modern age as well, with the current rewrite from C++ to Rust and the planned future upgrades for migrating from wchar_t to UTF-8 and incorporating more concurrency."
+
   - "a beginner-friendly shell" that ships with contemporary functionality / sane defaults: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
   - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
   - "a shell for the 90s" lol
