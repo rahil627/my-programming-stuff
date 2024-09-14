@@ -622,7 +622,7 @@ javascript
 
 
 
-## systems langs
+## "systems langs"
 
 ### garbage-collected
 there's too many in this area
@@ -631,7 +631,13 @@ there's too many in this area
       - many great comments on the state of languages
       - basically, as languages came out, users flocked toward them, in particular: go, rust, elixir. Any language after them would have much catching up to do.
 
-#### compiles to a "native binary" executable
+#### "compiled langs": compiles to a "native binary" executable
+in order to write or even edit these programs, you need the build tools, including the build tools for each and every platform you want to target. That means: MSVC++ for windows, Xcode for mac, Android/iOS SDK for Android/iOS, and so on, especially in the case it simply generates C code, wherein, you'd need the tools to build for C.
+
+go and rust seem to have much better build systems, requiring just one command to build--'go build' or whatever--and produces a single portable binary (no extra .dll files or whatever necessary). But even then, you'd need the right libraries installed, for each and every target.
+
+thus, you'd need a really good case to use these languages over more simpler, convenient, powerful dynamic languages. At first i thought games really needed it, but as all dynamic languages interface with C, i don't think it's so bad anymore. The interpreter is magnitudes slower. JIT isn't allowed in games. But.. i dunno.. **The development experience of a dynamic language, especially for games, is just as important, and even more important than performance to me.** Hot-reloading is the minimum. Lisp-level altering anything and smalltalk-level editing any property are the maximums. Neither seem possible with compiled languages.
+
 **Haxe**
   - my favorite general-use systems language: simple 'n clean, *light-feeling*--feels like a scripting language!, **more powerful than C#**, but without all the *heaviness* of it, **feeling more like a cross between actionscript and ruby: expressive**, just *siiiick*, **garbage collector depends on the target**, low-key best language of all-time
   - **made for games!**
