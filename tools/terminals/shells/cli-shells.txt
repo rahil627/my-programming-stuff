@@ -124,6 +124,11 @@ powershell
 
 Linux:
 
+conclusion:
+i ended up using fish shell. It just worked. Functions were simple to create too. I wouldn't get too deep into shells compared to just using a big scripting language (ruby/python), so fish made a perfect replacement for bash. The scripting language, though wayyy better than bash, only felt like a step up and still felt old. Fish was great for it's out-of-box experience, not so much for it's advanced uses.
+
+if i were to choose again, i'd look into nu-shell. As it's rust, it'd be cross-platform, so it'd work with windows too. Although, powershell is now cross-platform too.. Otherwise, fish is still fine, even being re-written in rust, and so maybe will become available for windows too!
+
 https://www.howtogeek.com/68563/HTG-EXPLAINS-WHAT-ARE-THE-DIFFERENCES-BETWEEN-LINUX-SHELLS/
   - a good straight-foward tech post abuot the history of shells
 
