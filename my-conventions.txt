@@ -1,12 +1,10 @@
 
-my conventions 2.txt:
-“If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program.”
-  - an interesting maxim to abide, but, maybe ‘causes too much refactoring!
 
 
 naming conventions:
-avoid using the shift modifier key
+avoid using the shift modifier key, otherwise must invert the -/_ key
 - hyphens > underscores
+
 - thingGroups > groupOfThings
   - thingGroup, thingSuperGroup is easier to auto-complete than groupOfThings, superGroupOfThings. Though the second way feels right to say English, the first way is better.
 
@@ -18,14 +16,26 @@ single header-file ideal:
 
 
 
+my naming conventions
+My_Class
+private-var vs -private-var
+public-var
+static-var
+(no globals)
 
 
 
-my conventions.txt:
+use this/self when possible, particularly in constructors
+
+
+
+
 http://nickgravgaard.com/elastictabstops/ - solution to tabs vs spaces for indents
-http://stackoverflow.com/questions/268538/tab-versus-space-indentation-in-c-sharp - "non-leading tabs are evil"/"initial line indentation must be tabs, no other tabs are allowed"
+http://stackoverflow.com/questions/268538/tab-versus-space-indentation-in-c-sharp
+  - "non-leading tabs are evil...initial line indentation must be tabs, no other tabs are allowed"
 
-braces on new line - http://programmers.stackexchange.com/questions/2715/should-curly-braces-appear-on-their-own-line
+braces on new line
+  - http://programmers.stackexchange.com/questions/2715/should-curly-braces-appear-on-their-own-line
 
 http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html
 4 space indents
@@ -33,46 +43,17 @@ no tabs
 one blank line between funtions
 two blank lines between classes?
 
-http://opensource.adobe.com/wiki/display/flexsdk/Coding+Conventions ?
-
-
-http://blogs.msdn.com/b/brada/archive/2005/01/26/361363.aspx
-
 http://www.codinghorror.com/blog/2004/06/hungarian-wars.html
-
-My approach has changed a bit since I wrote this. I use the "add the type to the end of the variable" style most often now:
-
-CancelButton
-ClickEvent
-
-I think this is a lot more .NET friendly than the "classic" 3-character prefix eg
-
-btnCancel
-evtClick
-
-I've also stopped trying to distingish strings and integers. In the above example,
-
-_CustomerName
-CustomerID
-
-
+Most functions should be short enough that you won't have a zillion variables. If you have that many variables to tell apart, you have bigger fish to fry.
+I want to be able to tell "simple" intrinsic types from full blown objects at a glance*. This distinction is important to me. Yeah, they're all still objects, but there are the common simple variables types we use 99% of the time (eg, String and Integer), and then there's everything else.
+I want to be able to tell class level variables from local variables at a glance*. How far up do I need to scroll?
+The variable names should be descriptive, readable and succinct.
+I do not believe every single object needs a unique prefix. This is insane, and as the VB6 document illustrates, this way leads madness..
+* At a glance means without having to mouse or cursor over the variable name, eg, it should work even in the high tech Notepad IDE.
 I agree, I've switched to extremely short name / short scope local variables, too.
 
 
 "If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program" - Linus Torvalds
+  - an interesting maxim to abide, but, maybe ‘causes too much refactoring!
 
-my naming conventions
-MyClass
-runFunction
-_privateVariable or _private_variable
-publicVariable or publicVariable
-global/static?
-btnSubmit - used for UI elements and non-obvious differences
-
-runFunction() {
-	print "I'm running already!"
-}
-//blank line?
-
-use this/self when possible
 
