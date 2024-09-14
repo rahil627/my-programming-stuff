@@ -472,7 +472,10 @@ Smalltalk
 
 
 ## scripting langs
-see scripting-languages.txt
+
+though static languages have made a popular return, thanks to it's type-checking, better debugging experience, and perceived better performance, i still feel **scripting languages ease-of-editing-and-developing** make them impossible to rid. Furthermore, the **power and expressiveness of dynamic languages, especially lisp, but even ruby, make them my personal choices for nearly all cases nowadays.** In the case of needing memory management, just use C. The only major loss are the C++ libs.
+
+in a dynamic/scripting language, **there is no build process. That means ever user doesn't need to figure out how to set up build tools, nor ho to build it, nor build it for multiple platforms. It just works everywhere. The only thing necessary is downloading the runtime, which is even often pre-installed on many os's**, in the case of python and ruby. Or, in the case of embedded scriptings languages such as lua, the runtime is already included within the program. Ultimately, **all the user has to to is edit the file/program, and re-run the program.** It doesn't get better than that! **Whereas with a compiled langauge, **upon every single edit, they'd have to rebuild the program**, in addition having the build tools set-up.
 
 https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_scripting_in_2023_decision/
   - i asked in /r/AskProgramming
