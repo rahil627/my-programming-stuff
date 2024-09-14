@@ -162,7 +162,29 @@ zsh = z? shell
 
 
 the newer stuff, post-bourne:
-fish
+nu-shell
+  - structured data as opposed to streamed text data, similar to powershell
+  - TODO: read pros 'n cons here: https://www.reddit.com/r/rust/comments/19ev6u3/what_do_you_think_about_nushell/
+  - "data oriented approach, more modern, vastly more powerful, less cryptic, more consistent so way easier to use for complicated stuff."
+  
+ion
+  - ??
+  - Rust
+
+elvish
+  - https://elv.sh
+  - seems fishy
+  - **actually very lispy**
+    - **a very powerful language, including lambdas 'n all**
+  - **directory history *and* command history search seperated** (programs and shortcut)
+  - **built-in file-manager** (program and shortcut)
+  - simple syntax, like fish
+  - a little std lib?
+  - more pipeline power?
+  - extremely clean web-site, very simple, seems like a growing language (released in 2017, and still updating every few months)
+  - overall looks very cool! can try it out :)
+
+**fish**
   - "a beginner-friendly shell" that ships with contemporary functionality / sane defaults: auto-suggestion & auto-completion, highlighting for errors, spell-checking, colors, etc.
   - "If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you’re looking for!"
   - "a shell for the 90s" lol
@@ -180,21 +202,6 @@ fish
    - it's also a much better idea to allow the makers of fish to choose and update the shell rather than configuring yet another linux thing--neovim config is arduous enough!!
    - update: as it turns out, fish is just a much newer design, all around: aliases are simple functions (with lazy-loading!), strings are arrays (thus saving you from parsing and accessing words 'n args), strings are escaped properly (don't need to worry about "v" vs $"v", or whatever), and theres prolly a ton more stuff like this. So, even without the language, it just seems overall better to ditch old "posix standardized" bash, zsh, and ofher variants
    - **also has vi *and* emacs mode!**
-
-
-elvish
-  - https://elv.sh
-  - seems fishy
-  - **directory history *and* command history search seperated** (programs and shortcut)
-  - file-manager (program and shortcut)
-  - simple syntax, like fish
-  - a little std lib?
-  - more pipeline power?
-  - extremely clean web-site, very simple, seems like a growing language (released in 2017, and still updating every few months)
-  - overall looks very cool! can try it out :)
-
-ion
-  - Rust
 
 
 
