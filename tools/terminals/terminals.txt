@@ -4,7 +4,6 @@ all OSs / terminal emulators:
 
 
 
-contemporary incarnations of classic terminals:
 # terminal multiplexers:
 wezterm
   - a terminal first, with built-in tmux features
@@ -45,14 +44,49 @@ x/fig
   - acquired by Amazon (now part of 'Amazon Q', a chatbot, for $20/month), along with the team now working for AWS
   - originally written in typescript, then ported to rust as the project went from desktop app to cli focus
 
+
+## contemporary incarnations of classic terminals:
+**wezterm**
+  - **terminal with tmux features**, similar to windows terminal
+    - reduces having one more config file
+  - **lua config**
+    - the config is simply a lua table!
+    - beats the crap out of the windows terminal's generated .json file
+    - **hot-reloads!**
+  - **has a great appearance, similar to mac os terminals, with some algorithm for when to bold 'n brighten text**
+  - **has a few major features**:
+    - https://wezfurlong.org/wezterm/features.html
+    - copy-mode/vi-mode and search-mode, like alacritty
+    - **quick select-mode**
+      - generates a selection of places in a text file to jump to, guessing the most common places to jump to
+    - **remote hosts (for tabs and windows)**
+    - ssh client built-in
+      - wezterm ssh ra@my.server
+    - connec to a serial port (for embedded devices: arduino)
+    - image rendering
+  - rust
+    - and works on windows!!
+  - wez is a cool name!
+    - also, he isn't a crudgemuffin
+
+windows terminal
+  - actually legit, just works
+    - includes pane-splitting (local), window transparency, and great font rendering!
+  - config file sucks
+    - it's auto-generated and it keeps moving things in the config file around! best not to alter the settings through the app, just edit the config file
+    - shit way to set themes
+      - must add whole color palletes to the single .json file
+    - config'ing bindings is weird. must set default bindings to "not bind"? not sure..
+    
 **alacritty**
-  - "a modern terminal emulator that comes with sensible defaults, but allows for extensive configuration."
-    - very fish-like, just works, no config needed
+  - "a modern terminal emulator that comes with **sensible defaults**, but allows for extensive configuration."
+    - very fish-like: **just works, no config needed**
   - "By integrating with other applications, rather than reimplementing their functionality..."
-    - meant to combine your own terminal multiplexor (tmux), and other apps
+    - meant to combine your own terminal multiplexor (tmux, zellij), and other apps
+      - considered great in combination with zellij
   - GPU-rendering via OpenGL
   - "vi mode"
-    - fish only covers the prompt, this covers the entire buffer!
+    - fish's vi-mode only covers the prompt, this one's covers the entire buffer!
   - made with Rust
   - https://github.com/alacritty/alacritty
 
@@ -85,7 +119,8 @@ kitty
   - written in C
   - super scriptable: api to control it; open tab/window/etc.
   - super extensible: "kittens", written in python
-  - overall a whole 'nother layer of customization and complexity
+  - **overall feels like a whole 'nother layer of customization and complexity**, which i'm just not ready for. I need simple sane defaults, not more customization!
+  - developer is a crudgemuffin, lol
 
 
 wayland DE only:
