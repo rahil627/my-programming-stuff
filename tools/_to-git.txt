@@ -4,6 +4,9 @@ how to push a new repo?
   - first create a repo on github
   - then, it will provide instructions on how to init, commit, and push the new repo
 
+how to search the commit history?
+  - git log -S wren
+
 how to get rid of files with sensitive data in the entire history of a git repo?
   - https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
   - it uses a tool: git filter-repo
