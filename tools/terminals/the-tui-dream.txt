@@ -3,9 +3,6 @@ related to:
 linux.txt
   - gui apps
   - linux gui customization
-setup.sh
-  - tui apps i currently use
-
 install-apps.ps1 <-- setup.sh
   - cli/tui apps i currently use
 
@@ -148,12 +145,12 @@ htop > top
 
 
 # file nav
-cd replacement
+cd replacements
   - these replace cd, saving the data and providing a list of most frequently cd
     - as you probably only cd into a few places, the list of "working dirs" probably isnt even that long(!), and therfore quicker than using either a file manager or normal cd... however, fzf (alt+c) might still be able to compete
   - however, contemporary shells do this too..? so... not sure..
     - best to just use absolute paths when using cd
-  - z
+  - z (zoxide)
     - there's a port to fish too
   - f
     - a newer little project by an indian student
@@ -167,17 +164,19 @@ file managers:
   - used this on windows, it's great! sliding columns/folders feels good!
   - previews for images 'n code?
   - lots of advanced features built-in
+    - lots of pop up dialogs, which i love!
 **lf**
+  - simple, fast
   - i used this on the chromebook, worked well
+  - the bindings are deeply vi, not intuitive for a person with even basic vi
 ranger
   - most feature-rich / extensible
-  - vim key bindings are used by
+  - vi key bindings are used by
   - python
 nnn
+  - TODO: still worth trying
   - light-weight, fast, zero-config
   - C
-lf
-  - simple, fast
 fff
   - simple, fast
   - written in bash :o
@@ -186,11 +185,7 @@ mc (midnight commander)
 
 
 text editors:
-nvim > vim > vi
-helix > kakoune
-  - TODO: to try
-
-  
+see text-editors.txt  
   
 x/https://github.com/starship/starship
   - smarter cross-shell prompt?
