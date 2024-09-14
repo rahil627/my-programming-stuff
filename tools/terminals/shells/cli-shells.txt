@@ -145,7 +145,7 @@ ash = Almaquish shell
     - i personally have "iSH" app on my iOS device, and this thing is lightning fast!!!, this is actually where i played with and learned vi: because it was *so* much faster than using CLI with my server
 
 
-the current bourne-like shells:
+the current bourne-like POSIX-compliant shells:
 dash = ? Almaquish shell
   - based on ash, and therefore also light-weight, quick
   - used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
