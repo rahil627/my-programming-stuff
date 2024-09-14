@@ -8,7 +8,29 @@ fig
 
 
 contemporary incarnations of classic terminals:
+# terminal multiplexers:
+wezterm
+  - a terminal first, with built-in tmux features
+    - see entry under terminals
+
 zellij
+  - **no windows binary at the moment, as it uses some non-cross-platform libraries. can use it in WSL though!**
+   - https://github.com/zellij-org/zellij/issues/316
+  - currently doesn't work remotely? or just not as good session-handling as tmux
+ - definitely better than windows terminal, see some of it's features:
+   - https://zellij.dev/screencasts/
+ - awesome-zellij has some plugins
+   - https://github.com/zellij-org/awesome-zellij?tab=readme-ov-file
+   - zellij-forgot, to show a searchable pop-up list of commands (very doom/helix-esque!)
+   - zellij-jump-list, emacs-like
+"extras/alacritty",
+
+tmux
+  - the linux classic
+  - works well over ssh with great session-handling
+
+
+
 
 **alacritty**
   - "a modern terminal emulator that comes with sensible defaults, but allows for extensive configuration."
