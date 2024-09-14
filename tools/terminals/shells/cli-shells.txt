@@ -197,7 +197,8 @@ nu-shell
   - "data oriented approach, more modern, vastly more powerful, less cryptic, more consistent so way easier to use for complicated stuff."
   
 ion
-  - ??
+  - a component of the larger RedoxOS project, a complete OS written in rust
+    - they also created the 'termion' library for rust, which handles terminal i/o
   - Rust
 
 elvish
