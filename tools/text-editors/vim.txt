@@ -1,6 +1,69 @@
-note: the config files are more recent than the stuff in here
+WARNING: the config files are more recent than the stuff in here
 
 
+# from to_vim.txt:
+
+https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
+  - classic post, met the dude at the sf hackerspace
+  
+
+# nvim bundles:
+LazyVim
+  - most minimalist, should prolly start with this
+LunarVim
+AstroVim
+  - most featureful, can use this and take what i want from it to lazyvim
+NVChad
+  - configs seems overly abstracted...
+  
+sources
+  - https://medium.com/@adaml.poniatowski/exploring-the-top-neovim-distributions-lazyvim-lunarvim-astrovim-and-nvchad-which-one-reigns-3adcdbfa478d
+
+
+
+
+# NVChad
+setup:
+NOTE: you will have to delete your configs folder
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+
+https://nvchad.com/docs/config/walkthrough#config_structure
+~/.config/nvim/lua/custom
+  - contains the example starter config files
+
+
+use:
+
+# basics
+space - doomemacs-like shortcut cheat-sheet preview
+;
+'
+
+
+# plugins
+# this command starts the plugin manager gui
+:Mason
+
+# install a plugin
+:MasonInstall solargraph
+
+
+# config
+https://github.com/NvChad/example_config
+
+.nvchadrc <- plugins.lua <- overrides.lua
+
+overrides
+  - seems to abstract config options from a plugin... it all seems very very redundant
+# END OF NVCHAD
+
+
+
+
+
+
+
+# original vim.txt:
 vim, vi, and all their newer incarnations..
 
 install vim:
@@ -119,69 +182,3 @@ for example:
 
 
 
-found in deoplete’s giant help text file:
-==============================================================================
-EXTERNAL SOURCES				*deoplete-external-sources*
-
-Please see https://github.com/Shougo/deoplete.nvim/wiki/Completion-Sources
-
-neco-vim: "vim" source for Vim script
-https://github.com/Shougo/neco-vim
-
-neosnippet: "neosnippet" source
-https://github.com/Shougo/neosnippet.vim
-
-neoinclude: "include" and "file/include" sources
-https://github.com/Shougo/neoinclude.vim
-
-neco-syntax: "syntax" source
-https://github.com/Shougo/neco-syntax
-
-deoplete-zsh: "zsh" source for Zsh
-https://github.com/deoplete-plugins/deoplete-zsh
-
-deoplete-lsp source for neovim builtin LSP features
-https://github.com/deoplete-plugins/deoplete-lsp
-
-deoplete-tags: "tag" source for tag files
-https://github.com/deoplete-plugins/deoplete-tag
-
-deoplete-dictionary: "dictionary" source for dictionary files
-https://github.com/deoplete-plugins/deoplete-dictionary
-
-==============================================================================
-EXTERNAL PLUGINS				*deoplete-external-plugins*
-
-These are my recommended plugins for deoplete.
-
-context_filetype.vim:
-It adds the context filetype feature.
-https://github.com/Shougo/context_filetype.vim
-
-neopairs.vim:
-It inserts the parentheses pairs automatically.
-https://github.com/Shougo/neopairs.vim
-
-echodoc.vim:
-It prints the documentation you have completed.
-https://github.com/Shougo/echodoc.vim
-
-neoinclude.vim:
-You can completes the candidates from the included files and included path.
-https://github.com/Shougo/neoinclude.vim
-
-FastFold:
-Speed up the updating folds when you use auto completion plugins.
-https://github.com/Konfekt/FastFold
-
-						*deoplete-external-omnifuncs*
-
-These are my recommended omnifuncs for deoplete.
-
-phpcomplete: PHP omnifunc
-https://github.com/shawncplus/phpcomplete.vim
-
-phpcd.vim: another PHP omnifunc. Faster.
-https://github.com/php-vim/phpcd.vim
-
-==============================================================================
