@@ -1,4 +1,40 @@
 
+use easily findable tags within comments
+  - TODO: requires case-sensitive search, not bad tho
+  - todo: is more pleasing to the eyes, but doesn't stand out
+  - !TODO:/!todo is easier to search, and can use either case
+    - choose a symbol: !@#$%^&*
+      - !@$%^ are all usually good choices
+        - **!todo**
+          - i like this the most
+          - slimmer than others, may make it harder to see
+          - becauase one uses '!' at the end of sentences, won't likely run into an occurance of it in front of something..
+          - negation operator, and often without a space between the var and symbol
+          - **gives the impression that it's urgent, better for todo/warning/error**
+        - @todo
+          - actually makes logical sense, @tag
+          - often used by document generators, macros, etc.
+        - $todo
+          - maybe the safest but invokes php 'n bash horrors
+        - %todo
+        - ^todo
+        
+        - **?todo**
+          - i dig this!
+          - never used!
+          - great key-board placement
+          - doesn't give the impression of anything, making it actually feel like a tag symbol, along with '@'
+          - ternary operator
+
+        - -todo
+        - **+todo**
+          - plus acutally works logically too, and looks great too.. as long as you have a space between '+' and var in the code
+
+        - |todo
+        
+        - conclusion: ?todo, particularly for it's great placement on a standard keyboard
+      - depends on the language
+
 
 
 naming conventions:
