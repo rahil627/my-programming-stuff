@@ -1,4 +1,5 @@
 
+NOTE: use git mv to move or rename files, otherwise it'll deleted the old file, with all it's git history, and create a new one
 
 how to push a new repo?
   - first create a repo on github
