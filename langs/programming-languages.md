@@ -1086,10 +1086,13 @@ Pony
       - https://www.reddit.com/r/unrealengine/comments/1bzfnhb/verse_update_gdc_2024/
         - concurrent garbage collection tied to objects (actor model?)
 
-lua
+**lua**
   - extremely simple (only perhaps second to lisp)
+    - but no macros :(
   - the goat vm/compiler of all dynamic programming languages: LuaJIT, pretty much thanks to that one guy who made it
   - an all-powerful meta-data-structure: the table (and meta-tables!), from which you can implement any other data structure, making it a rather modular language (also like lisp)
+  - perfect for it's use case: embedded scripting
+    - also great as a config langauge, compared to basic data serialization formats (json, toml, etc.)
 
 **wren**
   - modern sytnax with object-oriented-style classes
