@@ -131,7 +131,7 @@ https://github.com/rafi/awesome-vim-colorschemes
   - these comes in the plugin managers, so no need to manually install crap
 
 
-https://vimcolorschemes.com/morhetz/gruvbox
+https://vimcolorschemes.com/
   - fucking amazing themes!!
 
 Plug 'morhetz/gruvbox’ “#1 for a reason
@@ -145,9 +145,6 @@ Plug ‘romainl/flattened’ “error
 install a theme:
 note: there are already many themes installed, just press tab!
 desert is pretty, but too bright
-
-https://github.com/morhetz/gruvbox/wiki/Installation
-add "Plug 'morhetz/gruvbox'" to your vim config file
 
 in vim:
 :PlugUpdate
