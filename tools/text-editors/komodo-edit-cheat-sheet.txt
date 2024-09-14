@@ -1,3 +1,5 @@
+NOTE: although ancient--i think i used it in a class for python, back when python was very new..--, the key-mappings are quite standard, very emacs-y
+
 Komodo Default Key Bindings
 Windows/Linux Scheme
 
