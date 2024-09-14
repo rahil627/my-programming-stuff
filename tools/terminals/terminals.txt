@@ -2,9 +2,6 @@
 all OSs / terminal emulators:
   - generally: a *ton* of features over an actual basic terminal: GPU rendering (OpenGL)
 
-next gen:
-warp
-fig
 
 
 contemporary incarnations of classic terminals:
