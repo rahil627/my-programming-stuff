@@ -1,4 +1,10 @@
 
+# tags
+
+BIGLETTERS:
+  - TODO, ERROR, WARN/WARNING, IMPORTANT
+    - TODO: do they need a tag? which ones do?
+
 use easily findable tags within comments
   - TODO: requires case-sensitive search, not bad tho
   - todo: is more pleasing to the eyes, but doesn't stand out
