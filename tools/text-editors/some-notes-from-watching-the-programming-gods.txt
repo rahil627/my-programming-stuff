@@ -1,0 +1,31 @@
+
+j blow:
+
+conclusion:
+actually [his development method is] dead simple. nothing fancy. he has a mental model of the program--because he wrote it--somewhat recently. he has a mental model of the game, game engine, and programming language! he simply can't be bothered with dealing with stupid things like text editors, or config'ing emacs. hence, **he needs things that don't require any thinking, that's more intuitive, more physical**: a mouse, probably a touch-pad too
+
+funny enough, he doesn't need emacs at all. He could just be using any ol' text-editor that has split panes
+
+https://www.twitch.tv/videos/2249653469
+  - // @Tags
+    - *an easily-searchable syntax for tags. or generates some docs? perhaps prints out all the tags, along with file, function, line, etc.?*
+	- might be a feature in Jai..?
+  - *duplicate pane*
+    - very useful for long files
+  - buffer jump by name (no pop-up)
+  - lost of searching..
+    - and replacing..--not refactoring either!
+  - delete to end of line
+  - *uses a mouse!*
+    - i'm not the only one!
+  - giant font size, but mostly because he "can't be bothered in figuring out emacs" to decrease the font-size by less than an increment
+  - debug via visual studio break-point, add watches, step-through/make another break-point
+    - later, he says the debug process for jai is basically the same as C/C++, just without the complexity of advanced features such as templates/inhertance
+    - also provides some wisdom for debugging: *avoid using any fancy language features because it will make debugging way more difficult*
+  - uses bare-grep, a simple gui app
+    - really exemplifies how simple--no, *bare*--he likes things :)
+  - rant against web data serialization formats: just use a binary file
+  - **"it's not often that i do a single task that takes over a week"**
+  - has a massive todo-list
+  - actually answers a question that he surely gets often: make a game or game engine? his answer: basically, just focus on the bits of the engine you need, just enough so that you can execute the game you want to make
+
