@@ -1,0 +1,73 @@
+
+note: i kinda dig this project, language design 101..??
+
+TODO:
+  - this itself is a syntax: 'TODO:[newline]' means the entire next block is part of the todo, usually a todo list, but not necessarily
+i'm pretty sure i've written a note about this somewhere..
+**write parser in ruby for jekyll**
+think about and see if i can decide on the few design choices left
+  - but don't force it!!
+
+more general grammar problems, plain-text-related / nothing to do with markup::
+this--no, this--no, this! represents a break within a break----
+  - TODO: i don't even know the name of this concept
+
+for reference:
+escape, app f1-f12 / OS f1-f12, [custom button, delete/insert,] power
+`1234567890-= / ~!@#$%^&*()_+
+[]\
+;'
+,./
+  - these are the symbols found on a standard key-board layout, each line contains the symbols for each row of keys
+
+my markup:
+this is actually a very old markup lang i've been using since i started writing notes in .txt files with notepad.exe on windows 95.. it has sufficed me since, and so there is no reason to complicate it further. The goal here is to just to try to define whatever my method of expressing myself through digital text has been and still is. my analog notes are far more complex, with circling / boxing words, various arrows, 'n so on.
+
+ideals: the plain-text should come first. the markup should never get in the way
+
+should it have it's own file extension, or, just continue using the plain '.txt' extension, which is standard for plain-text for all os's?
+  - con: would have to set-up file-associations, or, set the language in the text-editor program every-time i want it to display it with markup
+  - pro: can automatically detect the markup-language and thus allow text-editors to automatically mark the text up when displaying it
+    - also would allow auto-formatting
+      - **this would automatically clean-up and standardize my notes!!**
+  - TODO: tough choice...
+
+headers:
+just avoid nesting..?
+  - some possibilities:
+    - can have multiple possibilities--expressions!: multiple ways to express yourself! :)
+      - make the ruby of markup languages?? :D
+  - headers:3
+  - headers:::
+  - **for single-level headers, have to use reg-ex search [char]:[newline], whereas with #, you don't need reg-ex to search** (for multi-level, it's pretty easy to search for '::')
+  - **unforunately, markdown has confuddled my expressions, and i've been using ###syntax for bigger notes files** :/
+
+*bold*
+  - vs **bold** to be compatible with markdown
+    - *forget markdown! this is my personal markup!!*
+      - for backwards compatibility can just make both represent bold
+    - hmmm, actually a tough decision..
+    - TODO: what did i use before markdown?
+  - i use bold waaaaay more than italics!
+  - i also don't like using two characters :/, though, **it does stand out more!**, which is *very* important
+    - **this might actually be better** than *this* as you can see it rather easily, in plain-text
+    - two characters are a pain to deal with in modal text editors :/
+
+lists
+  - are
+  - simple
+    - and can be nested
+
+code?
+TODO: at the moment, don't have anything for code.. whenever it's meant to have code, i just change the file extension and put my notes in comments.. but there are times where this gets mixed-up..--notes on programming langs!
+
+LOOKATME: vs ?look-at-me
+  - should TODO: be a seperate concept from ?tags ?
+  - conflicts with headers that uses caps, which i sometimes use, just to make it easier to see in plain-text
+    - but then, it's not really a header then is it?
+  - **works with most programming languages**
+
+that's all i can think of at the moment!
+keep it simple :)
+
+
