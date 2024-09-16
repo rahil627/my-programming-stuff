@@ -125,11 +125,6 @@ function setup_shell {
     # TODO: what does windows backup save?
 }
 
-function load_configs {
-    # NOTE: requires running setup_shell first to get session vars for config paths
-    Write-Warning "load_configs is unimplemented!" # TODO
-}
-
 function setup_git {
 # TODO
 # reload path vs start a new session andd pass the rest of the commands in
@@ -141,6 +136,21 @@ function setup_git {
     git config --global user.email "1132053+rahil627@users.noreply.github.com"
 }
 
+function load_configs {
+    # NOTE: requires running setup_shell first to get session vars for config paths
+    # NOTE: also requires config files from git repo (only in the caes that windows backup failed to save it in AppData or wherever)
+    # Invoke-Expression "load_configs.ps1"
+    Write-Warning "load_configs is unimplemented!" # TODO
+}
+
+function setup_linux {
+    # https://en.opensuse.org/openSUSE:WSL
+    # TODO: openSUSE on windows? game over.
+    Write-Warning "setup_linux is unimplemented!"
+}
+
+
+# setup apps
 function setup_browser {
     # copy ungoogled chromium settings?
     #  - hopefully windows backup / appdata saves this
