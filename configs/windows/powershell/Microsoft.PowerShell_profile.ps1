@@ -43,14 +43,14 @@ function load_aliases {
   
   set-alias shell pwsh
   
-  set-alias -scope global f yazi_cd # NOTE: yazi_cd is a function
-  set-alias -scope global yazi yazi_cd
+  set-alias -scope global f yazi_cd # NOTE: yazi_cd is a function # BUG: see yazi_cd
+  # set-alias -scope global yazi yazi_cd # BUG: see yazi_cd
   # abbr -a f 'lf'
   # abbr -a f 'lfcd' # also c+f binding; NOTE: requires lfcd function
   # WARNING: lfcd doesn't show autocomplete/autosuggest of lf flags
 
-  set-alias t hx
-  set-alias helix hx
+  set-alias e hx # main (e)ditor
+  #set-alias helix hx
   # set-alias e 'doom run' # emacs
   # set-alias emacs 'doom run' # works without this
 
@@ -103,6 +103,7 @@ configs = "$home\my-stuff\repos\my-programming-stuff\configs\windows" # NOTE: no
 }
 
 # put most commonly-used paths in session-level vars
+# NOTE: using '$my_' prefix prevents env vars from getting muddled
 # this allows you to use simple string subsitution as opposed to verbose string interpolation: "$my_stuff" vs $($my_paths['my_stuff'])"
 $my_stuff = $my_paths['my_stuff']
 $stuff = $my_paths['my_stuff']
@@ -125,7 +126,7 @@ text_editor = "$home\AppData\Roaming\helix\config.toml"
 
 # end
 
-# have yazi (file manager) change directory (cd) upon exit
+# have file manager change directory (cd) upon exit
 function yazi_cd {
   $tmp = [System.IO.Path]::GetTempFileName()
   yazi $args --cwd-file="$tmp"

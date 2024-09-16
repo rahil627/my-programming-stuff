@@ -1,7 +1,12 @@
 
 ai:
-what is the standard for ruby scripts in regards to making them re-usable via pipeline
 
+q:
+what is the standard for ruby scripts in regards to making them re-usable via pipeline?
+
+
+answer:
+  - kinda perfect answer really..
 Creating reusable Ruby scripts that can be easily integrated into pipelines often involves adhering to certain best practices and design principles. Here are some guidelines to consider:
 
 1. **Modularization:** Break your script into smaller, modular components. This makes it easier to reuse specific functionalities and integrate them into different pipelines.
@@ -9,6 +14,7 @@ Creating reusable Ruby scripts that can be easily integrated into pipelines ofte
 2. **Use Functions/Methods:** Encapsulate logic within functions or methods. This allows you to call specific pieces of functionality as needed.
 
 3. **Command-Line Interface (CLI):** Create a CLI interface for your script using tools like `OptionParser` or `Thor`. This allows users to provide input parameters through the command line when running the script.
+  - use OptionParser, as it's included in the std lib
 
 4. **Input and Output Handling:**
    - Design your script to accept input from various sources like command line arguments, files, or standard input.

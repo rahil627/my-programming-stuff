@@ -70,7 +70,7 @@ effects eighty
   - futurey from the 80s
 
 pixelly bitmap:
-cozette
+cozette # TODO: in my-programming-stuff repo, try it, delete or keep?
 envy code b
 
 proggy / good in small sizes

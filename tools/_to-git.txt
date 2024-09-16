@@ -1,3 +1,4 @@
+TODO: what happened to git.txt?
 
 IMPORTANT: use git mv to move or rename files, otherwise it'll deleted the old file, with all it's git history, and create a new one
 

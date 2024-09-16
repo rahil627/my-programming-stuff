@@ -1,4 +1,6 @@
 
+TODO: NOJOKE: *emacs might just be the tui-dream*
+
 related to:
 linux.txt
   - gui apps

@@ -31,7 +31,7 @@ check SO yearly surveys
   
 
 
-# todo:
+# TODO:
 jai
   - try to get beta
 red
@@ -472,6 +472,7 @@ Smalltalk
 
 
 ## scripting langs
+TODO: import scripting-languages.txt
 
 though static languages have made a popular return, thanks to it's type-checking, better debugging experience, and perceived better performance, i still feel **scripting languages ease-of-editing-and-developing** make them impossible to rid. Furthermore, the **power and expressiveness of dynamic languages, especially lisp, but even ruby, make them my personal choices for nearly all cases nowadays.** In the case of needing memory management, just use C. The only major loss are the C++ libs.
 
@@ -533,6 +534,7 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
   - GitHub and Shopify might be the biggest companies behind it :D
   - made by one Japanese guy
 
+TODO: rid this portion
 https://www.reddit.com/r/ruby/comments/hp3yar/i_am_tired_of_hearing_that_ruby_is_dead/
 
 https://www.quora.com/What-are-the-main-weaknesses-of-Ruby-as-a-programming-language?share=1
@@ -595,6 +597,7 @@ Python
     - also in Google fashion, they broke the language-compatibility for the v3 update
     - Google just sucks at long-term vision, design, and maintenance.
 
+TODO: rid this portion
 https://www.quora.com/What-are-the-main-weaknesses-of-Python-as-a-programming-language
   - The traces of this “hacky” origin seen everywhere. I will list just some: 
 __something__
@@ -919,12 +922,10 @@ Nelua
     - // build with `zig build-exe cimport.zig -lc -lraylib`
     - const ray = @cImport({ @cInclude("raylib.h"); });
 
-
 Odin
   - from the hand-made network
   - like C, not object-oriented, with a belief that *data and procedures (functions) should be seperate, and that behaviors (class's functions/methods?) shouldn't even exist!* :o very rad
   - influenced by Go
-
 
 V
   - C-like
@@ -1033,6 +1034,8 @@ F#
 Haskell
   - **magical feeling to write**
     - many people really like this one
+    - **TODO: try it!**
+      - though, maybe elixir is enough?..
   - *purely functional*, meaning, there is *absolutely no way to mutate data* (vars and functions)
     - this makes it very limiting in practice, and more of a theoretical interest
   - because it is purely functional, it can do things that no other non-purely-functional languages can do
