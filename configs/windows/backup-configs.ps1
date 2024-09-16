@@ -13,5 +13,6 @@ $my_configs_path = $my_paths['configs']
 # cp $config_paths['terminal'] "$my_configs_path\terminal" # NOTE: auto-generated, so must load from here
 cp $config_paths['text_editor'] "$my_configs_path\helix" # NOTE: can edit directly via open-config command
 
-code --list-extensions > "$my_configs_path\vscodium\extensions-list.txt"
+codium --list-extensions > "$my_configs_path\vscodium\extensions-list.txt"
+
 
