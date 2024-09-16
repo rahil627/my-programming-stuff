@@ -1,6 +1,6 @@
 
-// NOTE: this file is auto-generated
-// edit this file here then run the load configs script
+// NOTE: this file is initialy auto-generated, and after changing the settings via gui, it is re-generated. So, avoid using the gui, and instead, edit the config file here and then load it:
+// cp "$my_configs\terminal\settings.json" $config_paths['terminal']
 
 // TODO:
 // fix highlight color in current theme (cyberpunk), a little hard to see..
