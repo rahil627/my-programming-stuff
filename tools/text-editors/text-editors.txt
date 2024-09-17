@@ -132,12 +132,12 @@ classics:
     - **this has the great benefit that everything is written in the same language, morever, the most dynamic language of all time. Otherwise, you'd have to use an entire set of tools, wherein each tool can be writtern in a different langauge, have different onpinions, and just not work as seamlessly together: terminal, terminal multi-plexer, text editor, git tui, file-manager tui, knowledge-base tui, and so on.**
       - **at the moment, for me, all of the tools i use are now written in rust, which is infinitely harder than lisp to edit, let alone develop.** The language itself is complex, along with it's memory-management model, and it's build process.. It's all a pain. Whereas with emacs, you just need to know one language, no memory-management, no build-process(?)
       - also, simply, **none of the other languages are as dynamic as lisp**: you can't simply just create a function for the program. For every C-like program, including rust, an interface (ffi) is required, and then another dynamic language is used (lua, lisp). In that case, why not just use lisp to begin with..?? **Lisp just seems like the right choice for programmers' tools.**
+      - i think this thought continued to this reddit post i made:
         - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
   - elisp macros
-    - actually a joy to use (especially when compared to vimscript!)
     - actually a joy to use (especially when compared to vimscript!!)
     - because it's lisp, you're basically writing the program itself, not merely some plugin manager
-  - mature, well-written plugins
+  - mature (possibly the oldest of all currently used code), well-written plugins
     - **org-mode**
       - the ultimate knowledge-base software, simple yet powerful
       - **org-babel**
@@ -147,6 +147,8 @@ classics:
     - auctex
       - the best latex experience
     - slime (common lisp), geiser (scheme), cider (clojure)
+      - the best lisp dev environemnts
+      - **portacle** is an emacs config set up for common lisp dev
   - "m-x is godsend"
   - slow startup time
   - **doom-emacs**
@@ -156,6 +158,8 @@ classics:
     - evil-mode to use vim-keybindings
   - x/prelude
       - a light-weight starter kit closer to vanilla emacs, in case doom is too much, or if i want to make my own
+  - every person that i've personally met that uses emacs is a great great programmer/problem-solver/doer
+  - emacs itself is a deep pot of speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
 
   https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
 
