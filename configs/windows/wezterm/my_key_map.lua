@@ -1,7 +1,11 @@
 -- wezterm show-keys --lua > show-keys.txt
 
 -- TODO:
--- import my key-mappings for windows terminal
+-- import my key-mappings for windows terminal:
+--   - only missing these:
+--   - d = duplicate pane mapping
+--   - a = select all
+--   - m = mark-mode feature
 -- add alt+left/right arrow for cd -/cd -
 --   - this was an example in the docs somewhere..
 
