@@ -25,6 +25,8 @@ conclusion:
     - TODO: try them!
   - TODO: a version with a file-tree feature is on a git branch
 2. vs-code
+2. vs-code vs lapce
+  - TODO: give lapce another try!
   - a great start, especially when you haven't coded in a while
   - easy to jump into where everything *just works* with "batteries-included"
   - can use fav key-bindings extension ("helix for vscode" extension), or customize keys yourself
@@ -51,14 +53,13 @@ newer, simpler, things to try:
 4coder
   - part of the handmade-hero movement
     - therefore written in C/C++, and also therefore **can be extended using just about any programming langauge**
-x/lapce
+**lapce**
   - a vs-code copy in rust
-    - in development?
-    - incredible speed
-    - likely will become abandoned after the rust-wave
-kate
-  - linux, open-source
-  - ??
+    - already has advanced features: modal lsp, remote dev, built-in terminal..
+  - felt quite in development when i tried it last..
+  - incredible speed
+  - "Plugins can be written in programming languages that can compile to the WASI format (C, Rust, AssemblyScript)"
+    - this is it's limiting factor, though AssemblyScript actually looks just like javascript!
 
 
 current standard:
