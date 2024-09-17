@@ -8,10 +8,15 @@ unrestrictive
 
 conclusion:
 0. emacs (doom)
-  - potential is unlimited thanks to emacs, but it is indeed a rabbit hole
-    - TODO: still should try it some more, also will get the chance to try lisp (via elisp) and have the best lisp dev environment too (elisp, common lisp, clojure)
+  - potential is unlimited, written in lisp, one tool-set to rule them all, but it just sounds like the wrong rabbit hole to go into in 2024
+    - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
+    - TODO: still should try it some more, also will get the chance to try lisp (via elisp) and have the best lisp dev environments too (common lisp, clojure)
+      - TODO: try portacle config for common lisp
 ?. focus (editor)
   - TODO: try it, though it'll be tough for one person to beat the rust hive-mind helix has
+?. lem
+  - looks like a great way to try common lisp without emacs
+  - also can be completely altered as it is written in common lisp, making it the most malleable text editor
 1. helix (or other fav terminal editor / key-bindings)
   - for quick general use, along with cli tools, remote terminal use, a good step towards emacs
   - supports tree-sitter, lsp, and even dap
