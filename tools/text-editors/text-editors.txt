@@ -35,6 +35,11 @@ sublime text or notepad (windows)
 
 gui editors:
 newer, simpler, things to try:
+**lem**
+  - written in common lisp (sbcl?)
+    - **and thus can be extended or completely altered in common lisp too :)**
+  - made specfically for common lisp, though it can support any lang
+  - made by a Japanese person!
 **focus (editor)**
   - a simpler emacs-style editor
   - made with jai
