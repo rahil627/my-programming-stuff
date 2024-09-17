@@ -1,0 +1,39 @@
+
+just some key-mappings i set in windows terminal to export
+now i use wezterm, so check for newest mappings there
+
+unmap any mod keys other than alt
+
+alt+arrow-keys
+  - resize pane
+alt+f
+  - find
+alt+c/v
+  - copy/paste
+alt+hjkl
+  - split h/horizontal
+  - jk
+    - move cursor
+  - splt l/right
+alt+d
+  - duplicate pane
+alt+w
+  - close pane
+alt+t
+  - new tab
+alt+n
+  - new window
+  - new pane, auto layout?
+alt+0
+  - reset font size
+alt+#
+  - change to tab #
+alt+a
+  - select all?
+alt+m
+  - mark mode
+		
+	
+    "copyOnSelect": false,
+    "firstWindowPreference": "persistedWindowLayout",
+    "initialCols": 75,
