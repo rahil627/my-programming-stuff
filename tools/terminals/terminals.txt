@@ -7,7 +7,7 @@ all OSs / terminal emulators:
 # terminal multiplexers:
 wezterm
   - a terminal first, with built-in tmux features
-    - see entry under terminals
+    - [see entry under terminals]
 
 zellij
   - **no windows binary at the moment, as it uses some non-cross-platform libraries. can use it in WSL though!**
@@ -64,10 +64,23 @@ x/fig
       - wezterm ssh ra@my.server
     - connec to a serial port (for embedded devices: arduino)
     - image rendering
+  - vs alacrity
+    - https://github.com/wez/wezterm/discussions/1769#discussioncomment-2443331 
+      - in the words of the dev:
+      
+      My perception of Alacritty is:
+      Hyper-focused on speed above function, with relatively minimal feature set as a result.
+      Their default disposition is to not accept features in order to maintain their performance baseline.
+      
+      My philosophy/motivation for wezterm is:
+      **I'm a programmer and I want a programmers terminal**
+      **I use multiple operating systems and I want my terminal to behave consistently across them**
+      **I want it to look good and feel fast for the things that matter most**: interactive latency, rather than raw throughput
+      **I'm sick of terminal emulation mismatches that prevent basic things like italic/underline/true color attributes from working when eg: using remote tmux + mosh, so the multiplexing feature in wezterm exists to eliminate that problem**
   - rust
-    - and works on windows!!
+  - **and works perfectly on windows!!**
   - wez is a cool name!
-    - also, he isn't a crudgemuffin
+    - also, he's a cool person :)
 
 windows terminal
   - actually legit, just works
