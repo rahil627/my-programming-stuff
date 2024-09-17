@@ -64,14 +64,16 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
 
       
     -- BEGIN my additional mappings
-    -- newly added bindings (not binded by default):
+
+    -- newly added mappings (not mapped by default):
     
-    -- will switch back to the last active tab
     -- i/o similar to vi/helix mappings for jump-list
+    { key = 'i', mods = 'ALT', action = wezterm.action.ActivateLastTab },
     { key = 'o', mods = 'ALT', action = wezterm.action.ActivateLastTab },
+    -- '[]' are set for prev/next tab
 
   
-    -- changes to default config:
+    -- changes to default mappings:
 
     -- split panes and moving between them:
     { key = 'l', mods = 'ALT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
