@@ -3,8 +3,8 @@ TODO: to merge
 
 conclusion:
 phoenix framework
-  - i chose web-app frameworks that provide a systems programming like experience, and the longevity of web. BUT, i'm still not convinced that game engines aren't good for making ui-apps, or any app really
-  - also, just focusing on one target, the web, which is inherently cross-platform, avoids compiling/testing for multiple platforms, though flutter does seem really good, it's not so great for web, and limited in style, which is constrained to the style of mobile apps
+  - i chose web-app frameworks that provide a systems-programming-like experience, and the longevity of web (and in this case, the maintainance-less of functional-programming). BUT, i'm still not convinced that game engines aren't good for making ui-apps, or any app really (or immediate-guis)
+  - also, just focusing on one target--the web--, which is inherently cross-platform, avoids the need to build/test for multiple platforms, though flutter does seem really solid, thanks to it's hybrid approach, it's not so great for web, and limited in ui style, which is by design constrained to the style of mobile apps
 
 see web-app-frameworks.txt
 
@@ -15,11 +15,11 @@ https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-i
 
 
 conclusion:
-in the end, i ditched the idea of native apps for web apps and cli/tui apps, see web-frameworks.txt and cli-and-tui-app-frameworks.txt. the browser and terminal just handles cross-platform for you, and aren't going to die any-time soon.
+in the end, i ditched the idea of native apps for web apps and simple cli/tui apps, see web-frameworks.txt and cli-and-tui-app-frameworks.txt. The browser and terminal just handles cross-platform for you, and aren't going to die any-time soon.
 
 cli and tui apps are a way to go for text-only simple-input apps. I absolutely *love* how lazygit looks in a terminal.
 
-Haxe is perfect for making cli apps (and has tui potential) as it can compile to a binary (via hashlink/c -> gcc). Just add haxe-ui/html5 or haxe-ui-wxwidgets for a quick web or desktop gui.
+Haxe is perfect for making cli apps (and has tui potential) as it can compile to a binary (via hashlink/c -> llvm). Just add haxe-ui/html5 or haxe-ui-wxwidgets for a quick web or desktop gui.
 
 otherwise, if you really need a gui, especially for a mobile target, Flutter is indeed the way to go, lightyears better than it's competition (react native and avalonia), though, it could very possibly be abandonded, along with all the other cross-patform solutions (hence web/terminal)
 
