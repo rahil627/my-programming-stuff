@@ -1,5 +1,10 @@
 -- wezterm show-keys --lua > show-keys.txt
 
+-- TODO:
+-- import my key-mappings for windows terminal
+-- add alt+left/right arrow for cd -/cd -
+--   - this was an example in the docs somewhere..
+
 local wezterm = require 'wezterm'
 
 local module = {} -- the table to return/export to the main script (wezterm.lua)
@@ -47,20 +52,11 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- },
 
 
-
-    -- TODO: import my key-mappings for windows terminal
     
     -- functions to bind
     -- see https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
     -- TODO: go through the list
 
-    -- main features:
-    -- ActivateCopyMode
-    -- ActivateCommandPalette
-      -- space -> space in helix
-      -- c+s+p in vs-code, and by default
-    -- alt+space used by windows powertoys launcher
-      -- should change to win+space!
 
       
     -- BEGIN my additional mappings
@@ -71,32 +67,11 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'o', mods = 'ALT', action = wezterm.action.ActivateLastTab },
 
   
-    -- changes to original config:
+    -- changes to default config:
 
-
-    -- major features
-
-    -- good defaults:
-    -- p, command pallete
-    -- f, find
-
-    -- l was default, same as the browser shortcut for javascript debug console
-    { key = 'd', mods = 'ALT', action = act.ShowDebugOverlay },
-
-    -- TODO: using z temporarily
-    -- x was default, c is used by copy, v (for vi-mode) used by paste
-    -- z for view pop-up by helix
-    { key = 'z', mods = 'ALT', action = act.ActivateCopyMode },
-
-    -- TODO: see docs, don't quite understand how this works..
-    { key = 's', mods = 'ALT', action = act.QuickSelect },
-
-
-
-    
-    -- split panes and moving between them
-    { key = 'h', mods = 'ALT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
-    { key = 'l', mods = 'ALT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+    -- split panes and moving between them:
+    { key = 'l', mods = 'ALT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+    { key = 'h', mods = 'ALT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
 
     -- find the function for next/previous pane for j/k instead of directions
     -- https://wezfurlong.org/wezterm/config/lua/keyassignment/ActivatePaneDirection.html?h=activate+pane+next
@@ -107,23 +82,87 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Prev' },
     -- { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
 
-    -- "Closes the current pane. If that was the last pane in the tab, closes the tab. If that was the last tab, closes that window. If that was the last window, wezterm terminates."
-      -- the most sane defaults ever!! go wez wez wehhhhzz
-    { key = 'w', mods = 'ALT', action = wezterm.action.CloseCurrentPane { confirm = true }, },
     -- END my additional mappings
+
+
+
+
+
+    -- MAJOR FEATURES
+
+    -- using default bindings:
+    -- space -> space in helix, c+s+p in vs-code, and by default
+    { key = 'p', mods = 'ALT', action = act.ActivateCommandPalette },
+    { key = 'f', mods = 'ALT', action = act.Search 'CurrentSelectionOrEmptyString' },
+    -- added this vi-binding
+    { key = '/', mods = 'ALT', action = act.Search 'CurrentSelectionOrEmptyString' },
+    -- aka vi-mode
+    -- x is default, c is used by copy, v (for vi-mode) used by paste, z is used by zoom state
+    { key = 'x', mods = 'ALT', action = act.ActivateCopyMode },
+
+    -- TODO: testing these major features..
+    -- no idea..
+    { key = 'z', mods = 'ALT', action = act.TogglePaneZoomState },
+    -- only works for links..??
+
+
+    -- changed bindings:
+
+    -- space was default TODO: used by windows launcher
+    { key = 's', mods = 'ALT', action = act.QuickSelect },
+
+    -- l was default, same as the browser shortcut for javascript debug console, now using l for clear scrollback
+    { key = 'd', mods = 'ALT', action = act.ShowDebugOverlay },
+
+
+
+
+
+    
+    -- MAIN FUNCTIONS
+    -- mostly uses default keys, just changed modifier to use alt instead of ctrl
+    { key = 'c', mods = 'ALT', action = act.CopyTo 'Clipboard' },
+    -- NOTE: k was the default, using k for something else TODO: but i think l was the default for most terminals..??
+    { key = 'l', mods = 'ALT', action = act.ClearScrollback 'ScrollbackOnly' },
+    -- NOTE: changed mapping to d
+    -- { key = 'l', mods = 'ALT', action = act.ShowDebugOverlay },
+    { key = 'm', mods = 'ALT', action = act.Hide },
+    { key = 'n', mods = 'ALT', action = act.SpawnWindow },
+    { key = 'r', mods = 'ALT', action = act.ReloadConfiguration },
+    { key = 't', mods = 'ALT', action = act.SpawnTab 'CurrentPaneDomain' },
+    -- NOTE: select smiley??
+    { key = 'u', mods = 'ALT', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
+    { key = 'v', mods = 'ALT', action = act.PasteFrom 'Clipboard' },
+    -- the most sane defaults ever!! go wez wez wehhhhzz
+    { key = 'w', mods = 'ALT', action = wezterm.action.CloseCurrentPane { confirm = true }, },
+    -- NOTE: replaced with above
+    -- { key = 'w', mods = 'ALT', action = act.CloseCurrentTab{ confirm = true } },
+
+        -- vi-like, might need tho..
+    { key = '[', mods = 'ALT', action = act.ActivateTabRelative(-1) },
+    { key = ']', mods = 'ALT', action = act.ActivateTabRelative(1) },
+
+
+
+
+
+
+
 
 
 
     
     -- BEGIN edited generated default mappings
-    -- okay
+    -- NOTE: moved out main letter-bindings above
+
+    -- okay, alt+tab used by os
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
     { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1) },
     { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
 
     -- tab crap
-    { key = '!', mods = 'CTRL', action = act.ActivateTab(0) },
-    { key = '!', mods = 'SHIFT|CTRL', action = act.ActivateTab(0) },
+    -- { key = '!', mods = 'CTRL', action = act.ActivateTab(0) },
+    -- { key = '!', mods = 'SHIFT|CTRL', action = act.ActivateTab(0) },
 
     -- changed
     -- { key = '\"', mods = 'ALT|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
@@ -136,6 +175,8 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = '$', mods = 'SHIFT|CTRL', action = act.ActivateTab(3) },
     -- { key = '%', mods = 'CTRL', action = act.ActivateTab(4) },
     -- { key = '%', mods = 'SHIFT|CTRL', action = act.ActivateTab(4) },
+    -- { key = '^', mods = 'CTRL', action = act.ActivateTab(5) },
+    -- { key = '^', mods = 'SHIFT|CTRL', action = act.ActivateTab(5) },
 
     -- weird vim bindings?? or perl!?
     -- { key = '%', mods = 'ALT|CTRL', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
@@ -154,14 +195,10 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = '*', mods = 'CTRL', action = act.ActivateTab(7) },
     -- { key = '*', mods = 'SHIFT|CTRL', action = act.ActivateTab(7) },
 
-    { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
-    { key = '+', mods = 'SHIFT|CTRL', action = act.IncreaseFontSize },
-    { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
-    { key = '-', mods = 'SHIFT|CTRL', action = act.DecreaseFontSize },
-    { key = '-', mods = 'SUPER', action = act.DecreaseFontSize },
-    { key = '0', mods = 'CTRL', action = act.ResetFontSize },
-    { key = '0', mods = 'SHIFT|CTRL', action = act.ResetFontSize },
-    { key = '0', mods = 'SUPER', action = act.ResetFontSize },
+    { key = '+', mods = 'ALT', action = act.IncreaseFontSize },
+    { key = '-', mods = 'ALT', action = act.DecreaseFontSize },
+    { key = '-', mods = 'ALT', action = act.DecreaseFontSize },
+    { key = '0', mods = 'ALT', action = act.ResetFontSize },
 
     -- { key = '1', mods = 'SHIFT|CTRL', action = act.ActivateTab(0) },
     -- { key = '1', mods = 'SUPER', action = act.ActivateTab(0) },
@@ -191,77 +228,12 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = '@', mods = 'CTRL', action = act.ActivateTab(1) },
     -- { key = '@', mods = 'SHIFT|CTRL', action = act.ActivateTab(1) },
 
-    -- MAIN FUNCTIONS
-    { key = 'C', mods = 'ALT', action = act.CopyTo 'Clipboard' },
-    -- { key = 'C', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
-    { key = 'F', mods = 'ALT', action = act.Search 'CurrentSelectionOrEmptyString' },
-    -- { key = 'F', mods = 'SHIFT|CTRL', action = act.Search 'CurrentSelectionOrEmptyString' },
-    { key = 'K', mods = 'ALT', action = act.ClearScrollback 'ScrollbackOnly' },
-    -- { key = 'K', mods = 'SHIFT|CTRL', action = act.ClearScrollback 'ScrollbackOnly' },
-    -- NOTE: changed mapping
-    -- { key = 'L', mods = 'ALT', action = act.ShowDebugOverlay },
-    -- { key = 'L', mods = 'SHIFT|CTRL', action = act.ShowDebugOverlay },
-    { key = 'M', mods = 'ALT', action = act.Hide },
-    -- { key = 'M', mods = 'SHIFT|CTRL', action = act.Hide },
-    { key = 'N', mods = 'ALT', action = act.SpawnWindow },
-    -- { key = 'N', mods = 'SHIFT|CTRL', action = act.SpawnWindow },
-    { key = 'P', mods = 'ALT', action = act.ActivateCommandPalette },
-    -- { key = 'P', mods = 'SHIFT|CTRL', action = act.ActivateCommandPalette },
-    { key = 'R', mods = 'ALT', action = act.ReloadConfiguration },
-    -- { key = 'R', mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
-    { key = 'T', mods = 'ALT', action = act.SpawnTab 'CurrentPaneDomain' },
-    -- { key = 'T', mods = 'SHIFT|CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
-    { key = 'U', mods = 'ALT', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    -- { key = 'U', mods = 'SHIFT|CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    { key = 'V', mods = 'ALT', action = act.PasteFrom 'Clipboard' },
-    -- { key = 'V', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
-    -- NOTE: replaced by CloseCurrentPane
-    -- { key = 'W', mods = 'ALT', action = act.CloseCurrentTab{ confirm = true } },
-    -- { key = 'W', mods = 'SHIFT|CTRL', action = act.CloseCurrentTab{ confirm = true } },
-    -- NOTE: replaced with another binding
-    -- { key = 'X', mods = 'ALT', action = act.ActivateCopyMode },
-    -- { key = 'X', mods = 'SHIFT|CTRL', action = act.ActivateCopyMode },
-    { key = 'Z', mods = 'ALT', action = act.TogglePaneZoomState },
-    -- { key = 'Z', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
+    -- deleted CTRL, SHIFT|CTRL bindings here
+    -- TODO: file issue: defaults used capital letters, though, not sure why the SHIFT mod is needed then..
 
+    -- deleted SUPER, SHIFT|SUPER, SHIFT|CTRL bindings here
 
-    
-    -- NOTE: SUPER, SHIFT|SUPER, SHIFT|CTRL key-modifiers start here
-
-    -- { key = '[', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(-1) },
-    -- { key = ']', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(1) },
-
-    -- why is this even here??
-    -- { key = '^', mods = 'CTRL', action = act.ActivateTab(5) },
-    -- { key = '^', mods = 'SHIFT|CTRL', action = act.ActivateTab(5) },
-
-    { key = '_', mods = 'ALT', action = act.DecreaseFontSize },
-    -- { key = '_', mods = 'SHIFT|CTRL', action = act.DecreaseFontSize },
-
-    -- { key = 'c', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
-    -- { key = 'c', mods = 'SUPER', action = act.CopyTo 'Clipboard' },
-    -- { key = 'f', mods = 'SHIFT|CTRL', action = act.Search 'CurrentSelectionOrEmptyString' },
-    -- { key = 'f', mods = 'SUPER', action = act.Search 'CurrentSelectionOrEmptyString' },
-    -- { key = 'k', mods = 'SHIFT|CTRL', action = act.ClearScrollback 'ScrollbackOnly' },
-    -- { key = 'k', mods = 'SUPER', action = act.ClearScrollback 'ScrollbackOnly' },
-    -- { key = 'l', mods = 'SHIFT|CTRL', action = act.ShowDebugOverlay },
-    -- { key = 'm', mods = 'SHIFT|CTRL', action = act.Hide },
-    -- { key = 'm', mods = 'SUPER', action = act.Hide },
-    -- { key = 'n', mods = 'SHIFT|CTRL', action = act.SpawnWindow },
-    -- { key = 'n', mods = 'SUPER', action = act.SpawnWindow },
-    -- { key = 'p', mods = 'SHIFT|CTRL', action = act.ActivateCommandPalette },
-    -- { key = 'r', mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
-    -- { key = 'r', mods = 'SUPER', action = act.ReloadConfiguration },
-    -- { key = 't', mods = 'SHIFT|CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
-    -- { key = 't', mods = 'SUPER', action = act.SpawnTab 'CurrentPaneDomain' },
-    -- { key = 'u', mods = 'SHIFT|CTRL', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    -- { key = 'v', mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
-    -- { key = 'v', mods = 'SUPER', action = act.PasteFrom 'Clipboard' },
-    -- { key = 'w', mods = 'SHIFT|CTRL', action = act.CloseCurrentTab{ confirm = true } },
-    -- { key = 'w', mods = 'SUPER', action = act.CloseCurrentTab{ confirm = true } },
-    -- { key = 'x', mods = 'SHIFT|CTRL', action = act.ActivateCopyMode },
-    -- { key = 'z', mods = 'SHIFT|CTRL', action = act.TogglePaneZoomState },
-
+    -- extra
     -- { key = '{', mods = 'SUPER', action = act.ActivateTabRelative(-1) },
     -- { key = '{', mods = 'SHIFT|SUPER', action = act.ActivateTabRelative(-1) },
     -- { key = '}', mods = 'SUPER', action = act.ActivateTabRelative(1) },
@@ -271,14 +243,11 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
 
     -- special keys:
     -- i don't even think i have this on my laptop's keyboard..
-    -- maybe can allow using non-alt mod keys here
-    { key = 'PageUp', mods = 'SHIFT', action = act.ScrollByPage(-1) },
-    -- { key = 'PageUp', mods = 'CTRL', action = act.ActivateTabRelative(-1) },
-    -- { key = 'PageUp', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(-1) },
-    { key = 'PageDown', mods = 'SHIFT', action = act.ScrollByPage(1) },
-    -- { key = 'PageDown', mods = 'CTRL', action = act.ActivateTabRelative(1) },
-    -- { key = 'PageDown', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(1) },
+    -- maybe can allow using non-alt mod keys here..
+    { key = 'PageUp', mods = 'ALT', action = act.ActivateTabRelative(-1) },
+    { key = 'PageDown', mods = 'ALT', action = act.ActivateTabRelative(1) },
 
+    -- TODO: figure this out.. commented out focus pane direction for now
     -- { key = 'LeftArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
     { key = 'LeftArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Left', 1 } },
     -- { key = 'RightArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
