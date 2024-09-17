@@ -1,9 +1,10 @@
 
-looking for:
+# looking for:
 sane defaults
   - don't want to waste time configing all day, need to focus!
 inuititive learning experience
   - quick to re-learn and jump deep into again
+a simple language to write extensions
 unrestrictive
 
 conclusion:
@@ -24,7 +25,7 @@ conclusion:
     - an emacs user switches to helix and mentions some good plugins
     - TODO: try them!
   - TODO: a version with a file-tree feature is on a git branch
-2. vs-code
+  - scheme scripting coming soon!!
 2. vs-code vs lapce
   - TODO: give lapce another try!
   - a great start, especially when you haven't coded in a while
@@ -33,15 +34,15 @@ conclusion:
 vs-studio
   - for it's advanced features: deep debugging, run-time stuff, etc.
 sublime text or notepad (windows)
-  - for simple, non-key-oriented editing?
+  - for simple, brain-less editing
   - TODO: try it
 
 (TODO: knowledge-base software for bigger, conceptually-linked sets of text??)
 
 
 
-gui editors:
-newer, simpler, things to try:
+# gui editors:
+## newer, simpler, things to try:
 **lem**
   - written in common lisp (sbcl?)
     - **and thus can be extended or completely altered in common lisp too :)**
@@ -49,7 +50,7 @@ newer, simpler, things to try:
   - made by a Japanese person!
 **focus (editor)**
   - a simpler emacs-style editor
-  - made with jai
+  - **made with jai**
 4coder
   - part of the handmade-hero movement
     - therefore written in C/C++, and also therefore **can be extended using just about any programming langauge**
@@ -62,7 +63,7 @@ newer, simpler, things to try:
     - this is it's limiting factor, though AssemblyScript actually looks just like javascript!
 
 
-current standard:
+## current standard:
 **vs code**
   - made using electron (web stack rendered by chromium/node.js)
   - so dominant that it made most other editors abandonware
@@ -95,12 +96,14 @@ notepad++
   - a windows classic, same as ever, still cute and functional for an old 90s thing
 textmate
   - a mac classic
+kate
+  - a linux classic?
 notepad2
   - a classic windows notepad replacement
 
 
 
-cli/terminal editors:
+cli/terminal-based editors:
 mostly for the key-bindings, then can use an associated extension on vscode
 also provides a clutter/distraction-free experience
 
@@ -113,8 +116,10 @@ also provides a clutter/distraction-free experience
   - "helix for vscode" extension to ease transition / aid in using both at the same time
     - TODO: ...no pop-up menus tho..?
   - rust
-    - much much much better than vim script (and lua), but not so sure how it compares to elisp, as lisp is quite the ideal langauge for providing a simple way to extend the program
-
+    - truly a force of reckoning those people
+  - scheme scripting
+    - !!!, finally, get to use lisp :) 
+    - https://github.com/helix-editor/helix/pull/8675
 
 
 a new classic?:
@@ -133,6 +138,8 @@ a new classic?:
 
 
 classics:
+though, now emacs is a GUI, and neovim has neovide (rust)
+
 **emacs**
   - much more than a text editor, it's basically an OS! based on around text buffers
     - **this has the great benefit that everything is written in the same language, morever, the most dynamic language of all time. Otherwise, you'd have to use an entire set of tools, wherein each tool can be writtern in a different langauge, have different onpinions, and just not work as seamlessly together: terminal, terminal multi-plexer, text editor, git tui, file-manager tui, knowledge-base tui, and so on.**
