@@ -14,11 +14,32 @@ local wezterm = require 'wezterm'
 local module = {} -- the table to return/export to the main script (wezterm.lua)
 local act = wezterm.action
 
+-- just use one modifier key
+local mod_key = 'ALT'
+local mod_reverse_key = 'ALT|SHIFT' -- NOTE: don't use anywhere yet..
+
+local function get_mod_key() -- local function, not public/module
+  -- cross-platform solution
+  -- https://github.com/KevinSilvester/wezterm-config/blob/master/config/bindings.lua
+
+  -- local mod = {}
+
+  -- if platform.is_mac then
+  --    mod.SUPER = 'SUPER'
+  --    mod.SUPER_REV = 'SUPER|CTRL'
+  -- elseif platform.is_win or platform.is_linux then
+     -- mod.SUPER = 'ALT' -- to not conflict with Windows key shortcuts
+     -- mod.SUPER_REV = 'ALT|CTRL'
+  -- end
+end
+
 -- to use:
 -- config.key = my_key_map.keys
 -- config.key_tables = my_key_map.key_tables
 -- returns a table containing a 'keys' table and 'key_tables'
 function module.get_my_key_map() -- don't forget to add it to the module table!!
+
+  
 return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     keys = {
 
@@ -57,9 +78,12 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
 
 
     
-    -- functions to bind
+    -- functions to map
     -- see https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
     -- TODO: go through the list
+      -- maybe ActivateKeyTable is a pop-up key-mapping menu?
+      -- RotatePanes looks cool too
+      -- action = act.Multiple {...} for multiple actions to a single key-mapping
 
 
       
@@ -68,25 +92,25 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- newly added mappings (not mapped by default):
     
     -- i/o similar to vi/helix mappings for jump-list
-    { key = 'i', mods = 'ALT', action = wezterm.action.ActivateLastTab },
-    { key = 'o', mods = 'ALT', action = wezterm.action.ActivateLastTab },
+    { key = 'i', mods = mod_key, action = wezterm.action.ActivateLastTab },
+    { key = 'o', mods = mod_key, action = wezterm.action.ActivateLastTab },
     -- '[]' are set for prev/next tab
 
   
     -- changes to default mappings:
 
     -- split panes and moving between them:
-    { key = 'l', mods = 'ALT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
-    { key = 'h', mods = 'ALT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+    { key = 'l', mods = mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+    { key = 'h', mods = mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
 
     -- find the function for next/previous pane for j/k instead of directions
     -- https://wezfurlong.org/wezterm/config/lua/keyassignment/ActivatePaneDirection.html?h=activate+pane+next
       -- NOTE: hidden within the same function!
     -- NOTE: 'Prev' not 'Previous'
-    -- { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
-    { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Next' },
-    { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Prev' },
-    -- { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+    -- { key = 'h', mods = mod_key, action = act.ActivatePaneDirection 'Left' },
+    { key = 'j', mods = mod_key, action = act.ActivatePaneDirection 'Next' },
+    { key = 'k', mods = mod_key, action = act.ActivatePaneDirection 'Prev' },
+    -- { key = 'l', mods = mod_key, action = act.ActivatePaneDirection 'Right' },
 
     -- END my additional mappings
 
@@ -98,27 +122,27 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
 
     -- using default bindings:
     -- space -> space in helix, c+s+p in vs-code, and by default
-    { key = 'p', mods = 'ALT', action = act.ActivateCommandPalette },
-    { key = 'f', mods = 'ALT', action = act.Search 'CurrentSelectionOrEmptyString' },
+    { key = 'p', mods = mod_key, action = act.ActivateCommandPalette },
+    { key = 'f', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
     -- added this vi-binding
-    { key = '/', mods = 'ALT', action = act.Search 'CurrentSelectionOrEmptyString' },
+    { key = '/', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
     -- aka vi-mode
     -- x is default, c is used by copy, v (for vi-mode) used by paste, z is used by zoom state
-    { key = 'x', mods = 'ALT', action = act.ActivateCopyMode },
+    { key = 'x', mods = mod_key, action = act.ActivateCopyMode },
 
     -- TODO: testing these major features..
     -- no idea..
-    { key = 'z', mods = 'ALT', action = act.TogglePaneZoomState },
+    { key = 'z', mods = mod_key, action = act.TogglePaneZoomState },
     -- only works for links..??
 
 
     -- changed bindings:
 
     -- space was default TODO: used by windows launcher
-    { key = 's', mods = 'ALT', action = act.QuickSelect },
+    { key = 's', mods = mod_key, action = act.QuickSelect },
 
     -- l was default, same as the browser shortcut for javascript debug console, now using l for clear scrollback
-    { key = 'd', mods = 'ALT', action = act.ShowDebugOverlay },
+    { key = 'd', mods = mod_key, action = act.ShowDebugOverlay },
 
 
 
@@ -127,26 +151,29 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     
     -- MAIN FUNCTIONS
     -- mostly uses default keys, just changed modifier to use alt instead of ctrl
-    { key = 'c', mods = 'ALT', action = act.CopyTo 'Clipboard' },
+    -- https://wezfurlong.org/wezterm/config/default-keys.html
+      { key = 'c', mods = mod_key, action = act.CopyTo 'Clipboard' },
     -- NOTE: k was the default, using k for something else TODO: but i think l was the default for most terminals..??
-    { key = 'l', mods = 'ALT', action = act.ClearScrollback 'ScrollbackOnly' },
+    { key = 'l', mods = mod_key, action = act.ClearScrollback 'ScrollbackOnly' },
     -- NOTE: changed mapping to d
-    -- { key = 'l', mods = 'ALT', action = act.ShowDebugOverlay },
-    { key = 'm', mods = 'ALT', action = act.Hide },
-    { key = 'n', mods = 'ALT', action = act.SpawnWindow },
-    { key = 'r', mods = 'ALT', action = act.ReloadConfiguration },
-    { key = 't', mods = 'ALT', action = act.SpawnTab 'CurrentPaneDomain' },
+    -- { key = 'l', mods = mod_key, action = act.ShowDebugOverlay },
+    { key = 'm', mods = mod_key, action = act.Hide },
+    { key = 'n', mods = mod_key, action = act.SpawnWindow },
+    { key = 'r', mods = mod_key, action = act.ReloadConfiguration },
+    { key = 't', mods = mod_key, action = act.SpawnTab 'CurrentPaneDomain' },
     -- NOTE: select smiley??
-    { key = 'u', mods = 'ALT', action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    { key = 'v', mods = 'ALT', action = act.PasteFrom 'Clipboard' },
+    { key = 'u', mods = mod_key, action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
+    { key = 'v', mods = mod_key, action = act.PasteFrom 'Clipboard' },
     -- the most sane defaults ever!! go wez wez wehhhhzz
-    { key = 'w', mods = 'ALT', action = wezterm.action.CloseCurrentPane { confirm = true }, },
+    -- i started a poll to decide using this as the default over close current tab
+      -- https://github.com/wez/wezterm/discussions/6151
+      { key = 'w', mods = mod_key, action = wezterm.action.CloseCurrentPane { confirm = true }, },
     -- NOTE: replaced with above
-    -- { key = 'w', mods = 'ALT', action = act.CloseCurrentTab{ confirm = true } },
+    -- { key = 'w', mods = mod_key, action = act.CloseCurrentTab{ confirm = true } },
 
         -- vi-like, might need tho..
-    { key = '[', mods = 'ALT', action = act.ActivateTabRelative(-1) },
-    { key = ']', mods = 'ALT', action = act.ActivateTabRelative(1) },
+    { key = '[', mods = mod_key, action = act.ActivateTabRelative(-1) },
+    { key = ']', mods = mod_key, action = act.ActivateTabRelative(1) },
 
 
 
@@ -164,7 +191,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- okay, alt+tab used by os
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
     { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1) },
-    { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
+    { key = 'Enter', mods = mod_key, action = act.ToggleFullScreen },
 
     -- tab crap
     -- { key = '!', mods = 'CTRL', action = act.ActivateTab(0) },
@@ -201,10 +228,10 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = '*', mods = 'CTRL', action = act.ActivateTab(7) },
     -- { key = '*', mods = 'SHIFT|CTRL', action = act.ActivateTab(7) },
 
-    { key = '+', mods = 'ALT', action = act.IncreaseFontSize },
-    { key = '-', mods = 'ALT', action = act.DecreaseFontSize },
-    { key = '-', mods = 'ALT', action = act.DecreaseFontSize },
-    { key = '0', mods = 'ALT', action = act.ResetFontSize },
+    { key = '+', mods = mod_key, action = act.IncreaseFontSize },
+    { key = '-', mods = mod_key, action = act.DecreaseFontSize },
+    { key = '-', mods = mod_key, action = act.DecreaseFontSize },
+    { key = '0', mods = mod_key, action = act.ResetFontSize },
 
     -- { key = '1', mods = 'SHIFT|CTRL', action = act.ActivateTab(0) },
     -- { key = '1', mods = 'SUPER', action = act.ActivateTab(0) },
@@ -250,18 +277,18 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- special keys:
     -- i don't even think i have this on my laptop's keyboard..
     -- maybe can allow using non-alt mod keys here..
-    { key = 'PageUp', mods = 'ALT', action = act.ActivateTabRelative(-1) },
-    { key = 'PageDown', mods = 'ALT', action = act.ActivateTabRelative(1) },
+    { key = 'PageUp', mods = mod_key, action = act.ActivateTabRelative(-1) },
+    { key = 'PageDown', mods = mod_key, action = act.ActivateTabRelative(1) },
 
     -- TODO: figure this out.. commented out focus pane direction for now
-    -- { key = 'LeftArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
-    { key = 'LeftArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Left', 1 } },
-    -- { key = 'RightArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
-    { key = 'RightArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Right', 1 } },
-    -- { key = 'UpArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
-    { key = 'UpArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Up', 1 } },
-    -- { key = 'DownArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
-    { key = 'DownArrow', mods = 'ALT', action = act.AdjustPaneSize{ 'Down', 1 } },
+    -- { key = 'LeftArrow', mods = mod_key, action = act.ActivatePaneDirection 'Left' },
+    { key = 'LeftArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Left', 1 } },
+    -- { key = 'RightArrow', mods = mod_key, action = act.ActivatePaneDirection 'Right' },
+    { key = 'RightArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Right', 1 } },
+    -- { key = 'UpArrow', mods = mod_key, action = act.ActivatePaneDirection 'Up' },
+    { key = 'UpArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Up', 1 } },
+    -- { key = 'DownArrow', mods = mod_key, action = act.ActivatePaneDirection 'Down' },
+    { key = 'DownArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Down', 1 } },
 
     -- maybe an actually good case for using all the modifiers..
     -- TODO: my keyboard has delete/insert key..
@@ -306,13 +333,13 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
       { key = '^', mods = 'NONE', action = act.CopyMode 'MoveToStartOfLineContent' },
       { key = '^', mods = 'SHIFT', action = act.CopyMode 'MoveToStartOfLineContent' },
       { key = 'b', mods = 'NONE', action = act.CopyMode 'MoveBackwardWord' },
-      { key = 'b', mods = 'ALT', action = act.CopyMode 'MoveBackwardWord' },
+      { key = 'b', mods = mod_key, action = act.CopyMode 'MoveBackwardWord' },
       { key = 'b', mods = 'CTRL', action = act.CopyMode 'PageUp' },
       { key = 'c', mods = 'CTRL', action = act.Multiple{ 'ScrollToBottom', { CopyMode =  'Close' } } },
       { key = 'd', mods = 'CTRL', action = act.CopyMode{ MoveByPage = (0.5) } },
       { key = 'e', mods = 'NONE', action = act.CopyMode 'MoveForwardWordEnd' },
       { key = 'f', mods = 'NONE', action = act.CopyMode{ JumpForward = { prev_char = false } } },
-      { key = 'f', mods = 'ALT', action = act.CopyMode 'MoveForwardWord' },
+      { key = 'f', mods = mod_key, action = act.CopyMode 'MoveForwardWord' },
       { key = 'f', mods = 'CTRL', action = act.CopyMode 'PageDown' },
       { key = 'g', mods = 'NONE', action = act.CopyMode 'MoveToScrollbackTop' },
       { key = 'g', mods = 'CTRL', action = act.Multiple{ 'ScrollToBottom', { CopyMode =  'Close' } } },
@@ -320,7 +347,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
       { key = 'j', mods = 'NONE', action = act.CopyMode 'MoveDown' },
       { key = 'k', mods = 'NONE', action = act.CopyMode 'MoveUp' },
       { key = 'l', mods = 'NONE', action = act.CopyMode 'MoveRight' },
-      { key = 'm', mods = 'ALT', action = act.CopyMode 'MoveToStartOfLineContent' },
+      { key = 'm', mods = mod_key, action = act.CopyMode 'MoveToStartOfLineContent' },
       { key = 'o', mods = 'NONE', action = act.CopyMode 'MoveToSelectionOtherEnd' },
       { key = 'q', mods = 'NONE', action = act.Multiple{ 'ScrollToBottom', { CopyMode =  'Close' } } },
       { key = 't', mods = 'NONE', action = act.CopyMode{ JumpForward = { prev_char = true } } },
@@ -334,9 +361,9 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
       { key = 'End', mods = 'NONE', action = act.CopyMode 'MoveToEndOfLineContent' },
       { key = 'Home', mods = 'NONE', action = act.CopyMode 'MoveToStartOfLine' },
       { key = 'LeftArrow', mods = 'NONE', action = act.CopyMode 'MoveLeft' },
-      { key = 'LeftArrow', mods = 'ALT', action = act.CopyMode 'MoveBackwardWord' },
+      { key = 'LeftArrow', mods = mod_key, action = act.CopyMode 'MoveBackwardWord' },
       { key = 'RightArrow', mods = 'NONE', action = act.CopyMode 'MoveRight' },
-      { key = 'RightArrow', mods = 'ALT', action = act.CopyMode 'MoveForwardWord' },
+      { key = 'RightArrow', mods = mod_key, action = act.CopyMode 'MoveForwardWord' },
       { key = 'UpArrow', mods = 'NONE', action = act.CopyMode 'MoveUp' },
       { key = 'DownArrow', mods = 'NONE', action = act.CopyMode 'MoveDown' },
     },
