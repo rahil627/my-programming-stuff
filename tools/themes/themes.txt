@@ -21,8 +21,6 @@ see vs-code-extensions.txt
   - a nice monokai variant, though a bit too bright
 tokyonight
   - a very well-executed blue'ish theme
-jellyfish
-  - a nice monokai variant
 synthwave '84
   - syntax color scheme is too wild
 
@@ -66,7 +64,6 @@ base16-tomorrow-night.sh
 base16-tomorrow.sh
 base16-zenburn.sh
 
-# from some old file
 # from some really, really old file
 
 themes
