@@ -1,5 +1,15 @@
 
-windows:
+make your own theme:
+
+https://wezfurlong.org/wezterm/config/appearance.html
+  - a good resource for themes
+
+terminal.sexy (website)
+  - a web-based 16-color theme maker
+
+
+
+# windows:
 
 vs-code:
 
