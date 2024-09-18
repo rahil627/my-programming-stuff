@@ -26,6 +26,7 @@ local config = wezterm.config_builder()
 -- https://github.com/wez/wezterm/issues/6130
 config.keys = my_key_map.get_my_key_map().keys
 config.key_tables = my_key_map.get_my_key_map().key_tables
+
 config.launch_menu = {
   -- https://wezfurlong.org/wezterm/config/launch.html
   -- Each entry in launch_menu is an instance of a SpawnCommand object.   
@@ -93,8 +94,9 @@ config.color_scheme = 'Aura (Gogh)'
 
 config.font = wezterm.font_with_fallback {
   'Monofoki',
-  'Consolas',
+  'Consolas', -- vs-code default
   -- 'DengXian',
+  -- 'JetBrains Mono', -- wezterm fallsback to this automatically
 }
 -- The default fallback includes the popular Nerd Font Symbols font, which means that you don't need to use specially patched fonts to use the powerline or Nerd Fonts symbol glyphs.
 -- WezTerm will still append its default fallback to whatever list you specify, so you needn't worry about replicating that list if you set your own fallback.
@@ -106,10 +108,11 @@ config.font_size = 9
 
 config.command_palette_font_size = 9
 -- config.command_palette_fg_color = config.colors.foreground -- colors is a nil value :/
+
 config.command_palette_fg_color = 'purple' -- silver, fuchsia is too bright!
-  -- not the best, but works for now!
 config.command_palette_bg_color = 'rgba(0.5, 0.5, 0.5, .75)' -- default: #333333
   -- just makes it transparent
+  -- not the best, but a simple solution for now!.. otherwise just use the defaults by commenting these out, which is white on solid grey
 
 -- bold_brightens_ansi_colors = BrightAndBold/BrightOnly/No
 -- https://wezfurlong.org/wezterm/config/lua/config/bold_brightens_ansi_colors.html
