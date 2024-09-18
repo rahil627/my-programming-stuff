@@ -7,6 +7,8 @@ see vs-code-extensions.txt
 
 **aura**
   - dark (soft text)
+**jellyfish**
+  - a nice monokai variant, though a bit too bright
 tokyonight
   - a very well-executed blue'ish theme
 jellyfish
@@ -16,12 +18,17 @@ synthwave '84
 
 
 terminal:
+windows terminal:
 https://windowsterminalthemes.dev/
   - cyberpunk 2077
 
 
 
-# from vim
+
+
+
+
+# from vim (via ipad mini?)
 
 # my top 3
 Plug 'sonph/onehalf', { 'rtp': 'vim' } “like gruvbox but with slightly lighter contrast
@@ -50,6 +57,7 @@ base16-tomorrow.sh
 base16-zenburn.sh
 
 # from some old file
+# from some really, really old file
 
 themes
 	textmate - monokai - sexiest theme ever
