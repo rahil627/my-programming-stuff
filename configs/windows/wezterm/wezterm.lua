@@ -106,7 +106,8 @@ config.font = wezterm.font_with_fallback {
 
 config.font_size = 9
 
-config.command_palette_font_size = 9
+-- TODO: no seperate colors table to set all this in?
+config.command_palette_font_size = 10
 -- config.command_palette_fg_color = config.colors.foreground -- colors is a nil value :/
 
 config.command_palette_fg_color = 'purple' -- silver, fuchsia is too bright!
