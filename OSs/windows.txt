@@ -1,4 +1,14 @@
 
+shortcuts:
+win+x
+  - opens a menu with the most useful windows os apps 'n settings
+
+in file explorer:
+shift+right-click
+  - show the classic, full "context-menu"
+
+
+
 naming conventions:
 in general, spaces are fine and is the norm for windows at least since '95
 for programming, however:
