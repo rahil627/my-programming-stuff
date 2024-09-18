@@ -310,12 +310,11 @@ C-S-h = "kill_to_line_start" # actually deletes upto first non-white-space; NOTE
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"] # keeping the selection while inserting is kinda weird..
 C-space = "completion"
+C-j = "completion" # just need an easier shortcut
+C-k = "completion"
 # C-S-space = trigger hints
 # j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock
 
-# C-j = "insert_newline" # default; alt to enter-key
-# C-j = "add_newline_below"
-# C-k = "add_newline_above" # or C-S-j?
 C-ret = "add_newline_below" # for consistency 
 C-S-ret = "add_newline_above"
 # TODO: copy line up/down (macro)
