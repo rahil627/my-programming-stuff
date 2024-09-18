@@ -3,6 +3,16 @@
 # backup
 # cp C:\Users\ra\AppData\Roaming\helix\config.toml C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\helix
 
+# TODO: / main things that bother me
+# where is the repeat-action? '.' repeats the last paste or something..
+# use c+j/k to move down/up pop-up dialog lists
+# ISSUE: discuss/ask for a set-opacity/transparency command
+#  - seems to be working differently in wezterm, no config necessary!!
+# add aura theme
+#   - https://github.com/daltonmenezes/aura-theme/issues/202
+#   - then can use it as a base to create my own theme
+
+
 # branches:
 # https://github.com/mattwparas/helix/tree/steel-event-system
 #   - https://github.com/helix-editor/helix/pull/8675
@@ -32,11 +42,23 @@
 #   - also contains many configs to borrow from
 
 
-# issues
+# ISSUE:
+
+# known issues:
 # TODO: i broke terminal copy/paste (a-c/v)
 # why paste is slow:
 # https://github.com/helix-editor/helix/issues/1021#issuecomment-963353157
 #  - as a work-around, it literally types one character at a time
+
+
+# my issues:
+# https://github.com/helix-editor/helix/pull/9316
+#   - about making wren work
+
+# https://github.com/helix-editor/helix/discussions/1172
+#   - "option to show the functions being called"
+ 
+
 
 
 # NOTE: press space,? to open the command picker, then can see all of the commands that can be mapped to a key (or macro!)
