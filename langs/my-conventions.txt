@@ -2,11 +2,22 @@
 # tags
 
 BIGLETTERS:
-  - TODO, ERROR, WARN/WARNING, IMPORTANT
-    - TODO: do they need a tag? which ones do?
-
+  - a simple solution is to just add TODO: in front of the other tag: TODO: IMPORTANT:
+    - composable! like tags
+  - currently:
+    - TODO, #1 most used
+    - NOTE, #2
+    - IMPORTANT, #3?
+    - ERROR, a major problem, doesn't necessarily have to break compilation
+    - WARN/WARNING
+  - TODO: vs ?tag ?
+  - https://news.ycombinator.com/item?id=31235289
+    - interesting categories..: DREAM, HACK (a part of my WARNING), FIXME (my ERROR?)
+    - there's a vs-code plugin for this, comment anchors:
+      - https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors
+      
 use easily findable tags within comments
-  - TODO: requires case-sensitive search, not bad tho
+  - TODO: just requires a simple case-sensitive search
   - todo: is more pleasing to the eyes, but doesn't stand out
   - !TODO:/!todo is easier to search, and can use either case
     - choose a symbol: !@#$%^&*
