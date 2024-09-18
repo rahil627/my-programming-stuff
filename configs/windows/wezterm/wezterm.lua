@@ -21,7 +21,8 @@ local config = wezterm.config_builder()
 -- config goes here
 
 -- keep most commonly altered settings on top
--- confusing, i posted an docs issue about this..:
+
+-- ISSUE: docs 
 -- https://github.com/wez/wezterm/issues/6130
 config.keys = my_key_map.get_my_key_map().keys
 config.key_tables = my_key_map.get_my_key_map().key_tables
@@ -63,6 +64,8 @@ config.launch_menu = {
 
 config.default_prog = { 'pwsh.exe', '-NoLogo' }
 
+-- ISSUE: change name
+  -- https://github.com/wez/wezterm/discussions/6152
 config.initial_rows = 48 -- 24, i prefer the default small size for floating windows, but longer for coding windows/panes
 config.initial_cols = 80 -- 80, i like the small width limit, even when raeding e-books; it's a good constraint. it reminds me of the iPad mini. besides, with word wrapping, there's no problems
 
