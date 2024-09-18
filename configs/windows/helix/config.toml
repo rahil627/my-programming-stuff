@@ -131,6 +131,9 @@ C-v = "paste_clipboard_after"
 C-r = ":reload" # Reload the current document from disk
 A-f = ":format"
 
+C-S-space = "command_palette" # c-s = "completion", TODO: doesn't work, i think windows terminal settings unbound just completely unmaps a key :( ; also doesn't work in wezterm!.. hmmmm..
+C-S-p = "command_palette" # vs-code default
+# C-p might be free too, but can keep open for an alternate paste
 
 # TODO: change a few defaults that don't make sense
 # r<->R: r is useless for more than one char, whereas R is used more often, replacing a selection; can just use c to replace a single char, at the cost of one more key-press
