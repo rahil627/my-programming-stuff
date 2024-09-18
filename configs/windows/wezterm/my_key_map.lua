@@ -15,6 +15,7 @@ local module = {} -- the table to return/export to the main script (wezterm.lua)
 local act = wezterm.action
 
 -- just use one modifier key
+-- NOTE: ctrl is used for inputting terminal signals (such as clear scrollback), but only when you're actually in the terminal cli
 local mod_key = 'ALT'
 local mod_reverse_key = 'ALT|SHIFT' -- NOTE: don't use anywhere yet..
 
@@ -153,8 +154,8 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- mostly uses default keys, just changed modifier to use alt instead of ctrl
     -- https://wezfurlong.org/wezterm/config/default-keys.html
       { key = 'c', mods = mod_key, action = act.CopyTo 'Clipboard' },
-    -- NOTE: k was the default, using k for something else TODO: but i think l was the default for most terminals..?? but l is used for horizontal split :/
-    { key = ';', mods = mod_key, action = act.ClearScrollback 'ScrollbackOnly' },
+    -- NOTE: k was the default, using k for something else NOTE: c+l is the default for most terminals, c+[lettered-signal], so don't need this
+    -- { key = ';', mods = mod_key, action = act.ClearScrollback 'ScrollbackOnly' },
     -- NOTE: changed mapping to d
     -- { key = 'l', mods = mod_key, action = act.ShowDebugOverlay },
     { key = 'm', mods = mod_key, action = act.Hide },
