@@ -2,12 +2,13 @@
 
 -- TODO:
 -- import my key-mappings for windows terminal:
---   - only missing these:
---   - d = duplicate pane mapping
---   - a = select all
---   - m = mark-mode feature
--- add alt+left/right arrow for cd -/cd -
---   - this was an example in the docs somewhere..
+  -- only missing these:
+  -- d = duplicate pane mapping
+  -- a = select all
+  -- m = mark-mode feature
+-- merge my configs from fish
+  -- add alt+left/right arrow for cd -/cd -
+  --   - this was an example in the docs somewhere..
 
 local wezterm = require 'wezterm'
 
