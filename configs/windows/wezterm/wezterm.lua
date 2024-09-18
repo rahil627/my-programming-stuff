@@ -112,8 +112,9 @@ config.color_scheme = 'Aura (Gogh)'
 -- config.font = wezterm.font('Monofoki')
 -- WezTerm bundles JetBrains Mono, Nerd Font Symbols and Noto Color Emoji
 --   - this is why the file manager's icons show up!
-
+-- NOTE: all font is handled by the terminal, not apps
 config.font = wezterm.font_with_fallback {
+  -- 'Cascadia Code', -- nice 'n thick, great for terminal use, but a bit much for editing code
   'Monofoki',
   'Consolas', -- vs-code default
   -- 'DengXian',
