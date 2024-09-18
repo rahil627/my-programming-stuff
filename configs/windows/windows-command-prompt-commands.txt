@@ -1,3 +1,6 @@
+...this file is really really old.. but the commands haven't changed at least since '95!
+
+ipconfig /all
 ping [servername]
 nslookup
   server 8.8.8.8
@@ -7,6 +10,7 @@ telnet [hostname/ip] [port]
 
 
 windows commands - http://mypchell.com/guides/69-156-useful-run-commands
+  - no press windows+x to open most of these
 	calc
 	certmgr.msc
 	chkdsk
@@ -16,6 +20,3 @@ windows commands - http://mypchell.com/guides/69-156-useful-run-commands
 	mstsc /v:[location]	?
 	sfc /scannow
 
-cmd commands
-	ipconfig /all
-	ping [ip address]
