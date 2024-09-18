@@ -93,6 +93,13 @@ config.font = wezterm.font_with_fallback {
 
 config.font_size = 9
 
+config.command_palette_font_size = 9
+-- config.command_palette_fg_color = config.colors.foreground -- colors is a nil value :/
+config.command_palette_fg_color = 'purple' -- silver, fuchsia is too bright!
+  -- not the best, but works for now!
+config.command_palette_bg_color = 'rgba(0.5, 0.5, 0.5, .75)' -- default: #333333
+  -- just makes it transparent
+
 -- bold_brightens_ansi_colors = BrightAndBold/BrightOnly/No
 -- https://wezfurlong.org/wezterm/config/lua/config/bold_brightens_ansi_colors.html
 -- this is the feature that made text *pop* on mac os! :D
