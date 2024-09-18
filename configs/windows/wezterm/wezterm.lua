@@ -66,6 +66,7 @@ config.default_prog = { 'pwsh.exe', '-NoLogo' }
 config.initial_rows = 48 -- 24, i prefer the default small size for floating windows, but longer for coding windows/panes
 config.initial_cols = 80 -- 80, i like the small width limit, even when raeding e-books; it's a good constraint. it reminds me of the iPad mini. besides, with word wrapping, there's no problems
 -- just aim for a good color when using a file manager tui
+-- config.color_scheme = 'AdventureTime'
 config.color_scheme = 'Aura (Gogh)'
 -- config.color_scheme = 'Sythwave (Gogh)'
 -- config.color_scheme = 'Neon Night (Gogh)'
