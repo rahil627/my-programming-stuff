@@ -297,6 +297,12 @@ C-S-l = "kill_to_line_end" # NOTE: nearly conflicts with buffer shortcuts
 # C-h
 C-S-h = "kill_to_line_start" # actually deletes upto first non-white-space; NOTE: nearly conflicts with buffer shortcuts
 
+# TODO: move selection up/down (macro)
+# alt+up/down in vscode
+# C-S-j = "move_line_down" # move_line_down/up doesn't do what you think, it just moves the cursor
+# C-S-k = "move_line_up"
+
+
 
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"] # keeping the selection while inserting is kinda weird..
@@ -307,10 +313,10 @@ C-space = "completion"
 # C-j = "insert_newline" # default; alt to enter-key
 C-j = "add_newline_below"
 C-k = "add_newline_above" # or C-S-j?
-C-S-j = "move_line_down"
-C-S-k = "move_line_up"
 C-ret = ["open_below", "normal_mode"] # have this in normal, here for consistency
 C-S-ret = ["open_above", "normal_mode"]
+# TODO: copy line up/down (macro)
+# C-S-j/k
 # C-k = "kill_line_to_end" # default
 C-h = "goto_first_nonwhitespace" # C-u by default
 C-a = "goto_first_nonwhitespace" # an extra key that makes sense
