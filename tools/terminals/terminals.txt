@@ -77,6 +77,12 @@ x/fig
       **I use multiple operating systems and I want my terminal to behave consistently across them**
       **I want it to look good and feel fast for the things that matter most**: interactive latency, rather than raw throughput
       **I'm sick of terminal emulation mismatches that prevent basic things like italic/underline/true color attributes from working when eg: using remote tmux + mosh, so the multiplexing feature in wezterm exists to eliminate that problem**
+    - https://www.reddit.com/r/neovim/comments/16kjpxn/comment/k0xwty6/
+      - "Tmux is more universal and available in many devices, but it can feel more *hacky* compared to Wezterm. Colors may render weirdly depending on the terminal emulator (fixed by overriding the $TERM variable), you might have to hard code the clipboard, the cursor for Vim or shell might not render correctly, etc. I also think the default keybindings are truly terrible, and the configuration is much less readable than Lua code.
+
+      At the same time, knowing how to use Tmux and having your own Tmux configuration helps a lot when you have to use SSH or other devices for development."
+    - https://www.reddit.com/r/neovim/comments/16kjpxn/comment/k0xtyju/
+      - “Suckless“ philosophy (do one thing well and compose with other things to add features) doesn’t work well with the architectures of any terminals out there.  
   - rust
   - **and works perfectly on windows!!**
   - wez is a cool name!
