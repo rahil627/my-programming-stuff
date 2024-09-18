@@ -410,6 +410,8 @@ l = ":o ~/.config/helix/languages.toml"
 shell = ["pwsh", "-c"]
 
 line-number = "relative"
+# auto-format = "false" # WARNING: "true" by default!
+
 
 # TODO: testing
 completion-trigger-len = 1
