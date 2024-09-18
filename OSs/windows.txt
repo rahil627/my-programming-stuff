@@ -36,6 +36,7 @@ $home = C:\Users\ra
       - WARNING: all your data are belong to Microsoft!!
   - \my-stuff
     - ALL FILES TO NOT SYNC GO HERE
+    - TODO: couldn't move a shortcut in \stuff
     - \repos
       - to avoid adding .git folder to the cloud
 
