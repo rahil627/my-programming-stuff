@@ -65,6 +65,13 @@ config.default_prog = { 'pwsh.exe', '-NoLogo' }
 
 config.initial_rows = 48 -- 24, i prefer the default small size for floating windows, but longer for coding windows/panes
 config.initial_cols = 80 -- 80, i like the small width limit, even when raeding e-books; it's a good constraint. it reminds me of the iPad mini. besides, with word wrapping, there's no problems
+
+-- setting the window position is not simple, so forget it!
+--  must get window object from event, then alter it
+-- https://github.com/wez/wezterm/issues/256#issuecomment-1177647434
+--  can just use windows powertoys to easily set a window to the size of the middle pane for now..
+-- window:set_position(1000, 200) -- 2800 x 800 x2 (scale)
+  
 -- just aim for a good color when using a file manager tui
 -- config.color_scheme = 'AdventureTime'
 config.color_scheme = 'Aura (Gogh)'
