@@ -1,6 +1,10 @@
 
 j blow:
 
+https://www.twitch.tv/videos/2241008697
+  - **the essential process of programming**
+    - it's quite refrshing to see, just pure focused programming, no distractions, simple (and therefore minimal)
+
 conclusion:
 actually [his development method is] dead simple. nothing fancy. he has a mental model of the program--because he wrote it--somewhat recently. he has a mental model of the game, game engine, and programming language! he simply can't be bothered with dealing with stupid things like text editors, or config'ing emacs. hence, **he needs things that don't require any thinking, that's more intuitive, more physical**: a mouse, probably a touch-pad too
 
