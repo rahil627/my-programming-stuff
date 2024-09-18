@@ -116,9 +116,9 @@ config.window_decorations = 'RESIZE'
 
 
 -- tab bar stuff
--- use_fancy_tab_bar = false
-hide_tab_bar_if_only_one_tab = true -- TODO: not working
-tab_bar_at_bottom = true -- TODO: trying, not working
+-- config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
 
 -- Sets the font for the window frame (tab bar)
 config.window_frame = {
