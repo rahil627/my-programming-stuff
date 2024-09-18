@@ -292,7 +292,7 @@ X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] 
 # common in many editors, maybe back to emacs
 # L = "select_to_line_end" # default
 # C-l = "goto_line_end" # defined alongside movement key-maps
-C-S-l = "kill_to_line_end" # NOTE: nearly conflicts with buffer shortcuts
+C-S-l = "kill_to_line_end" # NOTE: kinda confusing, mixed with buffer shortcuts
 # C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"] # TODO: compare with kill_to_line_end
 # C-A-S-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
 
