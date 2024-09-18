@@ -7,6 +7,10 @@
 
 -- debug lua scripts via the debug console!! control+shift+l TODO: -> alt+l
 
+-- TODO:
+-- sometimes, especially without internet, everything is slow, especially starting new processes: making splits, starting yazi, helix, etc.; yet, there's no debug errors..
+-- set background, see examples in custom configs people posted
+
 -- required
 local wezterm = require 'wezterm'
 local my_key_map = require 'my_key_map'
