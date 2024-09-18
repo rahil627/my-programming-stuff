@@ -277,8 +277,8 @@ C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_
 
 
 # NOTE: also c+j/k in insert-mode, but use it commonly enough..
-C-ret = ["open_below", "normal_mode"]
-C-S-ret = ["open_above", "normal_mode"]
+C-ret = "add_newline_below" # for consistency 
+C-S-ret = "add_newline_above"
 
 # x without the newline?
 # select within the line bounds, useful for quick whole-line changes
@@ -314,10 +314,10 @@ C-space = "completion"
 # j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock
 
 # C-j = "insert_newline" # default; alt to enter-key
-C-j = "add_newline_below"
-C-k = "add_newline_above" # or C-S-j?
-C-ret = ["open_below", "normal_mode"] # have this in normal, here for consistency
-C-S-ret = ["open_above", "normal_mode"]
+# C-j = "add_newline_below"
+# C-k = "add_newline_above" # or C-S-j?
+C-ret = "add_newline_below" # for consistency 
+C-S-ret = "add_newline_above"
 # TODO: copy line up/down (macro)
 # C-S-j/k
 # C-k = "kill_line_to_end" # default
