@@ -64,8 +64,24 @@ sublime text or notepad (windows)
 # gui editors:
 ## newer, simpler, things to try:
 **lem**
-  - written in common lisp (sbcl?)
+  - https://www.reddit.com/r/emacs/comments/1b4a2tq/what_do_you_guys_think_of_the_lem_ide/
+    - emacs default key-mappings, Dired-like file explorer, Projectile-like stuff, Paraedit-like structured edit... sounds like it basically learned and took the good things from emacs with it
+  - completely written in common lisp (sbcl?)
+    - (emacs has a C core, particularly for it's display)
     - **and thus can be extended or completely altered in common lisp too :)**
+    - fast, compiled
+    - modular front-end: sdl2 for gpu-powered gui, ncurses for terminal
+    - **great CFFI, thus easily allowing easy access to all C libs**, "which makes the world your oyster"
+      - why doesn't emacs have it?
+        - https://www.reddit.com/r/emacs/comments/16396v0/why_doesnt_elisp_have_a_c_ffi/
+          - "I've been wondering why there isn't a C FFI which would eliminate the need for new C code to be written for every library integration, and which would allow everything to be written in elisp.""
+          - "Political Reasons...However, I do agree that CFFI would have been helpful, not because it would make for less code, but because it would enable people to implement extensions without needing to wait for devs to make it available through the official release.
+            Observe that tree-sitter was available as a module before it was available in the core, but for some reason, modules are not a thing in the Emacs community."
+          - "As for FFI it is handy but it lacks compile time checking. It's not always easy to use ie converting pointers and C types. Emacs also has Emacs C modules which works nicely if you need to interface with C."
+    - smaller, more manageable code-base
+      - doesn't plan to become an OS
+    - common problems of new projects: lack of docs, bugs, etc.
+
   - made specfically for common lisp, though it can support any lang
   - made by a Japanese person!
 **focus (editor)**
