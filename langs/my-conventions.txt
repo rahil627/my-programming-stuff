@@ -78,7 +78,7 @@ same syntax as tags!
 symbols
   - + = add
   - - = remove
-  - could think about using other symbols..
+  - TODO: could think about using other symbols..
 
 
 
