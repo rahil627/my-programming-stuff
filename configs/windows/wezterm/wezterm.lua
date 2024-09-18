@@ -16,8 +16,15 @@ local config = wezterm.config_builder()
 
 -- some base configs
 -- https://alexplescan.com/posts/2024/08/10/wezterm/
---   - https://gist.github.com/alexpls/83d7af23426c8928402d6d79e72f9401
+  -- a nice little tutorial with the final result provided:
+  -- https://gist.github.com/alexpls/83d7af23426c8928402d6d79e72f9401
 
+-- people's custom configs
+-- https://github.com/wez/wezterm/discussions/628
+  -- "show your wezterm"
+  -- https://github.com/wez/wezterm/discussions/628#discussioncomment-10677777
+    -- my post
+    
 -- config goes here
 
 -- keep most commonly altered settings on top
