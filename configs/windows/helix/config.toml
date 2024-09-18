@@ -271,7 +271,12 @@ C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_
 
 # TODO: think of a key to create a pop-up menu for macros
 #       currently, m = match pop-up, 
-         
+
+
+# NOTE: also c+j/k in insert-mode, but use it commonly enough..
+C-ret = ["open_below", "normal_mode"]
+C-S-ret = ["open_above", "normal_mode"]
+
 # x without the newline?
 # select within the line bounds, useful for quick whole-line changes
 X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] # TODO: make it extend to next line, like x does
@@ -304,6 +309,8 @@ C-j = "add_newline_below"
 C-k = "add_newline_above" # or C-S-j?
 C-S-j = "move_line_down"
 C-S-k = "move_line_up"
+C-ret = ["open_below", "normal_mode"] # have this in normal, here for consistency
+C-S-ret = ["open_above", "normal_mode"]
 # C-k = "kill_line_to_end" # default
 C-h = "goto_first_nonwhitespace" # C-u by default
 C-a = "goto_first_nonwhitespace" # an extra key that makes sense
