@@ -13,9 +13,14 @@ BIGLETTERS:
   - TODO: vs ?tag ?
   - https://news.ycombinator.com/item?id=31235289
     - interesting categories..: DREAM, HACK (a part of my WARNING), FIXME (my ERROR?)
-    - there's a vs-code plugin for this, comment anchors:
+    - there's quite a few extensions for this..:
       - https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors
-      
+    - https://tomfreudenberg.medium.com/vscode-extensions-better-comments-todo-tree-d5a9c46eaea5
+      - simple little article that covers two more extensions:
+        - https://github.com/Gruntfuggly/todo-tree
+        - https://github.com/aaron-bond/better-comments
+      - config: https://gist.github.com/TomFreudenberg/039d9c605ac37ec54340566e6c58666d#file-vscode-config-todo-tree-snippet-json
+
 use easily findable tags within comments
   - TODO: just requires a simple case-sensitive search
   - todo: is more pleasing to the eyes, but doesn't stand out
