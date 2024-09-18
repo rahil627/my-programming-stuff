@@ -1,6 +1,7 @@
 
-# tags
 
+
+# tags
 BIGLETTERS:
   - a simple solution is to just add TODO: in front of the other tag: TODO: IMPORTANT:
     - composable! like tags
@@ -59,6 +60,27 @@ use easily findable tags within comments
         
         - conclusion: ?todo, particularly for it's great placement on a standard keyboard
       - depends on the language
+
+
+# git commit
+
+tiny (edits)
+nada/nothing (purely formatting, no meaningful changes, tiny cleaning up)
+cleaning/refactor
+fmt (short for formatting in a few prog-langs)
+
+multiple things
+  - fix something,/; note something else
+
+same syntax as tags!
+  - todo:, note:, fix..., refactor..., merge..., etc.
+
+symbols
+  - + = add
+  - - = remove
+  - could think about using other symbols..
+
+
 
 
 
