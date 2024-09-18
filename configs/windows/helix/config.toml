@@ -3,6 +3,15 @@
 # backup
 # cp C:\Users\ra\AppData\Roaming\helix\config.toml C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\helix
 
+# branches:
+# https://github.com/mattwparas/helix/tree/steel-event-system
+#   - https://github.com/helix-editor/helix/pull/8675
+#   - scheme scripting / "plugin-system"
+
+
+
+
+
 # default config:
 # https://github.com/helix-editor/helix/issues/1210
 
