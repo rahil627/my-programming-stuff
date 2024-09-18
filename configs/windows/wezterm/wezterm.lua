@@ -33,10 +33,20 @@ local config = wezterm.config_builder()
 
 -- keep most commonly altered settings on top
 
+
+
+-- set key mappings
+
+-- TODO: ISSUE: quite hidden in the docs
+config.disable_default_key_bindings = true
+
+-- load my_key_map (from my_key_map.lua) into memory
 -- ISSUE: docs 
 -- https://github.com/wez/wezterm/issues/6130
 config.keys = my_key_map.get_my_key_map().keys
 config.key_tables = my_key_map.get_my_key_map().key_tables
+
+
 
 config.launch_menu = {
   -- https://wezfurlong.org/wezterm/config/launch.html
