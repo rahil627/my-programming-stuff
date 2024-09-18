@@ -9,7 +9,10 @@ BIGLETTERS:
     - NOTE, #2
     - IMPORTANT, #3?
     - ERROR, a major problem, doesn't necessarily have to break compilation
-    - WARN/WARNING
+    - WARN/WARNING, rarely use
+    
+    - DEPRECATED, for public code use only
+    - OPTIMIZE, never use, usually TODO: upon a choice of data structure
   - TODO: vs ?tag ?
   - https://news.ycombinator.com/item?id=31235289
     - interesting categories..: DREAM, HACK (a part of my WARNING), FIXME (my ERROR?)
