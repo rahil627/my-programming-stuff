@@ -153,8 +153,8 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- mostly uses default keys, just changed modifier to use alt instead of ctrl
     -- https://wezfurlong.org/wezterm/config/default-keys.html
       { key = 'c', mods = mod_key, action = act.CopyTo 'Clipboard' },
-    -- NOTE: k was the default, using k for something else TODO: but i think l was the default for most terminals..??
-    { key = 'l', mods = mod_key, action = act.ClearScrollback 'ScrollbackOnly' },
+    -- NOTE: k was the default, using k for something else TODO: but i think l was the default for most terminals..?? but l is used for horizontal split :/
+    { key = ';', mods = mod_key, action = act.ClearScrollback 'ScrollbackOnly' },
     -- NOTE: changed mapping to d
     -- { key = 'l', mods = mod_key, action = act.ShowDebugOverlay },
     { key = 'm', mods = mod_key, action = act.Hide },
