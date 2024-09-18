@@ -10,11 +10,22 @@ unrestrictive
 
 https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_with_amir_rajan/
   - four pillars:
-    - 1. **can see the function when you press a button**
+    - 1. can see the function when you press a button
     - 2. can set a key to a series of functions: a macro
-    - 3. can create your own function
-      - would have to edit the source..?
+    - 3. **can create your own function**
+      - the most important
     - 4. can see the source code
+
+  - tests:
+    - vscode
+      - no?, probably, **no**, sure (but hella complex)
+    - helix
+      - no (can request 'n discuss), yes, **not yet (but even then, limited to the api/interface to the scripting lang)**, yes
+    - lem
+      - likely, sure, **yes!**,, yes
+    - emacs
+      - of course.
+  
 
 # conclusion:
 0. emacs (doom)
