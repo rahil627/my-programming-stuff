@@ -229,6 +229,7 @@ p/P - paste before/after cursor
   - note: helix doesn't use the system clipboard
   - space,y/Y/p/P - yank/paste to system clipboard
     - Y - yanks "main selection?" as opposed to selections??
+    - NOTE: terminal paste impl currently pastes char-by-char in helix, better to use helix's system clipboard yank/paste (space -> y/p)
 
 u/U - undo/redo
 
