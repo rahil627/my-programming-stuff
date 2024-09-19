@@ -32,4 +32,20 @@ https://www.twitch.tv/videos/2249653469
   - **"it's not often that i do a single task that takes over a week"**
   - has a massive todo-list
   - actually answers a question that he surely gets often: make a game or game engine? his answer: basically, just focus on the bits of the engine you need, just enough so that you can execute the game you want to make
+  
+  - **three kinds of debugging methods**:
+    - bottom-up
+      - don't know what's wrong at all, but know what each line is doing; step through lines of code (the worst case)
+    - top-down/narrow-down debugging
+      - know how the system works, can narrow it down, jump around places where there's likely the problem
+    - divine intervention, must tell you the problem, intuition
+      - similar to the light-bulb feeling that comes when you know the answer to a puzzle
+      - similar to rob pike's advice
+        - https://www.informit.com/articles/article.aspx?p=1941206
 
+  - **clean up code**
+    - will pay off later as it will be easier to debug and implement new features
+
+  - **don't do stunt code** (use complex language features)
+    - almost never need to
+      - very, very few cases for performance/memory
