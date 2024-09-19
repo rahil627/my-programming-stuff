@@ -158,8 +158,17 @@ R = "replace"
 C-u = "save_selection" # defualt was page_up
 # ,. for next/previous buffer? TODO: should have many of these key-pairs to cycle next/previous
 
-# sensible stuff
-ret = ["move_line_down", "goto_first_nonwhitespace"] # unmapped by default
+# sensible defaults
+
+# return was completely unmapped by default
+ret = ["move_line_down", "goto_first_nonwhitespace"]
+S-ret = ["move_line_up", "goto_first_nonwhitespace"]
+# NOTE: also c+j/k in insert-mode, but use it commonly enough..
+C-ret = "add_newline_below" # similar to vs-code
+C-S-ret = "add_newline_above"
+
+
+
 
 # extend selection
 # shift commonly signifies extend selection
@@ -275,11 +284,6 @@ C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_
 
 # TODO: think of a key to create a pop-up menu for macros
 #       currently, m = match pop-up, 
-
-# NOTE: also c+j/k in insert-mode, but use it commonly enough..
-# ret = goes to the beginning of next line
-C-ret = "add_newline_below" # similar to vs-code
-C-S-ret = "add_newline_above"
 
 # x without the newline?
 # select within the line bounds, useful for quick whole-line changes
