@@ -122,9 +122,9 @@ theme = "boo_berry"
 # common windows OS shortcuts
 # TODO: maybe can use alt for :commands
 C-s = ":write" # default was save_selection (to jump-list)
-C-q = ":quit" # TODO: or quit-all
+C-q = ":quit" # TODO: or quit-all TODO: or c-/c-s-esc
 C-A-q = ":quit!" # quit-all!
-C-a = "select_all" # not so useful..
+C-a = "select_all" # useful in combination with select_mode
 C-c = "yank_joined_to_clipboard" # default was toggle_comments
 "C-/" = "toggle_comments"
 C-v = "paste_clipboard_after"
@@ -176,6 +176,7 @@ E = "extend_next_word_end"
 # J = "insert_newline_below" # or add_newline_above/below; goes against modal philosophy, should add in insert-mode
 # J default is join_selections (into one line)
 # K default is keep_selections (selections matching the regex)
+# NOTE: these two are super useful, replacing kill_to_line_end/start, and better fits the kakoune way of selecting first
 H = "extend_to_first_nonwhitespace" # matches c-h
 L = "extend_to_line_end" # matches c-l
 
@@ -225,15 +226,14 @@ C-S-A-w = ":quit" # closes current view
 # C-d = ":hsplit-new"
 
 # buffer shortcuts are missing??
+# TODO: **create a buffer pop-up menu**
 # g,n/p = goto_next_buffer/goto_previous_buffer
 # can use buffer picker (space,b) instead.., but shouldn't have to
 # NOTE: control+shift commonly used by windows terminal, so i changed it to alt and alt+shift
-# TODO: create a buffer pop-up menu
 C-S-j = "goto_next_buffer" # gn, :bn jk to move through
 C-S-k = "goto_previous_buffer" # gp, :bp
 # C-S-h = ":new" # bp; h is further away/less commonly used command; TODO: change to buffer-new
-# - often use file picker (space,f) instead
-# C-S-h = "file_picker" # NOTE: mapped to kill_to_line_start, use C-f or space,f/F
+# C-S-h = # NOTE: mapped to kill_to_start_end
 # C-S-l = # NOTE: mapped to kill_to_line_end
 "C-S-;" = ":buffer-close" # bc; more commonly used than new buffer; # TODO: not working
 
@@ -276,7 +276,6 @@ C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_
 # TODO: think of a key to create a pop-up menu for macros
 #       currently, m = match pop-up, 
 
-
 # NOTE: also c+j/k in insert-mode, but use it commonly enough..
 C-ret = "add_newline_below" # for consistency 
 C-S-ret = "add_newline_above"
@@ -287,19 +286,6 @@ X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] 
 # select_line_below? # how does this work..?
 # TODO: C-x - delete/cut line?
 # TODO: C-S-x - delete/cut from first non-white-space?
-
-# delete from cursor to line end
-# common in many editors, maybe back to emacs
-# L = "select_to_line_end" # default
-# C-l = "goto_line_end" # defined alongside movement key-maps
-C-S-l = "kill_to_line_end" # NOTE: kinda confusing, mixed with buffer shortcuts
-# C-S-l = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"] # TODO: compare with kill_to_line_end
-# C-A-S-l = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
-
-# from cursor to line start / first non-white-space
-# H
-# C-h
-C-S-h = "kill_to_line_start" # actually deletes upto first non-white-space; NOTE: nearly conflicts with buffer shortcuts
 
 # TODO: move selection up/down (macro)
 # alt+up/down in vscode
@@ -322,9 +308,9 @@ C-S-ret = "add_newline_above"
 # C-S-j/k
 # C-k = "kill_line_to_end" # default
 C-h = "goto_first_nonwhitespace" # C-u by default
-C-a = "goto_first_nonwhitespace" # an extra key that makes sense
 C-l = "goto_line_end" # delete char by default
 C-S-h = "kill_to_line_start"
+C-S-l = "kill_to_line_end"
 # backspace = "delete_char" # default
 # C-d = "delete_char_forward" # default
 C-S-D = "delete_char_backward"
@@ -333,6 +319,7 @@ C-S-w = "delete_word_forward"
 C-b = "delete_word_backward" # an extra key that makes sense
 C-backspace = "delete_word_backward"
 C-S-backspace = "delete_word_forward"
+
 
 # https://gitlab.com/obxhdx/dotfiles/-/blob/main/config/config/helix/config.toml
 # lots of useful stuff here TODO: map these
