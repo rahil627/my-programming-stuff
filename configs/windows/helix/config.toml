@@ -277,7 +277,8 @@ C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_
 #       currently, m = match pop-up, 
 
 # NOTE: also c+j/k in insert-mode, but use it commonly enough..
-C-ret = "add_newline_below" # for consistency 
+# ret = goes to the beginning of next line
+C-ret = "add_newline_below" # similar to vs-code
 C-S-ret = "add_newline_above"
 
 # x without the newline?
