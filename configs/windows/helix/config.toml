@@ -202,6 +202,9 @@ C-b = "no_op" # "page_up" # in z/view
 
 # TODO: C+hjkl vs default g, hjkl; this would save the most used set of modified keys
 # NOTE: these don't highlight by default
+# TODO: could just try replacing it completely with goto_next/prev_paragraph, or put it on S-j/k
+# C-j = "goto_next_paragraph"
+# C-j = "goto_prev_paragraph"
 C-j = "page_down" # C-f, C-d; NOTE: goto_window_top by default
 C-k = ["page_up", "goto_window_top"] # C-b, C-u
 C-h = "goto_line_start" # gh # NOTE: does not select by default, use H/L key-maps
@@ -209,10 +212,12 @@ C-l = "goto_line_end"  # gl;
 # C-h = "move_prev_word_end"
 # C-l = "move_next_word_start"
 
-# NOTE: these do select/highlight by default
-#       and i like that it selects
+# NOTE: these select/highlight by default
 "C-[" = "goto_prev_paragraph"
 "C-]" = "goto_next_paragraph"
+"C-{" = "goto_prev_function"
+"C-}" = "goto_next_function"
+
 
 # matches terminal split and nav shortcuts (a-hjkl, a-w)
 # TODO: make a pop-up menu, or edit c+w "window" pop-up menu
