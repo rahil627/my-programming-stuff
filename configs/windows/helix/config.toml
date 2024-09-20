@@ -435,7 +435,21 @@ h = "extend_to_first_nonwhitespace"
 l = "extend_to_line_end"
 
 
-# pop-up menus
+# pop-up menus / minor modes
+
+# copied from docs:
+# These sub-modes are accessible from normal mode and typically switch back to normal mode after a command.
+
+# Key	Description
+# v	Enter select (extend) mode
+# g	Enter goto mode
+# m	Enter match mode
+# :	Enter command mode
+# z	Enter view mode
+# Z	Enter sticky view mode
+# Ctrl-w	Enter window mode # TODO: need to change this key!!
+# Space	Enter space mode
+
 
 ## create new pop-up menus!
 [keys.normal."backspace"] # backspace seems unused.., and it's a big button! :)
