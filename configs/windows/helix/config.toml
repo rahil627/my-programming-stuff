@@ -143,8 +143,6 @@ C-S-p = "paste_clipboard_after" # space,p
 C-r = "replace_selections_with_clipboard" #space,R, :clipboard-paste-replace?
 
 
-C-r = ":reload" # Reload the current document from disk
-A-f = ":format"
 
 C-S-space = "command_palette" # space-space is nice too, c-s = "completion", TODO: doesn't work in neither windows terminal nor wezterm, i think windows os is using it for something :/ i think it's the same problem for c-space, which i want for "completion"
 # C-S-p = "command_palette" # vs-code default
