@@ -438,10 +438,27 @@ l = "extend_to_line_end"
 # pop-up menus
 
 ## create new pop-up menus!
-[keys.normal."backspace"] # ...i don't think backspace is used by anything by default.. TODO: think of a better shortcut: f-keys?, c-esc/c-s-esc/c-a-esc all used by windows os
-o = ":config-open"
-r = [":config-reload", ":reload-all"]
+[keys.normal."backspace"] # backspace seems unused.., and it's a big button! :)
+# my alt to the default general space pop-up menu
+# it feels better to do these here, more tactile than c-s/c-q/c-r
+# backspace is a good choice as it's on the right-side of the keyboad, and many of these are on the left-side
+s = ":write"
+S = ":write!"
+q = ":quit"
+Q = ":quit!"
+r = ":reload"
+R = ":reload-all"
+
+f = ":format"
+
+# shortcuts to most used files could go here: main todo, snippets, etc.
+c = ":config-open" # vs h, :o ~/.config/helix/config.toml"
+C = [":config-reload", ":reload-all"] # great for quickly editing the config! kinda confusing key..
 l = ":o ~/.config/helix/languages.toml"
+# TODO: add wezterm config
+# w = ":o ..."
+# TODO: make a main todo list
+# t = ":o ~/todo.md"
 
 # [keys.normal.b] # TODO: b used by back one word
 
