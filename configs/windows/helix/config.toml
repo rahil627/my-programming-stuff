@@ -200,7 +200,9 @@ r = "replace_with_yanked" # this matches y/p better
 # qw for back/forward one word
 #  - opens up b for buffer pop-up menu
 # ft?
-# a-. is strange for repeat last motion... change it back to ;?
+# a-. is strange for repeat last motion... change it back to vi's default ;?
+'.' = "repeat_last_motion" # TODO: not working, A-., default was repeat last insert
+# 'C-.' = # TODO: repeat_last_insert doesn't exist, sort of an automatic macro recording, but why not just select/paste after insert??
 # need this for repeat f/t/m/[/]
 #  - need ; to clear selection, which is used often in kakaoune-style always select
 # . repeat last insert is kinda wierd too..
