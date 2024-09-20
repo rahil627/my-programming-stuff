@@ -293,13 +293,18 @@ C-l = "goto_line_end"  # gl;
 "C-}" = "goto_next_function"
 
 
+
+# buffer/split/terminal-pane shortcuts
+
 # matches terminal split and nav shortcuts (a-hjkl, a-w)
 # TODO: make a pop-up menu, or edit c+w "window" pop-up menu
 # use these less often than moving around buffers, so mapped it to an additional modifier key
+# TODO: this modifier key combo sucks, and it's important for splitting panes
 C-S-A-j = "rotate_view"
 C-S-A-k = "rotate_view_reverse"
 C-S-A-h = ":hsplit-new"
 C-S-A-l = ":vsplit-new"
+C-S-A-n = ":hsplit-new"
 "C-S-A-;" = ":quit" # closes current view # TODO: not working
 C-S-A-w = ":quit" # closes current view
 
@@ -315,47 +320,45 @@ C-S-A-w = ":quit" # closes current view
 
 # buffer shortcuts are missing??
 # TODO: **create a buffer pop-up menu**
-# g,n/p = goto_next_buffer/goto_previous_buffer
-# can use buffer picker (space,b) instead.., but shouldn't have to
-# NOTE: control+shift commonly used by windows terminal, so i changed it to alt and alt+shift
-C-S-j = "goto_next_buffer" # gn, :bn jk to move through
+# can use buffer picker (space,b)
+C-S-j = "goto_next_buffer" # gn, :bn TODO: gj/gk
 C-S-k = "goto_previous_buffer" # gp, :bp
-# C-S-h = ":new" # bp; h is further away/less commonly used command; TODO: change to buffer-new
-# C-S-h = # NOTE: mapped to kill_to_start_end
-# C-S-l = # NOTE: mapped to kill_to_line_end
-"C-S-;" = ":buffer-close" # bc; more commonly used than new buffer; # TODO: not working
-
-C-S-w = ":buffer-close"
-# C-S-A-l = ":buffer-close!"
-C-S-n = ":new"
+# TODO: choose between these or kill_to_line_start/end
+# C-S-h = ":new" # h is further away/less commonly used command; TODO: add "buffer-new" to repo
+# C-S-l = ":buffer-close" # bc; more commonly used than new buffer; l for clear?
+C-S-n = ":new" # :n
+C-S-w = ":buffer-close" # :bc
+'C-S-;' = ":buffer-close" # TODO: not working
 
 C-S-f = "file_picker_in_current_buffer_directory" # alt-f used for terminal find # TODO: add alt+/ key-map for terminal find
 C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_picker_in_current_directory)?
 
 
-# TODO: bring back the arrow-key buffer shortcuts
+# TODO: bring back the arrow-key buffer shortcuts?
 # left = ":buffer-previous"
 # right = ":buffer-next"
-# up = ":new" # ?, don't remember; or file picker
+# up = ":new" # or file picker
 # down = ":buffer-close"
 
-# terminal view/pane handled by terminal
-# A-S-h - split horizontal (down)
-# A-S-l - split vertical (right)
-# "C--" = default for windows terminal/vscode
-# "C-+" = default for windows terminal/vscode
 
-# terminal navigation
-# A-j - next view
-# A-k - previous view
-# C-left/down/up/right # default for windows terminal
+# terminal mappings for reference
+# i re-mapped the keys to solely use alt
+# A-h - split horizontal (down)
+# A-l - split vertical (right)
+# A-j - goto next pane
+# A-k - goto previous pane
+# A-w = close pane
+
+# A-left/down/up/right # default for windows terminal
 
 # re-size terminal split/pane
-# A-S-hjkl
-# A-arrow-keys
+# A-S-hjkl # maybe too much..
+# A-arrow-keys # i think i use this in wezterm
 # A-S-arrow-keys # default for windows terminal
 
 
+
+# END buffer/split/terminal-pane shortcuts
 
 
 # commonly used commands (including macros!! :o)
