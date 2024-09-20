@@ -257,6 +257,9 @@ S-up = "extend_line_up"
 S-down = "extend_line_down"
 # END extend selection
 
+minus = "decrement" # only A-minus is mapped to merge_selections, 'minus' not '-', for parsing reasons
+'=' = "increment" # = maps to format_selections via LSP
+
 # END sensible defaults
 
 
