@@ -124,7 +124,6 @@ theme = "boo_berry"
 # common windows OS shortcuts
 # NOTE: moved to pop-up menu, and i much prefer using the menu, but keeping in case i forget after not using a computer for a long time, or muscle memory
 C-s = ":write" # default was save_selection (to jump-list)
-C-a = "select_all" # useful in combination with select_mode
 C-S-s = ":write-all"
 C-A-s = ":write!"
 C-A-S-s = ":write-all!"
@@ -443,6 +442,7 @@ esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # keep sel
 # TODO: is there a way to use normal shortcuts? function key?
 h = "extend_to_first_nonwhitespace"
 l = "extend_to_line_end"
+C-a = "select_all" # default is % in normal mode, useful in combination with select_mode
 
 
 # pop-up menus / minor modes
