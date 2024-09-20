@@ -123,7 +123,6 @@ theme = "boo_berry"
 # TODO: maybe can use alt for :commands
 C-s = ":write" # default was save_selection (to jump-list)
 C-a = "select_all" # useful in combination with select_mode
-"C-/" = "toggle_comments"
 C-S-s = ":write-all"
 C-A-s = ":write!"
 C-A-S-s = ":write-all!"
@@ -150,6 +149,10 @@ A-f = ":format"
 C-S-space = "command_palette" # space-space is nice too, c-s = "completion", TODO: doesn't work in neither windows terminal nor wezterm, i think windows os is using it for something :/ i think it's the same problem for c-space, which i want for "completion"
 # C-S-p = "command_palette" # vs-code default
 
+
+# especially in case the default C-c is mapped to copy
+"C-/" = "toggle_comments" # S-/ or ? is mapped to reverse search, which is kinda useless too, as you can press N to go to go up, good for C-like langs
+"#" = "toggle_comments" # just an extra binding for an unmapped key, good for ruby-like langs
 
 # TODO: change a few defaults that don't make sense
 # r<->R: r is useless for more than one char, whereas R is used more often, replacing a selection; can just use c to replace a single char, at the cost of one more key-press
