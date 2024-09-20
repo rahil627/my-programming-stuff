@@ -16,6 +16,7 @@
 # where is the repeat-action? '.' repeats the last paste or something..
 #   - repeat_last_motion
 # use c+j/k to move down/up pop-up dialog lists
+# get/set icons from wezterm
 # ISSUE: discuss/ask for a set-opacity/transparency command
 #  - seems to be working differently in wezterm, no config necessary!!
 # add aura theme
@@ -80,7 +81,7 @@
 #  - for quick editing
 # [editor]
 
-
+# icons = "nerdfontsymbols" # TODO: is there a way to get it from wezterm?
 theme = "boo_berry"
 #  - most similar to 'default', with much less contrast and no bold
 #  - better than default for code, but i might default more for non-code..
