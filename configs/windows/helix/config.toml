@@ -450,6 +450,21 @@ l = "extend_to_line_end"
 # Ctrl-w	Enter window mode # TODO: need to change this key!!
 # Space	Enter space mode
 
+# some possible keys:
+# **esc**
+#  - should be free TODO: don't use OS to bind it
+# **backspace**
+#  - big on most keyboards!!
+# **\**
+#  - big on my keyboard!
+#  - :sh (run a shell command)
+#    - [command_mode, then how to type :sh?]
+#  - could save for a list of shell commands/scripts
+# `/~
+#  - currently used for lowercase/uppercase
+# **arrow keys for four more modes!!**
+# f1-f12 are all currently open
+# 1-0 are all currently open
 
 ## create new pop-up menus!
 [keys.normal."backspace"] # backspace seems unused.., and it's a big button! :)
