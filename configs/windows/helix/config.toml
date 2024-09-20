@@ -207,8 +207,8 @@ r = "replace_with_yanked" # this matches y/p better
 #  - need ; to clear selection, which is used often in kakaoune-style always select
 # . repeat last insert is kinda wierd too..
 #  - save you from copy-paste
-# uio for jump-list movement, to match jk
-C-u = "save_selection" # defualt was page_up
+# uio for jump-list movement, to match jk # TODO: i don't use these much, can be moved to []
+# C-u = "save_selection" # defualt was page_up
 # ,. for next/previous buffer? TODO: should have many of these key-pairs to cycle next/previous
 
 
@@ -289,8 +289,12 @@ C-l = "goto_line_end"  # gl;
 # NOTE: these select/highlight by default
 "C-[" = "goto_prev_paragraph"
 "C-]" = "goto_next_paragraph"
-"C-{" = "goto_prev_function"
-"C-}" = "goto_next_function"
+"C-S-[" = "jump_backward" # TODO: neither work
+"C-}" = "jump_forward"
+# "C-{" = "goto_prev_function"
+# "C-}" = "goto_next_function"
+
+
 
 
 
@@ -503,10 +507,12 @@ j = "page_down" # strangely simply move up/down one line by default TODO: change
 k = ["page_up", "goto_window_top"]
 # has n/p = goto next/previous buffer by default
 
-[keys.normal."]"]
-"]" = "goto_next_paragraph" # make paragraph the default thing
 [keys.normal."["]
-"[" = "goto_prev_paragraph" # TODO: standardize 'prev' or 'previous' in the helix repo
+j = "jump_backward"
+s = "save_selection"
+[keys.normal."]"]
+j = "jump_forward"
+s = "save_selection"
 
 [keys.normal.m]
 a = "surround_add" # default is s
