@@ -121,6 +121,8 @@ theme = "boo_berry"
 [keys.normal]
 # common windows OS shortcuts
 # TODO: maybe can use alt for :commands
+# common windows OS shortcuts
+# NOTE: moved to pop-up menu, and i much prefer using the menu, but keeping in case i forget after not using a computer for a long time, or muscle memory
 C-s = ":write" # default was save_selection (to jump-list)
 C-a = "select_all" # useful in combination with select_mode
 C-S-s = ":write-all"
@@ -130,6 +132,7 @@ C-q = ":quit" # matches the mapping in window-mode
 C-S-q = ":quit-all"
 C-A-q = ":quit!"
 C-A-S-q = ":quit-all!"
+# C-f = "search"
 
 # these are also in the space pop-up menu, eventually will wean off of them too, as they go against the default y/p mappings
 # TODO: could just use the clipboard only, and avoid using the main register "
