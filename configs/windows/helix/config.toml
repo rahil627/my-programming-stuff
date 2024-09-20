@@ -367,13 +367,6 @@ C-f = "file_picker" # default: page_down; TODO: how does it differ from F (file_
 # TODO: think of a key to create a pop-up menu for macros
 #       currently, m = match pop-up, 
 
-# x without the newline?
-# select within the line bounds, useful for quick whole-line changes
-X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] # TODO: make it extend to next line, like x does
-# select_line_below? # how does this work..?
-# TODO: C-x - delete/cut line?
-# TODO: C-S-x - delete/cut from first non-white-space?
-
 # TODO: move selection up/down (macro)
 # alt+up/down in vscode
 # C-S-j = "move_line_down" # move_line_down/up doesn't do what you think, it just moves the cursor
