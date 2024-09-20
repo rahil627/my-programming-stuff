@@ -172,6 +172,19 @@ R = ["collapse_selection", "replace"] # just limit to replacing one char, i mean
 D = ["collapse_selection", "delete_selection"] # to delete one char, matches R above
 
 # TODO: think about basic movements
+# x = "extend_line_below" # the default
+# TODO: default X = extend_to_line_bounds now unmapped!
+# X = "extend_line_above" 
+x = ["extend_line", "select_mode"] # fantastic mapping, teaches you to use select_mode in the process
+X = ["extend_line", "select_mode", "flip_selections"] # same as the above but prepare for going up
+
+# x without the newline?
+# select within the line bounds, useful for quick whole-line changes
+# X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] # TODO: make it extend to next line, like x does
+# select_line_below? # how does this work..?
+# TODO: C-x - delete/cut line?
+# TODO: C-S-x - delete/cut from first non-white-space?
+
 # dfjk for left,right,down,up?
 #  - not supposed to use left/right often
 # qw for back/forward one word
