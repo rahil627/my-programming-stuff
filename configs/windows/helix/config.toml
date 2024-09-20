@@ -8,7 +8,13 @@
 # https://github.com/helix-editor/helix/discussions/1360#discussioncomment-10692211
 
 # TODO: / main things that bother me
+# buffer shortcuts
+#   - can try arrow shortcuts
+# pane shortcuts
+#   - c-w is kinda weird, needs it's own button..??
+#   - can try arrow shortcuts
 # where is the repeat-action? '.' repeats the last paste or something..
+#   - repeat_last_motion
 # use c+j/k to move down/up pop-up dialog lists
 # ISSUE: discuss/ask for a set-opacity/transparency command
 #  - seems to be working differently in wezterm, no config necessary!!
