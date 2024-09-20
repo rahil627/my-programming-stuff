@@ -4,6 +4,9 @@
 # backup
 # cp C:\Users\ra\AppData\Roaming\helix\config.toml C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\helix
 
+# posted some goodies about my configs here:
+# https://github.com/helix-editor/helix/discussions/1360#discussioncomment-10692211
+
 # TODO: / main things that bother me
 # where is the repeat-action? '.' repeats the last paste or something..
 # use c+j/k to move down/up pop-up dialog lists
