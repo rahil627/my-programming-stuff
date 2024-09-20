@@ -123,9 +123,7 @@ theme = "boo_berry"
 # TODO: maybe can use alt for :commands
 C-s = ":write" # default was save_selection (to jump-list)
 C-a = "select_all" # useful in combination with select_mode
-C-c = "yank_joined_to_clipboard" # default was toggle_comments
 "C-/" = "toggle_comments"
-C-v = "paste_clipboard_after"
 C-S-s = ":write-all"
 C-A-s = ":write!"
 C-A-S-s = ":write-all!"
@@ -133,6 +131,18 @@ C-q = ":quit" # matches the mapping in window-mode
 C-S-q = ":quit-all"
 C-A-q = ":quit!"
 C-A-S-q = ":quit-all!"
+
+# these are also in the space pop-up menu, eventually will wean off of them too, as they go against the default y/p mappings
+# TODO: could just use the clipboard only, and avoid using the main register "
+# TODO: a lot of these don't work in select-mode, which is what i now often use instead of x :/
+# C-c = "yank_joined_to_clipboard" # space,Y, default was toggle_comments
+# C-v = "paste_clipboard_before" # space,P
+C-y = "yank_joined_to_clipboard" # don't rememeber why.. better formatting for junk copied from the web?..
+C-S-y = "yank_to_clipboard" # space-y
+C-p = "paste_clipboard_before" # space,P, usually this is the one i want, not p/after
+C-S-p = "paste_clipboard_after" # space,p
+C-r = "replace_selections_with_clipboard" #space,R, :clipboard-paste-replace?
+
 
 C-r = ":reload" # Reload the current document from disk
 A-f = ":format"
