@@ -154,6 +154,11 @@ C-S-space = "command_palette" # space-space is nice too, c-s = "completion", TOD
 "C-/" = "toggle_comments" # S-/ or ? is mapped to reverse search, which is kinda useless too, as you can press N to go to go up, good for C-like langs
 "#" = "toggle_comments" # just an extra binding for an unmapped key, good for ruby-like langs
 
+
+
+
+
+# sensible defaults
 # TODO: change a few defaults that don't make sense
 
 # TODO: testing these
@@ -168,7 +173,6 @@ a = ["collapse_selection", "append_mode"]
 R = ["collapse_selection", "replace"] # just limit to replacing one char, i mean, how often are you really going to be replacing a selection with one repeating char?.. ascii art?
 D = ["collapse_selection", "delete_selection"] # to delete one char, matches R above
 
-# TODO: think about basic movements
 # x = "extend_line_below" # the default
 # TODO: default X = extend_to_line_bounds now unmapped!
 # X = "extend_line_above" 
@@ -188,6 +192,9 @@ r = "replace_with_yanked" # this matches y/p better
 # R = "replace" # NOTE: re-mapped above
 # also have space-R and C-r = "replace_selections_with_clipboard"
 
+
+
+# TODO: think about basic movements some more
 # dfjk for left,right,down,up?
 #  - not supposed to use left/right often
 # qw for back/forward one word
@@ -202,7 +209,8 @@ r = "replace_with_yanked" # this matches y/p better
 C-u = "save_selection" # defualt was page_up
 # ,. for next/previous buffer? TODO: should have many of these key-pairs to cycle next/previous
 
-# sensible defaults
+
+
 
 # return was completely unmapped by default
 ret = ["move_line_down", "goto_first_nonwhitespace"]
@@ -232,6 +240,8 @@ E = "extend_next_word_end"
 # NOTE: these two are super useful, replacing kill_to_line_end/start, and better fits the kakoune way of selecting first
 H = "extend_to_first_nonwhitespace" # matches c-h
 L = "extend_to_line_end" # matches c-l
+# END sensible defaults
+
 
 # these are the defaults:
 # NOTE: these four are free to map
