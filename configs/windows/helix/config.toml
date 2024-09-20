@@ -155,9 +155,6 @@ C-S-space = "command_palette" # space-space is nice too, c-s = "completion", TOD
 "#" = "toggle_comments" # just an extra binding for an unmapped key, good for ruby-like langs
 
 # TODO: change a few defaults that don't make sense
-# r<->R: r is useless for more than one char, whereas R is used more often, replacing a selection; can just use c to replace a single char, at the cost of one more key-press
-r = "replace_with_yanked" 
-R = "replace"
 
 # TODO: testing these
 # alt way of inserting before/after
@@ -184,6 +181,12 @@ X = ["extend_line", "select_mode", "flip_selections"] # same as the above but pr
 # select_line_below? # how does this work..?
 # TODO: C-x - delete/cut line?
 # TODO: C-S-x - delete/cut from first non-white-space?
+
+
+# r<->R: i don't understand the use of r for more than one char, whereas R is used more often, replacing a selection, and works well with search (search and replace); can just use c to replace a single char, at the cost of one more key-press..??
+r = "replace_with_yanked" # this matches y/p better
+# R = "replace" # NOTE: re-mapped above
+# also have space-R and C-r = "replace_selections_with_clipboard"
 
 # dfjk for left,right,down,up?
 #  - not supposed to use left/right often
