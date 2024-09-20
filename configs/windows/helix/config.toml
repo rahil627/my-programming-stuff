@@ -234,14 +234,29 @@ E = "extend_next_word_end"
 # "B" => move_prev_long_word_start
 # "E" => move_next_long_word_end
 
-# JK select to next/previous line isn't practical so the defaults are different:
-# TODO: maybe add/remove line
-# J = "insert_newline_below" # or add_newline_above/below; goes against modal philosophy, should add in insert-mode
+# TODO: change join/keep selection? i rarely use them, and this is an important key
+# could do extend to next/previous line (like holding shift and pressing down in gui editors), but i don't think it's too useful
 # J default is join_selections (into one line)
 # K default is keep_selections (selections matching the regex)
-# NOTE: these two are super useful, replacing kill_to_line_end/start, and better fits the kakoune way of selecting first
-H = "extend_to_first_nonwhitespace" # matches c-h
-L = "extend_to_line_end" # matches c-l
+# J = "extend_line_down" # makes sense, but i don't envision using it much..
+# K = "extend_line_up"
+# K = "extend_next_word" # TODO: possibly one of the most used macros..
+# K = "hover" # space,k by default
+# NOTE: **possibly my most used macros**, avoid using kill_to_line_end/start, go the kakoune way
+H = "extend_to_first_nonwhitespace" # vgh[esc], matches c-h
+L = "extend_to_line_end" # vgl[esc], matches c-l
+
+# NOTE: these don't yank TODO: should it?
+C-S-h = "kill_to_line_start" # can conflict with buffer shortcuts
+C-S-l = "kill_to_line_end"
+
+# still missing extend char..
+S-left = "extend_char_left"
+S-right = "extend_char_right"
+S-up = "extend_line_up"
+S-down = "extend_line_down"
+# END extend selection
+
 # END sensible defaults
 
 
