@@ -198,7 +198,7 @@ r = "replace_with_yanked" # this matches y/p better
 # dfjk for left,right,down,up?
 #  - not supposed to use left/right often
 # qw for back/forward one word
-#  - opens up b for buffer pop-up menu
+#  - **opens up b for buffer pop-up menu**
 # ft?
 # a-. is strange for repeat last motion... change it back to vi's default ;?
 '.' = "repeat_last_motion" # TODO: not working, A-., default was repeat last insert
@@ -215,6 +215,7 @@ r = "replace_with_yanked" # this matches y/p better
 
 
 # return was completely unmapped by default
+# it's often simpler to think starting from the beginning of a line
 ret = ["move_line_down", "goto_first_nonwhitespace"]
 S-ret = ["move_line_up", "goto_first_nonwhitespace"]
 # NOTE: also c+j/k in insert-mode, but use it commonly enough..
@@ -225,6 +226,7 @@ C-S-ret = "add_newline_above"
 
 
 # extend selection
+# i've never used kakoune, but i may have re-created here..
 # shift commonly signifies extend selection
 B = "extend_prev_word_start" # or long_word
 W = "extend_next_word_start"
@@ -285,6 +287,7 @@ C-o = "no_op" # "jump_backward"
 # C-j = "goto_prev_paragraph"
 C-j = "page_down" # C-f, C-d; NOTE: goto_window_top by default
 C-k = ["page_up", "goto_window_top"] # C-b, C-u
+# I/A[esc] is not the way to go! use these (also necessary for keyboards without home/end buttons):
 C-h = "goto_line_start" # gh # NOTE: does not select by default, use H/L key-maps
 C-l = "goto_line_end"  # gl;
 # C-h = "move_prev_word_end"
