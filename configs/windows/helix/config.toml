@@ -263,15 +263,19 @@ minus = "decrement" # only A-minus is mapped to merge_selections, 'minus' not '-
 # END sensible defaults
 
 
-# these are the defaults:
-# NOTE: these four are free to map
-C-b = "no_op" # "page_up" # in z/view
-# C-f = "no_op" # "page_down" # in z/view; mapped to file-picker, similar to old terminal fzf
-# "C-u" = "half_page_up" # mapped to save jump point
-"C-d" = "no_op" # "half_page_down"
 
-# "C-i" = "jump_forward"
-# "C-o" = "jump_backward"
+
+# explicitly free (and note!) some keys that changed after sensible defaults
+# it will throw an error when you map something twice
+C-b = "no_op" # "page_up" # in z/view
+C-f = "no_op" # "page_down" # TODO: "search" matches windows os, "file_picker" matches terminal file-manager, fzf
+C-u = "no_op" # half_page_up" # was re-mapped to save jump point
+C-d = "no_op" # "half_page_down"
+
+C-i = "no_op" # "jump_forward" # also mapped to C-S-} and ],j
+C-o = "no_op" # "jump_backward"
+# "C-s" = "no_op" # "save_selection" # also mapped to [,s and ],s, currently re-mapped to save file
+
 
 
 # TODO: C+hjkl vs default g, hjkl; this would save the most used set of modified keys
