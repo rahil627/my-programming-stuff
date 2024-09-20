@@ -103,9 +103,8 @@ theme = "boo_berry"
 # src/commands.rs # add commands to the app here!
 
 # my conventions:
-# alt (and alt+shift) is reserved for terminal/tmux commands
+# alt (no alt+shift) is reserved for terminal/tmux commands
 #   - (by default, windows terminal used control+shift)
-#   - might change once i begin using a tmux (zellij)
 # **function key is currently un-mapped**
 # - vscode uses it for:
 # f1 = "command_pallete" # space,?
@@ -118,7 +117,8 @@ theme = "boo_berry"
 # control is the main modifier key to use
 # control+shift is often used to denote the opposite action as control+key
 # control+alt+shift is used in situtations where control+shift is used for a main action, and adding alt does an alt action
-# shift also symbolizes extending highlight/selection
+# control+alt(+shift) could also denote a dangerous action
+# shift also symbolizes extending selection
 # caps-lock is re-mapped to escape on the OS-level
 # right-control and right-alt are unused
 
