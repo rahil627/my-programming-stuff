@@ -446,7 +446,8 @@ C-right = "move_next_word_end"
 
 
 [keys.select]
-esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # keep selection by default
+# esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # cancel selection? nahhh, moving anywhere (hjkl) automatically cancels the selection, so it's pretty easy to cancel..
+ret = "normal_mode" # unmapped, this feels satisfying TODO: vs go to next/previous line
 
 # TODO: is there a way to use normal shortcuts? function key?
 
