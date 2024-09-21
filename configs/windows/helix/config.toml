@@ -449,8 +449,7 @@ C-right = "move_next_word_end"
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # keep selection by default
 
 # TODO: is there a way to use normal shortcuts? function key?
-h = "extend_to_first_nonwhitespace"
-l = "extend_to_line_end"
+
 C-a = "select_all" # default is % in normal mode, useful in combination with select_mode
 
 
