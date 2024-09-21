@@ -179,6 +179,10 @@ R = ["collapse_selection", "replace"] # just limit to replacing one char, i mean
 D = ["collapse_selection", "delete_selection"] # to delete one char, matches R above
 
 # x = "extend_line_below" # the default
+# possibly the most important selection mapping, along with x
+C-o = "expand_selection" # A-o/i by default; word -> inside comment or parameters (repeated) -> line -> block -> buffer TODO: alt for LSP? check to see the default keypmappings # TODO: remove final select entire buffer expansion
+C-i = "shrink_selection" # selects current word at minimum
+
 # TODO: default X = extend_to_line_bounds now unmapped!
 # X = "extend_line_above" 
 x = ["extend_line", "select_mode"] # fantastic mapping, teaches you to use select_mode in the process
@@ -275,8 +279,8 @@ C-f = "no_op" # "page_down" # TODO: "search" matches windows os, "file_picker" m
 C-u = "no_op" # half_page_up" # was re-mapped to save jump point
 C-d = "no_op" # "half_page_down"
 
-C-i = "no_op" # "jump_forward" # also mapped to C-S-} and ],j
-C-o = "no_op" # "jump_backward"
+# C-i = "no_op" # "jump_forward" # also mapped to C-S-} and ],j
+# C-o = "no_op" # "jump_backward"
 # "C-s" = "no_op" # "save_selection" # also mapped to [,s and ],s, currently re-mapped to save file
 
 
