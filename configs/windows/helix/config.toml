@@ -158,9 +158,6 @@ C-S-space = "command_palette" # space-space is nice too, c-s = "completion", TOD
 # C-S-p = "command_palette" # vs-code default
 
 
-# especially in case the default C-c is mapped to copy
-"C-/" = "toggle_comments" # S-/ or ? is mapped to reverse search, which is kinda useless too, as you can press N to go to go up, good for C-like langs
-"#" = "toggle_comments" # just an extra binding for an unmapped key, good for ruby-like langs
 
 
 
@@ -256,10 +253,6 @@ E = "extend_next_word_end"
 H = "extend_to_first_nonwhitespace" # vgh[esc], matches c-h
 L = "extend_to_line_end" # vgl[esc], matches c-l
 
-# NOTE: these don't yank TODO: should it?
-C-S-h = "kill_to_line_start" # can conflict with buffer shortcuts
-C-S-l = "kill_to_line_end"
-
 # still missing extend char..
 S-left = "extend_char_left"
 S-right = "extend_char_right"
@@ -286,6 +279,21 @@ C-i = "no_op" # "jump_forward" # also mapped to C-S-} and ],j
 C-o = "no_op" # "jump_backward"
 # "C-s" = "no_op" # "save_selection" # also mapped to [,s and ],s, currently re-mapped to save file
 
+
+
+
+
+# new mappings
+
+# NOTE: these don't yank, only know how to kill
+# for when H/L,d/c is too annoying
+C-S-h = "kill_to_line_start" # can conflict with buffer shortcuts
+C-S-l = "kill_to_line_end"
+
+
+# especially in case the default C-c is mapped to copy
+"C-/" = "toggle_comments" # S-/ or ? is mapped to reverse search, which is kinda useless too, as you can press N to go to go up, good for C-like langs
+"#" = "toggle_comments" # just an extra binding for an unmapped key, good for ruby-like langs
 
 
 # TODO: C+hjkl vs default g, hjkl; this would save the most used set of modified keys
