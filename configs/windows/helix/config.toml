@@ -130,8 +130,6 @@ theme = "boo_berry"
 
 [keys.normal]
 # common windows OS shortcuts
-# TODO: maybe can use alt for :commands
-# common windows OS shortcuts
 # NOTE: moved to pop-up menu, and i much prefer using the menu, but keeping in case i forget after not using a computer for a long time, or muscle memory
 C-s = ":write" # default was save_selection (to jump-list)
 C-S-s = ":write-all"
@@ -394,18 +392,19 @@ C-S-w = ":buffer-close" # :bc
 
 
 [keys.insert]
-esc = ["collapse_selection", "normal_mode"] # keeping the selection while inserting is kinda weird..
-C-space = "completion"
-C-j = "completion" # just need an easier shortcut
-C-k = "completion"
+# esc = ["collapse_selection", "normal_mode"] # keeping the selection while inserting is kinda weird.. # TODO: testing default
+C-space = "completion" # c-x by default
+# C-j = "completion" # just need an easier shortcut
+# C-k = "completion"
 # C-S-space = trigger hints
 # j = { k = "normal_mode" } # Maps `jk` to quickly exit insert mode, as opposed to esc/caps-lock
 
 C-ret = "add_newline_below" # for consistency 
 C-S-ret = "add_newline_above"
+
 # TODO: copy line up/down (macro)
 # C-S-j/k
-# C-k = "kill_line_to_end" # default
+# C-k = "kill_line_to_end" # default in emacs?
 C-h = "goto_first_nonwhitespace" # C-u by default
 C-l = "goto_line_end" # delete char by default
 C-S-h = "kill_to_line_start"
@@ -442,7 +441,7 @@ C-S-backspace = "delete_word_forward"
 # end = "no_op"
 
 # common gui editor key-maps
-C-left = "move_prev_word_start"
+C-left = "move_prev_word_start" # TODO: doesn't work
 C-right = "move_next_word_end"
 
 
@@ -509,8 +508,8 @@ l = ":o ~/.config/helix/languages.toml"
 # TODO: make a main todo list
 # t = ":o ~/todo.md"
 
+# TODO: really need to create one for buffers? check window/c-w menu
 # [keys.normal.b] # TODO: b used by back one word
-
 
 ## edit existing pop-up menus
 [keys.normal.space]
@@ -572,8 +571,7 @@ select = "underline"
 [editor.soft-wrap]
 enable = true
 max-wrap = 10 # increase value to reduce forced mid-word wrapping
-
-[editor.statusline]
+ [editor.statusline]
 # text-editor info, interactive stuff
 left = ["mode", "selections", "register", "spinner", "diagnostics", "workspace-diagnostics"]
 
