@@ -82,6 +82,8 @@
 # [editor]
 
 # icons = "nerdfontsymbols" # TODO: is there a way to get it from wezterm?
+
+# theme = "default"
 theme = "boo_berry"
 #  - most similar to 'default', with much less contrast and no bold
 #  - better than default for code, but i might default more for non-code..
