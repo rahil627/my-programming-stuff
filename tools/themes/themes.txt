@@ -11,14 +11,22 @@ terminal.sexy (website)
 
 # windows:
 
+helix:
+  - see config for more info
+**boo berry**
+default
+
 vs-code:
-
-see vs-code-extensions.txt
-
+  - see vs-code-extensions.txt
 **aura**
+  - the best i've seen so far..
   - dark (soft text)
 **jellyfish**
-  - a nice monokai variant, though a bit too bright
+  - a nice monokai variant, though incredibly bright if there's any brightness on the screen
+
+uninstalled the rest:
+monokai two (darker)
+  - similar to github's theme, very gray in the backgrounds tho
 tokyonight
   - a very well-executed blue'ish theme
 synthwave '84
