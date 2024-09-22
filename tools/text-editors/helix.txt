@@ -1,4 +1,8 @@
 
+features being developed/to help develop:
+https://github.com/helix-editor/helix/pull/9838
+  - zen mode
+
 to make the background transparent:
 create a themes folder in the helix config directory
 create a new theme: transparent_default.toml
