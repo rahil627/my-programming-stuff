@@ -40,6 +40,12 @@ local config = wezterm.config_builder()
 -- TODO: ISSUE: quite hidden in the docs
 config.disable_default_key_bindings = true
 
+config.leader = { key = 'x', mods = 'ALT', timeout_milliseconds = 1000 }
+  -- 1000 is the default
+  -- TODO: c+x vs alt+x
+  -- alt-x is perfectly aligned on my keyboard!!
+my_key_map.set_mod_key('LEADER') -- LEADER, ALT is default TODO: not working :/ i wonder if imported files aren't run until they're called..
+
 -- load my_key_map (from my_key_map.lua) into memory
 -- ISSUE: docs 
 -- https://github.com/wez/wezterm/issues/6130

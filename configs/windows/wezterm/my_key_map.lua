@@ -17,8 +17,11 @@ local act = wezterm.action
 
 -- just use one modifier key
 -- NOTE: ctrl is used for inputting terminal signals (such as clear scrollback), but only when you're actually in the terminal cli
-local mod_key = 'ALT'
-local mod_reverse_key = 'ALT|SHIFT' -- NOTE: don't use anywhere yet..
+-- NOTE: config.leader key is already set in the main config file
+local mod_key = 'ALT' -- default value NOTE: set value in main config using set_mod_key('LEADER')
+  -- TODO: decide leader vs alt
+    -- at the moment, i don't need alt, so no need to change yet..
+    -- alt+j/k to change pane focus feels better than leader+j/k
 
 local function get_mod_key() -- local function, not public/module
   -- cross-platform solution
