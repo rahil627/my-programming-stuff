@@ -123,32 +123,36 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- MAJOR FEATURES
 
     -- using default bindings:
-    -- space -> space in helix, c+s+p in vs-code, and by default
     { key = 'p', mods = mod_key, action = act.ActivateCommandPalette },
-    { key = 'f', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
-    -- added this vi-binding
-    { key = '/', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
-    -- aka vi-mode
-    -- x is default, c is used by copy, v (for vi-mode) used by paste, z is used by zoom state
-    { key = 'x', mods = mod_key, action = act.ActivateCopyMode },
+      -- space -> space in helix, c+s+p in vs-code, and by default
 
-    -- TODO: testing these major features..
-    -- no idea..
+    { key = 'f', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
     { key = 'z', mods = mod_key, action = act.TogglePaneZoomState },
-    -- only works for links..??
+      -- toggle to hide other window panes! very useful!!
+      -- h for hide is used, m is used by minimize, f for focus is used by find/search, alt-mnemonic z for zen
+
 
 
     -- changed bindings:
 
-    -- space was default TODO: used by windows launcher
+    -- { key = 'x', mods = mod_key, action = act.ActivateCopyMode },
+      -- still have to press v to go to select-mode, then y to yank, which will automatically kick you back to normal terminal cli mode
+      -- x is default and used by leader key, c is used by copy, v (for vi-mode) used by paste, z is used by zoom state
+      -- z matches view-mode in helix
+      -- TODO: currently using x for leader key
+      -- WARN: toggle focus terminal pane unmapped
+
     { key = 's', mods = mod_key, action = act.QuickSelect },
+      -- space was default, but that's used by windows for showing the basic menu to alter windows, including move window, and anyway, this seems more like an experimental feature.. also, s matches select-mode in helix
+      -- only works for links..??
 
-    -- l was default, same as the browser shortcut for javascript debug console, now using l for clear scrollback
     { key = 'd', mods = mod_key, action = act.ShowDebugOverlay },
+      -- l was default, l is used by split vertical, same as the browser shortcut for javascript debug console
 
 
-
-
+    -- additional mappings
+    { key = '/', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
+      -- to match vi/helix
 
     
     -- MAIN FUNCTIONS
