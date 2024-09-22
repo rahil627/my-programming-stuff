@@ -2,25 +2,6 @@
 **modifier keys require more cognitive load compared to leader-keys/key-chords, especially without a pop-up display.** It's sort of like object-oriented programming, the mind is better able to off-load the cognitive load to the object: the leader-key/minor-mode.
 
 key mnemonics aren't really as useful since key-layouts can entirely change, though, perhaps not so useless, as you can still use the differently-positioned keys. Also, the other keyboard layouts aren't entirely different; sometimes, just a few keys are changed, particularly the home row only has a few changes.
-  - https://stackoverflow.com/a/7411851/225689
-    - a-z vi mnemonics
-      - actually really, really good!
-      - alt mnemonics:
-        - append/add
-        - begin/back
-        - 'til/toward
-        - visual-mode/vi-mode
-        - paste/put
-        - quote? (to record a macro)
-        - z looks like it meant to be folded
-      - changes from vi to helix:
-        - **surprisingly very few changes!..:**
-        - mark -> match-mode
-        - substitute -> select-mode
-          - no need for substitute char/line with x/select line bounds
-        - x-out (delete a single char) -> select line bounds
-          - originally delete char right/left..
-        - z (fold) -> view-mode
 
 https://michael.peopleofhonoronly.com/vim/
   - visual image / cheat-sheet
@@ -47,3 +28,57 @@ match/surrounding chars
 view
   - sticky-mode
   - haven't used yet...
+
+
+
+
+keys:
+  - https://stackoverflow.com/a/7411851/225689
+    - a-z vi mnemonics
+      - actually really, really good!
+
+a: append
+b: beginning (of current or previous word)
+c: change
+d: delete
+e: end (of current word)
+f: find (next given character on current line)
+g: go (used as "leader" for many commands)
+h: left (only makes sense on the keyboard used by vi's author, same for jkl)
+i: insert
+j: down
+k: up
+l: right
+m: mark
+n: next (occurrence of last search)
+o: open (new line below current line)
+p: put (paste)
+q: quote? (record a macro in given register)
+r: replace
+s: substitute
+t: toward (next given character on current line)
+u: undo
+v: (enter) visual mode
+w: (next) word
+x: x-out (delete a single character)
+y: yank
+z: fold (it's visual, it looks like a folded sheet of paper)
+
+
+- alt mnemonics:
+  - append/add
+  - begin/back
+  - 'til/toward
+  - visual-mode/vi-mode
+  - paste/put
+  - quote? (to record a macro)
+  - z looks like it meant to be folded
+  
+- changes from vi to helix:
+  - **surprisingly very few changes!..:**
+  - mark -> match-mode
+  - substitute -> select-mode
+    - no need for substitute char/line with x/select line bounds
+  - x-out (delete a single char) -> select line bounds
+    - originally delete char right/left..
+  - z (fold) -> view-mode
