@@ -22,6 +22,14 @@ local mod_key = 'ALT' -- default value NOTE: set value in main config using set_
   -- TODO: decide leader vs alt
     -- at the moment, i don't need alt, so no need to change yet..
     -- alt+j/k to change pane focus feels better than leader+j/k
+  -- TODO: need to add a pop-up menu feature
+-- local mod_reverse_key = 'ALT|SHIFT' -- don't use anywhere yet..
+
+-- public function, used to set leader or main mod key
+-- function module.mod_key -- public var would be simpler..
+function module.set_mod_key(v)
+    mod_key = v
+end
 
 local function get_mod_key() -- local function, not public/module
   -- cross-platform solution
