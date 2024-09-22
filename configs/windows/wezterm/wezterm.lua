@@ -113,20 +113,29 @@ config.color_scheme = 'Aura (Gogh)'
 -- WezTerm bundles JetBrains Mono, Nerd Font Symbols and Noto Color Emoji
 --   - this is why the file manager's icons show up!
 -- NOTE: all font is handled by the terminal, not apps
+-- stretch = "UltraCondensed" * "ExtraCondensed" * "Condensed" * "SemiCondensed" * "Normal" * "SemiExpanded" * "Expanded" * "ExtraExpanded" * "UltraExpanded".config.
+    -- https://github.com/wez/wezterm/discussions/1644
+-- weight = ..Light, DemiLight, Book, Regular, Medium, DemiBold, Bold..
+-- config.freetype_load_flags = 'NO_HINTING'  -- just trying stuff: turn off anti-aliasing for bitmap fonts
+-- WARN: had troubles setting size per-font :/
 config.font = wezterm.font_with_fallback {
-  -- 'Cascadia Code', -- nice 'n thick, great for terminal use, but a bit much for editing code
-  'Monofoki',
-  'Consolas', -- vs-code default
+  -- 'Maple Mono', -- 8-9 -- also really nice!
+  -- { family = 'CozetteVector' }, -- CozetteVectorBold
+  -- { family = 'Cascadia Code', weight = 'Light' }, -- regular weight is wayyyy too thick!
+  -- 'Office Code Pro',
+  -- { family = 'Office Code Pro', stretch = 'Condensed', size = 8 }, -- 7 is small but still very readable!, best font ever!! TODO: however, front is much much wider in wezterm compared to vs-code (no matter the size) NOTE: tried font_stretch, but that's not dynamic: you need a specific font set with a different font width
+  { family = 'Monofoki', weight = 'Regular' }, -- 9, bold looks great too, though it a bit much like Cascadia Code's default weight
+  -- 'Consolas', -- 7-8, vs-code default, lacking line-spacing
   -- 'DengXian',
-  -- 'JetBrains Mono', -- wezterm fallsback to this automatically
+  -- 'JetBrains Mono', 7 -- wezterm fallsback to this automatically
 }
 -- The default fallback includes the popular Nerd Font Symbols font, which means that you don't need to use specially patched fonts to use the powerline or Nerd Fonts symbol glyphs.
 -- WezTerm will still append its default fallback to whatever list you specify, so you needn't worry about replicating that list if you set your own fallback.
 
 -- config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 -- font ligature options to play with..
-
 config.font_size = 9
+-- config.line_height = 1.2 TODO: test
 
 -- TODO: no seperate colors table to set all this in?
 config.command_palette_font_size = 10
