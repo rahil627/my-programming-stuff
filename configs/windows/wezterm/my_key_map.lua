@@ -231,7 +231,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = '*', mods = 'SHIFT|CTRL', action = act.ActivateTab(7) },
 
     { key = '+', mods = mod_key, action = act.IncreaseFontSize },
-    { key = '-', mods = mod_key, action = act.DecreaseFontSize },
+    { key = '=', mods = mod_key, action = act.IncreaseFontSize },
     { key = '-', mods = mod_key, action = act.DecreaseFontSize },
     { key = '0', mods = mod_key, action = act.ResetFontSize },
 
