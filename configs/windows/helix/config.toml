@@ -84,13 +84,29 @@
 # icons = "nerdfontsymbols" # TODO: is there a way to get it from wezterm?
 
 # theme = "default"
+
+# alt purple themes:
 theme = "boo_berry"
 #  - most similar to 'default', with much less contrast and no bold
-#  - better than default for code, but i might default more for non-code..
+#  - better than default for code, but i might prefer default more for non-code..
+# theme = "fleet_dark" # purple 'n pink
 
-# temp programming themes until aura dark is ported
-# theme = "nightfox"
-# theme = "tokyonight"
+# uses text styling
+# bolds look incredible in wezterm!!
+# theme = "noctis" # reminds me of jellyfish, def feel underwater
+# theme = "snazzy"
+
+# some of these newer themes are legit!!:
+# theme = "nightfox" # not bad..
+# theme = "penumbra+"
+# theme = "varua"
+# theme = "ferra"
+
+# classics:
+# tokyonight
+# everforest_dark/light
+# catpuccin_frappe/mocha
+# material_palenight
 
 
 # re-map some keys
