@@ -7,6 +7,9 @@ ruby
     - OS threads not for parallelism, more for running async, switching between threads
     - still useful for IO though, or other places where a process is stuck/locked/waiting
   - ractors
+    - https://www.reddit.com/r/ruby/comments/1fdagzr/anyone_using_ractors_in_any_serious_way_yet/
+      - still "experimental" as of 2024, the compiler even warns you so
+      - https://bugs.ruby-lang.org/issues/20346
     - parallelism, but you must adopt it's coding style: not passing mutable data/memory between threads
     - it's a specification for which language implementations can follow to create
       - Jruby and truffleruby both are java based, thus have object-oriented garbage collection (via destructors), and don't suffer from garbage colletor problems
