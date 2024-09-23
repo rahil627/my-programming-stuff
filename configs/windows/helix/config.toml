@@ -335,49 +335,33 @@ C-l = "goto_line_end"  # gl;
 
 
 
-# buffer/split/terminal-pane shortcuts
+# buffer/split-views/terminal-pane shortcuts
 
+# TODO: BUG: buffer shortcuts were missing??
+# TODO: edit c+w "window" pop-up menu
 # TODO: choose modifier keys: c-s vs a vs a-s
-
-# buffer shortcuts are missing??
 # NOTE: buffers shows up in views, they are neither tabs nor panes
-# TODO: **create a buffer pop-up menu**
 # can use buffer picker (space,b)
-C-S-j = "goto_next_buffer" # gn, :bn TODO: gj/gk
+C-S-j = "goto_next_buffer" # gn, :bn TODO: gj/gk, currently gn/gp
 C-S-k = "goto_previous_buffer" # gp, :bp
-# TODO: choose between these or kill_to_line_start/end
-# C-S-h = ":new" # h is further away/less commonly used command; TODO: add "buffer-new" to repo
-# C-S-l = ":buffer-close" # bc; more commonly used than new buffer; l for clear?
 C-S-n = ":new" # :n
-# C-S-q = ":buffer-close" # :bc
-# 'C-S-;' = ":buffer-close" # TODO: not working
+C-S-w = ":buffer-close" # :bc # matches close tab
+C-S-c = ":buffer-close" # :bc # (c)lose
 
 # combined mappings
 # matches terminal split and nav shortcuts (a-hjkl, a-w)
-# TODO: edit c+w "window" pop-up menu
 # NOTE: you can goto_next_buffer within a view! so still need to rotate_view
-C-S-h = "rotate_view"
+C-S-h = "rotate_view" # TODO: gh/hl is taken, so gn/gp or gc-j/gc-k or gc-n/gc-p
 C-S-l = "rotate_view_reverse"
+ # NOTE: replaces kill_to_line_start/end
 C-S-s = ":hsplit-new" # s > h
 C-S-v = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
 C-S-q = ":quit" # closes current view
-# 'C-S-;' = ":quit" # closes current view # TODO: not working
+# 'C-S-;' = ":quit" # closes current view # TODO: BUG: not working
 
-C-S-w = ":buffer-close" # :bc # matches close tab TODO: maybe conflicts?
-C-S-c = ":buffer-close" # :bc # (c)lose TODO: maybe conflicts?
-
-# an extra mapping for j/k vs h/l
+# an optional extra mapping for j/k vs h/l
 # A-S-j = "rotate_view"
 # A-S-k = "rotate_view_reverse"
-
-
-
-# TODO: bring back the arrow-key buffer shortcuts?
-# left = ":buffer-previous"
-# right = ":buffer-next"
-# up = ":new" # or file picker
-# down = ":buffer-close"
-
 
 # terminal mappings for reference
 # i re-mapped the keys to solely use alt
@@ -386,6 +370,7 @@ C-S-c = ":buffer-close" # :bc # (c)lose TODO: maybe conflicts?
 # A-j - goto next pane
 # A-k - goto previous pane
 # A-w = close pane
+# close tab?
 
 # A-left/down/up/right # default for windows terminal
 
