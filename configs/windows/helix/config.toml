@@ -301,8 +301,8 @@ C-d = "no_op" # "half_page_down"
 
 # NOTE: these don't yank, only know how to kill
 # for when H/L,d/c is too annoying
-C-S-h = "kill_to_line_start" # can conflict with buffer shortcuts
-C-S-l = "kill_to_line_end"
+# C-S-h = "kill_to_line_start" # can conflict with buffer shortcuts
+# C-S-l = "kill_to_line_end"
 
 
 # especially in case the default C-c is mapped to copy
@@ -337,17 +337,42 @@ C-l = "goto_line_end"  # gl;
 
 # buffer/split/terminal-pane shortcuts
 
+# buffer shortcuts are missing??
+# NOTE: buffers shows up in views, they are neither tabs nor panes
+# TODO: **create a buffer pop-up menu**
+# can use buffer picker (space,b)
+C-S-j = "goto_next_buffer" # gn, :bn TODO: gj/gk
+C-S-k = "goto_previous_buffer" # gp, :bp
+# TODO: choose between these or kill_to_line_start/end
+# C-S-h = ":new" # h is further away/less commonly used command; TODO: add "buffer-new" to repo
+# C-S-l = ":buffer-close" # bc; more commonly used than new buffer; l for clear?
+C-S-n = ":new" # :n
+# C-S-q = ":buffer-close" # :bc
+# 'C-S-;' = ":buffer-close" # TODO: not working
+
+# combined mappings
+# TODO: edit c+w "window" pop-up menu
+# NOTE: you can goto_next_buffer within a view! so still need to rotate_view
+C-S-h = "rotate_view"
+C-S-l = "rotate_view_reverse"
+C-S-s = ":hsplit-new" # s > h
+C-S-v = ":vsplit-new"
+C-S-w = ":buffer-close" # :bc # matches close tab TODO: maybe conflicts?
+C-S-c = ":buffer-close" # :bc # (c)lose TODO: maybe conflicts?
+# 'C-S-;' = ":quit" # closes current view # TODO: not working
+C-S-q = ":quit" # closes current view
+
 # matches terminal split and nav shortcuts (a-hjkl, a-w)
-# TODO: make a pop-up menu, or edit c+w "window" pop-up menu
 # use these less often than moving around buffers, so mapped it to an additional modifier key
-# TODO: this modifier key combo sucks, and it's important for splitting panes
-C-S-A-j = "rotate_view"
-C-S-A-k = "rotate_view_reverse"
-C-S-A-h = ":hsplit-new"
-C-S-A-l = ":vsplit-new"
-C-S-A-n = ":hsplit-new"
-"C-S-A-;" = ":quit" # closes current view # TODO: not working
-C-S-A-w = ":quit" # closes current view
+# A-S-j = "rotate_view"
+# A-S-k = "rotate_view_reverse"
+# A-S-h = ":hsplit-new"
+# A-S-l = ":vsplit-new"
+# A-S-s = ":hsplit-new" # TODO: vs helix mappings
+# A-S-v = ":vsplit-new"
+# A-S-n = ":hsplit-new"
+# A-S-; = ":quit" # closes current view # TODO: not working
+# A-S-q = ":quit" # closes current view
 
 
 # TODO: still testing/figuring this out..
@@ -359,17 +384,6 @@ C-S-A-w = ":quit" # closes current view
 # C-r = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
 # C-d = ":hsplit-new"
 
-# buffer shortcuts are missing??
-# TODO: **create a buffer pop-up menu**
-# can use buffer picker (space,b)
-C-S-j = "goto_next_buffer" # gn, :bn TODO: gj/gk
-C-S-k = "goto_previous_buffer" # gp, :bp
-# TODO: choose between these or kill_to_line_start/end
-# C-S-h = ":new" # h is further away/less commonly used command; TODO: add "buffer-new" to repo
-# C-S-l = ":buffer-close" # bc; more commonly used than new buffer; l for clear?
-C-S-n = ":new" # :n
-C-S-w = ":buffer-close" # :bc
-'C-S-;' = ":buffer-close" # TODO: not working
 
 
 
@@ -429,8 +443,8 @@ C-S-ret = "add_newline_above"
 # C-k = "kill_line_to_end" # default in emacs?
 C-h = "goto_first_nonwhitespace" # C-u by default
 C-l = "goto_line_end" # delete char by default
-C-S-h = "kill_to_line_start"
-C-S-l = "kill_to_line_end"
+# C-S-h = "kill_to_line_start" # TODO: currently conflicts with buffer/pane mappings
+# C-S-l = "kill_to_line_end"
 # backspace = "delete_char" # default
 # C-d = "delete_char_forward" # default
 C-S-D = "delete_char_backward"
