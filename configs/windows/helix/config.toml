@@ -361,10 +361,6 @@ C-S-v = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
 C-S-c = ":quit" # although q works for :quit command, it shouldn't have been named quit to begin with. q feels stronger, use either c and/or w
 # 'C-S-;' = ":quit" # closes current view # TODO: BUG: not working
 
-# an optional extra mapping for j/k vs h/l
-# A-S-j = "rotate_view"
-# A-S-k = "rotate_view_reverse"
-
 # terminal mappings for reference
 # i re-mapped the keys to solely use alt
 # A-j - goto next pane
