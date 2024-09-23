@@ -208,6 +208,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'm', mods = mod_key, action = act.Hide },
     { key = 'n', mods = mod_key, action = act.SpawnWindow },
       -- matches helix by default
+      -- TODO: new window vs tab?
     { key = 'r', mods = mod_key, action = act.ReloadConfiguration },
       -- seems to reload automatically..
     { key = 't', mods = mod_key, action = act.SpawnTab 'CurrentPaneDomain' },
