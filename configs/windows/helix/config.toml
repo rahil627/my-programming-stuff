@@ -534,11 +534,11 @@ k = ["page_up", "goto_window_top"]
 # has n/p = goto next/previous buffer by default
 
 [keys.normal."["] # TODO: i feel like i/o would be better placement vs []
-'[' = "goto_prev_paragraph" # default thing to go to, change change NOTE: works with select-mode, whereas c+[] doesn't
+'[' = "jump_backward" # default thing to go to, change change NOTE: works with select-mode, whereas c+[] doesn't
 j = "jump_backward"
 s = "save_selection"
 [keys.normal."]"]
-']' = "goto_next_paragraph"
+']' = "jump_forward"
 j = "jump_forward"
 s = "save_selection"
 
