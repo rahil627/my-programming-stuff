@@ -318,7 +318,7 @@ C-d = "no_op" # "half_page_down"
 C-j = "page_down" # C-f, C-d; NOTE: goto_window_top by default
 C-k = ["page_up", "goto_window_top"] # C-b, C-u
 # I/A[esc] is not the way to go! use these (also necessary for keyboards without home/end buttons):
-C-h = "goto_line_start" # gh # NOTE: does not select by default, use H/L key-maps
+C-h = "goto_first_nonwhitespace" # gh # NOTE: does not select by default, use H/L key-maps
 C-l = "goto_line_end"  # gl;
 # C-h = "move_prev_word_end"
 # C-l = "move_next_word_start"
