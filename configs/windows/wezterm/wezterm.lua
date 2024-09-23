@@ -142,6 +142,7 @@ config.font = wezterm.font_with_fallback {
 -- font ligature options to play with..
 config.font_size = 9
 -- config.line_height = 1.2 TODO: test
+adjust_window_size_when_changing_font_size = false -- TODO: doesn't work
 
 -- TODO: no seperate colors table to set all this in?
 config.command_palette_font_size = 10
