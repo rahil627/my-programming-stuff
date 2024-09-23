@@ -527,8 +527,6 @@ C-A-q = ":quit-all!"
 ## edit existing pop-up menus
 [keys.normal.space]
 space = "command_palette" # ? by default
-q = ":buffer-close" # or x or d
-Q = ":buffer-close!"
 
 [keys.normal.g]
 j = "page_down" # strangely simply move up/down one line by default TODO: change in repo
