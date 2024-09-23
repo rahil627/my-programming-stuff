@@ -160,10 +160,14 @@ config.command_palette_bg_color = 'rgba(0.5, 0.5, 0.5, .75)' -- default: #333333
 
 
 
--- Slightly transparent and blurred background
-config.window_background_opacity = 0.75
-config.text_background_opacity = 0.10 -- HOLY SHIT, amazing!
-config.macos_window_background_blur = 30
+-- slightly transparent background
+-- NOTE: unfocused panes have some dimness to them, text and background
+config.window_background_opacity = .85
+config.text_background_opacity = .5 -- if = 1, would need to set background to be transparent in helix theme, 0 is completely transparent for helix for all backgrounds
+-- if mac os
+-- config.macos_window_background_blur = 30
+-- if windows
+-- config.win32_system_backdrop = 'Acrylic' -- Auto (Disable by default), Acrylic, Mica, Tabbed, Disable -- TODO: play with some more, seems opaque for all values, even when opacity is set to 0?.. maybe affected by battery saver mode..
 
 -- title bar stuff
 -- Removes the title bar, leaving only the tab bar. Keeps
