@@ -500,13 +500,8 @@ C-a = "select_all" # default is % in normal mode, useful in combination with sel
 # backspace is a good choice as it's on the right-side of the keyboad, and many of these are on the left-side
 
 s = ":write" # default was save_selection (to jump-list)
-C-s = ":write!" # TODO: s vs w
-A-s = ":write-all"
-C-A-s = ":write-all!"
+
 q = ":quit" # matches the mapping in window-mode
-C-q = ":quit!"
-A-q = ":quit-all"
-C-A-q = ":quit-all!"
 r = ":reload"
 R = ":reload-all"
 
@@ -520,6 +515,14 @@ l = ":o ~/.config/helix/languages.toml"
 # w = ":o ..."
 # TODO: make a main todo list
 # t = ":o ~/todo.md"
+
+# put this later, as it shows up in order
+C-s = ":write!" # TODO: s vs w, c-s used for horizointal split
+A-s = ":write-all"
+C-A-s = ":write-all!"
+C-q = ":quit!"
+A-q = ":quit-all"
+C-A-q = ":quit-all!"
 
 # TODO: really need to create one for buffers? check window/c-w menu
 # [keys.normal.b] # TODO: b used by back one word
