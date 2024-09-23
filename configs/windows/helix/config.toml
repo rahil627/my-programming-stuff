@@ -337,6 +337,8 @@ C-l = "goto_line_end"  # gl;
 
 # buffer/split/terminal-pane shortcuts
 
+# TODO: choose modifier keys: c-s vs a vs a-s
+
 # buffer shortcuts are missing??
 # NOTE: buffers shows up in views, they are neither tabs nor panes
 # TODO: **create a buffer pop-up menu**
@@ -351,39 +353,22 @@ C-S-n = ":new" # :n
 # 'C-S-;' = ":buffer-close" # TODO: not working
 
 # combined mappings
+# matches terminal split and nav shortcuts (a-hjkl, a-w)
 # TODO: edit c+w "window" pop-up menu
 # NOTE: you can goto_next_buffer within a view! so still need to rotate_view
 C-S-h = "rotate_view"
 C-S-l = "rotate_view_reverse"
 C-S-s = ":hsplit-new" # s > h
-C-S-v = ":vsplit-new"
+C-S-v = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
+C-S-q = ":quit" # closes current view
+# 'C-S-;' = ":quit" # closes current view # TODO: not working
+
 C-S-w = ":buffer-close" # :bc # matches close tab TODO: maybe conflicts?
 C-S-c = ":buffer-close" # :bc # (c)lose TODO: maybe conflicts?
-# 'C-S-;' = ":quit" # closes current view # TODO: not working
-C-S-q = ":quit" # closes current view
 
-# matches terminal split and nav shortcuts (a-hjkl, a-w)
-# use these less often than moving around buffers, so mapped it to an additional modifier key
+# an extra mapping for j/k vs h/l
 # A-S-j = "rotate_view"
 # A-S-k = "rotate_view_reverse"
-# A-S-h = ":hsplit-new"
-# A-S-l = ":vsplit-new"
-# A-S-s = ":hsplit-new" # TODO: vs helix mappings
-# A-S-v = ":vsplit-new"
-# A-S-n = ":hsplit-new"
-# A-S-; = ":quit" # closes current view # TODO: not working
-# A-S-q = ":quit" # closes current view
-
-
-# TODO: still testing/figuring this out..
-# C-s used by save
-# C-v used by paste
-# C-S-s = ":vsplit-new" # s for split, fits c+w, s
-# C-S-v = ":vsplit-new" # s for split, fits c+w, s
-# C-S-h = ":hsplit-new" # s for split, fits c+w, s
-# C-r = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
-# C-d = ":hsplit-new"
-
 
 
 
@@ -405,7 +390,7 @@ C-S-q = ":quit" # closes current view
 # A-left/down/up/right # default for windows terminal
 
 # re-size terminal split/pane
-# A-S-hjkl # maybe too much..
+# A-S-hjkl # ...i  prefer off-loading this to the arrow-keys
 # A-arrow-keys # i think i use this in wezterm
 # A-S-arrow-keys # default for windows terminal
 
