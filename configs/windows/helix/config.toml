@@ -367,23 +367,24 @@ C-S-c = ":quit" # although q works for :quit command, it shouldn't have been nam
 
 # terminal mappings for reference
 # i re-mapped the keys to solely use alt
-# A-h - split horizontal (down)
-# A-l - split vertical (right)
 # A-j - goto next pane
 # A-k - goto previous pane
-# A-w = close pane
-# close tab?
+# A-s/h - split horizontal (down)
+# A-v/l - split vertical (right)
+# A-w = close pane/tab/window
+# A-q = close pane/tab/window
 
-# A-left/down/up/right # default for windows terminal
+# A-arrow-keys - resize pane # A-S by default in windows terminal
+# A-S-arrow-keys - goto pane direction # A by default for windows terminal
 
-# re-size terminal split/pane
-# A-S-hjkl # ...i  prefer off-loading this to the arrow-keys
-# A-arrow-keys # i think i use this in wezterm
-# A-S-arrow-keys # default for windows terminal
+# A-S-hjkl # TODO: unmapped...i might prefer off-loading this to the arrow-keys
 
-
+# NOTE: no helix re-size split-view yet:
+#  - https://github.com/helix-editor/helix/pull/8546
 
 # END buffer/split/terminal-pane shortcuts
+
+
 
 
 # commonly used commands (including macros!! :o)
