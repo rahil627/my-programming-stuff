@@ -25,6 +25,9 @@ local mod_key = 'ALT' -- default value NOTE: set value in main config using set_
   -- TODO: need to add a pop-up menu feature
 -- local mod_reverse_key = 'ALT|SHIFT' -- don't use anywhere yet..
 
+-- TODO: TEMP: until i decided if i want leader or not, needed for quicker pane navigation (jk)
+-- local mfu_mod_key = 'ALT' -- vs ALT|SHIFT, for most frequently used mappings
+
 -- public function, used to set leader or main mod key
 -- function module.mod_key -- public var would be simpler..
 function module.set_mod_key(v)
@@ -112,19 +115,41 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
   
     -- changes to default mappings:
 
+    -- to match my older custom hjkl mappings
     -- split panes and moving between them:
-    { key = 'l', mods = mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
-    { key = 'h', mods = mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+    -- { key = 'h', mods = mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+    -- { key = 'l', mods = mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+      -- currently matches my helix mappings: next/prev buffer -> next/prev tab
+    -- { key = 'h', mods = mfu_mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+    -- { key = 'l', mods = mfu_mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+      -- TODO: need refactor another set of shortcuts for non-leader key
 
-    -- find the function for next/previous pane for j/k instead of directions
-    -- https://wezfurlong.org/wezterm/config/lua/keyassignment/ActivatePaneDirection.html?h=activate+pane+next
-      -- NOTE: hidden within the same function!
-    -- NOTE: 'Prev' not 'Previous'
-    -- { key = 'h', mods = mod_key, action = act.ActivatePaneDirection 'Left' },
+
+    -- to match my newer custom helix mappings
     { key = 'j', mods = mod_key, action = act.ActivatePaneDirection 'Next' },
     { key = 'k', mods = mod_key, action = act.ActivatePaneDirection 'Prev' },
-    -- { key = 'l', mods = mod_key, action = act.ActivatePaneDirection 'Right' },
+    -- { key = 'j', mods = mfu_mod_key, action = act.ActivatePaneDirection 'Next' },
+    -- { key = 'k', mods = mfu_mod_key, action = act.ActivatePaneDirection 'Prev' },
+      -- TODO: need refactor another set of shortcuts for non-leader key
+      -- find the function for next/previous pane for j/k instead of directions
+      -- https://wezfurlong.org/wezterm/config/lua/keyassignment/ActivatePaneDirection.html?h=activate+pane+next
+        -- NOTE: hidden within the same function!
+        -- NOTE: 'Prev' not 'Previous'
 
+    { key = 'h', mods = mod_key, action = act.ActivateTabRelative(-1) },
+    { key = 'l', mods = mod_key, action = act.ActivateTabRelative(1) },
+
+    -- to match default helix mappings
+    { key = 's', mods = mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+      -- used for quick select
+    { key = 'v', mods = mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+      -- TODO: TEST: s/v vs h/l, can then use h/l for next/prev buffer vs mod+shift+h/l
+
+    -- directional pane movement
+    -- { key = 'h', mods = mod_key, action = act.ActivatePaneDirection 'Left' },
+    -- { key = 'j', mods = mod_key, action = act.ActivatePaneDirection 'Up' },
+    -- { key = 'k', mods = mod_key, action = act.ActivatePaneDirection 'Down' },
+    -- { key = 'l', mods = mod_key, action = act.ActivatePaneDirection 'Right' },
     -- END my additional mappings
 
 
@@ -134,59 +159,71 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- MAJOR FEATURES
 
     -- using default bindings:
-    { key = 'p', mods = mod_key, action = act.ActivateCommandPalette },
-      -- space -> space in helix, c+s+p in vs-code, and by default
-
     { key = 'f', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
     { key = 'z', mods = mod_key, action = act.TogglePaneZoomState },
       -- toggle to hide other window panes! very useful!!
       -- h for hide is used, m is used by minimize, f for focus is used by find/search, alt-mnemonic z for zen
 
 
-
+    
     -- changed bindings:
+    { key = 'phys:Space', mods = mod_key..'|SHIFT', action = act.ActivateCommandPalette },
+      -- space -> space in helix, c+s+p in vs-code, mod+p by default
+      -- TODO: check how to represent space
+      -- TODO: alt+space used by windows for showing the basic menu to alter windows, including move window, and anyway, this seems more like an experimental feature.. also, s matches select-mode in helix
+        -- TEMP: FIX: using mod+shift
 
-    -- { key = 'x', mods = mod_key, action = act.ActivateCopyMode },
+    { key = 'c', mods = mod_key, action = act.ActivateCopyMode },
       -- still have to press v to go to select-mode, then y to yank, which will automatically kick you back to normal terminal cli mode
-      -- x is default and used by leader key, c is used by copy, v (for vi-mode) used by paste, z is used by zoom state
+      -- x is default and used by leader key, c is used by copy, v (for vi-mode) used by vertical split and paste after that, z is used by zoom state
       -- z matches view-mode in helix
-      -- TODO: currently using x for leader key
-      -- WARN: toggle focus terminal pane unmapped
+      -- NOTE: currently using x to TEST: leader key
 
-    { key = 's', mods = mod_key, action = act.QuickSelect },
-      -- space was default, but that's used by windows for showing the basic menu to alter windows, including move window, and anyway, this seems more like an experimental feature.. also, s matches select-mode in helix
+    -- { key = 's', mods = mod_key, action = act.QuickSelect },
+      -- space was default, s used by horizontal split
       -- only works for links..??
+      -- WARN: quick-select-mode is currently unmapped
 
     { key = 'd', mods = mod_key, action = act.ShowDebugOverlay },
       -- l was default, l is used by split vertical, same as the browser shortcut for javascript debug console
 
 
     -- additional mappings
+    { key = 'p', mods = mod_key..'|SHIFT', action = act.ActivateCommandPalette },
+      -- extra mapping to match vs-code
+
     { key = '/', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
-      -- to match vi/helix
+      -- extra mapping to match vi/helix
 
     
     -- MAIN FUNCTIONS
     -- mostly uses default keys, just changed modifier to use alt instead of ctrl
     -- https://wezfurlong.org/wezterm/config/default-keys.html
-      { key = 'c', mods = mod_key, action = act.CopyTo 'Clipboard' },
+    { key = 'y', mods = mod_key, action = act.CopyTo 'Clipboard' },
+      -- c was default? now used for copy-mode
     -- NOTE: k was the default, using k for something else NOTE: c+l is the default for most terminals, c+[lettered-signal], so don't need this
     -- { key = ';', mods = mod_key, action = act.ClearScrollback 'ScrollbackOnly' },
-    -- NOTE: changed mapping to d
     -- { key = 'l', mods = mod_key, action = act.ShowDebugOverlay },
+      -- changed to d and mapped above
     { key = 'm', mods = mod_key, action = act.Hide },
     { key = 'n', mods = mod_key, action = act.SpawnWindow },
+      -- matches helix by default
     { key = 'r', mods = mod_key, action = act.ReloadConfiguration },
+      -- seems to reload automatically..
     { key = 't', mods = mod_key, action = act.SpawnTab 'CurrentPaneDomain' },
-    -- NOTE: select smiley??
+      -- also a good default
     { key = 'u', mods = mod_key, action = act.CharSelect{ copy_on_select = true, copy_to =  'ClipboardAndPrimarySelection' } },
-    { key = 'v', mods = mod_key, action = act.PasteFrom 'Clipboard' },
-    -- the most sane defaults ever!! go wez wez wehhhhzz
-    -- i started a poll to decide using this as the default over close current tab
+      -- NOTE: select smiley??
+    { key = 'p', mods = mod_key, action = act.PasteFrom 'Clipboard' },
+      -- changed from v, used by vertical split
+    { key = 'q', mods = mod_key, action = wezterm.action.CloseCurrentPane { confirm = true }, },
+      -- extra mapping
+    { key = 'w', mods = mod_key, action = wezterm.action.CloseCurrentPane { confirm = true }, },
+      -- the most sane defaults ever!! go wez wez wehhhhzz
+      -- i started a poll to decide using this as the default over close current tab
       -- https://github.com/wez/wezterm/discussions/6151
-      { key = 'w', mods = mod_key, action = wezterm.action.CloseCurrentPane { confirm = true }, },
-    -- NOTE: replaced with above
     -- { key = 'w', mods = mod_key, action = act.CloseCurrentTab{ confirm = true } },
+      -- NOTE: replaced with above, better, saner function
 
         -- vi-like, might need tho..
     { key = '[', mods = mod_key, action = act.ActivateTabRelative(-1) },
