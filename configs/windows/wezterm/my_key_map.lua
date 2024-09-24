@@ -121,6 +121,9 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
   
     -- changes to default mappings:
 
+    -- pane movement
+    -- NOTE: doesn't jump to other windows, restricted to panes within this single window
+
     -- to match my older custom hjkl mappings
     -- split panes and moving between them:
     -- { key = 'h', mods = mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
