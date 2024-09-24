@@ -23,7 +23,13 @@ local mod_key = 'ALT' -- default value NOTE: set value in main config using set_
     -- at the moment, i don't need alt, so no need to change yet..
     -- alt+j/k to change pane focus feels better than leader+j/k
   -- TODO: need to add a pop-up menu feature
-local mod_shift_key = mod_key..'|SHIFT'
+local mod_with_shift_key = mod_key..'|SHIFT'
+  -- NOTE: try to avoid using this and note uses here:
+    -- p for command pallete to match vs-code
+      -- using p for paste
+    -- space for command pallete
+      -- c+p is used by windows os
+    -- arrow-keys for directional pane movement vs resize pane
 
 -- TODO: TEMP: until i decided if i want leader or not, needed for quicker pane navigation (jk)
 -- local mfu_mod_key = 'ALT' -- vs ALT|SHIFT, for most frequently used mappings
@@ -168,7 +174,8 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
 
     
     -- changed bindings:
-    { key = 'phys:Space', mods = mod_shift_key, action = act.ActivateCommandPalette },
+    { key = 'phys:Space', mods = mod_with_shift_key
+    , action = act.ActivateCommandPalette },
       -- space -> space in helix, c+s+p in vs-code, mod+p by default
       -- TODO: check how to represent space
       -- TODO: alt+space used by windows for showing the basic menu to alter windows, including move window, and anyway, this seems more like an experimental feature.. also, s matches select-mode in helix
@@ -190,7 +197,8 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
 
 
     -- additional mappings
-    { key = 'p', mods = mod_shift_key, action = act.ActivateCommandPalette },
+    { key = 'p', mods = mod_with_shift_key
+    , action = act.ActivateCommandPalette },
       -- extra mapping to match vs-code
 
     { key = '/', mods = mod_key, action = act.Search 'CurrentSelectionOrEmptyString' },
@@ -337,10 +345,14 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'PageDown', mods = mod_key, action = act.ActivateTabRelative(1) },
 
     -- probably won't have more than a single horizontal split. rather just use temporary windows 'n tabs instead of further splitting.. so i doubt i'll need to use this much.. next/prev pane via j/k should be enough most of the time, and so these use mod+shift instead of just mod
-    { key = 'LeftArrow', mods = mod_shift_key, action = act.ActivatePaneDirection 'Left' },
-    { key = 'RightArrow', mods = mod_shift_key, action = act.ActivatePaneDirection 'Right' },
-    { key = 'UpArrow', mods = mod_shift_key, action = act.ActivatePaneDirection 'Up' },
-    { key = 'DownArrow', mods = mod_shift_key, action = act.ActivatePaneDirection 'Down' },
+    { key = 'LeftArrow', mods = mod_with_shift_key
+    , action = act.ActivatePaneDirection 'Left' },
+    { key = 'RightArrow', mods = mod_with_shift_key
+    , action = act.ActivatePaneDirection 'Right' },
+    { key = 'UpArrow', mods = mod_with_shift_key
+    , action = act.ActivatePaneDirection 'Up' },
+    { key = 'DownArrow', mods = mod_with_shift_key
+    , action = act.ActivatePaneDirection 'Down' },
 
     { key = 'LeftArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Left', 1 } },
     { key = 'RightArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Right', 1 } },
