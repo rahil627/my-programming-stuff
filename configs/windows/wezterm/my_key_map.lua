@@ -121,6 +121,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     -- { key = 'l', mods = mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
       -- currently matches my helix mappings: next/prev buffer -> next/prev tab
     -- { key = 'h', mods = mfu_mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+      -- NOTE: TODO: PR: split vertical and horizontal are flipped
     -- { key = 'l', mods = mfu_mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
       -- TODO: need refactor another set of shortcuts for non-leader key
 
@@ -140,9 +141,9 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'l', mods = mod_key, action = act.ActivateTabRelative(1) },
 
     -- to match default helix mappings
-    { key = 's', mods = mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+    { key = 's', mods = mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
       -- used for quick select
-    { key = 'v', mods = mod_key, action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+    { key = 'v', mods = mod_key, action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
       -- TODO: TEST: s/v vs h/l, can then use h/l for next/prev buffer vs mod+shift+h/l
 
     -- directional pane movement
