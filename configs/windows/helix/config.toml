@@ -241,6 +241,10 @@ r = "replace_with_yanked" # this matches y/p better
 # C-u = "save_selection" # defualt was page_up
 # ,. for next/previous buffer? TODO: should have many of these key-pairs to cycle next/previous
 
+# TODO: select the word the cursor is on vs default use selection
+# TODO: could use S-/, since reverse search isn't really needed (just press s-n)
+# or expand_selection?
+"C-*" = ["move_prev_word_start", "move_next_word_end", "search_selection"] # TODO: c-* doesn't work
 
 
 # tab was completely unmapped by default
