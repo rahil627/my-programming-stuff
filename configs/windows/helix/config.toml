@@ -408,6 +408,11 @@ C-space = "completion" # c-x by default
 C-ret = "add_newline_below" # for consistency 
 C-S-ret = "add_newline_above"
 
+# move line up/down
+# move to normal mode?
+# C-j      = ["normal_mode","extend_to_line_bounds","delete_selection", "move_line_down","paste_before", "insert_mode"]
+# C-k      = ["normal_mode","extend_to_line_bounds","delete_selection", "move_line_up","paste_before", "insert_mode"]
+
 # TODO: copy line up/down (macro)
 # C-S-j/k
 # C-k = "kill_line_to_end" # default in emacs?
