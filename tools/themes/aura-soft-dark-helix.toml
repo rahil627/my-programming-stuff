@@ -1,4 +1,82 @@
 
+"ui.background" = { fg = "#dbdbdb", bg = "#15141b"}
+
+"ui.linenr" = { fg = "#a394f033"}
+"ui.linenr.selected" = { bg = "#2e2b38", modifiers = ["bold"]}
+
+"ui.statusline" = { fg = "#adacae", bg = "#1f1a27"}
+
+"ui.selection" = { bg = "3d375e7f"}
+"ui.selection.background" = { fg = "3d375e7f"}
+
+"ui.cursor" = { fg = "#15141b", bg = "#f694ff"}
+"ui.cursor.match" = { fg = "#a277ff", modifiers = ["bold"] }
+
+"ui.text" = { fg = "#dbdbdb"}
+"ui.text.focus" = { fg = "#dbdbdb", bg = "#29263c" }
+"ui.text.inactive" = { fg = "#6d6d6d" }
+
+"ui.virtual.indent-guide" = "#2d2d2d"
+"ui.virtual.ruler" = { bg = "#2d2d2d" }
+"ui.virtual.whitespace" = { fg = "#2d2d2d" }
+"ui.virtual.inlay-hint" = { fg = "#cdccce", bg = "#2e2b38" }
+"ui.virtual.jump-label" = { fg = "#f694ff", modifiers = ["bold"] }
+
+"ui.highlight" = { bg = "#2e2b38", modifiers = ["bold"] }
+
+"ui.menu" = { fg = "#cdccce", bg = "#1f1a27"}
+"ui.menu.selected" = { fg = "#a277ff", bg = "#2e2b38"}
+
+"ui.popup" = { fg = "#cdccce", bg = "1f1a2#7"}
+
+"ui.window" = { fg = "#54c59f"}
+
+"diagnostic.error" = { underline = { color = "#c55858", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "#c7a06f", style = "curl" } }
+"diagnostic.info" = { underline = { color = "#6cb2c7", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "#6cb2c7", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+error = "#c55858"
+warning = "#c7a06f"
+info = "#6cb2c7"
+hint = "#6cb2c7"
+
+attributes = "#a277ff"
+type = "#6cb2c7"
+
+constructor = "#6cb2c7"
+
+constant = "#54c59f"
+string = "#54c59f"
+
+comment = {fg = "#6d6d6d", modifiers = [ "italic" ]}
+
+variable = "#dbdbdb"
+"variable.builtin" = "#a277ff"
+"variable.other" = "#f694ff"
+
+"punctuation.delimeter" = "#f694ff"
+"punctuation.special" = "#dbdbdb"
+
+keyword = "#a277ff"
+operator = "#a277ff"
+
+function = "#ffca85"
+tag = "#a277ff"
+
+markup = "#a277ff"
+"markup.heading" = "#c7a06f"
+"markup.quote" = "#6d6d6d"
+"markup.list" = "#a277ff"
+"markup.link.url" = { fg = "#54c59f", modifiers = ["underlined"]}
+
+"diff.plus" = "#54c59f"
+"diff.delta" = "#c7a06f"
+"diff.minus" = "#c55858"
+
+
 
 
 # https://github.com/daltonmenezes/aura-theme/blob/c607be79c8eeaa5a5d7ac66421f8b5c51d936fe8/src/core/colors/schemes/common.ts
@@ -95,79 +173,3 @@
 
 # TODO: maybe i used some colors from the non-soft variation by accident?.. :/
 
-"ui.background" = { fg = "#dbdbdb", bg = "#15141b"}
-
-"ui.linenr" = { fg = "#a394f033"}
-"ui.linenr.selected" = { bg = "#2e2b38", modifiers = ["bold"]}
-
-"ui.statusline" = { fg = "#adacae", bg = "#1f1a27"}
-
-"ui.selection" = { bg = "3d375e7f"}
-"ui.selection.background" = { fg = "3d375e7f"}
-
-"ui.cursor" = { fg = "#15141b", bg = "#f694ff"}
-"ui.cursor.match" = { fg = "#a277ff", modifiers = ["bold"] }
-
-"ui.text" = { fg = "#dbdbdb"}
-"ui.text.focus" = { fg = "#dbdbdb", bg = "#29263c" }
-"ui.text.inactive" = { fg = "#6d6d6d" }
-
-"ui.virtual.indent-guide" = "#2d2d2d"
-"ui.virtual.ruler" = { bg = "#2d2d2d" }
-"ui.virtual.whitespace" = { fg = "#2d2d2d" }
-"ui.virtual.inlay-hint" = { fg = "#cdccce", bg = "#2e2b38" }
-"ui.virtual.jump-label" = { fg = "#f694ff", modifiers = ["bold"] }
-
-"ui.highlight" = { bg = "#2e2b38", modifiers = ["bold"] }
-
-"ui.menu" = { fg = "#cdccce", bg = "#1f1a27"}
-"ui.menu.selected" = { fg = "#a277ff", bg = "#2e2b38"}
-
-"ui.popup" = { fg = "#cdccce", bg = "1f1a2#7"}
-
-"ui.window" = { fg = "#54c59f"}
-
-"diagnostic.error" = { underline = { color = "#c55858", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "#c7a06f", style = "curl" } }
-"diagnostic.info" = { underline = { color = "#6cb2c7", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "#6cb2c7", style = "curl" } }
-"diagnostic.unnecessary" = { modifiers = ["dim"] }
-"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
-
-error = "#c55858"
-warning = "#c7a06f"
-info = "#6cb2c7"
-hint = "#6cb2c7"
-
-attributes = "#a277ff"
-type = "#6cb2c7"
-
-constructor = "#6cb2c7"
-
-constant = "#54c59f"
-string = "#54c59f"
-
-comment = {fg = "#6d6d6d", modifiers = [ "italic" ]}
-
-variable = "#dbdbdb"
-"variable.builtin" = "#a277ff"
-"variable.other" = "#f694ff"
-
-"punctuation.delimeter" = "#f694ff"
-"punctuation.special" = "#dbdbdb"
-
-keyword = "#a277ff"
-operator = "#a277ff"
-
-function = "#ffca85"
-tag = "#a277ff"
-
-markup = "#a277ff"
-"markup.heading" = "#c7a06f"
-"markup.quote" = "#6d6d6d"
-"markup.list" = "#a277ff"
-"markup.link.url" = { fg = "#54c59f", modifiers = ["underlined"]}
-
-"diff.plus" = "#54c59f"
-"diff.delta" = "#c7a06f"
-"diff.minus" = "#c55858"
