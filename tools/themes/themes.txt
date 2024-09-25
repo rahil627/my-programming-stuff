@@ -34,6 +34,12 @@ synthwave '84
 
 
 terminal:
+wezterm
+  - neon night (goph)
+    -  using this, but miss the old neon pink of cyberpunk
+  - aura (goph)
+  - adventure time
+ 
 windows terminal:
 https://windowsterminalthemes.dev/
   - cyberpunk 2077
