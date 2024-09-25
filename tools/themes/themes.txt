@@ -13,16 +13,19 @@ terminal.sexy (website)
 
 helix:
   - see config for more info
-**boo berry**
 default
+**boo berry**
+**noctis**
+  - sea green, more coordinated than jellyfish
 
 vs-code:
   - see vs-code-extensions.txt
 **aura**
   - the best i've seen so far..
   - dark (soft text)
-**jellyfish**
-  - a nice monokai variant, though incredibly bright if there's any brightness on the screen
+jellyfish
+  - a nice monokai variant, though incredibly bright if there's any brightness on the screen, still suffers from those ugly reds from monokai
+
 
 uninstalled the rest:
 monokai two (darker)
@@ -30,7 +33,7 @@ monokai two (darker)
 tokyonight
   - a very well-executed blue'ish theme
 synthwave '84
-  - syntax color scheme is too wild
+  - syntax color scheme is too wild, but i dig the sheer difference of it
 
 
 terminal:
