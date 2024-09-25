@@ -36,6 +36,7 @@ local config = wezterm.config_builder()
 
 
 -- set key mappings
+-- enable_kitty_keyboard = true # TODO: was trying to debug weird inputs that didn't work: c-;, c-space, c-}, etc.
 
 -- TODO: ISSUE: quite hidden in the docs
 config.disable_default_key_bindings = true
