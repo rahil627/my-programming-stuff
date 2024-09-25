@@ -118,8 +118,7 @@ theme = "noctis" # reminds me of jellyfish, def feel underwater
 
 
 # re-map some keys
-# NOTE: only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful'
-#       though, it's okay to add multiple key-maps of the same action, as there are multiple conventions in my head
+# NOTE: only add a new keybinding when you *frequently* perform the actions, not because you think it would be 'nice' or 'useful', though, it's okay to add multiple key-maps of the same action, as there are multiple conventions in my head
 # NOTE: use no_op for unmapped keys to be explicit and know what isn't mapped
 
 # https://docs.helix-editor.com/keymap.html
@@ -564,7 +563,7 @@ k = ["page_up", "goto_window_top"]
 # has n/p = goto next/previous buffer by default
 
 [keys.normal."["] # TODO: i feel like i/o would be better placement vs []
-'[' = "jump_backward" # default thing to go to, change change NOTE: works with select-mode, whereas c+[] doesn't
+'[' = "jump_backward" # default thing to go to, vs goto_prev_paragraph NOTE: works with select-mode, whereas c+[] doesn't
 j = "jump_backward"
 s = "save_selection"
 [keys.normal."]"]
