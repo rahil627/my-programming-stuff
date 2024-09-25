@@ -20,18 +20,43 @@ default
 
 vs-code:
   - see vs-code-extensions.txt
+  - https://vscodethemes.com/
+    - i made it to page 7 and noted a bunch to try below
 **aura**
   - the best i've seen so far..
   - dark (soft text)
 jellyfish
   - a nice monokai variant, though incredibly bright if there's any brightness on the screen, still suffers from those ugly reds from monokai
 
+to try next:
+shades of purple
+  - adventure time but purple
+pink-cat-boo
+  - beige
+huacat
+
+newer classics to try:
+Night Owl
+Firefly Pro
+Midnight Synth
+Cobalt2
+pop 'n lock
+
+like palenight:
+catpuccin
+moonlight
+tokyonight
+  - darker
+palenight
+  - classic
+  
+old classics to try:
+Dracula Official
+Atom One Dark
 
 uninstalled the rest:
 monokai two (darker)
   - similar to github's theme, very gray in the backgrounds tho
-tokyonight
-  - a very well-executed blue'ish theme
 synthwave '84
   - syntax color scheme is too wild, but i dig the sheer difference of it
 
