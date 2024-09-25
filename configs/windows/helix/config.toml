@@ -348,7 +348,7 @@ C-S-k = "goto_previous_buffer" # gp, :bp
 C-S-n = ":new" # :n
 C-S-w = ":buffer-close" # :bc # matches close tab in windows os
 # C-S-c = ":buffer-close" # :bc # (c)lose
-C-S-q = ":buffer-close" # q feels stronger than w/c
+# C-S-q = ":buffer-close" # q feels stronger than w/c
 
 # combined mappings
 # matches terminal split and nav shortcuts (a-hjkl, a-w)
@@ -358,8 +358,8 @@ C-S-l = "rotate_view_reverse"
  # NOTE: replaces kill_to_line_start/end
 C-S-s = ":hsplit-new" # s > h
 C-S-v = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
-# C-S-q = ":quit" # closes current view, but not the buffer
-C-S-c = ":quit" # although q works for :quit command, it shouldn't have been named quit to begin with. q feels stronger, use either c and/or w
+C-S-q = ":quit" # closes current view, but not the buffer
+# C-S-c = ":quit" # although q works for :quit command, it shouldn't have been named quit to begin with. q feels stronger, but i prefer the position next to w, whereas c is a bit weird for the left hand
 # 'C-S-;' = ":quit" # closes current view # TODO: BUG: not working
 
 # terminal mappings for reference
