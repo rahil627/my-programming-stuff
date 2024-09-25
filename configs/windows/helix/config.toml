@@ -130,24 +130,26 @@ theme = "noctis" # reminds me of jellyfish, def feel underwater
 # src/commands.rs # add commands to the app here!
 
 # my conventions:
+
+# IMPORTANT: NOTE: swapped the mappings of  control and alt keys on windows os at os level, but didn't alter this config
+
+# control is the main modifier key to use
+# control+shift is often used to denote the opposite action as control+key
+# shift also symbolizes extending selection
+# caps-lock is re-mapped to escape on the OS-level
+# right-control and right-alt are unused
+
 # alt (no alt+shift) is reserved for terminal/tmux commands
 #   - (by default, windows terminal used control+shift)
+#   - (by default, wezterm uses nearly every modifier key for sane defaults reasoning)
 # **function key is currently un-mapped**
-# - vscode uses it for:
+# - windows/vscode often uses it for:
 # f1 = "command_pallete" # space,?
 # f2 = "rename_symbol" # space,r
 # f3 = "search_next" # n
 # S-f3 = "search_previous" N (S+n)
 # f5,f8-f11 = debugging stuff # space,g
 # f12 = "goto_definition" # g,d; A+f12 peek def
-  
-# control is the main modifier key to use
-# control+shift is often used to denote the opposite action as control+key
-# control+alt+shift is used in situtations where control+shift is used for a main action, and adding alt does an alt action
-# control+alt(+shift) could also denote a dangerous action
-# shift also symbolizes extending selection
-# caps-lock is re-mapped to escape on the OS-level
-# right-control and right-alt are unused
 
 
 # see vs-code reference for shortcuts
