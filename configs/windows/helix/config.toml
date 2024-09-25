@@ -188,6 +188,8 @@ a = ["collapse_selection", "append_mode"]
 R = ["collapse_selection", "replace"] # just limit to replacing one char, i mean, how often are you really going to be replacing a selection with one repeating char?.. ascii art?
 D = ["collapse_selection", "delete_selection"] # to delete one char, matches R above
 
+# possibly the most IMPORTANT: selection mapping, along with x
+# IMPORTANT: cycles through m,i/o mode (match insdie/outside)
 C-o = "expand_selection" # A-o/i by default; word -> inside comment or parameters (repeated) -> line -> block -> buffer TODO: alt for LSP? check to see the default keypmappings # TODO: remove final select entire buffer expansion
 C-i = "shrink_selection" # selects current word at minimum
 
@@ -281,7 +283,7 @@ minus = "decrement" # only A-minus is mapped to merge_selections, 'minus' not '-
 
 
 
-# explicitly free (and note!) some keys that changed after sensible defaults
+# explicitly unmap (and note!) some keys that changed after sensible defaults
 # it will throw an error when you map something twice
 C-b = "no_op" # "page_up" # in z/view
 C-f = "no_op" # "page_down" # TODO: "search" matches windows os, "file_picker" matches terminal file-manager, fzf
@@ -290,7 +292,7 @@ C-d = "no_op" # "half_page_down"
 
 # C-i = "no_op" # "jump_forward" # also mapped to C-S-} and ],j
 # C-o = "no_op" # "jump_backward"
-# "C-s" = "no_op" # "save_selection" # also mapped to [,s and ],s, currently re-mapped to save file
+"C-s" = "no_op" # "save_selection" # also mapped to [,s and ],s
 
 
 
@@ -325,7 +327,7 @@ C-l = "goto_line_end"  # gl;
 # NOTE: these select/highlight by default
 "C-[" = "goto_prev_paragraph"
 "C-]" = "goto_next_paragraph"
-"C-S-[" = "jump_backward" # TODO: neither work
+"C-S-[" = "jump_backward" # TODO: BUG: neither work
 "C-}" = "jump_forward"
 # "C-{" = "goto_prev_function"
 # "C-}" = "goto_next_function"
