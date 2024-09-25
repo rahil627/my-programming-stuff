@@ -146,6 +146,8 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
         -- NOTE: hidden within the same function!
         -- NOTE: 'Prev' not 'Previous'
 
+    -- i haven't really used more than one tab.. i usually just create a split and then delete it..
+    -- NOTE: can't use alt+tab/alt+shift+tab because it's used by windows os
     { key = 'h', mods = mod_key, action = act.ActivateTabRelative(-1) },
     { key = 'l', mods = mod_key, action = act.ActivateTabRelative(1) },
 
