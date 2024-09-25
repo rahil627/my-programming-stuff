@@ -243,6 +243,11 @@ r = "replace_with_yanked" # this matches y/p better
 
 
 
+# tab was completely unmapped by default
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+C-tab = "rotate_view" # TODO: not working, maybe a windows os problem.., use c-s-h/l
+C-S-tab = "rotate_view_reverse"
 
 # return was completely unmapped by default
 # it's often simpler to think starting from the beginning of a line
