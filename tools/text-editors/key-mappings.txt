@@ -1,4 +1,17 @@
 
+basic ergonomics:
+just move or swap some useful keys around
+
+on a windows keyboard, swap alt with control on the os level
+  - much more ergonomic, for both hands! mac os style!
+  - on windows, use powertoys to re-map keys
+
+map caps lock to escape key
+  - especially for vi-like key-mappings
+
+TODO: map holding caps lock down to the further mod key
+  - https://github.com/microsoft/PowerToys/pull/32545
+
 **modifier keys require more cognitive load compared to leader-keys/key-chords, especially without a pop-up display.** It's sort of like object-oriented programming, the mind is better able to off-load the cognitive load to the object: the leader-key/minor-mode.
 
 key mnemonics aren't really as useful since key-layouts can entirely change, though, perhaps not so useless, as you can still use the differently-positioned keys. Also, the other keyboard layouts aren't entirely different; sometimes, just a few keys are changed, particularly the home row only has a few changes.
