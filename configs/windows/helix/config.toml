@@ -200,8 +200,8 @@ D = ["collapse_selection", "delete_selection"] # to delete one char, matches R a
 
 # possibly the most IMPORTANT: selection mapping, along with x
 # IMPORTANT: cycles through m,i/o mode (match insdie/outside)
-C-o = "expand_selection" # A-o/i by default; word -> inside comment or parameters (repeated) -> line -> block -> buffer TODO: alt for LSP? check to see the default keypmappings # TODO: remove final select entire buffer expansion
-C-i = "shrink_selection" # selects current word at minimum
+C-o = "expand_selection" # A-o/i by default; word -> inside comment or parameters (repeated) -> line -> block -> buffer; it just works via tree-sitter not lsp TODO: remove final select entire buffer expansion
+C-S-o = "shrink_selection" # selects current word at minimum; holding control and pressing shift made more sense
 
 # TODO: default X = extend_to_line_bounds now unmapped!
 x = ["extend_line", "select_mode"] # fantastic mapping, teaches you to use select_mode in the process
