@@ -308,7 +308,10 @@ C-d = "no_op" # "half_page_down"
 
 # especially in case the default C-c is mapped to copy
 "C-/" = "toggle_comments" # S-/ or ? is mapped to reverse search, which is kinda useless too, as you can press N to go to go up, good for C-like langs
+"C-S-/" = "toggle_block_comments"
+  # NOTE: could use for global_search <space,/>
 "#" = "toggle_comments" # just an extra binding for an unmapped key, good for ruby-like langs
+"C-#" = "toggle_block_comments"
 
 
 # TODO: C+hjkl vs default g, hjkl; this would save the most used set of modified keys
