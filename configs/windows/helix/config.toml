@@ -83,28 +83,36 @@
 
 # icons = "nerdfontsymbols" # TODO: is there a way to get it from wezterm?
 
+# currently using boo_berry and noctis
+
 # theme = "default"
 
 # alt purple themes:
-theme = "boo_berry"
-#  - most similar to 'default', with much less contrast and no bold
-#  - better than default for code, but i might prefer default more for non-code..
-# theme = "fleet_dark" # purple 'n pink
+# theme = "boo_berry"
+#  - most similar to the purple-heavy 'default', with much less contrast and no annoyingly bright yellow
+#  - better than default for code, but i might prefer default's light purple text more for non-code..
 
-# uses text styling
+# color bases to create my own personal themes out of
+# theme = "edge" # TODO: PR: push original/port to repo
+# theme = "aura" # TODO: PR: push original/port to repo
+
+# theme = "fleet_dark" # purple 'n pink for main texts
+
+# these particulary stick out
+# can use this as a base for helix themes
 # bolds look incredible in wezterm!!
-# theme = "noctis" # reminds me of jellyfish, def feel underwater
-# theme = "snazzy"
+theme = "noctis" # reminds me of jellyfish, def feel underwater
+# theme = "snazzy" # a colorful monokai variant with bolds
 
-# some of these newer themes are legit!!:
+# some of these newer themes are aiite
 # theme = "nightfox" # not bad..
-# theme = "penumbra+"
+# theme = "penumbra+" # a monokair varaint
 # theme = "varua"
 # theme = "ferra"
 
 # classics:
+# everforest_dark/light # great low-contrast earthy vibes
 # tokyonight
-# everforest_dark/light
 # catpuccin_frappe/mocha
 # material_palenight
 
