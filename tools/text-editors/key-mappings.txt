@@ -3,8 +3,6 @@
 
 key mnemonics aren't really as useful since key-layouts can entirely change, though, perhaps not so useless, as you can still use the differently-positioned keys. Also, the other keyboard layouts aren't entirely different; sometimes, just a few keys are changed, particularly the home row only has a few changes.
 
-https://michael.peopleofhonoronly.com/vim/
-  - visual image / cheat-sheet
 
 pop-up menus / **minor-modes** / leader-keys:
   - i prefer the word minor-mode for this idea, as pop-up menu doesn't signify the complete idea
@@ -36,6 +34,9 @@ keys:
   - https://stackoverflow.com/a/7411851/225689
     - a-z vi mnemonics
       - actually really, really good!
+      
+  - https://michael.peopleofhonoronly.com/vim/
+    - visual image / cheat-sheet
 
 a: append
 b: beginning (of current or previous word)
