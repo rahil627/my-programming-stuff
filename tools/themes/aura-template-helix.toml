@@ -1,77 +1,156 @@
 
-"ui.background" = { fg = "{{ accent7 }}", bg = "{{ accent12 }}"}
+"ui.background" = { fg = "white", bg = "black"}
 
-"ui.linenr" = { fg = "{{ accent17 }}"}
-"ui.linenr.selected" = { bg = "{{ accent33 }}", modifiers = ["bold"]}
+"ui.linenr" = { fg = "accent17"}
+"ui.linenr.selected" = { bg = "accent33", modifiers = ["bold"]}
 
-"ui.statusline" = { fg = "{{ accent10 }}", bg = "{{ accent24 }}"}
+"ui.statusline" = { fg = "accent10", bg = "accent24"}
 
-"ui.selection" = { bg = "{{ accent20 }}"}
-"ui.selection.background" = { fg = "{{ accent20 }}"}
+"ui.selection" = { bg = "purple_selection"}
+"ui.selection.background" = { fg = "purple_selection"}
 
-"ui.cursor" = { fg = "{{ accent12 }}", bg = "{{ accent6 }}"}
-"ui.cursor.match" = { fg = "{{ accent1 }}", modifiers = ["bold"] }
+"ui.cursor" = { fg = "black", bg = "pink" }
+"ui.cursor.match" = { fg = "purple", modifiers = ["bold"] }
 
-"ui.text" = { fg = "{{ accent7 }}"}
-"ui.text.focus" = { fg = "{{ accent7 }}", bg = "{{ accent38 }}" }
-"ui.text.inactive" = { fg = "{{ accent8 }}" }
+"ui.text" = { fg = "white"}
+"ui.text.focus" = { fg = "white", bg = "purple_selection_solid"  }
+"ui.text.inactive" = { fg = "gray" }
 
-"ui.virtual.indent-guide" = "{{ accent13 }}"
-"ui.virtual.ruler" = { bg = "{{ accent13 }}" }
-"ui.virtual.whitespace" = { fg = "{{ accent13 }}" }
-"ui.virtual.inlay-hint" = { fg = "{{ accent9 }}", bg = "{{ accent33 }}" }
-"ui.virtual.jump-label" = { fg = "{{ accent6 }}", modifiers = ["bold"] }
+"ui.virtual.indent-guide" = "accent13"
+"ui.virtual.ruler" = { bg = "accent13" }
+"ui.virtual.whitespace" = { fg = "accent13" }
+"ui.virtual.inlay-hint" = { fg = "accent9", bg = "accent33" }
+"ui.virtual.jump-label" = { fg = "pink" , modifiers = ["bold"] }
 
-"ui.highlight" = { bg = "{{ accent33 }}", modifiers = ["bold"] }
+"ui.highlight" = { bg = "accent33", modifiers = ["bold"] }
 
-"ui.menu" = { fg = "{{ accent9 }}", bg = "{{ accent24 }}"}
-"ui.menu.selected" = { fg = "{{ accent1 }}", bg = "{{ accent33 }}"}
+"ui.menu" = { fg = "accent9", bg = "accent24"}
+"ui.menu.selected" = { fg = "purple", bg = "accent33"}
 
-"ui.popup" = { fg = "{{ accent9 }}", bg = "{{ accent24 }}"}
+"ui.popup" = { fg = "accent9", bg = "accent24"}
 
-"ui.window" = { fg = "{{ accent2 }}"}
+"ui.window" = { fg = "green" }
 
-"diagnostic.error" = { underline = { color = "{{ accent5 }}", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "{{ accent3 }}", style = "curl" } }
-"diagnostic.info" = { underline = { color = "{{ accent32 }}", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "{{ accent32 }}", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "orange" , style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue" , style = "curl" } }
+"diagnostic.hint" = { underline = { color = "blue" , style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
-error = "{{ accent5 }}"
-warning = "{{ accent3 }}"
-info = "{{ accent32 }}"
-hint = "{{ accent32 }}"
+error = "red"
+warning = "orange" 
+info = "blue" 
+hint = "blue" 
 
-attributes = "{{ accent1 }}"
-type = "{{ accent32 }}"
+attributes = "purple"
+type = "blue" 
 
-constructor = "{{ accent32 }}"
+constructor = "blue" 
 
-constant = "{{ accent2 }}"
-string = "{{ accent2 }}"
+constant = "green" 
+string = "green" 
 
-comment = {fg = "{{ accent8 }}", modifiers = [ "italic" ]}
+comment = {fg = "gray", modifiers = [ "italic" ]}
 
-variable = "{{ accent7 }}"
-"variable.builtin" = "{{ accent1 }}"
-"variable.other" = "{{ accent6 }}"
+variable = "white" # should be dimmed
+"variable.builtin" = "purple"
+"variable.other" = "pink" 
 
-"punctuation.delimeter" = "{{ accent6 }}"
-"punctuation.special" = "{{ accent7 }}"
+"punctuation.delimeter" = "pink" 
+"punctuation.special" = "white"
 
-keyword = "{{  accent1 }}"
-operator = "{{ accent1 }}"
+keyword = "purple"
+operator = "purple"
 
-function = "{{  accent31 }}"
-tag = "{{ accent1 }}"
+function = "accent31" # should be yellow
+tag = "purple"
 
-markup = "{{ accent1 }}"
-"markup.heading" = "{{ accent3 }}"
-"markup.quote" = "{{ accent8 }}"
-"markup.list" = "{{ accent1 }}"
-"markup.link.url" = { fg = "{{ accent2 }}", modifiers = ["underlined"]}
+markup = "purple"
+"markup.heading" = "orange" 
+"markup.quote" = "gray"
+"markup.list" = "purple"
+"markup.link.url" = { fg = "green" , modifiers = ["underlined"]}
 
-"diff.plus" = "{{ accent2 }}"
-"diff.delta" = "{{ accent3 }}"
-"diff.minus" = "{{ accent5 }}"
+"diff.plus" = "green" 
+"diff.delta" = "orange" 
+"diff.minus" = "red"
+
+[pallete]
+# dark soft/dim
+purple = "#8464c6" # 132,100,198	accent1	primary color	
+purple_selection = "#3d375e7f" # 61,55,94	accent20	selections	
+purple_selection_solid = "#29263c" # 41,38,60	accent38	selections (without alpha)	
+green = "#54c59f" # 84,197,159	accent2	secondary color	
+orange = "#c7a06f" # 199,160,111	accent3	tertiary color	
+pink = "#c17ac8" # 193,122,200	accent6	quaternary color	
+blue = "#6cb2c7" # 108,178,199	accent32	quinary color	
+red = "#c55858" # 197,88,88	accent5	senary color	
+white = "#bdbdbd" # 189,189,189	accent7	foregrounds	
+gray = "#6d6d6d" # 109,109,109	accent8	comments	
+black = "#15141b" # 21,20,27	accent12	backgrounds
+
+# dark
+# Purple	#a277ff	162,119,255	accent1	Primary color	
+# Purple	#3d375e7f	61,55,94	accent20	Selections	
+# Purple	#29263c	41,38,60	accent38	Selections (without alpha)	
+# Green	#61ffca	97,255,202	accent2	Secondary color	
+# Orange	#ffca85	255,202,133	accent3	Tertiary color	
+# Pink	#f694ff	246,148,255	accent6	Quaternary color	
+# Blue	#82e2ff	130,226,255	accent32	Quinary color	
+# Red	#ff6767	255,103,103	accent5	Senary color	
+# White	#edecee	237,236,238	accent7	Foregrounds	
+# Gray	#6d6d6d	109,109,109	accent8	Comments	
+# Black	#15141b	21,20,27	accent12	Backgrounds	
+
+
+# https://github.com/daltonmenezes/aura-theme/blob/c607be79c8eeaa5a5d7ac66421f8b5c51d936fe8/src/core/colors/schemes/common.ts
+# commonColors = {
+# "accent0" = '#0f0f0f'
+# "accent1" = '#a277ff'
+# "accent2" = '#61ffca'
+# "accent3" = '#ffca85'
+# "accent4" = '#9dff65'
+# "accent5" = '#ff6767'
+# "accent6" = '#f694ff'
+# "accent7" = '#edecee' # foreground
+# "accent8" = '#6d6d6d' # comments
+# "accent31" = '#ffca85'
+# "accent32" = '#82e2ff'
+# "accent33" = '#24222c'
+# "accent34" = '#00000000' # fully transparent,
+# "accent35" = '#525156' # activity bar inactive foreground,
+# # }
+
+# export const commonUI = {
+accent9 = "#cdccce"
+accent10 = "#adacae"
+accent13 = "#2d2d2d"
+# accent14 = "#af8aff7f"
+# accent15 = "#4d4d4d"
+# accent16 = "#ffffff00"
+accent17 = "#a394f033" # secondary-selection
+# accent18 = "#a394f000"
+# accent19 = "#3ea7847f"
+# accent20 = "#3d375e7f" # primary-selection
+# accent22 = "#4d466e"
+# accent23 = "#3b334b"
+# accent25 = "#49c29a"
+# accent26 = "#00d89023"
+# accent27 = "#ff474720"
+# accent28 = "#121016"
+# accent29 = "#000000"
+# accent30 = "#2d2b38"
+accent33 = "#2e2b38"
+# accent36 = "#a19c77" # debugging background
+# accent37 = "#353424" # breakpoint frame highlight
+# accent38 = "#29263c" # primary-selection without alpha
+# accent39 = "#211D26"
+# }c',
+# accent34 = "#00000000" # fully transparent,
+# accent35 = "#525156" # activity bar inactive foreground,
+# }
+
+# https://github.com/daltonmenezes/aura-theme/tree/c607be79c8eeaa5a5d7ac66421f8b5c51d936fe8/src/core/colors/schemes
+accent24 = "#1f1a27" # soft dark
+
