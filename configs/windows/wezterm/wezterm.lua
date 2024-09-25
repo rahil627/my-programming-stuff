@@ -131,7 +131,7 @@ config.font = wezterm.font_with_fallback {
   -- { family = 'CozetteVector' }, -- CozetteVectorBold
   -- { family = 'Cascadia Code', weight = 'Light' }, -- regular weight is wayyyy too thick!
   -- 'Office Code Pro',
-  -- { family = 'Office Code Pro', stretch = 'Condensed', size = 8 }, -- 7 is small but still very readable!, best font ever!! TODO: however, front is much much wider in wezterm compared to vs-code (no matter the size) NOTE: tried font_stretch, but that's not dynamic: you need a specific font set with a different font width
+  -- { family = 'Office Code Pro', stretch = 'Condensed', size = 8 }, -- 7 is small but still very readable!, best font ever!! TODO: however, font is much much wider in wezterm compared to vs-code (no matter the size) NOTE: tried font_stretch, but that's not dynamic: you need a specific font set with a different font width
   { family = 'Monofoki', weight = 'Regular' }, -- 9, bold looks great too, though it a bit much like Cascadia Code's default weight
   -- 'Consolas', -- 7-8, vs-code default, lacking line-spacing
   -- 'DengXian',
@@ -143,7 +143,7 @@ config.font = wezterm.font_with_fallback {
 -- config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 -- font ligature options to play with..
 config.font_size = 9
--- config.line_height = 1.2 TODO: test
+-- config.line_height = 1.05 -- TODO: should test with fonts
 adjust_window_size_when_changing_font_size = false -- TODO: doesn't work
 
 -- TODO: no seperate colors table to set all this in?
