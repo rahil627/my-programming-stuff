@@ -165,7 +165,8 @@ config.command_palette_bg_color = 'rgba(0.5, 0.5, 0.5, .75)' -- default: #333333
 
 -- slightly transparent background
 -- NOTE: unfocused panes have some dimness to them, text and background
-config.window_background_opacity = .85
+-- TODO: play with these values some more
+config.window_background_opacity = .75 -- .85, was .7 on windows terminal
 config.text_background_opacity = .5 -- if = 1, would need to set background to be transparent in helix theme, 0 is completely transparent for helix for all backgrounds
 -- if mac os
 -- config.macos_window_background_blur = 30
