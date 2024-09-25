@@ -188,15 +188,14 @@ a = ["collapse_selection", "append_mode"]
 R = ["collapse_selection", "replace"] # just limit to replacing one char, i mean, how often are you really going to be replacing a selection with one repeating char?.. ascii art?
 D = ["collapse_selection", "delete_selection"] # to delete one char, matches R above
 
-# x = "extend_line_below" # the default
-# possibly the most important selection mapping, along with x
 C-o = "expand_selection" # A-o/i by default; word -> inside comment or parameters (repeated) -> line -> block -> buffer TODO: alt for LSP? check to see the default keypmappings # TODO: remove final select entire buffer expansion
 C-i = "shrink_selection" # selects current word at minimum
 
 # TODO: default X = extend_to_line_bounds now unmapped!
-# X = "extend_line_above" 
 x = ["extend_line", "select_mode"] # fantastic mapping, teaches you to use select_mode in the process
-X = ["extend_line", "select_mode", "flip_selections"] # same as the above but prepare for going up
+X = ["extend_line", "select_mode", "flip_selections"] # same as the above but prepare for going up by flipping the cursor to the beginning of the selection
+# x = "extend_line_below" # the default
+# X = "extend_line_above" 
 
 # x without the newline?
 # select within the line bounds, useful for quick whole-line changes
