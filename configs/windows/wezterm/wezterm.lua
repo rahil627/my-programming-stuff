@@ -103,11 +103,13 @@ config.initial_cols = 80 -- 80, i like the small width limit, even when raeding 
 --  can just use windows powertoys to easily set a window to the size of the middle pane for now..
 -- window:set_position(1000, 200) -- 2800 x 800 x2 (scale)
   
--- just aim for a good color when using a file manager tui
+-- test the file manager tui
+-- config.color_scheme = 'Aura (Gogh)'
+config.color_scheme = 'Neon Night (Gogh)'
+  -- light purple text is pleasant!
 -- config.color_scheme = 'AdventureTime'
-config.color_scheme = 'Aura (Gogh)'
+  -- the blue used for folder names in the file manager tui is hard to see
 -- config.color_scheme = 'Sythwave (Gogh)'
--- config.color_scheme = 'Neon Night (Gogh)'
 -- https://wezfurlong.org/wezterm/config/appearance.html
 
 -- font
