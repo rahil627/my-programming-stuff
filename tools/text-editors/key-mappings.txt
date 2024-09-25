@@ -96,3 +96,44 @@ z: fold (it's visual, it looks like a folded sheet of paper)
   - x-out (delete a single char) -> select line bounds
     - originally delete char right/left..
   - z (fold) -> view-mode
+
+
+
+
+
+
+
+windows os re-mappings (for logic, not ergonomics):
+  - maybe can add an additional mapping for copy/paste to windows key
+    - by default:
+      - w+c - co-pilot
+      - w+v - clipboard tab of a a new little input app
+      - w+p - project(or) for secondary display
+      - w+y - unmapped?
+  - ...think of other controls
+
+some interesting windows key mappings:
+  - see all shortcuts
+    - https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec#windowskey
+      - just skimmed through, not thorough, but i don't feel there are too many useful shortcuts..
+
+  - w - start menu search
+    - full of shit now.. use w+space instead
+  - w+space - powertoys run (launcher)
+  
+  - w+left/right - snap window to left/right
+  - w+c+left/right - next/prev workspace
+
+  - w+tab - tabs and workspaces view
+  
+  - w+a - action center
+  - w+t - taskbar
+  - w+b - system tray
+  
+  - w+d - hide/show desktop
+  - w+m - minimize
+  - w+, - peek, hold down win key to keep peeking
+
+  - w+v/. - clipboard/emoji picker
+
+  
