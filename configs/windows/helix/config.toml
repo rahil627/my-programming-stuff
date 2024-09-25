@@ -8,17 +8,17 @@
 # https://github.com/helix-editor/helix/discussions/1360#discussioncomment-10692211
 
 # TODO: / main things that bother me
-# buffer shortcuts
-#   - can try arrow shortcuts
-# pane shortcuts
-#   - c-w is kinda weird, needs it's own button..??
-#   - can try arrow shortcuts
 # where is the repeat-action? '.' repeats the last paste or something..
-#   - repeat_last_motion
 # use c+j/k to move down/up pop-up dialog lists
+# move [] modes to c+i/o?
+#   - repeat_last_motion
+# move all terminal mappings to a single leader-key/mode
+#    - free up one of three modifier keys
+#    - eh, still want to use alt for copy/paste in terminal cli (beyond helix), pane movement
+#    - also no pop-up menu, so difficult to visualize, must remember mappings
+# buffer shortcuts
+#   - need to add to window pane mode
 # get/set icons from wezterm
-# ISSUE: discuss/ask for a set-opacity/transparency command
-#  - seems to be working differently in wezterm, no config necessary!!
 # add aura theme
 #   - https://github.com/daltonmenezes/aura-theme/issues/202
 #   - then can use it as a base to create my own theme
