@@ -51,7 +51,7 @@ constructor = "blue"
 constant = "green" 
 string = "green" 
 
-comment = {fg = "gray", modifiers = [ "italic" ]}
+comment = {fg = "gray", modifiers = [ "italic" ]} # TODO: italic? check vs-code
 
 variable = "white" # should be dimmed
 "variable.builtin" = "purple"
@@ -86,40 +86,40 @@ orange = "#c7a06f" # 199,160,111	accent3	tertiary color
 pink = "#c17ac8" # 193,122,200	accent6	quaternary color	
 blue = "#6cb2c7" # 108,178,199	accent32	quinary color	
 red = "#c55858" # 197,88,88	accent5	senary color	
-white = "#bdbdbd" # 189,189,189	accent7	foregrounds	
+white = "#bdbdbd" # 189,189,189	accent7	foregrounds	 # TODO: or #dbdbdb?
 gray = "#6d6d6d" # 109,109,109	accent8	comments	
 black = "#15141b" # 21,20,27	accent12	backgrounds
 
 # dark
-# Purple	#a277ff	162,119,255	accent1	Primary color	
-# Purple	#3d375e7f	61,55,94	accent20	Selections	
-# Purple	#29263c	41,38,60	accent38	Selections (without alpha)	
-# Green	#61ffca	97,255,202	accent2	Secondary color	
-# Orange	#ffca85	255,202,133	accent3	Tertiary color	
-# Pink	#f694ff	246,148,255	accent6	Quaternary color	
-# Blue	#82e2ff	130,226,255	accent32	Quinary color	
-# Red	#ff6767	255,103,103	accent5	Senary color	
-# White	#edecee	237,236,238	accent7	Foregrounds	
-# Gray	#6d6d6d	109,109,109	accent8	Comments	
-# Black	#15141b	21,20,27	accent12	Backgrounds	
+# purple	= "#a277ff" #	162,119,255	accent1	Primary color
+# purple_selection = "#3d375e7f" #	61,55,94	accent20	Selections
+# purple_selection_solid	= "#29263c" #	41,38,60	accent38	Selections (without alpha)
+# green	= "#61ffca" #	97,255,202	accent2	Secondary color
+# orange	= "#ffca85" #	255,202,133	accent3	Tertiary color
+# pink	= "#f694ff" #	246,148,255	accent6	Quaternary color
+# blue	= "#82e2ff" #	130,226,255	accent32	Quinary color
+# red	= "#ff6767"	# 255,103,103	accent5	Senary color
+# white	= "#edecee" #	237,236,238	accent7	Foregrounds
+# gray	= "#6d6d6d" #	109,109,109	accent8	Comments
+# black	= "#15141b" #	21,20,27	accent12	Backgrounds
 
 
 # https://github.com/daltonmenezes/aura-theme/blob/c607be79c8eeaa5a5d7ac66421f8b5c51d936fe8/src/core/colors/schemes/common.ts
 # commonColors = {
-# "accent0" = '#0f0f0f'
-# "accent1" = '#a277ff'
-# "accent2" = '#61ffca'
-# "accent3" = '#ffca85'
-# "accent4" = '#9dff65'
-# "accent5" = '#ff6767'
-# "accent6" = '#f694ff'
-# "accent7" = '#edecee' # foreground
-# "accent8" = '#6d6d6d' # comments
-# "accent31" = '#ffca85'
-# "accent32" = '#82e2ff'
-# "accent33" = '#24222c'
-# "accent34" = '#00000000' # fully transparent,
-# "accent35" = '#525156' # activity bar inactive foreground,
+# accent0 = "#0f0f0f"
+# accent1 = "#a277ff"
+# accent2 = "#61ffca"
+# accent3 = "#ffca85"
+# accent4 = "#9dff65"
+# accent5 = "#ff6767"
+# accent6 = "#f694ff"
+# accent7 = "#edecee" # foreground
+# accent8 = "#6d6d6d" # comments
+accent31 = "#ffca85"
+# accent32 = "#82e2ff"
+# accent33 = "#24222c"
+# accent34 = "#00000000" # fully transparent,
+# accent35 = "#525156" # activity bar inactive foreground,
 # # }
 
 # export const commonUI = {
