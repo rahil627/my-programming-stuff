@@ -349,20 +349,20 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
     { key = 'PageUp', mods = mod_key, action = act.ActivateTabRelative(-1) },
     { key = 'PageDown', mods = mod_key, action = act.ActivateTabRelative(1) },
 
-    -- probably won't have more than a single horizontal split. rather just use temporary windows 'n tabs instead of further splitting.. so i doubt i'll need to use this much.. next/prev pane via j/k should be enough most of the time, and so these use mod+shift instead of just mod
-    { key = 'LeftArrow', mods = mod_with_shift_key
+    -- probably won't often have more than a single horizontal split. rather just use temporary windows 'n tabs instead of further splitting.. so i doubt i'll need to use this much.. next/prev pane via j/k should be enough most of the time.. yet somehow i correlate shift with resizing.. so:
+    { key = 'LeftArrow', mods = mod_key
     , action = act.ActivatePaneDirection 'Left' },
-    { key = 'RightArrow', mods = mod_with_shift_key
+    { key = 'RightArrow', mods = mod_key
     , action = act.ActivatePaneDirection 'Right' },
-    { key = 'UpArrow', mods = mod_with_shift_key
+    { key = 'UpArrow', mods = mod_key
     , action = act.ActivatePaneDirection 'Up' },
-    { key = 'DownArrow', mods = mod_with_shift_key
+    { key = 'DownArrow', mods = mod_key
     , action = act.ActivatePaneDirection 'Down' },
 
-    { key = 'LeftArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Left', 1 } },
-    { key = 'RightArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Right', 1 } },
-    { key = 'UpArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Up', 1 } },
-    { key = 'DownArrow', mods = mod_key, action = act.AdjustPaneSize{ 'Down', 1 } },
+    { key = 'LeftArrow', mods = mod_with_shift_key, action = act.AdjustPaneSize{ 'Left', 1 } },
+    { key = 'RightArrow', mods = mod_with_shift_key, action = act.AdjustPaneSize{ 'Right', 1 } },
+    { key = 'UpArrow', mods = mod_with_shift_key, action = act.AdjustPaneSize{ 'Up', 1 } },
+    { key = 'DownArrow', mods = mod_with_shift_key, action = act.AdjustPaneSize{ 'Down', 1 } },
 
     -- maybe an actually good case for using all the modifiers..
     -- TODO: my keyboard has delete/insert key..
