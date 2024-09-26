@@ -194,6 +194,13 @@ function setup_all_apps {
 
 # main script
 function setup_windows {
+    # sane settings, not sure if
+    # settings -> personalization -> taskbar -> widgets -> off
+      # NOTE: even after removing widgets, the option is still there.. :/
+
+    # removing widgets ("windows web experience pack") in the remove-windows-bloatware script automatically removes this option
+    # settings -> personalization -> lock screen -> lock screen status -> none
+
     remove_all_bloatware
     install_winget
     install_scoop
