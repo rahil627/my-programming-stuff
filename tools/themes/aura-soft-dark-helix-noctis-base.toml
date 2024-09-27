@@ -1,16 +1,29 @@
-# a nasty port of aura using the port of noctis as a base
+# a nasty mix of aura, noctis, an indulgent use of helix's text modifiers, and a sprinkle of madness
 
-# Author : 0rphee <0rph3e@proton.me>
+# aura ported by: elainabialkowski 
+# aura created by: Dalton Menezes (MIT)
+# noctis ported by: 0rphee <0rph3e@proton.me>
+# noctis by: Liviu Schera and contributors (MIT)
+# who used this template: https://github.com/n0s4/helix-theme-template
 
-# Template written with the help of https://github.com/n0s4/helix-theme-template
+# TODO:
+# get a dim color for var/let/mut keyword
+  # currently using the same purple as strings :/
+# import and the thing it imports are both orange/yellow-function
+# punctuation.delimiter not working
 
+# NOTE:
+# blinking doesn't work with italics, another reason to not italicize comments
+# can fetch syntax highlighting tests from here: https://github.com/sharkdp/bat
 ## GENERAL ==============================
 
 "warning" = { fg ="orange2", modifiers = ["bold"] } # Editor warnings. TEMP/TEST/WARN
-"error" = { fg = "red2", modifiers = ["bold", "slow_blink"] } # Editor errors, like mis-typing a command. BUG TODO: but not ERROR?
-"info" = { fg = "mid-blue" } # Code diagnostic info in gutter (LSP). TODO/INFO
+"error" = { fg = "red2", modifiers = ["bold", "slow_blink"] } # Editor errors, like mis-typing a command. BUG ISSUE
+  # TODO: but not ERROR?
+"info" = { fg = "mid-blue" } # Code diagnostic info in gutter (LSP).
+  # TODO/INFO; def prefer noctis's mid-blue over aura's here
 # ? Difference between info and hint ?
-"hint" = { fg = "light-blue", modifiers = ["bold"] } # Code diagnostics hint in gutter (LSP). TODO: i wonder if this is used for fuzzy search matching chars..
+"hint" = { fg = "light-blue", modifiers = ["bold"] } # Code diagnostics hint in gutter (LSP).
 "diagnostic" = { modifiers = ["underlined"] } # Code diagnostics in editing area (LSP).
 "diagnostic.unnecessary" = { modifiers = ["dim"] } # took this from default theme
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] } # took this from default theme
@@ -20,120 +33,169 @@
 'ui.background' = { fg = "purple17", bg = "black2"} # Default background color., the fg seems to be used for borders..
 'ui.window' = { fg = "purple17" } # Window border between splits.
 
-'ui.gutter' = { } # Left gutter for diagnostics and breakpoints.
+'ui.gutter' = { fg = "orange2"} # Left gutter for diagnostics and breakpoints.
 
-'ui.text' = { fg = "purple17" } # Default text color. NOTE: was white, but pink and purple16 works nicely in the picker menu, which matches the popup menu TODO: should TEST: with plain text files... gives a nice default vibe..
+'ui.text' = { fg = "purple17" } # Default text color.
+  # NOTE: was white, but pink and purple16 works nicely in the picker menu, which matches the popup menu
+  # TODO: should TEST: with plain text files... gives a nice default vibe..
 'ui.text.focus' = { fg = "pink2", bg = "purple_selection_solid", modifiers = ["bold"] } # Selection highlight in buffer-picker or file-picker.
-'ui.text.info' = { fg = "pink2", bg ="black2" } # Info popup contents (space mode menu). NOTE: pink pops out, making it better than the comfy purple17 here
+'ui.text.info' = { fg = "pink2", bg ="black2" } # Info popup contents (space mode menu).
+  # NOTE: pink pops out, making it better than the comfy purple17 here
 'ui.text.inactive' = { fg = "gray2" } # i think used in autocomplete suggestion..
 
-'ui.cursor' = { fg = "pink2", bg = "light-green", modifiers = ["reversed", "bold"] } # Fallback cursor colour, non-primary cursors when there are multiple (shift-c). TODO: TEST: bold and light-green
+'ui.cursor' = { fg = "gold", bg = "light-green", modifiers = ["reversed", "bold" ] } # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
+  # NOTE: this blinking alongside the selection is too much!, lol
 'ui.cursor.primary' = { fg = "pink2", bg = "light-green", modifiers = ["reversed", "bold"] } # The primary cursor when there are multiple (shift-c).
-'ui.cursor.insert' =  { fg = "pink2", bg = "light-green", modifiers = ["reversed", "bold"] } # The cursor in insert mode (i).
-'ui.cursor.select' = { fg = "pink2", bg = "light-green", modifiers = ["reversed", "bold"] } # The cursor in select mode (v).
-'ui.cursor.match' = { fg = "light-green-complement", bg = "light-green", modifiers = ["bold", "reversed", "rapid_blink"] } # The matching parentheses of that under the cursor. NOTE: changed from purple, which was a bit tough to see..
+# 'ui.cursor.insert' =  { fg = "pink2", bg = "light-green", modifiers = ["reversed", "bold"] } # The cursor in insert mode (i).
+# 'ui.cursor.select' = { fg = "pink2", bg = "light-green", modifiers = ["reversed", "bold"] } # The cursor in select mode (v).
+'ui.cursor.match' = { fg = "light-green-complement", bg = "light-green", modifiers = ["bold", "reversed", "slow_blink"] } # The matching parentheses of that under the cursor.
+  # NOTE: changed from purple, which was a bit tough to see..; rapid_blink was just too annoying..
 
 'ui.selection' = { bg = "purple_selection", modifiers = [ "bold", "slow_blink" ] } # All currently selected text.
-# 'ui.selection.background' = { fg = "purple_selection" } # TEMP: TEST: from old config
 # 'ui.selection.primary' = { bg = "purple_selection" } # The primary selection when there are multiple.
-# 'ui.cursorline.primary' = { bg = 'purple_selection' } # TODO: would need a very dim color, between selection and background
+# 'ui.cursorline.primary' = { bg = 'purple_selection' } #
+  # TODO: would need a very dim color, between selection and background
 
-'ui.linenr' = { fg = "purple17" } # Line numbers.
-'ui.linenr.selected' = { bg = "text33", modifiers = [ "bold" ] } # Current line number.# NOTE: i removed the bg color, the bold is enough, as it seems to make it a lighter color too, also could just use the same purple17 if this is too annoying TODO: NOTE: not sure why bg..
+'ui.linenr' = { fg = "purple17", modifiers = ["dim"]} # Line numbers.
+'ui.linenr.selected' = { modifiers = [ "bold" ] } # Current line number.
 
 'ui.virtual' = { fg = "purple_selection" } # Namespace for additions to the editing area.
 'ui.virtual.ruler' = { bg = "purple_selection"} # Vertical rulers (colored columns in editing area).
-'ui.virtual.whitespace' = { fg = "gray"} # Whitespace markers in editing area.
-'ui.virtual.indent-guide' = { fg = "gray" } # Indentation guides.
+'ui.virtual.whitespace' = { fg = "gray2"} # Whitespace markers in editing area: newline..
+'ui.virtual.indent-guide' = { fg = "marker13" } # Indentation guides.
 
-'ui.statusline' = { fg = "text10", bg = "bg24"} # Status line.
-'ui.statusline.inactive' = { fg = "text10", bg = "bg24"} # Status line in unfocused windows. TODO: need some dimmer background color here..
+'ui.statusline' = { fg = "purple17", bg = "bg24", modifiers = ["dim"] } # Status line.
+  # NOTE: matches line numbers
+'ui.statusline.inactive' = { fg = "text10", bg = "bg24"} # Status line in unfocused windows. maybe used for inactive tabs?..
 
-'ui.help' = { bg = "black2", fg = "white2"} # `:command` descriptions above the command line.
+"ui.statusline.normal" = { fg = "purple17", modifiers = ["dim"] }
+"ui.statusline.insert" = { fg = "salmon", modifiers = ["bold", "dim"] }
+  # matches return keyword
+"ui.statusline.select" = { fg = "light-blue", modifiers = ["bold"] }
+  # somehow dark, even without dim..
+  # slow_blink on insert/select was too annoying..
 
-'ui.highlight' = { bg = "text33"} # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b). TODO: no clue why this works..
+'ui.help' = { bg = "black2", fg = "pink2"} # `:command` descriptions above the command line.
 
-'ui.menu' = { fg = "pink2", bg = "black2" } # Autocomplete menu. NOTE: pink is a nice change from purple17..
-'ui.menu.selected' = { fg = "text33", bg = "purple_selection" } # Selected autocomplete item.
+# 'ui.highlight' = { bg = "text33"} # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
+  # TODO: TEST: still need to try this..
+
+'ui.menu' = { fg = "pink2", bg = "black2" } # Autocomplete menu.
+  # NOTE: pink is a nice change from purple17..
+'ui.menu.selected' = { bg = "purple_selection", fg = "gold", modifiers = ["bold"] } # Selected autocomplete item.
+  # NOTE: not a fan of slow_blink here..
 
 'ui.popup' = { fg = "purple17", bg = "black2" } # Documentation popups (space-k).
-'ui.popup.info' = { fg = "pink2", bg = "black2" } # Info popups box (space mode menu). NOTE: bold was just too much.. the pink is nice tho! vs purple17 NOTE: it seems ui.text.info overrides this..??
+'ui.popup.info' = { fg = "pink2", bg = "black2" } # Info popups box (space mode menu).
+  # NOTE: bold was just too much.. the pink is nice tho! vs purple17
+  # NOTE: it seems ui.text.info overrides this..??
 
 # SYNTAX HIGHLIGHTING ==============================
 # All the keys here are Treesitter scopes.
 
 'property' = { fg = "red2" } # Regex group names.
-'special' = { fg = "gold"} # Special symbols e.g `?` in Rust, `...` in Hare. NOTE: was mid-blue TODO: maybe used by fuzzy search picker..?? Or perhaps it color blends..??
+'special' = { fg = "gold"} # Special symbols e.g `?` in Rust, `...` in Hare.
+  # NOTE: was mid-blue
+  # TODO: maybe used by fuzzy search picker..?? Or perhaps it color blends..??
 'attribute' = { fg = "purple2" } # Class attributes, html tag attributes.
 
-'type' = { fg = "blue2"} # Variable type, like integer or string, including program defined classes, structs etc..
-#'type.builtin' = { } # Primitive types of the language (string, int, float).
-#'type.enum.variant' = { } # A variant of an enum.
+'type' = { fg = "mid-blue" } # Variable type, like integer or string, including program defined classes, structs etc..
+  # NOTE: sometimes there's class / end, which looks odd not bolded like other control/end statements
+'type.builtin' = { fg = "blue2" } # Primitive types of the language (string, int, float).
+  # TODO: dark-blue was just too ugly..
+'type.enum.variant' = { fg = "blue2" } # A variant of an enum.
+  # NOTE: i think was pink in aura theme..
 
-'constructor' = { fg = "blue2", modifiers = ["bold"]} # Constructor method for a class or struct. And in some cases applies to module names NOTE: was mid-blue in noctis, it's pink in vs-code's aura, along with static, i think bold is enough TODO: ruby's class seems to use this.. maybe best to stick to blue
+'constructor' = { fg = "mid-blue" } # Constructor method for a class or struct. And in some cases applies to module names, as in ruby
+  # NOTE: was mid-blue in noctis, it's pink in vs-code's aura, along with static... TODO: maybe could try a new color here..
+  # NOTE: ruby's class seems to use this.. maybe best to stick to blue.., but then __init__ uses this too..; also used upon constructor call! Ok(), Some() in rust
 
-# NOTE: originally green in aura, but overlapped with strings, so i kept the noctis values.. but not so sure, one color for literals seems like a pretty good idea.., maybe a different green?
-'constant' = { fg = "mid-blue" } # Constant value
-'constant.builtin' = { fg = "mid-blue" } # Special constants like `true`, `false`, `none`, etc.
+# NOTE: originally green in aura... and it seems a pretty good use of this green, as i don't use it for strings anymore..
+'constant' = { fg = "green2" } # Constant value
+  # TODO: green feels good for numbers, literals, escape-sequence
+# 'constant.builtin' = { fg = "mid-blue" } # Special constants like `true`, `false`, `none`, etc.
 # 'constant.builtin.boolean' = { } # True or False.
-'constant.character' = { fg = "mid-blue"} # Constant of character type.
-'constant.character.escape' = { fg = "light-green", modifiers = ["bold"] } # escape codes like \n. NOTE: matches regexp
-'constant.numeric'  = { fg = "mid-blue"} # constant integer or float value. # TODO: green vs blue
+# 'constant.character' = { fg = "mid-blue"} # Constant of character type.
+# 'constant.character.escape' = { fg = "mid-green", modifiers = ["bold"] } # escape codes like \n.
+  # NOTE: matches regexp
+# 'constant.numeric'  = { fg = "dark-blue", modifiers = ["bold"] } # constant integer or float value.
 # 'constant.numeric.integer' = { } # constant integer value.
-# 'constant.numeric.float' = { } # constant float value.
+# 'constant.numeric.float' = { fg = "green2" } # constant float value.
 
-'string' = { fg = "purple17" } # String literal. # TODO: not a fan of the green TEST: another use of purple..!? makes a HUGE difference..
-'string.regexp' = { fg = "light-green" } # Regular expression literal. # NOTE: good use of alt-green, but quite bright..
-'string.special' = { fg = "purple17", modifiers = ["italic"] } # Strings containing a path, URL, etc. NOTE: could use something funky 'n dark here..
+'string' = { fg = "purple17" } # String literal.
+  # TODO: use main text color (purple!) TODO: can dim if you need to
+'string.regexp' = { fg = "green2" } # Regular expression literal.
+  # NOTE: matches character escape
+'string.special' = { fg = "purple17", modifiers = ["italic"] } # Strings containing a path, URL, etc.
+  # NOTE: could use something funky 'n dark here..
 # 'string.special.path' = { } # String containing a file path.
-# 'string.special.url' = { } # String containing a web URL. TODO: seems to occur in comments
-'string.special.symbol' = { fg = "white" } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords. NOTE: great use of a nasty green
+# 'string.special.url' = { } # String containing a web URL.
+  # TODO: seems to occur in comments
+'string.special.symbol' = { fg = "dark-blue" } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords.
+  # NOTE: use secondary text (pink); can't! collides with punctuation :/
+  # TODO: TEMP: using a nasty color.. need a better green..
 
-'comment' = { fg = "gray2" } # This is a comment. # TODO: italics should be optional: modifiers = ["italic"]  TODO: not the biggest fan of this color either.. :/
+'comment' = { fg = "gray2" } # This is a comment.
+  # TODO: italics should be optional: modifiers = ["italic"]
+  # TODO: not the biggest fan of this color either.. :/
 # 'comment.line' = { } # Line comments, like this.
 # 'comment.block' = { } # Block comments, like /* this */ in some languages.
-'comment.block.documentation' = { fg = "gray2", modifiers = ["italic"] } # Doc comments, e.g '///' in rust. TODO: TEST: maybe okay to use italics here..
+'comment.block.documentation' = { fg = "gray2", modifiers = ["italic"] } # Doc comments, e.g '///' in rust.
+  # TODO: TEST: maybe okay to use italics here..
 
 'variable' = { fg = "white2" }  # Variable names.
-'variable.builtin' = { fg = "blue2" } # Language reserved variables: `this`, `self`, `super`, etc.
-# 'variable.parameter' = { } # Function parameters. # TODO this would be great to differentiate
+'variable.builtin' = { fg = "mid-blue" } # Language reserved variables: `this`, `self`, `super`, etc.
+'variable.parameter' = { fg = "white" } # Function parameters.
+  # TODO: should make this different.. TEST: white and white2
+  # TODO this would be great to differentiate
 # 'variable.other.member' = { } # Fields of composite data types (e.g. structs, unions).
-# 'variable.function' = { } # ?
+  # TODO: could use another color here..
+'variable.function' = { fg = "yellow-function" } # ? ruby-like everything is an object..?
+# NOTE: variable.other = "pink2" in aura ??
 
 'label' = { fg = "purple" } # Loop labels in rust.
 
-'punctuation' =  { fg = "pink2", modifiers = ["bold"] } # (){}[]:;,. NOTE: the bolded gold from noctic is really, really nice TODO: maybe just need to dim it a little..; also, noctis's yellow collides with the yellow function color
-# 'punctuation.delimeter' = { fg = "gold", modifiers = ["bold"] } # Commas and colons.
-'punctuation.bracket' = { fg = "pink2", modifiers = ["bold"]  } # Parentheses, angle brackets, etc.
+'punctuation' =  { fg = "pink2", modifiers = ["bold"] } # (){}[]:;,. 
+  # NOTE: the bolded gold from noctic is really, really nice, but it collides with the yellow-function color; also, bolded white is too much white, should save white just for variables only
+'punctuation.delimeter' = { fg = "gold", modifiers = ["bold"] } # Commas and colons.
+  # TODO: BUG: not working..??
+# 'punctuation.bracket' = { fg = "pink2", modifiers = ["bold"]  } # Parentheses, angle brackets, etc.
 
-'keyword' = { fg = "purple2", modifiers = ["bold"] } # Language reserved keywords.
-'keyword.control' = { fg = "purple-darker", modifiers = ["bold"] } # Control keywords.
-'keyword.control.conditional' = { fg = "purple-darker", modifiers = ["bold"] } # 'if', 'else', 'elif'. # TODO: could use a lighter purple, or better: cascading shades of purple
+'keyword' = { fg = "purple18" } # Language reserved keywords. var, void, struct, let, mut
+  # TODO: could use another color here.. something that doesn't stick out.. snazzy's yellow is too bright (and dim too dim)
+'keyword.control' = { fg = "purple2", modifiers = ["bold"] } # Control keywords.
+'keyword.control.conditional' = { fg = "purple2", modifiers = ["bold"] } # 'if', 'else', 'elif'.
+  # TODO: could use a cascading shades of purple here, between purple2 and purple-darker of operator, darkest on the outside, yet it's also nice to have it consistent..
 # 'keyword.control.repeat' = { } # 'for', 'while', 'loop'.
-'keyword.control.import' = { fg = "purple2", modifiers = ["italic"] } # 'import', 'export' ('use'?).
-'keyword.control.return' = { fg = "salmon", modifiers = ["italic", "bold"] } # 'return' in most languages. TODO: tried red, but it's so ugly!!.. :/ but does need it's own color.. still not a fan of this pink either.. bold makes it look better, more salmony
-'keyword.control.exception' = { fg = "salmon", modifiers = ["bold"] } # 'raise' in python.
-'keyword.operator' = { fg = "purple-darker"} # 'or', 'and', 'in'.
-'keyword.directive' = { fg = "purple2" } # Preprocessor directives (#if in C).
+'keyword.control.import' = { fg = "orange", modifiers = ["italic", "bold"] } # 'import', 'export' ('use'?).
+'keyword.control.return' = { fg = "salmon", modifiers = ["italic", "bold"] } # 'return' in most languages.
+  # NOTE: tried red, but it's so ugly!!.. :/ but could use it's own color.. still not a fan of noctis's pink either.. bold makes it look wayyy better, more salmony; italics makes it feel like it's *pressed* in
+'keyword.control.exception' = { fg = "salmon", modifiers = ["bold", "italic"] } # 'raise' in python.
+'keyword.operator' = { fg = "purple-darker" } # 'or', 'and', 'in'.
+'keyword.directive' = { fg = "purple2", modifiers = ["italic"] } # Preprocessor directives (#if, #include in C).
 'keyword.function' = { fg = "purple2", modifiers = ["bold"] } # The keyword to define a funtion: 'def', 'fun', 'fn'.
 
 'operator' = { fg = "purple-darker", modifiers = ["bold"] } # Logical (&&, ||) and - I assume - Mathematical (+, %) operators
 
 'function' = { fg = "yellow-function"}
-'function.builtin' = { fg = "yellow-function" }
+'function.builtin' = { fg = "orange" }
+  # TODO: TEST orange, maybe have to dim
 'function.method' = { fg = "yellow-function" } # Class / Struct methods.
-'function.macro' = { fg = "purple-darker" } # Like macros in rust.
-'function.special' = { fg = "gold" } # Preprocessor in C.
+  # TODO: should use the ugly teal here
+'function.macro' = { fg = "gold", modifiers = ["italic"] } # Like macros in rust.
+'function.special' = { fg = "gold", modifiers = ["italic"] } # Preprocessor in C.
 
-'tag' = { fg = "mid-blue"} # As in <body> for html.
+'tag' = { fg = "blue2" } # As in <body> for html.
 
-'namespace' = { fg = "mid-blue" } # * Namespace keyword in java, C#, etc.
+'namespace' = { fg = "dark-blue", modifiers = ["italic"] } # * Namespace keyword in java, C#, etc.
+  # accurately matches how i feel about namespace syntax..: *barf*
 
 
 # Markup ==============================
 # Colors for markup languages, like Markdown or XML.
 
-markup = "purple2" # NOTE: added from old config
+markup = "purple2"
+  # NOTE: added from old config
 
 'markup.heading' = { fg = "orange2" } # Markdown headings
 # 'markup.heading.1' = { } # Markdown heading 1 color.
@@ -151,7 +213,8 @@ markup = "purple2" # NOTE: added from old config
 'markup.bold' = { modifiers = ["bold"] } # Bold text.
 'markup.italic' = { modifiers = ["italic"] } # Italicised text.
 
-'markup.link' = { fg = "mid-blue", modifiers = ["underlined"] } # TODO: TEST: originally no color in vs-code's aura
+'markup.link' = { fg = "mid-blue", modifiers = ["underlined"] }
+  # TODO: TEST: originally no color in vs-code's aura, just underlined
 # 'markup.link.url' = { } # Urls pointed to by links.
 # 'markup.link.label' = { } # Non-URL link references.
 'markup.link.text' = { fg = "purple"} # URL and image descriptions in links.
@@ -178,7 +241,7 @@ markup = "purple2" # NOTE: added from old config
 # Diff ==============================
 # Version control changes.
 
-'diff.plus' = "green2" # { } # Additions.
+'diff.plus' = "light-green" # { } # Additions.
 'diff.minus' = "red2" # { } # Deletions.
 'diff.delta' = "orange2" # { } # Modifications.
 'diff.delta.moved' = "blue2" # Renamed or moved files / changes.
@@ -190,32 +253,31 @@ markup = "purple2" # NOTE: added from old config
 # mid-green = "#073a40" # highlights
 # autocomp-green = "#0d6772" # lighter than mid-green
 light-green = "#48e9a7" # a nice sea-green, bright neon when bolded, was "green", re-used for text under the cursor
-light-green-complement = "#e9488a" # used to match surrounding pairs, too fugly to use as a cursor tho.. pink2 is better TODO: tho i kinda prefer a different color for the match
 
 salmon = "#df769b" # re-used for return, was "pink"
 gold = "#ffd800" # a nice, shiny gold used for punctuation, was "yellow"
 purple-darker = "#6f60ea" # this purple is slightly darker than aura's, used for cascading keywords, but seems to match vs-code's aura better??
 white = "#b1cace"
-orange = "#e4b782" # too close to yellow-function
+orange = "#e4b782" # this looks great in noctis, too bright, but maybe can use as an alternative to the similar yellow-function, maybe dimmed
 gray = "#5b858b" # mainly for comments/background text
 red = "#e34e1b"
 
-dark-blue = "#19a2b7"
-mid-blue = "#47ace8"
-light-blue = "#87efff"
+dark-blue = "#19a2b7" # used for constants or atoms, along with green2
+mid-blue = "#47ace8" # TEMP: using for type, need a better, lighter blue
+light-blue = "#87efff" # a bright cyan
 
 
 # aura dark soft/dim
 purple2 = "#8464c6"
 purple_selection = "#3d375e7f"
 purple_selection_solid = "#29263c"
-green2 = "#54c59f"
+green2 = "#54c59f" # used for either constants or atoms, need a better one.. though it does fit the aqua sea feelin' of the overall theme.. maybe bogster's green
 orange2 = "#c7a06f" # warning
 pink2 = "#c17ac8" # great, comfy pink for ui, shuold be second main text color
-blue2 = "#6cb2c7" # type
+blue2 = "#6cb2c7" # type TODO: this "blue" is nasty.. trying dark-blue instead..
 red2 = "#c55858" # error
 white2 = "#bdbdbd" # var
-gray2 = "#6d6d6d"
+gray2 = "#6d6d6d" # comment TODO: need to make this prettier..
 black2 = "#15141b" # bg
 
 yellow-function = "#ffca85" # TODO: still a little bright..
@@ -225,9 +287,28 @@ purple17 = "#a394f033" # great comfy purp for ui, should be main color
 text10 = "#adacae"
 bg24 = "#1f1a27" # soft dark
 
+# somewhere hidden in aura
 text33 = "#2e2b38" # slightly brighter than white
 
-# markers = 
+marker13 = "#2d2d2d" # a barely visible gray
 
+# others scraped from aura
+# light-blue-aura = "#82e2ff" # seems like noctis's light-blue.. a bright cyan.. this one also sticks out too much..
+# purple14 = "#af8aff7f" # light purple
+purple18 = "#a394f000" # purple17 with 00 alpha (opaque?)
 
-# the "white" from the standard aura is nice too, just less dim
+# new colors
+light-green-complement = "#e9488a" # used to match surrounding pairs, too fugly to use as a cursor tho.. pink2 is better TODO: tho i kinda prefer a different color for the match
+
+# from material darker
+# cyan = "#89ddff" # seems too bright..
+
+# from everforest dark
+# aqua = "#83c092"
+
+# from snazzy
+# yellow-snazzy = "#f3f99d" # it's different, but didn't work. keep it tho.
+
+# from boo berry
+# berry_desaturated = "#886C9C" # originally used for comments, but didn't quite work.. maybe because boo berry has a background color..; didn't quite work for keywords either, as it was too dim and didn't match the rest of the scheme, like dirty blood.. worth keeping!
+# gold-dim = "#E3C0A8" # a really nice, dim color
