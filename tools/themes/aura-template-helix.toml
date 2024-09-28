@@ -76,7 +76,7 @@ markup = "purple"
 "diff.delta" = "orange" 
 "diff.minus" = "red"
 
-[pallete]
+[palette]
 # dark soft/dim
 purple = "#8464c6" # 132,100,198	accent1	primary color	
 purple_selection = "#3d375e7f" # 61,55,94	accent20	selections	
