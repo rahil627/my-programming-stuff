@@ -83,31 +83,18 @@ markup = "purple"
 "diff.minus" = "red"
 
 [palette]
-# dark soft/dim
-purple = "#8464c6" # 132,100,198	accent1	primary color	
-purple_selection = "#3d375e7f" # 61,55,94	accent20	selections	
-purple_selection_solid = "#29263c" # 41,38,60	accent38	selections (without alpha)	
-green = "#54c59f" # 84,197,159	accent2	secondary color	
-orange = "#c7a06f" # 199,160,111	accent3	tertiary color	
-pink = "#c17ac8" # 193,122,200	accent6	quaternary color	
-blue = "#6cb2c7" # 108,178,199	accent32	quinary color	
-red = "#c55858" # 197,88,88	accent5	senary color	
-white = "#bdbdbd" # 189,189,189	accent7	foregrounds
-gray = "#6d6d6d" # 109,109,109	accent8	comments	
-black = "#15141b" # 21,20,27	accent12	backgrounds
-
 # dark
-# purple	= "#a277ff" #	162,119,255	accent1	Primary color
-# purple_selection = "#3d375e7f" #	61,55,94	accent20	Selections
-# purple_selection_solid	= "#29263c" #	41,38,60	accent38	Selections (without alpha)
-# green	= "#61ffca" #	97,255,202	accent2	Secondary color
-# orange	= "#ffca85" #	255,202,133	accent3	Tertiary color
-# pink	= "#f694ff" #	246,148,255	accent6	Quaternary color
-# blue	= "#82e2ff" #	130,226,255	accent32	Quinary color
-# red	= "#ff6767"	# 255,103,103	accent5	Senary color
-# white	= "#edecee" #	237,236,238	accent7	Foregrounds
-# gray	= "#6d6d6d" #	109,109,109	accent8	Comments
-# black	= "#15141b" #	21,20,27	accent12	Backgrounds
+purple	= "#a277ff" #	162,119,255	accent1	Primary color
+purple_selection = "#3d375e7f" #	61,55,94	accent20	Selections
+purple_selection_solid	= "#29263c" #	41,38,60	accent38	Selections (without alpha)
+green	= "#61ffca" #	97,255,202	accent2	Secondary color
+orange	= "#ffca85" #	255,202,133	accent3	Tertiary color
+pink	= "#f694ff" #	246,148,255	accent6	Quaternary color
+blue	= "#82e2ff" #	130,226,255	accent32	Quinary color
+red	= "#ff6767"	# 255,103,103	accent5	Senary color
+white	= "#edecee" #	237,236,238	accent7	Foregrounds
+gray	= "#6d6d6d" #	109,109,109	accent8	Comments
+black	= "#15141b" #	21,20,27	accent12	Backgrounds
 
 
 # https://github.com/daltonmenezes/aura-theme/blob/main/src/core/colors/schemes/common.ts
