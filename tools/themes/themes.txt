@@ -14,9 +14,16 @@ terminal.sexy (website)
 helix:
   - see config for more info
 default
-**boo berry**
+  - great purple text, but suffers from bright yellows, and i don't like the green comments
+boo berry
+  - ugly christmas reds 'n greens tarnish an otherwise a very practical purple theme
 **noctis**
-  - sea green, more coordinated than jellyfish
+  - sea green, more color-coordinated than jellyfish
+
+classics that were well-ported:
+tokyonight
+everforest-dark
+
 
 vs-code:
   - see vs-code-extensions.txt
@@ -25,40 +32,57 @@ vs-code:
 **aura**
   - the best i've seen so far..
   - dark (soft text)
-jellyfish
-  - a nice monokai variant, though incredibly bright if there's any brightness on the screen, still suffers from those ugly reds from monokai
 
-to try next:
+decent:
+noctis
+  - unique color scheme, good with original green background and purple (vue) background
+
 shades of purple
-  - adventure time but purple
-pink-cat-boo
-  - beige
-huacat
-
-newer classics to try:
+  - adventure time but purple, the dark one isn't so good tho..
+  
 Night Owl
-Firefly Pro
+  - solid, purple, blue, green
+  - **italics for functions is interesting.. denoting execution goes elsewhere, like return**
+  
 Midnight Synth
-Cobalt2
-pop 'n lock
+  - not bad! purple ui, hot pink control keywords, off-purple comments, sea-green functions
+  
+Atom One Dark
+  - solid stuff, actually same colors as aura (purple keywords, green strings; swaps orange clases with blue functions) but with a github light grey background
+    - TODO: worth trying to swap functions and classes to have more blue
 
 like palenight:
-catpuccin
 moonlight
+  - ?
 tokyonight
-  - darker
+  - darkest background
+catpuccin
+  - variations in between
 palenight
   - classic
-  
-old classics to try:
-Dracula Official
-Atom One Dark
+  - purple, blue, cyan, orange, green
 
-uninstalled the rest:
+
+at least has something nice about it:
+pop 'n lock
+  - great contrast but bad colors. the ui is the highlight with a nice 'n clear borders 'n accents for a purp 'n gold scheme
+jellyfish
+  - a nice monokai variant, though incredibly bright if there's any brightness on the screen, still suffers from those ugly reds from monokai
 monokai two (darker)
   - similar to github's theme, very gray in the backgrounds tho
 synthwave '84
   - syntax color scheme is too wild, but i dig the sheer difference of it
+  
+
+to try next:
+
+
+garbage:
+Dracula Official
+Firefly Pro
+Cobalt2
+pink-cat-boo
+huacat
 
 
 terminal:
