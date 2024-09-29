@@ -179,8 +179,8 @@
 
 'punctuation' =  { fg = "pink", modifiers = ["bold"] } # (){}[]:;,. 
   # NOTE: the bolded gold from noctic is really, really nice, but it collides with the orange-brighter color; also, bolded white is too much white, should save white just for variables only
-'punctuation.delimeter' = { fg = "gold", modifiers = ["bold"] } # Commas and colons.
-  # TODO: BUG: not working..?? TEST: gold
+'punctuation.delimiter' = { fg = "pink-hot", modifiers = ["bold"] } # Commas and colons.
+  # TODO: TEST: i might just prefer the same pink for consistency.. though this is very very slight..!
 'punctuation.bracket' = { fg = "pink", modifiers = ["bold"]  } # Parentheses, angle brackets, etc.
 
 'keyword' = { fg = "purple" } # Language reserved keywords. var, void, struct, let, mut, was accent18 TODO: try it
