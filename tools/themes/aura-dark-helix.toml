@@ -69,7 +69,7 @@ variable = "white" # should be dimmed
 keyword = "purple"
 operator = "purple"
 
-function = "accent31" # should be yellow
+function = "orange"
 tag = "purple"
 
 markup = "purple"
@@ -103,7 +103,6 @@ black	= "#15141b" #	21,20,27	accent12	Backgrounds
 # ...
 # accent4 = "#9dff65" # bright green
 # ...
-accent31 = "#ffca85"
 # accent32 = "#82e2ff" # light blue!!
 # accent33 = "#24222c" # black
 # accent34 = "#00000000" # fully transparent,
