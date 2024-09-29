@@ -1,8 +1,12 @@
-# forked from:
+# ported by:
+# Author: CptPotato
 # https://github.com/CptPotato/helix-themes/tree/main
-# the top portion of this was from schemes/edge
+# the top portion of this was extracted from schemes/edge
 # the bottom portion from pallettes/edge
+
 # originally from:
+# Author: Sainnhepark
+# License: MIT
 # https://github.com/sainnhe/edge
 
 "type" = "yellow"
