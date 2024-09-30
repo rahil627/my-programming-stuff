@@ -567,6 +567,29 @@ space = "command_palette" # ? by default
 ","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
 ";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]
 
+# [keys.normal.b]
+# # NOTE: just copy 'n paste from buffer/pane mappings
+# b = "buffer_picker" # originally space,b
+# j = "goto_next_buffer" # gn, :bn TODO: gj/gk, currently gn/gp
+# k = "goto_previous_buffer" # gp, :bp
+# n = ":new" # :n
+# w = ":buffer-close" # :bc # matches close tab in windows os
+# # c = ":buffer-close" # :bc # (c)lose
+# q = ":buffer-close" # q feels stronger than w/c
+
+# # combined mappings
+# # matches terminal split and nav shortcuts (a-hjkl, a-w)
+# # NOTE: you can goto_next_buffer within a view! so still need to rotate_view
+# h = "rotate_view" # TODO: gh/hl is taken, so gn/gp or gc-j/gc-k or gc-n/gc-p
+# l = "rotate_view_reverse"
+#  # NOTE: replaces kill_to_line_start/end
+# s = ":hsplit-new" # s > h
+# v = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
+# # q = ":quit" # closes current view, but not the buffer
+# c = ":quit" # although q works for :quit command, it shouldn't have been named quit to begin with. q feels stronger, use either c and/or w
+
+
+
 [keys.normal.g]
 j = "page_down" # strangely simply move up/down one line by default TODO: change in repo
 k = ["page_up", "goto_window_top"]
@@ -599,6 +622,7 @@ o = "select_textobject_around" # o for outside; default was a
 shell = ["pwsh", "-c"]
 
 line-number = "relative"
+# rulers = [80, 120]
 # auto-format = "false" # WARNING: "true" by default!
 
 
