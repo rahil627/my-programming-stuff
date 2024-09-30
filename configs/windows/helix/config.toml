@@ -205,20 +205,15 @@ D = ["collapse_selection", "delete_selection"] # to delete one char, matches R a
 C-o = "expand_selection" # A-o/i by default; word -> inside comment or parameters (repeated) -> line -> block -> buffer; it just works via tree-sitter not lsp TODO: remove final select entire buffer expansion
 C-S-o = "shrink_selection" # selects current word at minimum; holding control and pressing shift made more sense
 
-# TODO: default X = extend_to_line_bounds now unmapped!
-x = ["extend_line", "select_mode"] # fantastic mapping, teaches you to use select_mode in the process
+# idea from 00sapo
+# x = "extend_to_line_bounds" # /shrink, strangely, this was the default..??
+x = ["extend_line", "select_mode"] # fantastic mapping, teaches you to use select_mode in the process, allowing precise selection, at the cost of one key to exit
 X = ["extend_line", "select_mode", "flip_selections"] # same as the above but prepare for going up by flipping the cursor to the beginning of the selection
-# x = "extend_line_below" # the default
-# X = "extend_line_above" 
+C-x = "extend_line_below" # the sane default, press again to extend one more line
+C-X = "extend_line_above"
+  # matches C-ret/C-ret for adding lines down/up
 
-# x without the newline?
-# select within the line bounds, useful for quick whole-line changes
-# X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] # TODO: make it extend to next line, like x does
-# select_line_below? # how does this work..?
-# TODO: C-x - delete/cut line?
-# TODO: C-S-x - delete/cut from first non-white-space?
-
-
+  
 # r<->R: i don't understand the use of r for more than one char, whereas R is used more often, replacing a selection, and works well with search (search and replace); can just use c to replace a single char, at the cost of one more key-press..??
 r = "replace_with_yanked" # this matches y/p better
 # R = "replace" # NOTE: re-mapped above
