@@ -1,10 +1,6 @@
 # WARNING: be careful when removing ("tweaking") things from windows, often, it's not worth the damage it can do. Instead, look for ways to simply turn things off.
 # if you do remove the wrong package, use the reinstall-removed-package.ps1 script to add it back
 
-# other stuff to turn off:
-# settings -> personalization -> taskbar -> widgets -> off
-# settings -> personalization -> lock screen -> lock screen status -> none
-
 $bloatware = @{
 
     # winget list | select-string "app-name"
