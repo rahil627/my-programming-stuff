@@ -20,6 +20,8 @@
 
 # TODO:
 # maybe add a fallback for every table..?
+# currently trying a dimmer shade of pink for variable-other, but there's too many keywords categorized in there..
+# currently trying a dimmer shade for keyword.storage.modifier..
 # find out where the color for file picker is set, and try to dim it
   # i tried searching the other configs in the repo to no avail, just found ui.picker.header
 # oranger-brighter used for functions is slightly too bright, get a darker shade (using orange for now..)
@@ -59,17 +61,17 @@
 # UI ==============================
 # For styling helix itself.
 
-'ui.background' = { fg = "purple-pleasant", bg = "bg"} # Default background color., the fg seems to be used for borders..
+'ui.background' = { fg = "purple-pleasant-dimmer", bg = "bg"} # Default background color., the fg seems to be used for borders..
 'ui.window' = { fg = "gray-stone" } # Window border between splits.
   # pruple also works really well here.. maybe more needed when there are no line numbers..
 
 'ui.gutter' = { fg = "orange-warning"} # Left gutter for diagnostics and breakpoints.
 
-'ui.text' = { fg = "purple-pleasant" } # Default text color. used in text files, pickers, ui, and more!
+'ui.text' = { fg = "purple-pleasant-dimmer" } # Default text color. used in text files, pickers, ui, and more!
 'ui.text.focus' = { fg = "pink", bg = "selection-ui", modifiers = ["bold"] } # Selection highlight in buffer-picker or file-picker.
-'ui.text.info' = { fg = "pink", bg ="bg", modifiers = ["dim"] } # Info popup contents (space mode menu).
+'ui.text.info' = { fg = "pink-even-dimmer", bg ="bg" } # Info popup contents (space mode menu).
   # see ui.menu for auto-complete
-  # NOTE: pink pops out more, making it better than the comfy purple-pleasant here
+  # NOTE: pink pops out more, making it better than the comfy purple-pleasant-dimmer here
 'ui.text.inactive' = { fg = "gray-stone-lighter", modifiers = ["dim"] } # i think used in autocomplete suggestion..
   # TODO: a little hard to see, but i like it better than white-stone and purple-darker..
 
@@ -132,7 +134,7 @@
 # 'ui.picker' = { fg = "purple" } # ope.. good guess..
 "ui.picker.header" = { modifiers = ["bold"] } # TODO: TEST: i found this in another config, no clue yet..
 
-'ui.popup' = { fg = "purple-pleasant", bg = "bg" } # Documentation popups (space-k).
+'ui.popup' = { fg = "purple-pleasant-dimmer", bg = "bg" } # Documentation popups (space-k).
 'ui.popup.info' = { fg = "purple", bg = "bg" } # Info popups box (space mode menu). just the borders.
   # gold is very pretty here.., but distracting.. purple creates a solid frame and feels out of the way..
   # modifiers don't work here.. no shiny blinky stuff..; also dim doesn't work, so can't use purple-pleasant dimmed..
@@ -175,11 +177,11 @@
 # 'constant.numeric.integer' = { } # constant integer value.
 # 'constant.numeric.float' = { fg = "green-aqua" } # constant float value.
 
-'string' = { fg = "purple-pleasant" } # String literal.
+'string' = { fg = "purple-pleasant-dimmer" } # String literal.
   # changed to use main text color (purple!) TODO: can decrease alpha more if needed
 'string.regexp' = { fg = "green-aqua" } # Regular expression literal.
   # NOTE: matches character escape
-'string.special' = { fg = "purple-pleasant", modifiers = ["italic"] } # Strings containing a path, URL, etc.
+'string.special' = { fg = "purple-pleasant-dimmer", modifiers = ["italic"] } # Strings containing a path, URL, etc.
   # could use something funky 'n dark here..
   # i hate long underlined text!, so def don't want that..
   # TODO: TEST: italics
@@ -198,21 +200,23 @@
   # TODO: TEST: maybe okay to use italics here..
 
 'variable' = { fg = "white-stone" }  # Variable names.
+  # likely the most important word in the line, and therefore must be the most easily visible, yet comfortable
 'variable.builtin' = { fg = "blue-aqua" } # Language reserved variables: `this`, `self`, `super`, etc.
   # NOTE: matches class color
 'variable.parameter' = { fg = "white-stone" } # Function parameters.
   # TODO: this would be really useful to differentiate.. white-sea-tinged isn't too bad..
-# 'variable.other.member' = { } # Fields of composite data types (e.g. structs, unions).
-  # TODO: could use another color here..
 'variable.function' = { fg = "orange" } # ? ruby-like everything is an object..?
-# NOTE: variable.other = "pink" in aura ??
+'variable.other' = { fg = "white-stone" } # from aura..
+  # fallback
+'variable.other.member' = { fg = "pink-dimmer" } # Fields of composite data types (e.g. structs, unions).
+  # TODO: decide white-stone vs pink vs another color, and remember to turn down punctuation down a notch in hotness; would be nice to create a slightly tinged color, like noctis's white-sea-tinge
 
 'label' = { fg = "purple" } # Loop labels in rust.
 
 'punctuation' =  { fg = "pink", modifiers = ["bold"] } # (){}[]:;,. 
   # NOTE: the bolded gold from noctic is really, really nice, but it collides with the orange-brighter color; also, bolded white is too much white, should save white just for variables only
 'punctuation.delimiter' = { fg = "pink-hot", modifiers = ["bold"] } # Commas and colons.
-  # TODO: TEST: i might just prefer the same pink for consistency.. though this is very very slight..!
+  # pink-hotter is slightly too annoying..
 'punctuation.bracket' = { fg = "pink", modifiers = ["bold"]  } # Parentheses, angle brackets, etc.
 'punctuation.special' = { fg = "gold", modifiers = ["bold"] } # no clue..
 
@@ -231,9 +235,10 @@
   # TODO: doesn't look like it's working..??
 'keyword.directive' = { fg = "purple", modifiers = ["italic"] } # Preprocessor directives (#if, #include in C).
 'keyword.function' = { fg = "purple", modifiers = ["bold"] } # The keyword to define a funtion: 'def', 'fun', 'fn'.
-'keyword.storage' = { fg = "purple", modifiers = ["italic"] } # function and type modifiers/accessors: public/private, internal, readonly, const, etc.; also struct? enum? var?? namespace?; also let, mut.. lots!! TODO: maybe there's more properties in here..??
-  # only makes sense to bold in C#.. italics seems better fit for most languages, especially rust
-  # NOTE: struct and var should match type.builtin
+'keyword.storage' = { fg = "purple" } # let and var in rust.. these should be more visible.. i tried defualt's almond, but it was just too bright..
+'keyword.storage.modifier' = { fg = "purple-dimmer", modifiers = ["italic"] } # function and type modifiers/accessors: public/private, mut, dyn, ref, &, internal, readonly, const, etc.
+  # these should be less visible
+  # bold makes sense here for C#, as it's usually the start of a function, but not so much for rust..
 'keyword.storage.type' = { fg = "green-sea", modifiers = ["italic"] } # class, struct, enum, namespace, sometimes var? (for javascript but not rust)
   # matches type.builtin
 
@@ -266,7 +271,7 @@
 # a little different from code since it's so simple, using a simple two color scheme: purple 'n gold
 # NOTE: it inherits the main text color from ui.text, and punctuation too
 
-markup = "purple-pleasant" # fallback
+markup = "purple-pleasant-dimmer" # fallback
 
 'markup.bold' = { fg = "orange" } # Bold text.
   # bold text isn't so easy to read.. but purple bold works pretty well alongside purple-pleasant
@@ -297,7 +302,7 @@ markup = "purple-pleasant" # fallback
   # seems to underline only when highlighted, which is great!!
 'markup.link.url' = { fg = "gray-stone"} # Urls pointed to by links.
 'markup.link.label' = { fg = "gray-stone" } # Non-URL link references.
-'markup.link.text' = { fg = "purple-pleasant"} # URL and image descriptions in links.
+'markup.link.text' = { fg = "purple-pleasant-dimmer"} # URL and image descriptions in links.
 
 'markup.quote' = { fg = "pink", modifiers = ["italic"] } # `> Quotes` in Markdown.
 
@@ -347,18 +352,24 @@ red = "#e34e1b"
 
 blue-dark = "#19a2b7" # TODO: quite hideous toxic aqua green... currently using for namespaces, as i don't have anymore colors..
 blue-aqua = "#47ace8" # currently used for types, a pretty standard blue for classes..
-cyan = "#87efff" # a tad bit too bright..
+cyan = "#87efff" # a tadtoo bright..
 
 
 # aura dark soft/dim
 purple = "#8464c6"
+purple-dimmer = "#705AA2" # via radix.ui.com
 purple-selection = "#3d375e7f"
 purple-selection-solid = "#29263c"
 green-aqua = "#54c59f" # used for constants/literals, not the prettiest, but it fits the aqua sea feelin' of the overall theme.. maybe can try bogster's green
 orange-warning = "#c7a06f" # warning, like a dim hazard sign
 pink = "#c17ac8" # great, comfy pink for pop-up-menu ui text, TODO: shuold be second main text color, but using it for punctuation at the moment..
 # pink-lighter = "#cb90d1" # 1/7th shade lighter (whiter)
-pink-hot = "#cc6cd6" # +25% saturation, nice 'n slight! for delimiters
+# white-stone-pink = "#BEA7C1" # somewhere between white-stone and pink; meh... pink is just more clearly visible than the colors between..
+# pink-brighter = "#DE95E5"
+pink-dimmer = "#B56EBC" # slightly desaturated, used for fields/methods and elixir's @thing
+# fuschia = "#A955B2" # TODO: an interesting one to use..
+pink-even-dimmer = "#8C5C90" # used for pop-up menus, similar to pink with dim modifier TODO: maybe too dim..
+pink-hot = "#cc6cd6" # +25% saturation, nice 'n slight! for delimiters via coolers.co gradient
 pink-hotter = "#d85ee3" # +50% saturation, for "special" symbols
 green-sea = "#6cb2c7" # builtin type, a bit funky but very much readable
 red-error = "#c55858" # error, looks great when blinking, like red flashing like underwater!
@@ -371,6 +382,8 @@ bg = "#15141b" # was "black"
 
 orange-brighter = "#ffca85" # brighter than noctis's orange
 purple-pleasant = "#a394f033" # great comfy purp for ui, should be main color, used for text (in .txt files) and strings and ui, was accent17
+  # NOTE: still use this with dim modifer to make a color even dimmer than purple-pleasant-dimmer
+purple-pleasant-dimmer = "#9889E4" # switch to using this as main text.. along with pink-dimmer
 
 # aura colors shared between variations
 # text10 = "#adacae" # TODO: try it
