@@ -413,15 +413,18 @@ C-S-q = ":quit" # closes current view, but not the buffer
 
 
 # commonly used commands (including macros!! :o)
-
-
 # TODO: think of a key to create a pop-up menu for macros
 #       currently, m = match pop-up, 
 
-# TODO: move selection up/down (macro)
-# alt+up/down in vscode
-# C-S-j = "move_line_down" # move_line_down/up doesn't do what you think, it just moves the cursor
-# C-S-k = "move_line_up"
+# move selection up/down
+# move line up/down
+# https://github.com/helix-editor/helix/discussions/1360
+C-S-down = ["ensure_selections_forward", "extend_to_line_bounds", "extend_char_right", "extend_char_left", "delete_selection", "add_newline_below", "move_line_down", "replace_with_yanked"]
+C-S-up = ["ensure_selections_forward", "extend_to_line_bounds", "extend_char_right", "extend_char_left", "delete_selection", "move_line_up", "add_newline_above", "move_line_up", "replace_with_yanked"]
+  # alt+up/down in vscode
+  # TODO: if this is useful, can think of a proper key for it later..
+  # NOTE: common C-left/right/up/down mappings are all unmapped
+
 
 
 
