@@ -7,10 +7,17 @@ https://www.youtube.com/watch?v=a_1cV7hg5G8
     - great, but expensive
   - "plugins" (flash, java applets, etc.)
     - iphone killed it by not allowing it, and enforcing everyone to use standard http
-  - ajax -> fetch
+  - ajax -> fetch()
     - an example: autocomplete
       - a json is sent upon every keystroke
   - single page apps
+    - lead to react, angular, etc. frameworks
+  - web sockets
+    - allows you to leave a connection open and continously transfer data
+      - enabling games, chat apps, etc. reactivity/interaction
+  - web assembly
+    - **why javascript compiler? why not just send native code over the net, so your computer can run it natively/as machine code?hence web assembly is a native runtime that works in a browser**
+      - this then allows devs to use whatever language they like (that has a web assembly compiler)
   - made it to 9 minutes, gettin' sleepy
 
 https://www.youtube.com/watch?v=0gH-hSyWp9o
