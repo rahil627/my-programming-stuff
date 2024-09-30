@@ -561,9 +561,17 @@ C-A-q = ":quit-all!"
 # TODO: really need to create one for buffers? check window/c-w menu
 # [keys.normal.b] # TODO: b used by back one word
 
+
+
 ## edit existing pop-up menus
 [keys.normal.space]
 space = "command_palette" # ? by default
+# b = TODO: how to go to another mode?
+
+# copy entire buffer into clipboard:
+C-a = ["save_selection", "select_all", "yank_main_selection_to_clipboard", "jump_backward"] # TODO: need to add a title to the menu
+
+# append delimiters to the end of line
 ","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
 ";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]
 
