@@ -1,0 +1,101 @@
+
+install lisp:
+scoop install sbcl
+
+install a lispy editor:
+
+lem
+  - an editor written in common lisp!
+  - has several front-ends: ncurses, sdl2, etc.
+  - https://github.com/lem-project/lem
+  - learn to use it!
+    - https://lem-project.github.io/usage/usage/
+
+portacle
+  - try meow-mode
+  - an emacs config specialized for common lisp
+  - https://portacle.github.io/
+  - scoop install win-portacle
+    - "couldn't find manifest"
+
+struggle with vi/emacs key-bindings :(
+  - use a gui editor
+  - try meow-mode in emacs
+
+
+
+
+learning resources:
+
+https://github.com/GustavBertram/awesome-common-lisp-learning
+  - **lisp koans**
+    - https://github.com/google/lisp-koans
+
+
+
+
+
+
+**land of lisp**
+  - an old book that teaches lisp by making games, or pieces of games
+
+**let over lambda**
+  - a book about macros!
+  - https://letoverlambda.com/
+    - first 6 chapters are online, maybe in the process of being uploaded..??
+
+https://gigamonkeys.com/book/
+  - practical common lisp, formmated for digital viewing
+  - not bad for a reference book..
+
+on lisp
+  - bottom-up programming, including functional programming, rapid prototyping, interactive development, embedded languages, and CLOS
+
+https://github.com/rabbibotton/clog/blob/main/LEARN.md
+  - learn by using CLOG, a gui that uses the browser as it's engine??
+  - sounds like good immediate feedback..
+  - it has a lot of examples and tutorials, but i'd rather stick ot the std lib
+
+
+
+
+
+
+
+
+
+to emacs:
+
+m = modifier key (alt, mac)
+
+m-x
+  - command prompt
+  - lisp-mode, markdown-mode, etc.
+    - called a "major-mode"
+  - abbrev
+    - autocomplete
+	- m-/
+  - abbrev-with-popup-window
+  - describe key (c-x ?)
+  - describe bindings
+  - documentation-describe-bindings
+    - list all bindings
+
+c-x
+  - (d)irectory viewer
+  - (f)ile
+  - (s)ave
+  - o / m-o
+    - switch windows
+  - (b)uffer
+  - left/right arrows
+    - left/right buffer
+  - (c)lose
+    - quit
+  - (w)rite
+  - ?
+    - describe-key
+
+m
+  - / (or c-p in vi's insert-mode)
+    - autocomplete
