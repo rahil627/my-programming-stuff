@@ -243,6 +243,11 @@ r = "replace_with_yanked" # this matches y/p better
 # or expand_selection?
 "C-*" = ["move_prev_word_start", "move_next_word_end", "search_selection"] # TODO: c-* doesn't work
 
+'@' = "replay_macro"
+'C-2' = "record_macro" # binds C-2 and C-S-2
+# 'C-@' = "record_macro"
+# 'C-S-2' = "replay_macro"
+
 
 # tab was completely unmapped by default
 tab = "goto_next_buffer"
