@@ -20,8 +20,6 @@
 
 # TODO:
 # maybe add a fallback for every table..?
-# currently trying pink for variable-other, but there's too many keywords categorized in there..
-# keyword.storage has wayyyy too many keywords categorized in there.. surely theres some sub-categories in there..
 # find out where the color for file picker is set, and try to dim it
   # i tried searching the other configs in the repo to no avail, just found ui.picker.header
 # oranger-brighter used for functions is slightly too bright, get a darker shade (using orange for now..)
@@ -154,9 +152,11 @@
 
 'type' = { fg = "blue-aqua" } # Variable type, like integer or string, including program defined classes, structs etc..
   # NOTE: sometimes there's class / end, which looks odd not bolded like other control/end statements
-'type.builtin' = { fg = "green-sea" } # Primitive types of the language (string, int, float).
+  # doesn't seperate declaration, parameters, instantiation (though there is constructor), so it's difficult to italicize
+'type.builtin' = { fg = "green-sea", modifiers = ["italic"] } # Primitive types of the language (string, int, float).
   # blue-dark was just too ugly.. this is still a funky sea green.. TODO: this is still a funky sea green..
 'type.enum.variant' = { fg = "green-sea" } # A variant of an enum.
+  # vs match constant color
   # NOTE: i think was pink in aura theme.. but i def didn't like that for the enum values TODO: maybe white is fine
 
 'constructor' = { fg = "blue-aqua" } # Constructor method for a class or struct. And in some cases applies to module names, as in ruby
@@ -234,6 +234,8 @@
 'keyword.storage' = { fg = "purple", modifiers = ["italic"] } # function and type modifiers/accessors: public/private, internal, readonly, const, etc.; also struct? enum? var?? namespace?; also let, mut.. lots!! TODO: maybe there's more properties in here..??
   # only makes sense to bold in C#.. italics seems better fit for most languages, especially rust
   # NOTE: struct and var should match type.builtin
+'keyword.storage.type' = { fg = "green-sea", modifiers = ["italic"] } # class, struct, enum, namespace, sometimes var? (for javascript but not rust)
+  # matches type.builtin
 
 
 'operator' = { fg = "purple-darker", modifiers = ["bold"] } # Logical (&&, ||) and - I assume - Mathematical (+, %) operators
