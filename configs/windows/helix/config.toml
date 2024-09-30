@@ -564,6 +564,8 @@ C-A-q = ":quit-all!"
 ## edit existing pop-up menus
 [keys.normal.space]
 space = "command_palette" # ? by default
+","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
+";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]
 
 [keys.normal.g]
 j = "page_down" # strangely simply move up/down one line by default TODO: change in repo
