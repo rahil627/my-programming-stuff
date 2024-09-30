@@ -8,7 +8,10 @@
 # https://github.com/helix-editor/helix/discussions/1360#discussioncomment-10692211
 
 # TODO: / main things that bother me
+# newlines characters!!
+  # i don't remember this ever being a problem in gui text editors.., but here, it requires constant consideration :(
 # where is the repeat-action? '.' repeats the last paste or something..
+# finish S-j/k, and re-mapping join/keep
 # use c+j/k to move down/up pop-up dialog lists
 # move [] modes to c+i/o?
 #   - repeat_last_motion
@@ -298,7 +301,7 @@ L = ["extend_parent_node_end", "extend_char_left"]
   # could use C-S-H/L, currently mapped to next/prev pane
   # C-i/o? C-u/b?
  
-# still missing extend char..
+# TODO: still missing extend char.. (see above)
 S-left = "extend_char_left"
 S-right = "extend_char_right"
 S-up = "extend_line_up"
@@ -522,7 +525,7 @@ C-a = "select_all" # default is % in normal mode, useful in combination with sel
 #  - should be free TODO: don't use OS to bind it
 # **return**
 # **backspace**
-#  - big on most keyboards!!
+# wayyy wayyy  - big on most keyboards!!
 # **\**
 #  - big on my keyboard!
 #  - :sh (run a shell command)
