@@ -567,6 +567,16 @@ space = "command_palette" # ? by default
 ","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
 ";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]
 
+
+[keys.normal.space.t]
+# NOTE: jacked this from someone else, still haven't used..
+# vs in my custom mode?..
+a        = ":toggle-option auto-completion"
+s        = ":toggle-option auto-save"
+f        = ":toggle-option auto-format"
+h        = ":toggle-option lsp.display-inlay-hints"
+l        = ":toggle-option lsp.enable"
+
 # [keys.normal.b]
 # # NOTE: just copy 'n paste from buffer/pane mappings
 # b = "buffer_picker" # originally space,b
