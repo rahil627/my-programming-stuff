@@ -8,8 +8,9 @@
 -- debug lua scripts via the debug console!! control+shift+l TODO: -> alt+l
 
 -- TODO:
+-- override background color
+  -- link is noted near where themes are set
 -- sometimes, especially without internet, everything is slow, especially starting new processes: making splits, starting yazi, helix, etc.; yet, there's no debug errors..
--- set background, see examples in custom configs people posted
 
 -- required
 local wezterm = require 'wezterm'
@@ -104,13 +105,21 @@ config.initial_cols = 80 -- 80, i like the small width limit, even when raeding 
 --  can just use windows powertoys to easily set a window to the size of the middle pane for now..
 -- window:set_position(1000, 200) -- 2800 x 800 x2 (scale)
   
--- test the file manager tui
--- config.color_scheme = 'Aura (Gogh)'
-config.color_scheme = 'Neon Night (Gogh)'
+-- test with file manager tui (yazi)
+-- WARN: these can change the background color!!
+-- https://wezfurlong.org/wezterm/config/lua/wezterm.color/get_default_colors.html
+  -- example shows precisely how to override background color
+-- TODO: should set background color based on helix theme
+config.color_scheme = 'Aura (Gogh)'
+  -- dark background
+-- config.color_scheme = 'Neon Night (Gogh)'
+  -- lighter background
   -- light purple text is pleasant!
+-- config.color_scheme = 'Sythwave (Gogh)'
+  -- even darker background / higher contrast
+  
 -- config.color_scheme = 'AdventureTime'
   -- the blue used for folder names in the file manager tui is hard to see
--- config.color_scheme = 'Sythwave (Gogh)'
 -- https://wezfurlong.org/wezterm/config/appearance.html
 
 -- font
