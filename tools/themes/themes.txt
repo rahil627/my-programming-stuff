@@ -13,14 +13,22 @@ terminal.sexy (website)
 
 helix:
   - see config for more info
+**aurara**
+  - my custom theme
+**aura**
+  - still great, can compare with my own version
 default
   - great purple text, but suffers from bright yellows, and i don't like the green comments
 boo berry
   - ugly christmas reds 'n greens tarnish an otherwise a very practical purple theme
 **noctis**
-  - sea green, more color-coordinated than jellyfish
+  - sea green 'n gold underwater theme, wayyy more color-coordinated than jellyfish
 
 classics that were well-ported:
+edge (default)
+  - ported by someone but not merged into helix's repo
+  - like aura but with pink, likely the origin of aura, as there's an aura variation..
+  - same author as everforest
 tokyonight
 everforest-dark
 
