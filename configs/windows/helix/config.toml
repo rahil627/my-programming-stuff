@@ -615,6 +615,13 @@ select = "underline"
 [editor.soft-wrap]
 enable = true
 max-wrap = 10 # increase value to reduce forced mid-word wrapping
+
+[editor.gutters]
+
+# removed line numbers from the default layout
+layout = ["diagnostics", "spacer", "diff"] # "spacer", "line-numbers", 
+  # TODO: need a hide line numbers key, or zen-mode..
+
  [editor.statusline]
 # text-editor info, interactive stuff
 left = ["mode", "selections", "register", "spinner", "diagnostics", "workspace-diagnostics"]
