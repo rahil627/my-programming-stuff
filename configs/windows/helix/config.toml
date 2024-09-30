@@ -171,6 +171,7 @@ C-y = "yank_joined_to_clipboard" # don't rememeber why.. better formatting for j
 C-S-y = "yank_to_clipboard" # space-y
 C-p = "paste_clipboard_before" # space,P, usually this is the one i want, not p/after
 C-S-p = "paste_clipboard_after" # space,p
+  # NOTE: conflicts with vs-code's command palette mapping
 C-r = "replace_selections_with_clipboard" #space,R, :clipboard-paste-replace?
 
 
@@ -232,7 +233,7 @@ r = "replace_with_yanked" # this matches y/p better
 #  - **opens up b for buffer pop-up menu**
 # ft?
 # a-. is strange for repeat last motion... change it back to vi's default ;?
-'.' = "repeat_last_motion" # TODO: not working, A-., default was repeat last insert
+'.' = "repeat_last_motion" # TODO: not working, A-., can't seem to override the default repeat last insert
 # 'C-.' = # TODO: repeat_last_insert doesn't exist, sort of an automatic macro recording, but why not just select/paste after insert??
 # need this for repeat f/t/m/[/]
 #  - need ; to clear selection, which is used often in kakaoune-style always select
@@ -383,7 +384,7 @@ C-S-w = ":buffer-close" # :bc # matches close tab in windows os
 C-S-h = "rotate_view" # TODO: gh/hl is taken, so gn/gp or gc-j/gc-k or gc-n/gc-p
 C-S-l = "rotate_view_reverse"
  # NOTE: replaces kill_to_line_start/end
-C-S-s = ":hsplit-new" # s > h
+C-S-s = ":hsplit-new" # s > h, h has too many mappings already
 C-S-v = ":vsplit-new" # vs vsplit (opens current buffer in the new split)
 C-S-q = ":quit" # closes current view, but not the buffer
 # C-S-c = ":quit" # although q works for :quit command, it shouldn't have been named quit to begin with. q feels stronger, but i prefer the position next to w, whereas c is a bit weird for the left hand
