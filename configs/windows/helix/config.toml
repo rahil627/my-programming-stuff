@@ -441,6 +441,7 @@ C-S-ret = "add_newline_above"
 # C-j      = ["normal_mode","extend_to_line_bounds","delete_selection", "move_line_down","paste_before", "insert_mode"]
 # C-k      = ["normal_mode","extend_to_line_bounds","delete_selection", "move_line_up","paste_before", "insert_mode"]
 
+# TODO: not really sure what to do about mappings for insert mode, add all the shortcuts to make insert mode usable like emacs/vs-code? then can switch between modal and non-modal ways, vi and emacs
 # TODO: copy line up/down (macro)
 # C-S-j/k
 # C-k = "kill_line_to_end" # default in emacs?
