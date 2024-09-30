@@ -20,9 +20,13 @@
 
 # TODO:
 # maybe add a fallback for every table..?
-# the orange used for functions is slightly too bright, get a darker shade
-# find a different color for built-in types, currently using aura's default green-sea
+# currently trying pink for variable-other, but there's too many keywords categorized in there..
 # keyword.storage has wayyyy too many keywords categorized in there.. surely theres some sub-categories in there..
+# find out where the color for file picker is set, and try to dim it
+  # i tried searching the other configs in the repo to no avail, just found ui.picker.header
+# oranger-brighter used for functions is slightly too bright, get a darker shade (using orange for now..)
+# create a white-stone with a tinge of color for variable.other
+# find a different color for built-in types, currently using aura's default green-sea
 # figure out how to get alpha workin'..
   # how does this differ from saturation?
 # get a different shade or color for var/let/mut general keywords?..
@@ -58,14 +62,16 @@
 # For styling helix itself.
 
 'ui.background' = { fg = "purple-pleasant", bg = "bg"} # Default background color., the fg seems to be used for borders..
-'ui.window' = { fg = "purple-pleasant" } # Window border between splits.
+'ui.window' = { fg = "gray-stone" } # Window border between splits.
+  # pruple also works really well here.. maybe more needed when there are no line numbers..
 
 'ui.gutter' = { fg = "orange-warning"} # Left gutter for diagnostics and breakpoints.
 
 'ui.text' = { fg = "purple-pleasant" } # Default text color. used in text files, pickers, ui, and more!
 'ui.text.focus' = { fg = "pink", bg = "selection-ui", modifiers = ["bold"] } # Selection highlight in buffer-picker or file-picker.
-'ui.text.info' = { fg = "pink", bg ="bg" } # Info popup contents (space mode menu).
-  # NOTE: pink pops out, making it better than the comfy purple-pleasant here
+'ui.text.info' = { fg = "pink", bg ="bg", modifiers = ["dim"] } # Info popup contents (space mode menu).
+  # see ui.menu for auto-complete
+  # NOTE: pink pops out more, making it better than the comfy purple-pleasant here
 'ui.text.inactive' = { fg = "gray-stone-lighter", modifiers = ["dim"] } # i think used in autocomplete suggestion..
   # TODO: a little hard to see, but i like it better than white-stone and purple-darker..
 
@@ -118,16 +124,20 @@
 
 'ui.highlight' = { bg = "selection-ui", modifiers = ["slow_blink"] } # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
 
-'ui.menu' = { fg = "pink", bg = "bg" } # Autocomplete menu.
-  # pink is a nice change from purple-pleasant..
+'ui.menu' = { fg = "purple-pleasant", bg = "bg", modifiers = ["dim"] } # Autocomplete menu.
+  # a dim color that doesn't pop up makes sense here
+  # BUG: the dim modifier conflicts with the matching gold for the first line only
 'ui.menu.selected' = { bg = "selection-ui", fg = "gold", modifiers = ["bold"] } # Selected autocomplete item.
   # not a fan of slow_blink here..
   # gold is fantastic for selected text and fuzzy matching
 
+# 'ui.picker' = { fg = "purple" } # ope.. good guess..
+"ui.picker.header" = { modifiers = ["bold"] } # TODO: TEST: i found this in another config, no clue yet..
+
 'ui.popup' = { fg = "purple-pleasant", bg = "bg" } # Documentation popups (space-k).
-'ui.popup.info' = { fg = "pink", bg = "bg" } # Info popups box (space mode menu).
-  # bold was just too much.. the pink is nice tho! vs purple-pleasant
-  # it seems ui.text.info overrides this..??
+'ui.popup.info' = { fg = "purple", bg = "bg" } # Info popups box (space mode menu). just the borders.
+  # gold is very pretty here.., but distracting.. purple creates a solid frame and feels out of the way..
+  # modifiers don't work here.. no shiny blinky stuff..; also dim doesn't work, so can't use purple-pleasant dimmed..
 # "ui.menu.scroll" = { }
 
 # SYNTAX HIGHLIGHTING ==============================
