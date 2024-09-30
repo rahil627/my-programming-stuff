@@ -256,8 +256,10 @@ C-S-tab = "rotate_view_reverse"
 
 # return was completely unmapped by default
 # it's often simpler to think starting from the beginning of a line
-ret = ["move_line_down", "goto_first_nonwhitespace"]
-S-ret = ["move_line_up", "goto_first_nonwhitespace"]
+# ret = ["move_line_down", "goto_first_nonwhitespace"]
+  # no need, just press c-h
+# S-ret = ["move_line_up", "goto_first_nonwhitespace"]
+  # no need, just press up/k
 # NOTE: also c+j/k in insert-mode, but use it commonly enough..
 C-ret = "add_newline_below" # similar to vs-code
 C-S-ret = "add_newline_above"
@@ -508,6 +510,7 @@ C-a = "select_all" # default is % in normal mode, useful in combination with sel
 # some possible keys:
 # **esc**
 #  - should be free TODO: don't use OS to bind it
+# **return**
 # **backspace**
 #  - big on most keyboards!!
 # **\**
@@ -522,7 +525,9 @@ C-a = "select_all" # default is % in normal mode, useful in combination with sel
 # 1-0 are all currently open
 
 ## create new pop-up menus!
-[keys.normal.backspace] # backspace seems unused.., and it's a big button! :)
+[keys.normal.ret] # return and backspace seems unused.., and it's a big button! :)
+  # TODO: c-space vs space,c
+  # return feels much better than backspace, can keep fingers on the home row more easily, also return -> caps lock key (esc) works really well
 # my alt to the default general space pop-up menu
 # it feels better to do these here, more tactile than c-s/c-q/c-r
 # backspace is a good choice as it's on the right-side of the keyboad, and many of these are on the left-side
