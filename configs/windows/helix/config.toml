@@ -83,7 +83,9 @@
 
 # icons = "nerdfontsymbols" # TODO: is there a way to get it from wezterm?
 
-# currently using boo_berry and noctis
+# most used themes: aurara, aura, boo_berry, default, tokyonight
+
+theme = "aurara"
 
 # theme = "default"
 
@@ -101,7 +103,7 @@
 # these particulary stick out
 # can use this as a base for helix themes
 # bolds look incredible in wezterm!!
-theme = "noctis" # reminds me of jellyfish, def feel underwater
+# theme = "noctis" # reminds me of jellyfish, def feel underwater
 # theme = "snazzy" # a colorful monokai variant with bolds
 
 # some of these newer themes are aiite
