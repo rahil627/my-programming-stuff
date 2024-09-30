@@ -288,10 +288,15 @@ E = "extend_next_word_end"
 # K = "extend_next_word" # TODO: possibly one of the most used macros..
 # K = "hover" # space,k by default
 # NOTE: **possibly my most used macros**, avoid using kill_to_line_end/start, go the kakoune way
+
+# TODO: NOTE: if no tree-sitter
 # H = "extend_to_first_nonwhitespace" # vgh[esc], matches c-h
 # L = "extend_to_line_end" # vgl[esc], matches c-l
+# else
 H = "extend_parent_node_start"
-L = "extend_parent_node_end"
+L = ["extend_parent_node_end", "extend_char_left"]
+  # could use C-S-H/L, currently mapped to next/prev pane
+  # C-i/o? C-u/b?
  
 # still missing extend char..
 S-left = "extend_char_left"
