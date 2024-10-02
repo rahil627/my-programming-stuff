@@ -366,7 +366,7 @@ gold = "#ffd800" # a nice, shiny bolded gold used for punctuation, was "yellow",
 purple-darker = "#6f60ea" # this purple is slightly darker than aura's, used for cascading keywords, but seems to match vs-code's aura better??
 white-sea-tinged = "#b1cace" # has a tinge of green in it.., pleasant tho
 orange-bright = "#e4b782" # looks fantastic in noctis, fit for the sea theme, like a clown-fish, but too bright :(
-green-dark = "#5b858b" # mainly for comments/background text, was "gray"
+green-sea-darker = "#5b858b" # was mainly used for comments/background text in noctis, was "gray", it's very readable but rather less saturated compared to the other colors.. TODO: a very good, unused reading color, not bad for atoms..
 # red = "#e34e1b" # an ugly red.. only good for errors.. using aura's instead, though they seem the same..
 
 blue-green = "#19a2b7" # TODO: quite hideous toxic aqua green... currently using for namespaces, as i don't have anymore colors.. just feels too saturated. it's closest to tokyonight's aqua, but dimmer
