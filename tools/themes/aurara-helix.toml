@@ -55,6 +55,7 @@
 
 ## GENERAL ==============================
 
+# the diagnostic info in the gutter area
 'warning' = { fg ="orange-bright", modifiers = ["bold"] } # Editor warnings. TEMP/TEST/WARN
 'error' = { fg = "red-error", modifiers = ["bold", "slow_blink"] } # Editor errors, like mis-typing a command. BUG ISSUE
   # but not ERROR..?
@@ -63,12 +64,14 @@
 'hint' = { fg = "green-aqua", modifiers = ["bold"] } # Code diagnostics hint in gutter (LSP).
   # ? Difference between info and hint ?
 
+# diagnostic info in the main text-editing area
 'diagnostic' = { underline = { style = "line" } } # Code diagnostics in editing area (LSP).
 'diagnostic.error' = { underline = { style = "curl", color = "red-error" }, modifiers = ["bold", "dim", "slow_blink"] }
-"diagnostic.warning" = { underline = { style = "curl", color = "orange" }, modifiers = ["bold", "dim", "slow_blink" ] }
-'diagnostic.info' = { underline = { style = "line", color = "blue-aqua" }, modifiers = ["bold", "dim", "slow_blink" ] }
-'diagnostic.hint' = { underline = { style = "line", color = "green-aqua" }, modifiers = ["bold", "dim", "slow_blink" ] }
+"diagnostic.warning" = { underline = { style = "curl", color = "orange" }, modifiers = ["bold", "dim" ] }
+'diagnostic.info' = { underline = { style = "dashed", color = "blue-aqua" }, modifiers = ["bold", "dim" ] }
+'diagnostic.hint' = { underline = { style = "dashed", color = "green-aqua" }, modifiers = ["bold", "dim" ] }
   # TODO: TEST: diagnostics, might need a new set of colors..! can use all neon colors here!! definitely need to test all this blinking.. LOL
+  # underline styles: line, curl, dashed, dotted, double_line
 'diagnostic.unnecessary' = { modifiers = ["dim"] } # took this from default theme
 'diagnostic.deprecated' = { modifiers = ["crossed_out"] } # took this from default theme
 
