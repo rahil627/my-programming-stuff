@@ -114,7 +114,7 @@
 'ui.linenr' = { fg = "purple-pleasant", modifiers = ["dim"]} # Line numbers.
 'ui.linenr.selected' = { modifiers = [ "bold" ] } # Current line number.
 
-'ui.virtual' = { fg = "purple-selection" } # Namespace for additions to the editing area.
+'ui.virtual' = { fg = "gray-stone" } # Namespace for additions to the editing area.
 'ui.virtual.ruler' = { bg = "selection-ui"} # Vertical rulers (colored columns in editing area).
   # TODO: TEST: haven't seen these two yet..error
 'ui.virtual.whitespace' = { fg = "gray-stone"} # Whitespace markers in editing area: newline..
@@ -238,8 +238,7 @@
 'punctuation.delimiter' = { fg = "pink-hot", modifiers = ["bold"] } # Commas and colons.
   # pink-hotter is slightly too annoying..
 'punctuation.bracket' = { fg = "pink-dimmer", modifiers = ["bold"]  } # Parentheses, angle brackets, etc.
-'punctuation.special' = { fg = "orange-bright", modifiers = ["bold"] } # no clue..
-  # use gold to make it stick out a little..
+'punctuation.special' = { fg = "pink-dimmer", modifiers = ["bold"] } # string interpolation
 
 'keyword' = { fg = "purple" } # Language reserved keywords. var, void, let
 'keyword.control' = { fg = "purple", modifiers = ["bold"] } # Control keywords.
