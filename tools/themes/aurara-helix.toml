@@ -243,7 +243,7 @@
   # NOTE: bold makes it slightly brighter too
 'keyword.control.conditional' = { fg = "purple", modifiers = ["bold"] } # 'if', 'else', 'elif'.
   # TODO: could use a cascading shades of purple here, between purple and purple-darker of operator, darkest on the outside, yet it's also nice to have it consistent..
-# 'keyword.control.repeat' = { } # 'for', 'while', 'loop'.
+'keyword.control.repeat' = {  fg = "purple", modifiers = ["bold"] } # 'for', 'while', 'loop'.
 'keyword.control.import' = { fg = "purple", modifiers = ["italic"] } # 'import', 'export', 'use', 'mod'
   # use crate::blah blah conflicts, crate is the same color..
 'keyword.control.return' = { fg = "pink-salmon", modifiers = ["italic"] } # 'return' in most languages.
