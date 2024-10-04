@@ -181,9 +181,9 @@
 
 'property' = { fg = "green-aqua" } # Regex group names.
   # TODO: no clue.. never seen this.. just matching regex strings for now..
-'special' = { fg = "gold", modifiers = ["bold"] } # Special symbols e.g `?` in Rust, `...` in Hare, also derive macro..?? BUG: also used for fuzzy search??
+'special' = { fg = "orange-bright", modifiers = ["bold"] } # Special symbols e.g `?` in Rust, `...` in Hare, also derive macro..??
   # rust's ? is usually squashed between punctuation ()?;
-  # gold is too bright, but fantastic for fuzzy search. pink-hotter works well for punctuation. gold also works well for the derive macro. it's also nice for it to just stick out, so as to indicate a syntax highlighting problem
+  # pink-hotter works well for punctuation. gold also works well for the derive macro. it's also nice for it to just stick out, so as to indicate a syntax highlighting problem
 'attribute' = { fg = "purple", modifiers = ["italic"] } # Class attributes, html tag attributes.
   # italics makes sense for html tag attributes.. matching tag
 
@@ -384,7 +384,7 @@ markup = "purple-pleasant-dimmer" # fallback
 light-green = "#48e9a7" # a nice sea green, bright neon when bolded, like the displays of deep sea instruments, was "green", re-used for text under the cursor
 
 pink-salmon = "#df769b" # re-used for return, was "pink", it's perfect! :D use sparingly as i really don't like themes with lots of red in it, only returns and maybe exceptions
-gold = "#ffd800" # a nice, shiny bolded gold used for punctuation, was "yellow", ..maybe was also used for it's variable text..? unfortunately, it's very bright. used for matching fuzzy search, special symbols, markdown symbols
+gold = "#ffd800" # a nice, shiny bolded gold used for punctuation, was "yellow", ..maybe was also used for it's variable text..? unfortunately, it's very bright. used for matching fuzzy search, and other things that should really stick out, or otherwise highlighting selected text
 purple-darker = "#6f60ea" # this purple is slightly darker than aura's, used for cascading keywords, but seems to match vs-code's aura better??
 white-sea-tinged = "#b1cace" # has a tinge of green in it.., pleasant tho
 orange-bright = "#e4b782" # looks fantastic in noctis, fit for the sea theme, like a clown-fish, but too bright :(
