@@ -3,7 +3,6 @@ install lisp:
 scoop install sbcl
 
 install a lispy editor:
-
 lem
   - an editor written in common lisp!
   - has several front-ends: ncurses, sdl2, etc.
@@ -57,45 +56,3 @@ https://github.com/rabbibotton/clog/blob/main/LEARN.md
   - it has a lot of examples and tutorials, but i'd rather stick ot the std lib
 
 
-
-
-
-
-
-
-
-to emacs:
-
-m = modifier key (alt, mac)
-
-m-x
-  - command prompt
-  - lisp-mode, markdown-mode, etc.
-    - called a "major-mode"
-  - abbrev
-    - autocomplete
-	- m-/
-  - abbrev-with-popup-window
-  - describe key (c-x ?)
-  - describe bindings
-  - documentation-describe-bindings
-    - list all bindings
-
-c-x
-  - (d)irectory viewer
-  - (f)ile
-  - (s)ave
-  - o / m-o
-    - switch windows
-  - (b)uffer
-  - left/right arrows
-    - left/right buffer
-  - (c)lose
-    - quit
-  - (w)rite
-  - ?
-    - describe-key
-
-m
-  - / (or c-p in vi's insert-mode)
-    - autocomplete

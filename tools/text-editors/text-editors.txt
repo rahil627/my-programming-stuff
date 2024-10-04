@@ -5,6 +5,7 @@ sane defaults
 inuititive learning experience
   - quick to re-learn and jump deep into again
 a simple language to write extensions
+  - (and a simple way to add extensions!!)
 unrestrictive
   - see the "four pillars" below
 
@@ -15,42 +16,47 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
     - 3. **can create your own function**
       - the most important
     - 4. can see the source code
+    additional pillars:
+    - 5. written in lisp or smalltalk or a similarly powerful interactive dev runtime
 
   - tests:
     - vscode
-      - no?, probably, **no**, sure (but hella complex)
+      - no? (maybe there's an extension..?), probably, **yes, but not simple** (have to write an extension), sure (but hella complex), no
     - helix
-      - no (can request 'n discuss), yes, **not yet (but even then, limited to the api/interface to the scripting lang)**, yes
-    - lem
-      - likely, sure, **yes!**,, yes
-    - emacs
-      - of course.
+      - no (can request 'n discuss), yes, **not yet (but even then, limited to the api/interface provided to the scripting lang)**, yes, sorta (limited to api)
+    - **lem**
+      - likely, sure, **yes!**, yes, yes
+    - **emacs**
+      - of course yes to all, though you probably wouldn't want to look at the source code..
   
 
 # conclusion:
-0. emacs (doom)
+*. focus (editor)
+  - in. fucking. credible. finally. a god damn text editor that doesn't slow down the marvel of contemporary machinery!! gamers make the best shit.
+  - no key-bindings to learn, just jump in and type.
+1. emacs (doom)
   - potential is unlimited, written in lisp, one tool-set to rule them all, but it just sounds like the wrong rabbit hole to go into in 2024
     - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
     - TODO: still should try it some more, also will get the chance to try lisp (via elisp) and have the best lisp dev environments too (common lisp, clojure)
       - TODO: try portacle config for common lisp
-?. focus (editor)
-  - TODO: try it, though it'll be tough for one person to beat the rust hive-mind helix has
-?. lem
+*. lem
+  - BUGGY as of 10/4/2024
   - looks like a great way to try common lisp without emacs
+    - actually kind of a dream editor, writing tiny programs in sbcl..
   - also can be completely altered as it is written in common lisp, making it the most malleable text editor
-1. helix (or other fav terminal editor / key-bindings)
+2. helix
   - for quick general use, along with cli tools, remote terminal use, a good step towards emacs
-  - supports tree-sitter, lsp, and even dap
   - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
     - an emacs user switches to helix and mentions some good plugins
     - TODO: try them!
   - TODO: a version with a file-tree feature is on a git branch
   - scheme scripting coming soon!!
-2. vs-code vs lapce
+2. vs-code (or lapce)
   - TODO: give lapce another try!
   - a great start, especially when you haven't coded in a while
-  - easy to jump into where everything *just works* with "batteries-included"
+  - easy to jump into where everything *just works* with "batteries-included": file manager, terminal window, debugging window, zen-mode, etc.
   - can use fav key-bindings extension ("helix for vscode" extension), or customize keys yourself
+  - eats up cpu, memory, etc.
 vs-studio
   - for it's advanced features: deep debugging, run-time stuff, etc.
 sublime text or notepad (windows)
@@ -63,7 +69,10 @@ sublime text or notepad (windows)
 
 # gui editors:
 ## newer, simpler, things to try:
-**lem**
+lem
+  - unfortunately, buggy as shit: crashes when a pop-up window is open and you alt+tab away :( i was very close to really getting into lisp-mode too!!
+  - still... quite a great introduction to lisp, as there aren't too many functions (unless you're hacking at the core of the editor..), and you can quickly write your own functions and map them to commands 'n keys, all in a few lines, all in one file... simple..!
+    - though, if you're only using the functions given, then it would be no different than using helix and writing scripts with the functions it provides..
   - https://www.reddit.com/r/emacs/comments/1b4a2tq/what_do_you_guys_think_of_the_lem_ide/
     - emacs default key-mappings, Dired-like file explorer, Projectile-like stuff, Paraedit-like structured edit... sounds like it basically learned and took the good things from emacs with it
   - completely written in common lisp (sbcl?)
@@ -81,12 +90,9 @@ sublime text or notepad (windows)
     - smaller, more manageable code-base
       - doesn't plan to become an OS
     - common problems of new projects: lack of docs, bugs, etc.
-
   - made specfically for common lisp, though it can support any lang
   - made by a Japanese person!
-**focus (editor)**
-  - a simpler emacs-style editor
-  - **made with jai**
+
 4coder
   - part of the handmade-hero movement
     - therefore written in C/C++, and also therefore **can be extended using just about any programming langauge**
@@ -95,9 +101,50 @@ sublime text or notepad (windows)
     - already has advanced features: modal lsp, remote dev, built-in terminal..
   - felt quite in development when i tried it last..
   - incredible speed
-  - "Plugins can be written in programming languages that can compile to the WASI format (C, Rust, AssemblyScript)"
+  - "Plugins can be written in programming languages that can compile to the WASI runtime (C, Rust, AssemblyScript)"
     - this is it's limiting factor, though AssemblyScript actually looks just like javascript!
+    - although plugins can be written in AssemblyScript, it seems like first api's must be written in it's core language first: rust, therefore, in termas of hackability, it's less hackable than vs-code, which it is directly competing..
 
+
+## smalltalk is back!?!?
+**glamourous toolkit**
+  - kind of **the emacs of smalltalk**, but made in ~2020?, after 6 years of dev, 14 years of research
+    - "It seems an editor/database query engine/ browser with a object oriented language Pharo as control/scripting language, while emacs is an editor with emcas-Lisp as the scripting language."
+  - *the moldable development environment*: uses the features of smalltalk, especially it's built-in IDE, as tools to create your own specific applications: like for code-base exploration/documentation, build an editor, etc.
+    - https://lepiter.io/feenk/what-exactly-is-glamorous-toolkit-v1-0--7sex44dze2dqlocqxwfz8ju0i/
+      - "Our goal is to make systems explainable by means of custom tools created for each problem. Glamorous Toolkit makes this possible by making the creation of custom tools inexpensive and seamless."
+      - "A central component in GT is Lepiter, the knowledge management system."
+  - built on Pharo, though it's a project of it's own
+    - renders crisply to retina displays compared to Pharo's native ui
+    - "GToolkit uses a completely parallel graphics stack to standard Pharo. The VM and library ecosystem are still there but the UI is rebuilt from scratch on a modern vector based toolkit.
+    
+      The productivity of the GToolkit developers is impressive."
+
+
+## current alts
+**focus (editor)**
+  - a simpler emacs-style editor that easily replaces all past simple editors (notepad2/notepad++/sublime)
+  - incredible speed, beautiful defaults, simple, lives up to it's name and induces focus
+  - i forgot how gooood scrolling felt..!
+  - insanely good defaults: i think it saves all the undo-history for all previously opened files..??
+  - **made with jai**
+  
+**helix**
+  - the best key-bindings/keyboard-interface of all past worlds: vim, doom-emacs, and kakoune
+    - doom-emacs's intuitive pop-up menus
+    - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
+    - kakoune style more interactive workflow: selection -> action flow (vs vim’s action -> selection flow): wd vs dw
+  - fantastic sane defaults with the most essential features already built-in, config-free(!!): tree-sitter, lsp, dap
+  - "helix for vscode" extension to ease transition / aid in using both at the same time
+    - TODO: ...no pop-up menus tho..?
+  - vi/terminal/buffer style navigation: file picker, buffers and buffer list, jump markers and jump lists
+  - rust
+    - truly a force of reckoning those people
+  - scheme scripting
+    - !!!, finally, get to use lisp :) 
+    - https://github.com/helix-editor/helix/pull/8675
+  - until the scripting feature is out, it lacks a lot of things that would likely become scripted plugins: file manager, more advanced debugging, etc.
+  - though it will have lisp scripting, it is written in rust, and thus not really malleable as a program written entirely in a scripting a language, and definitely nowhere close to a program written entirely in lisp. in hackabilty, it's worse than vs-code, which is written entirely in a scripting language: javascript
 
 ## current standard:
 **vs code**
@@ -107,7 +154,7 @@ sublime text or notepad (windows)
   - has extensions for all of the classic key-bindings
     - **"helix for vs-code"** is amazing, merging helix bindings with vs-code bindings and gui cursor
   - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
-
+  - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
 
 old standards:
 (note: i missed out on the atom vs sublime generation)
@@ -123,58 +170,30 @@ old standards:
     - **written in C++**, scripted in python
   - shareware (not open-source, but free?)
 x/atom
-  - the electron framework was created in the process of making this
+  - the electron framework (see the relation in it's name?) was created in the process of making this
+  - tree-sitter was also developed by github for the project
   - ...people don't seem to have liked this one.. probably for the same reasons they don't like vs-code..
-(probably missing some others here)
+  - though historically important, basically replaced by vs-code, since microsoft had acquired github..
+  - made by github!!
+(probably missing some others here..)
 
-classics:
+basic gui classics:
+kate
+  - a linux classic?
 notepad++
   - a windows classic, same as ever, still cute and functional for an old 90s thing
 textmate
   - a mac classic
-kate
-  - a linux classic?
 notepad2
   - a classic windows notepad replacement
 
 
 
-cli/terminal-based editors:
-mostly for the key-bindings, then can use an associated extension on vscode
-also provides a clutter/distraction-free experience
-
-**helix**
-  - the best of all past worlds: vim, doom-emacs, and kakoune
-    - doom-emacs's intuitive pop-up menus
-    - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
-    - kakoune style selection -> action flow (vs vim’s action -> selection flow)
-  - fantastic sane defaults with the most essential features already built-in
-  - "helix for vscode" extension to ease transition / aid in using both at the same time
-    - TODO: ...no pop-up menus tho..?
-  - rust
-    - truly a force of reckoning those people
-  - scheme scripting
-    - !!!, finally, get to use lisp :) 
-    - https://github.com/helix-editor/helix/pull/8675
-
-
-a new classic?:
-**glamourous toolkit**
-  - kind of **the emacs of smalltalk**, but made in ~2020?, after 6 years of dev, 14 years of research
-    - "It seems an editor/database query engine/ browser with a object oriented language Pharo as control/scripting language, while emacs is an editor with emcas-Lisp as the scripting language."
-  - *the moldable development environment*: uses the features of smalltalk, especially it's built-in IDE, as tools to create your own specific applications: like for code-base exploration/documentation, build an editor, etc.
-    - https://lepiter.io/feenk/what-exactly-is-glamorous-toolkit-v1-0--7sex44dze2dqlocqxwfz8ju0i/
-      - "Our goal is to make systems explainable by means of custom tools created for each problem. Glamorous Toolkit makes this possible by making the creation of custom tools inexpensive and seamless."
-      - "A central component in GT is Lepiter, the knowledge management system."
-  - built on Pharo, though it's a project of it's own
-    - renders crisply to retina displays compared to Pharo's native ui
-    - "GToolkit uses a completely parallel graphics stack to standard Pharo. The VM and library ecosystem are still there but the UI is rebuilt from scratch on a modern vector based toolkit.
-    
-      The productivity of the GToolkit developers is impressive."
-
 
 classics:
-though, now emacs is a GUI, and neovim has neovide (rust)
+notably, most current text editors still use the key-bindings from these two editors: neovim for modal text editing and emacs for non-modal. So, once you learn one of them, you can use an associated extension on vscode. Though, i think vscode derives from emacs
+
+though both originally were cli/terminal apps, now emacs is a gui, and even neovim has neovide (rust)
 
 **emacs**
   - much more than a text editor, it's basically an OS! based on around text buffers
@@ -221,8 +240,8 @@ though, now emacs is a GUI, and neovim has neovide (rust)
   - lua scripting for configs 'n plugins!
     - used to be in an archaic language: vimscript, which killed it
   - horrendous amount of time wasted starting out from scratch, reminiscent of the terrible linux config experience, but worsened by archaic language and the unprofessional open-source community it attracts
-    - thus better to try various starter configs with sane defaults
-  - bad learning curve, especially from vanilla neovim
+    - best to try various starter configs with sane defaults
+  - a very very bad learning curve, especially from vanilla neovim. bad for learning the key-bindings. bad for setting up for development. bad for finding good souces to do everything. just plain bad.
 
 
 
