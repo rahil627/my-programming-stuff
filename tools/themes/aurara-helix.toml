@@ -42,6 +42,7 @@
 # could try other colors for either operators or punctuation..
 # currently trying a dimmer shade of pink for variable.other.member, but there's too many keywords categorized in there..
   # create a white-stone with a tinge of color for variable.other..?
+# never found out why the derive macro is a bolded bright orange color..
 # find out where the color for file picker is set, and try to dim it
   # i tried searching the other configs in the repo to no avail, just found ui.picker.header
 # oranger-brighter used for functions is slightly too bright, get a darker shade (using orange for now..)
@@ -80,7 +81,10 @@
 # UI ==============================
 # For styling helix itself.
 
+# 'ui' = { bg = 'bg-ui' }
+  # doesn't work.. :/
 'ui.background' = { fg = "purple-pleasant-dimmer", bg = "bg"} # Default background color., the fg seems to be used for borders..
+  # NOTE:this effects the main background of the text-editing area; it's values don't cascade down to popup/auto-complete/etc; you must override them in each key
 'ui.background.separator' = { fg = "gray-stone" } # below the input line in picker
 'ui.window' = { fg = "gray-stone" } # Window border between splits.
   # pruple also works really well here.. maybe more needed when there are no line numbers..
@@ -88,7 +92,7 @@
 'ui.gutter' = { fg = "gold" } # Left gutter for diagnostics and breakpoints.
   # background affects the entire background of the gutter!
   # breakpoints are kinda hard to see, only the outline..?
-# 'ui.butter.selected' = { bg = "selection-ui" }
+# 'ui.gutter.selected' = { bg = "selection-ui" }
 # 'ui.debug.breakpoint' = "●" # character for breakpoint? nope, that's not it..
 'ui.debug.active' = { fg = "pink-dimmer" } # debug execution paused, gutter?
 'ui.highlight.frameline' = { bg = "selection-ui" } # debug execution paused, line
@@ -96,7 +100,7 @@
 
 'ui.text' = { fg = "purple-pleasant-dimmer" } # Default text color. used in text files, pickers, ui, and more!
 'ui.text.focus' = { fg = "pink", bg = "selection-ui", modifiers = ["bold"] } # Selection highlight in buffer-picker or file-picker.
-'ui.text.info' = { fg = "pink-dimmer", bg ="bg" } # Info popup contents (space mode menu).
+'ui.text.info' = { fg = "pink-dimmer", bg = "bg-ui" } # Info popup contents (space mode menu).
   # see ui.menu for auto-complete
   # NOTE: pink pops out more, making it better than the comfy purple-pleasant-dimmer here
 'ui.text.inactive' = { fg = "gray-stone-lighter", modifiers = ["dim"] } # i think used in autocomplete suggestion..
@@ -113,6 +117,7 @@
 
 'ui.selection' = { bg = "selection-ui", modifiers = [ "bold", "slow_blink" ] } # All currently selected text.
   # TODO: decide purple-selection vs the neutral selection-ui: purple is easier to see immediately, but the neutral selection shows text more clearly / less muddy, and with the aid of blinking, it's pretty easy to see too
+  # TODO: ...wish there were a "brighten" modifier..
 # 'ui.selection.primary' = { bg = "purple-selection" } # The primary selection when there are multiple.
 # 'ui.cursorline.primary' = { bg = 'purple-selection' } #
   # TODO: would need a very dim color, between selection-ui and background.. it could work of primary selection has a tinge of color to it (purple-selection), but without that, it would make it even harder to see the selection
@@ -155,14 +160,15 @@
   # slow_blink on insert/select was too annoying..
   # using a colored background was also too annoying
 
-'ui.help' = { bg = "bg", fg = "pink-dimmer"} # `:command` descriptions above the command line.
+'ui.help' = { fg = "pink-dimmer", bg = "bg-ui" } # `:command` descriptions above the command line.
 
 'ui.highlight' = { bg = "selection-ui", modifiers = ["slow_blink"] } # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
+  # bold doesn't seem to work here..
 
-'ui.menu' = { fg = "purple-pleasant", bg = "bg", modifiers = ["dim"] } # Autocomplete menu.
+'ui.menu' = { fg = "purple-pleasant", bg = "bg-ui", modifiers = ["dim"] } # Autocomplete menu.
   # a dim color that doesn't pop up makes sense here
-  # BUG: the dim modifier conflicts with the matching gold for the first line only
-'ui.menu.selected' = { bg = "selection-ui", fg = "gold", modifiers = ["bold"] } # Selected autocomplete item.
+  # BUG: the dim modifier conflicts with the matching gold for the first line only, maybe the parent key's dim affects the child key..?
+'ui.menu.selected' = { fg = "gold", bg = "selection-ui", modifiers = ["bold"] } # Selected autocomplete item.
   # not a fan of slow_blink here..
   # gold is fantastic for selected text and fuzzy matching
 # 'ui.menu.scroll'
@@ -170,8 +176,8 @@
 # 'ui.picker' = { fg = "purple" } # ope.. good guess..
 "ui.picker.header" = { modifiers = ["bold"] } # TODO: TEST: i found this in another config, no clue yet..
 
-'ui.popup' = { fg = "purple-pleasant-dimmer", bg = "bg" } # Documentation popups (space-k).
-'ui.popup.info' = { fg = "purple", bg = "bg" } # Info popups box (space mode menu). just the borders.
+'ui.popup' = { fg = "purple-pleasant-dimmer", bg = "bg-ui" } # Documentation popups (space-k).
+'ui.popup.info' = { fg = "purple", bg = "bg-ui" } # Info popups box (space mode menu). just the borders.
   # gold is very pretty here.., but distracting.. purple creates a solid frame and feels out of the way..
   # modifiers don't work here.. no shiny blinky stuff..; also dim doesn't work, so can't use purple-pleasant dimmed..
 # "ui.menu.scroll" = { }
