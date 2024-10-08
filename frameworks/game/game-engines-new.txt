@@ -9,7 +9,10 @@ flashpunk -> haxepunk -> luxe -> jon blow's engine
 note: i gave up on heaps and jumped to luxe. Luxe just felt wayyyy more intuitive, plus it ships with an editor and an entity-component system, along with a 2d collision module. Luxe also benefits in simplicity thanks to it's embedded language, whereas haxe drags you down with it's complex advanced features (plenty!) and cross-platform targeting (even more plentiful!) with it. Plus you can really help develop luxe. :)
 
 worth trying:
-godot, raylib, heaps (again! make an ECS), foster, dragonruby
+godot for most cases
+alts: ceramic, foster, heaps (again! make an ECS)
+love2d and dragonruby for simple, beautifully-written prototyping
+raylib for prototyping, especially for mobile devices, and education/learning (graphics, C)
 
 
 # how to start 
@@ -46,6 +49,7 @@ much of it is merely out of personal personal taste and gut feeling, yet, there 
   - Jon Blow's engine
     - Jai, likely well-designed and thoroughly thought out, down to first principles, just as the language is, and just as his nature is
 
+
 ## the big boys
 ### 3D, with 2D
   - Godot
@@ -71,17 +75,24 @@ these make good first engines for programmers, as the engine size is tolerable, 
     - 2D, Haxe, OpenFL, *abandoned*, FlashPunk was **my favorite engine** but it never seemed to stay alive, though, it seems to have transcended with the users, as people made their own engines resembling FlashPunk; i think many of the original Punks initially ran to MonoGame, then further down a level to building their own C/C++ middleware between SDL and their C# engine... although abandoned, it’s probably just fine, just a few years of OpenFL/Lime updates.. cross-platform, however, would require quite a bit of work..
     - note: inactive since *at least* 2018, likely further back, *but* OpenFL, it’s back-end, thanks to the HaxeFlixel community is still alive ‘n well, so, it’s very likely working just fine, if not better!
   - **Love(2D)**
-    - 2D, Lua, a small engine that many people seem to... love! Sounds like **a great start to Lua** too! Sounds like it gives an experience of freedom close to DragonRuby
+    - 2D, Lua and C++, very well maintained, a small engine that many people seem to... love! Sounds like **a great start to Lua** too! Sounds like it gives an experience of freedom close to DragonRuby
+    - https://love2d.org/wiki/Game_Distribution
+      - how to distribute to all platforms, **very very easy for windows and android**
+    - no LuaJIT runtime for mobile devices, but should be fine..?
   - HaxeFlixel
     - 2D, Haxe, OpenFL, all off the Flash programmers probably ran here, **still active as of 2022!!!**— that’s incredible really..., seems to even have kept up Switch support (one console is *more than enough* imo), though Flixel has always been the rather fat bloated big brother of HaxePunk, there’s no doubt that it’s the most beginner-friendly, with documentation written for beginners, a great debug console, etc. etc., and who knows, maybe when it was ported to Haxe, they got rid of some bloat
   - Gideros(Mobile)
     - 2D, Lua, mobile-focused, comparable to Corona / Cocos2D / Defold, but with a tiny non-commercial-backed community, apparently the code is so stable that games made in 2012 still work, yet it is still being updated as of 2022!, also the android support and exe size are excellent
+    - based on Flash (not a good thing..), focus on mobile (with some native api for mobile features)
 
 
 ## second engines, coding-first-style / non-game-editor:
 these are more programmer-oriented, **more freedom—the ability to make anything without constraints**, but at the cost of game engine features, and i mean *features*!!! Instead, they are more _**modular**_-oriented, so, instead of providing you with a collision system, tweening system, a physics system, etc., you will have to integrate (or make) these libs yourself. It’s a sort of **assemble your own engine approach**... Unlike the big 2D-only engines and most of the “first-love” 2d game engines, these make for better jumps to 3D, and well, to the path of becoming a true game and game engine programmer. With these there really are **no limitations**, you have access to *everything*,.. it’ll just take time. If you’ve got a big project, then these are the way to go, as these engines will never constrain or limit the scope of your project. If you just want to quickly prototype something that uses commonly used game features, then these are not the way to go (use the loved first engines or big boys). However, if your prototype is rather experimental, innovative, requires low-level access, or has design that’s just too different, then these are the way to go.
   - **Raylib**
-    - 2D?, C (C99), because it's written in C, **just about any programming langauge can be used**, and, when needed, can use C, which makes it the best educational choice
+    - **perfect for prototyping, especially mobile devices, as it will always work**
+    - **i *love* the old-school cheat-sheet/reference that contains everything you need in one place, it reminds me of toys that came with a well-made manual**
+      - it's api is... special. more low-level, much more educational, closer to how graphics work.
+    - C (C99), because it's written in C, **just about any programming langauge can be used**, and, when needed, can use C, which makes it the best educational choice
       - really well-architected, using simple C libs (stb, etc.)
         - https://www.raylib.com/images/raylib_architecture_v5.0.png
     - gui extension: raygui (immediate-gui)
@@ -126,7 +137,7 @@ many rely on pop C/C++ libs such as: SDL, GLFW (for OpenGL and Vulkan?), bgfx(?)
 #### made with love by FlashPunk OGs
   - all of these are kinda experimental, but they are written so simply and so well, i personally feel i can jump into any. :)
   - **Foster**
-    - super clean modern C#, up-to-date as of 2022, basically just a giant interface for different backends (SDL, GLFW, Vulkan, etc.): **a modern io framework**, similar to MonoGame but written much more simply and far for flexible / future-proof, no game features whatsoever making it even more bare than the already skeletal MonoGame, by Noel of Celeste and Ikenfall(?)
+    - 2d, super clean modern C#, up-to-date as of 2022, basically just a giant interface for different backends (SDL, GLFW, Vulkan, etc.): **a modern io framework**, similar to MonoGame but written much more simply and far for flexible / future-proof, no game features whatsoever making it even more bare than the already skeletal MonoGame, by Noel of Celeste and Ikenfall(?)
     - the core uses C/C99, very simple, minimal, beautiful
       - https://github.com/FosterFramework/Samples
         - C# is blessed by having community-maintained libs 'n bindings such as that for imgui
@@ -137,7 +148,7 @@ many rely on pop C/C++ libs such as: SDL, GLFW (for OpenGL and Vulkan?), bgfx(?)
   - x/Rise
     - by the FlashPunk man himself Chevy Ray, looks like a C#/SDL successor to FlashPunk, or a pre-cursor to Foster
     - abandoned in ~2018, or maybe went closed-source during the dev of ikenfall, or perhaps, replaced by Foster
-  - StrawberryBF
+  - x/StrawberryBF
     - **Beef programming language**, abandonded in ~2021, also seems quite experimental, made by Maddy of Celeste, an absolutely disgusting name tho, ew :/
     - the old tool-set: https://celestegame.tumblr.com/tools
       - their sound tool, FMOD, became a tutorial!
@@ -149,7 +160,7 @@ many rely on pop C/C++ libs such as: SDL, GLFW (for OpenGL and Vulkan?), bgfx(?)
     - made while making Kandria, a Celese-like metroidvania
     - https://github.com/Shirakumo/trial
   - Beef2D
-    - beef, 2d, included in the main Beef language repo
+    - beef (basically C# with manual-memory-management), 2d, included in the main Beef language repo
   - Pile
     - beef, more like Foster: modular renderer
   - Dinghy
@@ -178,7 +189,7 @@ i have no clue about these
 
 
 ## non-programming interfaces:
-  - Construct, **no programming**, back in 2013 **this thing worked like a dream, even on console!**, I have no clue how it is now...
+  - **Construct, **no programming**, back in 2013 **this thing worked like a dream, even on console!**, I have no clue how it is now...
   - GameMaker, **with and without programing**—this allowed people who don’t know programming to learn in a very intuitive way and most importantly by following intrinsic passion, custom scripting language, examples: Rivals of Aether (Dan had to wait for the big GM2 update before releasing it on the Switch, and even then, it took 3 years to port), Hyper Light Drifter
   - GDevelop, a newer one worth looking at
   - Stencyl, not sure if this one’s still alive... **made in Haxe!, and maybe can even use Haxe to actually write code!?!?** that alone makes it a top pick imo! <3
