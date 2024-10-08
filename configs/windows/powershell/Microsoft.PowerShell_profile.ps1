@@ -94,12 +94,12 @@ function load_aliases {
 # $home is set by default
 
 $my_paths = @{
-my_stuff = "$home\my-stuff"
-stuff = "$home\my-stuff"
-repos = "$home\my-stuff\repos"
-my_programming_stuff = "$home\my-stuff\repos\my-programming-stuff"
-programming = "$home\my-stuff\repos\my-programming-stuff"
-configs = "$home\my-stuff\repos\my-programming-stuff\configs\windows" # NOTE: not cross-platform, can use $iswindows
+  my_stuff = "$home\my-stuff"
+  stuff = "$home\my-stuff"
+  repos = "$home\my-stuff\repos"
+  my_programming_stuff = "$home\my-stuff\repos\my-programming-stuff"
+  programming = "$home\my-stuff\repos\my-programming-stuff"
+  configs = "$home\my-stuff\repos\my-programming-stuff\configs\windows" # NOTE: not cross-platform, can use $iswindows
 }
 
 # put most commonly-used paths in session-level vars
@@ -116,12 +116,12 @@ $my_configs = $my_paths['configs']
 
 # store in a data structure for scoping and easy auto-complete? (although, $[tab] does provide auto-complete)
 $config_paths = @{
-# paths to config files
-# use: fetch hash-table with $my_configs['text_editor']
+  # paths to config files
+  # use: fetch hash-table with $my_configs['text_editor']
 
-shell = $profile # $profile is set by default
-terminal = "$home\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-text_editor = "$home\AppData\Roaming\helix\config.toml"
+  shell = $profile # $profile is set by default
+  terminal = "$home\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+  text_editor = "$home\AppData\Roaming\helix\config.toml"
 }
 
 # end
