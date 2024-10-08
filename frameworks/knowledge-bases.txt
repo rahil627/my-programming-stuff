@@ -1,9 +1,12 @@
 
+https://news.ycombinator.com/item?id=32248543
+
 formats:
 
 **plain text files**
   - **my own personal notes' format**
-  - **TODO: can write a simple markup for it to preview it**
+  - **TODO: can write a simple markup parser to preview it**
+    - then export to html
   - **easy to sift through with cli**
 
 **org-mode (emacs)**
@@ -33,15 +36,15 @@ bear
   - more of a markdown editor turned note-taking app
   - great markup/preview, especially for mobile OSs
   
-x/obsidian
+**obsidian**
   - current king of note-taking
   - **closed-source**
   - great interface
     - like a specialized vs-code, with an intuitive command pallete
     - feels well-made
-    - unfortunately another electron app, so might as well use vs-code/dendron
+    - unfortunately another electron app, so might as well use vs-code/dendron..?
   - plugins
-  - works well on mobile devices
+  - works really well on mobile devices
   - diagram-making thing
   - graph view
   - views for outline by headings, tags, backlinks, etc.
