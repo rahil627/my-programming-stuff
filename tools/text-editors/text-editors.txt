@@ -123,10 +123,16 @@ lem
 
 ## current alts
 **focus (editor)**
-  - a simpler emacs-style editor that easily replaces all past simple editors (notepad2/notepad++/sublime)
-  - incredible speed, beautiful defaults, simple, lives up to it's name and induces focus
-  - i forgot how gooood scrolling felt..!
-  - insanely good defaults: i think it saves all the undo-history for all previously opened files..??
+  - the best text editor experience i've had in quite some time.. a sort of zen text editor but intended for programmers, absolutely replacing all the old trusty fallbacks (notepad2/notepad++/sublime)
+  - incredible speed, incredible defaults, incredibly simple, lives up to it's name and induces focus
+    - learn everything in 5 minutes: find file via fuzzy search, set up workspaces, command prompt, config
+    - great little view mode (c+a+arrow keys)
+    - some sane defaults (and great sense of design) include:
+      - infinite undo-history for all files during the session, even after closing it..??
+      - jumping the cursor back after highlight or viewing
+      - saving config reloads it
+      - diff on the scroll bar
+        - i forgot how gooood scrolling felt..!
   - **made with jai**
   
 **helix**
