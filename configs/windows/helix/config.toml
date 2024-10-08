@@ -10,6 +10,7 @@
 # TODO: / main things that bother me
 # newlines characters!!
   # i don't remember this ever being a problem in gui text editors.., but here, it requires constant consideration :(
+  # BUG: if you have the cursor positioned on a newline, expand_selection highlights the entire file
 # where is the repeat-action? '.' repeats the last paste or something..
 # finish S-j/k, and re-mapping join/keep
 # use c+j/k to move down/up pop-up dialog lists
@@ -55,8 +56,6 @@
 # https://github.com/rajasegar/awesome-helix?tab=readme-ov-file
 #   - also contains many configs to borrow from
 
-
-# ISSUE:
 
 # known issues:
 # TODO: i broke terminal copy/paste (a-c/v)
@@ -492,7 +491,7 @@ C-S-backspace = "delete_word_forward"
 # end = "no_op"
 
 # common gui editor key-maps
-C-left = "move_prev_word_start" # TODO: doesn't work
+C-left = "move_prev_word_start"
 C-right = "move_next_word_end"
 
 
