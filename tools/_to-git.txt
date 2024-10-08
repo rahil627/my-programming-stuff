@@ -5,6 +5,12 @@ IMPORTANT: use git mv to move or rename files, otherwise it'll deleted the old f
 TIP: just use github desktop. it's fantastic. covers most cases. has an undo button.
   - PRO-TIP: leave github desktop open, change files, and it will automatically select the changes you've made since you opened it
 
+how to create a new branch
+  - (probably a much simpler way using the github website..)
+  - git remote rename origin upstream
+  - git remote add origin http
+  - git push origin master
+
 how to push a new repo?
   - first create a repo on github
   - then, it will provide instructions on how to init, commit, and push the new repo
