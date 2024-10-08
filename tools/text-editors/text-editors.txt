@@ -225,19 +225,22 @@ though both originally were cli/terminal apps, now emacs is a gui, and even neov
     - actually a joy to use (especially when compared to vimscript!!)
     - because it's lisp, you're basically writing the program itself, not merely some plugin manager
   - mature (possibly the oldest of all currently used code), well-written plugins
-    - **org-mode**
-      - the ultimate knowledge-base software, simple yet powerful
+    - org-mode
+      - **the ultimate knowledge-base software, simple yet powerful**
       - **org-babel**
         - can combine programming languages, using the output of one as the input of another, perhaps similar to the much much later jupyter notebooks
     - magit
-      - the best git experience
+      - **the best git experience**
     - auctex
       - the best latex experience
     - slime (common lisp), geiser (scheme), cider (clojure)
-      - the best lisp dev environemnts
-      - **portacle** is an emacs config set up for common lisp dev
+      - **the best lisp dev environents**
+      - portacle is an emacs config set up for common lisp dev
   - "m-x is godsend"
-  - slow startup time
+  - x/slow startup time
+    - used to be slow, but with emacs 28, now there's **native compilation**..!
+      - https://www.youtube.com/watch?v=bhjO22s6snU
+        - how it was made, presented by it's maker
   - **doom-emacs**
     - a great starter config that makes a really nice onboarding experience
     - *i really really liked this, found it very quick to find and precisely just what i needed*
@@ -247,6 +250,9 @@ though both originally were cli/terminal apps, now emacs is a gui, and even neov
       - a light-weight starter kit closer to vanilla emacs, in case doom is too much, or if i want to make my own
   - every person that i've personally met that uses emacs is a great great programmer/problem-solver/doer
   - emacs itself is a deep pot of speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
+    - 1.7 million lines of code
+      - 30% in C
+      - ~1500 primitives??
 
   https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
 
