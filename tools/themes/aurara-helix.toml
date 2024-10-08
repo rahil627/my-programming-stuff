@@ -49,6 +49,7 @@
 # find a different color for built-in types, currently using aura's default green-sea
 
 # NOTE:
+# remove ui.background { bg = "value" } in case the terminal app should control the background color
 # blinking doesn't work with italics, another reason to not italicize comments
 # see keys here:
   # https://github.com/helix-editor/helix/blob/master/book/src/themes.md#scopes
@@ -84,10 +85,11 @@
 # 'ui' = { bg = 'bg-ui' }
   # doesn't work.. :/
 'ui.background' = { fg = "purple-pleasant-dimmer", bg = "bg"} # Default background color., the fg seems to be used for borders..
-  # NOTE:this effects the main background of the text-editing area; it's values don't cascade down to popup/auto-complete/etc; you must override them in each key
+  # NOTE: this effects the main background of the text-editing area; it's values don't cascade down to popup/auto-complete/etc; you must override them in each key
+  # NOTE: set the bg = "" in case the terminal app should control the background color
 'ui.background.separator' = { fg = "gray-stone" } # below the input line in picker
 'ui.window' = { fg = "gray-stone" } # Window border between splits.
-  # pruple also works really well here.. maybe more needed when there are no line numbers..
+  # purple also works really well here.. maybe more needed when there are no line numbers..
 
 'ui.gutter' = { fg = "gold" } # Left gutter for diagnostics and breakpoints.
   # background affects the entire background of the gutter!
