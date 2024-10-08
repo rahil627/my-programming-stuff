@@ -116,6 +116,13 @@ most of these aim for minimalism, portability, independency
 many rely on pop C/C++ libs such as: SDL, GLFW (for OpenGL and Vulkan?), bgfx(?), openAL, imgui, etc.
 
 ### experimental indie-made engines:
+  - Ceramic
+    - 2d, Haxe, basically glued together from the original version of luxe and other haxe libs
+      - has luxe's ECS
+    - a more suitable successor to haxepunk 'n flixel as it is batteries-included unlike heaps
+      - tosses out all the baggage of general-purpose back-ends (openfl, nme) for luxe's original back-end (snow)
+    - made by one person, into new media arts
+
 #### made with love by FlashPunk OGs
   - all of these are kinda experimental, but they are written so simply and so well, i personally feel i can jump into any. :)
   - **Foster**
