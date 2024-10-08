@@ -47,6 +47,9 @@ x/obsidian
   - views for outline by headings, tags, backlinks, etc.
   - bookmarks
     - seems useful!
+    
+logseq
+  - more discoverability / nudge you into writing
 
 x/joplin
   - poor man's open-source obsidian?
