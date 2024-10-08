@@ -83,6 +83,12 @@ function load_aliases {
 }
 
 
+# dev vars
+# NOTE: don't forget the ; at the beginning!
+$env:path += ";$home\Downloads\elixir-ls-v0.23.0\elixir-ls.bat"
+$env:path += ";$home\.emacs.d\bin"
+$env:home += "$home"
+
 
 # naming convention
 # $my_ prefix
