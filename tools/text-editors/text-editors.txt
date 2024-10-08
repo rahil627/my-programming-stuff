@@ -162,7 +162,20 @@ lem
   - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
   - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
 
-old standards:
+old standards / history:
+kakoune
+  - https://github.com/mawww/kakoune/blob/master/doc/design.asciidoc
+    - designed for interactivity
+      - display edited text in real time, as opposed to vim's longer key sequences
+      - select/highlight *then* action workflow
+    - unix philosophy
+      - pipe to unix/shell tool for text filtering
+      - no plugins, rather, has `%sh{...}`(??) and socket interfaces?
+    - minimal design
+      - only text editing, nothing else
+        - not even built-in language support (must write a `kak` script file)
+      - ...this is probably what killed it..
+
 (note: i missed out on the atom vs sublime generation)
 **sublime text**
   - the best simple gui text editor, replacing notepad++
