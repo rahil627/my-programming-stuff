@@ -6,7 +6,7 @@
 # WARNING: don't edit the config file ($profile) directly, it keeps disappearing, then have to restart PC in order to gain access to the folder.. TODO: maybe due to OneDrive messing up :/
 
 # copy this file to the system
-# cp .\Microsoft.PowerShell_profile.ps1 C:\Users\ra\OneDrive\Documents\PowerShell\
+# cp C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\powershell\\Microsoft.PowerShell_profile.ps1 C:\Users\ra\OneDrive\Documents\PowerShell\
 
 # then, back it up (when it's working properly)
 # cp $profile C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\powershell\
