@@ -5,6 +5,11 @@ Adding ~\scoop\apps\ruby\current\gems\bin to your path.
 
 
 
+https://github.com/defunkt/choice
+  - example of writing a simple dsl to parse cli options
+
+  
+
 ruby on windows not the best experience, but damn good:
 
 https://www.reddit.com/r/ruby/comments/12z4j3g/is_ruby_still_a_hassle_to_work_with_on_windows/
