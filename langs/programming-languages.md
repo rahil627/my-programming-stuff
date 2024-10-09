@@ -45,12 +45,19 @@ lisp
 languages sorted by their use cases
 
 ## general langs
-**lisp (common lisp, sbcl)**
+**lisp (common lisp sbcl via lem or emacs-lisp via emacs)**
   - **true zen programming**
     - god-like macros, "interactive" dev experience including debugging, 'n more!
   - used wherever one would use C, Go, custom scripting (game, app), and more!
   - wish i knew about this earlier ;(
   - beyond syntax, there's really no reason not to use this for everything, except that other languages have better maintained libraries
+  - looking at a basic cli program, i can see why lisp might not be the way..
+    - https://stevelosh.com/blog/2021/03/small-common-lisp-cli-programs/
+    - maybe roswell..?
+      - https://github.com/roswell/
+        - **cli scripting with lisp..! and windows support!**, maybe similar to babashka
+    - compare that crap to ruby or this nim project that generates the cli portion of the program:
+      - https://github.com/c-blake/cligen
 
 **ruby**
   - **great for quick, simple, everyday small scripting to pretty large size projects** thanks to it's **great battle-tested modular libs** (that's the main benefit old, popular languages)
@@ -335,6 +342,9 @@ Lisp
       - "Thus, **Lisp functions can be manipulated, altered or even created within a Lisp program without lower-level manipulations.** This is generally considered one of the main advantages of the language with regard to its expressive power, and makes the language suitable for syntactic macros and metacircular evaluation."
   - **the simplest sytax**: '(function arg)', that's it!
     - thus **easy to parse / interpret / compile**
+  - **"interactive programming"**
+    - evaluate regions of code, compile regions of code into the lisp image, etc.
+    - **"interactive debugging"**
     
 ### dialects
 - **Common Lisp**
@@ -348,12 +358,18 @@ Lisp
     - used in Deep Space and Mars Rover
   - https://awesome-cl.com/
     - awesome common lisp repo site
+  - solid dev tools (SLY/SLIME/emacs)
+  - **the CLOG web framework**
+    - a totally awesome way to make websites in pure lisp!! (via websockets)
+  - emacs itself has some cl-like things
+    - cl-lib, EIEIO (a CLOS-like framework)
   - implementations:
     - **SBCL**
       - the standard
       - **native compilation, extremely fast (compares to C!!)**
+      - C FFI
       - it sounds like you can program in any way you want (paradigm) and that **the language itself is modular via extensions** such as CLOS (object-system) and meta-object protocol, kind of like lua
-        - CLOS is apparently wayyy more powerful than any object-oriented language, as you can change the structure of objects on-the-fly
+        - **CLOS is apparently wayyy more powerful than any object-oriented language, as you can change the structure of objects on-the-fly**
       - "what you get with SBCL is a 'full-stack' Lisp with a sophisticated AOT native-code compiler, **supporting a very interactive development style** and providing a blend of imperative, procedural, functional, object-oriented and meta programming."
       - "Mature native code compilation (**including runtime assembler**), **type declarations that lead to optimizations in generated code**, SBCL compiler can use declared types for compile-time type checks, **read/compiler macros**, **extremely easy interface to C** (JNI is a pain in the ass), multi-paradigm and doesn't prematurely optimize like Clojure (I have no need for STM or immutable data structures in 99% of the things I do), **very powerful and flexible debugger**, **CLOS**, more sophisticated interactive development."
     - CCL/clozure
@@ -368,22 +384,44 @@ Lisp
     - beyond the core, there are similarly rigoriously thought out extensions to the lang
   - this sounds more in tune with the spirit of Lisp, whereas other newer dialects just add more syntax/keywords, when the point is to be simple
   - less practical / battle-tested than CL, perhaps better for personal use
-  - small-size makes it fit as an embedded language for C/C++
+  - small-size makes it fit as an embedded language for C/C++, or to transpile to C/C++
+    - **because scheme is often used for special cases as opposed to as a general language, it's dialects are far more different, and therefore less compatible compared to the consistency of Common Lisp dialects, which are able to share a single library ecosystem (quicklisp)**
   - "Scheme is simpler in a lot of ways: functions are just another value, which means there's a lot less overhead when using higher-order functions (compare CL's (funcall (make-function)) with the scheme equivalent ((make-function)), the language is literally quite a bit smaller (fewer rules, fewer functions, fewer special forms), and it's idiomatic to iterate with recursion instead of something like the (in)famously featureful loop macro.
   
     Do you like the functional programming style? Scheme. Do you want a large library ecosystem that Just Works? Common Lisp. Do you want a small language you can embed in a C program? Scheme. Do you want battle-tested industry tooling with decades of work behind it? Common Lisp. Do you want a language that is designed from first principles and exhibits a simple, mathematical elegance? Scheme. Do you want to just get shit done and don't mind a few messy but pragmatic compromises? Common Lisp.
   
     There's no wrong answer, though, both are lovely languages in their own way.)"
     - implementations:
-      - bigloo
-        - can generate C, JVM, .NET bytecode
-        - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
+      - chez
+        - best performance
+     - racket
+        - all-in-one program, thus easiet to jump into and make stuff! great for practice, but also one of the best implementations in general
+        - parallel threads, native compilation, has pretty much everything
+        - "batteries included"
+          - IDE program included, so no need for the emacs barrier
+        - great documentation
+        - **gui programming!**
+      - guile
+        - meant to be used as an extension language for C programs, embedded into C
+        - GNU
+      - **chicken**
+        - generates C, but also easy to embed it
+        - **best community*, great documentation
+        - has a library system (eggs)
+          - https://wiki.call-cc.org/chicken-projects/egg-index.html
+            - a nice single page site
       - gambit
         - generates C, **js**
         - https://try.gambitscheme.org/
-      - chicken
-        - generates C
+      - bigloo
+        - can generate C, JVM, .NET bytecode
+        - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
+      - steel
+        - an embeddable scheme interpreter written in rust
+        - ..basically specific to rust programs, not general to all langs
+        - uses a virtual machine..?? doesn't that defeat the purpose of rust..??
   - x/Clojure
+    - made for server concurrency, hence it's functional programming paradigm
     - Rob said it "adds syntax" and that *"it should be burned with fire!"*
     - uses JVM, and thus allows using java libs (ew) and **transpiling to javascript (via clojurescript)**, making it a bit more practical
       - used by a ton of corporations
@@ -393,12 +431,13 @@ Lisp
         - possibly providing a better react experience than using js itself!
     - "Clojure advocates immutability and immutable data structures and encourages programmers to be explicit about managing identity and its states. This focus on programming with immutable values and explicit progression-of-time constructs is intended to facilitate developing more robust, especially concurrent, programs that are simple and fast. While its type system is entirely dynamic, recent efforts have also sought the implementation of a dependent type system."
     - **babashka**
-    - a scripting langauge with a native run-time (via graalvm) and interpreter
-      - nbb: node.js babashka
-        - scripting on the web!
-    - also includes a lot of scripting tools: task runner, jvm threads, cli libs, in addition to clojure's libs
-    - "It’s a glue language for assembling components, most of which are written in Java."
-    - emacs dev env plugin CIDER or intellij idea plugin Curisve
+      - a scripting langauge with a native run-time (via graalvm) and interpreter
+        - (made in order to solve the problem of JVM's slow startup times)
+        - nbb: node.js babashka
+          - scripting on the web!
+      - also includes a lot of scripting tools: task runner, jvm threads, cli libs, in addition to clojure's libs
+      - "It’s a glue language for assembling components, most of which are written in Java."
+      - emacs dev env plugin CIDER or intellij idea plugin Cursive
     
   - x/Racket
     - a contemporary one based off of one of the Scheme standards, full of contemporary features
@@ -406,6 +445,18 @@ Lisp
       - "The language platform provides a self-hosted IDE named DrRacket, a continuation-based web server, a graphical user interface, and other tools. As a viable scripting tool with libraries like common scripting languages, it can be used for scripting the Unix shell. It can parse command line arguments and execute external tools."
     - used in more recent Naughty Dog games!
     - seems to be targeted at newer programmers..
+    
+    
+https://ane.iki.fi/2020/10/05/between-two-lisps.html
+  - guile 'n scbl, also notes emacs-lisp, chicken, fennel
+    
+https://news.ycombinator.com/item?id=25895807
+  - "Scheme is not more minimalist than C.L. in practice; it's standardization is simply more fragmented and has nested layers, often by different organizations, that implementations can support, and then most implementations go well above even that.
+
+Different Scheme implementations tend to share a common base but then tend to provide functionality above that, often shared between different implementations as well."
+
+https://news.ycombinator.com/item?id=25925867
+  - good info on pros 'n cons of several implementations
   
 "9. The whole language always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
