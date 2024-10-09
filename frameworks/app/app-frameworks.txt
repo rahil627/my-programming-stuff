@@ -1,12 +1,88 @@
 
 TODO: to merge
 
+
+
+it seems all the momentum is in rust:
+  - NOTE: there's likely a lot more
+    - https://www.reddit.com/r/rust/comments/1avzrnz/comparison_of_gui_libraries_in_february_2024/
+  
+most of these seem like a better engineered, more open-source flutter-like declaritive solution to the cross-platform gui problem
+all have the benefit of using a single, powerful language with an equally powerful ecosystem: rust
+      
+dioxus
+  - react/solidjs-influenced
+    - thus more web-based
+    - much better engineered than other wasm solutions such as C#'s blazor
+    - **single-file web-sites!!**
+  - takes the best ideas from react, svelte, etc. and fits them into rust
+
+  - still heavily in development, and just went through a huge re-write
+  - https://www.reddit.com/r/rust/comments/1cx6h5f/is_dioxus_production_ready/
+    - 100kb, 40kb compressed minimum size, compared to react's 180kb
+      - hopefully there's an option for static pages..?
+  - monolithic, especially when compared to the modular axum web framework, or even phoenix
+  - sponsored
+  
+iced
+  - elm architecture
+    - state, messages, view logic, update logic
+  - **batteries included api**
+  - **built-in widgets**
+  - seems more complete than the others..
+  
+slint
+  
+floem
+  - flutter-like declarative solution
+
+vizia
+  - flutter-like declarative solution
+  
+flutter
+  - for reference
+  
+  
+  
+special use-cases:
+tauri
+  - a better engineered electron written in rust
+    - can use standard front-end web tech (html, css, javascript), including any front-end web frameworks you want
+    - uses system's web-view (each platform has a default browser), as opposed to shipping with an external browser and node.js
+    - this allows you to re-use/divide the front-end for future-proofing and have native web performance
+  - requires more work compared to a singular framework like dioxus, as you'd have to divide the front-end from the back-end
+  
+e-gui
+  - immediate-gui, basically rust's imgui
+  
+ratatui
+  - terminal-based immediate-tui framework
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OLD:
+
 conclusion:
 phoenix framework
   - i chose web-app frameworks that provide a systems-programming-like experience, and the longevity of web (and in this case, the maintainance-less of functional-programming). BUT, i'm still not convinced that game engines aren't good for making ui-apps, or any app really (or immediate-guis)
   - also, just focusing on one target--the web--, which is inherently cross-platform, avoids the need to build/test for multiple platforms, though flutter does seem really solid, thanks to it's hybrid approach, it's not so great for web, and limited in ui style, which is by design constrained to the style of mobile apps
 
 see web-app-frameworks.txt
+
+
+
+
 
 
 
