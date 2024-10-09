@@ -1,5 +1,8 @@
 
 
+TODO: generate cli?
+https://github.com/c-blake/cligen
+
 
 conclusion:
 ruby for scripts, especially ones that simply use the std lib, from simple to complex cli apps (tty-toolkit)
