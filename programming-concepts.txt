@@ -77,9 +77,12 @@ stopped. Just keep the damn notes.
 
 
 original file:
-data-driven design
+data-oriented design
+  - https://en.wikipedia.org/wiki/Data-oriented_design
+    - "Although OOP appears to "organise code around data", it actually organises source code around data types rather than physically grouping individual fields and arrays in an efficient format for access by specific functions. Moreover, it often hides layout details under abstraction layers, while a data-oriented programmer wants to consider this first and foremost."
+    - structure of arrays > array of structures
   - anti-object-oriented programming
-  - see HandmadeCon / Handmade Hero
+  - see Handmade Hero or some jblow video
   - basically: just solve the problem. Don't try to fit things into logical abstractions. Abstractions have no real functionality. Abstractions are for us, humans, the computer doesn't care.
   - when things are programmed quickly, that's basically data-driven design. The results of game jams, quick solutions, etc. The shit that gets things done. Usually done in one large file, right there in the main loop. No need for classes or separate files. Just structs as needed, right there, in the same file.
   - instead of objects, there are just bundles of data. It's a lot more vague, but a lot more flexible, as it isn't limited by trying to fit some abstract object. The vague bundle of data it is, is actually a much neater solution than writing a bunch of abstractions.
