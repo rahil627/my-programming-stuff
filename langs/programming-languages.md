@@ -756,25 +756,7 @@ Dart
 
 
     
-Nim
-  - "C for Python developers"
-    - brings the disgusting whitespace-delimited syntax of python to systems langs
-  - performance-oriented, allowing for many kinds of optimizations and implementations (compiled, static-typed), but still **garbage collected** (this is the biggest difference between this and Rust), though, you can do some manual memory management to change the way it is collected, in the end, it's still garbage collected
-  - nimpy
-    - seems pretty easy to call python libs..??
-    - https://scinim.github.io/getting-started/external_language_integration/nim_with_py.html 
-  - feels like scripting in a compiled language, making it much more joyful to use
-  - composition > inheritance  
-  - python-like tab-delimited style
-  - **basically supports all programming paradigms**
-  - interface with C/C++/Objective-C (therefore easier access to iOS?) and compiles to javascript
-  - made for embedded systems?
-  - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression, etc.
-  - easy C binding
-  - garbage collector options: reference-counting, rust-like borrow-checker in-the-works
-  - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
-  - https://forum.nim-lang.org/t/1880
-    - ?
+
 
 
 
@@ -837,7 +819,24 @@ TODO: merge with above
   - Mozilla, and as always, open-source
 
 
-
+Nim
+  - "C for Python developers"
+    - **...but doesn't allow you to simply import python libs..**
+    - brings the disgusting whitespace-delimited syntax of python to the world of systems langs
+  - performance-oriented, allowing for many kinds of optimizations and implementations (compiled, static-typed), but still **garbage collected** (this is the biggest difference between this and Rust), though, you can do some manual memory management to change the way it is collected, in the end, it's still garbage collected
+  - feels like scripting in a compiled language, making it much more joyful to use
+  - composition > inheritance  
+  - python-like tab-delimited style
+  - **basically supports all programming paradigms**
+  - transpile/interface with C/C++/Objective-C (therefore easier access to iOS?) and javascript, like haxe
+  - made for embedded systems?
+  - pop contemporary features: generics, closure, functional features, type inference, macro, statement as expression, etc.
+  - easy C binding
+  - **garbage collector options: reference-counting, rust-like borrow-checker in-the-works**
+    - this is the most interesting bit!
+  - another major new-comer, closest contender to Crystal, but the python-like style still throws me off :( i personally prefer object-oriented, slightly faster, ruby-style Crystal, as i don't even know any of the other programming paradigms
+  - https://forum.nim-lang.org/t/1880
+    - ?
 
 
 **C++**
