@@ -1,64 +1,135 @@
 
+
+
+conclusion:
+ruby for scripts, especially ones that simply use the std lib, from simple to complex cli apps (tty-toolkit)
+go or [your current general-use compiled language] in case of performance and portability
+  - better if it has a simple build process
+
+in light of flutter and flutter-like declaritive ui rust frameworks (see [app-frameworks.txt]), some of which probably can even target/export to tui, there isn't much reason to go the tui route anymore..  though i love them, it seems a dead-end. but just in case:
+
+go/bubblegum or rust/ratatui for tui apps
+  - both are quite popular, but i'd def choose go for simplicity..
+  
+python/textualize for tui *and* web apps
+  - special for targetting tui and  web as they are basically all you'd need to cover all audiences. i hope future app frameworks would aim for these two targets..
+
+
+
 https://jesseduffield.com/Lazygit-5-Years-On/#weighing-in-on-the-cli-ui-debate
   - a good read, by the person that made lazygit
+    - particularly the "tui vs cli" section
+      - "I would say I’m pro-terminal, but borderline anti-CLI. When I’m interfacing with something I want to know the current state, the available actions, and once I’ve performed an action, I want to see how the state changes in response. So it’s state -> action -> new state. You can use a CLI to give you all that information, but commands and queries are typically separated and it’s left as an exercise for the user to piece it all together. The simplest example is that after you run cd, you have to run ls to know which files are in the directory. Compare this to nnn which mimics your OS’s file explorer."
+        - precisely why i hate terminals
+      - "...CLI interfaces are great for scripts and composition but as a direct interface, the lack of feedback about state is jarring."
+        - composable via shell
+    - "tui vs web"
+      - "TUIs guarantee a keyboard-centric UX"
+      - "TUIs have minimalistic designs"
+      - "TUIs are often faster than non-TUI counterparts"
 
 https://news.ycombinator.com/item?id=32331367
   - TODO: to read
+  
+https://news.ycombinator.com/item?id=35864458
+
+https://github.com/rothgar/awesome-tuis?libraries
+  - TODO: go through these..
 
 
 my thoughts:
-the main problem is that your program (cli or tui) is only runnable from a terminal, which really really limits the users and even devices that can run It
+the main problem is that your program (cli or tui) is only runnable from a terminal, which really really *really* limits the users (though, perhaps not as limiting as writing an emacs module ;) )
 
-however, the overhead of cli is trivial: an options parser is often even included in the std lib, and if not, is also trivial or just plain unnecesary
+however, the overhead of cli is trivial: an options parser is often even included in the std lib, and if not, is also trivial or just plain unnecesary. cli just adds literally a few lines of code. compare that to adding an entire gui framework, wherein you only use a few widgets..
 
-tui is a bit more work, usually requiring working with curses/ncurses, or some lib on top of that, making cross-platform apps (flutter, haxe-ui) just as appealing
+tui is a bit more work, usually requiring working with curses/ncurses, or some lib/framework on top of that, making cross-platform solutions (flutter-like) more appealing, though, tui still has a much simpler build process: no need to build a native executable for each platform, it just has to display to the terminal, which is a sort of cross-platform solution in itself
+
+
+
+a special tool:
+gum
+  - allows you to glue on a tui widget on-the-fly via shell pipline or to compose a cli
+    - scoop list | gum choose/filter | scoop uninstall
+    - gum confirm && rm file.txt
+  - more of a set of cli tools:
+    - gum filter == fzf
+    - gum pager == bat
+    - etc.
+  - can be intersting when thrown together in a shell script..
+  - made by charm.sh
+  
 
 
 frameworks and langs:
-[your fav language]
-  - anything can be used to make a cli app, but the language should be able to compile to a native executable binary to make it easily portable. If the app requires input, then the terminal (or some ui) is needed
+  - anything can be used to make a cli app, but if the language is able to compile to a native executable binary, it makes it easily portable, at the cost of being non-editable/"scriptable", compared using a scripting language. Also, if it doesn't use a scripting language, and the app requires input, then the terminal (or some ui) is needed.
+  
+  
+https://github.com/rothgar/awesome-tuis
 
-**haxe**
+
+x/elixir
+  - in case you already use it for web
+  - generally not made for for scripts, as it requires starting up a vm
+  - x/ratatouille
+    - abandoned, and built on an abandoned C tui framework: termbox
+    - declarative tui framework
+
+rust
+ - not worth the dev time, just use something simpler..
+ - **ratatui**
+    - current fork of rs-tui
+    - quite popular..
+
+haxe
   - my fav lang :)
-  - **just use hashlink/c (or cppia) to compile to native**
-
-ruby
-  - solid library for quick scripting
-  - cli
-      - **ruby's native "optparse" lib**
-        - **just use ai to generate it**
-      - several other option parsing dsl libs, but adds a rather trivial lib/gem
-        - https://github.com/postmodern/command_kit.rb
-          - this one looks good
-        - thor
-          - heard this is overkill
-  - tui
-  - **tty-toolkit**
-      - modular, only add what you need
-        - **can use it for cli-only stuff too:**
-      - tty-option
-          - yet another options parser
-      - tty-prompt
-          - most used component
-  - cli-ui
-      - a framework by shopify
-
+  - not scriptable (unless using hscript), requires an extra build file
+  - haxe-ui to add a gui
+    - has a web target too..
+  
 go
-  - for performance, great std lib
+  - for performance, portable native binary, great std lib, quite ideal for writing simple cli apps (and being run as a "micro-service") and tui apps
   tui:
     - **bubbletea**
-      - mvc pattern
       - a tui framework that even has extensions
+      - elm (mvc-like) pattern
+        -  https://github.com/saqlainnnnn/kanban-board/blob/master/main.go
+           - though elm architecture, it doesn't look too abstract, all in one file, besides, you'd need some architecture to make it stateful..
       - lipgloss
         - css-like "style definitions for nice terminal layouts"
         - https://github.com/charmbracelet/lipgloss
   - cli:
     - cobra, cli, go-args libs
 
-rust
- - not worth the dev time, just use haxe or go
- - ratatui
-    - currrent fork of rs-tui
+**ruby**
+  - **the *perfect* library for quick scripting**
+  - **produces beautiful, concise, compact code**
+  - also has the benefit of **sharing a beautiful language for web dev**, allowing tech knowledge to be re-used
+  - simple examples:
+    - https://github.com/defunkt/github-gem
+    - https://github.com/defunkt/colored
+    - https://github.com/defunkt/gist/
+      - when the guy who made github was young..
+  - cli
+      - **ruby's native "optparse" lib**
+        - **just use ai to generate it**
+      - several other option parsing dsl libs, but adds a rather trivial lib/gem
+        - https://github.com/JEG2/highline
+          - whoa.. ruby is just.. somethin'
+        - https://github.com/postmodern/command_kit.rb
+          - this one looks good
+        - thor
+          - heard this is overkill
+  - tui
+  - **tty-toolkit**
+      - **a modular cli framework, only add what you need**
+      - some useful components:
+        - tty-option
+            - yet another options parser
+        - **tty-prompt**
+            - most used component
+  - cli-ui
+      - a framework used (and well-maintained) by shopify
+
 
 python
   - pytermgui
@@ -73,20 +144,8 @@ python
 
 
 
-other cli/tui tools:
-charm.sh
-  - various tools/libs
-  - the folks that made the bubbletea framework
-  - **gum**
-    - allows you to add a tui for your shell scripts
-warp
-  - "terminal emulator whose killer feature is allowing you to edit your command as if you were in vscode/sublime"
-fig
-  - gone now, sold to Amaazon as "Amazon Q"?
 
 
 
-
-https://github.com/rothgar/awesome-tuis
 
 
