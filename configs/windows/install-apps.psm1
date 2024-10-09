@@ -31,8 +31,6 @@ $apps_to_try =  @{ # hash-table
     # https://github.com/hlaueriksson/awesome-powertoys-run-plugins
     #  - everything plugin for powertoys run
 
-    gui_text_editor = "SublimeHQ.SublimeText" # TODO: --include-unknown
-
     winget_ui = "SomePythonThings.WingetUIStore"
     pc_manager = "Microsoft.PCManager"
 
@@ -85,9 +83,9 @@ $apps = @{ # hash-table; enum won't work, and psobject seems like a hassle
     vcpp_restributable = "Microsoft.VCRedist.2015+.x64"
 
     # essential apps
-    #simple_gui_text_editor = "SublimeHQ.SublimeText"
-    terminal_text_editor = "Helix.Helix"
-
+    
+    # NOTE: text editors installed via scoop
+    
     dropbox = "Dropbox.Dropbox"
     # TODO: clean up other cloud storages, use as backup for dropbox
     google_drive = "Google.GoogleDrive"
@@ -188,28 +186,28 @@ $app_names = @(
         # broot # a different way
 
     # replacement basic commands
-    # TODO: not sure if these work for powershell
-        "eza", # ls; try lsd
-        "bat", # cat
+    # TODO: not sure if these are better than powershell's default ls/bat, aren't object-oriented/attribute-formatted
+    "eza", # ls; try lsd # --tree is better than ps's -depth output
+    "bat", # cat
 
     # replacement utilities
     # https://news.ycombinator.com/item?id=26561211
     # https://wiki.archlinux.org/title/core_utilities#Alternatives
     # - great list
-        "ripgrep",
+    "ripgrep", # vs powershell's select-string
     # sudo pacman -S ripgrep # grep & ack
     # TODO: try fzf+ripgrep
     # https://github.com/junegunn/fzf#3-interactive-ripgrep-integration
-        "fd",
+    "fd",
     # sudo pacman -S fd # find & parallel, fd-find package in debian
     # zoxide > cd
-        "delta", # diff
+    "delta", # diff
     # sudo pacman -S delta # diff
     # xh > curl & httpie
     # sudo pacman -S sd # sed
 
     # dust or ncdu > du
-        "dust" # ncdu > du; great for finding what's taking up disk space
+    "dust" # ncdu > du; great for finding what's taking up disk space
 
     # procs > ps
     # bottom > top
