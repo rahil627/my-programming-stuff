@@ -31,6 +31,15 @@ $profile # path to powershell settings profile
 
 
 
+
+new-item/ni my-file.txt
+
+
+
+
+
+
+
 # learn x in y minutes
 ls # can simply run a command like this!
 $package_manager install $name # string interpolation on the command-name/cmdlet doesn't work
