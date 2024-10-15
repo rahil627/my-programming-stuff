@@ -10,8 +10,31 @@ https://docs.dragonruby.org/static/docs.html
 
 
 # setup dev tools
+
+vs-code:
 https://github.com/DSchaedler/dragonrubyautocomplete/releases
   - vscode autocomplete extension
+  - it just works..!
+  
+  
+lsp:
+https://github.com/owenbutler/dragonruby-yard-doc
+  - follow the directions here
+
+make sure you have ruby installed with the dev tools:
+`scoop install ruby`
+  - follow it's instructions
+  - `scoop install msys2'?
+    - not sure, maybe the next part installs it for you..?
+  - `ridk install`
+    - starts the cli version of ruby installer
+    - select option 3. msys2 and mingw dev tools
+    
+`gem install solargraph`
+
+...continue with directions in the link
+
+    
 
 # dir structure:
 \mygame
