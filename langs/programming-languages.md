@@ -60,8 +60,25 @@ haskell
 jai
   - try to get beta
 
+
+
 # conclusion:
 languages sorted by their use cases
+
+## the ruby and lisp dream
+C
+ - core
+dragonruby (an mruby fork)
+  - game
+elixir
+  - web
+scheme or emacs lisp or common lisp
+  - text editor extension
+ruby
+  - scripting
+mruby
+  - embedded
+
 
 ## general langs
 
@@ -160,11 +177,16 @@ scripting:
 don't have much of a choice for these..
 
 various custom scripting laguages (wren, gdscript, etc.) and embedded scripting langs (lua, **scheme**, **mruby**) usually on top of C++
-  - wren is simple 'n pretty, but rather mundane, feature-less
-  - lua is exceptional for being the simplest and having the best implementation/runtime
-  - scheme for the power of true lisp macros
   - **mruby has the most beautiful syntax and powerful features**
     - as witnessed in dragonruby
+  - scheme for the only thing more powerful than ruby: lisp macros
+    - helix
+  - lua is exceptional for being the simplest and having the best implementation/runtime
+  - wren is simple 'n pretty, but rather mundane, feature-less
+    - as witnessed in luxe engine
+  - elisp (emacs-lisp)
+    - doom emacs
+    - org-mode, and other text-editor related stuff..
   - games, big apps, embedded devices
   - https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference
     - a good view of desires in a game scripting lang
@@ -189,9 +211,7 @@ shell languuage, more like gluing, these languages *suck*, feel old--no, *are* o
     - can't seem to run from it, though i can keep trying!
   - i'm told it's much much better than it used to be..
   
-elisp (emacs-lisp)
-  - doom emacs
-  - org-mode, and other text-editor related stuff..
+
 
 
 
