@@ -1,35 +1,95 @@
 
 TODO: to merge
 
+sources to check back on:
+https://insights.stackoverflow.com/survey
+https://insights.stackoverflow.com/survey/2021#technology
+https://insights.stackoverflow.com/survey/2020#technology-other-frameworks-libraries-and-tools-all-respondents3
 
 
+conclusion:
+tl;dr: target web: phoenix/elixir for everything > roda/ruby/erb for simple stuff (and <3 ruby). and if you completely want to avoid web-dev: haxe/haxe-ui, HIDE?, CLOG, red?
+
+the only stable, good, simple-to-build cross-platform choices is flutter. however, **the main target should be web, as it provides a standard solution to the old cross-platform graphics output problem: the browser; and as it's the most accessible: no need to download an app or binary or know how to use the terminal or emacs or anything (and likewise, no need to build for those platforms either). Guaranteed to work everywhere, forever.** Thus, it's likely better to use phoenix (see [web-app-frameworks]), which is a web dev framework first, but also has great potential for native targets via live-view-native, enabling code re-use for native targets, *using native ui* (similar to react-native, and unlike flutter's comprimising solution). With phoenix, you'd get a native web solution, the best concurrency/server-throughput tech (OTP) built-in the langauge (without need of using crappy concurrency libs thrown into the langauge much later), and a more beautiful language (elixir vs old clunky object-oriented dart or vs js's garbage-churning ecosystem). The main cost is development time: for web (have to learn and write a web front-end) and for live-view-native (it's not just simply graphics drawn to the screen..). At those costs of time, however, you get infinite potential in all targets: web and native.. Flutter, however, does indeed offer really, *really* fast development, especially for mobile devices, perfect for quickly prototyping a product to be shown at a pitch, but down the line, phoenix shines, in multiple directions.
+
+if you want to avoid web front-end (html/css/javascript/web-components/component frameworks) altogether, and especially if you've still got haxe knowledge, can use haxe-ui with native html5 web target and native desktop targets
+  - it comes with a ton of components!!
+
+for most cases, especially high-traffic, use phoenix
+  - even if you don't need a database, authentication, etc., it's still better than using a micro-framework like roda
+
+if you've still got ruby knowledge, and don't expect high-traffic and don't need a batteries-included framework, use roda
+  - you can quickly scrap up some stuff with this.., but you would still need to use html/css/javascript, and might even need to create your own web components (using js api) or add some framework :/
+  
+
+if it's meant to be embedded in an app, including games, use dear imgui.
+
+if it's just a tools app, some simple program that now needs a gui, and not really meant for long-term use (battery-draining, resource-hogging), and def not mobile devices, just add dear imgui or haxe-ui or even HIDE..!
+  - NOTE: this is a language-agnostic solution
+  - **this is a very, very neat use case for haxe**, as it can interface with many languages
+  - **it's also a very neat case for HIDE..?**
+
+if you've already got a web front-end, use tauri (or electron).
+  - NOTE: this is also a langauge-agnostic solution, at least for the back-end, and possibly the front (via transpile/wasm)
+
+otherwise, some possibilities:
+haxe-ui
+  - for the love of haxe..! (and the hatred of google for making dart..)
+    -**native web/html5** back-end is the most useful, then can use hx-electron(/hx-tauri) to port elsewhere
+    - also has **native desktop** via wxwidgets
+flutter
+  - great for mobile devices and desktop, not so much for web
+  - great for rapid development
+  - great eco-system
+  - ugly google, ugly dart, ugly google design
+CLOG
+  - for quick, fun lispy web gui rapid dev!! :D
+game engines
+  - for more advanced ui ;)
+    - dragonruby 4 lyfe
+      - **seriously, could make cool 2d ui/visualization with this..**
+        - comes with shell integration
+  - also solves the cross-platform problem
+emacs
+  - ..even more niche than terminal tuis..! (think: magit vs lazygit, org-mode vs obisidian)
+  - but good lispy fun :)
+x/tui-frameworks
+  - for the love of terminals and tuis!
+  - probably not.. these frameworks have retained-state architectures that are just as heavy, or even more heavy than cross-platform gui solutions.., yet are just actually drawn immediately (see [cli-and-tui-frameworks]). but i do like their implicit emphasis on keyboard input (in addition to the option to use a mouse/touch)
+
+
+
+
+
+update:
+
+# rust
 it seems all the momentum is in rust:
   - NOTE: there's likely a lot more
     - https://www.reddit.com/r/rust/comments/1avzrnz/comparison_of_gui_libraries_in_february_2024/
   
-most of these seem like a better engineered, more open-source flutter-like declaritive solution to the cross-platform gui problem
-all have the benefit of using a single, powerful language with an equally powerful ecosystem: rust
-      
-dioxus
-  - react/solidjs-influenced
-    - thus more web-based
-    - much better engineered than other wasm solutions such as C#'s blazor
-    - **single-file web-sites!!**
-  - takes the best ideas from react, svelte, etc. and fits them into rust
+most of these seem like an attempt to make a contemporary flutter-like declarative solution to the cross-platform gui problem. all have the benefit of using a single, powerful language with an equally powerful ecosystem: rust. all are under heavy development, often being re-written as new versions come out, and therefore pretty unstable. even their underlying web technology wasm itself is rather experimental. in the end, this division and multiplicity of frameworks takes a hit in their eco-systems (though not the rust eco-system as a whole..!), giving flutter an easy win. thus, unfortunately, flutter is still currently the best choice: stable, docs, widgets, etc.
 
-  - still heavily in development, and just went through a huge re-write
-  - https://www.reddit.com/r/rust/comments/1cx6h5f/is_dioxus_production_ready/
-    - 100kb, 40kb compressed minimum size, compared to react's 180kb
-      - hopefully there's an option for static pages..?
-  - monolithic, especially when compared to the modular axum web framework, or even phoenix
-  - sponsored
-  
+flutter
+  - for reference
+
 iced
   - elm architecture
     - state, messages, view logic, update logic
   - **batteries included api**
   - **built-in widgets**
   - seems more complete than the others..
+      
+dioxus
+  - react/solidjs-influenced
+    - thus more web-based
+  - takes the best ideas from react, svelte, etc. and fits them into rust
+  - still heavily in development, and just went through a huge re-write
+  - https://www.reddit.com/r/rust/comments/1cx6h5f/is_dioxus_production_ready/
+    - 100kb, 40kb compressed minimum size, compared to react's 180kb
+      - hopefully there's an option for static pages..?
+  - monolithic, especially when compared to the modular axum web framework, or even phoenix
+  - sponsored
   
 slint
   
@@ -39,24 +99,57 @@ floem
 vizia
   - flutter-like declarative solution
   
-flutter
-  - for reference
+xilem
+  - "At a very high level, it combines ideas from Flutter, SwiftUI, and Elm. Like all of these, it uses lightweight view objects, diffing them to provide minimal updates to a retained UI. Like SwiftUI, it is strongly typed."
+  - successor of druid
+  - used by the xi-editor, now abandoned in favor of lapce
+  
+history / abandoned:
+druid
+  - discontinued in favor of xilem
+  - lapce used to use this
+  
+  
+# go
+fyne
+  - probably the main one.. but go probably isn't the best lang for writing a gui app, is it..?
+
   
   
   
 special use-cases:
-tauri
+tauri > electron
   - a better engineered electron written in rust
     - can use standard front-end web tech (html, css, javascript), including any front-end web frameworks you want
     - uses system's web-view (each platform has a default browser), as opposed to shipping with an external browser and node.js
     - this allows you to re-use/divide the front-end for future-proofing and have native web performance
   - requires more work compared to a singular framework like dioxus, as you'd have to divide the front-end from the back-end
   
-e-gui
-  - immediate-gui, basically rust's imgui
+# immediate gui
+  - NOTE: not gpu-efficient, will drain battery, really bad for mobile devices, renders every frame like a game
+
+**dear imgui**
+  - immediate-gui
+  - https://github.com/vaiorabbit/ruby-imgui/blob/master/sample/test_sdl2_opengl2.rb
+    - example with ruby
+  - https://github.com/ocornut/imgui/issues/7892
+    - the story of the journey of the maker of imgui
+  - i don't quite see the point of rust's e-gui nor go's gio.. but ok!
+  - https://github.com/ocornut/imgui/wiki/About-the-IMGUI-paradigm
+    - the author tries to expliain the myth of the dichtomy of immediate-mode gui and retained-mode gui
+    - "Nowadays I am starting to believe that the term has caused more harm than benefits, because it suggests there are two camps "IMGUI" vs "RMGUI". The reality is there is a continuum of possibilities over multiple unrelated axises. Many of them haven't been explored enough, as popular IMGUI libraries have been designed for certain needs and not others."
+      - it could retain state if it wants to, so there's no need for a hard distinction, the bigger change is in their architecture: the state-keeping mvc/elm/qt vs the simpler imgui
+      - apparently, it's not about immediate-mode vs retained-mode, rather it's more about providing a simple api:
+     - "IMGUIs tends to facilitate data binding, action binding, and creation/destruction of UI components. It does facilitate those things because it generally doesn't need them."
+     - "IMGUI refers to the API: literally the interface between the application and the UI system...The API tries to minimize the application having to retain data related to the UI system. The API tries to minimize the UI system having to retain data related to the application... IMGUI does NOT refer to the implementation. Whatever happens inside the UI system doesn't matter."
+
   
-ratatui
-  - terminal-based immediate-tui framework
+nuklear
+  - single-header C89 version of imgui
+  
+  
+# terminal-based immediate tui frameworks
+see [cli-and-tui-app-frameworks]
 
 
 
@@ -75,10 +168,9 @@ OLD:
 
 conclusion:
 phoenix framework
-  - i chose web-app frameworks that provide a systems-programming-like experience, and the longevity of web (and in this case, the maintainance-less of functional-programming). BUT, i'm still not convinced that game engines aren't good for making ui-apps, or any app really (or immediate-guis)
+  - i chose [web-app-frameworks] that provide a systems-programming-like experience, and the longevity of web (and in this case, the maintainance-less of functional-programming). BUT, i'm still not convinced that game engines and/or immediate guis aren't good for making ui-apps, or any app really
   - also, just focusing on one target--the web--, which is inherently cross-platform, avoids the need to build/test for multiple platforms, though flutter does seem really solid, thanks to it's hybrid approach, it's not so great for web, and limited in ui style, which is by design constrained to the style of mobile apps
 
-see web-app-frameworks.txt
 
 
 
@@ -91,13 +183,13 @@ https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-i
 
 
 conclusion:
-in the end, i ditched the idea of native apps for web apps and simple cli/tui apps, see web-frameworks.txt and cli-and-tui-app-frameworks.txt. The browser and terminal just handles cross-platform for you, and aren't going to die any-time soon.
+in the end, i ditched the idea of native apps for web apps and simple cli/tui apps, see [web-frameworks] and [cli-and-tui-app-frameworks]. The browser and terminal just handles cross-platform for you, and aren't going to die any-time soon.
 
 cli and tui apps are a way to go for text-only simple-input apps. I absolutely *love* how lazygit looks in a terminal.
 
-Haxe is perfect for making cli apps (and has tui potential) as it can compile to a binary (via hashlink/c -> llvm). Just add haxe-ui/html5 or haxe-ui-wxwidgets for a quick web or desktop gui.
+Haxe is perfect for making cli and gui (and tui!!) apps as it can compile to a binary (via hashlink/c -> llvm). Just add haxe-ui/html5 or haxe-ui-wxwidgets or haxe-ui-ncurses for a quick web, desktop, or even tui app..!!!
 
-otherwise, if you really need a gui, especially for a mobile target, Flutter is indeed the way to go, lightyears better than it's competition (react native and avalonia), though, it could very possibly be abandonded, along with all the other cross-patform solutions (hence web/terminal)
+otherwise, if you really need a gui, especially for a mobile target, Flutter is indeed the way to go, lightyears better than it's competition (react native, C# attempts, current rust frameworks), though, it could very possibly be abandonded, along with all the other cross-patform solutions (hence web/terminal being the safest long-term solution)
 
 
 
@@ -118,7 +210,7 @@ answer:
 
 
 
-1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets(??) thus quite limiting(??) nor if your focus is on web (due to limited styling by widgets provided?? and slow??), faster compiled language, simpler by design, **covers most use cases**
+1. Flutter for quick *native-looking* app-making, but not if you want to actually use native components/widgets, nor if your focus is on web, faster compiled language, simpler by design, **covers most use cases**
   - C# alts: Avalonia, Uno
 ?. RubyMotion
   - can try it, though be weary
@@ -128,6 +220,7 @@ answer:
   - haxe has a few solutions
     - **Haxe-UI**
       - wildly ambitious project supporting multiple frameworks and backends
+      - probably the most well-maintained haxe lib ever
       - works with **all** of the haxe frameworks including:
         - **Heaps**, you get the power of a complete game engine
           - make apps with your game engine!
@@ -140,14 +233,15 @@ answer:
       - https://raw.githubusercontent.com/haxeui/haxeui-guides/master/000-Getting%20Started/_assets/welcome-system.jpg
         - this image shows the libs/platform support
       - **html5 "backend" sounds great**
-      - **pdcurses!!! omg!**
-      - haxeui-hxwidgets for desktop OSs
+      - **pdcurses!!! omg! the tui dream!!!**
+      - **haxeui-hxwidgets for desktop OSs**
+      - android (native)
       - ios (native)
+        - not supported by the lib
         - https://github.com/rainyt/hx-ios-uikit
-    - coconut
-      - seems to be another layer of abstraction between io engine and ui
+      - "So, if you are targeting native (haxeui-hxwidgets) and web (say haxeui-html5) then there are certainly limitations, mainly on the native side. You cant be so “creative” with native toolkits since the OS simply wont allow certain levels of customization. Obviously on the web (or actually any of the composite haxeui backends) you can customize till your heart is content. Another option for targeting desktop would be to use haxeui-html5 and electron (if you dont mind the weight). I use haxeui for a number of production apps, but obviously, im the author so im biased :slight_smile:"
     - hx-electron
-      - desktop OSs only
+      - **haxeui-web to desktop option/combo**
     - react-hx
       - haxe bindings for react native
   - TODO: **why not just use a game engine like heaps?**
@@ -174,18 +268,19 @@ in order to use SwiftUI, you need a MacOS, and you need to use XCode (and XCode 
 
 
 
-
-ui framework agnostic:
-instead of being tied to a framework, just abstract it! **this is the best solution i know of**...
+# ui framework agnostic:
+instead of being tied to a framework, just abstract it!
 
 Haxe
   - **HaxeUI**
-    - currently supported back-ends: (TODO: update this), wxWidgets for desktop OSs, **Heaps**, **NME**, OpenFL (and therefore HaxeFlixel and HaxePunk (rip) too)
-    - wxWidgets is one of the longest-living libs i've seen!, kinda amazing
-  - coconut
-    - currently supported back-ends: (TODO: update this) **React-Native for mobile**, coming soon: Heaps
+    - currently supported back-ends: wxWidgets for desktop OSs, android (native), **Heaps**, **NME**, OpenFL (and therefore HaxeFlixel and HaxePunk (rip) too)
+  - x/coconut
+    - update: *abandoned since 2021*
+    - react for haxe
+    - has backends for: **react-native** and haxe-ui, heaps is experimental
+    - run by two people
   - both of these feature a **swappable "back-end"!!**: meaning, it's just a set of APIs, and so if you do want to switch to another framework, you can do that without changing your code, or at least minimizing that. This way, as ui frameworks come and go over time, you can keep the same core code, but swap the ui frameowork, say, from Heaps to React. All that is needed is to write haxe bindings for the target UI framework. This way, also, you can just re-use all of Haxe code and even coconut ui api code. **this might just be the most future-proof solution that i know of...**
-    - from Rudy on the Haxe server (15 years Haxe dev with tons of React experience): "Yeah the theory is all nice, but in practice you'll build your UI with/around your current backend's components and that won't translate well to other backends"
+    - **"Yeah the theory is all nice, but in practice you'll build your UI with/around your current backend's components and that won't translate well to other backends"** --Rudy from the Haxe server (15 years Haxe dev with tons of React experience): 
 
 Ruby
   - Glimmer DSL
@@ -195,43 +290,26 @@ Ruby
 # "hybrid"
 basically bindings to native components (UIKit for iOS, Win32 api for Windows, etc.). This is the first solution that came to my mind when i thought cross-platform ui/apps : just provide bindings, and then a common framework on top of that. **The main trade-off is this: it will not constrain as you always have acces to native APIs, but you must understand the inner APIs of each target: UIKit for Apple, Win32 for Windows, and so on. Thus, this is definitely not for the casual or even the indie devs.** Indies should go one step up, to "owner-drawn" non-native frameworks.
 
-wxWidgets
+libui/libui-ng
+  - portable C gui lib
+    - therefore, bindings to every language
+  - libui was abandoned ~2018, libui-ng seems to continue where it left off..?
+  - still a work in progress...
+
+**wxWidgets**
   - the grand-daddy of hybrid frameworks
     - a very old but solid open-source C++ project
+      - since it's written in C++, perhaps it's pretty easy to bind/ffi to it..?
   - **mobile support is pretty non-existant**
+    - the iOS readme says it’s just for “a base for simple apps”... :/
+    - https://github.com/wxWidgets/wxWidgets/tree/master/docs/ios
   - "produces apps with a distinctive 1990s feel"
   - there are many bindings for it, including one for haxe! HaxeUI contains it as a build option!!
     - http://haxeui.org/getting-started/hello-world/
       - pretty sick, just change build target and bam! but surely mobile support is lacking. :(
+  - sparse docs, but easier/simpler thant Qt
 
-RubyMotion
-  - http://www.rubymotion.com/about/
-  - **mac os x, ios, android platforms only**
-    - thus, really mainly for mobile platforms only
-    - because the ruby runtime was forked off or inspired by macruby
-      - **thus doesn't use vanilla ruby, and thus won't work with most ruby gems :(**
-        - thus very likely a few small community and small library system
-  - closed source?
-  - *i think* it's a hybrid, basically just bindings to everything, wherein you'd have to develop specifically for each platform target
-  - at the moment there's a free version ("starter"), then, perhaps after it is popular or for publishing to other devices you need to pay quite a bit..
-  - llvm
-  - https://davetrollope.medium.com/i-found-the-holy-grail-in-cross-platform-mobile-development-915500c1c4ca
-    - "I released the iOS app and quickly acquired a number of users, so I moved on to developing an Android version. RubyMotion fell flat on this endeavor. I was unable to use get the app very far without considering new Java bindings for APIs I wanted. Not something that I consider a cross platform solution, from a users perspective."
-  - basically run by 1 person: amir rajan
 
-React-Native
-  - the most popular solution as of 2022
-  - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
-  - **uses native device componenets / wrappers**
-  - javascript, but since haxe has bindings, perhaps there are other bindings?? :o
-    - javascript has the biggest library tho (npm)
-  - the syntax / ui lanugage of React is like HTML-like :/
-  - **the most mature/oldest one** (excluding Qt), setting a new standard, an therefore has the largets library collection
-    - expo.io builds the mobile apps for you, so you don't need a Mac! :o
-  - open-source and (*was?*) extremely popular among trendy trashy startup companies, but, **it feels more more abandoned now, i think even Facebook stopped using it now, lol!**
-  - great VS Code dev experience, although still dynamically typed
-  - Facebook (abandoned to open-source?)
-  - Microsoft..? https://microsoft.github.io/react-native-windows/
 
 React (web)
   - javascript world, a web framework, but also has a native framework (React Native)
@@ -241,22 +319,21 @@ React (web)
   - you sorta build "components" (widgets) with HTML syntax (ew)
   - as of 2022, still the most popular
   - made by Facebook? (*vomit*)
+  
+  - React-Native
+    - the most popular solution as of 2022
+    - it's actually a specific component, that goes alone with React. React is the front-end ui framework. React Native is the native back-end (wrappers, common components)
+    - **uses native device componenets / wrappers**
+    - javascript, but since haxe has bindings, perhaps there are other bindings?? :o
+      - javascript has the biggest library tho (npm)
+    - the syntax / ui lanugage of React is like HTML-like :/
+    - **the most mature/oldest one** (excluding Qt), setting a new standard, an therefore has the largets library collection
+      - expo.io builds the mobile apps for you, so you don't need a Mac! :o
+    - open-source and (*was?*) extremely popular among trendy trashy startup companies, but, **it feels more more abandoned now, i think even Facebook stopped using it now, lol!**
+    - great VS Code dev experience, although still dynamically typed
+    - Facebook (abandoned to open-source?)
+    - Microsoft..? https://microsoft.github.io/react-native-windows/
 
-Maui <- Xamarin(.Forms)
-  - .net / c# world, uses native ui
-  - two ways to do ui: forms library can be used for completely code-shared ui, or, ios and android specific libraries can be accessed making for more complex platform-specific ui
-  - there is only ‘fast deployment’ for android devices via android studio; there is no live-reloading
-  - old-school build ‘n deploy process
-  - **of the big 3 (Flutter, Xamarin, React), this was the least loved**AUI (Xamarin)
-  - C#/.NET WinForms(?) api
-  - maintained by .NET foundation
-
-Uno?
-  - C#/.NET WPF api
-  - renders widgets using the platform's primitives
-  - uses one of the C#/.NET WinForms-like api to build widgets
-  - hot re-load
-  - more mobile-oriented
 
 
 
@@ -265,14 +342,16 @@ Uno?
 # non-native
 for a single, indie dev, these are the way to go. Well, either this or web, which is inherently cross-platform
 
-Qt
+x/Qt
   - the grand-daddy of all non-native ui frameworks
   - i didn't even know it still existed!!
   - impressive use history: from contemporary use in Linux's KDE desktop UI(!!!) to Valve's Source Engine
   - C++, but has official python bindings :o
   - non-official rust bindings
-  - feels like a massive tool :(, like as big as Unity!
+  - **feels like a massive tool :(, like as big as Unity! and reported bad dev experience**
   - renders controls using media graphics libs: opengl, directx, vulkan, etc.
+  - great docs
+  - more commercial/industrial in nature, have to eventually pay for a license to use all of it's functionality
 
 **Flutter**
   - the contempory banger, quickly rose in popularity, equaling React-Native to become top 2
@@ -285,14 +364,9 @@ Qt
   - renders/draws using Skia graphics lib
   - most loved framework on the SO surveyapp size, like 2MB for Android
   - Google, but no propietary crap like apple and microsoft
+  
 
-Avalonia
-  - C#/.NET version of Flutter
-  - renders widgets with Skia (like Flutter)
-  - uses one of the C#/.NET WinForms-like api (WPF) to build widgets
-  - more desktop-oriented
-  - "cleanest" code-base
-  - "We've had huge companies adopt Avalonia for their desktop apps, including JetBrains, GitHub, KLM and more."
+
 
 
 
@@ -302,12 +376,62 @@ Electron
   - i'm not really sure if this even belongs here, but i think you can make anything with it..?
   - the major problem: it runs on top of a web browser: Chromium, meaning, each Electron application contains a copy of Chromium inside! :o
     - just based off this alone, it does not intrigue me... but:
-  - VS Code, Skype?, Slack?, etc., basically any app that started as a web-app used this to make a "native"'ish app
+  - VS Code, Skype?, Slack?, etc., basically any app that started as a web-app used this to port it to native apps
 
 
 
 
 
+# not completely cross-platform
+x/RubyMotion
+  - http://www.rubymotion.com/about/
+  - **mac os x, ios, android platforms only**
+    - thus, really mainly for mobile platforms only
+    - because the ruby runtime was forked off or inspired by macruby
+      - **thus doesn't use vanilla ruby, and thus won't work with most ruby gems :(**
+        - thus very likely a very very small community and small library system
+  - **closed source?**
+  - *i think* it's a hybrid, basically just bindings to everything, wherein you'd have to develop specifically for each platform target
+  - at the moment there's a free version ("starter"), then, perhaps after it is popular or for publishing to other devices you need to pay quite a bit..
+  - llvm
+  - https://davetrollope.medium.com/i-found-the-holy-grail-in-cross-platform-mobile-development-915500c1c4ca
+    - "I released the iOS app and quickly acquired a number of users, so I moved on to developing an Android version. RubyMotion fell flat on this endeavor. I was unable to use get the app very far without considering new Java bindings for APIs I wanted. Not something that I consider a cross platform solution, from a users perspective."
+  - basically run by 1 person: amir rajan
+  
+  
+
+
+# not interested / C#: 
+  - ugh, i was done with C#'s clunkiness after my first job in ~2010
+
+## native
+x/Maui <- Xamarin(.Forms)
+  - .net / c# world, uses native ui
+  - two ways to do ui: forms library can be used for completely code-shared ui, or, ios and android specific libraries can be accessed making for more complex platform-specific ui
+  - there is only ‘fast deployment’ for android devices via android studio; there is no live-reloading
+  - old-school build ‘n deploy process
+  - **of the big 3 (Flutter, Xamarin, React), this was the least loved**
+  - C#/.NET WinForms(?) api
+  - maintained by .NET foundation
+
+Uno?
+  - C#/.NET WPF api
+  - renders widgets using the platform's primitives
+  - uses one of the C#/.NET WinForms-like api to build widgets
+  - hot re-load
+  - more mobile-oriented
+
+## non-native / drawn
+x/Avalonia
+  - C#/.NET version of Flutter
+    - *ew.* just use flutter!
+  - renders widgets with Skia (like Flutter)
+  - uses one of the C#/.NET WinForms-like api (WPF) to build widgets
+  - more desktop-oriented
+  - "cleanest" code-base
+  - "We've had huge companies adopt Avalonia for their desktop apps, including JetBrains, GitHub, KLM and more."
+  
+  
 
 
 # not interested / corporate folks faking and abusing open-source folks
@@ -335,7 +459,7 @@ Kotlin MultiFramework
   - is it Google? why would Google have 3 UI frameworks??
 
 
-# old
+# old / history
 x/Ionic
   - typescript, angular, uses cordova (aka phonegap) to port web code to devices, uses web (html, css) for ui
   - because it uses web for ui, it just can’t look good as native ui apps
@@ -361,6 +485,8 @@ https://docs.microsoft.com/en-us/windows/win32/learnwin32/retained-mode-versus-i
 
 
 
+
+
 # my answer to a reddit question:
 https://www.reddit.com/r/AskProgramming/comments/sqk6id/avalonia_vs_uno_vs_maui_vs_flutter/
 
@@ -368,10 +494,6 @@ tldr: try Avalonia or Uno so that you can stick to C#, then, if they end up bein
 
 i was just looking at this too... maybe there’s some C# bindings for wxWidgets? I found one for my language: haxe via haxeui lib... It just seems like one of those old solid libs that’ll never die, like many good C++ libs... This way, you don’t have to learn a whole ‘nother api, framework, way of doing, language, or anything! :)
 
-although... now looking at the repo... i just don’t see much mobile support... even the iOS readme says it’s just for “a base for simple apps”... :(
-
-https://github.com/wxWidgets/wxWidgets
-https://github.com/wxWidgets/wxWidgets/tree/master/docs/ios
 
 poop.
 
@@ -383,14 +505,7 @@ though, do note, written in june 2021, and now Avalonia might have decent mobile
 
 
 
-sources:
-https://insights.stackoverflow.com/survey
 
-https://insights.stackoverflow.com/survey/2021#technology
-
-https://insights.stackoverflow.com/survey/2020#technology-other-frameworks-libraries-and-tools-all-respondents3
-
-https://medium.com/swlh/xamarin-vs-ionic-vs-react-native-differences-under-the-hood-6b9cc3d2c826
 
 
 
