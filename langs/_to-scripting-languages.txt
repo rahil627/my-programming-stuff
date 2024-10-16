@@ -1,13 +1,29 @@
 
+https://github.com/igor-petruk/scriptisto
+  - TODO: write scripts in compiled languages!
+  
+
+# conclusion:
+i love ruby, and will absolutely keep it for my own personal scripts, likely for my entire lifetime..! **it's perfect for scripts without dependencies**, only using the std lib. Once it requires dependencies, or needs parallelism (never), i'd have to jump to a native-compiled language.
+
+with dragonruby (mruby) as my main game engine, and phoenix/elixir as my main web-app-framework and general app-framework, i can live in the world of ruby forever!! yaeaaahhhhhh!!!
+
+
+# post-dragonruby update
+yep. ruby is the one. i finally found it.
+
 
 # post-windows update
+see [cli-and-tui-frameworks] for similar thoughts on scripting vs natively-compiled
+
 welp, glad i ended up never ended up using scripting langauges!
 
-though i prefer much of ruby's design (blocks, mix-ins, syntax, etc.), it's just not worth installing it to run it for most people. The advent of go and rust (and haxe before them!) has shown the importance of compiling to machine code to build binaries that work everywhere. Now, windows has all of linux's superior programs re-written in rust, go, 'n zig; So much so, that there's no need for linux anymore. And building for Windows is crucial--as i use it myself!! So, it's best to stick to compiled languages where things are guaranteed to work, build everywhere, and provides a good debugging experience...
+though i quite love ruby's design (blocks, mix-ins, syntax, etc.), it's just not worth installing it to run it for most people. The advent of go and rust (and haxe before them!) has shown the importance of compiling to machine code to build binaries that work everywhere. Now, windows has all of linux's superior programs re-written in rust, go, 'n zig; So much so, that there's no need for linux anymore. And building for Windows is crucial--as i use it myself!! So, it's best to stick to compiled languages where things are guaranteed to work, build everywhere, and provides a good debugging experience...
 
-the biggest difference will be the libraries and the succintness (what makes it beautiful are it's main cons: dynamic typing syntax and libraries that use meta-programming). Go has a minimal yet powerful standard library whereas ruby's libraries are often powerful, and have a lot of character: often elegance, a bit of quirkiness, and a good amount of magic. In go, you just write/program straight-forwardly, like the languages itself. Also in go, there's a bunch of error handling code (by design) that takes up space and hinders readability. Both python and ruby (and even typescript) scripts will be more succint, easier to read, but maybe not by a large enough margin to outweigh the ability to create portable executables for every platform. Haxe's standard library is closer to go, minimal-yet-powerful (thanks to it's maker's style), yet it's open-source-community libraries are often closer to ruby, full of meta-programming magic. Kinda the best of both worlds.
+the biggest difference will be the libraries and the succintness (what makes it beautiful are it's main cons: dynamic typing syntax and libraries that use meta-programming). Go has a minimal yet powerful standard library whereas ruby's libraries are often over-engineered, and have a lot of character: often elegance, a bit of quirkiness, and a good amount of magic. In go, you just write/program straight-forwardly, like the languages itself. Also in go, there's a bunch of error handling code (by design) that takes up space and hinders readability. Both python and ruby (and even typescript) scripts will result in more succint, easier to read programs, but maybe not by a large enough margin to outweigh the ability to create portable executables for every platform, and provide easy concurrency and parallelism. Haxe's standard library is closer to go, minimal-yet-powerful (thanks to it's maker's style), yet it's open-source-community libraries are often closer to ruby, full of meta-programming magic. Kinda the best of both worlds... unfortunately, haxe being much older than go, wasn't built with concurrency in mind, and didn't even get threads into it's std lib until v4.
 
-if i could, i'd choose elixir for most things: It's just as magical and rad as ruby, but contemporary. But it's use cases are limited basically to the same domains as scripting languages, and furthermore, it is among the worst choices for making cli programs. :( Anyways, there's always haxe, or even rust if needed (both feature-ful).
+if i could, i'd choose elixir for most things: It's just as magical and rad as ruby, but contemporary. But it's use cases are narrow: basically, web servers, and furthermore, it is among the worst choices for making cli programs. :( Anyways, there's always haxe 'n go.
+
 
 
 # post-windows powershell update
@@ -16,12 +32,23 @@ powershell is what i was looking for. You get the .net framework--if you need it
 
 
 
+
+
+
+NOTE: everything below this is a mess...
+
+
+
+
+
+
+
 # conclusion
 so basically,
 
-**for C/C++ embedding, it might be best to just use/earn C/C++, or wait until Jai, or use Haxe or something that interops with C (everything?), as running a VM/byte-code interpreter has a cost that's not worth it for embedded/performace applications such as games**
+**for C/C++ embedding, it might be best to just use/learn C/C++, as running a VM/byte-code interpreter has a cost that's not worth it for embedded/performace applications such as games**
 
-All of them have standard libraries, though, Lua with it's goal of minimal size, is the smallest, though in a charming in it's own charming way (see the very simple one-web-page manual). **Python's and Ruby's standard librares solid after decades of use, but def feels less standard compared to compiles languages, making breaking changes.**
+All of them have standard libraries, though, Lua with it's goal of minimal size, is the smallest, though in a charming in it's own way (see the very simple one-web-page manual). **Python's and Ruby's standard librares solid after decades of use, but def feels less standard compared to compiled languages, making breaking changes, which results in requiring the correct version just to run it..!**
 
 Lua's like a primitive language that can build features that other languages have, but, it's not built-in, it's all dynamic-feeling, so overall it feels janky, imo. **For general scripting use, not embedding, I much prefer Ruby or Python over Lua, and Ruby over Python**. **Lua is made for embedding,** and it's great at that, whereas **Ruby and Python are made for scripting.**
 
