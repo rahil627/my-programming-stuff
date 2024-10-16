@@ -101,11 +101,6 @@ julia mono
 liberation mono
 lekton
   - surprisingly pleasing..
-maple
-  - nice 'n thick TODO: try the "light" version
-**office code pro**
-  - forked from source code pro, combines a lot of good things from other fonts
-  - possibly my current favorite
 red hat mono
   - pleasing
 saxmono
@@ -165,12 +160,12 @@ fixed-width: roboto
 TODO: need to try consolas in a lighter weight
 TODO try source code pro with a more narrow width
 
-**source code pro / hasklig (light)**
+**office code pro < hasklig (light) ~= source code pro**
   - terminal: size 10-11, weight: regular/normal
   - vscode: size 11-12, weight: light
   - best/most comfy for my eyes long-term
   
-**mononoki**
+**monofoki < mononoki**
   - 12, same size as consolas
   - slightly more wider and less seriphy than consolas, and therefore more comfy, but less readable
   - a little more funky
@@ -213,7 +208,7 @@ monaspace krypton var
 
 
 progressions:
-monaspace neon <- hasklig ~= source code pro
+monaspace neon <- office code pro ~= hasklig ~= source code pro
 mononoki & agave
 
 cascadia code ~= fira code <- anonymous pro (seriphy)
@@ -225,6 +220,9 @@ jetbrains (sans) mono <- dejavu sans mono
 
 
 # main list
+maple mono
+  - nice 'n thick TODO: try the "light" version
+  - has a cute jrpg feel to it, funny little 'a'
 
 agave
   - very simple, very cute, maybe too cute..
@@ -266,6 +264,11 @@ Meslo LG S NF
   - NF = nerd font
   - just fixes symbol positions from dejavu sans mono
   - The recommended font is the product of many individuals. Its origin is Bitstream Vera Sans Mono, which has given birth to Menlo, which in turn has spawned Meslo. Finally, extra glyphs have been added to Meslo with scripts forked from Nerd Fonts. The final font is released under the terms of Apache License.
+  
+  
+**office code pro**
+  - forked from source code pro, combines a lot of good things from other fonts
+  - possibly my current favorite
 
 hasklig
   - source code pro + ligatures (->, =>, etc.)
@@ -273,12 +276,13 @@ hasklig
     - https://github.com/ryanoasis/nerd-fonts/tree/master/src/unpatched-fonts/Hasklig
       - somewhere in-between source code pro regular and light
 
-monofoki
+**monofoki**
+  - more sans-seriphy
   - a lot of small changes, usually for the better
     - not sure how i feel about this 'm' though..
   - branches from mononoki, 50 commits behind, 200+ ahead
 
-mononoki
+**mononoki**
   - a cute, unique, small font
   - a more open-feeling consolas
   - the bold is great, very sans-serif
