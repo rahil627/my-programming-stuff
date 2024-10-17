@@ -8,29 +8,47 @@ https://insights.stackoverflow.com/survey/2020#technology-other-frameworks-libra
 
 
 conclusion:
-tl;dr: target web: phoenix/elixir for everything > roda/ruby/erb for simple stuff (and <3 ruby). and if you completely want to avoid web-dev: haxe/haxe-ui, HIDE?, CLOG, red?
+tl;dr: write the front-end using web-tech (html/css/js or haxe/ruby/purescript/typescript->js) and then use electron/tauri to target desktop. if you need a server: see [web-frameworks]: phoenix/elixir for servers > roda/ruby/erb for simple server stuff (and <3 ruby). **having the front-end written using web tech (html/css/js) makes it future-proof, more portable (to web and mobile web), and even more flexible than native app gui components (you can make your own components).**
 
 the only stable, good, simple-to-build cross-platform choices is flutter. however, **the main target should be web, as it provides a standard solution to the old cross-platform graphics output problem: the browser; and as it's the most accessible: no need to download an app or binary or know how to use the terminal or emacs or anything (and likewise, no need to build for those platforms either). Guaranteed to work everywhere, forever.** Thus, it's likely better to use phoenix (see [web-app-frameworks]), which is a web dev framework first, but also has great potential for native targets via live-view-native, enabling code re-use for native targets, *using native ui* (similar to react-native, and unlike flutter's comprimising solution). With phoenix, you'd get a native web solution, the best concurrency/server-throughput tech (OTP) built-in the langauge (without need of using crappy concurrency libs thrown into the langauge much later), and a more beautiful language (elixir vs old clunky object-oriented dart or vs js's garbage-churning ecosystem). The main cost is development time: for web (have to learn and write a web front-end) and for live-view-native (it's not just simply graphics drawn to the screen..). At those costs of time, however, you get infinite potential in all targets: web and native.. Flutter, however, does indeed offer really, *really* fast development, especially for mobile devices, perfect for quickly prototyping a product to be shown at a pitch, but down the line, phoenix shines, in multiple directions.
 
-if you want to avoid web front-end (html/css/javascript/web-components/component frameworks) altogether, and especially if you've still got haxe knowledge, can use haxe-ui with native html5 web target and native desktop targets
-  - it comes with a ton of components!!
 
-for most cases, especially high-traffic, use phoenix
+the big use-cse switch statement:
+if you want to avoid web front-end (html/css/javascript/web-components/component frameworks) altogether, and especially if you've still got haxe knowledge, can use haxe
+  - two ways:
+    - classic web dev style gui without javascript, use for back-end and front-end via transpile to javascript, then use electron/tauri
+      - **for apps that don't need a server, this is perfect**
+      - ldtk, a 2d level editor, is a great example
+    - haxe-ui, a component framework with native web and desktop targets
+    
+for most cases that need a server, especially high-traffic, use phoenix
   - even if you don't need a database, authentication, etc., it's still better than using a micro-framework like roda
 
-if you've still got ruby knowledge, and don't expect high-traffic and don't need a batteries-included framework, use roda
-  - you can quickly scrap up some stuff with this.., but you would still need to use html/css/javascript, and might even need to create your own web components (using js api) or add some framework :/
+for simpler cases that need a server, and especially if you've still got ruby knowledge, and don't expect high-traffic, and don't need a batteries-included framework, use roda
+  - you can quickly scrap up some stuff with this.., but you would still need to use html/css/javascript, and might even need to create your own web components (written in js) or add some terrible js components framework :/
   
-
 if it's meant to be embedded in an app, including games, use dear imgui.
 
-if it's just a tools app, some simple program that now needs a gui, and not really meant for long-term use (battery-draining, resource-hogging), and def not mobile devices, just add dear imgui or haxe-ui or even HIDE..!
-  - NOTE: this is a language-agnostic solution
+if it's just a client-side apps, particularly for some existing program that now needs a gui, can interface with haxe (then electron/haxe-ui/HIDE?) or try libui-ng
+  - NOTE: **these are a language-agnostic solutions**
+  - NOTE: **libui-ng is quite experimental**
+    - limited to desktop OSs?
+    - ruby in particular has dsl on top of libui-ng bindings: glimmer
   - **this is a very, very neat use case for haxe**, as it can interface with many languages
-  - **it's also a very neat case for HIDE..?**
+    - **it's also a very neat case for HIDE..?**
 
 if you've already got a web front-end, use tauri (or electron).
-  - NOTE: this is also a langauge-agnostic solution, at least for the back-end, and possibly the front (via transpile/wasm)
+  - NOTE: **this is also a langauge-agnostic solution**, at least for the back-end, and possibly the front (via transpile/wasm)
+  
+  
+  
+to try / experimental:
+red (langauge)
+CLOG
+  - for quick, fun lispy web gui rapid dev!! :D
+lib-ui
+  - a newer cross-platform C lib
+
 
 otherwise, some possibilities:
 haxe-ui
@@ -42,8 +60,6 @@ flutter
   - great for rapid development
   - great eco-system
   - ugly google, ugly dart, ugly google design
-CLOG
-  - for quick, fun lispy web gui rapid dev!! :D
 game engines
   - for more advanced ui ;)
     - dragonruby 4 lyfe
@@ -55,7 +71,8 @@ emacs
   - but good lispy fun :)
 x/tui-frameworks
   - for the love of terminals and tuis!
-  - probably not.. these frameworks have retained-state architectures that are just as heavy, or even more heavy than cross-platform gui solutions.., yet are just actually drawn immediately (see [cli-and-tui-frameworks]). but i do like their implicit emphasis on keyboard input (in addition to the option to use a mouse/touch)
+  - probably not.. these frameworks have architectures that are just as heavy as retained-state gui frameworks, and feel even more heavy than contemporary cross-platform gui solutions.., yet are just actually drawn immediately(??) (see [cli-and-tui-frameworks]). but i do like their implicit emphasis on keyboard input (in addition to the option to use a mouse/touch)
+
 
 
 
@@ -148,12 +165,20 @@ fyne
   
   
 special use-cases:
-tauri > electron
+tauri
   - a better engineered electron written in rust
-    - can use standard front-end web tech (html, css, javascript), including any front-end web frameworks you want
-    - uses system's web-view (each platform has a default browser), as opposed to shipping with an external browser and node.js
-    - this allows you to re-use/divide the front-end for future-proofing and have native web performance
-  - requires more work compared to a singular framework like dioxus, as you'd have to divide the front-end from the back-end
+  - tauri uses system's web-view (each platform has a default browser), as opposed to shipping with an external browser and node.js
+  - **must use rust to write the back-end**
+    - https://github.com/tauri-apps/tauri/issues/4670
+      - bindings for diffrent languages/runtimes doesn't seem easy...
+  
+electron
+  - can use standard front-end web tech (html/css/js or anything that transpiles to js), including any front-end web frameworks you want
+  - **can use any language that transpiles to javascript for back-end (haxe, ruby, purescript?, etc.)**
+  - **this allows you to re-use/divide the front-end for future-proofing**
+  - **it's also just good for having a native web target**, as that should be the main target..
+  - **requires more work compared to a singular framework like dioxus, as you'd have to divide the front-end from the back-end, but a worthy tradeoff for stability/future-proofing**
+  
   
 # immediate gui
   - NOTE: not gpu-efficient, will drain battery, really bad for mobile devices, renders every frame like a game
