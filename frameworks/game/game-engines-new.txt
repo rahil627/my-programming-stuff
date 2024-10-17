@@ -1,4 +1,14 @@
 
+
+# a thought
+(another bit: about media / i/o frameworks being in the sweet-spot between contraining (of expression) gui tools and low-level media api's (particularly, graphics, but also various device inputs)
+
+and perhaps amir being right: incremental development of an implementation of an idea is the right way, and probably even coincides with the incremental development of the idea.)
+
+TODO: get from notebook.. or link to the note
+
+
+
 TODO: merge
 engines that don't support various rendering pipelines, and only opengl, will limit their targets to PC and the switch. All other consoles, handhelds, etc., have their own rendering pipline.
 
