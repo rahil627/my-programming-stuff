@@ -77,6 +77,10 @@ much of it is merely out of personal personal taste and gut feeling, yet, there 
 
 
 
+# sources
+https://itch.io/game-development/engines
+https://itch.io/game-development/engines/most-projects
+
 
 
 # a list of video game engines
@@ -299,14 +303,24 @@ i have no clue about these
 
 
 ## specialized:
-  - **Pico-8**, a “fantasy console”, just from [this page about the development of voxatron](https://www.lexaloffle.com/voxatron.php?page=dev), full of little GIFs that display truly awesome little features, what’s there not to love?—well, for one, i’m not a pixel, and definitely not a voxel (_vomit_) lover :(. Beyond that though, this is truly a charming little world, possibly even a model for any game-maker community project
 
 ### genre-specific stuff:
 despite that limitation, these are quite popular in game jams, where content > programming-needed design
   - M.U.G.E.N., fighting games!!!, but likely old and limiting :(
-  - RPG game maker
-  - adventure game maker
+  - RPG game maker, make JRPGs!!
+  - twine, "An open-source tool for telling interactive, nonlinear stories"
+  - tyranobuilder, "​A cross platform visual novel studio"
+  - adventure game studio
   - etc.
+
+### constrained
+  - **Pico-8**, a “fantasy console”, just from [this page about the development of voxatron](https://www.lexaloffle.com/voxatron.php?page=dev), full of little GIFs that display truly awesome little features, what’s there not to love?—well, for one, i’m not a pixel, and definitely not a voxel (_vomit_) lover :(. Beyond that though, this is truly a charming little world, possibly even a model for any game-maker community project
+  
+  - bitsy, another fantasy console..?
+  
+  - gb studio, "A free and easy to use retro adventure game creator for your favourite handheld video game system"
+
+
 
 
 
