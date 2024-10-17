@@ -1,6 +1,14 @@
 # the opinions of more experienced programmers
 
 
+## a thought
+likely re-occuring from 10 years ago, to now, again, as i revisit technology
+
+(one bit, on language: about expression of artists via tech mediums, prioritizing language/tools that allow expressiveness, as opposed to most common languages, which prioritize conformity and/or strive towards a single way of writing / pure procedural.)
+
+TODO: get from notebook
+
+
 
 ## Jon Blow's opinion
 https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
