@@ -699,7 +699,7 @@ mode.insert = "insert"
 mode.select = "select"
 
 [editor.whitespace.render]
-newline = "all"
+# newline = "all"
 
 [editor.whitespace.characters]
 # space = "·"
