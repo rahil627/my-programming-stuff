@@ -595,6 +595,10 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
  
 **Ruby**
   - a scripting language that people seem to really *love*
+    - **my fav scripting language, and possibly my favorite language overall :o**
+    - the community is built around the love for it and the community, which is healthy
+  - **DRAGONRUBY**
+    - though, technically a fork of mruby..
   - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Roda (*this one looks amazing...*), Hinami, Middlemen (*this looks like a good step up from Jekyll*), and more..
     - there are two particular newer frameworks that compile to machine language, DragonRuby and RubyMotion, for cross-platform game and apps, deploying to just about any device! :o It sounds like haxe's frameworks! Unfortunately, they are closed-source, giving it a more closed-off, isolated feeling, and they cost quite a chunk of money to try...
   - "Matsumoto describes the design of Ruby as being like a simple Lisp language at its core, with an object system like that of Smalltalk, blocks inspired by higher-order functions, and practical utility like that of Perl."
@@ -613,18 +617,29 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
   - Metaprogramming "so you can dynamically create / change / etc behaviors using anonymous methods, closures, etc." and also writing a DSL
     - "Ruby makes hard things easy (think meta-programming, functional programming, etc). Bad programmers overuse it all the time (just because you can use the tool, you do not always have to), and other programmers suffer."
     - "Ruby's "metaprogramming" is something Java, C# and JS don't do well -- dynamically redefining things during runtime. **Everything in Ruby, including literals and operators, can be redefined during runtime, because everything is an object, and every message passed to any object can be redirected, filtered, transformed ad hoc. It's not just classes can be modified. Specific objects can be modified. Well-crafted Ruby code breaks things up into mixins that can be composed together. The closest comparison is one of Ruby's inspiration -- Smalltalk."**
-  - bad: "GIL (global interpreter lock) - disable normal usage of multithreading. Can be solved..." usnig other interpreters?
-    - Ruby 3 adds fibers (non-parallel) and ractors (parallel)
   - Ruby 3 adds TypeProf, "a type analysis tool, which are the “first steps” towards a “future with static type checking, without type declaration, using abstract interpretation”"
   - Ruby 3, is 3x faster (was released just before 2021)
     - most performant libs have hand-written C in them, just as python does, so performance often isn't an issue anyway
   - "monkey patching - "If you need a Class to work slightly differently, you can monkey-patch it (this can get dangerous, but sometimes it’s super useful) — you just re-define the Class, which “opens” it, define the methods you want to add, and they are implicitly added."
   - memory hungry
-  - **too slow for games, even with the compiled version (CRuby?) :(**
-    - maybe even too slow for big apps :/ (compare: Jekyll vs Go)
-    - "it's clearly up to the task for small shell script sizes up to medium sized applications."
-    - GraalVM
-      - a VM for Java, and possible implementation for other languages: Ruby, Pythong, and Javascript, for example, are all official
+  - LIMIT: "GIL (global interpreter lock) - disable normal usage of multithreading."
+    - Ruby 3 adds fibers (non-parallel, co-routines) and "experimenttal" ractors (parallel)
+    - https://www.reddit.com/r/ruby/comments/16xsjxl/comment/k358oz7/
+      - "When a program schedules how a thread executes it is called a green thread. Operating systems have many decades a of optimization for how to schedule threads so it’s quite difficult to beat them. In Ruby 1.9 they switched from green threading to real operating system backed threads. What we call a fiber now is essentially a green thread with no scheduler. This is like a coroutine in other languages"
+      - "...In Ruby 3.something they introduced the ability to define a scheduler at the language level and now gems like “async” can auto switch fibers based on IO (like if you say “run this DB query” the async gem knows it can run something else until that info returns. The async gem effecively implements an event loop like javascript. So you still have to be careful about not blocking the loop (just like javascript)."
+  - **too slow for games?? :(**
+    - yjit (runtime)
+      - ships with ruby 3.1
+      - **NATIVE COMPILATION??**
+        - all platforms except windows :(
+    - artichoke (runtime)
+       - a ruby made with rust
+       - experiment with all sorts of possibilities: including native compilation, webassembly, etc.
+    - natalie (runtime)
+      - a ruby made with C++
+      - native compilation
+    - GraalVM (runtime)
+      - a VM for Java, and possible implementation for other languages: Ruby, Python, and Javascript, for example, are all official
         - TruffleRuby is ~9x faster than CRuby, *so far*
           - https://github.com/oracle/truffleruby
           - https://eregon.me/blog/2022/01/06/benchmarking-cruby-mjit-yjit-jruby-truffleruby.html
@@ -633,17 +648,15 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
       - https://github.com/graalvm
       - by Oracle, used by Facebook and Twitter
   - adds a ton of features: object.map => { anonymous function / lambda / closure / "block" (i dunno difference) }, container.select/find/filter {|item| item == item_i_want}, getter/setters, modules (this is interesting and have not seen before: basically can include group of methods to an object! :o), etc.
-  - has incredible syntax: no var necessary?
+  - has incredible syntax: no var necessary??
   - see this for major differences: https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
-  - game engines, such as Gosu, are written in C/C++ and then wrapped/binded by Ruby, because it would be too slow otherwise
   - opal, a ruby implementation that transpiles to javascript..??
     - https://www.reddit.com/r/ruby/comments/10b1ici/opal_v17_released_with_ruby_32_support/
   - although i missed this generation, i think i would have enjoyed this little world :)
   - like Haxe, seems to have a nice cult community of hackers :)
     - this alone makes it much more appealing to me than the other pop general languages
-  - **my fav scripting language**, and possibly my favorite language overall :o
   - GitHub and Shopify might be the biggest companies behind it :D
-  - made by one Japanese guy
+  - made by one Japanese guy, **for the sake of providing happiness/joy :)**
 
 TODO: rid this portion
 https://www.reddit.com/r/ruby/comments/hp3yar/i_am_tired_of_hearing_that_ruby_is_dead/
@@ -1622,9 +1635,10 @@ Swift
     - **Clojure is a special exception, as it's just a lisp piggy-backing on the VM's tech, and Clojurescript to avoid/transpile javascript**
       - see [#lisp]() for entry on closure
 
-Scala
+**Scala**
   - basically a replacement for Java, interops with Java, compiles down to Java bytecode (to go into JVM)
   - much loved by the java folks
+  - **resembles ruby** (when it's not busy being constrained to functional paradigm..)
   - just as featureful and powerful as most of the newer contemporary lanugages
   
 Kotlin
