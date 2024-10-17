@@ -312,41 +312,54 @@ despite that limitation, these are quite popular in game jams, where content > p
 
 
 
-# software frameworks
+# io-related software frameworks and libraries
 these can be used or combined to help you make your own game engine
 
 ## media frameworks, media layers, foundational frameworks, io frameworks, back-ends, etc.
 these provide access to the platform’s input and output (graphics, “contexts”, etc.), windowing, and often including audio and font rendering too
 not ordered
 
+https://www.reddit.com/r/gameenginedevs/comments/1do1wcj/comment/la7gey5/
+  - post by a person going through the process of patching up an engine, dinghy
+  - noteably, at this point see the **handmade discord**
+
 ### classics:
   - **SDL(2)**, C, **_the_ de facto library**, usually used as a core library, then accessed through a higher-level language, *serves as the base of most game engines**, written in straight C that can be difficult to understand, has a history of porting games to Linux (and therefore the beginning of games for Linux, often open-source), supported by Valve, there’s really no competition
-  - SFML, C++, for object-oriented thinking people, more accessible for creative / DIY people who want to tinker really low-level stuff, but it seems no one likes it...
+  - SFML, C++, more accessible for creative / DIY people who want to tinker really low-level stuff, but it seems no one likes it..., maybe harder to interface than C?
   - GLFW, only handles input and graphical output and windowing, no audio/font/etc., low-level people seem to really like this one
-  - Allegro, Java?, ?
+  - Allegro, **C**, "Allegro is a cross-platform library mainly aimed at video game and multimedia programming"
+    - "Allegro, IIRC was a more complete gaming library by itself and had sound mixing routines, MIDI, more loading routines for various file types, a simple gaming filesystem, fonts, various types of sprites (compiled, RLE, etc)."
+  - x/GLUT, "horror of horrors", toy, abandoned in the 90s
+    
+https://www.reddit.com/r/programming/comments/8wwwu/which_is_better_sdl_or_allegro_or_plain_opengl/
+
 
 ### the new old:
-  - Kinc, “low-level game library and hardware abstraction”, used as the base of Kha
+  - **Sokol**, C, "minimal cross-platform standalone C headers", supports all graphics, integrates with everything, new stuff
+  - **Kinc**, C, “low-level game library and hardware abstraction”, used as the base of Kha
   - LWJGL, Java, maybe the new LibGDX?, OpenGL/OpenAL/OpenCL
-  - Sokol, C stb style, **this rides that minimal C wave but really does seem fantastic**, metal/dx3d11/etc. new stuff
+
 
 ### high-level io frameworks:
+NOTE: see [#game frameworks], overlaps greatly with it
 probably could also be used like a “creative” framework to make just about anything, but providing a more familiar game engine feel to it, making integrations of common game-related features much easier / common
-  - **MonoGame**, Mono, open-source copy of Microsoft XNA’s api, this seems like a solid foundation for those super organized systems-thinking C# people; people find this to be very similar to LibGDX
-  * - FNA, Mono, an actively maintained copy of XNA 4.0 api which enables longevity... because... who knows how long a software framework will last? (This is why it’s best to choose SDL or something built on top of that...)
-  - Heaps.io, Haxe, easy to understand for such a powerful engine, **probably my personal choice to start at this level, along with oF**
-    - HashLink, Heaps.io’s back-end?, optional SDL integration?
+  - Kha, Haxe, "Ultra-portable, high performance, open source multimedia framework."
+  - Clay, Haxe, hack-end for Ceramic, patched up from scrapes of the old luxe
+  - NME, Haxe, seems to be a solution closer to it's problem compared to OpenFL, which has the baggage of being flash-compatible
   - OpenFL, Haxe, uses Lime as it’s back-end, of these io frameworks this might provide the highest level api, flash-like api
+  
+  - MonoGame, Mono, open-source copy of Microsoft XNA’s api, this seems like a solid foundation for those super organized systems-thinking C# people; people find this to be very similar to LibGDX
+* - FNA, Mono, an actively maintained copy of XNA 4.0 api which enables longevity... because... who knows how long a software framework will last? (This is why it’s best to choose SDL or something built on top of that...)
+  
   - LibGDX, Java, Java’s answer to SFML?, and just as old and solid too, this one is *much loved*, sorta has a cult fan community like OpenFrameworks
  - Beef’s corelib folder, just a wrapper over SDL?
 
 
 ### “creative” frameworks:
 often uses in new media art, installations, hardware devices, etc.
-- OpenFrameworks, C++, SFML, made for new media artists, far more diverse community, also has a New York base and community, used by Zack Gage to make iOS games back in the day, including helping Vlambeer making Ridiculous Fishing
-- Cinder, C++, ?
-- PolyCode, Ivan’s stuff, abandoned?
-- Allegro, C++, (not sure if this belongs here or with SDL)
+  - **OpenFrameworks**, C++, SFML, still up-to-date as of 2024, "openFrameworks is a community-developed cross platform toolkit for creative coding in C++.", a far more diverse new media arts community, also has a New York base and community, used by Zack Gage to make iOS games back in the day, including helping Vlambeer making Ridiculous Fishing
+  - **Cinder**, C++, still up-to-date as of 2024, "Cinder is a community-developed, free and open source library for professional-quality creative coding in C++.", more C++ style, a smaller but more skilled community
+  - x/PolyCode, Ivan’s stuff, abandoned, 10 years ago
 
 
 ### Haxe “back-ends”: 
