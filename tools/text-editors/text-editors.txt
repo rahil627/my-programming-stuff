@@ -40,11 +40,12 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
     - TODO: still should try it some more, also will get the chance to try lisp (via elisp) and have the best lisp dev environments too (common lisp, clojure)
       - TODO: try portacle config for common lisp
 *. lem
-  - BUGGY as of 10/4/2024
+  - WARN: BUGGY as of 10/4/2024
   - looks like a great way to try common lisp without emacs
     - actually kind of a dream editor, writing tiny programs in sbcl..
   - also can be completely altered as it is written in common lisp, making it the most malleable text editor
 2. helix
+  - the vi way, with kakoune workflow
   - for quick general use, along with cli tools, remote terminal use, a good step towards emacs
   - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
     - an emacs user switches to helix and mentions some good plugins
@@ -54,7 +55,7 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
 2. vs-code (or lapce)
   - TODO: give lapce another try!
   - a great start, especially when you haven't coded in a while
-  - easy to jump into where everything *just works* with "batteries-included": file manager, terminal window, debugging window, zen-mode, etc.
+  - easy to jump into where everything *just works* with "batteries-included": file manager, terminal window, debugging window, beautiful themes (aura!), zen-mode, etc.
   - can use fav key-bindings extension ("helix for vscode" extension), or customize keys yourself
   - eats up cpu, memory, etc.
 vs-studio
@@ -162,6 +163,9 @@ lem
   - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
   - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
 
+
+
+
 old standards / history:
 kakoune
   - https://github.com/mawww/kakoune/blob/master/doc/design.asciidoc
@@ -176,8 +180,10 @@ kakoune
         - not even built-in language support (must write a `kak` script file)
       - ...this is probably what killed it..
 
+
 (note: i missed out on the atom vs sublime generation)
 **sublime text**
+  - TODO: worth trying, after being so happy with the simplicity of focus editor
   - the best simple gui text editor, replacing notepad++
   - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's community
   - "It's a much nicer editor but clunky vscode has a better on boarding experience (I see you coding x, would you like to install this extension to help with x). Whereas with sublime you have to do a lot of hunting and manual installation to get all set up with extensions.
@@ -205,6 +211,7 @@ textmate
   - a mac classic
 notepad2
   - a classic windows notepad replacement
+  - TODO: try notepad4
 
 
 
