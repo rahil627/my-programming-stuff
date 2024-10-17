@@ -137,6 +137,21 @@ although these **reek** of the nasty smell of degrading immoral mobile “game�
 
 
 
+## non-programming interfaces:
+  - ct.js
+    - has a scratch-like language that transpiles to javascript
+
+  - GDevelop, a newer one becoming quite popular..
+
+  - **Construct, **no programming**, back in 2013 **this thing worked like a dream, even on console!**, I have no clue how it is now...
+    - now has javascript, and really just developing quite nicely..
+  
+  - GameMaker, **with and without programing**—this allowed people who don’t know programming to learn in a very intuitive way and most importantly by following intrinsic passion, custom scripting language, examples: Rivals of Aether (Dan had to wait for the big GM2 update before releasing it on the Switch, and even then, it took 3 years to port..?), Hyper Light Drifter
+  
+  - Stencyl, not sure if this one’s still alive... **made in Haxe!, and maybe can even use Haxe to actually write code!?!?** that alone makes it a top pick imo! <3
+
+
+
 ## coding-focused first game engines people have fond memories of <3 <3:
 these make good first engines for programmers, as the engine size is tolerable, readable, and simple, yet abstracting the low-level stuff away from youthful eyes
   - **HaxePunk**
@@ -293,13 +308,6 @@ i have no clue about these
   - Panda3d, ?
   - Armory(3d?), a game engine inside the industrial animation software Blender??, sounds very specific... like for making Ghibli level games?
 
-
-
-## non-programming interfaces:
-  - **Construct, **no programming**, back in 2013 **this thing worked like a dream, even on console!**, I have no clue how it is now...
-  - GameMaker, **with and without programing**—this allowed people who don’t know programming to learn in a very intuitive way and most importantly by following intrinsic passion, custom scripting language, examples: Rivals of Aether (Dan had to wait for the big GM2 update before releasing it on the Switch, and even then, it took 3 years to port), Hyper Light Drifter
-  - GDevelop, a newer one worth looking at
-  - Stencyl, not sure if this one’s still alive... **made in Haxe!, and maybe can even use Haxe to actually write code!?!?** that alone makes it a top pick imo! <3
 
 
 ## specialized:
