@@ -63,6 +63,36 @@ x/tui-frameworks
 
 update:
 
+# looking for ruby solutions..
+  - suffers the same problem as haxe, but without a great singular maintainer
+  
+tauri
+  - https://dev.to/josephschito/cross-platform-application-with-ruby-tauri-53gg
+    - how to integrate ruby, opal gem, tauri
+      - but still would have to use rust for back-end.. :/
+
+libui-ng
+  - STATUS: rather new / still in development as of 2024
+  - **C, and thus easy bindings for every language**
+  - a much needed and promising antidote to this whole mess
+  
+x/scarpe
+  - "shoes but on webview"
+  - simple dsl to display to native browser!!
+  - https://github.com/scarpe-team/scarpe
+  - https://github.com/scarpe-team/scarpe/wiki/ShoesImplementations.md
+    - the horrible history of ruby gui frameworks, illustrating the nature of the cross-platform gui problem
+    - and just like it's previous 10 implementations, i have no faith in this lasting too long..
+   
+x/tk
+  - still in the std lib of ruby (as of 2024)?? old is gold??
+  - ..but then would need to install ruby, add gems, etc. etc. just to run it.. :/
+
+
+
+
+update:
+
 # rust
 it seems all the momentum is in rust:
   - NOTE: there's likely a lot more
