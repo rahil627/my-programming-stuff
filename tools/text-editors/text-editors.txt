@@ -4,10 +4,19 @@ sane defaults
   - don't want to waste time configing all day, need to focus!
 inuititive learning experience
   - quick to re-learn and jump deep into again
-a simple language to write extensions
-  - (and a simple way to add extensions!!)
+a good non-modal experience
+  - if modal, a useful insert mode
+not slow / heavy
+  - focus editor has spoiled me..
+  - i guess terminal-based is fine..
+a simple way to write extensions
+  - preferably in lisp, or lispy, or C
 unrestrictive
   - see the "four pillars" below
+  
+  - tests:
+    - focus
+      - excels greatly at the first four
 
 https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_with_amir_rajan/
   - four pillars:
