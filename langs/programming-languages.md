@@ -1,3 +1,7 @@
+https://github.com/learn-anything/programming-languages#multi-paradigm
+  - ??
+
+
 # the opinions of more experienced programmers
 
 
@@ -812,6 +816,10 @@ thus, you'd need a really good case to use these languages over more simpler, co
   - **my fav :)**
   
   
+in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a combination of the maker’s favorite languages mixed together. None are really innovative. Only only a few will catch on, become popular, have libraries, and live on... but that doesn’t mean they shouldn’t be used. Use whatever makes you happy! :) Anyway, it can be really cool making your own little world in your favorite language... As long as it works with C/C++, the worst case is you have to write some “interop” or otherwise “wrapper” code. 
+  
+  
+  
 Go (golang)
   - "Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."
   - compiled python, or a high-level C, intended to replace python in high-performance areas
@@ -883,6 +891,7 @@ Crystal
 
 
 Dart
+  - PROBLEM: only sole use case is flutter
   - Google's Haxe, wayyy after haxe :/
   - **and just when you thought go was boring as shit..!!**
   - flutter
@@ -916,9 +925,11 @@ Beef
   - just one maker, extremely tiny game community, if any
   - Maddy (of Celeste) made an engine in it, but seems to have abandoned it..
 
-  
+
 **Nim**
   - NOTE: probably the most practical *for me* among this, crystal, 'n julia
+  - **"aims for efficiency, then expressiveness, then elegance, has metaprogramming too, in that order"**
+    - this is a good way to categorize languages..
   - "It combines successful concepts from mature languages like Python, Ada and Modula."
     - **...but doesn't allow you to simply import python libs..**
     - brings the disgusting tab-delimited syntax of python to the world of systems langs :'(
@@ -1071,10 +1082,11 @@ Nelua
 
 Odin
   - from the hand-made network
-  - like C, not object-oriented, with a belief that *data and procedures (functions) should be seperate, and that behaviors (class's functions/methods?) shouldn't even exist!* :o very rad
+  - like C, cute, not object-oriented, with a belief that *data and procedures (functions) should be seperate, and that behaviors (class's functions/methods?) shouldn't even exist!* :o very rad
+  - parses emoticons!!
   - influenced by Go
-
-V
+  
+V(lang)
   - C-like
   - gc optional
 
@@ -1303,9 +1315,26 @@ Streem
       - https://www.reddit.com/r/unrealengine/comments/1bzfnhb/verse_update_gdc_2024/
         - concurrent garbage collection tied to objects (actor model?)
   - **...but then you'd have to ship a runtime to devices, no..??**
+  
+  
+lua
+  - extremely simple (only perhaps second to lisp), **a long-lived classic**
+    - but unlike lisp, no macros :(
+  - the goat vm/compiler of all dynamic programming languages: LuaJIT, pretty much thanks to that one guy who made it
+  - an all-powerful meta-data-structure: the table (and meta-tables!), from which you can implement any other data structure, making it a rather modular language
+  - perfect for it's use case: embedded scripting, but
+    - also great as a config langauge, compared to basic data serialization formats (json, toml, etc.)
+  - **feels a bit jank for bigger applications, like games**
+  - **extremely simple, and boring..** though nothing is as boring as go!.. but in the dynamic world..
+  
+  
+- ring
+  - TODO: need to look into more..
+  - seems like a pretty awesome *flexible* language: **keywords can be changed**, **doesn’t enforce a coding style on you** (doesn’t use neither tab nor braces!), something like Lua and Wren (20k loc interpreter ‘n VM), all containers are a “list”, already has bindings for RayLib, SDL, etc.
+  
         
 **mruby**
-  - **possibly the most fun way to make games..**
+  - PERSONAL: **magical. simple. concise. beautiful. powerful.** contains most of the the magic of ruby, probably discarding the terribly inefficient bits. **possibly the most fun way to make games..**
   - **consistent development and releases alongside ruby**
     - https://github.com/mruby/mruby/blob/master/doc/mruby3.3.md
       - New Platform: Nintendo Wii (#6086)
@@ -1325,8 +1354,12 @@ Streem
       - some interesting bits by Matz on how the garbage collector works
     - fibers
     - Matz is still behind it..
+    
+
 
 **wren**
+  - PERSONAL: compared to the dynamic-ness of lua and mruby, this feels weaker, less powerful, less magical. it feels like writing in a boring statically-typed lang, but without any of it's advanced features. I personally would rather choose mruby or a more powerful statically-typed language instead. It's just... *boring*.
+  - **“Think Smalltalk in a Lua-sized package with a dash of Erlang and wrapped up in a familiar, modern syntax.”**, looks like a really cute alternative to Lua, in case Lua is too meta-level / minimal for you and you feel safer hiding behind classes ‘n object-oriented paradigms
   - modern sytnax with object-oriented-style classes
     - though, the classes here are fare more flexible, as the language is much simpler
   - **go-like concurrency via "fibers"**
@@ -1338,23 +1371,11 @@ Streem
         - 2000 loc
       - https://github.com/lua/lua/blob/master/lua.c
         - 700 loc
-  - **perfect for games! :)**
-    - use in luxe (game engine)
-  - **made with <3 by rubyx01 (of luxe), though started by Bob/munificent** of game design patterns / crafting interpreters fame (a similar language is used in his books)
-
-lua
-  - extremely simple (only perhaps second to lisp)
-    - but unlike lisp, no macros :(
-  - the goat vm/compiler of all dynamic programming languages: LuaJIT, pretty much thanks to that one guy who made it
-  - an all-powerful meta-data-structure: the table (and meta-tables!), from which you can implement any other data structure, making it a rather modular language (also like lisp)
-  - perfect for it's use case: embedded scripting, but
-    - also great as a config langauge, compared to basic data serialization formats (json, toml, etc.)
-  - **feels jank for bigger applications, like games**
-  - extemely simple, and boring.. though nothing is as boring as go!.. but this is quite close..
+  - **made with <3 by rubyx01 (of luxe game engine), though started by Bob/munificent** of game design patterns / crafting interpreters fame (a similar language is used in his books)
   
 
 squirrel
-  - was used by a few game companies as a general scripting lang for games that even ran on consoles
+  - was used long ago by a few game companies as a general scripting lang for games that even ran on consoles
   
   
 
@@ -1584,10 +1605,9 @@ C#
 
 
 
-
 ##### apple
 Swift
-  - Apple's native language, replacing Objective-C
+  - Apple's replacement for god-forsaken Objective-C
     - they still kept the old crap: Apple Foundational Library (NSobject, etc.)
   - looks really good actually, simple yet powerful, like Rust but with less complexity, too bad it's controlled by Apple!
   - **manual memory management / no garbage collector / no run-time**
@@ -1642,9 +1662,9 @@ Swift
   - just as featureful and powerful as most of the newer contemporary lanugages
   
 Kotlin
+  - Google’s replacement for Java for Android devices (and the only one here made by Google)
   - actually developed by JetBrains (the IDE maker), but the language eventually was chosen by Google to be the main language for Android app devs
   - interops with Java
-  - the only lang here made by Google
   
 Groovy
   - "Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk. It can be used as both a programming language and a scripting language for the Java Platform"
