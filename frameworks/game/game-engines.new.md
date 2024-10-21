@@ -221,6 +221,18 @@ NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer 
     - i dunno much about this one..
     - 2D, Lua, mobile-focused, comparable to Corona / Cocos2D / Defold, but with a tiny non-commercial-backed community, apparently the code is so stable that games made in 2012 still work, yet it is still being updated as of 2022!, also the android support and exe size are excellent
     - based on Flash, focus on mobile (with some native api for mobile features)
+    
+
+### 3D (and maybe has a 2D module)
+
+  - FNA
+    - STATUS: 2024, up-to-date, with fez working in SDL3
+    - most games in monogame eventually ported to this
+    - open-source XNA 4.0, rock stable frozen version kept for porting and longevity
+    - far far better maintainer story than MonoGame
+    - filibitjijo, noel (of Celeste) is usually on the discord
+    - rids MonoGame of its garbage content pipeline
+
 
   - **Heaps**
     -  **2D/3D complete separate modules**, **Haxe** (then to C or bytecode via HashLink), **made by the maker of the Haxe programming language**, contains a rather bare framework who’s 2D module resembles HaxePunk’s core without it’s features (no collision/“masks”, no entity, no tween lib, etc.) and without it’s extra helper functions. It however does include essential features such as scene handling and a scene tree, placing it’s features-set somewhere between MonoGame and MonoGame Extended. This was my own personal choice for a game engine, but, unfortunately, the community is tiny (haxe discord), the documentation is spartan, and it seems everyone wastes time trying to understand how it all works, and trial and error (this is partly due to everything having public functions, in order to make everything accessible / modifiable). It is used as an in-house engine for a game company, and it feels that way. Having said that, it’s still an amazing framework, and you have access to anything, all the way down to the SDL graphics wrapper, and you can modify anything as it’s open-source. Examples: Dead Cells, "4X" strategy games like Dune
@@ -251,9 +263,7 @@ NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer 
       - every renderer back to opengl 1.1!
     - generally lower-level feeling, building/compiling c
     
-  - FNA
-    - open-source XNA 4.0, rock stable frozen version kept for porting and longevity
-    - far far better maintainer story than MonoGame
+    
 
   - x/MonoGame
     - **STATUS: use FNA instead**
