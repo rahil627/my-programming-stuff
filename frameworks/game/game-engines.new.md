@@ -275,14 +275,6 @@ NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer 
     
     
     
-  - x/Luxe
-    - **STATUS: 10/24, still under HEAVY development, not near v1**
-      - **ERROR: memory leaks in the game and lsp. game editor far from complete**
-      - unfortunately, because of this, jblow's engine actually be done by the time this reaches v1, and very likely won't be nearly as thorough as jblow's work. until then, it's best to choose one of the above engines, all of which are 10-20 years stable.
-    - C/C++?/Wren, well-designed stuff by the snowkit collective’s ruby0x1 (a beautiful soul), but stuck in closed-beta for a long long time (~10 years??), but really well architected, as the original one was much loved for it’s design. Unlike Haxe/FlashPunk and Haxe/Flixel, it contains an ECS system similar to Godot, which is tightly-coupled with it's optional game editor, allowing you to choose the way you want to make a game: with or without an editor Also, it's more modular. Luxe provides core classes for sprite, audio, transform, scene, etc., but a collision system is provided through a module.
-    - **wren, though pretty, is too simple, not enough advanced features, not dynamic enough, not lispy enough. mruby and haxe are both far superior to that regard. it's a tough trade-off. things like named parameters, mixins, writing imports for every built-in class, starts becoming a pain..**
-    - **it provides various common ways of game development, thus avoiding any constraints: with ECS, with ECS and game editor, and without; and then, even further, provides modules**
-    
     
   - a ton of new C/C++/new language indie-made game engines (see below)
 
@@ -299,6 +291,14 @@ many rely on pop C/C++ libs such as: SDL, GLFW (for OpenGL and Vulkan?), bgfx(?)
       - this looks really, really impressive...
       - very featureful
       - cross-platform, tested (except consoles)
+      
+  - x/Luxe
+    - **STATUS: 10/24, still under HEAVY development, not near v1**
+      - **ERROR: memory leaks in the game and lsp. game editor far from complete**
+      - unfortunately, because of this, jblow's engine actually be done by the time this reaches v1, and very likely won't be nearly as thorough as jblow's work. until then, it's best to choose one of the above engines, all of which are 10-20 years stable.
+    - C/C++?/Wren, well-designed stuff by the snowkit collective’s ruby0x1 (a beautiful soul), but stuck in closed-beta for a long long time (~10 years??), but really well architected, as the original one was much loved for it’s design. Unlike Haxe/FlashPunk and Haxe/Flixel, it contains an ECS system similar to Godot, which is tightly-coupled with it's optional game editor, allowing you to choose the way you want to make a game: with or without an editor Also, it's more modular. Luxe provides core classes for sprite, audio, transform, scene, etc., but a collision system is provided through a module.
+    - **wren, though pretty, is too simple, not enough advanced features, not dynamic enough, not lispy enough. mruby and haxe are both far superior to that regard. it's a tough trade-off. things like named parameters, mixins, writing imports for every built-in class, starts becoming a pain..**
+    - **it provides various common ways of game development, thus avoiding any constraints: with ECS, with ECS and game editor, and without; and then, even further, provides modules**
 
   - Ceramic
     - 2d, Haxe, basically glued together from the original version of luxe and other haxe libs
