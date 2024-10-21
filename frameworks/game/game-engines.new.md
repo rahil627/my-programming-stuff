@@ -43,12 +43,12 @@ others:
 stable 2d alts:
 love2d
   - 20 years strong. amazing. the predecessor of dragonruby. luaJIT should be quite a bit faster..?
+raylib
+  - for prototyping, especially for mobile devices, and education/learning (C, graphics)
 defold
   - stable, game-editor included, 2d-focused with 3d
   - https://defold.com/2023/10/01/How-Defold-works-with-consoles/
     - console support, unlike godot
-raylib
-  - for prototyping, especially for mobile devices, and education/learning (C, graphics)
 
 stable DIY 2d+3d:
 **heaps**
@@ -56,14 +56,11 @@ stable DIY 2d+3d:
     - but requires making your own framework
       - though, it comes with highly-modular tools, like a hscript, HIDE (and castledb), to help you make your own game engine and editor
       - can make a simple prototyping-like framework like rubydragon, which is basically what i was doing with heapspunk, building up a global object full of useful stuff
-  - can combine 2d and 3d!! yay.
 fna
+  - up-to-date as of 2024, with fez working in SDL3
   - all monogames switched to this to port to consoles
   - old framework that has no intention to ever change, and thus easy to maintain
-unity
-  - still the standard, one-click cross-platform
-  - a bloated mess, proof that one game engine is not the solution for everyone
-alts: **foster**, ceramic
+alts: gideros (2d), **foster**, ceramic
   - all indie, experimental, though foster (of Celeste) is a good bet
 
 
@@ -180,6 +177,7 @@ these are more programmer-oriented, **more freedom—the ability to make anythin
 
 NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer lower, likely in C/C++ (save libgdx). However, these do a lot of repetitive legwork for you, so, i just don't see much point going down another layer. Also, most of the time, you can just write C/C++, and link C/C++ libs
 
+### 2D-only
 
   - **Love(2D)**
     - 2D, Lua and C++, very well maintained (20 years strong!!), a small engine that many people seem to... love! Sounds like **a great start to Lua** too! Sounds like it gives an experience of freedom close to DragonRuby, without constraints
@@ -217,6 +215,7 @@ NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer 
         - https://lowlevelbits.org/compiling-ruby-part-3/
       - https://www.reddit.com/r/Compilers/comments/yauime/compiling_ruby_with_mlir/
       
+      
   - Gideros(Mobile)
     - i dunno much about this one..
     - 2D, Lua, mobile-focused, comparable to Corona / Cocos2D / Defold, but with a tiny non-commercial-backed community, apparently the code is so stable that games made in 2012 still work, yet it is still being updated as of 2022!, also the android support and exe size are excellent
@@ -235,6 +234,7 @@ NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer 
 
 
   - **Heaps**
+    - STATUS 2024: up-to-date, with vulkan/metal/etc.
     -  **2D/3D complete separate modules**, **Haxe** (then to C or bytecode via HashLink), **made by the maker of the Haxe programming language**, contains a rather bare framework who’s 2D module resembles HaxePunk’s core without it’s features (no collision/“masks”, no entity, no tween lib, etc.) and without it’s extra helper functions. It however does include essential features such as scene handling and a scene tree, placing it’s features-set somewhere between MonoGame and MonoGame Extended. This was my own personal choice for a game engine, but, unfortunately, the community is tiny (haxe discord), the documentation is spartan, and it seems everyone wastes time trying to understand how it all works, and trial and error (this is partly due to everything having public functions, in order to make everything accessible / modifiable). It is used as an in-house engine for a game company, and it feels that way. Having said that, it’s still an amazing framework, and you have access to anything, all the way down to the SDL graphics wrapper, and you can modify anything as it’s open-source. Examples: Dead Cells, "4X" strategy games like Dune
     - hashlink
       - because the langauge and toolchain was written by a game dev, everything is simply bundled together with the runtime (hashlink):
@@ -248,7 +248,8 @@ NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer 
         
         
   - Raylib
-    - **perfect for prototyping, especially mobile devices, as it will always work**
+    - **seems more oreinted for learning as opposed to having a finished product..**
+    - seems great for prototyping, especially mobile devices, as it should compile easily..?
     - **i *love* the old-school cheat-sheet/reference that contains everything you need in one place, it reminds me of toys that came with a well-made manual**
       - it's api is... special. more low-level, much more educational, closer to how graphics work.
     - C (C99), because it's written in C, **just about any programming langauge can be used**, and, when needed, can use C, which makes it the best educational choice
@@ -286,9 +287,6 @@ NOTE: [media-frameworks] are also an interesting choice, perhaps only one layer 
     
     
     
-  - a ton of new C/C++/new language indie-made game engines (see below)
-
-
 
 ## newer, more experimental indie game frameworks, often written in "modern C++" or standard C, or some  new game-oriented languages
 most of these aim for minimalism, portability, independency 
