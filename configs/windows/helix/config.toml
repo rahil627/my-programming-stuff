@@ -8,9 +8,10 @@
 # https://github.com/helix-editor/helix/discussions/1360#discussioncomment-10692211
 
 # TODO: / main things that bother me
-# newlines characters!!
-  # i don't remember this ever being a problem in gui text editors.., but here, it requires constant consideration :(
-  # BUG: if you have the cursor positioned on a newline, expand_selection highlights the entire file
+# x for highlight line is an uncomfortable position for laptops, i much prefer focus editor's l
+# S-h/l extend to parent node start/end on the line doesn't work for file formats that don't have a tree-sitter, and often just deosn't work, especially on whitespaces
+  # i really like focus editor's k for kill to end of line, but def don't need it for kakoune-style workflow
+# BUG: if you have the cursor positioned on a newline, expand_selection highlights the entire file
 # where is the repeat-action? '.' repeats the last paste or something..
 # finish S-j/k, and re-mapping join/keep
 # use c+j/k to move down/up pop-up dialog lists
@@ -208,7 +209,7 @@ C-o = "expand_selection" # A-o/i by default; word -> inside comment or parameter
 C-S-o = "shrink_selection" # selects current word at minimum; holding control and pressing shift made more sense
 
 # idea from 00sapo
-# x = "extend_to_line_bounds" # /shrink, strangely, this was the default..??
+# X = "extend_to_line_bounds" # a-x for shrink, strangely, this was the default..??
 x = ["extend_line", "select_mode"] # fantastic mapping, teaches you to use select_mode in the process, allowing precise selection, at the cost of one key to exit
 X = ["extend_line", "select_mode", "flip_selections"] # same as the above but prepare for going up by flipping the cursor to the beginning of the selection
 C-x = "extend_line_below" # the sane default, press again to extend one more line
