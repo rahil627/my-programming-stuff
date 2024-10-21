@@ -4,7 +4,7 @@ https://github.com/igor-petruk/scriptisto
   
 
 # conclusion:
-i love ruby, and will absolutely keep it for my own personal scripts, likely for my entire lifetime..! **it's perfect for scripts without dependencies**, only using the std lib. Once it requires dependencies, or needs parallelism (never), i'd have to jump to a native-compiled language.
+i love ruby, and will absolutely keep it for my own personal scripts, likely for my entire lifetime..! **it's perfect for scripts without dependencies**, only using the std lib. Once it requires dependencies, or needs parallelism (never), i'd have to jump to a native-compiled language... until maxime/yjit is able to make a native compiler that is..!
 
 with dragonruby (mruby) as my main game engine, and phoenix/elixir as my main web-app-framework and general app-framework, i can live in the world of ruby forever!! yaeaaahhhhhh!!!
 
@@ -18,7 +18,7 @@ see [cli-and-tui-frameworks] for similar thoughts on scripting vs natively-compi
 
 welp, glad i ended up never ended up using scripting langauges!
 
-though i quite love ruby's design (blocks, mix-ins, syntax, etc.), it's just not worth installing it to run it for most people. The advent of go and rust (and haxe before them!) has shown the importance of compiling to machine code to build binaries that work everywhere. Now, windows has all of linux's superior programs re-written in rust, go, 'n zig; So much so, that there's no need for linux anymore. And building for Windows is crucial--as i use it myself!! So, it's best to stick to compiled languages where things are guaranteed to work, build everywhere, and provides a good debugging experience...
+though i quite love ruby's design (blocks, mix-ins, syntax, etc.), it's just not worth installing it to run it for most people. The advent of go's easy build system has shown the importance of compiling to machine code to build binaries that work everywhere. Now, windows has all of linux's superior programs re-written in rust, go, 'n zig; So much so, that there's no need for linux anymore. And building for Windows is crucial--as i use it myself!! So, it's best to stick to compiled languages where things are guaranteed to work, build everywhere, and provides a good debugging experience...
 
 the biggest difference will be the libraries and the succintness (what makes it beautiful are it's main cons: dynamic typing syntax and libraries that use meta-programming). Go has a minimal yet powerful standard library whereas ruby's libraries are often over-engineered, and have a lot of character: often elegance, a bit of quirkiness, and a good amount of magic. In go, you just write/program straight-forwardly, like the languages itself. Also in go, there's a bunch of error handling code (by design) that takes up space and hinders readability. Both python and ruby (and even typescript) scripts will result in more succint, easier to read programs, but maybe not by a large enough margin to outweigh the ability to create portable executables for every platform, and provide easy concurrency and parallelism. Haxe's standard library is closer to go, minimal-yet-powerful (thanks to it's maker's style), yet it's open-source-community libraries are often closer to ruby, full of meta-programming magic. Kinda the best of both worlds... unfortunately, haxe being much older than go, wasn't built with concurrency in mind, and didn't even get threads into it's std lib until v4.
 
