@@ -197,8 +197,8 @@ C-S-space = "command_palette" # space-space is nice too, c-s = "completion", TOD
 # instead of select -> i/a, ; -> i/a
 i = ["collapse_selection", "insert_mode"]
 a = ["collapse_selection", "append_mode"]
-";" = "flip_selections" # A-;, this key is feels really really good, can use key to map to repeat_last_motion
-"C-;" = "collapse_selection"
+"C-;" = "flip_selections" # A-;, this key is feels really really good, can use key to map to repeat_last_motion
+# "C-;" = "collapse_selection" # still need this tho..
 
 R = ["collapse_selection", "replace"] # just limit to replacing one char, i mean, how often are you really going to be replacing a selection with one repeating char?.. ascii art?
 D = ["collapse_selection", "delete_selection"] # to delete one char, matches R above
