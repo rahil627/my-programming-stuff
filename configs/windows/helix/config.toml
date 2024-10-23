@@ -278,6 +278,7 @@ B = "extend_prev_word_start" # or long_word
 W = "extend_next_word_start"
 E = "extend_next_word_end"
 # defaults
+# these are still useful.. especially for long nested things.. nah, just use expand to parent node!
 # "W" => move_next_long_word_start
 # "B" => move_prev_long_word_start
 # "E" => move_next_long_word_end
