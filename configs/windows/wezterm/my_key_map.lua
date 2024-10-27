@@ -1,6 +1,7 @@
 -- wezterm show-keys --lua > show-keys.txt
 
 -- TODO:
+-- ISSUE: i think i prefer j/k pane movement, h/l new horizontal/vertical pane over s/v, as v is often used by paste, and c for vi/copy-mode is messing me up..
 -- import my key-mappings for windows terminal:
   -- only missing these:
   -- d = duplicate pane mapping
@@ -210,7 +211,7 @@ return { -- TODO: return a table with 'keys' table, or just the 'keys' table?
       -- extra mapping to match vi/helix
 
     
-    -- MAIN FUNCTIONS
+    -- MAIN FUNCTIONS/FEATURES
     -- mostly uses default keys, just changed modifier to use alt instead of ctrl
     -- https://wezfurlong.org/wezterm/config/default-keys.html
     { key = 'y', mods = mod_key, action = act.CopyTo 'Clipboard' },
