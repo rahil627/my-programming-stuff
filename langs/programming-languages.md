@@ -794,17 +794,41 @@ thus, you'd need a really good case to use these languages over more simpler, co
     - shiro tech stack
       - https://www.youtube.com/watch?v=gazZSJFGnck
     - hashlink
-      - a runtime (JIT), debugger, cpu profiler, memory profiler, graphics profiler (nvidia nsight), and bundle of game-related libs:
+      - a runtime (JIT/bytecode and AOT/C), debugger, cpu profiler, memory profiler, graphics profiler (nvidia nsight), and bundle of game-related libs:
         - SDL, directx (vulkan was a pain), web-gpu soon, some basic native ui api, common stb-like libs, steam/console stuff, etc.
           - basically what Adobe AIR did, but updated
       - multi-threading (used by Dune)
       - concurrency (used by all of their games..)
+      - https://haxe.org/blog/hashlink-indepth/
+        - A small core easily extensible with additional C libraries
+        - **No crash - only catchable exceptions with full stack traces**
+        - **A strictly-typed register-based bytecode**
+        - **Full interoperability with C (respect __cdecl) in both x86 and x86-64**
+        - tools to debug byte-code
+      - https://haxe.org/blog/hashlink-in-depth-p2/
+        - **a custom garbage collector**
+        - **A set of C functions to manipulate Objects, Bytes, Functions, etc.**
+          - full power over C right here..
+        - "The separation between the VM and the run-time is necessary in order to allow the translation of HL byte-code to C."
+        - "because both HL/JIT and HL/C share the same run-time (same garbage collector, same native functions, etc.), they will run exactly the same without any difference in terms of semantics."
+        - "**HashLink has its own low level types** that are used for registers and function parameters. Haxe types are represented using the following low level types:"
+        - "Memory consumption in HL is identical to C, and might depend on the C compiler you are using:"
     - macros for games
-      - **C arrays**
-      - **structure of arrays**
-      - **serialization** (provided by hashlink lib)
+      - https://www.youtube.com/watch?v=pZcKyqLcjzc
+      - https://www.youtube.com/watch?v=pZcKyqLcjzc
+        - **AoS->SoA build macro**: convert a class (struct) with data (intended to be used in a container) into class (struct) of arrays, with simple access syntax via a build macro
+        - AoS macros: **C-Arrays, C-structs** (@:struct and @:packed for arrays), for example hl.CArray<particle>
+        - https://www.youtube.com/watch?v=gazZSJFGnck
+          - 55:00
+            - must do through C, no way to do it manually through haxe
+            - why not generational gc, controlled gc is the way
+    - https://www.youtube.com/watch?v=gazZSJFGnck
+      - **"shiro game tech stack"**
+        - **hscript, hide (domkit-based retained gui), castledb (game database), hxbit (serialization), MPman (network stuff, cross-platform, including consoles, the only part that's closed-source)**
   - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but it's not nearly as exhaustive as C#, making it more tolerable for a mortal, and a little less flexible, which can actually be good, as you can focus more on writing as opposed to thinking which C# feature to use here, and making code easier to read too (try reading the code of a pro C# user!)
     - also has **macros** that are much more powerful than anything C# has
+      - https://github.com/SomeRanDev/Haxe-MagicArrayTools
+        - **optimizes data transformation function chaining**
     - also like Ruby, it feels very *Linux-y*, where **everything is a simple text file**, including the build file (this is a major difference in feeling to C#, as it can feel like you must edit stuff in VS's gui, or even Unity's gui. In Haxe, **everything can be done by simple text editing**, no gui software necessary)
   - maybe the first major language with **cross-platform** in mind? (2005 vs 2011 Dart)
   - has all of the features of ruby (container filters, anonymous functions, etc.) plus more, but comes with a *much much* faster compiler, making Ruby feel rather obsolete, and just surviving off of it's libraries and community
