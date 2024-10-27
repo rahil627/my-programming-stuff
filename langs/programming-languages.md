@@ -1,5 +1,9 @@
 https://github.com/learn-anything/programming-languages#multi-paradigm
   - ??
+# to remember
+## only languages that are close to C/C++ can be optimized
+see [programming-concepts]
+**the further things get away from C, the less optimized it will be, because hardware is optimized for C, no other language, with the main problem being cache misses (fetching some data from RAM as opposed to one of the memory caches nearby the CPU), especially in the case of games.** Haxe, being a language made by a game-dev, provides complete control over C, and is able to create macros to generate things like C-structs, C-arrays, and structure of arrays. That is a rare exception.
 
 
 # the opinions of more experienced programmers
