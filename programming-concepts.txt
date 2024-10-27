@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=7xsX2JP-Xxo
     - "a website without javascript is the best self-documenting rest api you can build"
   - 2011:
     - "a language cannot be slow, a runtime can"
-	  - C# has sever runtimes (core, mono, unity, etc.)
+	  - C# has several runtimes (core, mono, unity, etc.)
 	- C#. 4.5/5: lambas (and linq) changed the game
   - 2012:
     - JS frameworks
@@ -18,35 +18,35 @@ https://www.youtube.com/watch?v=7xsX2JP-Xxo
 	  - nodejs
   - 2013:
     - OSS burnout (companies should pay free software makers!)
-	- a simple cell-based grid layout simplifies mobile dev (24x12, 16:9)
+    - a simple cell-based grid layout simplifies mobile dev (24x12, 16:9)
   - 2014:
     - polygot (clojure, haskell, F# (Ocaml), scala, ruby)
   - 2015:
      - made "a dark room" for web, then used ruby motion to port it, and it sold 1mil+, then made a prequel that also sold well
   - 2016:
     - bought/aquired the tool-set/company he used to make the game: rubymotion from a guy who worked at apple and wanted to retire anyway, and re-named it dragonruby
-    - new space in tech: how what rubymotion built? previously he always used frameworks to make stuff. it's a runtime
+    - new space in tech: how was rubymotion built? previously he always used frameworks to make stuff. it's a runtime
   - 2017-2018: the realization:
     - study in isolation: how to build a runtime
-	- the open-source burnout year of 2013 provided the experience needed
-	- describes llvm / chris latiner
-	  - 2009: chris is at MIT, then goes to apple, when the year the iphone is released, using llvm
-	  - llvm is an infrastructure that seperates/decouples the langauge from the hardware
-	    - langauge -> IL/R -> bitocode/machine
-	  - 2010: iphone is a hit, intel wants to build chips for it, apple says you must make the chipset architecture compatible to llvm
-	    - IR -> opcodes for a chipset architecture (supplied by the hardware manufacturer) -> bit-code
-	  - 2016: chrome uses clang (the c compiler for llvm)
-	  - 2019
-	    - .net core (+clr) is released, which is basically a C# runtime implemented on llvm
-		  - a major turning point for microsoft, as they had the competing c++ runtime visual c++/msvc for a long long time
-		- android 26 uses clang
-		- chris goes to tesla, which therefore uses clang
-		- every giant company uses clang, and basically the entire world runs on clang
-	  - 2020: wasm builds a back-end for clang
-	  - 2021: apple m1 comes out
-	    - it performs well because the ir genereated by llvm directly maps to m1 arch op-codes, they were able to make it so due to the ubiquity of clang (and x86 arch)
-	- the realization: build run-time on clang
-	- made the game toolkit for rubymotion/dragonruby runtime
+    - the open-source burnout year of 2013 provided the experience needed
+    - describes llvm / chris latiner:
+  	  - 2009: chris is at MIT, then goes to apple, when the year the iphone is released, using llvm
+  	  - llvm is an infrastructure that seperates/decouples the langauge from the hardware
+  	    - langauge -> IL/R -> bitocode/machine
+  	  - 2010: iphone is a hit, intel wants to build chips for it, apple says you must make the chipset architecture compatible to llvm
+  	    - IR -> opcodes for a chipset architecture (supplied by the hardware manufacturer) -> bit-code
+  	  - 2016: chrome uses clang (the c compiler for llvm)
+  	  - 2019
+  	    - .net core (+clr) is released, which is basically a C# runtime implemented on llvm
+  		  - a major turning point for microsoft, as they had the competing c++ runtime visual c++/msvc for a long long time
+  		- android 26 uses clang
+  		- chris goes to tesla, which therefore uses clang
+  		- every giant company uses clang, and basically the entire world runs on clang
+  	  - 2020: wasm builds a back-end for clang
+  	  - 2021: apple m1 comes out
+  	    - it performs well because the ir genereated by llvm directly maps to m1 arch op-codes, they were able to make it so due to the ubiquity of clang (and x86 arch)
+    	- the realization: build run-time on clang
+    	- made the game toolkit for rubymotion/dragonruby runtime
   - 2019-2020:
     - port games to nintendo switch, which also uses clang
 	    - thus the games he made back in 2012 on rubymotion, through a history of tech, works on nintendo switch
@@ -77,7 +77,217 @@ stopped. Just keep the damn notes.
 
 
 original file:
+
+TODO: move to [game programming]?
+https://www.youtube.com/watch?v=Jpkrx1osuLc
+  - jblow at handmadecon 2015
+  - casey: the programming is customized to the game design
+    - jb: the mindset is to solve the problem. abstractions are only useful to the extent that they solve that problem, most efficiently, expediently.
+    - the barrier between programming and design is only an abstraction
+      - (then proceeds to go into some digression)
+  - c: why must you still do most of the programming?
+    - jb: it would take a week and a half to do something only i can see in my head immediately, much time wasted to communicated to the team/others. (he's chasing some idea down.. and it requires trying different routes, but only he knows the big picture, of where it's all headed)
+  - c: the way you program is fungible, as you don't know where you're going, right?
+    - jb: i don't write code meant to work forever, i just write whatever works for the moment in the simplest way possible, because at a later time, in a year, i'll know better of what is needed
+      - in it what a good metaphor for optimization: pushing all the program like a piece of play-dough on a hardware architecture
+  - c: i also often say, **my first intition is good enough for my first pass, and even if you try to over-think it at that time, you don't have enough information to make a better decision anyway**, so in general i do feel that's a good mind-set, however, if you keep that mind-set, then at a certain point, you end up with something that's a mess, and you can't experiment in it anymore. and so i feel you have something in you that's able to build in a small simple way yet architect in a large way..
+    - jb: envision what is the day i'm going to swap out this bad code, how will it happen. and just constant reality checks... the hard parts aren't iterating arrays, it's systems that i didn't know were going to play out.
+    - complexity is just the number arcs in a node graph.
+      - in school they teach you it's about the nodes (objects), but the real complexity and what you about are in the arcs. and the more optimized your program is, the more arcs you have.
+        - TODO: hmm, didn't understand why the last bit... maybe just more factors..
+    - intelligent decisions/tradeoffs made on what deserves complexity and what does not, in the bigger picture of the end-goal of making a game (used a precision lathe metaphor to build a product)
+  - c: what is keeping the super-structure together? what's keeping the arcs in tact? for example, the save game system worked throughout the entire development. is there some way you've learned, where you can isolate small pieces, that doesn't start screwing up everything else?
+    - jb: the saved game system, in particular, was solved in braid, needing to serialize data (all time rewinded), and be flexible
+    - off-comment about lisp, doesn't care about repl
+    - **i like keeping things simple** (how he solved data serialization in some summer job at sun microsystems)
+    - want to edit a whole world collaboratively? put all entities into seperate text files. and put it into version control. because we know version control systems can handle text files. simple.
+    - the game engine is the manual
+      - 1/3 of the witness comes from ides from the game engine
+      - braid came from the idea that, while iterating over some array, can look at the previous states of an enemy, and can skip some of them
+    - goes into an idea of a bunch of if statements vs equations
+      - **knowing the game design, if princess does this, do that, vs creating systems, and seeing where that goes**
+        - "top-down vs bottom-up design", a whole lot of bottom-up
+      - c: you mean create rules, and see what happens?
+      - **jb: even lower, just drawing a line, the rules that come from that: what happens when it crosses something, etc. it's an investigation**
+        - TODO: come back to this bit
+      - c: so you're investigating something, eventually, maybe, you find that light shines to show something, and then that becomes a part of the rule-set
+      - jb: yes, and then you have to decide how important of a part it is, and you re-assess that from time to time--it's importance
+      - nothing is completely bottom-up. top-down is used as a guide, toward something intersting in humans. you have to have a joy in systems, and how systems affect people, and have to be able to take that design and show it, and to communicate it.
+    - c: how do you manage everything? do you one part of you that says to do programming, another design, another team, another money, etc.
+    - jb: programming, 99% of the time is stupid things that must be done, and doesn't require much thought as an experienced programming. that's because the tools we have suck. even optimization, is likely just cache misses.
+    - **code re-use is not a thing, if it were, then we'd move on to bigger and bigger problems. instead, we everything from the past matters...**
+    - on the design side, i tried to make things that are at least new, and my understading as a designer does not kick out with answers to everything immediately (c: kind athe opposite of the programmer side)
+    - the top-down things says, "oh that's interesting, lets go investigate there", then lets drive in that area to see if anything comes bottom-up... but sometimes, the top-down is strong, and i want to make something, and it doesn't feel good, and i must procedurally try things until i drill my way there
+    
+    
+    
+    
+https://www.nic.uoregon.edu/~khuck/ts/acumem-report/manual_html/ch03s02.html
+  - allocation of space in the cache is managed by the processor. When the processor accesses a part of memory that is not already in the cache it loads a chunk of the memory around the accessed address into the cache, hoping that it will soon be used again.
+  - The chunks of memory handled by the cache are called *cache lines*. The size of these chunks is called the cache line size. Common cache line sizes are 32, 64 and 128 bytes.
+  - A cache can only hold a limited number of lines, determined by the cache size. For example, a 64 kilobyte cache with 64-byte lines has 1024 cache lines.
+  - If all the cache lines in the cache are in use when the processor accesses a new line, one of the lines currently in the cache must be evicted to make room for the new line. The policy for selecting which line to evict is called the replacement policy.
+    - The most common replacement policy in modern processors is LRU, for least recently used.
+  - When a program accesses a memory location that is not in the cache, it is called a cache miss.
+
+    
+    
+https://stackoverflow.com/questions/3928995/how-do-cache-lines-work
+  - "If the cache line containing the byte or word you're loading is not already present in the cache, your CPU will request the 64 bytes that begin at the cache line boundary (the largest address below the one you need that is multiple of 64).
+
+  Modern PC memory modules transfer 64 bits (8 bytes) at a time, in a burst of eight transfers, so one command triggers a read or write of a full cache line from memory. (DDR1/2/3/4 SDRAM burst transfer size is configurable up to 64B; CPUs will select the burst transfer size to match their cache line size, but 64B is common)
+  
+  As a rule of thumb, if the processor can't forecast a memory access (and prefetch it), the retrieval process can take ~90 nanoseconds, or ~250 clock cycles (from the CPU knowing the address to the CPU receiving data).
+  
+  By contrast, a hit in L1 cache has a load-use latency of 3 to 5 cycles, and a store-reload has a store-forwarding latency of 4 or 5 cycles on modern x86 CPUs. Things are similar on other architectures."
+  
+  - "100ns (to access RAM)  means about 200 ticks (clock cycles). So basically **if a program would always miss the caches which each memory access, the CPU would spend about 99,5% of its time (if it only reads memory) idle waiting for the memory."**
+    - **this seems to be the main bottle-neck of pc performance nowadays, especially regarding games**
+    
+
+
+
+https://www.youtube.com/watch?v=rX0ItVEVjHc
+  - TODO: 2014, Mike Acton of Insomniac Games
+  - no to all of these: (how are games like on mars?)
+    - exceptions (turn off)
+    - templates (greatly builds up compile times)
+    - iostream (only when debugging)
+    - operator overloading
+    - multiple inheritance
+    - rtti (run-time type information)
+    - no STL
+      - not that we have anything better, but it doesn't solve the problems we have
+    - custom allocaters (tons)
+      - don't use the general heap management
+      - sandboxed..?
+    - custom debugging tools
+      - to introspect data, examine live, offline, analyze, etc.
+  - 12:41, his meaning of DoD
+    - **the purpose of all programs, and all parts of those programs, is to transform data from one form to another**
+    - if you don't understand the data, you don't understand the problem, and conversely:
+    - understand the problem by understanding the data
+    - different problems have different solutions, so:
+    - if you have different data, you have a different problem
+    - ...
+    - everything is a data problem
+    - ... rule of thumbs ...
+    - DoD is mostly a respose to the broader culture of C++
+    - 3 big lies:
+      - software is a platform
+        - obviously, hardware is..!
+        - **text + data -> cpu -> data**
+          - simple idea of what programs do
+      - code should be designed around model of the world, some relation to real data, some idealized form
+        - hiding data: bad
+        - confounds two things:
+          - maintenance (via controlling access)
+          - understanding properties of data
+        - solve by analogy, feels like story-telling, a childish way to go about programming
+      - code is more important than data
+        - solving data transformation is the goal, not writing code
+        - there is no ideal abstract solution to the problem
+        - **you can't future proof**
+    - hash
+      - **most of the time just iterating until you find something, some one thing, a single hit, the rest are cache misses**
+      - **WRONG.**
+      - the most common things needed should come first: the keys you most commonly use
+    - a good diagram on cpu->cache cpu->ram
+      - gameenginebook.com/sinfo
+      - l1 cache 3 cycle
+      - l2 cache 20 cycles
+      - ram 200 cycles
+    - ~33min, incredible bit about what an object in OOP actually looks like in assembly, and the cost in time in latency
+      - **10 cache misses to 1, 3 going to ram**
+        - **that 1 is what the compiler optimized, the rest are human errors**
+      - changes it to DoD
+        - can then kinda guess/calulate cacheline stuff
+        - 10x speed-up
+    - common problems:
+      - bools in structs
+        - not only wastes 7 bits in a struct, but mainly, pushes the cacheline 1 byte, possibly costing another read
+        
+    - from a comment:
+      - "I think the key point hes trying to get across is batch your transforms. Identify where the bulk of the calculations are being applied and organise your data so that only the data that is necessary as input is congruent in a data structure to minimise cache misses to generate the output data as efficiently as it can"
+      
+
+
+
+
+
+
+
+
 data-oriented design
+https://www.youtube.com/watch?v=yy8jQgmhbAU
+  - a really good video on the pitfalls of OOP and it's solution: DoD, using animation in chromium as an exampole
+  - at 32:00, there's a good comparison chart:
+    - inheritance of six classes, with everything crammed into a single object ("Animation"), with links/references everywhere
+      - vs a templated struct (AnimationState)
+        - **tempalates are a sort of static polymorphiwsm**
+    - references of key-frame data
+      - vs read-only duplicate of key-frame data
+    - list of dynamically allocated interpolations: abstract classes
+      - vs vectors (dynamic array)  per-property, or if you know the types, an array
+    - flags (or some if branch) on state
+      - vs different tables (vectors) for each state
+        - notably, the state is hidden within a class/object
+    - an api wrapper around the object
+      - vs a new simple api based on the things the user needs: the id of a data
+    - outputs new property value to element and marks the hierarchy of elements (DOM sub-tree) (interacting with some other system)
+      - outputs tables of new values/modified elements (no interaction with any system, the data is simply passed down the pipeline to the next system))
+      
+  - 33:55 key points: try to do the following:
+    - **keep data flat**
+      - hardware reasons (cache, no rtti, amortized dynamic allocations)
+      - some read-only duplication improves performance and readability
+        - this bit often happens in functional paradigm, which may seem wrong as the data is copied, but perhaps is nicer for the hardware, as the data is in one place, not mutating depending on the state
+    - existence-based predication
+      - (to get rid of state all over the place)
+      - reduce branching (if and case statements)
+    - use ID-based handles
+      - reduce pointers
+      - simplify life-time of objects
+      - by seperating what the user sees, allows the implementation to be re-arranged as needed
+    - **use table-based output**
+      - (which will be re-used as input down the pipeline)
+      - no external dependencies
+      
+  - result: 6x better performance
+    - no change in algorithm or anything, just how data is structured
+    
+  - stopped at 35:00
+    - OOP makes multi-threading really tough
+    
+  - skimmed through it..
+    - OOP is not simply classes and methods, DoD uses them too
+      - the differences is that DoD puts data first, not the operations / code
+    - in games, DoD goes hand-in-hand with entity-component-systems
+    - "know your machine, and design software for the machine that will run it"
+      - and "don't design for an abstract hypothetical machine"
+    - in the end, both OOP and DoD are just tools in your toolbox, it is up to your best judgement when to use them
+    
+    
+    
+    
+  - from a comment
+    - "The speaker could have given a much better answer to that second question, which asked about what exactly he thinks should be "dead" in OOP.
+
+    OOP was designed to help with program design, maintainability and reusability. Things like encapsulation and abstraction are key core concepts of OOP, and they were developed in order to aid in the design of huge programs. It's a tool to create a million-lines-of-code program in such a manner that it remains manageable, understandable and maintainable. When properly used, it makes code simpler, safer and easier to understand and to develop further. It also helps in making code reusable, meaning that it's relatively easy to take some functionality that could be used in another part of the same program, or even a completely different program, and use it there without much or any modification. This helps reducing code repetition and overall work. It also helps in stability and reducing the number of bugs, because when a piece of code has been extensively tested, you can be certain it won't be a problem when used in another place or program. OOP does a relatively good job at this.
+    
+    The problem with OOP is that it wasn't designed, at all, with low-level efficiency in mind. Heck, back when OOP was first developed as a paradigm computers didn't even have any caches, pipelines or anything like that. There were no "cache misses" because there were no caches. Memory access speed was pretty much constant no matter how you read or wrote there. The performance penalty from conditionals and branching wasn't such a big concern back then either. It was but decades later that processor architectures went into a direction where the scattering of all the data randomly in memory became an efficiency problem.
+    
+    Thus, **if we want maximum efficiency in terms of cache usage, what needs to "die" in OOP is the concept and instinct of decentralizing the instantiation of the data that has a given role. The data needs to be taken out of classes, and centralized into arrays, and thus we need to break encapsulation and modularity in this manner. We also need to minimize branching, which in terms of OOP means minimizing the use of dynamic binding (in addition to try to minimize conditionals).**"
+    
+    
+  - another comment:
+    - "Lots of OOP fans are being triggered here, lol. **Basically, it boils down to memory access patterns. If you can arrange your computations to simply "flow", best without hiccups, i.e. without branching and chasing pointers all over the place, and if you can put data being accessed by hot code in the same place, so they can be prefetched in the cache, you win big, performance-wise. That is what DOD is all about: to better match program data to the way hardware operates.** Now, in cold code, OOP is just fine: it dramatically increases programmer efficiency at the cost of runtime efficiency, a cost we're willing to pay. But in hot code, HPC code, and real-time code, DOD is vastly superior, as it much better matches the problem to the hardware."
+
+  - another comment:
+    - "Good talk. I hope that some viewers notice that **the real benefit of this approach is how this makes testing, scaling, and modifying the code a lot easier, because of the loose coupling, reduced complexity, and freedom to reorder the algorithm. Performance is just the cherry on the cake.**
+    
+    
+
   - https://en.wikipedia.org/wiki/Data-oriented_design
     - "Although OOP appears to "organise code around data", it actually organises source code around data types rather than physically grouping individual fields and arrays in an efficient format for access by specific functions. Moreover, it often hides layout details under abstraction layers, while a data-oriented programmer wants to consider this first and foremost."
     - structure of arrays > array of structures
