@@ -162,8 +162,28 @@ although these **reek** of the nasty smell of degrading immoral mobile “game�
 
 
 
-## coding-focused first game engines people have fond memories of <3 <3:
-these make good first engines for programmers, as the engine size is tolerable, readable, and simple, yet abstracting the low-level stuff away from youthful eyes, and providing a simple framework to work in, though slightly constraining, not bad, especially in the case of haxepunk
+## coding-focused 2d first game engines people have fond memories of <3 <3:
+these make good first engines for programmers, as the engine size is tolerable, readable, and simple, yet abstracting the low-level stuff away from youthful eyes, and providing a simple framework to work in, *batteries-included*, though slightly constraining, and slightly bulky, not bad, especially in the case of haxepunk and ceramic
+
+  - **Ceramic**
+    - conclusion: **surprisingly most similar to my own personal tastes: the natural evolution of haxepunk and the old luxe in haxe**, but unfortunately, it was developed much later than haxepunk, and now he just can't compete with the professional development of heaps engine and hashlink. It's limited to openGL and 2d. Though, still **a very interesting 2d alternative to dragonruby, as it can potentially out-perform all of the engines using scripting languages pretty easily, and comes with batteries-included to begin making stuff immediately**
+    - **2d**, Haxe, basically glued together from the original version of luxe and other haxe libs
+      - has luxe's ECS
+        - and it seems much simpler/neater too!
+    - **a more suitable successor to haxepunk 'n flixel as it is batteries-included: including an entity system, tween system, easy integration of physics, ldtk, has it's own gui (in addition to haxe-ui)**, all of which heaps doesn't provide
+      - **strangely, created it's own back-end (in addition to OpenFL/lime, NME, Kha), based on luxe's original back-end (snow)
+        - **it's stuck on OpenGL (like lime), and would require hella work to support contemporary graphics renderers**, thus not intended for consoles
+        - **uses hxcpp as opposed to the hashlink runtime**
+          - **thus would have to use web as main dev target as opposed to hashlink's bytecode (which guarantees the same output), and you'd have to handle device-related apis for consoles 'n mobile devices yourself**, but understandably, this is the way haxe frameworks must go. hxcpp, though, is very well maintained as it's used by all haxe frameworks/engines except heaps, including kha.
+          - **you also lose the built-in C functions in hashlink, and likely C-arrays and C-structs (and their macros) too**
+        - export to unity via C#?? ...what?
+          - haxe is amazing.. but i dunno what kinda problems that could introduce..
+          - maybe will be dropped by haxe v5
+      - includes integerations with ldtk and aseprite
+    - TODO: get the example with the little falling game
+      - **can easily write data-oriented style, and it's ECS is really neat**
+    - made by one person, into new media arts
+    
   - **HaxePunk**
     - 2D, Haxe, OpenFL, *abandoned*, FlashPunk was **my favorite engine** but it never seemed to stay alive, though, it seems to have transcended with the users, as people made their own engines resembling FlashPunk; i think many of the original Punks initially ran to MonoGame, then further down a level to building their own C/C++ middleware between SDL and their C# engine... although abandoned, it’s probably just fine, just a few years of OpenFL/Lime updates.. cross-platform, however, would require quite a bit of work..
     - object-oriented entities, though, iirc, can architect how you want to: composition, inheritance, ECS(? ..maybe?..)
