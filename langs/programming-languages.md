@@ -1450,6 +1450,14 @@ https://www.quora.com/Is-learning-the-Phoenix-web-framework-easier-for-experienc
 
 
 ### old / history
+
+#### experimental, abandoned
+skip
+  - https://github.com/skiplang/skip
+    - "Skip's main new language feature is its precise tracking of side effects, including both mutability of values as well as distinguishing between non-deterministic data sources and those that can provide reactive invalidations (telling Skip when data has changed). When Skip's type system can prove the absence of side effects at a given function boundary developers can opt-in to safely memoizing that computation, with the runtime ensuring that previously cached values are invalidated when underlying data changes."
+    - "Skip supports two complementary forms of concurrent programming, both of which avoid the usual thread safety issues thanks to Skip's tracking of side effects. First, Skip supports ergonomic asynchronous computation with async/await syntax. Thanks to Skip's tracking of side effects, asynchronous computations cannot refer to mutable state and are therefore safe to execute in parallel (this means that independent async continuations can continue in parallel). Second, Skip has APIs for direct parallel computation, again using its tracking of side effects to prevent thread safety issues such as shared access to mutable state."
+
+
 #### intriguing things from the past:
 Logo
   - lisp without parenthesis!!
