@@ -33,7 +33,7 @@ https://www.reddit.com/r/gamedev/comments/171qnt7/do_you_have_to_pay_to_port_a_g
 
 
 my choices over time:
-flashpunk -> haxepunk -> ceramic for opinionated framework or **dragonruby** for DIY 2d  [#media-frameworks]() -> heaps or foster/FNA for optimized DIY 2d+3d -> **jon blow's engine**
+flashpunk -> haxepunk -> ceramic for opinionated framework or **dragonruby** for DIY 2d or defold for the complete package  [#media-frameworks]() -> heaps or foster/FNA for optimized DIY 2d+3d -> **jon blow's engine**
 
 update3: dragonruby has limits. once you want to do advanced things such as shaders, you'd have to do it in C, (wrap it in an "extension", compile it), which just isn't as nice as an experience compared to heaps/haxe, where you really don't have any limits, and can do everything in haxe (save a few optimizations in C). Still, i much much prefer it to its alternatives, mainly due to ruby. By the time things do get advanced, i'll be ready to create my own games in heaps/haxe. :)
 
@@ -42,21 +42,23 @@ update2: dragonruby is by faaaaaaaaaaaaaaaaaaaaaaaaaar the best 2d engine. it's 
 update: i gave up on heaps and jumped to luxe. Luxe just ships with an entity-component system, along with a 2d collision module, so it was a bit easier to get started, though, it took a day or two to understand the ECS. Luxe also benefits in simplicity thanks to it's embedded language, whereas haxe drags you down with it's various features. Plus, you can really help develop luxe. :)
 
 
-others:
 complete 2d game engines:
-**ceramic**
-  - successor of flashpunk/haxepunk and the original luxe
-  - provides a complete framework, great if you need a lot of the common game engine stuff, or just want to focus on making games and not bother with game systems
-  - a more powerful langauge compared to game scripting languages
-defold
+**defold**
   - stable, game-editor included, 2d-focused with 3d
   - https://defold.com/2023/10/01/How-Defold-works-with-consoles/
     - console support, unlike godot
+  - modular
+ceramic
+  - successor of flashpunk/haxepunk and the original luxe
+  - provides a complete framework, great if you need a lot of the common game engine stuff, or just want to focus on making games and not bother with game systems
+  - a more powerful langauge compared to game scripting languages
 
 stable DIY 2d alts:
+**dragonruby**
+  - love2d with the power of ruby
 love2d
   - 20 years strong. amazing. the predecessor of dragonruby. luaJIT should be quite a bit faster..? (for desktops)
-raylib
+**raylib**
   - for really learning how to make games and game systems (C, graphics), and **able to choose any language you want!!**
 
 stable DIY 3d+2d:
@@ -113,18 +115,19 @@ https://itch.io/game-development/engines/most-projects
 although these **reek** of the nasty smell of degrading immoral mobile “game” companies, god-awful Facebook “games”, and gambling companies (in shady places like Russia and China), **these engines have shipped several games cross-platform, and thus are far more stable choices than most things indie engine makers churn out**. also, all of them are open-source.
 
   - **Defold**
-    - 2D/slight 3D, Lua, became open source rather recently (2020?), **great for mobile**, **modular building results in a tiny executable**, great tutorials, easy to get started, no-autocomplete in the provided IDE’s code editor??, **perhaps the best alternative to Godot, with true cross-platform support** (but must really research and decide if the company is truly evil: are their games evil? is their work culture evil? ..and so on)
-
-  - Cocos2d/Cocos Creator
-    - C++, open-source, used to make shitty 2D mobile games for over a decade, now comes with a complete IDE (Cocos Creator), the Obj-c version was especially popular to make iOS games back in the day, **i personally used this once for a local-networked iOS game, and after that, i stopped using a computer for a decade**, how much of that was actually causal is a philosophical problem :D
-    - popular in china, and originally ported by a chinese person
-    - i'm scarred by my past experience with it in it's worst form: objective-c
+    - 2D/slight 3D, Lua, became open source rather recently (2020?), **great for mobile**, **modular building results in a tiny executable**, great tutorials, easy to get started, no-autocomplete in the provided IDE’s code editor??, **by far the best 2D solution with true cross-platform support**, originally made by the company that made candy crush
     
-  - Solar2D (CoronaSDK)
+  - x/Solar2D (CoronaSDK)
     - NOTE: note game editor!
     - open-source (used to be commercial), C/Lua, also used to make shitty 2D mobile games for over a decade
     - https://www.reddit.com/r/lua/comments/xfbrc1/comment/ionltk9/
       - "Solar2D, on the other hand, is more complete and fleshed out, a relatively large framework you can extend (less conveniently) with plugins. Trading freedom of action for ready-made functionality and overall consistency."
+
+  - x/Cocos2d/Cocos Creator
+    - C++, open-source, used to make shitty 2D mobile games for over a decade, now comes with a complete IDE (Cocos Creator), the Obj-c version was especially popular to make iOS games back in the day, **i personally used this once for a local-networked iOS game, and after that, i stopped using a computer for a decade**, how much of that was actually causal is a philosophical problem :D
+    - https://www.reddit.com/r/gamedev/comments/16p6fno/why_isnt_anyone_mentioning_cocos_creator/
+      - originally made by an Argeninian person, then ported to C++ by a Chinese person, and then that took off, eventually they built Cocos Creator, it's editor, and that part is closed-source, and a lot of the documentation is now in Chinese, so it lost it's world-wide appeal
+    - i'm scarred by my past experience with it in it's worst form: objective-c
     
     
 ### coming up
