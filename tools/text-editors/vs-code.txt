@@ -1,7 +1,7 @@
 backup settings:
 https://gist.github.com/MaxAtoms/b30163855bc6995588a5af9e88b28e51
 
-backup a copy of "~/.config/Code - OSS/User/settings.json"
+cp C:\Users\ra\AppData\Roaming\VSCodium\User\settings.json C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\vscodium
 
 save a list of extensions:
 code --list-extensions > vs-code-extensions.txt
