@@ -1,4 +1,18 @@
 {
+  // backup
+  // cp C:\Users\ra\AppData\Roaming\VSCodium\User\settings.json C:\Users\ra\my-stuff\repos\my-programming-stuff\configs\windows\vscodium
+    
+  // save a list of extensions:
+  // # NOTE: don't overwrite the existing file, it's hand-written
+  // code --list-extensions > vs-code-extensions.txt
+  // codium --list-extensions > vs-code-extensions.txt
+
+  // recover extensions:
+  // cat vs-code-extensions.txt | xargs -L 1 -n 1 code --install-extension
+  // cat vs-code-extensions.txt | xargs -L 1 -n 1 codium --install-extension
+
+
+
   // basics
   "editor.fontFamily": "'office code pro', monofoki, hasklig, source code pro, consolas, hack, meslo lg s, mono",
   "editor.fontSize": 11,

@@ -6,14 +6,19 @@
 //codium --list-extensions > extensions-list-current.txt
 
 // current extensions (automatically ordered by alphabet)
+ahmadawais.shades-of-purple
+akamud.vscode-theme-onedark
+castwide.solargraph
 daltonmenezes.aura-theme
-dendron.dendron
-dendron.dendron-markdown-links
 elixir-lsp.elixir-ls
 enkia.tokyo-night
+hiro-r-b.drgtk-autocomplete
 jasew.vscode-helix-emulation
 khan.two-monokai
 koichisasada.vscode-rdbg
+liviuschera.noctis
+luxcium.pop-n-lock-theme-vscode
+luxeengine.luxe
 ms-vscode.powershell
 nadako.vshaxe
 pantajoe.vscode-elixir-credo
@@ -21,14 +26,15 @@ pawelborkar.jellyfish
 rebornix.ruby
 redhat.vscode-yaml
 robbowen.synthwave-vscode
+sdras.night-owl
 shopify.ruby-lsp
 sorbet.sorbet-vscode-extension
+undefined_publisher.dragonrubyautocomplete
 victorbjorklund.phoenix
 wingrunr21.vscode-ruby
+whizkydee.material-palenight-theme
 
 // diff from before re-instaling windows
-//dendron.dendron-markdown-shortcuts
-//dendron.dendron-paste-image
 github.copilot
 // TODO: not working
 github.copilot-chat
@@ -36,14 +42,10 @@ github.copilot-chat
 //haxefoundation.haxe-hl
 // not working
 
-// diff from chromebook extensions list
+// diff from chromebook
 //bmalehorn.vscode-fish
-  - rip
-//crystal-lang-tools.crystal-lang
   - rip
 //Shopify.ruby-extensions-pack
   // missing from vscodium, but i have all of it's contents:
   // rdbg, sorbet, ruby-lsp
-//castwide.solargraph
-  - older ruby lsp, replace by shopify.ruby-lsp
 
