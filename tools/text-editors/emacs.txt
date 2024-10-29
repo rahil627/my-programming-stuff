@@ -33,6 +33,28 @@ doom install:
 follow the directions on the github
 fish_add_path ~/.config/emacs/bin
 
+windows:
+scoop install emacs
+
+get the native binaries:
+(not sure if i need: scoop install emacs)
+https://www.emacswiki.org/emacs/GccEmacs
+  - scoop bucket add kiennq-scoop https://github.com/kiennq/scoop-misc
+  - scoop install emacs-k
+
+set $env:home = "$home" in powershell profile
+append $home/.emacs.d/bin to path
+
+make folder in $home/.emacs.d
+copy a clone of the doom repo there
+
+doom sync
+doom doctor
+  - check for problems
+doom run
+
+
+
 notes:
 
 from github repo page:
