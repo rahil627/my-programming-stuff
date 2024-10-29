@@ -1,3 +1,93 @@
+TODO: maybe can move to programming concepts, but they are implemented differently for each langauge..
+# macros 101
+
+https://haxe.org/videos/tutorials/nicolas-about-haxe/macros-101.html
+  - nicolas goes over macros  
+
+runs at compile-time (whereas programs run at run-time)
+must return a program, not a value
+can mix between compile-time and run-time
+great for optimizations
+
+
+macro static function getMacro(s:String) {
+  //return macro $v( Date.now().toString() ); // $v for value??
+  //return macro { trace("hello from macro") }
+  return macro { trace( $v(s) ) }
+}
+
+macro static function passRuntimeValue(e:haxe.macro.Expr) {
+  return macro { trace $e } // $ + id syntax?
+}
+
+static function main() {
+  //trace( getMacro() );
+  getMacro(); // the program gets replaced here
+  getMacro("hello macro, input from program, output from macro");
+  var s = "hello from run-time var" // only known at run-time
+  getMacro(s) // won't work
+  
+}
+
+// build macros
+
+import haxe.macro.Context; // api for macros programming
+
+@:build( MyMacros.build(args) ) // @: is compiler meta-data, must be on a class?
+class Main {
+  var x = 1
+  var y = 2
+
+  @foo @bar(args) static function main() { // hmmm, not sure about these... maybe a way to tag fields?
+    trace(a + b) // normally wouldn't be able to access because it's a static function
+  }
+}
+
+class MyMacros {
+  public static function build() {
+    trace("hello from build macro")
+    
+    var fields = Context.getBuildFields(); // able to see at compile-time
+    for (f in fields) trace(f.name, f.kind); // f.kind shows the type at compile time x/y/FVar and even main/FFun
+    //return []; deletes the main function!?
+    
+    for (f in fields)
+      f.access.push(AStatic); // turn all fields into static!
+    return fields;
+  }
+}
+
+
+// next example is pretty complex..
+// http request a website (input as parameter to build macro)
+// iterate over matches, store id in an array
+// make an array of types, with the name (identifier) as id and kind as string
+// make a Field and set kind to the array of types above
+// push the Field into Context.getBuildFields()
+// then, back in the main function, once you type in the field name, you get auto-complete of all the ids scraped from the google page, typed as string
+  // magic!!
+
+// using some template system, you can then fetch each node of template, get strict typing
+
+// basically, can do anything at compile time: read files, write files, input info, output info, all at compile time
+  // everything you can do with a systems language, you can do with macros
+
+// meta-programming = manipulating a program at compile-time
+
+// hxd.Res.file
+  // heaps uses macros to get auto-complete on files in the res (resources) folder
+  // FileTree macro
+    // set Context (js, flash, etc.) // not sure...
+    // based on the extension name, set the type kind
+    
+    
+// dump source with D flag?
+  // see all of the compile-time source code: the program after macros are run
+
+
+
+
+
 
 
 # install:
