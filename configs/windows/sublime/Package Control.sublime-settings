@@ -1,0 +1,15 @@
+{
+	"bootstrapped": true,
+	
+	"in_process_packages":
+	[
+	],
+
+	// ordered in reverse
+	"installed_packages":
+	[
+		"CTags",
+		"LSP",
+		"Package Control",
+	],
+}

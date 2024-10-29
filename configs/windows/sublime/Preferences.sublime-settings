@@ -1,0 +1,15 @@
+{
+	// cp $home\scoop\persist\sublime-text\Data\Packages\User\* $home\my-stuff\repos\my-programming-stuff\configs\windows\sublime\
+
+	"theme": "Adaptive.sublime-theme",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"index_files": true,
+
+	"line_numbers": false,
+	"font_face": "Consolas",
+	"color_scheme": "Packages/Aura Theme Color Scheme/aura-theme-soft.tmTheme",
+	"font_size": 10,
+}
