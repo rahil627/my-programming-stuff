@@ -152,14 +152,14 @@ manual-memory-management / with advanced features (not simple C-like):
     
     
 low-low-level:
-zig > odin > **C**
+**jai** > zig > odin > **C**
   - **all machines and languages talk in C, so it's the most practical and most important one to know..! don't let the other languages sway you!!** one cannot keep running away from it ;) anyway, it's no worse than older C++! it's actually much much simpler..
     - especially hardware-level stuff: the OS for consoles, mobile devices, and embedded devices, and has libs for all of those devices
   - some languages transpile to C (haxe, nim), some go directly to assembly ("native")
   - **knowing how C works is the key to optimization, and FFI to *all* other languages likely break any chances for optimization**
-  - zig, however, is an exceptional replacement for C
-    - you could probably just write "C extensions" for other langs in zig
-  - **odin seems like it's made for games..!**
+  - odin seems like it's made for games..!
+  - **zig actually has meta-programming!!**
+  - word on the street says jai is better than both
     
     
 
@@ -986,7 +986,7 @@ x/Dart
 ### C++ and its replacements / manual memory-management (or atleast the option)
 
 **Jai**
-  - the only solution
+  - see listing under [#C and its replacements]()
   
   
 Beef
@@ -1003,7 +1003,7 @@ Beef
 
 
 **Nim**
-  - NOTE: probably the most practical among this, crystal, 'n julia
+  - NOTE: probably the most practical among this, crystal, 'n julia, yet still quite behind haxe
   - **"aims for efficiency, then expressiveness, then elegance, has metaprogramming too, in that order"**
     - this is a good way to categorize languages..
   - "It combines successful concepts from mature languages like Python, Ada and Modula."
@@ -1012,15 +1012,28 @@ Beef
   - "performance-oriented, allowing for many kinds of optimizations and implementations"
     - **memory management options: various garbage collectors (current default), reference-counting (future default), rust-like move semantics (most recent)**
       - this is it's main difference
-  - basically supports all programming paradigms
+  - programming paradigm agnostic
   - transpiles to C thus can easily interface with C/C++/Objective-C (therefore easier access to iOS?) and javascript, like haxe
   - writing macros don't require a different syntax, so it's "elegant" as advertised
+    - https://stackoverflow.com/questions/77803775/is-it-possible-to-globally-modify-the-ast-in-nim
+      - **not as powerful as haxe's macros?**
+      - "In Haxe, it's possible to iterate through and modify a project's entire AST prior to typing using @:build macros. I was wondering if it was possible to do something similar with Nim?"
+        "Nim has a rich and powerful macro API for AST reading and modification, but is this possible to do outside of explicit macro calls to the content held in other declarations? Could I, say for example, rewrite a specific function at compile-time prior to the generation of the output?"
+      - "No. macros only have access to their corresponding subtree of the AST."
+    - https://nim-by-example.github.io/macros/
+      - **i wouldn't call these macros _elagant_ by any means... nor even the language**
+    - **many features in the language are implemented usnig macros, therefore keeping the core quite small**
+    - https://community.haxe.org/t/macros-when-and-why-is-if-macro-if-macro-required/2530/6
+      - "All that aside, Nim and Rust macros don’t quite compare with Haxe’s, where it’s not uncommon to use 3rd party libs, networking, file system, databases, the operating system (invoking other CLI tools) and what not. It’s also common to call into the compiler to perform typing and what not (which as far as Google tells me is not possible in Nim or Rust). Properly separating code is therefore vital in the long run."
   - pop contemporary features: generics, closure, functional paradigm features, type inference, macro, statement as expression, etc.
   - https://community.haxe.org/t/main-differences-between-haxe-and-nim/1120/4
     - template-based macros
+    - Nim generic is template based, which gives you more power
+      - Nim generics support static[T] which is nice
     - no object-oriented paradigm, just use macros
     - no built-in pattern-matching, use macros/libs
     - object variants to haxe's adt
+    - Haxe has a static analyzer and very good inliner. Nim relies on the backend compiler to do the job until now.
   - https://forum.nim-lang.org/t/1880#11674
     - nim's focus is C target, Haxe started with javascript target (dynamic), and brings a little baggage there..
     - nim's macros are better implemented than haxe
@@ -1110,19 +1123,25 @@ D
 
 ### C and its replacements / manual memory management
 
-Nelua
-  - lua-like in many ways: syntax, minimal design / few features that can be used to create more features via meta-programming
-  - garbage collector is optional (on by default)
-  - compiles to C then native code
-  - compiler written in lua, and thus completely modifiable!
+https://www.reddit.com/r/Zig/comments/1c7s0pm/odin_vs_zig_for_a_hobby_project_crossplatform/
+  - good info on zig and odin
+
+**Jai**
+  - see listing under [#C and its replacements]()
+  - the only solution
+  - word on the street: better than both odin and zig
 
 **Zig**
+  - a rough dev history full of rehauls
+  - not the best tool-chain, though some parts better than odin, and better cross-platform support
   - a C replacement
   - "faster than C", advanced CPU features, SIMD exposed
   - explicit about using the allocator to allocate the heap...
-  - possibly the best C interop i've ever seen: just @CImport and @CInclude("SDL.h"), then C.SDL.DestroyWindow(...)
+  - **possibly the best C interop i've ever seen: just @CImport and @CInclude("SDL.h"), then C.SDL.DestroyWindow(...)**
   - can use zig as a drop-in replacement C/C++ compiler
     - pretty neat for when you don't want that crap 
+  - **actually has meta-programming**
+    - thus, simple is not it's aim, unlike odin
   - from the site:
    - "There is no hidden control flow, no hidden memory allocations, no preprocessor, and no macros."
    - page 1:
@@ -1163,20 +1182,27 @@ Nelua
     - const ray = @cImport({ @cInclude("raylib.h"); });
 
 Odin
+  - more stable dev history than zig
+  - not the best tool-chain, especially debugger and auto-complete
   - from the hand-made network
   - like C, cute, with a strong belief that *data and procedures (functions) should be seperate, and that behaviors (class's functions/methods?) shouldn't even exist!* :o very rad
   - parses emoticons!!
   - **comes with game libs!!**
     - all major graphics api (vulkan, metal, etc.) are officially supported
     - official bindings for: SDL2, raylib, etc.
+    - **but doesn't come with a package manager**, again, very opinionated..
   - influenced by Go
   
 V(lang)
   - C-like
   - gc optional
+  
+Nelua
+  - lua-like in many ways: syntax, minimal design / few features that can be used to create more features via meta-programming
+  - garbage collector is optional (on by default)
+  - compiles to C then native code
+  - compiler written in lua, and thus completely modifiable!
 
-D
-  - C-like
 
 **C**
  - **a *very* simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
