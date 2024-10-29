@@ -40,9 +40,17 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
   
 
 # conclusion:
-*. focus (editor)
+0. zed
+  - TODO: waiting for windows binary
+0. sublime text
+  - don't know how i missed this before... another reminder to just try all the tools out there, it only takes a few minutes!!
+  - has lsp and ctags!
+  - has aura theme!!
+0. focus (editor)
   - in. fucking. credible. finally. a god damn text editor that doesn't slow down the marvel of contemporary machinery!! gamers make the best shit.
-  - no key-bindings to learn, just jump in and type.
+  - lsp in next version (0.4.0)
+  - themes suck
+  
 1. emacs (doom)
   - potential is unlimited, written in lisp, one tool-set to rule them all, but it just sounds like the wrong rabbit hole to go into in 2024
     - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
@@ -55,23 +63,22 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
   - also can be completely altered as it is written in common lisp, making it the most malleable text editor
 2. helix
   - the vi way, with kakoune workflow
-  - for quick general use, along with cli tools, remote terminal use, a good step towards emacs
-  - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
-    - an emacs user switches to helix and mentions some good plugins
-    - TODO: try them!
+  - works in terminal (and thus great for remote terminal use)
+  - a good step towards emacs
+    - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
+      - an emacs user switches to helix and mentions some good plugins
+      - TODO: try them!
   - TODO: a version with a file-tree feature is on a git branch
+    - though, it intentionally avoids these features in favor of a more vi-style workspace editing via file/buffer list ui
   - scheme scripting coming soon!!
-2. vs-code (or lapce)
-  - TODO: give lapce another try!
-  - a great start, especially when you haven't coded in a while
-  - easy to jump into where everything *just works* with "batteries-included": file manager, terminal window, debugging window, beautiful themes (aura!), zen-mode, etc.
+    - but just scripting, the core is rust.. so not as malleable as lem, emacs, or vs-code
+3. vs-code
+  - last resort, in case of extensions, debugging, etc.
+  - everything *just works* with "batteries-included": file manager, terminal window, debugging window, beautiful themes (aura!), zen-mode, etc.
   - can use fav key-bindings extension ("helix for vscode" extension), or customize keys yourself
   - eats up cpu, memory, etc.
 vs-studio
   - for it's advanced features: deep debugging, run-time stuff, etc.
-sublime text or notepad (windows)
-  - for simple, brain-less editing
-  - TODO: try it
 
 (TODO: knowledge-base software for bigger, conceptually-linked sets of text??)
 
@@ -106,9 +113,11 @@ lem
 4coder
   - part of the handmade-hero movement
     - therefore written in C/C++, and also therefore **can be extended using just about any programming langauge**
-**lapce**
-  - a vs-code copy in rust
+    
+lapce
+  - yet another vs-code copy in rust
     - already has advanced features: modal lsp, remote dev, built-in terminal..
+    - **...but i don't see much point over zed, which is also written in rust**
   - felt quite in development when i tried it last..
   - incredible speed
   - "Plugins can be written in programming languages that can compile to the WASI runtime (C, Rust, AssemblyScript)"
@@ -131,16 +140,26 @@ lem
       The productivity of the GToolkit developers is impressive."
 
 
-## current alts
+## newer alts
+**zed**
+  - windows binary taking some time to come out.
+  - **ai-focused**
+  - **multi-player**
+  - gui/gpu-rendered
+  - from the makers of atom (and lsp, and tree-sitter) at github
+  - rust
+
 **focus (editor)**
-  - the best text editor experience i've had in quite some time.. a sort of zen text editor but intended for programmers, absolutely replacing all the old trusty fallbacks (notepad2/notepad++/sublime)
+  - the best text editor experience i've had in quite some time.. made me try sublime text, which is what it basically is: **sublime text with better design**
   - incredible speed, incredible defaults, incredibly simple, lives up to it's name and induces focus
     - learn everything in 5 minutes: find file via fuzzy search, set up workspaces, command prompt, config
+      - very well designed find file in workspace and open file via path
     - great little view mode (c+a+arrow keys)
     - some sane defaults (and great sense of design) include:
+      - great, simple key-bindings, closest to sublime-text
       - infinite undo-history for all files during the session, even after closing it..??
       - jumping the cursor back after highlight or viewing
-      - saving config reloads it
+      - saving config hot-reloads it
       - diff on the scroll bar
         - i forgot how gooood scrolling felt..!
   - **made with jai**
@@ -162,17 +181,29 @@ lem
   - until the scripting feature is out, it lacks a lot of things that would likely become scripted plugins: file manager, more advanced debugging, etc.
   - though it will have lisp scripting, it is written in rust, and thus not really malleable as a program written entirely in a scripting a language, and definitely nowhere close to a program written entirely in lisp. in hackabilty, it's worse than vs-code, which is written entirely in a scripting language: javascript
 
-## current standard:
-**vs code**
-  - made using electron (web stack rendered by chromium/node.js)
-  - so dominant that it made most other editors abandonware
-    - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
-  - has extensions for all of the classic key-bindings
-    - **"helix for vs-code"** is amazing, merging helix bindings with vs-code bindings and gui cursor
-  - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
-  - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
 
 
+## current standards:
+**sublime text**
+  - **the best simple gui text editor, replacing notepad++**
+  - **designed for speed and simplicity**
+    - **written in C++**, scripted in python
+    - **30mb, fast, simple**
+      - thanks to this, imo, beat out both atom and vs-code
+  - **great defaults**
+    - took a few minutes to setup lsp, just use command pallette -> install packages
+  - all the standard features: file explorer, zen mode, etc.
+  - extensions in python
+    - terminal, git, etc.
+  - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's open-source community
+    - perhaps used to require more effort to install extensions..? now seems just as easy...
+  - shareware (not open-source, but free?)
+    - this is what probably made it lose the battle to vs-code, making it hard--impossible?--to develop
+
+
+
+  
+  
 
 
 old standards / history:
@@ -190,24 +221,26 @@ kakoune
       - ...this is probably what killed it..
 
 
+vs code
+  - made using electron (web stack rendered by chromium/node.js). and therefore:
+    - **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
+  - so dominant that it made most other editors abandonware
+    - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
+      - **by far the most extensions thanks to having the biggest community one-click install**
+  - has extensions for all of the classic key-bindings
+    - "helix for vs-code" is good, merging helix bindings with vs-code bindings and gui cursor, but missing the pop-up menus
+  - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
+  - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
+  
 (note: i missed out on the atom vs sublime generation)
-**sublime text**
-  - TODO: worth trying, after being so happy with the simplicity of focus editor
-  - the best simple gui text editor, replacing notepad++
-  - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's community
-  - "It's a much nicer editor but clunky vscode has a better on boarding experience (I see you coding x, would you like to install this extension to help with x). Whereas with sublime you have to do a lot of hunting and manual installation to get all set up with extensions.
-    And frankly vscode is where the community is at, which means that's where almost all the extension dev is happening.
-    There is some effort to piggyback off vscode in sublime via language servers which is hopeful. Vscode's extension in sublime would be best of both worlds.
-    I bought sublime before vscode existed. I use both. Working on a Hugo static website right now and use vscode for html & css but sublime for the markdown based content."
-      - https://www.reddit.com/r/SublimeText/comments/m1g9x9/newbie_is_sublime_text_better_than_visual_studio/
-  - **designed for speed and simplicity**
-    - **written in C++**, scripted in python
-  - shareware (not open-source, but free?)
 x/atom
-  - the electron framework (see the relation in it's name?) was created in the process of making this
-  - tree-sitter was also developed by github for the project
+  - set many standards:
+    - **the electron framework** (see the relation in it's name?) was created in the process of making this
+    - **tree-sitter** was also developed by github for the project
   - ...people don't seem to have liked this one.. probably for the same reasons they don't like vs-code..
+    - sublime text was much favored due performance of C++/native
   - though historically important, basically replaced by vs-code, since microsoft had acquired github..
+    - and now replaced by zed
   - made by github!!
 (probably missing some others here..)
 
@@ -218,14 +251,14 @@ notepad++
   - a windows classic, same as ever, still cute and functional for an old 90s thing
 textmate
   - a mac classic
-notepad2
+**notepad2**
   - a classic windows notepad replacement
   - TODO: try notepad4
 
 
 
 
-classics:
+*the* classics:
 notably, most current text editors still use the key-bindings from these two editors: neovim for modal text editing and emacs for non-modal. So, once you learn one of them, you can use an associated extension on vscode. Though, i think vscode derives from emacs
 
 though both originally were cli/terminal apps, now emacs is a gui, and even neovim has neovide (rust)
