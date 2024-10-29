@@ -1,6 +1,14 @@
 
+TODO:
+remap holding down caps lock to alt
+use modes, as they are far more intuitive, showing you shortcuts every-time you activate a mode. naturally, you will customize those modes over time, removing what you don't need, and adding what you want
+put shortcuts i forget on my custom mode
+
+
+
 basic ergonomics:
 just move or swap some useful keys around
+  - simple, yet major
 
 on a windows keyboard, swap alt with control on the os level
   - much more ergonomic, for both hands! mac os style!
@@ -11,6 +19,8 @@ map caps lock to escape key
 
 TODO: map holding caps lock down to the further mod key
   - https://github.com/microsoft/PowerToys/pull/32545
+
+
 
 **modifier keys require more cognitive load compared to leader-keys/key-chords, especially without a pop-up display.** It's sort of like object-oriented programming, the mind is better able to off-load the cognitive load to the object: the leader-key/minor-mode.
 
