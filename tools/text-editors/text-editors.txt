@@ -10,7 +10,7 @@ not slow / heavy
   - focus editor has spoiled me..
   - i guess terminal-based is fine..
 a simple way to write extensions
-  - preferably in lisp, or lispy, or C
+  - preferably in lisp, or lispy
 unrestrictive
   - see the "four pillars" below
   
@@ -38,32 +38,73 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
     - **emacs**
       - of course yes to all, though you probably wouldn't want to look at the source code..
   
+  
+  
+  
+  
+  
 
 # conclusion:
-0. zed
-  - TODO: waiting for windows binary
-0. sublime text
-  - don't know how i missed this before... another reminder to just try all the tools out there, it only takes a few minutes!!
-  - has lsp and ctags!
-  - has aura theme!!
-0. focus (editor)
-  - in. fucking. credible. finally. a god damn text editor that doesn't slow down the marvel of contemporary machinery!! gamers make the best shit.
-  - lsp in next version (0.4.0)
+
+zed. that is all.
+
+
+
+
+
+
+
+also see [knowledge-bases]
+
+stupid simple, fast editors (editor only):
+  - can use these anytime, and for anything, even simple text files
+1. focus (editor)
+  - NOTE: still early in dev
+    - lsp in next version (0.4.0)
+  - finally. a god damn text editor that doesn't slow down the marvel of contemporary machinery!! gamers make the best shit.
+  - great little design nuances
   - themes suck
+x/2. sublime text
+  - has lsp and ctags!
+    - **ERROR: the ruby LSP was buggy, creating multiple interpreters and leaking memory**
+    - i filed an issue
+      - https://github.com/sublimehq/sublime_text/issues/6523
+  - has aura theme!!
+  - **shareware, bugs you about buying a license**
   
+  
+stupid editors with more features (vs-code-like):
+1. **zed**
+  - I FOUND IT!! I FINALLY FOUND IT!!!
+  - just works
+    - opened a ruby file, asked to install, and boom! lsp installed.
+  - looks amazing too
+  - combines slack, multi-player, ai, terminal, etc. but at 150mb and low cpu and low startup-times, still quick enough to fit here
+*. lapce
+  - vs-code in rust
+x. vs-code
+  - last resort, in case of specific extensions
+  - everything *just works* with "batteries-included": file manager, git manager, terminal window, debugging window, beautiful themes (aura!), zen-mode, etc.
+  - has multiple key-bindings extensions including one for helix and kakoune
+  - **eats up cpu, memory, laptop battery, etc.**
+  
+  
+complete IDE:
+  - vs-studio
+  - jetbrains IDEs
+  
+  
+hackable editors:
 1. emacs (doom)
   - potential is unlimited, written in lisp, one tool-set to rule them all, but it just sounds like the wrong rabbit hole to go into in 2024
     - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
     - TODO: still should try it some more, also will get the chance to try lisp (via elisp) and have the best lisp dev environments too (common lisp, clojure)
       - TODO: try portacle config for common lisp
-*. lem
-  - WARN: BUGGY as of 10/4/2024
-  - looks like a great way to try common lisp without emacs
-    - actually kind of a dream editor, writing tiny programs in sbcl..
-  - also can be completely altered as it is written in common lisp, making it the most malleable text editor
-2. helix
-  - the vi way, with kakoune workflow
+2. helix (vi)
+  - NOTE: once the gui and scheme scripting is out, i think it'll become my favorite.. i just find the terminal to be a clunky interface, and really miss using mouse/touch
+  - a contemporary vi implementation in rust, with kakoune workflow
   - works in terminal (and thus great for remote terminal use)
+    - but because of this, doesn't feel as good as gui editors... terminals are just a pain
   - a good step towards emacs
     - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
       - an emacs user switches to helix and mentions some good plugins
@@ -72,15 +113,12 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
     - though, it intentionally avoids these features in favor of a more vi-style workspace editing via file/buffer list ui
   - scheme scripting coming soon!!
     - but just scripting, the core is rust.. so not as malleable as lem, emacs, or vs-code
-3. vs-code
-  - last resort, in case of extensions, debugging, etc.
-  - everything *just works* with "batteries-included": file manager, terminal window, debugging window, beautiful themes (aura!), zen-mode, etc.
-  - can use fav key-bindings extension ("helix for vscode" extension), or customize keys yourself
-  - eats up cpu, memory, etc.
-vs-studio
-  - for it's advanced features: deep debugging, run-time stuff, etc.
+*. lem
+  - WARN: BUGGY as of 10/4/2024
+  - looks like a great way to try common lisp without emacs
+    - actually kind of a dream editor, writing tiny programs in sbcl..
+  - also can be completely altered as it is written in common lisp, making it the most malleable text editor
 
-(TODO: knowledge-base software for bigger, conceptually-linked sets of text??)
 
 
 
@@ -115,10 +153,10 @@ lem
     - therefore written in C/C++, and also therefore **can be extended using just about any programming langauge**
     
 lapce
-  - yet another vs-code copy in rust
-    - already has advanced features: modal lsp, remote dev, built-in terminal..
+  - STATUS: felt quite in development when i tried it last, with very few extensions/languages
+  - yet another sublime/vs-code copy in rust
+    - already has advanced features: modal, lsp, remote dev, built-in terminal..
     - **...but i don't see much point over zed, which is also written in rust**
-  - felt quite in development when i tried it last..
   - incredible speed
   - "Plugins can be written in programming languages that can compile to the WASI runtime (C, Rust, AssemblyScript)"
     - this is it's limiting factor, though AssemblyScript actually looks just like javascript!
@@ -142,12 +180,22 @@ lapce
 
 ## newer alts
 **zed**
-  - windows binary taking some time to come out.
+  - windows binary not built for you..??
+    - possibly an attack on windows, as atom was killed by vs-code, and github was bought out by microsoft
+    - https://github.com/TakumiBC/zed-windows/releases
+      - this repo uses github actions to build it for you
+  - vs-code-like features (terminal, file explorer, version control, etc.)
   - **ai-focused**
   - **multi-player**
   - gui/gpu-rendered
-  - from the makers of atom (and lsp, and tree-sitter) at github
+    - somehow **looks even more beautiful than sublime by default..!**
+      - and has aura theme extension(!!) (had to manually install for sublime)
+  - from the makers of atom (and tree-sitter) at github
   - rust
+    - **extensions must be written in rust (and compiled to webassembly)**
+      - https://zed.dev/docs/extensions/developing-extensions
+      - https://zed.dev/extensions
+      - this def makes it harder to write extensions, but at least it'll be of higher quality, as the language itself will filter out programmers, and, it won't suffer from memory problems
 
 **focus (editor)**
   - the best text editor experience i've had in quite some time.. made me try sublime text, which is what it basically is: **sublime text with better design**
@@ -165,40 +213,61 @@ lapce
   - **made with jai**
   
 **helix**
-  - the best key-bindings/keyboard-interface of all past worlds: vim, doom-emacs, and kakoune
+  - STATUS: still developing gui-front-end, scheme scripting, but off to a great start as a terminal editor
+  - **the best key-bindings/keyboard-interface of all past worlds: vim, doom-emacs, and kakoune**
     - doom-emacs's intuitive pop-up menus
     - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
     - kakoune style more interactive workflow: selection -> action flow (vs vim’s action -> selection flow): wd vs dw
-  - fantastic sane defaults with the most essential features already built-in, config-free(!!): tree-sitter, lsp, dap
+  - **great sane defaults with the most essential features already built-in, config-free(!!): tree-sitter, lsp, dap**
   - "helix for vscode" extension to ease transition / aid in using both at the same time
     - TODO: ...no pop-up menus tho..?
-  - vi/terminal/buffer style navigation: file picker, buffers and buffer list, jump markers and jump lists
-  - rust
-    - truly a force of reckoning those people
+  - vi/terminal/buffer/keyboard style navigation: file picker, buffers and buffer list, jump markers and jump lists
+    - **requires a bit more cognitive load..**
+      - often have to use terminal to navigate file-system, then opening helix is begin a "workspace" at the current location**
+  - **because it was made for terminals, it suffers from a lot of terminal clunkiness**
+    - mouse input, scrolling, etc. all just feel meh
+    - **the ui just doesn't compared to gui, making it lack much sense of ui design**
+  - **because the core is meant to be rust, and every other feature in scheme, it still lacks basic features as of 10/2024**
+    - file/buffer/symbol tree
+      - the vi/keyboard-style navigation is favored
+    - zen-mode
   - scheme scripting
     - !!!, finally, get to use lisp :) 
     - https://github.com/helix-editor/helix/pull/8675
-  - until the scripting feature is out, it lacks a lot of things that would likely become scripted plugins: file manager, more advanced debugging, etc.
-  - though it will have lisp scripting, it is written in rust, and thus not really malleable as a program written entirely in a scripting a language, and definitely nowhere close to a program written entirely in lisp. in hackabilty, it's worse than vs-code, which is written entirely in a scripting language: javascript
+    - until the scripting feature is out, it lacks a lot of things that would likely become scripted plugins: file manager, more advanced debugging, etc.
+    - though it will have lisp scripting, it is written in rust, and thus not really malleable as a program written entirely in a scripting a language, and definitely nowhere close to a program written entirely in lisp. in hackabilty, it's worse than vs-code, which is written entirely in a scripting language: javascript
+  - rust
+    - truly a force of reckoning those people
 
 
 
 ## current standards:
-**sublime text**
+sublime text
+  - BUG: ruby lsp
+    - this stopped me from working in it (see above in conclusion)
   - **the best simple gui text editor, replacing notepad++**
   - **designed for speed and simplicity**
-    - **written in C++**, scripted in python
+    - **written in C++**, extensions written in python
     - **30mb, fast, simple**
       - thanks to this, imo, beat out both atom and vs-code
   - **great defaults**
     - took a few minutes to setup lsp, just use command pallette -> install packages
+      - just as seamless as vs-code! i only had to install the theme manually
+      - config files are seperated by extension, as opposed to vs-code, which has it all in a single file
+    - looks great too, and has aura theme
   - all the standard features: file explorer, zen mode, etc.
+    - **the product is complete**, nothing to add, just fix bugs for a long long time
   - extensions in python
     - terminal, git, etc.
+      - because the extensions are written in python, the cross-platform terminal (terminus) had to be written in python too :/
   - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's open-source community
     - perhaps used to require more effort to install extensions..? now seems just as easy...
-  - shareware (not open-source, but free?)
-    - this is what probably made it lose the battle to vs-code, making it hard--impossible?--to develop
+  - **shareware (as in winrar closed-source bug you until you buy a license)**
+    - **closed-source**
+      - **must use provided python api to write extensions**
+    - **$100 for a 3 year license, or, bug you from time to time :/**
+    - this def killed it..
+    - sublime merge is another app that's really well regarded too, perhaps also shareware..?
 
 
 
@@ -221,7 +290,7 @@ kakoune
       - ...this is probably what killed it..
 
 
-vs code
+x/vs code
   - made using electron (web stack rendered by chromium/node.js). and therefore:
     - **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
   - so dominant that it made most other editors abandonware
@@ -243,6 +312,8 @@ x/atom
     - and now replaced by zed
   - made by github!!
 (probably missing some others here..)
+
+
 
 basic gui classics:
 kate
@@ -324,7 +395,7 @@ though both originally were cli/terminal apps, now emacs is a gui, and even neov
 IDEs:
 mostly langauge-specific
 
-generally adds these features: integrated interactive debugger, profiler, advanced code completion, advanced refactoring, better file navigation (go to definition in deep libraries 'n back), tasks runner (including tests), database integration
+generally adds these features: **integrated interactive debugger, profiler**, advanced code completion, advanced refactoring, better file navigation (go to definition in deep libraries 'n back), tasks runner (including tests), database integration
   - though, nowadays, with LSP an DAP protocols gaining popularity, only the most advanced features make IDEs stand out
 
 **vs studio**
@@ -335,19 +406,23 @@ generally adds these features: integrated interactive debugger, profiler, advanc
     - therefore took a long time before making vs-mac
 
 various IDEs by JetBrains
-seems to fill the gap vs-studio has left with other languages
-recently seperated into language specific IDEs:
-https://www.jetbrains.com/ides/
-  - rubymine
-    - ruby, the standard for it
-  - rider
-    - c#, games?
-  - intellij
-    - java, jvm langs?, the standard for it
-      - i think this was their first/main editor that started their business
-  - pycharm
-    - (python)
-  - etc.
+  - seems to fill the gap vs-studio has left with other languages
+  - seems annoying to have a different IDE for every language... only nice for huge projects written in a single language, but nowadays, a single project can be written using multiple languages!..
+  - quite special for having good IDEs for dynamic languages like ruby and python
+    - https://www.reddit.com/r/ruby/comments/11ji4u7/rubymine_or_vs_code_extensions_for_debugging_in/
+      - "I keep trying to switch off of Rubymine and I keep going back. Debugging in Code is good enough, like no issue, once you find the right combination of articles to help you set it up. Autocomplete, intellisense, and similar are much worse, whether you use Solargraph or Sorbet + Ruby-LSP, and there are essentially zero refactoring actions. But the real killer feature for me is that Rubymine let’s me search, add breakpoints in, or jump to a definition in gems used in my application."..."But the real real killer feature is that it all just works, no hassle. Sure it’s a little sluggish sometimes. Sure the interface is a lil heavy. Sure the plug-in ecosystem is way less active. I got work to do, damnit."
+  - recently seperated into language specific IDEs:
+    - https://www.jetbrains.com/ides/
+    - rubymine
+      - ruby, the standard for it
+    - rider
+      - c#, games?
+    - intellij
+      - java, jvm langs?, the standard for it
+        - i think this was their first/main editor that started their business
+    - pycharm
+      - (python)
+    - etc.
 
 
 
@@ -356,20 +431,3 @@ https://pawelgrzybek.com/the-joy-of-learning-helix-and-probably-other-modal-term
   - todo: read
 
 
-
-https://www.reddit.com/r/ruby/comments/11ji4u7/rubymine_or_vs_code_extensions_for_debugging_in/
-
-I keep trying to switch off of Rubymine and I keep going back. Debugging in Code is good enough, like no issue, once you find the right combination of articles to help you set it up. Autocomplete, intellisense, and similar are much worse, whether you use Solargraph or Sorbet + Ruby-LSP, and there are essentially zero refactoring actions. But the real killer feature for me is that Rubymine let’s me search, add breakpoints in, or jump to a definition in gems used in my application.
-
-But the real real killer feature is that it all just works, no hassle. Sure it’s a little sluggish sometimes. Sure the interface is a lil heavy. Sure the plug-in ecosystem is way less active. I got work to do, damnit.
-
-
-https://www.reddit.com/r/ruby/comments/bq95m6/so_thoughts_between_vscode_vs_rubymine/
-
-VSCode sits somewhere between Sublime/Atom and Rubymine. It's not a full IDE, nor will it ever be, but it has a lot of the features a full-featured IDE would have. I used it for a while but just switched away from it, simply because there are UI things that really bother me, like the fonts support, particularly in the sidebar and the search. I work on projects with thousands of files and a hard-to-read search just doesn't work for me. And the ruby/rails support is sub-par, at best, compared to others.
-
-I've found Atom can do everything VSCode did for me (though maybe not for others) and it looks better, which makes me more willing to spend time in it. Sure, that's not everyone's requirement, but it is for me.
-
-I switched away from Sublime to VSCode, not because Sublime was bad, but I needed a change. But Sublime is absolutely the best in terms of speed.
-
-I personally don't find the need for something like Rubymine, but I've been writing Rails code for, jeez, 10+ years. It just gets in my way and never does what I think it should do. But it may be for you. VSCode is free, and Rubymine has a trial/demo. Try them. Spend a week or two with each. You'll find things you like and don't like about both. Everyone's needs and wants are different, and there are reasons some people love VIM over anything else. Just try them out.
