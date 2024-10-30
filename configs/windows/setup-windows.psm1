@@ -45,6 +45,11 @@ import-module .\remove-windows-bloatware.psm1
 import-module .\install-apps.psm1
 
 # setup
+function set_registry_keys {
+  # enable long file-paths
+  New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+}
+
 function install_winget {
 
     # TODO: winget was pre-installed, but it didn't work
@@ -176,20 +181,9 @@ function setup_browser {
     # uBlock origin
 }
 
-function setup_vscode {
-    # must manually setup git/github with oauth?
-    #   - go to source control view
-    #   - clone repo
-    #   - on the top bar, a selection of open github should appear
-    #   - go through the process of github oauth
-
-    get-content extensions.list |ForEach-Object { code --install-extension $_}
-}
-
 function setup_all_apps {
     setup_git
     setup_browser
-    setup_vscode
 }
 
 # main script
