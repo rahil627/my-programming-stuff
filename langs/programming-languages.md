@@ -9,7 +9,7 @@ https://www.youtube.com/watch?app=desktop&v=XZ3w_jec1v8
 # to remember
 ## only languages that are close to C/C++ can be optimized
 see [programming-concepts]
-**the further things get away from C, the less optimized it will be, because hardware is optimized for C, no other language, with the main problem being cache misses (fetching some data from RAM as opposed to one of the memory caches nearby the CPU), especially in the case of games.** Haxe, being a language made by a game-dev, provides complete control over C, and is able to create macros to generate things like C-structs, C-arrays, and structure of arrays. That is a rare exception.
+**the further things get away from C, the less optimized it will be, because hardware is optimized for C, no other language, with the main problem being cache misses (fetching some data from RAM as opposed to one of the memory caches nearby the CPU), especially in the case of games.** **Haxe, being a language made by a game-dev, provides complete control over C, and is able to create macros to generate things like C-structs, C-arrays, and structure of arrays. That is a rare exception**. Otherwise, the **C-like languages (jai, zig, odin) are more cognizant of hardware**.
 
 
 # the opinions of more experienced programmers
@@ -40,6 +40,10 @@ check SO yearly surveys
 https://tekkie.wordpress.com/2007/07/19/squeak-is-like-an-operating-system/
   - great read on smalltalk, which is, just a vm/runtime
 
+jai
+  - try to get beta
+  - **the only practical one in this list**
+
 lively kernal
   - TODO: try it!!
   - build web gui within the browser..??
@@ -53,18 +57,34 @@ pony
   - STATUS: abandoned, changed to a research project?
   - **wild ambition**
   - actor model for concurrency built-in
-lisp
+**lisp (common lisp sbcl via lem or emacs-lisp via emacs)**
   - try CLOG
     - like red but for web
   - try sbcl
   - use scheme in helix (maybe there's a git branch..??)
   - try doom emacs (and therefore elisp)
+  - try lem again
+  - **true zen programming**
+    - god-like macros, "interactive" dev experience including debugging, 'n more!
+  - perfect for scripting extension languages
+    - similar to ruby, can easily make your own speghetti world, but with even more power
+  - a very interesting alternative to C and Go, with similar performance but infinite power
+    - lacks libraries, especially when compares to the main systems languages
+  - looking at a basic cli program, i can see why lisp might not be the way..
+    - https://stevelosh.com/blog/2021/03/small-common-lisp-cli-programs/
+    - maybe roswell..?
+      - https://github.com/roswell/
+        - **cli scripting with lisp..! and windows support!**, maybe similar to babashka
+    - compare that crap to ruby or this nim project that generates the cli portion of the program:
+      - https://github.com/c-blake/cligen          
 haskell
-  - the magic of functional-paradigm
+  - to experience the magic of functional paradigm
   - native compilation and garbage-collected!! i wonder why it's not so practical..
-jai
-  - try to get beta
-
+smalltalk
+  - possibly provides the best programming experience
+    - the dream is to be able to make games with it
+    - "Smalltalk, most readable language, you can alter *any* part of it while it's running making the killer dev experience"
+  - **glamorous tool-kit**
 
 
 # conclusion:
@@ -77,7 +97,7 @@ dragonruby (an mruby fork, with C "extensions")
   - game
 elixir
   - web
-scheme or emacs lisp or common lisp
+lisp (scheme or emacs lisp or common lisp)
   - text editor extension
 ruby (and C core and "extensions")
   - scripting
@@ -88,36 +108,39 @@ mruby (and C)
 ## general langs
 
 general-use / automatic-memory-management:
-nim >= **haxe** >= OCaml > crystal > go (> C# > java/kotlin)
-  - UPDATE 2024: after all these years, nothing has really caught up to haxe (or Ocaml)
-    - except perhaps nim, but it lacks the game eco-system
+**haxe** == nim >= OCaml > crystal > go (> C# > java/kotlin)
+  - UPDATE 2024: after all these years, nothing has really caught up to haxe (nor Ocaml)
+    - only nim is catching up, but it lacks the game eco-system, more likely to attract scripting language folks
   - general all-round use, powerful, garbage-collected, **can cover every use-case (using C for manual-memory management and optimizations, and by controlling the garbage collector)**, statically-typed
     - for me, i much prefer having the ease of the garbage collector than worrying about memory. when i do need something that does allocate and deallocate lots of memory, it's the framework/engine that handles that, not me!
   - **haxe** is the ultimate "kitchen sink" garbage-collected language, **cross-platform in mind**, powerful (all advanced features), small Flash-game-oriented community, simple 'n succint actionscript syntax
-  - most use llvm compiler (directly or through C) and are comparable in speed (**magnitudes faster than scripting langs, at almost no cost in dev time over scripting langs**)
+  - most use either a llvm compiler or C compiler (directly or through C) and are comparable in speed (**magnitudes faster than scripting langs, at almost no cost in dev time over scripting langs**)
   - **resulting programs more easily portable due to compiled executable binary**
   - all are powerful in features: meta-programming via macros, ADTs, pattern-matching, generics, etc.
   - **many come with multiple compile options for quick dev: interpreter, bytecode/vm (haxe/hashlink), in addition to native (llvm or C) compilation options**
   - **of these, only haxe has solid game engines**
   - **haxe's hashlink** seperates it from the other languages, putting ahead for games / real-time apps
-    - **provides an identical runtime that produces bytecode or C, so that you can quickly develop your program using bytecode, and finally, when it's ready to be released, compile to C (via optimizing C compilers), with the expectation that it works the same as the bytecode version**
+    - **provides an identical runtime that produces bytecode (register-based) or C, so that you can quickly develop your program using bytecode, and finally, when it's ready to be released, compile to C (via optimizing C compilers), with the expectation that it works the same as the bytecode version**
     - **complete interop with C, providing C functions to alter everything (objects, functions, bytes, etc.)**
       - **furthermore, macros for: C-arrays, C-structs, macros for structure of arrays, allowing you to write closer to DoD style of C/C++, yet still in haxe. it's the best of both worlds.**
-    - crazy technology: register-based bytecode
   - **haxe's "shiro tech stack"** also sets it apart from other langs, providing **a set of modular tools specifically for games, including a scripting language identical to haxe for hot-reload, console multi-player code (closed-source), serialization, retained gui, game database, etc.**
-  - probably the biggest difference between the game-used languages and nim, crystal, etc.: **games require a solid, performant, mature language**
+  - probably the biggest difference between the game-used languages and nim, crystal, etc.: **games require a solid, performant, mature language**. haxe makes the rest of the languages seem like toys
   - **able to contribute to a tiny game-oriented community (haxe), and hang with them on discord :)**
   
   
 
-scripting / general personal use:
-**ruby** >>> python > javascript
-  - **i <3 ruby. it has my favorite syntax, and possibly is my favorite language**, and **that is enough reason alone to use it whenever i can, because what matters most is that: it makes me want to write code, it makes me want to go back to a project written in it, it makes me happy.**
+general quick use / scripting / has libraries:
+(**haxe** >) **ruby** >>> python > javascript
+  - LIMITS: real-time interaction (must write C), **no simple cross-platform compiled binary executable** (no packaging/bundling tool either), **concurrent programming limited to a single process by GIL** and **parallel programming was slapped on**, dynamically-typed and meta-programming (and therefore **more difficult to debug and provide auto-completion**)
+  - **given all those terrible limitations, i still <3 ruby. it has my favorite syntax, and possibly is my favorite language**, and **that is enough reason alone to use it whenever i can, because what matters most is that: it makes me want to write code, it makes me want to go back to a project written in it, and it makes me happy.**
+    - for me, it's **the easiest to read**, thanks to it having the **least verbose syntax**, and **it's more functional/module/mixin way leads to less OOP mess** (despite being more object-oriented by design), which plagued a lot of the mainstream languages of it's time
   - between a shell lang (powershell) and a general-use lang (that has an interpreter or bytecode/vm), it's pretty rare you'd often use these languages anymore...
-    - FUTURE: however, if people are able to make a native compiler, that'll be game-changing... languages are mere implementations
+    - **FUTURE: however, if people are able to make a native compiler, that'll be game-changing... languages are mere implementations**
   - EXCEPTION: **dragonruby (game engine)**
-    - a fork of mruby, but close enough, with many of it's features. it would be great use the scripting langauge i love the most for game-making, and then be able to use those skills to quickly write scripts. most game engines use custom scripting languages, very often not nearly as powerful as ruby.
-  - **great for quick, simple, everyday small scripting to pretty large size projects** thanks to it's **great battle-tested modular libs**
+    - a fork of mruby, but close enough, with many of it's features. it would be great use the scripting langauge i love the most for game-making, and then be able to use those skills to quickly write scripts. quite a few game engines use custom scripting languages, but none are nearly as powerful as ruby.
+    - **run-time inspection** as opposed to compile-time inspection makes it quite interesting for games... just open a dev console and can run any function or inspect any part of the game
+  - **perfedct for quick, simple, everyday small scripting to pretty large size projects** thanks to it's **great battle-tested modular libs**
+    - **it's mature libraries is what sets it apart from haxe and newer languages:** you simply can string together some libs and make something you need. very practical. very quick.
     - runs as simply as a shell script, no main class or extra files or anything needed, and looks beautiful too!
   - possibly **the most expressive** language
     - **attracts a *clean*-design-oriented cult commmunity with meta-programming abound (DSLs, etc.)**
@@ -131,69 +154,60 @@ scripting / general personal use:
     - ruby on rails for quickly making a large or rich web app
       - both now replaced by elixir's phoenix framework
   - **open-source language not run by a corporate giant**, yet used by and supported by giants (github) and japan!
-  - **with Elixir, mRuby, DragonRuby, Crystal(?) can keep favorite syntax and use for nearly everything**
-    - "mruby bytecode can be embedded in C code, and thus, can be compiled into a standalone executable." via normal c compilers (gcc/clang)
-    - has a virtual machine too, for quicker debugging/execution
-  - restrictions: real-time interaction (just write C), no simple cross-platform compiled binary executable (no current packaging tool either?), concurrent and parallel programming both slapped on, dynamically-typed and meta-programming (and therefore tough debugging and auto-completion problems)
-
-
+  - **with Elixir, DragonRuby, mRuby can keep favorite syntax and use for nearly everything**
+    - "mruby bytecode can be embedded in C code, and thus, can be compiled into a standalone executable," via normal c compilers (gcc/clang)
+      - has a virtual machine too, for quicker debugging/execution
     
-manual-memory-management / with advanced features (not simple C-like):
-(**jai** >) rust > nim == swift == D >= **C++** >= C (along with game scripting langs)
-  - as **for general-use, i'd just wait for jai**, as it doesn't have the complexity of neither rust nor C++, nor the baggage of C++
-    - **by design, it's just simple in a beautiful and intutive way**, much like his games
-    - until then though, stuck with C and C++
-  - rust guarantees memory safety at the cost of following their memory-management model, and is just much newer (by decades!). But, it's not an end-all solution to memory-management, especially in the case for games
-    - rust actually seems close to haxe and ocaml, which makes it a nice jump
-    - **rust is unfortunately amongst the most complex languages in existance**, and most code uses many of it's many features
-  - **C++ has come a long way since i last used it, it's actually legit, and used by all game engines**
-  - D, nim, and swift are notable for having the memory-management modular, allowing you to choose various ways to handle memory, therfore really alloing you to use one langauge for everything..!
-    - D and nim especially, for allowing the option of using a garbage collector
-    
-    
-low-low-level:
+  
+  
+manual-memory-management but simple / C-like / game engines:
 **jai** > zig > odin > **C**
+  - **perfect for game engines**, particularly with raylib (since it's written in a C style)
   - **all machines and languages talk in C, so it's the most practical and most important one to know..! don't let the other languages sway you!!** one cannot keep running away from it ;) anyway, it's no worse than older C++! it's actually much much simpler..
     - especially hardware-level stuff: the OS for consoles, mobile devices, and embedded devices, and has libs for all of those devices
-  - some languages transpile to C (haxe, nim), some go directly to assembly ("native")
-  - **knowing how C works is the key to optimization, and FFI to *all* other languages likely break any chances for optimization**
+  - some languages transpile to C (haxe, nim), but these seem to go directly to assembly??
+    - langauges that call C functions via FFI suffer a little bit in performance (in games)??
+  - **knowing how C works is the key to optimization**
   - odin seems like it's made for games..!
-  - **zig actually has meta-programming!!**
-  - word on the street says jai is better than both
+    - suffers from bad tooling
+  - **zig actually isn't simple, it has meta-programming!!**
+    - suffers from constant changes in development
+  - **word on the street says jai is better than both, with even better meta-programming!!!**
+  
+  
+  
+manual-memory-management with advanced features:
+(**jai** >) **rust** > nim == swift == D >= **C++** (along with scripting langs)
+  - NOTE: **for the case of games, i'd just wait for jai**, as it doesn't have the complexity of neither rust nor C++, nor the baggage of C++, yet still has some powerful meta-programming features
+    - **by design, it's just simple in a beautiful and intutive way**, much like his games
+    - until then though, stuck with C++ and rust
+  - **C++ and rust have incredible libraries related to systems-programming**
+  - **rust guarantees memory safety at the cost of following their memory-management model, and is just much newer (by decades!)**. But, it's not an end-all solution to memory-management, especially in the case for games
+    - rust is slowly being accepted in major critical-code apps
+    - rust actually seems close to haxe and ocaml, which makes it a nice jump
+    - **rust is unfortunately amongst the most complex languages in existance**, and most code uses many of it's many features
+  - **C++ has come a long way since i last used it, it's actually legit as long you program in a restricted C-like way, and is used by all game engines**
+  - D, nim, and swift are notable for having the memory-management modular, allowing you to choose various ways to handle memory, therfore really allowing you to use one langauge for everything..!
+    - D and nim especially, for allowing the option of using a garbage collector
+    - but D and nim have tiny eco-systems, and swift is.. Apple
     
     
 
 web (server-side):
 **elixir**
-  - **proof that the framework/practical use case means a lot more than the langauge itself..**
+  - **proof that the framework/practical use case means a lot more than the language itself..**
   - **phoenix, the current best and most beautiful scalable and easily-maintainable web framework**
     - suitable for both small web apps (roda) and massive web apps (rails)
     - makes great use of old tools to provide concurrency, and even provides an elegant way to handle it
-      - **concurrent/parallelism for free**, since it runs on *awesome* Erlang VM (BEAM). Used for distributed/fault tolerant/highly available systems (such as Discord and WhatsApp)
+      - **concurrent/parallelism for free**, since it runs on *awesome* Erlang VM (BEAM). Used for distributed, ault tolerant, highly available systems (such as Discord and WhatsApp)
   - functional paradigm
     - and results in better written / more manageable programs because of it
-    - and my journey into it :)
+    - and is my journey into it :)
   - can also be used to write beautiful programs with it! (merges the beauty of ruby syntax with functional paradigm)
-    - pretty terrible for cli-apps though, as it requires installing the VM to run it (compiled to bytecode), has some start-up time (200ms), and doesn't have a way to natively compile, so best used in situations where the VM is constantly running (servers)
-    
+    - pretty terrible for cli-apps though, as it requires installing the VM to run it (compiled to bytecode), has some start-up time (just 200ms..), and doesn't have a way to natively compile, so **limited to uses where a VM is constantly running (servers)**
+
+
   
-
-**lisp (common lisp sbcl via lem or emacs-lisp via emacs)**
-  - **true zen programming**
-    - god-like macros, "interactive" dev experience including debugging, 'n more!
-  - used wherever one would use C, Go, embedded scripting (game, app), and more!
-  - wish i knew about this earlier ;(
-  - beyond syntax, there's really only a few reasons not to use this for everything:
-    - that other languages have better maintained libraries
-    - looking at a basic cli program, i can see why lisp might not be the way..
-      - https://stevelosh.com/blog/2021/03/small-common-lisp-cli-programs/
-      - maybe roswell..?
-        - https://github.com/roswell/
-          - **cli scripting with lisp..! and windows support!**, maybe similar to babashka
-      - compare that crap to ruby or this nim project that generates the cli portion of the program:
-        - https://github.com/c-blake/cligen
-
-
   
 ## specialized langs:
 don't have much of a choice for these..
@@ -202,8 +216,10 @@ don't have much of a choice for these..
   - the standard browser language
     - can't seem to run from it, though i can keep trying!
       - haxe transpiles to js :)
+  - **by far the worst libraries and least skilled programmers**
   - i'm told it's much much better than it used to be..
   - typescript
+
 
 various custom scripting laguages (wren, gdscript, etc.) and embedded scripting langs (lua, **scheme**, **mruby**) usually on top of C++
   - **mruby has the most beautiful syntax and powerful features**
@@ -220,9 +236,11 @@ various custom scripting laguages (wren, gdscript, etc.) and embedded scripting 
   - games, big apps, embedded devices
   - https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference
     - a good view of desires in a game scripting lang
+          
 
-**powershell (v7+)** > fish > bash/zsh
+**powershell (v7+)** >>> fish > bash/zsh
   - see [cli-shells]
+    - shell language, more like gluing, with the exception of powershell, these languages *suck*, feel old--no, *are* old, full of '$'s and even weird syntax for the most simplest if statement, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but it might just be easier to use Ruby in most cases, even for simple batch scripts, as it's more popular than all of the shell scripting langauges)
   - batch commands, extremely simple scripts
   - x/personal basic shell functions/"modules"/"cmdlets" (powershell > fish)
   - automation, especially for windows
@@ -232,9 +250,6 @@ various custom scripting laguages (wren, gdscript, etc.) and embedded scripting 
       - https://www.quora.com/Why-should-one-use-PowerShell-instead-of-Bash-on-Linux-or-other-scripting-languages-like-Python-or-Ruby-What-are-its-advantages-over-them
         - i agree with all of this.. powershell is really good for it's use, just think of it as a DSL for common shell stuff
         
-TODO: merge with above
-shell languuage, more like gluing, these languages *suck*, feel old--no, *are* old, full of '$'s, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but it might just be easier to use Ruby in most cases, even for simple batch scripts, as it's more popular than all of the shell scripting langauges)
-  
 
   
 
@@ -252,23 +267,7 @@ Ocaml
   - perfect for parsing/compilers (initially used by haxe, rust, etc.), and other problem/solutions that requires heavy pattern-matching, and benefit from warnings for cases not handled, warnings for mutable data too
   - resulting programs are quite pretty thanks to it's functional paradigm side and concise syntax
   - ..i just personally really liked the feeling of it, seeing it in haxe's compiler
-  - shares quite a bit of similarities to both haxe and rust
-  
-haskell
-  - to experience the magic of functional paradigm
-  - native compiler!
-  
-smalltalk
-  - possibly provides the best programming experience
-    - the dream is to be able to make games with it
-    - "Smalltalk, most readable language, you can alter *any* part of it while it's running making the killer dev experience"
-  - **glamorous tool-kit**
-
-
-
-
-
-
+  - shares quite a bit of similarities to both haxe and rust, particularly, in syntax and features (pattern-matching)
 
 
 
@@ -277,7 +276,7 @@ smalltalk
 # notes
 
 ## the lost dream
-although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Thus, its better to just stick to Haxe and/or Ruby for most cases, and Elixir for web.
+although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they would'nt share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Beyond syntax, they aren't very much alike. Crystal is closer to Haxe, relying on macros. Elixir is more functional, with some dynamic magic of Ruby to it, but stuck with a VM. Only Ruby (and mRuby) seems to have it's own unique style of built-in meta-programming and be applied acrross all domains (scripting, web, systems). Thus, it's better to just stick to Haxe 'n Ruby for most cases, and keep Elixir for web, as a special-case.
 
 
 ## what langauge is best for my needs? what do i desire in a language?
@@ -642,25 +641,34 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
     - though, technically a fork of mruby..
   - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Roda (*this one looks amazing...*), Hinami, Middlemen (this looks like a good step up from Jekyll), and more..
     - there are two particular frameworks that compile to machine language: DragonRuby and RubyMotion, for cross-platform game and apps, deploying to just about any device! :o It sounds like haxe's frameworks! Unfortunately, they are closed-source, giving it a more closed-off, isolated feeling, and they cost quite a chunk of money to try...
-      - rubymotion, unfortunately only compiles to linux
+      - rubymotion, unfortunately doesn't compile to windows (but it covers mobile and linux/mac)
         - **turbo native, seems to have taken it's place, porting ruby web apps (including rails!!) to ios/android**
   - **"Matsumoto describes the design of Ruby as being like a simple Lisp language at its core, with an object system like that of Smalltalk, blocks inspired by higher-order functions, and practical utility like that of Perl."**
+    - that's the best description of it, and precisely why i love it
   - aims to be natural, like English;
     - **also_uses_snake_case_convention** :o *finally*, someone gets it! although, maybe-i-like-this-better
-    - uses function-name? for functions that return true/false *neat!*
-  - *very very clean* syntax
+    - uses 'some_function?' for functions that return true/false *neat!*
+  - **makes meta-programing easy**
+    - in other languages, especially static ones, you must build a macro, which takes a bit of time to get used to, often in some other function or even class/file. in ruby, it can be as simple as one method or key-word
+      - the con: in Ruby it's simply too easy to make a mess. You can write bad code in any language, but, in Ruby, you can do it at ten times the productivity. Monkey patching, opening classes, metaprogramming, and even the vileness of eval all have their uses, but they can lure you into some sweaty situations just as rapidly.
+  - **_extremely_ clean syntax**
     - uses the last statement's expression in a function as the return value, thus saving a line; and oh you can easily write one-liner functions with Ruby! :o
     - can omit the '()' in function()
     - no need for 'var'
+  - **terse syntax**
+    - "It's terse without losing readability. Less typing, less time spent with IDEs and boilerplating classes, mucking around with function prototypes, etc. Ruby borrows enough from perl to have some of that "hack it out in a day" flavor without being quite as unreadable and esoteric as perl."
+  - **readable syntax**
+    - there are many ways to express, and one reason is for readability, even at the cost of performance
   - "Blocks are awesome. They're basically just closures, but the inline syntax is really powerful"
   - "This sort of block gives you that "I did something pretty cool in one line" feeling."
+  - **perfect for text-processing, hence it's use systems admin/dev-ops for scripting/automation**
   - seems to have a **_quirky_, more diverse, rad community vibe, similar to Haxe :), but perhaps more accessible and diverse, whereas Haxe attracts just game-makers**
-  - *very* object-oriented, even in the language itself! (maybe C# got that idea from here..), allowing you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
+  - smalltalk-like object implementation allows you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
     - Ruby even lets you add a method to a single specific instance of a class
   - Metaprogramming "so you can dynamically create / change / etc behaviors using anonymous methods, closures, etc." and also writing a DSL
     - https://www.randomhacks.net/2005/12/03/why-ruby-is-an-acceptable-lisp/
       - a great read comparing lisp to ruby
-    - "Ruby makes hard things easy (think meta-programming, functional programming, etc). Bad programmers overuse it all the time (just because you can use the tool, you do not always have to), and other programmers suffer."
+    - **"Ruby makes hard things easy (think meta-programming, functional programming, etc). Bad programmers overuse it all the time (just because you can use the tool, you do not always have to), and other programmers suffer."**
     - "Ruby's "metaprogramming" is something Java, C# and JS don't do well -- dynamically redefining things during runtime. **Everything in Ruby, including literals and operators, can be redefined during runtime, because everything is an object, and every message passed to any object can be redirected, filtered, transformed ad hoc. It's not just classes can be modified. Specific objects can be modified. Well-crafted Ruby code breaks things up into mixins that can be composed together. The closest comparison is one of Ruby's inspiration -- Smalltalk."**
   - Ruby 3 adds TypeProf, "a type analysis tool, which are the “first steps” towards a “future with static type checking, without type declaration, using abstract interpretation”"
   - Ruby 3, is 3x faster (was released just before 2021)
@@ -707,50 +715,26 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
   - GitHub and Shopify might be the biggest companies behind it :D
   - made by one Japanese guy, **for the sake of providing happiness/joy :)**
 
-TODO: rid this portion
-https://www.reddit.com/r/ruby/comments/hp3yar/i_am_tired_of_hearing_that_ruby_is_dead/
 
-https://www.quora.com/What-are-the-main-weaknesses-of-Ruby-as-a-programming-language?share=1
-  - It has many features to process text files and to do system management tasks (as in Perl). It is simple, straight-forward, extensible, and portable
-  - Concurrency, distributed computing and domains which depend on those tools (e.g. machine learning) have become the big story of 21st century computing. Ruby is not in that space, while rivals Python and JavaScript have found a way in.
-  - "It's terse without losing readability. Less typing, less time spent with IDEs and boilerplating classes, mucking around with function prototypes, etc. Ruby borrows enough from perl to have some of that "hack it out in a day" flavor without being quite as unreadable and esoteric as perl."
-  - "The language is beautiful and at times more readable than python. Sadly it lacks a larger community that isn’t focused on web development, which holds it back. As a language it can be used for many things being that it is a general purpose language, and you’ll likely enjoy using it.
 
-    Oh yeah, it is being used more frequently in system administration as well.
-
-    Edit: I forgot to memtion, everything is an object and its form of object orientation is far more elegant than Javascript or Java, which is a big plus imo."
-  - In Java 8:
+TODO: merge with above
+Java 8:
 List<Long> longArray = ImmutableList.of(1L,2L,3L,4L,5L)
 longArray.stream().map(num -> Math.pow(num, 2)).collect(Collectors.toList());
 
-Stream? Why? Couldn’t they have done away with the extra syntax?
-Math.pow? What is this? 1946? Surely exponentiation is common enough to have a simple operator for it.
-.collect? Why not just assume this type of collection by default unless specified otherwise. It did start out as a list, after all. Why stream just to collect?
-Collectors.toList? Okay? Still takes a dozen characters too long, but at least I know that it’s going to be a list instead of the HashMap<Object,Object> that I generally expect after running a simple map on a list.
-
-Now in Ruby:
+Ruby:
 nums = [1,2,3,4,5]
 nums.map{|num| num**2}
 
 
-1) The lack of hyperspecific typing as a general practice limits the 200 character+ lines (usually split, but still) that permeate a lot of java code.
-2) The naming conventions in ruby are generally shorter, leading to shorter lines as well.
-3) 2 space indentation also helps with this.
-
-  - Speed, stability, and footprint are problems today. Maybe not tomorrow.
-
-The real troubles are singular. For fear of borrowing from ideology-driven prose, in Ruby it's simply too easy to make a mess. You can write bad code in any language, but, in Ruby, you can do it at ten times the productivity. Monkey patching, opening classes, metaprogramming, and even the vileness of eval all have their uses, but they can lure you into some sweaty situations just as rapidly.
 
 Just remember: peace, commerce and honest friendship with all classes--entangling alliances with none!
 
-  - Much of the language consists of special cases rather than general features that combine in orthogonal ways. (about python)
   
 https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-and-limited-compared-to-other-languages?share=1
   - I've seen ruby being used for webapp (the most common usage these days), as an automation language (Chef), for high volume data processing tools (FluentD), for desktop apps (ruby + Glade), as a tool to build videogames, for network middleware, as scripting tool (as in system admin kind of a thing).
   - Now, over the last few years ruby in the form of rails, has seen some of its userbase move to other things like node, like go and others (I know people who ditched ruby to go do php). That's mostly because other technologies finally got on par with some of the amazing concepts on ruby/rails. That's also because there is this misconception that states “Ruby is slow” - ruby isn't slow, your code is slow, your solution is slow. Maybe Ruby and the rails community haven't exactly excelled at teaching people to build fast code - they actually have always been focusing on doing the “opposite”, not do fast code but do code fast.
-    - Ruby is a complex language to master and it’s a challenge to write an interpreter for it...In general terms, the simplest a language is to implement the harder it is to write code using that language :)
-    - I certainly dislike the existence of symbols and I feel writing threaded applications should be made simpler in Ruby and the MRI implementation has certainly some limitations regarding parallelism
-    - Regarding productivity it’s mostly about familiarity and personal taste I guess. 
+    - Ruby is a complex language to master and it’s a challenge to write an interpreter for it...**In general terms, the simpler a language is to implement the harder it is to write code using that language :)**
     - Ruby is dead. Long live Ruby...What’s happened to Ruby is that it’s matured. It doesn’t have a bunch of folks jumping up and down saying “do everything in Ruby!” … what it does have is lots of people quietly getting lots of shit done in Ruby … just like a ton of other languages that nobody’s super-excited about anymore.
     - Ruby is anything but simple. Simple would imply a single way of doing something. Ruby gives you five ways of doing everything. I legit think it's one of the most complex languages that's in common use.
 
@@ -758,43 +742,42 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
 
 
 
-Python
-  - perhaps the most popular and most loved scripting language, even as of 2022(!!), in direct competition to ruby
+x/Python
+  - perhaps the most popular scripting language, even as of 2022(!!), in direct competition to ruby
   - frameworks and libraries seems to be more scientific-oriented, with machine learning, ai, math, 'n so on
-  - can't go wrong with using this as a scripting langauge, however, it's rather slow for intense things like games, with only a rather recent C implementation helping it; slower than ruby, and without the rad features and rad community
+    - lame people use it
+  - pretty mundane, can't go wrong with using this as a scripting langauge
+    - and therefore doesn't attract a rad, innovative community as ruby does
+  - "Much of the language consists of special cases rather than general features that combine in orthogonal ways." (as ruby does)
   - the syntax is among the most readable, and it shows by it's popularity and love from first-time programmers
-    - although, it's just a preference... **i def prefer delimiters over whitespace delimiter**, and **i also prefer having my control statements with an ending delimiter**
+    - although, it's just a preference... **i def prefer delimiters over whitespace as delimiter**
       - there's also no real reason to limit to whitespace delimiting, as Haskell proves that it's possible to support both ways
+  - actually more hacky than ruby, and not in a good way, but as product of it's bad development
+    - https://www.quora.com/What-are-the-main-weaknesses-of-Python-as-a-programming-language
+      - __something__
+      - len() is a function as opposed to being a method
+      - string instance methods returning value (“aaa”.capitalize()) (much stranger when compared with the fact that len() is function not method)
+      - getter/setter syntax
+      - "".join
+      - etc.
+      - No helpful IDEs. It's hard to reason about dynamic code before you run it, so it's very hard to write tools to help you reason about it.
+        - indeed very strange how Google omitted this..
+      - "Lack of anonymous multi-line functions, combined with unintuitive scoping, has sent me scurrying to Node.js or Ruby time after time. Python syntax is great for a a pipeline of heavy computation, but becomes unwieldy when weaving together asynchronous calls."
+      - I'd really prefer an easier way to figure out which exceptions a given class or function can raise. The only way I know of doing this now is to hunt through the source code or look in the documentation and hope that it's comprehensive in this regard.
+      - Circular import errors. Imports are statements too, and they can fail if the objects they target have not been created yet. Compare this with languages that support separate compilation (C family and ML family languages), and can link at runtime without having to worry about the order in which things are defined.
   - pypy, an especially fast runtime implmentation putting it at Lua speeds, but not so practical, as many libs many still not work with it
   - Google, although, even they probably rewrote a lot of stuff in Go
     - also in Google fashion, they broke the language-compatibility for the v3 update
     - Google just sucks at long-term vision, design, and maintenance.
 
-TODO: rid this portion
-https://www.quora.com/What-are-the-main-weaknesses-of-Python-as-a-programming-language
-  - The traces of this “hacky” origin seen everywhere. I will list just some: 
-__something__
-self
-whitespace-as-syntax
-len()
-getters vs setters syntax
-“”.join()
-string instance methods returning value (“aaa”.capitalize()) (much stranger when compared with the fact that len() is function not method)
-No static typing, which is in itself great thing, but not on the scale of big projects python now is used for
-… and more
-  - "Lack of anonymous multi-line functions, combined with unintuitive scoping, has sent me scurrying to Node.js or Ruby time after time. Python syntax is great for a a pipeline of heavy computation, but becomes unwieldy when weaving together asynchronous calls."
-  - I'd really prefer an easier way to figure out which exceptions a given class or function can raise. The only way I know of doing this now is to hunt through the source code or look in the documentation and hope that it's comprehensive in this regard.
-  - Circular import errors. Imports are statements too, and they can fail if the objects they target have not been created yet. Compare this with languages that support separate compilation (C family and ML family languages), and can link at runtime without having to worry about the order in which things are defined.
-  - No helpful IDEs. It's hard to reason about dynamic code before you run it, so it's very hard to write tools to help you reason about it.
 
 
-
-
-javascript
-  - an old dynamic front-end rather mundane language that has over time become used for everything, especially after node.js enabled writing web backend code with it
+x/Javascript
+  - an old dynamic language used by browsers that has over time become used for everything, especially after node.js enabled writing web backend code with it
   - through Node.js, Express.js (sinatra-inspired micro-framework), etc. 'middle-ware" frameworks, it can then be used server-side
+    - **neither javascript nor Node.js really have a standard library, hence the development of a charos of terrible libraries**
   - dynamic typing, retarded manual type checking (===, NaN, etc.)
-  - **Google's v8 engine compiles javascript into machine code**, instead of using the normal interpreter method, thus single-handedly causing this entire mess
+  - Google's v8 engine is a JIT marvel, but massive, unweildy
 
 
 
@@ -810,48 +793,46 @@ there's too many in this area
 #### "compiled langs": compiles to a "native binary" executable
 in order to write or even edit these programs, you need the build tools, including the build tools for each and every platform you want to target. That means: MSVC++ for windows, Xcode for mac, Android/iOS SDK for Android/iOS, and so on, especially in the case it simply generates C code, wherein, you'd need the tools to build for C.
 
-go and rust seem to have much better build systems, requiring just one command to build--'go build' or whatever--and produces a single portable binary (no extra .dll files or whatever necessary). But even then, you'd need the right libraries installed, for each and every target.
+go and rust seem to have much better build systems, requiring just one command to build--'go build', 'cargo run', or whatever--and produces a single portable binary (no extra .dll files or whatever necessary).
 
-thus, you'd need a really good case to use these languages over more simpler, convenient, powerful dynamic languages. At first i thought games really needed it, but as all dynamic languages interface with C, i don't think it's so bad anymore. The interpreter is magnitudes slower. JIT isn't allowed in games. But.. i dunno.. **The development experience of a dynamic language, especially for games, is just as important, and even more important than performance to me.** Hot-reloading is the minimum. Lisp-level altering anything and smalltalk-level editing any property are the maximums. Neither seem possible with compiled languages.
+haxe is quite special in that it generates bytecode that be run cross-platform, at least for desktop OSs.
+
+thus, you'd need a really good case to use these languages over more simpler, convenient, powerful dynamic languages. At first i thought games really needed it, but as all dynamic languages interface with C, i don't think it's so bad anymore. The interpreter is magnitudes slower. JIT isn't allowed in games. But.. i dunno.. **The development experience of a dynamic language, especially for games, is just as important, and even more important than performance to me.** Hot-reloading is the minimum. Lisp-level altering anything and smalltalk-level editing any property are the maximums. Neither seem possible with compiled languages. (?? TODO: not true..)
 
 
 **Haxe**
-  - PROBLEM: no parrallism..?
-    - concurrency looks easy: just add wait or yield, then use pecan.co lib macro to debug
-    - also have several concurrency libs for various implementations
-      - https://player03.com/openfl/threads-guide/
-  - **my favorite general-use systems language**: simple 'n clean, *light-feeling*--feels like a scripting language!, **more powerful than C#**, but without all the *heaviness* of it, **feeling more like a cross between actionscript and ocaml: though not nearly as expressive nor beautiful as ruby**, just *siiiick*, garbage collector depends on the target, **low-key best language of all-time**
+  - **my favorite general-use systems language**: simple 'n clean, *light-feeling*--feels like a scripting language!, **more powerful than C# and even nim's macros**, but without all the *heaviness* of it, **feeling more like a cross between actionscript and ocaml: though not nearly as expressive nor beautiful as ruby**, just *siiiick*, garbage collector depends on the target, **low-key best language of all-time**
   - **made for games!**
     - **though, with a garbage collector, instead of worrying about managing memory at a fine level, you worry about the garbage collector, which is a trade-off i'd very easily take..!**
       - https://www.youtube.com/watch?v=pZcKyqLcjzc
         - **a dev of Dune using heaps notes the main problem being memory allocation, not cpu, and sneaking in garbage collection times
         - though, i think, it's worth not worrying most of the time, then just checking allocations via a memory profiler when there is a problem, or once in a while, as opposed to the insane development cycle of rust/c++, where you worry about everything all the time..**
-        - **all of northgard runs on a single cpu thread/core, it's just the gpu that's struggling**
-        - their dune game only recently added threads
-  - frameworks include: NME, Heaps, OpenFL (now feels like it's stuck with too much Flash baggage..), HaxeFlixel, HaxePunk, Heaps, Kha; all of them are basically an i/o base **to create basically *anything*, cross-platform**. In addition, there's HaxeUI and bindings for React and React Native for cross-platform UI, along with bindings for other stuff, like RayLib and Unreal
+  - frameworks include: NME, Heaps, OpenFL (now feels like it's stuck with too much Flash baggage..), HaxeFlixel, HaxePunk, Heaps, Kha; all of them are basically an i/o base **to create basically *anything*, cross-platform**. In addition, there's HaxeUI and bindings for React and React Native for cross-platform UI, and bindings for electron for web-style ui, and bindings for raylib, unreal, and maybe even target unity
     - shiro tech stack
       - https://www.youtube.com/watch?v=gazZSJFGnck
     - hashlink
       - a runtime (JIT/bytecode and AOT/C), debugger, cpu profiler, memory profiler, graphics profiler (nvidia nsight), and bundle of game-related libs:
         - SDL, directx (vulkan was a pain), web-gpu soon, some basic native ui api, common stb-like libs, steam/console stuff, etc.
           - basically what Adobe AIR did, but updated
-      - multi-threading (used by Dune)
       - concurrency (used by all of their games..)
+        - **all of northgard runs on a single cpu thread/core, it's just the gpu that's struggling**
+        - **their dune game only recently added threads**
       - https://haxe.org/blog/hashlink-indepth/
         - A small core easily extensible with additional C libraries
+          - maybe doesn't need the entire std lib..?
         - **No crash - only catchable exceptions with full stack traces**
         - **A strictly-typed register-based bytecode**
         - **Full interoperability with C (respect __cdecl) in both x86 and x86-64**
         - tools to debug byte-code
       - https://haxe.org/blog/hashlink-in-depth-p2/
         - **a custom garbage collector**
-        - **A set of C functions to manipulate Objects, Bytes, Functions, etc.**
-          - full power over C right here..
+        - **A set of C functions to manipulate Objects, Bytes, Functions, etc.
+          - **full power over C!!**
         - "The separation between the VM and the run-time is necessary in order to allow the translation of HL byte-code to C."
-        - "because both HL/JIT and HL/C share the same run-time (same garbage collector, same native functions, etc.), they will run exactly the same without any difference in terms of semantics."
-        - "**HashLink has its own low level types** that are used for registers and function parameters. Haxe types are represented using the following low level types:"
-        - "Memory consumption in HL is identical to C, and might depend on the C compiler you are using:"
-    - macros for games
+        - **"because both HL/JIT and HL/C share the same run-time (same garbage collector, same native functions, etc.), they will run exactly the same without any difference in terms of semantics."**
+        - "**HashLink has its own low level types** that are used for registers and function parameters. Haxe types are represented using the following low level types: ..."
+        - **"Memory consumption in HL is identical to C, and might depend on the C compiler you are using:"**
+    - **macros for games**
       - https://www.youtube.com/watch?v=pZcKyqLcjzc
       - https://www.youtube.com/watch?v=pZcKyqLcjzc
         - **AoS->SoA build macro**: convert a class (struct) with data (intended to be used in a container) into class (struct) of arrays, with simple access syntax via a build macro
@@ -863,19 +844,24 @@ thus, you'd need a really good case to use these languages over more simpler, co
     - https://www.youtube.com/watch?v=gazZSJFGnck
       - **"shiro game tech stack"**
         - **hscript, hide (domkit-based retained gui), castledb (game database), hxbit (serialization), MPman (network stuff, cross-platform, including consoles, the only part that's closed-source)**
-  - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but it's not nearly as exhaustive as C#, making it more tolerable for a mortal, and a little less flexible, which can actually be good, as you can focus more on writing as opposed to thinking which C# feature to use here, and making code easier to read too (try reading the code of a pro C# user!)
-    - also has **macros** that are much more powerful than anything C# has
+  - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but far more succint and simple, without bloat, to the point
+    - also has **macros** powerful than C#'s code generator and nim's macro system, both of which came much much later
       - https://github.com/SomeRanDev/Haxe-MagicArrayTools
         - **optimizes data transformation function chaining**
     - also like Ruby, it feels very *Linux-y*, where **everything is a simple text file**, including the build file (this is a major difference in feeling to C#, as it can feel like you must edit stuff in VS's gui, or even Unity's gui. In Haxe, **everything can be done by simple text editing**, no gui software necessary)
   - maybe the first major language with **cross-platform** in mind? (2005 vs 2011 Dart)
+    - has **a standard cross-platform library** that all newer languages try to copy
   - has all of the features of ruby (container filters, anonymous functions, etc.) plus more, but comes with a *much much* faster compiler, making Ruby feel rather obsolete, and just surviving off of it's libraries and community
+    - **recently added module-level vars and functions, getting rid of the need of a main class to run it, making it feel more like a scripting langauge**
   - **_incredible_ compilation options: compile to nearly any other language (including C and C++, to use C and C++ libraries, or to build in C for iOS/consoles/embedded devices, and javascript, to be run in a browser or to use pop javascript libraries or to compile to Node.js, and to bytecode which is then run by a VM (HashLink), itself with two options: HL/JIT and HL/C**, one for faster compilation speed and one for optimized run-time speed *whoa...*
     - NOTE: HL/C isn't readable C, it's bytecode turned into C :/
       - some drama on why they didn't maintain the existing C/C++ transpilers..
     - also traspiles to php, java, C#, etc.
+  - PROBLEM: no parrallism..?
+    - **concurrency looks easy: just add wait or yield, then use pecan.co lib macro to debug**
+    - also have several concurrency libs for various implementations
+      - https://player03.com/openfl/threads-guide/
   - auto-generate bindings for libs in many languages
-  - has **a standard cross-platform library** that all newer languages try to copy
   - don't feel overwhelmed by decades of C/C++ libraries to piece together, nor have to think about pointers/references/smart-pointers and header files
   - don't feel like one has to conform to the ways of Microsoft and the .NET framework: you can write your code in any way you want to, and use any tools you want to too! :)
   - small community feeling, will run into the makers on the forums, discord, or github (including the maker of Haxe/Heaps himself!!), can make a big difference :) but **the con of this is that there's simply not enough community power, so resources are scarce, web-site (including tutorial, book) and package manager are rather out-dated, etc.**
