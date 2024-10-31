@@ -46,9 +46,13 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
 
 # conclusion:
 
-zed. that is all.
+zed.
 
+doom.
 
+that is all.
+
+maybe can try helix agian when releases scheme scripting and gui, but i see no reason with doom soooooo far ahead
 
 
 
@@ -74,7 +78,7 @@ x/2. sublime text
   
   
 stupid editors with more features (vs-code-like):
-1. **zed**
+0. **zed**
   - I FOUND IT!! I FINALLY FOUND IT!!!
   - just works
     - opened a ruby file, asked to install, and boom! lsp installed.
@@ -87,22 +91,27 @@ x. vs-code
   - everything *just works* with "batteries-included": file manager, git manager, terminal window, debugging window, beautiful themes (aura!), zen-mode, etc.
   - has multiple key-bindings extensions including one for helix and kakoune
   - **eats up cpu, memory, laptop battery, etc.**
+  - hackable, but a pain to write extensions
   
   
-complete IDE:
+complete IDEs:
   - vs-studio
   - jetbrains IDEs
   
   
 hackable editors:
-1. emacs (doom)
-  - potential is unlimited, written in lisp, one tool-set to rule them all, but it just sounds like the wrong rabbit hole to go into in 2024
+0. **emacs (doom)**
+  - OMG. FUCK TERMINALS. THIS IS ALL YOU'D EVER NEED!!
+    - replaces: text-editor, shell, file-manager, git app, knowledge-base, etc.
+    - doom in particular makes vi-mode seamless across all these packages
+  - **great discoverability makes it very quick to understand and extend**
+  - potential is unlimited, written in lisp, **one tool-set to rule them all**
     - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
-    - TODO: still should try it some more, also will get the chance to try lisp (via elisp) and have the best lisp dev environments too (common lisp, clojure)
-      - TODO: try portacle config for common lisp
-2. helix (vi)
+x. nvim
+  - painful config, terrible lsp plugins, zero discoverability, no design nuances
+2. helix
   - NOTE: once the gui and scheme scripting is out, i think it'll become my favorite.. i just find the terminal to be a clunky interface, and really miss using mouse/touch
-  - a contemporary vi implementation in rust, with kakoune workflow
+  - a contemporary vi implementation in rust, with kakoune workflow, and with **sane defaults**
   - works in terminal (and thus great for remote terminal use)
     - but because of this, doesn't feel as good as gui editors... terminals are just a pain
   - a good step towards emacs
@@ -376,17 +385,26 @@ though both originally were cli/terminal apps, now emacs is a gui, and even neov
 
   https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
 
-(neo)vim
+
+neovim (nvim)
+  - NOTE: i must have tried this soon after lua support was added, and people were still migrating, as were plugins
+  - "With the 0.5 release of Neovim on 2 July 2021, it gained built-in support for the LSP, Tree-sitter, and more complete Lua support – including the support for configuration scripts written in Lua instead of VimL."
+    - really slow to catch up to the times
+    - as of 2024, 40% is still written in vimscript
+  - terrible experience setting up lsp, as there were 3-4 various plugins, all of them require config, all worked half-assed, with CoC having the best results and being general. best to just use the built-in lsp with lua, but, meh. even that required config
+
+
+vim
   - vim
     - modal (normal, insert, visual/select, command)
     - *heavily* key-board input user interface
       - i personally feel more comfy using a touch-screen/mouse/keyboard combo
       - it's legacy is based on it's key-mappings: modes, motions, actions, etc.
-  - lua scripting for configs 'n plugins!
-    - used to be in an archaic language: vimscript, which killed it
+    written in C and vim script
+    - and vimscript is terrible
   - horrendous amount of time wasted starting out from scratch, reminiscent of the terrible linux config experience, but worsened by archaic language and the unprofessional open-source community it attracts
     - best to try various starter configs with sane defaults
-  - a very very bad learning curve, especially from vanilla neovim. bad for learning the key-bindings. bad for setting up for development. bad for finding good souces to do everything. just plain bad.
+  - a very very bad learning curve, especially from vanilla neovim. bad for learning the key-bindings. bad for setting up for development. bad for finding good sources to do everything. just plain bad.
 
 
 
