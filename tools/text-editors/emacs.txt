@@ -41,6 +41,9 @@ get the native binaries:
 https://www.emacswiki.org/emacs/GccEmacs
   - scoop bucket add kiennq-scoop https://github.com/kiennq/scoop-misc
   - scoop install emacs-k
+    - TODO: not sure if this is native compiled..
+    - installs to WindowsApp folder using a .msi file instead of the scoop folder
+      - would need to setup path env var for it
 
 set $env:home = "$home" in powershell profile
 append $home/.emacs.d/bin to path
@@ -52,6 +55,16 @@ doom sync
 doom doctor
   - check for problems
 doom run
+
+NOTE: at the moment, must use bash to run it:
+."C:\program files\Git\bin\sh.exe
+  - run git bash
+    - i think exists under msys2 (installed via scoop) too
+doom run
+
+
+..YAY! :D
+
 
 
 
