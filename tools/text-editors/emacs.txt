@@ -62,6 +62,8 @@ NOTE: at the moment, must use bash to run it:
     - i think exists under msys2 (installed via scoop) too
 doom run
 
+add a shortcut
+  - "C:\program files\git\bin\sh.exe" -c "/c/Users/ra/.emacs.d/bin/doom run"
 
 ..YAY! :D
 
