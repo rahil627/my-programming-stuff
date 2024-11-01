@@ -69,6 +69,9 @@ add a shortcut
 
 
 
+https://gist.github.com/rahil627/e9d150adc8dcc36846f5f6d0a4465665
+  - my gist on installing doom for chromeos, including building emacs 29
+
 
 notes:
 
