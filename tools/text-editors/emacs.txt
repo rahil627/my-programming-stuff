@@ -7,11 +7,63 @@ discourse
 zaiste video series
 
 
-beginner bundles:
-https://github.com/emacs-tw/awesome-emacs#starter-kit
-
 configs of great programmers:
 https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
+
+
+# main notes
+
+
+## bindings (default)
+  - NOTE: it's still vi, so still need to re-map caps lock to escape
+  - NOTE: f1-key is tough on a chromebook keyboard, but quite useful!
+m-x contains every function available (~7500 with default doom install)
+  - usually [module]-[function]
+
+m-x !== :
+  - i think the way they fuzzy find is different..
+
+
+
+
+NOTE: space key chords are very similar to helix
+  - TODO: should make helix config match doom
+
+spc-spc
+  - find in project/workspace?
+    - i think based on git
+
+spc-/
+  - grep in project/workspace?
+
+spc-f-f
+spc-.
+  - open file finder via dired
+
+
+spc-b
+  - buffers
+  - k
+    - kill
+  - s
+    - save
+  - n/p
+
+
+
+
+
+
+
+
+
+
+
+
+# pre-configs
+
+beginner bundles:
+https://github.com/emacs-tw/awesome-emacs#starter-kit
 
 
 **DOOM**
@@ -29,21 +81,12 @@ x/spacemacs
     - sounds like 'oh my zsh', which is *not* good
 
 
-doom install:
+# doom install
 follow the directions on the github
 fish_add_path ~/.config/emacs/bin
 
 windows:
 scoop install emacs
-
-get the native binaries:
-(not sure if i need: scoop install emacs)
-https://www.emacswiki.org/emacs/GccEmacs
-  - scoop bucket add kiennq-scoop https://github.com/kiennq/scoop-misc
-  - scoop install emacs-k
-    - TODO: not sure if this is native compiled..
-    - installs to WindowsApp folder using a .msi file instead of the scoop folder
-      - would need to setup path env var for it
 
 set $env:home = "$home" in powershell profile
 append $home/.emacs.d/bin to path
@@ -52,6 +95,9 @@ make folder in $home/.emacs.d
 copy a clone of the doom repo there
 
 doom sync
+  - doom sync --aot
+    - compiles natively
+      - TODO: test if worth or not... maybe not worth it if updating frequently..
 doom doctor
   - check for problems
 doom run
