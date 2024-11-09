@@ -144,6 +144,12 @@ terminal
     - powershell -> advanced -> text antialiasing
     - without anti-aliasing it look clearer, but fonts with curves struggle
 
+## shitty chromebook
+  - using default terminal app
+    - ubuntu mono 14
+      - this one seems to work really well, similar to monofoki (especially the m character), whereas many others suffer from various problems, from being unreadable because the screen sucks, or just squashing line height upon font size, or just plain too wide.
+  - by default comes with many popular programming fonts
+    - note: it come with some open-source/free versions of fonts that may not look so great: inconsolata (consolas)
 
 chrome (browser/OS?) defaults (for reference):
 font size: 18
