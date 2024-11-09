@@ -22,6 +22,9 @@ enable trash!!
 change font
   - from terrible Tinos to something else!
   - in chrome browser -> settings -> search for appearance
+    - sudo apt install fonts-crosextra-carlito/stable
+    - sudo apt install fonts-crosextra-caladea/stable
+      - fonts similar to microsoft's calibri
 
 change terminal appearance
   - terminal -> terminal settings (in the ui)
