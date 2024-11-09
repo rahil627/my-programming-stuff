@@ -129,6 +129,17 @@ x. nvim
   - also can be completely altered as it is written in common lisp, making it the most malleable text editor
 
 
+key-bindings:
+meow > my custom helix bindings > helix > nvim > emacs
+  - text editing only
+
+meow !== doom's evil bindings > helix > emacs > nvim
+  - general leader-key-bindings for functions
+  - meow provides a minimal start, made to provide space for personal customization, including doom's sane default emacs bindings under spc-x/c-x (via doom-meow)
+    - this way, you can learn the way of emacs, and have the space to create your own set of key-mappings
+  - doom's evil-bindings provides a complete package, of everything you'd ever need, creating many maps and key-bindings on the space-leader-key
+    - it also provides bindings for completion via the mini-buffer (c-j/k to move down/up)
+    - i think it also provides alt-bindings for things like dired, etc. though not sure yet.. which is where it would really differ from meow..
 
 
 # gui editors:
