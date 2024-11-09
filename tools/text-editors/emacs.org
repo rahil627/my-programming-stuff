@@ -44,6 +44,9 @@ set-up git
     - TEMP: installed github desktop, so i just don't have to worry about version control
       - can slowly transition to magit
 
+backup doom config files
+  - create a shell script (or elisp function??) to do this
+
 load org repo on start
   - merge my-programming-stuff into main notes?
 
@@ -173,8 +176,14 @@ m-x / spc-m-x (meow/god)
     - there's sometimes a different number of functions...
     - i think the way they fuzzy find is different..
 
+c-x
+  - original emacs bindings
+  - it has a few funky bindings... i guess that's why doom had to create some sane defaults for it
+  - i guess here for consistency, as it will be used by many tutorials and docs..
+
 c-x, c-? / spc-x
-  - default emacs bindings go here, many similar to doom's space leader key:
+  - NOTE: meow (spc-x) uses k for kmacro instead of kill buffer, use K
+  - doom's "sane" emacs bindings, many similar to doom's space leader key:
    - dired-jump (j)
    - find file
    - buffer
@@ -205,11 +214,12 @@ c-c, l / spc-l (meow)
   - another set of mode bindings..??
 
 spc (meow) / m-spc in insert mode (moew)
+  - (these are nearly the complete initial bindings, they actually all fit in the mini-buffer)
   - NOTE: replaces c-c, ? / spc (doom)
     - NOTE: doom's c-c, ? has a lot more functions. if you're looking for something, it could be found here
   - x
-    - c-x, ?
-    - emacs default leader-key bindings, mode independent
+    - c-x, c-?
+    - doom's sane emacs leader-key bindings, mode independent
   - c
     - c-c, c-?
     - mode-dependent bindings
@@ -220,9 +230,13 @@ spc (meow) / m-spc in insert mode (moew)
     - k
       - lookup/docs
   - buffers
-    - TODO: missing... is it expected to use the default emacs key chords? c-x, b/B, k/K, etc.
+    - TODO: missing... is it expected to use the default emacs key chords? spc-x, b/B, k/K, etc.
+    - i mean, maybe there aren't enough bindings related to buffers forit to have it's own key-map
   - file
+  - insert
+    - seems pretty useless..
   - search
+  - project
   - toggle
   - workspace
   - version control
