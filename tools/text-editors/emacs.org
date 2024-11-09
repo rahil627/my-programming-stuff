@@ -1,0 +1,468 @@
+
+* sources
+tips, tutorials, help:
+https://github.com/emacs-tw/awesome-emacs#tutorials
+discord
+discourse
+zaiste video series
+
+
+configs of great programmers:
+https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
+
+
+
+
+
+* org-mode
+NOTE: this file serves as a test of org-mode
+
+interesting auto-indent..
+
+i like * over # for headings..
+
+org-goto
+  - great way to navigate.. code files def need this mode!!
+
+shift-tab
+  - toggle: overview, with sub-headings, all content
+
+m-left/right
+  - promote/demote heading
+
+org-insert-link
+  - file links actually open the file or directory (via dired)!!
+    -  this is quite incredible... just have to make sure the files are under the same repo..
+
+
+
+* TODO config
+set-up git
+  - i think `gh auth setup-git` doesn't work with magit.. though, there is a gh cli package: consult-gh
+    - TODO: setup git
+  - sync repo
+    - TEMP: installed github desktop, so i just don't have to worry about version control
+      - can slowly transition to magit
+
+load org repo on start
+  - merge my-programming-stuff into main notes?
+
+fix emacs gui for chromebook
+  - wayland display error :/
+
+compare 'n combine meow/default and doom key-chords
+
+
+* config
+
+see config files for notes on config
+  - self-document!
+
+NOTE: first set up the right font and font size, it makes a big big difference!!
+  - can see a lot more in the mini-buffer!!
+  - set font in terminal app settings or in doom's config.el
+
+magit
+  - is really good, def the emacs and git ways.. but i def prefer github desktop..!
+
+
+
+
+* bindings
+
+learn x in y minutes / emacs
+  - TODO: how to paste from terminal?
+
+
+emacs shares movement commands with bash
+  - ugh... no wonder why it's so terrible!! :'(
+
+[movement-command],[number]
+  - repeat movement
+
+tab/s-tab
+  - fold!!, maybe my favorite feature, missing in helix??
+
+[[cmd:recenter-top-bottom][c-l]]
+  - center, top, bottom
+    - super useful, never used this feature in another editor..
+
+c-s/c-r
+  - isearch
+    - TODO: redundant, could use shift instead
+
+
+
+
+
+
+some notes:
+ - NOTE: it's still vi, so still need to re-map caps lock to escape
+ - NOTE: f1-key is tough on a chromebook keyboard, but quite useful!
+
+help:
+press the initial key-chord, then, in the popup mini-buffer, press c-h to fuzzy search it
+  - TODO: why is that not the default..?
+
+
+
+*** meow bindings
+
+TODO: finish [[fn:meow-tutor][meow-tutor]]
+
+spc-?
+  - show cheat-sheet
+    - w/e/b & W/E/B are much improved!
+    - o seems like helix's extend_to_parent_node, but strangely seeks out brackets first
+    - [ begin [thing]
+    - ] end [thing]
+    - , inner [thing]
+    - . outer [thing]
+    - v visit
+      - TODO: hmmm, a sort of search buffer??
+    - m merge?
+      - seems to select the space between this line and the end of the last line, where after pressing s/kill would merge the two lines
+      - also places the cursor at the first-non-whitespace in the line, unlike x
+        - m, a
+        - m, i
+    - x
+      - x, a
+      - x, i
+    - ' repeat working is a blessing!! (it wasn't working in helix..)
+    - ; reverse cursor position on selection from kakoune
+    - TODO: N reverse-search missing?
+
+spc-/
+  - meow-keypad-describe-key
+
+basic navigation is redundant:
+  - TODO: change it? or leave it, as that's the default emacs way..?
+  - c-f/c-b and c-n/c-p == hjkl
+  - m-f/m-b == w/b
+  - c-a/c-e == x,i/x,a
+
+s
+  - pro-tip: pressing s when nothing is selected kills to end of line!!: genius!
+
+]/[-l
+  - use this for select to end/beginning of line
+
+after selecting something (with anything: x, w, W, [p, ].), can press any number to select that number of things
+
+
+** key chords:
+
+i'm guesing c-[key], c-[key] chords were chosen over c-[key], [key] as they would cause less mistakes..? yet, both are used..??
+
+TODO: play with all the main spc bindings
+
+  - spc-b-x / spc-x
+    - make a scratch-buffer in a split-horizontal-window
+
+
+*** leader keys
+
+NOTE: read [[file:/home/ra/.doom.d/modules/editor/meow/config.el][meow config]]
+
+m-x / spc-m-x (meow/god)
+  - contains every function available (~7500 with default doom install, ~6750 with meow instead of evil key-bindings)
+  - usually [module]-[function]
+
+:[command] (evil)
+  - m-x !== :
+    - there's sometimes a different number of functions...
+    - i think the way they fuzzy find is different..
+
+c-x, c-? / spc-x
+  - default emacs bindings go here, many similar to doom's space leader key:
+   - dired-jump (j)
+   - find file
+   - buffer
+   - close
+   - save
+   - indent (interactively!!)
+  - however, many are not so often used:
+    - lowercase (downcase)
+    - upcase
+
+c-c, ? / spc (doom)
+  - see [[file:/home/ra/.emacs.d/modules/config/default/+emacs-bindings.el][emacs-bindings.el]]
+   - "sensible default key bindings for non-evil users"
+  - seems most similar to doom's space key
+    - file
+    - notes
+    - project
+    - toggle
+  - also includes many minor-mode bindings on non-letter keys (as that's all that's left, unbinded)
+
+c-c, c-?, spc-c (in meow)
+  - shows common bindings depending on the mode
+  - this is a great way to quickly and intuitively learn the main functions/bindings of a major mode
+    - TODO: how to scroll through the c-x list..?
+
+c-c, l / spc-l (meow)
+  - localleader
+  - another set of mode bindings..??
+
+spc (meow) / m-spc in insert mode (moew)
+  - NOTE: replaces c-c, ? / spc (doom)
+    - NOTE: doom's c-c, ? has a lot more functions. if you're looking for something, it could be found here
+  - x
+    - c-x, ?
+    - emacs default leader-key bindings, mode independent
+  - c
+    - c-c, c-?
+    - mode-dependent bindings
+  - l
+    - c-c, l
+    - mode-dependent bindings
+  - kode
+    - k
+      - lookup/docs
+  - buffers
+    - TODO: missing... is it expected to use the default emacs key chords? c-x, b/B, k/K, etc.
+  - file
+  - search
+  - toggle
+  - workspace
+  - version control
+
+TODO: import leader key bindings from helix
+TODO: import doom leader key bindings
+  - it seems very close to c-c, ?, but not quite, as it's missing buffers, search (in file), search (in cwd), etc.
+    - though, the search commands are neater beneath spc-s..
+  - see [[file:/home/ra/.emacs.d/modules/config/default/][doom bindings]], evil-bindings.el seems to have everything... hmmmm, can that be stuffed under spc-d?
+
+initially can keep them seperate, in seperate keys (spc-[key]), likely under spc-d, spc-j, and keep spc-j as my own custom menu
+
+
+
+**** meow leader keys:
+  - uses a different set of bindings in doom
+    - but looks like the default bindings...??:
+      - (default +bindings +smartparens)) ; NOTE: needed for meow
+      - at the end of init file
+    - doom's space key-chords are far more intutive, but whereas meow's are sparse, perhaps closer to vanilla, in need of customization..?
+    - provides an alt set of mneumonic keys over modifier keys:
+      - maybe the same as god-mode..??
+      - spc-x == c-x, x-?
+      - spc-m = m-?
+        - a good way to see meta bindings
+      - spc-m-x == m-x
+      - spc-x-c == c-x, c-c
+        - NOTE: the second letter is automatically c-
+          - TODO: how to use use a normal letter..??
+
+    - some shortcuts on spc key:
+      - spc-g == c-m
+      - spc-l == c-c, l
+      - spc-k == code-related commands
+
+
+  - m-?
+    - left/right/up/down
+      - indent/un-indent
+      - word/paragraph navigation in insert mode
+    - backspace
+      - delete back one word
+
+  - c-m-?
+    - left/right
+      - move back/forward one word
+        - TODO: in any mode..?
+    - down
+      - scroll-left
+        - TODO: not recommended by doom
+
+  - meow (default?) key chords
+    - i think uses doom's "sane" defaults for emacs..
+    - spc
+      - / describe-key
+      - ? cheat-sheet
+      - file
+      - workspace
+      - version control
+      - toggle
+      - search
+        - lookup seems really important
+      - o for terminal/debugger?
+      - notes (org)
+
+
+
+*** some useful key chord bindings
+
+
+TODO: bind vundo!!
+
+
+spc-spc
+  - find in project/workspace?
+    - i think based on git
+
+spc-s
+  - search (grep)
+  - s  / (evil)
+    - buffer
+  - . / spc-/ (evil)
+   - project/workspace
+  - d
+   - cwd
+
+c-x/spc-f-
+  - f
+    - pro-tip: creates a file if it doesn't exist!
+  - F
+  - r
+  - . (evil?)
+    - open file finder via dired
+
+c-x/spc-x/spc-b
+  - TODO: rebind this vs create my own via spc-[my-key]
+   - spc-j is a good start
+  - buffers
+  - b/B/spc-b-i
+  - *interactive buffer*
+    - exactly what i wanted when using helix!!
+    - looks similar to dired
+    - should think about how this differs from tabs..
+      - buffers and windows are seperate, so tabs are just windows
+  - k/K
+    - kill
+  - s
+    - save
+  - left/right
+    - next/previous
+
+spc-</>
+  - switch buffer
+  - strange binding..
+    - i don't like holding shift on a second key.. but it is closer than the arrow keys..
+
+c-x, </> scroll left/right instead
+
+
+
+
+
+
+
+* pre-configs
+
+https://github.com/emacs-tw/awesome-emacs#starter-kit
+
+
+**DOOM**
+  - i had a great initial experience using this, felt wayyyy easier and way more intuitive than using neovim!
+    - helix seems to have taken much of it's space-key-chord shortcuts from doom, making it an easy jump
+  - "tailored for Emacs bankruptcy veterans who want less framework in their frameworks, a modicum of stability (and reproducibility) from their package manager, and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite operating system."
+  - "fast, closer to metal, opinionated, no forced plug-ins, nix/guix"
+  - 150 modules!
+  - "If you want something closer to what you know, and less involved to customize (less barebones basically), doom is what you want."
+  - "I have tried them both and vanilla as well. I like doom the best - it has better shortcuts out the box, less buggy, uses traditional elisp for configuration as opposed to spacemacs which uses a proprietary thing you have to learn."
+  - recommended by that one emacs guy from noisebridge
+
+x/spacemacs
+  - "a community-drive emacs distro"
+    - sounds like 'oh my zsh', which is *not* good
+
+prelude
+  - way more stripped down, much closer to vanilla emacs
+  - Prelude is basically a very light starter kit, whereas doom is a whole garage full of tools. (This does not mean doom has more utility, it just comes with more going on out of the box)
+  - recommended by that one emacs guy from noisebridge
+
+
+
+
+
+* doom
+** install (doom)
+follow the directions on the github
+fish_add_path ~/.config/emacs/bin
+
+windows:
+scoop install emacs
+
+set $env:home = "$home" in powershell profile
+append $home/.emacs.d/bin to path
+
+make folder in $home/.emacs.d
+copy a clone of the doom repo there
+
+doom sync
+  - doom sync --aot
+    - compiles natively
+      - TODO: test if worth or not... maybe not worth it if updating frequently..
+doom doctor
+  - check for problems
+doom run
+
+NOTE: at the moment, must use bash to run it:
+."C:\program files\Git\bin\sh.exe
+  - run git bash
+    - i think exists under msys2 (installed via scoop) too
+doom run
+
+add a shortcut
+  - "C:\program files\git\bin\sh.exe" -c "/c/Users/ra/.emacs.d/bin/doom run"
+
+..YAY! :D
+
+
+
+https://gist.github.com/rahil627/e9d150adc8dcc36846f5f6d0a4465665
+  - my gist on installing doom for chromeos, including building emacs 29
+
+
+** notes on how to maintain doom (+ post-install notes)
+
+from github repo page:
+doom sync
+  - to synchronize your private config with Doom by installing missing packages, removing orphaned packages, and regenerating caches. Run this whenever you modify your private init.el or packages.el, or install/remove an Emacs package through your OS package manager (e.g. mu4e or agda).
+doom upgrade
+  - to update Doom to the latest release & all installed packages.
+doom doctor
+  - to diagnose common issues with your system and config.
+doom env
+  - to dump a snapshot of your shell environment to a file that Doom will load at startup. This allows Emacs to inherit your PATH, among other things.
+doom build to recompile all installed packages (use this if you up/downgrade Emacs).
+
+
+
+post-install notes: (from the doom install cli script)
+But before you doom yourself, here are some things you should know:
+
+1. Don't forget to run 'doom sync', then restart Emacs, after modifying
+   ~/.doom.d/init.el or ~/.doom.d/packages.el.
+
+   This command ensures needed packages are installed, orphaned packages are
+   removed, and your autoloads/cache files are up to date. When in doubt, run
+   'doom sync'!
+
+2. If something goes wrong, run `doom doctor`. It diagnoses common issues with
+   your environment and setup, and may offer clues about what is wrong.
+
+3. Use 'doom upgrade' to update Doom. Doing it any other way will require
+   additional steps. Run 'doom help upgrade' to understand those extra steps.
+
+4. Access Doom's documentation from within Emacs via 'SPC h d h' or 'C-h d h'
+   (or 'M-x doom/help')
+
+Have fun!
+
+** install icons
+run nerd-icons-install-fonts function within emacs
+  - TODO: not working..
+
+** install meow key-bindings for doom
+doom-meow
+https://github.com/meow-edit/doom-meow
+mkdir -p ~/.doom.d/modules/editor && git clone https://github.com/meow-edit/doom-meow ~/.doom.d/modules/editor/meow
+
+Enable this module in your doom! block. (add (meow +your-desired-flags...) after the :editor section in init.el)
+
+After you doom sync and restart Emacs, Meow will start in Normal state, so make sure that bindings have been set up; see Module flags.
+
+The leader and localleader bindings are defined in <a href=”doom-module::config default +bindings”>doom-module::config default +bindings, so that module is required for them to work.
+
+This module will not work smoothly with doom-module::editor evil, doom-module::editor god, or doom-module::editor objed. You must disable those modules in your doom! block to use this one.
