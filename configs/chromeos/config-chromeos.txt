@@ -10,8 +10,7 @@ move taskbar to the side (to free up vertical screen space)
 install linux (called "crostini" by the internets)
   - i used the defualt 10gb
   - then can go to Files app and share folders with linux
-
-  only update debian through chromeOS, not through linux!
+  - WARN: only update debian through chromeOS, not through linux!
     - https://www.reddit.com/r/Crostini/comments/14g1o2s/debian_12/
       - Historically Google has waited until after Debian's first point update has been released to update Crostini, at which point users are given the opportunity via the UI to upgrade existing containers. Also, at this point, new containers are built using the new stable version (i.e. bookworm). For non-technical people this is the safest way to go - just wait the couple of months or so and you'll be prompted.
 
@@ -29,6 +28,7 @@ change font
 change terminal appearance
   - terminal -> terminal settings (in the ui)
   - chrome-untrusted://terminal/html/nassh_preferences_editor.html
+    - wow, all of the settings are hidden here..! google is terrible at design
 
 increase dpi on vs code
   - https://www.reddit.com/r/Crostini/comments/cesxr0/vscode_ui_and_fonts_too_small_heres_how_to_fix_it/
