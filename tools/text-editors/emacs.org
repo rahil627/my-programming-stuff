@@ -19,7 +19,7 @@ NOTE: this file serves as a test of org-mode
 
 interesting auto-indent..
 
-i like * over # for headings..
+i like * over # for headings.. though it could've been any symbol for easy parsing..
 
 org-goto
   - great way to navigate.. code files def need this mode!!
@@ -52,6 +52,13 @@ load org repo on start
 
 fix emacs gui for chromebook
   - wayland display error :/
+
+try to add doom's evil key-bindings for many other places:
+  - completion in mini-buffer
+  - dired
+    - truly garbage key-bindings: ^ for up directory?? vs h/l for up/down directory
+  - org?
+  - etc.
 
 compare 'n combine meow/default and doom key-chords
 
@@ -119,8 +126,10 @@ spc-?
     - o seems like helix's extend_to_parent_node, but strangely seeks out brackets first
     - [ begin [thing]
     - ] end [thing]
+      - use this for select to end/beginning of line: [,l and ],l; removes the need for creating key-bindings for this in helix. though quite important keys, it makes sense to put them here
     - , inner [thing]
     - . outer [thing]
+      - replaces m (match) key-map of helix, which felt confusing 'n convoluted anyway.. having to press mim or mi(. using letters is much better
     - v visit
       - TODO: hmmm, a sort of search buffer??
     - m merge?
@@ -146,9 +155,6 @@ basic navigation is redundant:
 
 s
   - pro-tip: pressing s when nothing is selected kills to end of line!!: genius!
-
-]/[-l
-  - use this for select to end/beginning of line
 
 after selecting something (with anything: x, w, W, [p, ].), can press any number to select that number of things
 
