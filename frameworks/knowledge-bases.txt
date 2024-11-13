@@ -1,9 +1,16 @@
 
 https://news.ycombinator.com/item?id=32248543
 
-other tools:
+other related tools:
+**working-copy**
+  - TODO: worth trying!
+  - primarily a git app for mobile devices, but seems to have support for editing 'n previewing many languages, including markup languages like org
+    - seems like _the_ mobile git app
+  - **an interesting alternative to using dropbox with dropbox app (git repo with working-copy)**
+    - though, def more painful than dropbox.. but less likely to lose data..?
+  - free!
+
 **jekyll**
-  - note: not a knowledge-base
   - a static-site generator written in ruby and used by github pages
     - i use this for my personal sites (plural!), especially for my blog/philosophical writings
     - tons of plugins
@@ -13,55 +20,96 @@ other tools:
     - but also have the option to simply upload an html file (which every knowledge-base app should be able to generate!)
   + folder 'n file structure
 
+**pandoc**
+  - "universal" markup translator: can import/export to any markup language
+  - basically supports all common markup languages
+
 bear
   - more of a markdown editor turned note-taking app
   - great markup/preview, especially for mobile OSs
-  
-  
+
+
+
+
+conclusion:
+use my own custom markup for simple notes
+  - can enjoy thinking about and create my own markup language (since i def don't want to make a programming language..!)
+  - can also enjoy making a simple parser for it (in whatever programming language i want!)
+once the note should have a relationship to another note or otherwise do something more, export to org file, and use org/org-mode-style links
+can use both emacs and logseq (and working copy!) on mobile devices
+can continue to use emacs for all things text related, and have the power of emacs, and my own customizations, and build my own customizations for personal writing/expression within it
+
 
 formats:
-
 **plain text files**
   - **my own personal notes' format**
-  - **TODO: can write a simple markup parser to preview it**
-    - then export to html
-  - **easy to sift through with cli**
+   - easy to sift through with cli
+   - with the exception of bold 'n italics, has no markup
+     - TODO: need to standardize 'n re-format' bold 'n italics across all files
+   - **can easily migrate to any other markup format**, once things get more complex
+   - TODO: write a simple formatter/exporter to org
 
-**org-mode (emacs)**
-  - **TODO: worth trying**
-  - people prefer the .org markup
-  - **org-babel**
-    - ...this is incredible..!?
-  - file-export
-  - deep emacs integration
-    - and another reason to use lisp :)
-  - no mobile app, would just have to run emacs on it
-    - **can use a terminal app (termux, termius) and install emacs**
-  - old
-  
+**org**
+  - primarily used in emacs via org-mode
+  - not as ubitiqous as markdown, so not all apps would support it
+    - also, **it's particularly difficult to parse**
+
+asciidoc
+  - markdown with more features, a single standard version, slightly before markdown was ideated
+    - seems better than markdown..??
+  - ruby parser/exporter: asciidoctor
+
 markdown
   - current standard
+    - though, beyond the most simple features, there is no standard (and still isn't according to the main author)
+    - commonmark became the standard markdown variant
+      - most uses of markdown use a variant of this (discord, github, other chat apps, etc.)
   - not too bad, but i prefer my own expression
+  - won the war against asciidoc and restructuredtext
+
 
 
 apps:
+**org-mode (emacs)**
+  - **TODO: worth trying**
+  - **the granddaddy of all knowledge-management software**
+  - people prefer the .org markup
+  - **org-babel**
+    - ...this is incredible..!?
+  - **org-roam**
+    - ?? more magic..?
+  - file-export
+    - latex, every imaginable format
+  - deep emacs integration
+    - and another reason to use lisp :)
+  - no seperate mobile app, would just have to run emacs on it
+    - **can use a terminal app (termux, termius, iSH) and install emacs**
+    - **logseq treats org files equally as markdown**
+
 **obsidian**
-  - current king of note-taking
+  - current king of simple note-taking (though got nothing on org-mode)
   - **closed-source**
-  - great interface
+  - **great interface**
     - like a specialized vs-code, with an intuitive command pallete
     - feels well-made
     - unfortunately another electron app, so might as well use vs-code/dendron..?
   - plugins
-  - works really well on mobile devices
+  - **works really well on mobile devices**, nearly just as good as the desktop app
+  - **emphasizes plain-text and markdown files**
   - diagram-making thing
   - graph view
   - views for outline by headings, tags, backlinks, etc.
   - bookmarks
     - seems useful!
     
-logseq
+**logseq**
+  - seems to have it's uses despite obsidian's fame, and often used together with obsidian
   - more discoverability / nudge you into writing
+  - **"emphasizes blocks and outlines**
+  - **treats .org files same as markdown**
+    - it seems one of the devs of logseq use emacs and org-mode, so..
+    - UPDATE: maybe dropping support of org-mode..? :/
+  - mobile app has some ways to go, especially compared to obsidian
 
 x/joplin
   - poor man's open-source obsidian?
