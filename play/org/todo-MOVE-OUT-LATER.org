@@ -57,7 +57,10 @@ try to setup doom emacs on *everything*
 
 TODO: main
   - a numbered todo list seems nice... priority is good. can only do so much at a time
-1. unemployment
+0. unemployment
+1. motorcycle insurance
+  - try all big names:
+   - progressive
 n. map out next hostel/place to stay
 2. banks
 3. update addresses
