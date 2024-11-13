@@ -50,6 +50,10 @@ zed.
 
 doom.
 
+focus?
+
+kakoune for the unix dream
+
 that is all.
 
 maybe can try helix agian when releases scheme scripting and gui, but i see no reason with doom soooooo far ahead
@@ -70,9 +74,10 @@ stupid simple, fast editors (editor only):
   - themes suck
 x/2. sublime text
   - has lsp and ctags!
-    - **ERROR: the ruby LSP was buggy, creating multiple interpreters and leaking memory**
+    - **ERROR: the ruby LSP was buggy as of 10/2024, creating multiple interpreters and leaking memory**
     - i filed an issue
       - https://github.com/sublimehq/sublime_text/issues/6523
+        - not maintained by sublime :/
   - has aura theme!!
   - **shareware, bugs you about buying a license**
   
@@ -107,8 +112,12 @@ hackable editors:
   - **great discoverability makes it very quick to understand and extend**
   - potential is unlimited, written in lisp, **one tool-set to rule them all**
     - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
-x. nvim
-  - painful config, terrible lsp plugins, zero discoverability, no design nuances
+1?. kakoune
+  - like helix without the batteries
+  - for the unix dream
+    - great for using/learning unix tools for everything
+    - also great for using any language to write tools to do anything with kakoune
+  - probably the most well scoped text editor..
 2. helix
   - NOTE: once the gui and scheme scripting is out, i think it'll become my favorite.. i just find the terminal to be a clunky interface, and really miss using mouse/touch
   - a contemporary vi implementation in rust, with kakoune workflow, and with **sane defaults**
@@ -127,6 +136,15 @@ x. nvim
   - looks like a great way to try common lisp without emacs
     - actually kind of a dream editor, writing tiny programs in sbcl..
   - also can be completely altered as it is written in common lisp, making it the most malleable text editor
+x. nvim
+  - painful config, terrible lsp plugins, zero discoverability, no design nuances, stupid religous bindings and community
+
+
+other:
+0. glamorous toolkit
+  - TODO: try for smalltalk
+
+
 
 
 key-bindings:
@@ -136,10 +154,27 @@ meow > my custom helix bindings > helix > nvim > emacs
 meow !== doom's evil bindings > helix > emacs > nvim
   - general leader-key-bindings for functions
   - meow provides a minimal start, made to provide space for personal customization, including doom's sane default emacs bindings under spc-x/c-x (via doom-meow)
-    - this way, you can learn the way of emacs, and have the space to create your own set of key-mappings
+    - this way, you can learn the way of emacs, and have the space (literally and space-key) to create your own set of key-mappings
   - doom's evil-bindings provides a complete package, of everything you'd ever need, creating many maps and key-bindings on the space-leader-key
-    - it also provides bindings for completion via the mini-buffer (c-j/k to move down/up)
-    - i think it also provides alt-bindings for things like dired, etc. though not sure yet.. which is where it would really differ from meow..
+    - it also provides optional alt-bindings for completion via the mini-buffer (c-j/k to move down/up)
+    - it also provides optional alt-bindings for things like dired, etc.
+
+
+some readings
+  - note: typed the words since copy/paste in terminal isn't working.. :/
+  - phaazon kakoune philosophy
+    - the person builds a lot of pop text editor functions for kakoune, using unix cli tools
+  - phaazon more hindsight vim helix kakoune
+    - interestingly went to kakoune after helix, but ultimately uses both
+  - esrh.me switching to meow
+    - just details the improvements over vim, and even doom
+  - rrajath ditching evil for meow
+    - not much writing, but def has a solid emacs config!
+      - moved to minimal-emacs.el
+
+
+
+
 
 
 # gui editors:
@@ -239,6 +274,7 @@ lapce
     - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
     - kakoune style more interactive workflow: selection -> action flow (vs vim’s action -> selection flow): wd vs dw
   - **great sane defaults with the most essential features already built-in, config-free(!!): tree-sitter, lsp, dap**
+    - this makes it quite a great successor/improvement over kakoune, but i don't think it has as good shell integration.. yet?
   - "helix for vscode" extension to ease transition / aid in using both at the same time
     - TODO: ...no pop-up menus tho..?
   - vi/terminal/buffer/keyboard style navigation: file picker, buffers and buffer list, jump markers and jump lists
@@ -262,9 +298,62 @@ lapce
 
 
 ## current standards:
+**kakoune**
+  - https://github.com/mawww/kakoune/blob/master/doc/design.asciidoc
+    - the **DIY** unix editor, **modular**
+    - **designed for interactivity**
+      - **display edited text in real time, as opposed to vim's longer key sequences**
+      - **select/highlight *then* action workflow**
+    - **strictly adheres to the unix ideal**
+      - pipe selections (via |) to unix/shell tool and replace selection with output, such as sort
+      - select/"keep-pipe" (via $) using a unix tool, such as grep
+        - note: these two are implemented by helix
+      - **fifo buffers, a file/buffer that is read by kakoune, that an another program is outputting to, asynchronously**
+        - this is one of it's main features
+      - no plugins, rather, has `%sh{...}`(??) and socket interfaces and .kak bash scripts
+        - **though great in theory, sucks in reality, as external programs/processess must be able to read the buffer and send something back, through the client/socket interface, and somehow work well together**
+          - **tree-sitter, lsp, dap suck**
+            - helix included these to overcome this limitation of kakoune, stunting kakoune's community
+        - must write scripts (.kak) to glue / provide api to other programs
+          - should mostly just be wrappers to cli programs
+          - can be written in any language..?
+        - can use shell expansion within kakoune command-line %sh{...}
+        - can easily hook up fzf, yazi/broot, fd, ripgrep, etc.
+          - **in <=50 lines of config**
+        - **makes it rather unportable**
+    - minimal design
+      - only text editing, nothing else
+        - not even built-in language support (must write a `kak` script file), no built-in lsp nor tree-sitter
+          - this is def what killed it
+          - there is an lsp plugin (kak-lsp), but no tree-sitter (phaazon is writing one, still in dev as of 10/2024)
+        - no system-clipboard, no surrounding-pairs, no nothing
+          - though, there are likely plugins for these things..
+    - **linux only?**
+    - **terminal only?**
+    - 2011
+    - source: "why kakoune" site
+    - source: great answer in reddit comment on: "anyone still using kakoune?"
+
+
+
+x/vs code
+  - made using electron (web stack rendered by chromium/node.js). and therefore:
+    - **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
+  - so dominant that it made most other editors abandonware
+    - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
+      - **by far the most extensions thanks to having the biggest community one-click install**
+  - has extensions for all of the classic key-bindings
+    - "helix for vs-code" is good, merging helix bindings with vs-code bindings and gui cursor, but missing the pop-up menus
+  - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
+  - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
+  - 2016
+
+
+
 sublime text
   - BUG: ruby lsp
     - this stopped me from working in it (see above in conclusion)
+    - **lsp plugins are not maintained by sublime, thus still relies on community, which is much smaller than vs-code, emacs, nvim**
   - **the best simple gui text editor, replacing notepad++**
   - **designed for speed and simplicity**
     - **written in C++**, extensions written in python
@@ -291,36 +380,12 @@ sublime text
 
 
 
-  
-  
+
+
+
 
 
 old standards / history:
-kakoune
-  - https://github.com/mawww/kakoune/blob/master/doc/design.asciidoc
-    - designed for interactivity
-      - display edited text in real time, as opposed to vim's longer key sequences
-      - select/highlight *then* action workflow
-    - unix philosophy
-      - pipe to unix/shell tool for text filtering
-      - no plugins, rather, has `%sh{...}`(??) and socket interfaces?
-    - minimal design
-      - only text editing, nothing else
-        - not even built-in language support (must write a `kak` script file)
-      - ...this is probably what killed it..
-
-
-x/vs code
-  - made using electron (web stack rendered by chromium/node.js). and therefore:
-    - **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
-  - so dominant that it made most other editors abandonware
-    - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
-      - **by far the most extensions thanks to having the biggest community one-click install**
-  - has extensions for all of the classic key-bindings
-    - "helix for vs-code" is good, merging helix bindings with vs-code bindings and gui cursor, but missing the pop-up menus
-  - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
-  - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
-  
 (note: i missed out on the atom vs sublime generation)
 x/atom
   - set many standards:
@@ -350,7 +415,7 @@ textmate
 
 
 *the* classics:
-notably, most current text editors still use the key-bindings from these two editors: neovim for modal text editing and emacs for non-modal. So, once you learn one of them, you can use an associated extension on vscode. Though, i think vscode derives from emacs
+notably, most current text editors still use the key-bindings from these two editors: neovim for modal text editing and emacs for non-modal. So, once you learn one of them, newer editors often provide bindings for both. i think vscode derives it's key-bindings from emacs.
 
 though both originally were cli/terminal apps, now emacs is a gui, and even neovim has neovide (rust)
 
@@ -386,8 +451,14 @@ though both originally were cli/terminal apps, now emacs is a gui, and even neov
     - *i really really liked this, found it very quick to find and precisely just what i needed*
     - **intuitive space-bar menu to ease learning**
     - evil-mode to use vim-keybindings
-  - x/prelude
+  - **meow**
+    - **the best key-bindings of all!**, even better than helix!!
+    - **meow-doom** integration
+      - **the best starter-kit combined with the best key-bindings!!**
+  - prelude
       - a light-weight starter kit closer to vanilla emacs, in case doom is too much, or if i want to make my own
+  - minimal_emacs.el
+    - another minimal/light-weight starter-kit
   - every person that i've personally met that uses emacs is a great great programmer/problem-solver/doer
   - emacs itself is a deep pot of speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
     - 1.7 million lines of code
@@ -397,7 +468,7 @@ though both originally were cli/terminal apps, now emacs is a gui, and even neov
   https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
 
 
-neovim (nvim)
+x/neovim (nvim)
   - NOTE: i must have tried this soon after lua support was added, and people were still migrating, as were plugins
   - "With the 0.5 release of Neovim on 2 July 2021, it gained built-in support for the LSP, Tree-sitter, and more complete Lua support – including the support for configuration scripts written in Lua instead of VimL."
     - really slow to catch up to the times
@@ -405,9 +476,10 @@ neovim (nvim)
   - terrible experience setting up lsp, as there were 3-4 various plugins, all of them require config, all worked half-assed, with CoC having the best results and being general. best to just use the built-in lsp with lua, but, meh. even that required config
 
 
-vim
+x/vim
   - vim
     - modal (normal, insert, visual/select, command)
+      - **requires quite a heavy cognitive load**
     - *heavily* key-board input user interface
       - i personally feel more comfy using a touch-screen/mouse/keyboard combo
       - it's legacy is based on it's key-mappings: modes, motions, actions, etc.
@@ -423,6 +495,7 @@ vim
 
 IDEs:
 mostly langauge-specific
+  - and therefore limiting for general-use, when using many languages, in addition to simple writing / note-taking
 
 generally adds these features: **integrated interactive debugger, profiler**, advanced code completion, advanced refactoring, better file navigation (go to definition in deep libraries 'n back), tasks runner (including tests), database integration
   - though, nowadays, with LSP an DAP protocols gaining popularity, only the most advanced features make IDEs stand out
