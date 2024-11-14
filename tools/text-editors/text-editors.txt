@@ -9,6 +9,8 @@ a good non-modal experience
 not slow / heavy
   - focus editor has spoiled me..
   - i guess terminal-based is fine..
+    - it's more the ram/cpu hogging i don't like
+    - but also focus editor is just really, really fast
 a simple way to write extensions
   - preferably in lisp, or lispy
 unrestrictive
@@ -46,17 +48,19 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
 
 # conclusion:
 
-zed.
+doom, for everything
 
-doom.
+zed, for a quick sane defaults ide, and to focus on the work, and for ai workflows
 
-focus?
+focus, to just simply write/express, zero cognitive load
 
-kakoune for the unix dream
+helix, for crafting the best key-bindings, with sane lsp/dap
+  - (maybe can replace zed once scheme plugin system is out)
+
+kakoune, for the unix dream
 
 that is all.
 
-maybe can try helix agian when releases scheme scripting and gui, but i see no reason with doom soooooo far ahead
 
 
 
@@ -64,61 +68,47 @@ maybe can try helix agian when releases scheme scripting and gui, but i see no r
 
 also see [knowledge-bases]
 
-stupid simple, fast editors (editor only):
-  - can use these anytime, and for anything, even simple text files
-1. focus (editor)
+stupid simple, fast editors:
+  - can use these anytime, and for anything, even simple text files (replaces notepad)
+0. **focus (editor)**
   - NOTE: still early in dev
     - lsp in next version (0.4.0)
   - finally. a god damn text editor that doesn't slow down the marvel of contemporary machinery!! gamers make the best shit.
   - great little design nuances
   - themes suck
-x/2. sublime text
+x. sublime text
+  - much loved for being fast, and handling big files
+  - popularized the zoomed-out view
   - has lsp and ctags!
     - **ERROR: the ruby LSP was buggy as of 10/2024, creating multiple interpreters and leaking memory**
     - i filed an issue
       - https://github.com/sublimehq/sublime_text/issues/6523
-        - not maintained by sublime :/
+        - **LSPs aren't maintained by sublime :/**
   - has aura theme!!
   - **shareware, bugs you about buying a license**
   
   
-stupid editors with more features (vs-code-like):
+stupid editors with features by default (vs-code-like):
 0. **zed**
   - I FOUND IT!! I FINALLY FOUND IT!!!
-  - just works
-    - opened a ruby file, asked to install, and boom! lsp installed.
+  - **just works**
+    - **opened a ruby file, asked to install, and boom! lsp installed.**
+  - lightning fast, making it hard to find reason to even use focus editor..
   - looks amazing too
   - combines slack, multi-player, ai, terminal, etc. but at 150mb and low cpu and low startup-times, still quick enough to fit here
-*. lapce
+2. lapce
   - vs-code in rust
+  - quite behind zed, but not a startup-business, so it's still worth having as an open-source alt
 x. vs-code
   - last resort, in case of specific extensions
   - everything *just works* with "batteries-included": file manager, git manager, terminal window, debugging window, beautiful themes (aura!), zen-mode, etc.
   - has multiple key-bindings extensions including one for helix and kakoune
   - **eats up cpu, memory, laptop battery, etc.**
   - hackable, but a pain to write extensions
-  
-  
-complete IDEs:
-  - vs-studio
-  - jetbrains IDEs
-  
-  
-hackable editors:
-0. **emacs (doom)**
-  - OMG. FUCK TERMINALS. THIS IS ALL YOU'D EVER NEED!!
-    - replaces: text-editor, shell, file-manager, git app, knowledge-base, etc.
-    - doom in particular makes vi-mode seamless across all these packages
-  - **great discoverability makes it very quick to understand and extend**
-  - potential is unlimited, written in lisp, **one tool-set to rule them all**
-    - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
-1?. kakoune
-  - like helix without the batteries
-  - for the unix dream
-    - great for using/learning unix tools for everything
-    - also great for using any language to write tools to do anything with kakoune
-  - probably the most well scoped text editor..
-2. helix
+
+
+semi-hackable, plugin-oriented editors:
+0. helix
   - NOTE: once the gui and scheme scripting is out, i think it'll become my favorite.. i just find the terminal to be a clunky interface, and really miss using mouse/touch
   - a contemporary vi implementation in rust, with kakoune workflow, and with **sane defaults**
   - works in terminal (and thus great for remote terminal use)
@@ -130,14 +120,38 @@ hackable editors:
   - TODO: a version with a file-tree feature is on a git branch
     - though, it intentionally avoids these features in favor of a more vi-style workspace editing via file/buffer list ui
   - scheme scripting coming soon!!
-    - but just scripting, the core is rust.. so not as malleable as lem, emacs, or vs-code
+    - but just scripting, the core is rust.. so not as malleable as emacs, lem, or atom
+x. nvim
+  - painful config, terrible lsp plugins, zero discoverability, no design nuances, stupid religous bindings and community
+
+
+hackable editors:
+0. **emacs (doom)**
+  - OMG. FUCK TERMINALS. THIS IS ALL YOU'D EVER NEED!!
+    - replaces: text-editor, shell, file-manager, git app, knowledge-base, etc.
+    - doom in particular makes vi-mode seamless across all these packages
+  - **great discoverability makes it very quick to understand and extend**
+  - potential is unlimited, written in lisp, **one tool-set to rule them all**
+    - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
+  - **meow, the best key-bindings**
+  - great way to build up own leader-keys / key-chords
+*. kakoune
+  - like helix without the batteries
+  - for the unix dream
+    - great for using/learning unix tools for everything
+    - also great for using any language to write tools to do anything with kakoune
+  - probably the most well scoped text editor..
+?. atom
+  - TODO: haven't tried..
 *. lem
   - WARN: BUGGY as of 10/4/2024
   - looks like a great way to try common lisp without emacs
     - actually kind of a dream editor, writing tiny programs in sbcl..
   - also can be completely altered as it is written in common lisp, making it the most malleable text editor
-x. nvim
-  - painful config, terrible lsp plugins, zero discoverability, no design nuances, stupid religous bindings and community
+
+complete IDEs:
+  - vs-studio
+  - jetbrains IDEs
 
 
 other:
@@ -212,13 +226,13 @@ lapce
   - yet another sublime/vs-code copy in rust
     - already has advanced features: modal, lsp, remote dev, built-in terminal..
     - **...but i don't see much point over zed, which is also written in rust**
+      - focus on remote dev vs zed's focus on collaboration..
   - incredible speed
   - "Plugins can be written in programming languages that can compile to the WASI runtime (C, Rust, AssemblyScript)"
     - this is it's limiting factor, though AssemblyScript actually looks just like javascript!
     - although plugins can be written in AssemblyScript, it seems like first api's must be written in it's core language first: rust, therefore, in termas of hackability, it's less hackable than vs-code, which it is directly competing..
 
 
-## smalltalk is back!?!?
 **glamourous toolkit**
   - kind of **the emacs of smalltalk**, but made in ~2020?, after 6 years of dev, 14 years of research
     - "It seems an editor/database query engine/ browser with a object oriented language Pharo as control/scripting language, while emacs is an editor with emcas-Lisp as the scripting language."
@@ -233,29 +247,16 @@ lapce
       The productivity of the GToolkit developers is impressive."
 
 
+
+
 ## newer alts
-**zed**
-  - windows binary not built for you..??
-    - possibly an attack on windows, as atom was killed by vs-code, and github was bought out by microsoft
-    - https://github.com/TakumiBC/zed-windows/releases
-      - this repo uses github actions to build it for you
-  - vs-code-like features (terminal, file explorer, version control, etc.)
-  - **ai-focused**
-  - **multi-player**
-  - gui/gpu-rendered
-    - somehow **looks even more beautiful than sublime by default..!**
-      - and has aura theme extension(!!) (had to manually install for sublime)
-  - from the makers of atom (and tree-sitter) at github
-  - rust
-    - **extensions must be written in rust (and compiled to webassembly)**
-      - https://zed.dev/docs/extensions/developing-extensions
-      - https://zed.dev/extensions
-      - this def makes it harder to write extensions, but at least it'll be of higher quality, as the language itself will filter out programmers, and, it won't suffer from memory problems
+  - all of these are in heavy development as of later 2024
+
 
 **focus (editor)**
   - the best text editor experience i've had in quite some time.. made me try sublime text, which is what it basically is: **sublime text with better design**
   - incredible speed, incredible defaults, incredibly simple, lives up to it's name and induces focus
-    - learn everything in 5 minutes: find file via fuzzy search, set up workspaces, command prompt, config
+    - **learn everything in 5 minutes: find file via fuzzy search, set up workspaces, command prompt, config**
       - very well designed find file in workspace and open file via path
     - great little view mode (c+a+arrow keys)
     - some sane defaults (and great sense of design) include:
@@ -265,10 +266,12 @@ lapce
       - saving config hot-reloads it
       - diff on the scroll bar
         - i forgot how gooood scrolling felt..!
+  - gpu-powered gui, no terminal interface
   - **made with jai**
   
 **helix**
   - STATUS: still developing gui-front-end, scheme scripting, but off to a great start as a terminal editor
+  - kakoune with sane defaults
   - **the best key-bindings/keyboard-interface of all past worlds: vim, doom-emacs, and kakoune**
     - doom-emacs's intuitive pop-up menus
     - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
@@ -297,10 +300,42 @@ lapce
 
 
 
+
+## newer standards
+**zed**
+  - windows binary not built for you..??
+    - possibly an attack on windows, as atom was killed by vs-code, and github was bought out by microsoft
+    - https://github.com/TakumiBC/zed-windows/releases
+      - this repo uses github actions to build it for you
+    - **seems to priortize mac os > linux > window**
+      - probably for money reasons, as it's a vc-startup
+  - vs-code-like features (terminal, file explorer, version control, etc.)
+  - **ai-focused**
+  - **multi-player**
+  - gui/gpu-rendered
+    - somehow **looks even more beautiful than sublime and even vs-code by default..!**
+      - and has aura theme extension(!!) (had to manually install for sublime)
+  - rust
+    - **extensions must be written in rust (and compiled to webassembly)**
+      - https://zed.dev/docs/extensions/developing-extensions
+      - https://zed.dev/extensions
+      - this def makes it harder to write extensions, but at least it'll be of higher quality, as the language itself will filter out programmers, and, it won't suffer from memory problems
+  - from the makers of atom (and tree-sitter) at github
+
+
+
+
+
 ## current standards:
+
+(emacs)
+  - under [#classics]
+
+
 **kakoune**
   - https://github.com/mawww/kakoune/blob/master/doc/design.asciidoc
     - the **DIY** unix editor, **modular**
+      - a new classic in it's own category
     - **designed for interactivity**
       - **display edited text in real time, as opposed to vim's longer key sequences**
       - **select/highlight *then* action workflow**
@@ -336,12 +371,19 @@ lapce
 
 
 
+
+
+
+
+## ew or problems
+
 x/vs code
   - made using electron (web stack rendered by chromium/node.js). and therefore:
-    - **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
+    - PROBLEM: **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
   - so dominant that it made most other editors abandonware
     - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
       - **by far the most extensions thanks to having the biggest community one-click install**
+        - NOTE: this is the main reason to use it
   - has extensions for all of the classic key-bindings
     - "helix for vs-code" is good, merging helix bindings with vs-code bindings and gui cursor, but missing the pop-up menus
   - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
@@ -349,11 +391,26 @@ x/vs code
   - 2016
 
 
+(note: i missed out on the atom vs sublime generation)
 
-sublime text
+x/atom
+  - NOTE: i never tried this one..
+  - set many standards:
+    - **the electron framework** (see the relation in it's name?) was created in the process of making this
+    - **tree-sitter** was also developed by github for the project
+  - **hackable to the core**
+    - unlike vs-code
+  - ...people don't seem to have liked this one.. probably for the same reasons they don't like vs-code..
+    - sublime text was much favored due performance of C++/native
+  - though historically important, basically replaced by vs-code, since microsoft had acquired github..
+    - **github ended maintenance on it at the end of 2022**
+  - made by github!!
+
+
+x/sublime text
   - BUG: ruby lsp
     - this stopped me from working in it (see above in conclusion)
-    - **lsp plugins are not maintained by sublime, thus still relies on community, which is much smaller than vs-code, emacs, nvim**
+    - PROBLEM: **lsp plugins are not maintained by sublime, thus still relies on community, which is much smaller than vs-code, emacs, nvim**
   - **the best simple gui text editor, replacing notepad++**
   - **designed for speed and simplicity**
     - **written in C++**, extensions written in python
@@ -381,26 +438,9 @@ sublime text
 
 
 
+## old standards / history:
 
-
-
-
-old standards / history:
-(note: i missed out on the atom vs sublime generation)
-x/atom
-  - set many standards:
-    - **the electron framework** (see the relation in it's name?) was created in the process of making this
-    - **tree-sitter** was also developed by github for the project
-  - ...people don't seem to have liked this one.. probably for the same reasons they don't like vs-code..
-    - sublime text was much favored due performance of C++/native
-  - though historically important, basically replaced by vs-code, since microsoft had acquired github..
-    - and now replaced by zed
-  - made by github!!
-(probably missing some others here..)
-
-
-
-basic gui classics:
+### basic gui classics:
 kate
   - a linux classic?
 notepad++
@@ -450,11 +490,12 @@ though both originally were cli/terminal apps, now emacs is a gui, and even neov
     - a great starter config that makes a really nice onboarding experience
     - *i really really liked this, found it very quick to find and precisely just what i needed*
     - **intuitive space-bar menu to ease learning**
-    - evil-mode to use vim-keybindings
+    - **contains evil-mode / vim-keybindings by default**
   - **meow**
-    - **the best key-bindings of all!**, even better than helix!!
+    - **the best key-bindings of all!**, even better than helix/kakoune!!
     - **meow-doom** integration
       - **the best starter-kit combined with the best key-bindings!!**
+        - THIS IS IT!! IT DOESN'T GET BETTER THAN THIS!!!
   - prelude
       - a light-weight starter kit closer to vanilla emacs, in case doom is too much, or if i want to make my own
   - minimal_emacs.el
