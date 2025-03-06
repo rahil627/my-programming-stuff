@@ -1,0 +1,19 @@
+heya.
+
+i'm at a point in life where i'm coming back to America, specifically California, for the sole purpose of doing career-related work. I recently finished my trip exploring the coast of Cali (by scooter!) and now am in San Diego/Baja Cali while i ponder upon some mid-life career directions..
+
+i've been out of the tech world for some time, but recently, during my off-time while working at UC Berkeley (not tech-related), with just an old chromebook at hand, i discovered some newfound joy in computers again while searching for tools to make making games, apps, 'n web apps more enjoyable (and i found them!: haxe/heaps, ruby/dragonruby, elixir/phoenix). The journey led me through programming languages, linux, unix/terminals/shells, scripting, all the way back to the beginning with emacs, lisp, 'n smalltalk! So now i'm trying to transition away from where i first started in tech as a software developer to a more general IT job, like this one.
+
+my first tech job was a very ideal web software startup with just three others and an extremely neat .NET/ASP codebase long, long ago. As it was my first job, the problem i had with the job was that it required a very narrow focus for long periods of time, developing features which can take several months. The next job titled "QA & release engineer" was much more fitting as i was a sort of liason for the various tech 'n product teams in an office of <50 people. Unfortunately, it turned out to be a place to churn impossible deadlines (thus not in my resume). I haven't worked for another tech company since.
+
+my nature prefers the chaos of talking and supporting everyone, whilst doing several tasks on several projects, learning and doing a bit of everything. I think i'd be satisfied working at small startups where it's very DIY and where everyone does everything, but for a big institution like this, to my understanding the most generalist roles are thrown under the tiles of "systems admin" / "devops" / "IT".
+
+my later tech experience mostly dealt with small 'n artsy games, which only required pure systems programming, so i lack the contemporary large-scale web app pro work experience most jobs want (especially in SF): js frameworks (react), cloud computing / container orchestration, software for massive scale. Though i meet the minimum and most of the desired qualifications, i notably lack AWS experience, in addition to Salesforce experience.
+
+this job is particularly interesting because it's all-over-the-place, requiring broad tech knowledge (web dev, devops, enterprise software), jumping around servers in terminals/emacs, posing as a hacker. :3. Also, i think i'd like the varied projects that academia may offer, from general IT stuff to software support for research projects. I really think i'd like the DIY feel of prototyping/making stuff for researchers, where every product isn't a massive web app.
+
+anyway, i last lived in Berkeley, so i know Alameda is the gem of east bay, but being able to work remotely would enable me to go back home to my friends that are my family in Taiwan. I figured i'd need one on-site job in California before i could get a solid remote one, but going straight to a remote would be a dream.
+
+please just e-mail me, as i'll be getting another phone in Mexico!
+
+ra

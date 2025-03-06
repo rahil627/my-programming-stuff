@@ -1,0 +1,21 @@
+heya.
+
+i'm at a point in life where i'm coming back to America, specifically California, for the sole purpose of doing career-related work. I recently finished my trip exploring the coast of Cali and am now stuck in San Diego/Tijauna, doing gig work down here in the warmth of the sun while i prepare for Latin America and ponder upon some mid-life career directions..
+
+craigslist is one of my favorite technologies, along with discord, to ever exist. It's a digital market, without any bullshit. What's more ideal than that (within capitalism)? Other technologies have come: FB marketplace, airbnb, pinterest, door dash, etc., but none are as general nor simple as cragislist! Craigslist remains the raw, gritty, un-styled 90s minimalist masterpiece it has always been. It's how i found my first job (in VA), my first housing sub-lease (on 9th and geary in SF),  my Vespa, and how i'll find my dream camper van. I'm just happy it still exists, and hasn't lost it's way.
+
+unforutunately, i def don't have a lot of the skills listed for the job. I just really really want to transition / skip from software dev to a more generalist role, and to my understanding "systems admin" is the term for the person you ask for computer-related help and aid from (not just active directory), while everyone else is focused on "developing" something. For craigslist, however, i understand that this is going to be very deeply technical due to the performance/scaling requirements, probably more suitable for someone with years of server admin experience..
+
+the problem is that my tech past is a strange one that doesn't translate well to contemporary large-scale web app products. I made small games using various game engines/frameworks in various programming languages. Only until recently, i spent some time searching for good tools i enjoy, and i actually found them!: haxe, dragonruby, elixir/phoenix, powershell, emacs (and soon jai). Though i found tools that make me happy, they aren't so popular for making big products. Thus, to the eyes of most hiring folks, i don't have any experience in anything. :(
+
+the most relevant job i had was for a .NET/ASP/IIS product [rynoh.com], as it's a web app. I mostly spent time figuring out how ancient real estate software works, scraping it's databases, and syncing it via web api. ETL, i think. Standard web stuff, back when .NET just released linq-to-sql.
+
+within a tech company, i naturally belong to a more generalist product maintainer role, preferring to always have the big picture in mind from a far viewpoint, naturally communicating, collaborating, understanding what customers want, having a sense of good product design (great-feeling controls, interaction, a sane user interface and experience), prioritizing the most obviously broken things and the lowest hanging fruit of features that would make customers happy, and constantly making the design better, inside 'n out.
+
+yet, at this moment in life, as i'm just getting back into pro tech work, i don't mind getting dirty and doing some grunt work either, for the purpose of learning contemporary web 'n server tech. I find the systems-admin (& dev-ops & tools dev) route most interesting, precisely because it's all-over-the-place, requiring broad tech knowledge, having new problems every moment, requiring jumping between tasks and jumping around servers in terminals/emacs, posing as a hacker. :3
+
+after having travelled down the coast of Cali, i now know for certain there is nothing that comes even close to life, geography, and climate of Asia (save, perhaps, Hawaii). Having a remote job would make my dream come true: i would finally be able to go home to Taiwan. I've been yearning to go back home since the pandemic. ;(
+
+please just e-mail me, as i'll be getting another phone in Mexico!
+
+ra

@@ -1,0 +1,19 @@
+heya.
+
+i'm at a point in life where i'm coming back to America, specifically California, for the sole purpose of doing career-related work. I recently finished my trip exploring the coast of Cali, now stuck in Ocean Beach, San Diego, doing gig work down here in the warmth of the sun while i ponder upon some mid-life career directions..
+
+this just seems like a chill, simple job: being the computer person for the agricultural departments. It'll force me to remember the basics. Maybe it will remind me of living in rural Asia.. :3
+
+for me, it's an opportunity to re-design and own a website product, as i'm planning to transition to product design and design consultancy. It would honestly be great to just re-design the websites entirely, either with webflow (static, wysiwyg like the old dreamweaver), so that anyone can easily contribute to or edit the entire website, or with some simple static site generator in combination with a "headless" CMS. If the university wants to cling to the big CMSs (drupal, wordpress, etc.), i'd really be interested in hearing the reasoning behind keeping two different CMSs, both of which are written in PHP, which is not so common in academia. Given that the university will have people proficient with javascript and python for at least the next few years, i'd think using them SOLELY for use-cases that require dynamic pages would be better for everyone. That way, you wouldn't need to hire for this position again, lol. Then, anyone will be able to write an api in python or some front-end with javascript.
+
+as for my own web apps, i chose phoenix framework as my all-in-one ("monolithic") solution, as i love ruby but missed the rails era, yet find the functional paradigm for web apps even more elegant. Thus my personal web app experience won't translate so well, but surely it's more than enough for this job!
+
+my passions within design and tech peaked with interactive art game experiences in NY long ago. This is a big step down for me. However, as i'm coming back to America, i just want a stable, simple job in a small town for the moment. In my free time i could help the department by researching and implementing some contemporary software solutions for their needs. I'm quite good at supporting communities. A sort of advanced computer support person. ;)
+
+anyway, i'm hoping the university setting will allow some time to share some tools, knowledge, 'n skills with peers of various tech teams. In addition, i'm interested in emergency medicine too, so it would be great to get some basic training there too. And who knows, maybe auditing a Chinese class would make me feel closer to Taiwan! :D
+
+though Davis wasn't part of my trip down the Cali coast, i actually have a hunch that i'd really like living there. It sounds like a wonderful way to try rural life in America for a bit. I'm deeply into permaculture/homesteading life, so just being there would naturally lead my mind towards my nature-related app ideas. Also, i LOVE cycling: bicycling and motorcyling..! It honestly sounds like the last pleasant UC, and the last one with affordable housing nearby, though, i'd miss the beach 'n mountians dearly. In Asia, i discovered i love living in the country-side, and made a home in rural Taiwan, so this would be quite a natural step for me. My creativity actually flourishes in small towns in rural 'n remote areas.
+
+please just e-mail me, otherwise, you can try contacting this number: 415-535-8416 .
+
+ra

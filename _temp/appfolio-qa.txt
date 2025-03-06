@@ -1,0 +1,17 @@
+ya.
+
+i'm at a point in life where i'm coming back to America, specifically California, for the sole purpose of doing career-related work. I recently finished my trip exploring the coast of Cali by scooter(!!) and now am in San Diego/Baja Cali while i ponder upon some mid-life career directions..
+
+i've been out of the tech world for some time, but recently, during my off-time while working at UC Berkeley (not tech-related), with just an old chromebook at hand, i discovered some newfound joy in computers again while searching for tools to make making games, gui apps, web apps more enjoyable (and i found them!: haxe/heaps, ruby/dragonruby, elixir/phoenix). The journey led me through a history of programming languages, linux, unix/terminals/shells, all the way back to the beginning with lisp/emacs 'n smalltalk'! It was a fun blast through the past. So now i'm trying to transition towards more general IT/software jobs, like this one.
+
+the jobs that comes closest to this one were my first two. The first was for making Rynoh, a real-estate escrow softwared made in .NET. I wrote the ETL bits to extract data from legacy software, which were then sent up for web services. I also wrote a few features/pages. My second job was as "qa and release engineer", however, the company was full of crunch, and i never got to automation. It as mostly just being a liason between front, back, and product teams at a ~50 person company.
+
+beyond the inital few pro tech jobs i did, most of my tech experience came from my passion for making games (including video games). As it only requires pure systems programming, i lack the contemporary large-scale web app pro work experience to compete in today's market, especially in the SF Bay Area: js frameworks, cloud computing / container orchestration, language modelling, software for massive scale. Thus i honestly only have a sliver of hope to catch a rare and niche job such as this one. Most recruiters just don't care about game-making.
+
+this job interests me because i really like ruby, the language. So if it's mostly involving writing tests in ruby (capybara/cuprite/rpec or whatever) or even playwright, supporting devs, supporting users, i feel it should be a pretty straight-forward job.. I however don't have ruby on rails experience, and for my own personal small web apps, i've chosen to skip ruby for phoenix/elixir. In addition, i don't have react experience, so, i'll def have to do a quick project using them to get an idea even before starting the job!
+
+my nature prefers the chaos of talking and supporting everyone in a community, whilst doing several tasks on several projects on my own, learning and doing a bit of everything. I think i'd be satisfied working at a small media production or startup where it's very DIY and where everyone does everything. My first company had 4 people. It was great. I'm hoping this is still small enough to allow me some freedom to do various things: qa, dev, sys admin, devops, design, etc.
+
+anyway, please just e-mail me. I'm here in PB at the moment, just waiting for my passport to renew. After that, i may head south towards Latin America.
+
+ra

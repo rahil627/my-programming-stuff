@@ -1,0 +1,23 @@
+heya.
+
+i'm at a point in life where i'm coming back to America, specifically California, for the sole purpose of doing career-related work. I recently finished my trip exploring the coast of Cali (by scooter!) and now am in San Diego/Baja Cali while i ponder upon career directions as an older person.
+
+i've been out of the tech world for some time, but recently, with just an old chromebook at hand, i discovered some newfound joy in computers again while searching for tools to make making games 'n apps more enjoyable (and i found them!: haxe/heaps, ruby/dragonruby, elixir/phoenix). The journey led me through programming languages, linux, unix/terminals/shells, scripting, all the way back to the beginning with emacs, lisp, 'n smalltalk! So now i feel i'm ready to transition back into tech.
+
+my first tech job was a very ideal web software startup with just three others and an extremely neat .NET/ASP codebase long, long ago. As it was my first job, the problem i had with the job was that it required a very narrow focus for long periods of time, developing features which took several months. And i mean: sheer programming for 8-10 hours a day, for months on end. The next job titled "QA & release engineer" was far more simpler as i was a sort of liason for various tech 'n product teams in an office of <50 people. Unfortunately, it turned out to be the stereotype tech company with constant crunches for impossible deadlines (and thus is not in my resume). I haven't directly worked for another tech company since.
+
+my nature prefers the communal chaos of talking and supporting everyone, whilst doing several tasks on several projects, learning and doing a bit of everything. I think i'd be satisfied working at small startups where it's very DIY and where everyone does everything.
+
+though this job doesn't seem as broad as a systems admin one, it seems like one where products are made from beginning to end. It even seems entry-level, which is very rare, let alone within medicine. I think i'd like the niche of academic tech, where there's a lot of cool little research projects to work on, that often doesn't require the scale of massively distributed web apps. It sounds like a great niche to be in. Lastly, this job might feel more fulfilling, as it can be important / provide a meaningful impact to society. Though, i prefer and plan to try the EMT/paramedic route for that reason.
+
+my later tech experience mostly dealt with small 'n artsy games, which only required pure systems programming, so i lack the contemporary large-scale web app pro work experience most jobs want (especially in SF): countless js frameworks, cloud computing / container orchestration, various software for massive scale. Thus, i'm only left with support roles and niche markets like this one. Luckily for me, a lot of medical software likely uses C and C++, which although i haven't used in a while (before it was "modern"), it's a skill that's still the standard for games and interactive media. And i'm guessing neurology simply uses python and julia (instead of matlab), which are totally fine.
+
+having seen many job posts recently, this is a rare one that doesn't ask for much. The only qualification i'm missing is "course work on signal analysis and electrical engineering". It is a weak point of mine.. though, for the sake of making fun input devices for games, i do have some interest in it..!
+
+the only things i'm hesitant about this job for is that it's very quantiative sciency and may feel like a hospital environment. I absolutely belong to the arts 'n humanities departments, with communities of more sensual people, where the more common sense taiwanese way of health and medicine prevails. I really hope the workplace isn't a brave new world. Luckily it's right there in the inner sunset.
+
+the location of this job is quite special to me as it was the first place i moved to after leaving my home-town in VA: on 9th and geary, and later, on 18th and judah. I even used to study at the library up there, with the lush sofas 'n a panoramic view! I feel comfy moving back to west SF, especially now that i ride a motorcycle/bicycle (sorry 38 & N lines)! ..Ahhh, despite all its problems, i do miss SF!
+
+anyway, please just e-mail me, as i'll be getting another phone in Mexico!
+
+ra

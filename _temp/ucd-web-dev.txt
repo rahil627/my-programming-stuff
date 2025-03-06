@@ -1,0 +1,19 @@
+heya.
+
+i'm at a point in life where i'm coming back to America, specifically California, for the sole purpose of doing career-related work. I recently finished my trip exploring the coast of Cali (by scooter!) and now am in San Diego/Baja Cali while i ponder upon some mid-life career directions..
+
+i've been out of the tech world for some time, but recently, during my off-time while working at UC Berkeley (not tech-related), with just an old chromebook at hand, i discovered some newfound joy in computers again while searching for tools to make making games, apps, 'n web apps more enjoyable (and i found them!: haxe/heaps, ruby/dragonruby, elixir/phoenix). The journey led me through programming languages, linux, unix/terminals/shells, scripting, all the way back to the beginning with emacs, lisp, 'n smalltalk! So now i'm trying to transition away from where i first started in tech as a software developer to a more general IT job, like this one.
+
+my first tech job was a very ideal web software startup with just three others and an extremely neat .NET/ASP codebase long, long ago. As it was my first job, the problem i had with the job was that it required a very narrow focus for long periods of time, developing features which can take several months. However, a part of it was similar to this job, as i had to deal with figuring out how "archaic" software works (i remember one used visual basic!!). The next job titled "QA & release engineer" was much more fitting as i was a sort of liason for the various tech 'n product teams in an office of <50 people. Unfortunately, it turned out to be a place to churn impossible deadlines (thus not in my resume). I haven't worked for another tech company since.
+
+my nature prefers the chaos of talking and supporting everyone, whilst doing several tasks on several projects, learning and doing a bit of everything. I think i'd be satisfied working at small startups where it's very DIY and where everyone does everything, but for a big institution like this, to my understanding the most generalist roles are thrown under the tiles of "systems admin" / "devops" / "IT". And better yet, being part of the medical field will make it feel fulfilling / important to me (i plan to try the EMT/paramedic route too).
+
+my later tech experience mostly dealt with small 'n artsy games, which only required pure systems programming, so i lack the contemporary large-scale web app pro work experience most jobs want (especially in SF): js frameworks, cloud computing / container orchestration, software for massive scale. Thus, i'm only left with support roles (and ones that deal with strange old software that no one wants to deal with ;)). Luckily for me, that old imaging software is very likely C++ anyway (for computer vision libs), which although i haven't used in a while (before it was "modern"), it's a skill i'd like to retain for making games and interactive media.
+
+this job is particularly interesting because it's all-over-the-place ("multifaceted"), requiring broad tech knowledge ("dev, sys admin, it, db, process analysis, security, business tech support"), jumping around servers in terminals/emacs, posing as a hacker. :3. I definitely lack experience in the last three, again because i rarely work for big companies, but i truly am a little interested in everything. In addition, i lack the specialized preferred qualifications listed: NETAPP, DICOM/HIPAA, SLURM HPC experience.
+
+the location of this job is quite special to me as it was the first place i moved to after leaving my home-town in VA: on 9th and geary, and later, on 18th and judah. I even used to study at the library up there, with the lush sofas 'n a panoramic view! I feel comfy moving back to west SF, especially now with a motorcycle/bicycle (sorry 38 & N lines)! ..Ahhh, despite all its problems, i do miss SF!
+
+anyway, please just e-mail me, as i'll be getting another phone in Mexico!
+
+ra

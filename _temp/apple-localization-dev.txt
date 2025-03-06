@@ -1,0 +1,21 @@
+heya.
+
+i'm at a point in life where i'm coming back to America, specifically California, for the sole purpose of doing career-related work. I recently finished my trip exploring the coast of Cali by scooter(!!) and now am in San Diego/Baja Cali while i ponder upon some mid-life career directions..
+
+i've been out of the tech world for some time, but recently, during my off-time while working at UC Berkeley (not tech-related), with just an old chromebook at hand, i discovered some newfound joy in computers again while searching for tools to make making games, gui apps, web apps more enjoyable (and i found them!: dragonruby/mruby, haxeui/haxe, phoenix/elixir). The journey led me through a history of programming languages, linux, unix/terminals/shells, text editors, all the way back to the beginning with lisp/emacs 'n smalltalk'! It was a fun blast through the past. So now i'm trying to transition towards more generalist IT jobs like systems admin or specialize in data visualization if i can.
+
+i chose localization because i'm a lifelong traveler. My parents are Indian, i was born in the US, and i moved to Taiwan (i had to learn traditional Chinese). I will travel through Mexico soon, learn Spanish, and then travel through Vietnam in the future (no guarantee on Vietnamese). In Taiwan, i live close to many indigenous tribes, and i hope to glean some basic conversation skills with them too. I always think about how the rest of the world thinks.
+
+i have all of the qualifications except Swift experience and preferred qualifications except LLM experience. And even for obj-c, i've only used it once for a multi-iOS device game, using the cocos2d game engine with gamekit/bluetooth, so, it's been a while. Nothing against swift, i actually really like the language, it probably just took too long for the C++ interop to happen. And anway, haxe had it since it's inception, a decade before, along with cross-platform in mind, even before Dart. It's an underdog language and community i really love.
+
+beyond the inital few pro tech jobs i did (.net dev and ETL, qa & release engi), most of my tech experience came from my passion for making games (including video games). As it only requires pure systems programming, i honestly lack the contemporary large-scale web app pro work experience to compete in today's market, especially in the SF Bay Area: js frameworks, cloud computing / container orchestration, language modelling, software for massive scale. Thus my past experiences only allow me little hope of getting a pure dev or dev support job, such as this one.
+
+i think it would be the perfect job to fix bugs in apps--even OS code!--, working with various teams (product, qa, software engi), and making little tools to make the job easier. It sounds like just the right amount of reading code, socializing, and writing code.
+
+my nature prefers the chaos of talking and supporting everyone in a community, whilst doing several tasks on several projects on my own, learning and doing a bit of everything. I think i'd be satisfied working at a small media production or startup where it's very DIY and where everyone does everything, but for big institutions like this, i think i could find strengths within it. I hope that i can share some knowledge 'n wisdom with the rest of the folks at apple, and try some other areas: infrastructure, data visualization, design, qa. I'd be down for supporting as many projects as i can!
+
+SF was the first place i moved to when i had the chance. I had such an inhumane and draining time helping the homeless/drugged there when i came back to America, that i tried living and working in (UC) Berkeley instead. Now all that's left to try is south bay, which is apparently where the most Taiwanese people live!
+
+anyway, please e-mail me, as i may be in southern Mexico soon.
+
+ra

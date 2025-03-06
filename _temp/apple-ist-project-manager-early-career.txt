@@ -1,0 +1,27 @@
+heya.
+
+i recently finished my trip down the coast of Cali, now in San Diego, doing gig work down here in the warmth of the sun while i prepare for Mexico and ponder upon some mid-life career directions. I worked at UC Berkeley last summer, and lived in SF thrice before, so i'm quite familar with the Bay area--though not so much south bay..--and feel comfortable re-locating back if it's absolutely necessary. Otherwise, Taiwan has been my home for nearly a decade now, so if it's even possible to live 'n work there, it would be my life's dream: to be back home and still be able to legally work.
+
+i'm at a point in life where i'm coming back to America, coming back to tech-related work. Most of my life's experiences are community-related: physical communities of all forms: communes, permaculture homesteads/farm-houses, hostels, maker-spaces, and everything in-between. I spent my adult life living with many people, making beautiful social spaces across time and space.
+
+TODO:
+The digital community is surely quite different, but, having lived across Asia and soon Central America too, i feel comfy living 'n working with people from all over the world. The only difference is the cultural change from physical to digital communication.
+
+within a tech company, i naturally belong to a more product design / maintainer / generalist role, prefer to always have the big picture in mind from a far viewpoint, naturally communicating, collaborating, understanding what customers want, having a sense of good product design (particularly gameplay, perfect-feeling controls, interaction, a sane user interface and experince), prioritizing the most obviously broken things and the lowest hanging fruit of features that would make customers happy, and constantly making the design and code architecture behind it better. Yet, at this moment in life, as i'm just getting back to America, and back to working in tech, i don't mind getting dirty and doing some grunt work either, for the purpose of learning contemporary web tech, honing core programming. Design is the simple 'n natural part for me, programming is just the necessary means. When making games solo, both design and programming are so intertwined it's difficult to seperate the two jobs: the program is the design, and the design is the program; So i always feel i must master both.
+
+I went from big game engines (Unity) to small game engines (flashpunk/haxepunk, cocos2d) to media frameworks/DIY game engines (heaps, dragonruby/love2d), in search of tools that make game-making a happy flow state. Only until recently did i discover an estoeric gem of a tool recently: dragonruby.
+
+TODO:
+I read that Twitch similarly hopped from ruby on rails to go and react, a singular big framework to a collection of more modular programs (--for my own web personal projects, i'm skipping straight to elixir/phoenix, to force the functional paradigm / being stateless). Unfortunately, large-scale web apps are such a different beast, a chimera: always changing with new tech, compared to the non-changing pure systems programming of games; I could never keep up. I'm only left with tougher-to-get product/qa/ops and the rare straight-forward programming jobs like this one.
+
+out of all the software jobs currently available, this one seems to require the most purest form of programming: "back-end" Go code. If there's any language to get me back into sheer programming, it's Go. Although i never used it (not so flexible for making game engines, and before generics), the person that wrote the go-to-haxe transpiler praises it for it's zen flow (haxe is complicated by it's support for many transpilers). Coming from making simple games, and with hopes to continue making games, writing apis using Go seems like ideal and blissful practice.. If there's still work re-writing/modularizing, i'd definitely prefer that as a start, over developing new features. I'd feel far more comfortable 'n happy understanding/making an entire code-base neat, documenting, bug-fixing, QA, etc. compared to pushing features for deadlines. Yet, i think i'll reach the Go flow in no time too.
+
+anyway, just e-mail me, as my phone may not work in other countries!
+
+i truly do believe Twitch is one of those important technologies: one that  empowers people to create their own world and build a community around the things they are passionate about..!
+
+ra
+
+
+other jobs:
+gen ai software qa engineer, apple intelligence

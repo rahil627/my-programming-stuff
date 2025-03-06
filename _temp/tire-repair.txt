@@ -1,0 +1,56 @@
+
+sources:
+"robot" on youtube from san diego vespa store
+
+
+tubed:
+bicycles and older motorcycles
+
+tubeless:
+scooters, tractors, atv, etc.
+
+tire plug
+  - (the "string"-like thing with cement glue)
+  - most convenient, as you don't have to take the tire off
+  - reportedly very durable, often lasting the tire's lifetime
+    - great for worn tires that will be replaced soon
+  - can use multiple for bigger holes
+  - can use for lateral tears (using a different repair method)
+  - risk: can be pushed out, can make it ride uneven(?)
+
+tire patch
+  - most durable, lasting for years
+  - requires taking the the tire out
+    - easy if it's the front tire, not so easy for rear tires
+      - WARNING: getting a tire to seal properly can be difficult without industrial tools..? iirc, i was told by ooty's scooters: the old tire leaves some rubber debris stuck to the wheel, which makes it difficult to seal
+      - vespa rear tire can take ~30 minutes with four simple tools
+      - vespa front tire takes just a few minutes and a single tool
+
+other repair devices
+  - mushroom
+    - looks neat, but not as flexible as tire plugs to cover various problems
+
+replace tire
+  x/- can take off the tire yourself and take it to a shop in case you don't want to ride to a shop
+    - but if you are able to take off the tire, you might as well replace it yourself too
+  - can inflate the tire and ride it to a shop
+
+
+
+
+how to plug a tire:
+
+get a tire plug kit
+  - remove metal shard
+    - careful, if the tire is inflated, debris can fly into your eyes!!
+  - reamer
+    - to file and clean the hole, to make it even
+  - inserter
+    - with a needle-like hole for the string-like plug
+   - plugs
+     - orange ones are good
+     - safety seal, x-tra seal, etc.
+
+ream: clean 'n file puncture
+insert: put the plug through the loop (NOTE: can put two or even three in case of bigger punctures), apply cement mainly to the center of the plug, then, insert it into the puncture about an inch, turn it a bit (still inside), then *quickly* pull it out
+cut: cut off the excess of the plug sticking out, but leave a little(?) as it'll get pushed in
