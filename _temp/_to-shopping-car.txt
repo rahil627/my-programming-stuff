@@ -1,0 +1,16 @@
+
+
+cargurus
+  - filters for advanced features, like bed length!i
+    - though, most users won't bother with selecting features when posting
+
+autotrader
+
+craigslist
+  - for <$5k steals
+
+govdeals
+  - auctions!!
+
+carmax
+  - only searches their inventory
