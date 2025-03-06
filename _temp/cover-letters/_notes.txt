@@ -1,0 +1,152 @@
+
+TODO ASAP:
+  - update resume on jobs i applied to
+    - added QA & release engi
+    - rewrite the babycastles portion
+  - 1. fly.io
+    - test
+  - 1. discord web game advocate
+    - TODO
+  - y-combinator
+    - product engineer for the new job-searching platform
+
+ycombinator startup funding
+  - very easy to apply!
+    - just send an idea, even if it's the "late deadline"i
+      - DONE
+    - seems to prefer having a co-founder.. :/
+      - maybe can ask Sam
+        - yeah, he would be perfect!! and he lives in SF!
+
+
+todo:
+  - turn on phone
+    - check status through website
+  - passport
+    - look for it
+    - ship to samesun hostel
+  - driver's license test
+    - anywhere i can get an appointment asap!
+  - wells fargo debit card
+  - charles schwab
+    - password
+    - transfer money
+
+job sites for smaller companies (ordered)
+  - game jobs sites
+  - startups
+    - **ycombinator**
+      - the OG
+      - has a jobs pagei
+        - TODO: try this now
+      - has a new job matching app
+        - TODO: finish profile
+    - wellfound (angellist)
+      - looks legit, it's just that.. the startups seems so boring.. :/
+    - try other some startup sites?
+
+  - **zensearch**
+    - this site is great!
+  - something-ly
+    - TODO: try next
+  - linked-in
+    - TODO: ugh, may have to actually make an account..
+  - craigslist
+    - only the true gangstas use this
+  - indeed
+    - meh
+
+
+job titles:
+  - designer
+
+  - visualization
+
+  - systems/server admin(istrator)
+  - IT?
+  - devops
+
+  - ruby
+  - elixir
+  - .NET
+
+remote jobs
+  - companies
+    - TODO: canonical (ubuntu)
+      - junior cloud field engineer
+      - linux desktop engineer
+    - social discovery group
+    - wikimedia (wikipedia)
+      - TODO: software engineer for the content transform team
+      - movement communications specialist, product and tech
+    - duolingo
+    - gitlab
+      - also made with ruby on rails!! and uses ruby scripts too!
+      - support engineer (worldwide/remote)
+      - TODO: others?
+
+schools
+  - 1. edjoin.org
+    - less competitive than university jobs, possibly same pay in a lower cost-of-living area
+  - schooljobs/govermentjobs.com
+    - may have to apply through here
+  - district job boards
+
+  - universities
+    - less competitive than FAANG jobs
+      - still likely has many goodie asians applying..
+    - can take some classes, do EMT, etc.
+    - UC
+      - jobs.universityofcalifornia.edu
+    - calpoly (SLO)
+      - jobs.calpoly.edu
+    - usc at SD (main campus is in downtown LA, a terrible location)
+      - only school of medicine
+
+
+games
+  - what's that new site..?
+
+
+
+
+favorite big tech:
+  - many from SF
+  - many started by y-combinator
+
+y-combinator
+
+discord
+craigslist
+  - advertises on craigslist ;)
+wikipedia
+twitch
+youtube
+  - just solid tools, no agenda (not much at least..)
+
+netflix?
+  - sold out
+  - trying to do game stuff
+    - has game studios
+
+doordash
+etsy
+pinterest
+
+
+
+
+FAANG:
+google's products are in a graveyard, terrible design, though pragmatic
+amazon's products are garbage (kindle, fireTV, alexa, echo frames?, etc.)
+  - luna
+    - game streaming market-place, like google stadia?
+  - mostly web cloud server stuff
+facebook? ew!
+  - vr
+apple is closed off
+microsoft is the winner.
+  - good recent coop (or co-opt?) of open-source and linux stuff
+    - linux sub-shell
+    - vs-code
+    - .NET core
