@@ -139,7 +139,7 @@ hackable editors:
   - like helix without the batteries
   - for the unix dream
     - great for using/learning unix tools for everything
-    - also great for using any language to write tools to do anything with kakoune
+    - also great for using any language write to tools to do anything with kakoune
   - probably the most well scoped text editor..
 ?. atom
   - TODO: haven't tried..
