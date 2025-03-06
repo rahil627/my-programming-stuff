@@ -33,9 +33,9 @@ bear
 
 conclusion:
 use my own custom markup for simple notes
-  - can enjoy thinking about and create my own markup language (since i def don't want to make a programming language..!)
+  - can enjoy thinking about and creating my own markup language (since i def don't want to make a programming language..!)
   - can also enjoy making a simple parser for it (in whatever programming language i want!)
-once the note should have a relationship to another note or otherwise do something more, export to org file, and use org/org-mode-style links
+once the note should have a relationship to another note or otherwise do something more, export to org file, and adopt org/org-mode-style links
 can use both emacs and logseq (and working copy!) on mobile devices
 can continue to use emacs for all things text related, and have the power of emacs, and my own customizations, and build my own customizations for personal writing/expression within it
 
@@ -53,20 +53,27 @@ formats:
   - primarily used in emacs via org-mode
   - not as ubitiqous as markdown, so not all apps would support it
     - also, **it's particularly difficult to parse**
-
-asciidoc
-  - markdown with more features, a single standard version, slightly before markdown was ideated
-    - seems better than markdown..??
-  - ruby parser/exporter: asciidoctor
+  - ~2003
 
 markdown
   - current standard
     - though, beyond the most simple features, there is no standard (and still isn't according to the main author)
     - commonmark became the standard markdown variant
       - most uses of markdown use a variant of this (discord, github, other chat apps, etc.)
-  - not too bad, but i prefer my own expression
+  - **not too bad, but i prefer creating my own expression**
   - won the war against asciidoc and restructuredtext
+  - ~2004
 
+
+dead formats:
+asciidoc
+  - markdown with more features, a single standard version, slightly before markdown was ideated
+    - seems better than markdown..??
+  - ruby parser/exporter: asciidoctor
+  - ~2002
+
+restructuredtext (rst)
+  - was used in the python world
 
 
 apps:
@@ -83,8 +90,9 @@ apps:
   - deep emacs integration
     - and another reason to use lisp :)
   - no seperate mobile app, would just have to run emacs on it
-    - **can use a terminal app (termux, termius, iSH) and install emacs**
+    - **can use a terminal/linux-vm app (termux, termius, iSH) and install emacs**
     - **logseq treats org files equally as markdown**
+      - ..or used to..
 
 **obsidian**
   - current king of simple note-taking (though got nothing on org-mode)
