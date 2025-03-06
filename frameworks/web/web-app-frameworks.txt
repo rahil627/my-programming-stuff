@@ -269,9 +269,18 @@ newer rust web frameworks
 
 
 a few current front-end frameworks:
-NOTE: **DON'T NEED A FRONT-END FRAMEWORK, stick to plain css/js**
+NOTE: **DON'T NEED A FRONT-END FRAMEWORK, stick to plain css/js**, then modularly add tailwind css and alpine
   - https://elixirforum.com/t/thoughts-and-feeling-about-mixing-elm-with-phoenix/36647/5
     - "Elm (as well as React and nearly all other FE frameworks) manages its own application state and you absolutely should have a solid usecase that justifies introducing this complexity. The main reason one uses these frameworks is to provide a user experience where interactions feel instantanious. My feeling is that this is, in most cases, not enough to justify introducing what is essentially distributed computing."
+
+**tailwind css**
+  - simplifies css
+  - can inline with the code
+  - used by phoenix by default
+
+**apline**
+  - when you just need to add a little interactivity, can try this
+  - works well with phoenix, but now with live-view.js, no need
   
 **svelte**
   - the current hot react-like contemporary js framework

@@ -1,5 +1,19 @@
-i'd personally choose between one of these two:
 
+jekyll
+  - the OG
+'
+bridgetown
+  - jekyll seems abandoned, so the ruby community continued development with this branch
+  - allows the option to convert to roda framework
+
+11ty
+  - the main javascript one
+
+hugo
+  - go, fast but kinda weird experience having to compile it everytimei
+  - also a weird choice in language..
+
+to try:
 Nice, haxe, a simple one!, including a cli
   - https://github.com/gmisail/Nice
 
