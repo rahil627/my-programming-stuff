@@ -1,8 +1,20 @@
 
 
 post-rust-conclusion (10/2024):
-still phoenix (with it's default stack) for nearly all cases, from small to high-throughput/traffic to massive, and maybe even static. also, by the time you've got a product, live-view-native will be more developed..!
 
+still phoenix (with it's default stack) or asp.net for all cases, from small to high-throughput/traffic to massive, and maybe even static. also, by the time you've got a product, live-view-native (for mobile) and blazor will be more developed..!
+
+roda is still great when you want to make a tiny app from scratch, **a single file**, especially when you don't need anything from the beginning. Very cool DIY feeling. But, you could probably build an empty phoenix project and have just about the same minimal setup.
+
+x/rails is still great, easier to grasp than phoenix/elixir, but only if that's too overwhelming, or if you are used to using ruby, as phoenix fixes a lot of problems rails had. Also, rails can't compete with live-view. Also phoenix will get a type system soon!! So.. no. Just stick with elixir.
+
+haxe to avoid javascript and have static types (and good compiler errors!) and advanced language features
+  - html5 + haxe/http/node.js for the simplest gui apps (via html form tags)
+  - haxe-ui->anything + node.js for simple gui apps
+    - systems programming style! **NO HTML/JS!!**
+    - because haxe-ui can be used for any back-end, it could be used within any game engine (drawn via js canvas)!! or just html
+  - haxe + react bindings?
+    - maintained by rudy, but seems a mess.. just use js at this point..
 
 special cases:
 static site generators for simple static sites
@@ -30,15 +42,21 @@ roda/ruby
 haxe-ui
   - to avoid web front-end altogether
     - and it's perfect for this..!
-  - **back-end server (tink libs) probably not as well maintianed..**
-  - native web and native desktop!!
+  - integrates with node.js (in the std lib!)
+    - can piggyback on the most used server tech, without using js!!
+  - **just about every game engine could be used**
+    - **very cool web server / game stuff could be done!!**
+      - use heaps or ceramic!
+  - native web (html not canvas drawn) and native desktop!!
+  - option to port to electron for desktop apps
+    - use deepnight's electron-base as a template
   - <3 haxe
-flutter (or some rust framework) 
+x/flutter (or some rust framework)
   - for a cross-platform all-in-one gui solution, particularly for **mobile devices**, (vs phoenix live-view-native)
   - see [app-frameworks]
   - also good for using a single language to do everything
     - flutter for simplicity, rust for incredible libs
-  - single-file web-sites!?!?
+  - **single-file web-sites!?!?**
   - still pretty experimental as of 2024
   - still better than it's alternatives in rust, C#, etc.
 
@@ -61,7 +79,10 @@ conclusion:
 "back-end" routing:
 
 every langauge has a server, so really cuold choose anything, but more important is that it's in a language and framework that you'd want to use, and makes you happy... and stable
-    
+
+**ASP.NET**
+  - familiar C#, compiled (therefore easy to debug!!), the best tools, front-end wasm potential (blazor)
+
 **phoenix**
   - heavy traffic: parallel, etc.
   - a successor to ruby's back-end frameworks (rails), yet maintaining the simplicity of ruby's micro-frameworks (roda)
@@ -96,8 +117,9 @@ TODO: merge with above
     
 x/rails
   - superceded by phoenix
-  - still great if you remember/use ruby, and still probably faster than writing elixir... but really should use phoenix
+  - still great if you remember/use ruby, and still easier to learn and faster to use than writing elixir... but really should try to use phoenix first
   - for big stuff
+  - magical (code is more mysterious, less explicit)
     
 
 
@@ -163,24 +185,68 @@ see https://web-frameworks-benchmark.netlify.app/result
 
 the frameworks:
 
+red (language)
+  - not really useful for web, just native gui
+    - https://re-bol.com/rebol_quick_start.html#section-10
+
+**CLOG**
+  - **common lisp**
+    - ...this is amazing..! lisp via web-sockets
+    - lisp from the server interacts with an interface on the browser, which displays the gui and contains a javascript client to continue communication
+      - similar to live-view
+    - **possibly the most fun way to learn, practice, and use lisp..! very very practical for rapid development of little apps**
+      - **NO HTML/JS/CSS** necessary
+  - https://www.reddit.com/r/lisp/comments/ge27h3/where_to_go_to_learn_web_development_in_common/
+    - start with hutchentoot (routing server), made a macro to input HTML into lisp, CLSQL, then go from there
+    - parenscript to compile expressions to javascript
+  - otherwise, lisp doesn't have many popular frameworks, instead, you must go the way of your own lisp ;)
+    - radiance, caveman2, lucerne
+
+haxe-ui
+  - (see above in conclusion)
+  - haxe-ui solely provides the gui, which'll work on a local browser or natively, but requires a http server
+    - haxe's http lib seems updated, why not just use that..?
+    - can use tink_http to abstract http client
+  - haxe doesn't have a complete web framework, nor even a popular routing server...you either DIY or rely on targeting other languages' frameworks..?? particularly node, but possibly java (via jvm) and PHP (dropping support?) too
+    - this makes it a very DIY, modular path, which is the ethos of haxe
+  - can use haxe for front-end and back-end!!
+
+
+**ASP.NET** (TODO: where did this entry go..??)
+  - **web for systems devs**
+    - thank goodness!
+  - choice of either classic MVC, server-side rendering PWA, client-side wasm
+  - **Razor components are shared across them all**
+  - **Blazor via wasm (web assembly), has the potential to allow one to use C# for the front-end**
+    - currently no hot-reloading
+      - as you'd have to compile the front-end every-time too
+    - as of 2024, still considered not for production
+  - **Razor Pages, an interactive server-side rendering functionality similar to phoenix's live-view**
+
 **elixir/phoenix**
-  - **currently the best back-end solution**
+  - UPDATE: will add gradual typing soon (like haxe, with a "dynamic" type)
+  - along with ASP.NET, currently the best back-end solution
+  - can use anything that compiles to BEAM bytecode!!
+    - gleam for static-typed, functional lang
+    - LFE for lisp
+    - luerl for lua
   - classic strict MVC framework and file structure
     - which means hopping around several files (router, database table, html template, server-side functions)
     - but this it's also just how web works, **no bloat**
     - still quite compact
   - **good code generation for most boiler-plate crap**
-  - though you can use any front-end solution, uses tailwind-css, alpine.js(?) by default
-  - includes a template system (EEs), successor to ruby's ERB template system
-  - has an additional learning curve for functional programming, but it solves the problem of server request handling perfectly
+  - though you can use any front-end solution, only uses tailwind-css by default
+  - includes a template system (EEx), successor to ruby's ERB template system
+  - has an additional learning curve for functional programming, but it's part of the solution to serve/handle a massive amount of requests
   - "Phoenix is great, it has integration with everything you would need for back-end web development. Using Ecto for database communication makes things very easy on that front. The web pages have pre-rendered HTML but then upgrade the connection to WebSockets, so you have the advantages of both server-side rendering and client-side web apps. Scaling is built in the Erlang VM."
   - "The way I look at it is Phoenix is equivalent or better to anywhere along the scale of a ruby project that is built directly on Rack -> Sinatra -> Rails. It is completely modular and you can strip it down to effectively just using plug (rack like low level) to piecemeal adding the bells and whistles (Sinatra -> Rails) to even more heavily extending it."
     - https://www.reddit.com/r/elixir/comments/d8r7ob/is_phoenix_to_elixir_as_rails_is_to_ruby/
       - very good comparison between ruby and elixir frameworks
       - Plug == Rack (routing), ecto == ROM (db), Phoenix == Roda (with RoR scaling) (a minimal complete web framework)
   - https://news.ycombinator.com/item?id=34530052
-    - phoenix is a life-changing upgrade from older frameworks
-
+    - phoenix is a life-changing upgrade from older framework
+  - can run on the tiniest, cheapest servers
+    - light-weight processes run concurrently on the actor-model model, where each process is isolated, communicating by passing async messages
   - **phoenix liveview**
     - "Phoenix[ LiveView] is actually both. In short it handles things a bit differently. Each client gets a websocket connection to the server where the state lives, Phoenix adds some JS glue on the front-end so that when state on the server changes it streams a diff to the front-end that updates the state on the front-end. It's actually very very cool! Gives you a bunch of advantages."
      - livesvelte
@@ -195,28 +261,44 @@ the frameworks:
         - https://github.com/woutdp/live_svelte
   - **phoenix liveview-native**
     - re-use phoenix code to ship to native ui
-    
-    
+
+**ruby on rails**
+  - *the* classic web framework
+  - **magical**
+    - **very easy and quick to jump into as it's very opinionated, and as long as you just follow it's conventions, it'll do the rest for you**
+    - this, combined with the magical beauty of ruby, really makes it feel really special, fine taste in design (especially when compared to .NET!)
+  - "majestic monolith"
+    - https://m.signalvnoise.com/the-majestic-monolith/
+    - for a small team, this makes more sense than micro-service architecture
+  - https://world.hey.com/dhh/the-one-person-framework-711e6318
+    - rails 7 gets closer to being "the one person framework"
+  - https://elixirforum.com/t/rails-and-phoenix-as-one-person-frameworks/44779/14
+    - rails is the best solution for gettings to minimum viable product, but maintaining it sucks due to updates breaking code
+  - a CPU hog and a memory hog
+    - in ruby, each request is generally run on a seperate thread or process, thus eating up CPUs and memory
+    - ruby's concurrency relies on/uses the OSs thread model, which can be heavy and cumbersome to use
+  - ruby was intially built to be stateful, and later, they added things like turbo/stimulus/hotwire to make it more stateless, but it goes against it's natural design
+
 **roda/ruby**
-  - NOTE: surely out-dated as it's not multi-threaded..?
-  - the classic micro-framework
+  - the classic micro-framework (successor of sinatra)
   - the prettiest solution (see generated app.rb), no MVC pattern
+    - incredible for tiny one-file apps!
+    - **similar to dragonruby, you have complete freedom to design your own architecture**
+      - only the DSL for routing is given, the rest is plug 'n play
   - even includes a **choice of templating system** (just as jekyll does): simplify writing html/js/css, and with your choice in style!
-  - you'd still have to write html/js though :(
   - see this example: https://github.com/katleiahramos/Sinatra-Capsule-Wardrobe-App/tree/master
   - an upgrade from sinatra, making it more modular
     - "Roda was developed mostly to address common frustrations people had with sinatra. While I appreciate sinatra's seminal role in popularizing the "microframework" routing approach, which can still be felt outside of ruby, it really didn't do much to address that point where your barebones POC needs to be a bit more robust, at which point you'd have to rewrite everything from scratch in a new framework. Roda excels at that, by providing the vanilla "microframework" XP from the get go, while providing the more robust features as "opt in" plugins that you can pick up as you need."
  - "I use Roda in all of my applications. It’s solid and feature rich. Since it’s a library for the routing layer, you will also need other libraries to build a full blown application. If you want high flexibility and want to define your own app architecture, then Roda can be a great library for solving the routing feature."
     
 x/grape, hinami, cuba and other "opinionated" ruby frameworks
-  - between roda and rails
-  - it seems better to just start with roda and make your own opinion
+  - all fit somewhere between roda and rails
+  - it seems better to just start with roda and make your own opinion..
 
-haxe
-  - (see above in conclusion)
-    
 flutter
   - see [app-frameworks]
+  - web performance is it's greatest weakeness (it excels at rapid mobile dev)
+  - very limited front-end compared to using js (limited to using it's component system)
   - **almost NO HTML/CSS/JS!!!**
   - compiles/transpiles to js (and now web assembly too!)
   - coming soon: **interop with js**
@@ -227,21 +309,6 @@ flutter
     - https://github.com/flutter/samples/tree/main/veggieseasons/lib
   - dart language directly competes with haxe, but has no other use/community, and feels meh
  
-red (language)
-  - not really useful for web, just native gui
-    - https://re-bol.com/rebol_quick_start.html#section-10 
-
-**lisp**
-  - **CLOG**
-    - ...this is amazing..! lisp via web-sockets, rendered via canvas (thus inefficient as flutter..)
-    - **possibly the most fun way to learn, practice, and use lisp..! very very practical for rapid development of little apps**
-  - https://www.reddit.com/r/lisp/comments/ge27h3/where_to_go_to_learn_web_development_in_common/
-    - start with hutchentoot (routing server), made a macro to input HTML into lisp, CLSQL, then go from there
-    - parenscript to compile expressions to javascript
-  - otherwise, lisp doesn't have many popular frameworks, instead, you must go the way of your own lisp ;)
-    - radiance, caveman2, lucerne
-    
-    
 newer rust web frameworks
     - **i just don't see how any could even compete with BEAM/OTP, unless they re-write it, also, i much much prefer writing a beautiful functional language over rust!!**
   - several rust web frameworks (and cross-platform app frameworks that include web) are currently being developed, in high competion, and there will only be a few winners:
@@ -318,17 +385,6 @@ marko
 history:
 
 back-end:
-ruby on rails
-  - *the* classic web framework
-  - magical
-  - "majestic monolith"
-    - https://m.signalvnoise.com/the-majestic-monolith/
-    - for a small team, this makes more sense than micro-service architecture
-  - https://world.hey.com/dhh/the-one-person-framework-711e6318
-    - rails 7 gets closer to being "the one person framework"
-  - https://elixirforum.com/t/rails-and-phoenix-as-one-person-frameworks/44779/14
-    - rails is the best solution for gettings to minimum viable product, but maintaining it sucks due to updates breaking code
-
 ruby/sinatra
   - replaced by roda
   - made "micro-frameworks" popular (python/flask, js/express, etc.)
