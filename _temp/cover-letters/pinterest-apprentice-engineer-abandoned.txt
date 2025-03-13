@@ -1,0 +1,9 @@
+i'm old now. I programmed when i was young, too young. I did it in order to make video games and later, more experimental new media games. It was just a means to an end. It was a struggle, but i made a few things. Then I went to rural/remote Asia. I found the way i want to live there. But fate threw me back into America, where i now fight assimilation, trying to figure out where and how to live here again..
+
+so that when I do go back to Asia, I can realize these ideas more easily. It's just tech products for empowerment, farmers, homesteaders, nature, anarchy, community, crafters, etc.
+
+Now that i'm here though, I feel that perhaps I can finally learn to make web apps. I've avoided web dev in my past because my goal was to make games. I relied on the compiler to help me, or even used non-programming game engines, and kept a distance from the nasty javascript world (--ruby in contrast is very neat, which I discovered much later in life).
+
+at first i was thinking, maybe i could work and make the web apps after work. I was wrong. The last job cleaning out student dorms was really rough on the body. Now, doing delivery on my little vespa, i still struggle to have enough time. I felt that maybe just doing a junior web dev job would work. And i'm quite fond of ruby, and want to use elixir/phoenix for my own web apps, so..
+
+anyway, there isn't any money to be made with my ideas. It's just to aid the people i plan to live with for the rest of my life, after one last job, and i hope this can be my last job. After this, i can happily go back and take care of myself, my friends, my people, with enough savings to keep me safe in case of emergencies.

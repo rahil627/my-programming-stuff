@@ -1,0 +1,18 @@
+i've come back to America after having lived in rural towns 'n villages in Asia for quite some time, and now that i'm in this world, my mind has naturally gone toward working on some ideas i've gathered over the past decade. For the most part, i can actually make all of the products myself, and plan to, but then i thought, wouldn't it be nice to be around people that do this too? I'm a highly social person, lived much of my life within the heart of various diverse communities. It's where and how i flourish. So, instead of doing this alone, why not be at the center of it all, alongside others, doing the same, practicing, everyday?
+
+my main ideas are mostly simple web apps, and i haven't made a web app since my first job a decade ago (using asp.net), or that hacker-news-like site i made in college farrrrr before i knew about hacker-news (using LAMP)! Recently though, i stumbled upon a great little DIY-style game framework called dragonruby. I immediately fell in love with the ruby language as it accomplished the seemingly impossible: make game-making feel *magical*! And so, now, i decided to use rail or phoenix/elixir and roda for my own web app ideas.
+
+but now that i'm here in California, i figured, i might as well try working on/maintaining some of those old, massive, SF, dotcom era rails web app code-bases for practice. ;) I've read nightmare things about maintaining them once they scale too big, especially when updating them, but for little apps such as this lovely little YC web-site i'm currently writing this text into, i think it'd be a perfect beginning! And for most of my own ideas, i think it'd be perfect too.. Though i've loathed web dev--especially javascript--all my life, i've now finally come to terms with it, and must master it asap.
+
+i'm neither a web dev by profession nor even a great programmer, but i feel i share some interests with the hacker news folks. My hyper-focus on ui/ux has led me to use some niche, possibly "hacker" tools: text editors (doom-emacs + meow-mode, helix, focus, zed), programming languages (haxe, ruby, elixir, jai (soon!), lua, lisp), and game/media frameworks (various haxe frameworks, openframeworks, dragonruby). So, though i'm not a hacker in the SF sense, i've been down some tech rabbit holes looking for tools with some decent taste in design.
+
+lastly, i've lived in SF thrice before, and i've spent quite some time at the nearby Noisebridge, so i will feel comfy hanging out at YC by day and NB by night, perhaps going back to making some funky physical game controllers again, on the sunny-side of SF. Go checkout the table arcade cabinet we made! :D ..i def have to modify tetris/panel attack for it!
+
+and of course, i wouldn't mind starting with a junior salary ($70k?). I swear i'll get back into the grind!
+
+
+
+
+
+
+. I only learned how to program in order to make games, as that was and still is a childhood passion that i hold close to my heart. The height of my design and tech career came in NY during the height of the DIY scene in Williamsburg ~2012-13, when indie games were coming up and organizers from the DIY scene were collaborating on wild dreams. Since then, i've been..
