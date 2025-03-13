@@ -441,6 +441,8 @@ x/sublime text
 ## old standards / history:
 
 ### basic gui classics:
+**komodo-edit**
+  - my fav from college ~2007
 kate
   - a linux classic?
 notepad++
