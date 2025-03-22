@@ -1,0 +1,15 @@
+heyo.
+
+i stumbled upon this company through y-combinator. I was a bit hesitant to apply for the product designer job, but gladly discovered there's a community manager job on the [notion--lol] web-site!
+
+this product really resonates with me, though i'm not a gen z at all: i'm just old! Old enough to stop caring about Facebook within a year it came out, and going back to long threads on gmail, a web forum my friends and i built and ran, AIM group chats, and house phones. Fast forward to now, and there's too many messaging apps (with each country trying to control data and advertise), instagram, discord, in addition to video chat, phone, and text.
+
+but out of all of them, i'm quite fond of discord as i'm nostalgic of predecessors, as i grew up as a gamer, chatting with my various groups of friends. Discord went much further in the realm of building community. It's like a digital home in there, full of beautiful, inclusive people welcoming folks into whatever digital communities they've built! The app itself is a technical marvel. However, it's missing the immediacy of just plain old hangin' out with friends and video chat. It's too complex. And i don't want to whip out a whole computer. Neither do most of my friends and family, most of whom solely use messaging apps (which have video chat). So i'm curious about the direction and potential of this app. I wonder if it really could replicate the feeling of hangin' out with a group of friends, and friends of friends, in a public space--or several public spaces!!--as i've lived in various public spaces/communities my entire life... anyway!~
+
+i'm a sort of generalist that naturally maintains a view from the customer's perspective, designing from bottom-up, making sure the entire product runs, has a functional yet experimental taste in design/ux, and have the ability to do tech stuff as needed.
+
+unfortunately, i'm not a web or mobile dev, and i haven't done it for a long, long time, and anyway, the tech stack i recently chose for my own projects is much simpler: phoenix/elixir. Discord got away with react native, but i think will be an interesting one, with webrtc(?) on native apps? Not so fun. ;( Thus i'd like to see if maybe i've got a shot at this community manager job, and see if i can fight for designs from that position, as opposed to being the product designer.
+
+the main problem i foresee is that i don't look forward to living in neither LA or NYC. I'm currently wandering the coast of Cali for small towns to live in, but I normally live in rural/remote Taiwan, and my friends are there, so working remotely would fulfill all my dreams! I can try stomaching some place in LA or migrating to jackson heights/queens, but... i fear they don't have the energy they used to have.. but maybe someone can convince me by introducing me to the underground DIY art scenes. ;)
+
+i've attached my resume. Feel free to contact me via e-mail, as i'm about to change phone providers.

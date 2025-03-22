@@ -1,0 +1,9 @@
+heyo.
+
+i'm a very generalist software / community support person, and this job seems to fit my nature pretty damn well, being all over the place, doin' a bit of everything at once, learning bits 'n pieces along the way. Naturally i'd be constantly talking to the consumers, designing the product based on their perspective, jumping in the code to see what's going on/wrong, maintaining/updating documentation, 'n sifting/talking on the slack channels. It really sounds like an ideal job for my personality(!): a tech support person.
+
+i'm really intrigued by gitlab because it uses ruby, which is a language i'm quite fond of and admire (and it's still going!: prism, yjit with ruby, typing soon??). I haven't used rails myself, as I recently personally chose phoenix/elixir instead, however, I still prefer working with code-bases in languages that I enjoy! And I hope to continue using ruby via dragonruby, my favorite game engine! :D
+
+the only skill listed that i have no experience with is container orchestration (kubernetes, ansible, etc.). As a game maker, I just never had a need for it. Games either run natively or in the web. No need for a container!
+
+i'm in San Diego at the moment, but will likely ride back up the coast soon, so that I can be near SF! Just e-mail me, as my phone may die soon!

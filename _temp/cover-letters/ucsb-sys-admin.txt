@@ -1,0 +1,5 @@
+heyo,
+
+i was lookin' to transition from a very specific physical input game niche to a more general sys admin job such as this one, or web app dev with particular tech i like, rails/ruby and phoenix/elixir, and/or simple C, as i plan to make a few web apps 'n games soon myself using that tech. The main "preferred qualification" i'm missing is experience with container enterprise orchestration and cloud computing, as i mostly do small projects entirely on my own, and have no need for such tools (i've only used more consumer-friendly digital ocean, linode, fly.io, etc., not AWS/GCP/etc.). I'm no sys admin by profession, but i like the simplicity of emacs, linux cli, small scripts 'n programs, so i just feel it's a job i might enjoy. I'm in San Diego at the moment, where the sun just came back up(!), but i'm free to relocate wherever. I'll likely ride back up the coast to Santa Cruz soon to be near the startup cultural center there. I'm keepin this letter short, so just let me know if you want to know anything else. My local phone  number will change soon, so just e-mail me. Doing computer stuff near the beach sounds nice!~
+
+ra
