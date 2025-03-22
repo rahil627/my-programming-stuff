@@ -281,10 +281,15 @@ haxe-ui
 
 **roda/ruby**
   - the classic micro-framework (successor of sinatra)
+  - **completely modular** (plugins)
+    - only the DSL for routing is provided, the rest is plug 'n play as you need
+  - uses rack gem
+    - a web server-web framework interface
+      - supports all common servers, from nginx to AWS stuff
+      - supports all common ruby frameworks, from roda to rails
   - the prettiest solution (see generated app.rb), no MVC pattern
     - incredible for tiny one-file apps!
     - **similar to dragonruby, you have complete freedom to design your own architecture**
-      - only the DSL for routing is given, the rest is plug 'n play
   - even includes a **choice of templating system** (just as jekyll does): simplify writing html/js/css, and with your choice in style!
   - see this example: https://github.com/katleiahramos/Sinatra-Capsule-Wardrobe-App/tree/master
   - an upgrade from sinatra, making it more modular
