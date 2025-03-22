@@ -382,7 +382,8 @@ marko
 
 
 
-history:
+
+history / not interested:
 
 back-end:
 ruby/sinatra
@@ -409,8 +410,13 @@ react
   - facebook
     - maybe the worst of the giant tech companies..??
     
-    
-    
+
+PHP
+  - laravel
+    - 2011
+    - based on symphony
+      - 2005
+
 
 
 just some notes:
