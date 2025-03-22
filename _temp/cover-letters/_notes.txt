@@ -1,23 +1,4 @@
 
-TODO ASAP:
-  - update resume on jobs i applied to
-    - added QA & release engi
-    - rewrite the babycastles portion
-  - 1. fly.io
-    - test
-  - 1. discord web game advocate
-    - TODO
-  - y-combinator
-    - product engineer for the new job-searching platform
-
-ycombinator startup funding
-  - very easy to apply!
-    - just send an idea, even if it's the "late deadline"i
-      - DONE
-    - seems to prefer having a co-founder.. :/
-      - maybe can ask Sam
-        - yeah, he would be perfect!! and he lives in SF!
-
 
 todo:
   - turn on phone
@@ -32,58 +13,121 @@ todo:
     - password
     - transfer money
 
-job sites for smaller companies (ordered)
-  - game jobs sites
-  - startups
-    - **ycombinator**
-      - the OG
-      - has a jobs pagei
-        - TODO: try this now
-      - has a new job matching app
-        - TODO: finish profile
-    - wellfound (angellist)
-      - looks legit, it's just that.. the startups seems so boring.. :/
-    - try other some startup sites?
 
-  - **zensearch**
-    - this site is great!
-  - something-ly
-    - TODO: try next
+TODO ASAP:
+  - update resume on jobs i applied to
+    - rewrite the babycastles portion
+      - add videos
+    - fix the noisebridge part / sub-title part
+
+
+dream jobs / goal:
+  - *ux designer for games*
+    - sounds even more satisfying than even design studio work, as i could really spend time honing, perfecting ui/ux design/controls
+
+temp $ jobs:
+  - web product startup jobs using the following tech:
+   - *phoenix/elixir*
+     - gradual typing coming soon!
+     - live-view-native in dev!
+     -> making my own web apps
+   - *rails*
+     - if no elixir jobs
+     - or if i really like the company
+     - or if it's really small / as founding engineer
+   - asp.net
+     - meh, might prefer rails, though probably better for big code-bases
+
+
+
+
+ycombinator startup funding
+  - very easy to apply!
+    - just send an idea, even if it's the "late deadline"i
+      - DONE
+        - damn
+    - seems to prefer having a co-founder.. :/
+      - maybe can ask Sam
+        - yeah, he would be perfect!! and he lives in SF!
+
+
+
+
+
+
+
+
+
+job sites for smaller companies
+  - through friends
+  - direct
   - linked-in
     - TODO: ugh, may have to actually make an account..
   - craigslist
     - only the true gangstas use this
   - indeed
-    - meh
+    - meh, seems useless
+
+  - game studios
+    - workwithindies
+      - TODO: keep an eye out for ui/ux design
+    - gamejobs.co
+      - lots of big companies.. :/
+
+  - design studios/agencies
+    - TODO: ??
+
+  - startups
+    - *ycombinator*
+      - the OG
+      - *hnhiring*
+        - extracts from hacker news whoishiring
+      - has a jobs page
+        - TODO: try this now
+      - has a new job matching app
+        - TODO: finish profile
+      - co-founder..? meh :/
+    - *remoteok*
+      - must be super competitive..
+    - zensearch
+      - this site is great, but the companies are sooooo lame!
+      - great filters, prioritize by keywords
+    - wellfound (angellist)
+      - looks legit, it's just that.. the startups seems so boring.. :/
+    - something-ly
+      - TODO: try next
 
 
 job titles:
-  - designer
+  - game ui/ux designer
+
+  - product designer
+  - product manager?
 
   - visualization
 
-  - systems/server admin(istrator)
+  - systems/server admin(istrator)?
   - IT?
-  - devops
+  - devops?
 
-  - ruby
-  - elixir
-  - .NET
+tools:
+  - *c* > jai > (rust?) > c++
+  - elixir (phoenix)
+  - ruby (rails)
+    -> *dragonruby*
+  - c# (asp.net)
+    -> unity, fna/monogame
 
 remote jobs
   - companies
-    - TODO: canonical (ubuntu)
-      - junior cloud field engineer
-      - linux desktop engineer
-    - social discovery group
     - wikimedia (wikipedia)
-      - TODO: software engineer for the content transform team
+      - todo: software engineer for the content transform team
       - movement communications specialist, product and tech
     - duolingo
     - gitlab
       - also made with ruby on rails!! and uses ruby scripts too!
       - support engineer (worldwide/remote)
-      - TODO: others?
+      - todo: others?
 
 schools
   - 1. edjoin.org
@@ -104,10 +148,11 @@ schools
       - only school of medicine
 
 
-games
-  - what's that new site..?
 
 
+tech i use and love:
+  - TODO
+  - voice dream reader/writer
 
 
 favorite big tech:
@@ -116,22 +161,28 @@ favorite big tech:
 
 y-combinator
 
-discord
+*discord*
+   - python, elixir, rust, react, react-native, electron
+twitch
 craigslist
   - advertises on craigslist ;)
 wikipedia
-twitch
+  - php :/
 youtube
   - just solid tools, no agenda (not much at least..)
+github
+  - rails!
+
+doordash
+*etsy*
+  - great for women
+  - php ;(
 
 netflix?
   - sold out
   - trying to do game stuff
     - has game studios
 
-doordash
-etsy
-pinterest
 
 
 
@@ -145,8 +196,10 @@ amazon's products are garbage (kindle, fireTV, alexa, echo frames?, etc.)
 facebook? ew!
   - vr
 apple is closed off
-microsoft is the winner.
+*microsoft* is the clear winner
   - good recent coop (or co-opt?) of open-source and linux stuff
     - linux sub-shell
     - vs-code
     - .NET core
+    - C#
+    - xbox
