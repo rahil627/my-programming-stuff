@@ -1,3 +1,16 @@
+
+j blow on mookash podcast about jai
+  - C macros straight up replaced a string, making it powerful, as you could just replace half-identifiers, half-expressions, or anything. It doesn't have to be compilable code. But that's also what made it completely un-debuggable. Non-hygenic: global variables in the namespace are used, and must be careful.
+  - hygenic macros, have it's own name-space
+  - send as a syntax tree, and can move nodes around, similar to lisp
+  - why choose to have both macros and compile-time execution?
+    - to have the ability to invoke it anywehre in the middle of a program, in addition to a separate place elsewhere
+  - **problem not having static typing: type an undeclared identifier, and it takes a half-hour to debug, because i tried to use it but it was an empty string, whereas in a statically-typed langauge it takes a 1/10th of a second.**
+  - the first computer class he went to at Berkeley used **Scheme!! but debugging it was a tremendous waste**
+    - this is by the way of the SICP book, that's what his first class was, and he would NOT teach that way, at all.
+  - linux sucks, because open-source sucks. yep
+    - but nowadays, propietary windows and mac suck too!
+
 https://github.com/learn-anything/programming-languages#multi-paradigm
   - ??
   
@@ -12,8 +25,17 @@ see [programming-concepts]
 **the further things get away from C, the less optimized it will be, because hardware is optimized for C, no other language, with the main problem being cache misses (fetching some data from RAM as opposed to one of the memory caches nearby the CPU), especially in the case of games.** **Haxe, being a language made by a game-dev, provides complete control over C, and is able to create macros to generate things like C-structs, C-arrays, and structure of arrays. That is a rare exception**. Otherwise, the **C-like languages (jai, zig, odin) are more cognizant of hardware**.
 
 
-# the opinions of more experienced programmers
 
+## another thought
+my desire for good design in a language is wrong. It just has to be C or C-like.
+
+i feel ruby is the best language, but, it suffers from being farrrr away from C. Even it's simplest data types: int, is 64-bit object, and can't be shortened to 8 bits, which would then be optimized by hardware (SSE, SIMD, etc.). The more abstraction, the more problems. It's human to want a nicely designed langauge, and ruby accomplishes that, but once things require good performance, it all comes down to C.
+
+ruby is in a constant battle between being the ideal language designed for humans, providing freedom and power in the neatest form, and being performant. It's not easy.
+
+perhaps the generation of optimize C is the way to go, as Haxe does via hashlink vm/byte-code to C compiler, then going through the llvm. Using ruby/yjit or haxe/hashlink (jit) for dev, llvm for release.
+
+mruby, surely, has the best solution as far as ruby goes..
 
 ## a thought
 likely re-occuring from 10 years ago, to now, again, as i revisit technology
@@ -637,8 +659,17 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
   - a scripting language that people seem to really *love*
     - **my fav scripting language, and possibly my favorite language overall :o**
     - the community is built around the love for it and the community, which is healthy
+      - ruby is not dead
   - **DRAGONRUBY**
-    - though, technically a fork of mruby..
+    - though, technically a fork of mruby.. see entry under [mruby]
+  - *has a much better leader than Google, not breaking the language as python did, but continously, slowly, developing over time*
+    - 3.4 tries to tackle the namespace problem, which was one of the main problems of ruby that was going to be solved in v2, but didn't as he didn't want to break it
+      - ruby has a global namespace
+        - hacky, but not so bad, just have to be careful, as one would in C
+        - mostly a problem if a lib/gem uses it
+      - *if a mixin contains two modules that share the same object names (functions, clases, constants), they could clash*
+        - this is the main thing to be careful about.. otherwise, most things are in modules or modules within modules..
+    - annotation, like python decorators / c# attributes
   - the frameworks 'n libraries seem to be more web-dev-oriented, mostly thanks to Rails, the language's premier web framework.., but also Jekyll (used by GitHub Pages), Roda (*this one looks amazing...*), Hinami, Middlemen (this looks like a good step up from Jekyll), and more..
     - there are two particular frameworks that compile to machine language: DragonRuby and RubyMotion, for cross-platform game and apps, deploying to just about any device! :o It sounds like haxe's frameworks! Unfortunately, they are closed-source, giving it a more closed-off, isolated feeling, and they cost quite a chunk of money to try...
       - rubymotion, unfortunately doesn't compile to windows (but it covers mobile and linux/mac)
@@ -665,15 +696,26 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
   - seems to have a **_quirky_, more diverse, rad community vibe, similar to Haxe :), but perhaps more accessible and diverse, whereas Haxe attracts just game-makers**
   - smalltalk-like object implementation allows you to even hack away at the language itself! you can even add methods to the main parent Object that everything inherits!! :o *everything is an object*
     - Ruby even lets you add a method to a single specific instance of a class
-  - Metaprogramming "so you can dynamically create / change / etc behaviors using anonymous methods, closures, etc." and also writing a DSL
+  - *Metaprogramming* "so you can dynamically create / change / etc behaviors using anonymous methods, closures, etc." and also writing a DSL
     - https://www.randomhacks.net/2005/12/03/why-ruby-is-an-acceptable-lisp/
       - a great read comparing lisp to ruby
     - **"Ruby makes hard things easy (think meta-programming, functional programming, etc). Bad programmers overuse it all the time (just because you can use the tool, you do not always have to), and other programmers suffer."**
     - "Ruby's "metaprogramming" is something Java, C# and JS don't do well -- dynamically redefining things during runtime. **Everything in Ruby, including literals and operators, can be redefined during runtime, because everything is an object, and every message passed to any object can be redirected, filtered, transformed ad hoc. It's not just classes can be modified. Specific objects can be modified. Well-crafted Ruby code breaks things up into mixins that can be composed together. The closest comparison is one of Ruby's inspiration -- Smalltalk."**
-  - Ruby 3 adds TypeProf, "a type analysis tool, which are the “first steps” towards a “future with static type checking, without type declaration, using abstract interpretation”"
   - Ruby 3, is 3x faster (was released just before 2021)
     - most performant libs have hand-written C in them, just as python does, so performance often isn't an issue anyway
-      - only function calls to C add up
+      - *only function calls to C add up*
+   - *adds TypeProf, "a type analysis tool, which are the “first steps” towards a “future with static type checking, without type declaration, using abstract interpretation”*
+     - *Matz hates type declaration*, and unlike python, doesn't want to use type hinting or decoration
+   - *prism, a new single header C interpreter, will soon replace the main Cruby impl*
+      - error tolerant, universal
+      - useful for LSP and code formatting (rubocop), where code is parsed very frequently
+        - originally, the tools used a different compiler (interpreter), but this effort would make this one universal, used as a compiler and across all tools
+        - error tolerant is useful for when you have multiple errors while editing a file and want to see them all, instead of just stopping on the first error
+        - 20,000 LOC!
+    - *ruby.wasm*
+    - *data class*
+  - *opal, a javascript transpiler* still seems up to date..!
+      - not sure how it compares to haxe, but cool for client-side logic!!
   - "monkey patching - "If you need a Class to work slightly differently, you can monkey-patch it (this can get dangerous, but sometimes it’s super useful) — you just re-define the Class, which “opens” it, define the methods you want to add, and they are implicitly added."
   - memory hungry
   - LIMIT: "GIL (global interpreter lock) - disable normal usage of multithreading."
@@ -688,7 +730,6 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
         - all platforms except windows :(
       - https://shopify.engineering/porting-yjit-ruby-compiler-to-rust
         - maxime writes a bit about porting from C to rust
-
     - artichoke (runtime)
        - a ruby made with rust
        - experiment with all sorts of possibilities: including native compilation, webassembly, etc.
@@ -697,7 +738,9 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
       - native compilation
     - GraalVM (runtime)
       - a VM for Java, and possible implementation for other languages: Ruby, Python, and Javascript, for example, are all official
-        - TruffleRuby is ~9x faster than CRuby, *so far*
+        - *TruffleRuby is near java speeds!!*
+          - but also *eats up 5-10x more memory*, and has *really slow startup time*, making it unusable for web servers and scripts, which are it's main uses
+          - *however, it could be good for games??*
           - https://github.com/oracle/truffleruby
           - https://eregon.me/blog/2022/01/06/benchmarking-cruby-mjit-yjit-jruby-truffleruby.html
         - allows one to use several languages and libraries together! :o
@@ -710,7 +753,7 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
   - opal, a ruby implementation that transpiles to javascript..??
     - https://www.reddit.com/r/ruby/comments/10b1ici/opal_v17_released_with_ruby_32_support/
   - although i missed this generation, i think i would have enjoyed this little world :)
-  - like Haxe, seems to have a nice cult community of hackers :)
+  - like Haxe, seems to have *a loving cult community of hackers :)*
     - this alone makes it much more appealing to me than the other pop general languages
   - GitHub and Shopify might be the biggest companies behind it :D
   - made by one Japanese guy, **for the sake of providing happiness/joy :)**
@@ -744,14 +787,19 @@ https://www.quora.com/Is-the-programming-language-Ruby-dead-It-seems-too-simple-
 
 x/Python
   - perhaps the most popular scripting language, even as of 2022(!!), in direct competition to ruby
-  - frameworks and libraries seems to be more scientific-oriented, with machine learning, ai, math, 'n so on
-    - lame people use it
-  - pretty mundane, can't go wrong with using this as a scripting langauge
+  - frameworks and libraries seems to be more scientific-oriented, with machine learning, *ai, math*, 'n so on
+    - *openai APIs*, numpy, tensor flow, plotting libs, jupyter, etc.
+    - *web frameworks: django, flask*
+      - for writing straight-forward APIs, leads to an easy re-write in Go
+    - *sys admin / devops tools: ansible*
+  - *pretty mundane, simple, straight-forward (procedural) can't go wrong with using this as a scripting langauge*
     - and therefore doesn't attract a rad, innovative community as ruby does
-  - "Much of the language consists of special cases rather than general features that combine in orthogonal ways." (as ruby does)
-  - the syntax is among the most readable, and it shows by it's popularity and love from first-time programmers
+  - *"Much of the language consists of special cases rather than general features that combine in orthogonal ways." (as ruby does)*
+  - *the syntax is among the most readable, and it shows by it's popularity and love from first-time programmers*
     - although, it's just a preference... **i def prefer delimiters over whitespace as delimiter**
       - there's also no real reason to limit to whitespace delimiting, as Haskell proves that it's possible to support both ways
+  - files are modules, which is lame, forcing you seperate code into many files
+    - maybe needed for local namespacing
   - actually more hacky than ruby, and not in a good way, but as product of it's bad development
     - https://www.quora.com/What-are-the-main-weaknesses-of-Python-as-a-programming-language
       - __something__
@@ -765,9 +813,9 @@ x/Python
       - "Lack of anonymous multi-line functions, combined with unintuitive scoping, has sent me scurrying to Node.js or Ruby time after time. Python syntax is great for a a pipeline of heavy computation, but becomes unwieldy when weaving together asynchronous calls."
       - I'd really prefer an easier way to figure out which exceptions a given class or function can raise. The only way I know of doing this now is to hunt through the source code or look in the documentation and hope that it's comprehensive in this regard.
       - Circular import errors. Imports are statements too, and they can fail if the objects they target have not been created yet. Compare this with languages that support separate compilation (C family and ML family languages), and can link at runtime without having to worry about the order in which things are defined.
-  - pypy, an especially fast runtime implmentation putting it at Lua speeds, but not so practical, as many libs many still not work with it
+  - *pypy*, an especially fast runtime implmentation putting it at Lua speeds, but not so practical, as many libs many still not work with it
   - Google, although, even they probably rewrote a lot of stuff in Go
-    - also in Google fashion, they broke the language-compatibility for the v3 update
+    - also *in Google fashion, they broke the language-compatibility for the v3 update*
     - Google just sucks at long-term vision, design, and maintenance.
 
 
@@ -1113,9 +1161,26 @@ https://www.reddit.com/r/Zig/comments/1c7s0pm/odin_vs_zig_for_a_hobby_project_cr
   - good info on zig and odin
 
 **Jai**
-  - see listing under [#C and its replacements]()
   - the only solution
   - word on the street: better than both odin and zig
+  - ~2x slower than optimized GCC
+  - much slower than TCC for unoptimized dev compilation
+
+
+**C**
+ - **a *very* simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
+ - frameworks: RayLib, not really the best for making frameworks, as it's lacking a lot of features; it'll more or less end up like RayLib: a ton of functions included in the top-level namespace, as there is no concept of namespace!
+ - manual memory management via "raw" pointers and the const key-word
+ - "Many people would tell you that the biggest burden when programming in C is worrying about buffer overflows and accidentally dereferencing null pointers. However, I think that what can make programming in C tedious on a day-to-day basis is that the **C language doesn’t provide many tools to manage complexity. There are no modules or namespaces**, so you have to prefix identifiers to avoid name collisions. You have to worry about the order of your declarations and adding prototypes in the right places. A lot of information is duplicated in various header files. Constants and macros use the C preprocessor, which can lead to strange bugs. There are no classes or interface types to cleanly encapsulate functionality, and there are no standard container types. We implemented our own dynamic array type, which we had to manipulate through awkward preprocessor macros with no type checking."**
+ - **_not_ object-oriented**
+   - and interestingly, it forces you to write in a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, you are able to do what is needed without thinking about how to do it. There's a whole philosophy about this vocalized by Casey Muratori and his hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
+ - no string class!, "C-strings" are just arrays of chars
+ - has header files, which is annoying, but it seems nowadays people just write everything in the header file..!?
+ - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
+ - OpenFrameworks also has Raylib's beauty (not sure if it's C or C++ tho..)
+ - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow
+
+
 
 **Zig**
   - a rough dev history full of rehauls
@@ -1190,19 +1255,6 @@ Nelua
   - compiler written in lua, and thus completely modifiable!
 
 
-**C**
- - **a *very* simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
- - frameworks: RayLib, not really the best for making frameworks, as it's lacking a lot of features; it'll more or less end up like RayLib: a ton of functions included in the top-level namespace, as there is no concept of namespace!
- - manual memory management via "raw" pointers and the const key-word
- - "Many people would tell you that the biggest burden when programming in C is worrying about buffer overflows and accidentally dereferencing null pointers. However, I think that what can make programming in C tedious on a day-to-day basis is that the **C language doesn’t provide many tools to manage complexity. There are no modules or namespaces**, so you have to prefix identifiers to avoid name collisions. You have to worry about the order of your declarations and adding prototypes in the right places. A lot of information is duplicated in various header files. Constants and macros use the C preprocessor, which can lead to strange bugs. There are no classes or interface types to cleanly encapsulate functionality, and there are no standard container types. We implemented our own dynamic array type, which we had to manipulate through awkward preprocessor macros with no type checking."**
- - **_not_ object-oriented**
-   - and interestingly, it forces you to write in a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, you are able to do what is needed without thinking about how to do it. There's a whole philosophy about this vocalized by Casey Muratori and his hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
- - no string class!, "C-strings" are just arrays of chars
- - has header files, which is annoying, but it seems nowadays people just write everything in the header file..!?
- - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
- - OpenFrameworks also has Raylib's beauty (not sure if it's C or C++ tho..)
- - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow
-  
 
 
   
@@ -1338,7 +1390,8 @@ TODO: merge with above
 ## others, not sure about..
 
 Raku
-  - most influenced by Perl, though it doesn't FFI it
+  - the Perl 6 branch
+  - most influenced by Perl, though it doesn't FFI it??
   - **"Raku can call Ruby, Python, Perl, Brainfuck, Lua, C, C++, Go, Scheme (Guile, Gambit), and Rust"**
     - wtf..??
 
@@ -1414,7 +1467,8 @@ Streem
 lua
   - extremely simple (only perhaps second to lisp), **a long-lived classic**
     - but unlike lisp, no macros :(
-  - the goat vm/compiler of all dynamic programming languages: LuaJIT, pretty much thanks to that one guy who made it
+  - *LuaJIT*: the goat vm/compiler of all dynamic programming languages, pretty much thanks to that one guy who made it
+    - the main lua branch is quite a bit slower, adding more features over time, making the LuaJIT branch a special, ultimate version
   - an all-powerful meta-data-structure: the table (and meta-tables!), from which you can implement any other data structure, making it a rather modular language
   - perfect for it's use case: embedded scripting, but
     - also great as a config langauge, compared to basic data serialization formats (json, toml, etc.)
@@ -1429,6 +1483,17 @@ lua
         
 **mruby**
   - PERSONAL: **magical. simple. concise. beautiful. powerful.** contains most of the the magic of ruby, probably discarding the terribly inefficient bits. **possibly the most fun way to make games..**
+  - *dragonruby*
+      - mruby fork that uses SDL, and LLVM, made for the dragonruby game engine
+        - because the SDL part doesn't change, you get the benefits of a scripting language: hot-reload, no compilation
+        - dragonruby/lightstorm, "a minimalistic AOT ruby compiler" (2024)
+          - uses AST/MLIR/bytecode (EmitC dialect) -> C
+            - some optimization for when you want to release a game
+  - a light-weight interpreter for ruby intended to be embedded into C/C++
+    - literally, throw the ruby code into a C function
+  - also has a light-weight *register-based* VM/byte-code interpreter to run byte-code: RiteVM, to run the code without compiling to C
+  - **can be used to compile ruby (CRuby) code**
+      - though, the process is long..
   - **consistent development and releases alongside ruby**
     - https://github.com/mruby/mruby/blob/master/doc/mruby3.3.md
       - New Platform: Nintendo Wii (#6086)
@@ -1447,7 +1512,7 @@ lua
     - https://github.com/mruby/mruby/blob/master/doc/guides/gc-arena-howto.md
       - some interesting bits by Matz on how the garbage collector works
     - fibers
-    - Matz is still behind it..
+    - still led by Matz!!
     
 
 
@@ -1538,18 +1603,21 @@ java
 
 perl
   - cryptically terse text-processer with a heavy emphasis on regex DSL turned into a general programming langauge
+  - dev branched at Perl 5, with Perl 6 becoming Raku
   - note: awk, a cli program, is similar, but never turned into a programming langauge
   - seems to have the reputation that only old veteran bearded linux hackers have ever mastered it
   - embeds/interops with C/C++?
 
-  
 PHP
   - $var, $func?, $_special_var, $everything
+    - perl influence
   - perhaps the only thing worse than javascript, and perhaps closest to the horror that is objective-c
-  - good development progression/history over a long period of time, especially when compared to the sloppier, quicker-to-change progressions of ruby 'n python
+    - not planned as a language, but just tacked on features like javascript
+  - slow development progression/history over a long period of time, especially when compared to the quicker progressions of ruby 'n python
     - might soon add pipe operators (for function chaining)
+    - only recently (2021-2024) added type checking (8.4), enum, and match (like switch)
   - surprisingly good performance
-  - Wordpress has kept this alive for a long long time
+  - Wordpress and Facebook have kept this alive for a long long time
   - hack (language)
     - dialect of php by facebook
 
