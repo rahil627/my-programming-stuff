@@ -14,6 +14,18 @@ engines that don't support various rendering pipelines, and only opengl, will li
 
 
 
+THE TRUE WAY:
+  - THIS IS HOW YOU MAKE GAMES
+see jason rohrer's game and minorGems repos
+  - look for his design sketch-up writing he had on the escapist
+  - look at his even earlier games
+  - start from Passage, the game that inspired me to make my first little game, and go up
+  - straight C/C++, all the way down, all on his own
+    - honestly, C/C++ is far more readable to me than most languages. it allows my mind to focus the architecture as opposed to a bunch of features.. it's the opposite of ruby, yet it's quite refreshing
+  - TODO: he moved from the middle of nowhere (for simple living) to Davis!! omg.
+  
+
+
 VERY IMPORTANT NOTE:
 **choose a game engine that ports to consoles.**
 
