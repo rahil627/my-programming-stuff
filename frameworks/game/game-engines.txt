@@ -310,6 +310,7 @@ Prototype engines / 2D engines with editors:
     + probably feels better coding in this due to the lack of libraries included
     + cannot become outdated
     + likely has the greatest performance of all engines
+    + **leads to true C/C++ game programming**
     - C++
     - not a game engine, and does not have a popular one
     - takes a bit more effort to port to mobile?
@@ -326,6 +327,9 @@ Prototype engines / 2D engines with editors:
     + C#
     + multi-platform
     - no iOS support yet
+
+  - RNDDR
+    + kotlin, for people used to java instead of C/C++
 
   resources:
     - http://zx-81.com/
