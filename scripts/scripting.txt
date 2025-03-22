@@ -1,4 +1,34 @@
 
+
+from manual scripts to agents: the progression of scripting:
+
+*n8n* / *huginn* / node-red
+  - open-source self-hosted workflow automation like IFTTT / Zapier
+  - n8n is good for it's node workflow gui, by far the most popular, probably has the most amount of pre-made workflows
+    - typescript
+    - great to just get shit done for now, worry about making it pretty/custom in ruby later!
+  - node-red seems to be more aimed at non-programmers..
+    - javascript
+  - *huginn is made in ruby for ruby*
+    - "a framework to create and run agents that perform automated tasks"
+    - *not so sure of the benefits over a ci or job scheduler..*
+      - NOTE: *don't jump into big frameworks like this, stick to the basics!*
+
+sidkiq / better job / solid queue
+  - concurrent job schedulers written in ruby for ruby
+  - *schedule scripts with this!*
+
+ci/cd (github actions, gitlab)
+  - events trigger actions (run scripts)
+  - *automatically trigger your scripts with this!*
+
+scripts
+  - on your local computer
+  - *start here!*
+
+
+
+
 ai:
 
 q:
