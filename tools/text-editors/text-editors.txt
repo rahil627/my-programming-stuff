@@ -193,6 +193,11 @@ some readings
 
 # gui editors:
 ## newer, simpler, things to try:
+
+textbringer
+  - an emacs-like machine using ruby
+    - there's also a plugin for a mail agent and a mastodon client!
+
 lem
   - unfortunately, buggy as shit: crashes when a pop-up window is open and you alt+tab away :( i was very close to really getting into lisp-mode too!!
   - still... quite a great introduction to lisp, as there aren't too many functions (unless you're hacking at the core of the editor..), and you can quickly write your own functions and map them to commands 'n keys, all in a few lines, all in one file... simple..!
