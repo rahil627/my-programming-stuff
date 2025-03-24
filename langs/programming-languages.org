@@ -10,7 +10,56 @@ j blow on mookash podcast about jai
     - this is by the way of the SICP book, that's what his first class was, and he would NOT teach that way, at all.
   - linux sucks, because open-source sucks. yep
     - but nowadays, propietary windows and mac suck too!
-
+  - ... (another session)
+  - ~55m explains why C++ sucks
+    - redundant information is duplicated a thousand times (headers) and the compacted (linked) together.. why?
+    - made jai because he was suffering from C++, especially during the dev of the witness
+  - current "creativity"/effort wasted on javascript, javascript frameworks, etc.
+    - even ai people are just "script kiddies"
+    - even most lanuage makers now rely on llvm
+  - pillars: joy of programming / low friction, performances, simplicity, for good programmers
+    - scheme is an extremely simplified lisp, but it's simplification causes problems
+    - "i don't know anybody who knows the whole language [C++], that's how complicated it is"...i stopped at around C++ 11 or 13 and stopped looking at new features
+  - jai is complex
+    - making macros simple is hard, and making it "cross dll boundaries"
+    - have much more expressive power than C++ by a large margin
+    - just not as simple as he wants it to be, yet
+  - great rant on people making shit and posting it on hacker news with a stupid product name
+    - like the syntax of the language, he doesn't care, and can change it easily
+  - in addition to making braid: anniversary addition, made a meta quest 3 simulation game with the engine he plans to release commercially, along with the language
+  - 1:37m
+    - godot is like unity, use ui to make a game, for his engine, though there's an editor and entity fields it's programmer-centric.. (vague)
+  - just two people working on the langauge
+    - rafael luba is the other one
+      - TODO: also was interviewed
+        - did a bunch of random systems programming contracts
+  - 2024 layoffs, worst in the history of video game industry
+  - how to hire
+    - technical: just talk about programming stuff for 90 minutes
+      - can more quickly talk about programming than actually doing some code test
+    - motivation: can see/feel it
+      - casey muratori via chris heckler, does a mock interview to show another method
+  - why no branding for the game studio (thekla)?
+    - it's parasitic
+    - *the goal is to give the best experience we can with the limited human capacity that we have*
+  - design of games
+    - requires a strong direction, a ferris magnet that makes sure all the pieces are aligned
+  - what are you searching for in games?
+    - that changes in every game
+      - in this one, game mechanic combinatorics
+        - game designers have known for a long time now, that when game mechanics interact with each other, it generates more possibilities, and more fun, essentially
+          - the opposite, just having mechanics that don't interact at all, just becomes a drag
+            - see indicade 2011 video with Jon and Mark, for that one 4d game
+        - *does this level observe some new space of the combinatorics? does it use the objects to generate a new situation we haven't seen before? is that situation interesting? are we able to make that situation simply? or is it too contrived, which would end up making a bad level?* and as with making a language, it may be we have to make a big, contrived ugly thing, then refine it down later, as we understand what's necessary to do it simply
+        - but again, as every game idea is different, the criteria that leads decisions are different
+  - is the witness about understanding patterns?
+    - gave a talk in indicade panel for 10 minutes about it
+    - puzzle game design
+      - not just a stream of "a-ha!" moments/realization, but must have more meaning behind it
+  - *why make games?*
+    - i don't know
+    - *at first, ideas are new and exciting*, but after working on it for years, it gets old
+  
 https://github.com/learn-anything/programming-languages#multi-paradigm
   - ??
   
