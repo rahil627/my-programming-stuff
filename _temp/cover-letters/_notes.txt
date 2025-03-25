@@ -1,5 +1,155 @@
 
 
+hacker news jobs:
+  - spellbrush
+    - tactics rpg games!
+      - applied with a short e-mail
+
+
+applied but not cover letter:
+  - creyos
+  - *reverb/etsy*
+    - a musical instrument marketplace
+  - *backerkit*
+    - a table-top game and fantasy crowd-funding platform
+    - customer success associate
+      - forgot to save it
+
+
+other rail products that look cool but didin't have any positions available:
+  - bigcartel
+    - make an online store, tailored for artists
+  - bigthink
+    - editorial, lots of philosophy!
+  - bettercater
+  - beanstack
+    - motivate via reading challenges, readathons, etc.
+  - basecamp/37signals
+    - early rails studio
+    - basecamp is a project management tool, a glorified kanban board
+    - signed up for job notification e-mail list
+  - binti
+    - foster home software
+  - blue sky
+    - learning management software (LMS)
+    - acquired by momentive
+  - brandnewbox
+    - san diego design studio/agency
+    - applied to an apprentice job!
+  - brainscape
+    - flash cards app
+  - brightwheel
+    - child care / pre-school management software
+      - looks simple! perfect!
+      - staff full-stack engineer
+        - requires 5 years of experience of early to mid-stage startups
+  - bugcrowd
+    - a crowdfunded security platform in SF
+      - has a service that finds and pays hackers/pen-testers your product
+      - ..in addition to other services..
+    - applied as 'software support engineer'
+  - braze
+    - customer engagement platform
+    - diverse team!
+  - breeze airways
+    - utah
+  - bridgecare
+    - similar to brightwheel, possibly all women!
+  - broadvoice
+    - business phone/communication
+
+  - ...
+
+  - cardbase
+    - trading cards
+    - seems to be in dev..
+    - no careers page..
+  - carta
+    - founder/equity management
+  - census
+    - unified data platform to sync across 200+ business apps, "reverse ETL"
+    - only senior positions..
+  - charity: water
+    - simple enoough..!
+  - change.org
+    - make 'n sign petitions
+    - hiring an engineering manager in mexico
+  - cleary
+    - HR management
+  - clarityflow
+    - management software for coaches
+  - codeforamerica
+    - non-profit to digitize civic programs
+    - principal solutions architect
+      - nice role!
+  - codecrafters
+    - based in india, currently in YC
+  - codepath.org
+    - just devops positions
+  - codi
+    - airbnb of office spaces?
+    - made by a student team?
+  - codeacademy
+    - TODO: i might have to try this..!
+    - hires from india
+  - doxo
+    - bills management
+  - eteam
+    - studio that uses multiple web techs
+  - ... (starting from the end)
+
+  - yuma
+    - ai agents for customer service
+    - a good rails job here! ;(
+  - beehiv
+    - e-mail newletter management, designer, maker
+  - loomly
+    - social media management
+    - milan and london
+  - powerschool
+    - hires from india
+  - thoughtbot
+    - premier rails dev studio
+  - thredup
+    - second-hand clothing market-place?
+    - hiring from elsewhere? or no jobs?
+
+
+  - rails studios:
+    - webvolta
+      - an awesome website!
+
+
+  - ones i like:
+
+  - worldpackers
+    - didn't find a careers page
+  - watsi
+    - fund healthcare for people in need around the world
+    - no careers site, just an old job posted on their blog
+      - i still sent a short e-mail
+  - *weedmaps*
+    - !!!
+    - this is a great example of a store i could easily maintain..
+    - just sent a short e-mail
+
+
+  - big ones extracted:
+  
+  - block
+    - founder of twitter, cash app, afterpay, tidal, etc.
+    - goose
+      - a software dev agent
+
+  - checkr
+    - background checker
+    - applied
+
+  - zendesk
+
+
+
+
 todo:
   - turn on phone
     - check status through website
@@ -13,6 +163,15 @@ todo:
     - password
     - transfer money
 
+
+aim for just remote ruby/elixir jobs
+  - *rubyonremote.com*
+    - https://rubyonremote.com/remote-jobs-in-us/
+      - look for junior positions
+        - filter may not be so good..
+  - *https://usingrails.com/*
+    - nice!!
+    - incredible amount of rails jobs.. wow..!
 
 TODO ASAP:
   - update resume on jobs i applied to
@@ -130,6 +289,15 @@ remote jobs
       - todo: others?
 
 schools
+  - both universities nor schools for younger people mostly use outdated enterprise software, which doesn't look fun
+    - departments that need a computer person can be fulfilling, as one can be in control of all the software for that department, choosing what one likes, integrating stuff (n8n), making one's own, and also *the social aspect of getting to know everyone*
+      - actually, wanting to be a part of the department/organization shouold be the main reason to be there: *choose a department you want to be in* (i.e. UCSC game/film, NYU game/itp, parson's design 'n tech, etc.)
+    - *canvas uses ruby*
+    - moodle uses php, yikes
+    - *main problem is that you have to live near the campus, pay those costs, be near transient people*
+      - however, *it could feel like a youth hostel*, lol
+    
+
   - 1. edjoin.org
     - less competitive than university jobs, possibly same pay in a lower cost-of-living area
   - schooljobs/govermentjobs.com
@@ -150,9 +318,44 @@ schools
 
 
 
+ruby contributors
+  - https://spreecommerce.org/ruby-on-rails-most-popular-among-top-y-combinator-companies/
+
+  - shopify
+    - rails, yjit, lots of gems
+  - stripe
+    - rails, gems, don't like sorbet so much.. :/
+  - github
+    - lots: trilogy
+  - gitlab
+
+  - maybe some of the earlier dot-com startups
+  - etsy?
+    - reverb
+  - airbnb
+  - doordash
+    - postmates
+    - instacart
+  - coinbase
+  - *twitch??*
+  - *dropbox!!*
+  - basecamp/37signals      
+  - cruise (ai car)
+  - gusto
+
+  - poshmark
+  - drizly
+    - bought out by uber eats
+
+  - gingko
+  - flexport
+
+
+
 tech i use and love:
   - TODO
   - voice dream reader/writer
+
 
 
 favorite big tech:
@@ -179,7 +382,7 @@ doordash
   - php ;(
 
 netflix?
-  - sold out
+  - *sold out*
   - trying to do game stuff
     - has game studios
 
@@ -202,4 +405,5 @@ apple is closed off
     - vs-code
     - .NET core
     - C#
+      - but then limited to C#, which i'm not really interested either for games or web.. i prefer jai/C/dragonruby (language and engine) and ruby+rails/elxiir+phoenix
     - xbox
