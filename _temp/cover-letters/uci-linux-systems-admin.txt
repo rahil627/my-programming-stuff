@@ -1,0 +1,11 @@
+heyo!
+
+i was keeping an eye out for work at UCSC game/film department, but this caught my eye, especially since it's remote!
+
+i'm currently trying to transition into making web products, lots of them, but I come from a more artsy background: making games, especially very physical games and game controllers. Thus, i'm trying to find jobs to practice the craft, particularly using tech i personally like and plan to use myself: ruby/rails, C, elixir/phoenix (jai, haxe). I come from a more systems programming world, but I enjoy the Linux/Unix/cli world too, for it's hackiness: scripts, job schedulers, system config orchestration, etc. I'm not a Linux wizard, but i've lived off arch-linux through a chromeos container for quite some time. ;) And it seems ruby (along with python) is quite common in this world too.
+
+i really dig the systems admin / devops route as it's very generalist, and my nature is very much so generalist. I'll use whatever tech to get the job done. Though nowadays, for my own personal projects, I can afford to be more picky! :D It's also nice to just socialize with both customers 'n other IT folks..
+
+anyway, i'm actually in San Diego at the moment. I rode down the coast of Cali with a little scooter from Berkeley (which is where I worked last)! I'm now planning to head back up to Santa Cruz, now that it's warm again, to be close to SF's startup scene, in particular, the ton of products made with ruby/rails.
+
+just e-mail me when you can, as i'll be changing phone providers soon.

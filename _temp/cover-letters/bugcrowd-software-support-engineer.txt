@@ -1,0 +1,40 @@
+heyo!
+
+i just found this company by scouring the web for companies that use ruby/elixir. ;)
+
+i'm currently trying to transition into making web products, but I come from a more artsy
+background: making games, especially very physical games. Thus, i'm trying to find jobs to
+practice the craft, particularly using tech i personally like and plan to use myself:
+ruby/rails, C, elixir/phoenix (jai, haxe). I haven't done web dev for a long time, though,
+my first job was a really great one, using asp.net back when linq-to-sql was new! I'm kind
+of a certified javascript / web-dev hater, and i've been successful at avoiding it all my
+life, but now that I want to make a few web products, i'm finally giving in. For my own projects, i'm still really hoping to get by with whatever phoenix/rails provides out of the box (live-view components / live-view.js, hotwire, etc.).. ;)
+
+i stumbled upon ruby in a strange way: via dragonruby, a game engine. It's the heavenly
+match i've been seeking out for a long long time: making games with a neat yet easily
+malleable, powerful language. Ever since that experience, i decided this is my language,
+community, ethos, vibe, 'n people (along with haxe). I want to invest time in this. I even
+dig it's recent developments: yjit, prism, etc. This is what i want to master.
+
+unfortunately, about 95% of rails jobs are senior to god level. It's expected to have years
+of rails experience, in addition to: container orchestration, cloud computing, ci/cd,
+testing suites, job scheduling, various large-scale databases, and whatever else. It's a
+lot, especially when considering a game can be made from scratch with plain ol' C and a few
+libs. I just don't have that experience, all of which came up from the last decade. I would
+hope that the default rails/phoenix stack covers 95% of of products(??), but who knows...
+i'm no web person. :/
+
+and so, i'm left with these more generalist support engineer jobs, such as this one. It
+still has a long list of requirements, but it doesn't look too daunting. Hopefully i can
+deal with it..
+
+anyway, i'm actually in San Diego at the moment. I rode down the coast of Cali with a little
+scooter from Berkeley! I'm now planning to head back up to Santa Cruz, now that it's warm
+again, to be close to SF's startup scene, in particular, the ton of products made with
+ruby/rails (from the dot com era to now).. Also, maybe i can get my friends at Noisebridge
+to help me hack at bugcrowd together! :D
+
+just e-mail me when you can. I might not get back to you until i'm able to recharge my phone
+and find some wifi. But, i'll def come down to work with ya! ;)
+
+i attached my resume, just in case.

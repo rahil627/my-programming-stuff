@@ -1,0 +1,9 @@
+heyo.
+
+I've recently finished riding my scooter down the coast of Cali, done relaxin' in San Diego, and now ready to dig into a new career path: making web products! My early background ultimately ended in game ux design, particularly physical game controllers. Now i'm trying to make some web products myself using the technology that hopefully is used by AngelList: ruby, C, rails, phoenix, elixir, roda, sidekiq, etc. So, I figured, I might as well practice my craft with a day job! :)
+
+i've lived in SF thrice before, and Berkeley once before, and I plan to ride back up at least to Santa Cruz soon, so that I can be closer to the startup scene. My personal goal is simply to master making web stuff with ruby/elixir/C, being a tech generalist, then a founding engineer for products that I personally use. Thus, for now, i'm willing to do any ruby/rails job, just to be thrown into the deep end! Especially ones remotely or in SF!
+
+it's far fetched, I know, but it's not hard for idealists like me to even come close to this sort of stuff! If I could work remotely, I'd def go back to the rural areas of Taiwan. But alas, i am here for one purpose: to master the craft of making web stuffs!
+
+just e-mail me as my phone service will die off soon.
