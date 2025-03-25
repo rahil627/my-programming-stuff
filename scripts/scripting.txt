@@ -14,13 +14,24 @@ from manual scripts to agents: the progression of scripting:
     - *not so sure of the benefits over a ci or job scheduler..*
       - NOTE: *don't jump into big frameworks like this, stick to the basics!*
 
-sidkiq / better job / solid queue
-  - concurrent job schedulers written in ruby for ruby
-  - *schedule scripts with this!*
+job schedulers?
+  - cron/task scheduler (windows)/launchd (mac os)
+    - only time-based?
+  - within a web framework
+    - phoenix
+      - quantum
+        - just one lib, yay
+    - rails
+      - activejob + modular backend (solid queue > better job / sidkiq (redis))
+        - redis is a memory-based data store, solid queue and better job are database-based (postgre)
+  - rabbitmq
+    - used to integrate micro-services, by providing a messaging system
 
 ci/cd (github actions, gitlab)
   - events trigger actions (run scripts)
   - *automatically trigger your scripts with this!*
+    - includes scheduled times, manually, from within the workflow repo, and events that occur outside of github can be set-up to trigger it
+  - setup "workflows", deployment, etc.
 
 scripts
   - on your local computer
