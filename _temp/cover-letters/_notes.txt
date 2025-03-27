@@ -1,4 +1,7 @@
 
+TODO:
+  - try levels.fyi
+
 
 hacker news jobs:
   - spellbrush
@@ -113,6 +116,10 @@ other rail products that look cool but didin't have any positions available:
   - thredup
     - second-hand clothing market-place?
     - hiring from elsewhere? or no jobs?
+  - thereformation
+    - eco-sustainabale fashion
+  - remedy
+    - consult founders/startups
 
 
   - rails studios:
@@ -333,11 +340,13 @@ ruby contributors
   - etsy?
     - reverb
   - airbnb
-  - doordash
-    - postmates
-    - instacart
+  - *doordash*
+    - *postmates*
+    - *instacart*
   - coinbase
   - *twitch??*
+    - https://www.reddit.com/r/rails/comments/q44pv3/has_anyone_done_any_digging_around_twitchs_rails/
+      - rails + go services
   - *dropbox!!*
   - basecamp/37signals      
   - cruise (ai car)
@@ -362,15 +371,15 @@ favorite big tech:
   - many from SF
   - many started by y-combinator
 
-y-combinator
+*y-combinator*
 
 *discord*
    - python, elixir, rust, react, react-native, electron
-twitch
 craigslist
   - advertises on craigslist ;)
 wikipedia
   - php :/
+twitch
 youtube
   - just solid tools, no agenda (not much at least..)
 github
