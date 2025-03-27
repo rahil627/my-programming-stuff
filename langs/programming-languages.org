@@ -1564,6 +1564,14 @@ lua
     - still led by Matz!!
     
 
+*mruby/C*
+  - target: one-chip micro-processors
+  - <40KB memory size
+
+*picroruby*
+  - 256KB ROM, 128KB RAM, 32-bit
+  - only depends on glibc/newlib/newlib-nano
+  - raspberry pi pico as reference micro-controller board
 
 **wren**
   - PERSONAL: compared to the dynamic-ness of lua and mruby, this feels weaker, less powerful, less magical. it feels like writing in a boring statically-typed lang, but without any of it's advanced features. I personally would rather choose mruby or a more powerful statically-typed language instead. It's just... *boring*.
