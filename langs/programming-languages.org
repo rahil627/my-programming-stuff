@@ -80,11 +80,13 @@ my desire for good design in a language is wrong. It just has to be C or C-like.
 
 i feel ruby is the best language, but, it suffers from being farrrr away from C. Even it's simplest data types: int, is 64-bit object, and can't be shortened to 8 bits, which would then be optimized by hardware (SSE, SIMD, etc.). The more abstraction, the more problems. It's human to want a nicely designed langauge, and ruby accomplishes that, but once things require good performance, it all comes down to C.
 
-ruby is in a constant battle between being the ideal language designed for humans, providing freedom and power in the neatest form, and being performant. It's not easy.
+*ruby is in a constant battle between being the ideal language designed for humans, providing freedom and power in the neatest form, and being performant. It's not easy.*
 
-perhaps the generation of optimize C is the way to go, as Haxe does via hashlink vm/byte-code to C compiler, then going through the llvm. Using ruby/yjit or haxe/hashlink (jit) for dev, llvm for release.
+perhaps the generation of optimized C is the way to go, as Haxe does via hashlink vm/byte-code to C compiler, then going through the llvm. Using ruby/yjit or haxe/hashlink (jit) for dev, llvm for release.
 
-mruby, surely, has the best solution as far as ruby goes..
+dragonruby, surely, has the best solution as far as ruby goes..
+
+
 
 ## a thought
 likely re-occuring from 10 years ago, to now, again, as i revisit technology
@@ -161,28 +163,28 @@ smalltalk
 # conclusion:
 languages sorted by their use cases
 
-## the ruby and lisp dream
+## the ruby and lisp dream, and jai
 C
   - core
 dragonruby (an mruby fork, with C "extensions")
-  - game
+  - game, *general high-performance*
 ruby (and C core and "extensions")
-  - web, scripting
+  - web, scripting, *general*
 elixir
   - web
 mruby, mruby/C, picoruby (and C)
-  - embedded
+  - embedded, extension?
+jai
+  - manual memory management
 lisp (scheme or emacs lisp or common lisp)
   - text editor extension
 
-alts: jai > haxe == OCaml == crystal
-  - general systems and embedded
 
-
+ 
 ## general langs
 
 general-use / automatic-memory-management:
-*haxe* == *OCaml* == *crystal* == *nim* (> C# > swift /w gc > java/kotlin) > go
+haxe == OCaml == crystal == nim /w gc (> C# > swift /w gc > kotlin/scala) > go
   - UPDATE 2024: after all these years, nothing has really caught up to haxe (nor Ocaml)
     - only nim is catching up, but it lacks the game eco-system, more likely to attract scripting language folks
     - *OCaml supports concurrency and parallelism!* via several libs/implementations
@@ -255,7 +257,7 @@ manual-memory-management but simple / C-like / game engines:
   
   
 manual-memory-management with advanced features:
-(**jai** >) rust > nim (== D > swift) >= C++ (along with scripting langs)
+**jai** > rust > nim (== D > swift) >= C++ (along with scripting langs)
   - NOTE: **for the case of games, i'd just wait for jai**, as it doesn't have the complexity of neither rust nor C++, nor the baggage of C++, yet still has some powerful meta-programming features
     - **by design, it's just simple in a beautiful and intutive way**, much like his games
     - until then though, stuck with C++ and rust
@@ -272,7 +274,7 @@ manual-memory-management with advanced features:
     
 
 web (server-side):
-**elixir** > **ruby** + general compiled language (crystal)
+**elixir** > **ruby** + general high-performance concurrent language (crystal)
   - **proof that the framework/practical use case means a lot more than the language itself..**
   - **phoenix, the current best and most beautiful scalable and easily-maintainable web framework**
     - suitable for both small web apps (roda) and massive web apps (rails)
@@ -290,13 +292,12 @@ web (server-side):
 ## specialized langs:
 don't have much of a choice for these..
 
-**javascript**
+**javascript/typescript**
   - the standard browser language
     - can't seem to run from it, though i can keep trying!
       - haxe transpiles to js :)
   - **by far the worst libraries and least skilled programmers**
   - i'm told it's much much better than it used to be..
-  - typescript
 
 
 various custom scripting laguages (wren, gdscript, etc.) and embedded scripting langs (lua, **scheme**, **mruby**, *mruby/C*, *picoruby*, *micropython*) usually on top of C++
@@ -366,8 +367,9 @@ in general:
   - so, not go or other c-like langs
 transpile to C
   - this solve two needs:
-    - it should provide a portable binary (either via native compilation or a binary bundled with a runtime/vm)
-    - it should be relatively pretty fast (i mean, just faster than ruby's interpreter)
+    - it should provide a binary
+      - even better if portable
+    - it should be pretty fast (i mean, just faster than ruby's interpreter)
 provide an interpreter, so that you can just run little scripts for personal use/fun/hackery
 
 for games (and other "creative" applications that use various input/output hardwares): :D
