@@ -1,0 +1,9 @@
+heyo.
+
+i'm quite interested in programming languages in general, and really interested in ruby and this sort of parser/compiler work. I'm even quite tempted to read through the rjit compiler and prism parser, if I can tolerate reading C..! It's certainly not my profession; I come from the art game world, just making fun, interactive game experiences. But recently, via dragonruby, a game engine and mruby fork, i've come to love the language and the devs/communty around it, and since then i've quickly decided that's what I want to focus on; That's what I want to master: pure ruby and elixir (and phoenix), for some web products I plan to make, and to take care of some old rails apps in the future. ;)
+
+this is the first and only job i've ever seen that's uses ruby in a general systems programming role, as opposed to rails full-stack dev. I'm not a super regex person or anything.. but this particular project just seems really fun. I just like text-based stuff in general: text editors, emacs, knowledge-bases, prog langs, etc. I'd do it for entry-level money, just for practice! I don't know any better programming practice than this!
+
+i'm honestly having a tough time jumping from very niche game programming to web, which requires a ton of experience in everything nowadays (cloud computing, ml/ai, container orchestration, etc.). So, these sorta straight-forward systems programming jobs might be the only hope I have, until I make a few web apps myself.
+
+anyway, just let me know. I'm in San Diego at the moment, but plan to ride back up the coast, slowly, via motorcycle, stopping in Santa Cruz. However, since this job is remote, I would immediately fly back to my friends 'n family in Taiwan! ;)
