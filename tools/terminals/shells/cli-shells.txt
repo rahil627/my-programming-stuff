@@ -4,7 +4,7 @@ powershell feels light-years ahead of unix / linux shell stuff
 and i love ruby
 these two are all i'd ever need
 trash the rest (fish, bash, all of it)
-  - though, if i ever have to use linux, fish is the way to go..
+  - though, if i ever have to use linux, fish is the way to go.. as it maintains the old unix way of streaming text via output/input
 
 
 
@@ -221,6 +221,8 @@ elvish
   - overall looks very cool! can try it out :)
 
 **fish**
+  - UPDATE: re-written in rust (in 2025)
+    - https://news.ycombinator.com/item?id=42535217
   - UPDATE:
     - https://www.reddit.com/r/ProgrammingLanguages/comments/165co33/comment/jydbex4/
       - "...This con doesn't actually say anything specific. Fish is honestly great for the 2020s and beyond. Excellent autocomplete and syntax highlighting out of the box, proper XDG base path specification support, excellent configurability via a GUI, the ability to easily modify environment variables and have them immediately reflected across all shells with no rc file fiddling needed, and the ability to source bash scripts using bass.
