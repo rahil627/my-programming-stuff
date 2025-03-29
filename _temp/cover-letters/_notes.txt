@@ -24,22 +24,11 @@ TODO ASAP:
 
 
 TODO:
-  - try levels.fyi
-    - seems to aggregate from the same boring big company sources, nothing deep
-  - try linkedin
-    - sounds like the most useful nowadays..
-      - seems like the aggregators catch these... nothing special..??
-    - clicking apply doesn't mean you apply through linked it, it usually just goes to the company's website's software
--
-    - canonical (ubuntu) linux desktop support
-      - all remote company
-      - applied, but i think i applied to this before..
-    - padlet
-      - applied, but i probably applied to this before too, quite a few times now.. :/
-    - hunttress
-      - applied to a ruby parser job!!
-        - siiiickk
-    
+  - see TODOs, try using org-mode, lol
+
+
+
+
 hacker news jobs:
   - spellbrush
     - tactics rpg games!
@@ -181,24 +170,19 @@ other products made with ruby on rails:
 
 
 
+from linked in:
+  - canonical (ubuntu) linux desktop support
+    - all remote company
+    - applied, but i think i applied to this before..
+  - padlet
+    - applied, but i probably applied to this before too, quite a few times now.. :/
+  - hunttress
+    - applied to a ruby parser job!!
+      - siiiickk
 
 
 
 
-aim for just remote ruby/elixir jobs
-  - *https://usingrails.com/*
-    - nice!!
-    - *incredible amount of rails jobs.. wow..!*
-      - *ruby is _NOT_ dead*
-  - *rubyonremote.com*
-    - https://rubyonremote.com/remote-jobs-in-us/
-      - look for junior positions
-        - filter may not be so good..
-  - https://elixirjobs.net/
-    - very very few listed, and all except the first page is outdated, though, a good source to see which companies use it..
-    - TODO: just make a few sites with phoenix/elixir, then can apply to these!! :D
-    - relabs
-      - a design studio job!!
 
 
 
@@ -238,20 +222,28 @@ ycombinator startup funding
 
 
 
-job sites for smaller companies
+job sites list
 
   - through friends
   
   - direct
 
   - general sites
-    - linkedin
-      - it found and re-activated my old account..?
-      - no need to even fill out a profile, for most jobs, you must apply through their own website
+  - levels.fyi
+    - TODO: try some more..
+    - seems to aggregate from the same boring big company sources, nothing deep
+    - but does provide a very good filter system, possibly easy to scrape..
+  - linkedin
+    - sounds like the most useful nowadays..
+      - seems like the aggregators catch these... nothing special..??
+    - clicking apply doesn't mean you apply through linked it, it usually just goes to the company's website's software
+    - it found and re-activated my old account..?
+      - TODO: finish profile..
+        - no need to even fill out a profile, for most jobs, you must apply through their own website
     - craigslist
       - only the true gangstas use this
     - indeed
-      - meh, seems useless
+      - meh, though people do say it works..??
 
   - game studios
     - *workwithindies*
@@ -261,6 +253,22 @@ job sites for smaller companies
 
   - design studios/agencies
     - TODO: ??
+
+  - ruby/elixir jobs
+    - *https://usingrails.com/*
+      - nice!!
+      - *incredible amount of rails jobs.. wow..!*
+        - *ruby is _NOT_ dead*
+    - *rubyonremote.com*
+      - https://rubyonremote.com/remote-jobs-in-us/
+        - look for junior positions
+          - filter may not be so good..
+    - https://elixirjobs.net/
+      - very very few listed, and all except the first page is outdated, though, a good source to see which companies use it..
+      - TODO: just make a few sites with phoenix/elixir, then can apply to these!! :D
+      - relabs
+        - a design studio job!!
+
 
   - startups
     - just *live in SF*
@@ -276,9 +284,6 @@ job sites for smaller companies
       - co-founder..? meh :/
     - *remoteok*
       - must be super competitive..
-    - zensearch
-      - this site is great, but the companies are sooooo lame!
-      - great filter feature: *prioritize by keywords*
     - wellfound (angellist)
       - looks legit, it's just that.. the startups seems so boring.. :/
 
