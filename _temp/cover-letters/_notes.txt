@@ -1,15 +1,52 @@
 
+
+todo:
+  - turn on phone
+    - check status through website
+  - passport
+    - look for it
+    - ship to samesun hostel
+  - driver's license test
+    - anywhere i can get an appointment asap!
+  - wells fargo debit card
+  - charles schwab
+    - password
+    - transfer money
+
+
+TODO ASAP:
+  - update resume on jobs i applied to
+    - rewrite the babycastles portion
+      - add videos
+    - fix the noisebridge part / sub-title part
+
+
+
+
 TODO:
   - try levels.fyi
-
-
+    - seems to aggregate from the same boring big company sources, nothing deep
+  - try linkedin
+    - sounds like the most useful nowadays..
+      - seems like the aggregators catch these... nothing special..??
+    - clicking apply doesn't mean you apply through linked it, it usually just goes to the company's website's software
+-
+    - canonical (ubuntu) linux desktop support
+      - all remote company
+      - applied, but i think i applied to this before..
+    - padlet
+      - applied, but i probably applied to this before too, quite a few times now.. :/
+    - hunttress
+      - applied to a ruby parser job!!
+        - siiiickk
+    
 hacker news jobs:
   - spellbrush
     - tactics rpg games!
       - applied with a short e-mail
 
 
-applied but not cover letter:
+applied but no cover letter necessary:
   - creyos
   - *reverb/etsy*
     - a musical instrument marketplace
@@ -19,7 +56,7 @@ applied but not cover letter:
       - forgot to save it
 
 
-other rail products that look cool but didin't have any positions available:
+other products made with ruby on rails:
   - bigcartel
     - make an online store, tailored for artists
   - bigthink
@@ -127,10 +164,11 @@ other rail products that look cool but didin't have any positions available:
       - an awesome website!
 
 
-  - ones i like:
+  - extracted ones i really like:
 
-  - worldpackers
+  - *worldpackers*
     - didn't find a careers page
+    - TODO: *should make a free work-exchange site (workaway, helpx), hostel booking site (hostelbookers), and a hostel volunteer site (worldpackers)*
   - watsi
     - fund healthcare for people in need around the world
     - no careers site, just an old job posted on their blog
@@ -139,52 +177,29 @@ other rail products that look cool but didin't have any positions available:
     - !!!
     - this is a great example of a store i could easily maintain..
     - just sent a short e-mail
-
-
-  - big ones extracted:
-  
-  - block
-    - founder of twitter, cash app, afterpay, tidal, etc.
-    - goose
-      - a software dev agent
-
-  - checkr
-    - background checker
-    - applied
-
-  - zendesk
+    - TODO: *should make the best weed strain site, alcohol site, cooking site*
 
 
 
 
-todo:
-  - turn on phone
-    - check status through website
-  - passport
-    - look for it
-    - ship to samesun hostel
-  - driver's license test
-    - anywhere i can get an appointment asap!
-  - wells fargo debit card
-  - charles schwab
-    - password
-    - transfer money
+
 
 
 aim for just remote ruby/elixir jobs
+  - *https://usingrails.com/*
+    - nice!!
+    - *incredible amount of rails jobs.. wow..!*
+      - *ruby is _NOT_ dead*
   - *rubyonremote.com*
     - https://rubyonremote.com/remote-jobs-in-us/
       - look for junior positions
         - filter may not be so good..
-  - *https://usingrails.com/*
-    - nice!!
-    - incredible amount of rails jobs.. wow..!
+  - https://elixirjobs.net/
+    - very very few listed, and all except the first page is outdated, though, a good source to see which companies use it..
+    - TODO: just make a few sites with phoenix/elixir, then can apply to these!! :D
+    - relabs
+      - a design studio job!!
 
-TODO ASAP:
-  - update resume on jobs i applied to
-    - rewrite the babycastles portion
-      - add videos
-    - fix the noisebridge part / sub-title part
 
 
 dream jobs / goal:
@@ -194,15 +209,14 @@ dream jobs / goal:
 temp $ jobs:
   - web product startup jobs using the following tech:
    - *phoenix/elixir*
-     - gradual typing coming soon!
+     - built-in gradual typing coming soon!
      - live-view-native in dev!
      -> making my own web apps
    - *rails*
-     - if no elixir jobs
-     - or if i really like the company
-     - or if it's really small / as founding engineer
+     - it seems there still isn't many phoenix/elixir jobs..
+     - also, i just LOVE ruby!
    - asp.net
-     - meh, might prefer rails, though probably better for big code-bases
+     - meh, i prefer rails and ruby, though probably better for big code-bases
 
 
 
@@ -211,7 +225,7 @@ ycombinator startup funding
   - very easy to apply!
     - just send an idea, even if it's the "late deadline"i
       - DONE
-        - damn
+        - ..DAMN!
     - seems to prefer having a co-founder.. :/
       - maybe can ask Sam
         - yeah, he would be perfect!! and he lives in SF!
@@ -225,17 +239,22 @@ ycombinator startup funding
 
 
 job sites for smaller companies
+
   - through friends
+  
   - direct
-  - linked-in
-    - TODO: ugh, may have to actually make an account..
-  - craigslist
-    - only the true gangstas use this
-  - indeed
-    - meh, seems useless
+
+  - general sites
+    - linkedin
+      - it found and re-activated my old account..?
+      - no need to even fill out a profile, for most jobs, you must apply through their own website
+    - craigslist
+      - only the true gangstas use this
+    - indeed
+      - meh, seems useless
 
   - game studios
-    - workwithindies
+    - *workwithindies*
       - TODO: keep an eye out for ui/ux design
     - gamejobs.co
       - lots of big companies.. :/
@@ -244,10 +263,12 @@ job sites for smaller companies
     - TODO: ??
 
   - startups
+    - just *live in SF*
     - *ycombinator*
       - the OG
       - *hnhiring*
         - extracts from hacker news whoishiring
+        - *this is a really good source..*
       - has a jobs page
         - TODO: try this now
       - has a new job matching app
@@ -257,11 +278,9 @@ job sites for smaller companies
       - must be super competitive..
     - zensearch
       - this site is great, but the companies are sooooo lame!
-      - great filters, prioritize by keywords
+      - great filter feature: *prioritize by keywords*
     - wellfound (angellist)
       - looks legit, it's just that.. the startups seems so boring.. :/
-    - something-ly
-      - TODO: try next
 
 
 job titles:
@@ -277,23 +296,23 @@ job titles:
   - devops?
 
 tools:
-  - *c* > jai > (rust?) > c++
+  - *c* > jai (> rust?) > c++
   - elixir (phoenix)
-  - ruby (rails)
+  - ruby (rails, roda)
     -> *dragonruby*
   - c# (asp.net)
     -> unity, fna/monogame
 
 remote jobs
-  - companies
+  - remote companies
     - wikimedia (wikipedia)
       - todo: software engineer for the content transform team
       - movement communications specialist, product and tech
     - duolingo
     - gitlab
-      - also made with ruby on rails!! and uses ruby scripts too!
+      - see entry under ruby contributors
       - support engineer (worldwide/remote)
-      - todo: others?
+      - TODO: others jobs??
 
 schools
   - both universities nor schools for younger people mostly use outdated enterprise software, which doesn't look fun
@@ -306,21 +325,25 @@ schools
     
 
   - 1. edjoin.org
-    - less competitive than university jobs, possibly same pay in a lower cost-of-living area
+    - less competitive than university jobs, possibly same pay but in a lower cost-of-living area
   - schooljobs/govermentjobs.com
     - may have to apply through here
   - district job boards
 
   - universities
-    - less competitive than FAANG jobs
+    - less competitive than FAANG and many private jobs
       - still likely has many goodie asians applying..
     - can take some classes, do EMT, etc.
+    - stanford
+      - bay area / silicon valley network
+      - TODO: should try this out..
     - UC
+      - *santa cruz*, davis, santa barbara >> la >> berkeley, irvine >>>> riverside, merced
+      - berkeley
+        - bay area network, food sucks, area sucks
       - jobs.universityofcalifornia.edu
     - calpoly (SLO)
       - jobs.calpoly.edu
-    - usc at SD (main campus is in downtown LA, a terrible location)
-      - only school of medicine
 
 
 
@@ -328,43 +351,98 @@ schools
 ruby contributors
   - https://spreecommerce.org/ruby-on-rails-most-popular-among-top-y-combinator-companies/
 
-  - shopify
-    - rails, yjit, lots of gems
-  - stripe
-    - rails, gems, don't like sorbet so much.. :/
-  - github
-    - lots: trilogy
-  - gitlab
+  - the dot com era startups:
+    - shopify
+      - ruby (core language, yjit, core gems), rails, lots of gems
+        - they ensure everything is optimized (interned strings, etc.) because it costs them server $$
+    - stripe
+      - rails, gems, don't like sorbet so much.. :/
+    - checkr
+      - background checker
+      - applied
+      
+    - github
+      - lots: trilogy db adapter, language highlighting / parsers, etc.
+    - gitlab
+    - *dropbox!!*
+      - TODO: check for jobs!!
 
-  - maybe some of the earlier dot-com startups
-  - etsy?
-    - reverb
-  - airbnb
-  - *doordash*
-    - *postmates*
-    - *instacart*
-  - coinbase
-  - *twitch??*
-    - https://www.reddit.com/r/rails/comments/q44pv3/has_anyone_done_any_digging_around_twitchs_rails/
-      - rails + go services
-  - *dropbox!!*
-  - basecamp/37signals      
-  - cruise (ai car)
-  - gusto
+    - *twitch!!*
+      - source leaked recently
+        - https://www.reddit.com/r/rails/comments/q44pv3/has_anyone_done_any_digging_around_twitchs_rails/
+        - rails + go services
 
-  - poshmark
-  - drizly
-    - bought out by uber eats
+    - *mastadon*
+      - maybe just sponsored, open-source project..
 
-  - gingko
-  - flexport
+    - etsy?
+      - reverb
+    - *airbnb*
+    - *doordash*
+      - *postmates*
+      - *instacart*
+      - uber? uber eats?
+      - food panda?
 
+    - coinbase
+    - zendesk
+    - basecamp/37signals
+
+
+
+
+
+  - newer
+    - cruise (ai car)
+
+    - gusto
+    - poshmark
+    - drizly
+      - bought out by uber eats
+
+    - gingko
+    - flexport
+
+
+    - block
+      - founder of twitter, cash app, afterpay, tidal, etc.
+      - goose
+        - a software dev agent
 
 
 tech i use and love:
-  - TODO
-  - voice dream reader/writer
+  - most seem to be open-source..
+  - TODO: think of more
 
+  - design tools
+    - simple ones.. for music-making, film-making, game-making
+  - game engines and tools
+    - dragonruby
+    - ldtk
+  - text editors
+    - *focus*
+      - great one to help make
+      - also can practice jai!!
+    - emacs
+      - lol
+    - lightstorm
+      - TODO: try it!!
+    - lem
+    - helix
+  - web browser
+    - ladybird
+      - TODO: try it!!
+    - adblock
+      - uBlock
+  - search engine
+    - duckduckgo?
+  - ai
+  - iPad mini
+    - byword
+    - voice dream reader/writer
+    - termius
+  - windows
+    - well, i don't love it..
 
 
 favorite big tech:
@@ -374,12 +452,18 @@ favorite big tech:
 *y-combinator*
 
 *discord*
-   - python, elixir, rust, react, react-native, electron
+   - python, *elixir*, rust, react, *react-native*, electron
+   - gamer culture
 craigslist
   - advertises on craigslist ;)
 wikipedia
   - php :/
-twitch
+*twitch*
+  - rails!!
+  - gamer culture
+  - TODO: *should just be a streamer..*
+    - *IN TAIWAN!! (for taiwan/chinese audience :D)*
+      - permaculture life, playing games (game history, criticism, etc.), making games??, cooking!, selling in night markets!, hostel life?: *MY LIFE*
 youtube
   - just solid tools, no agenda (not much at least..)
 github
@@ -387,11 +471,11 @@ github
 
 doordash
 *etsy*
-  - great for women
+  - great for women 'n crafty people
   - php ;(
 
 netflix?
-  - *sold out*
+  - *sold out* (sold their soul to the devil: marketing analytics)
   - trying to do game stuff
     - has game studios
 
@@ -401,18 +485,22 @@ netflix?
 
 FAANG:
 google's products are in a graveyard, terrible design, though pragmatic
-amazon's products are garbage (kindle, fireTV, alexa, echo frames?, etc.)
+amazon's products are ALL garbage (kindle, fireTV, alexa, echo frames?, etc.)
   - luna
     - game streaming market-place, like google stadia?
   - mostly web cloud server stuff
 facebook? ew!
-  - vr
+  - vr (meta quest)
 apple is closed off
 *microsoft* is the clear winner
   - good recent coop (or co-opt?) of open-source and linux stuff
     - linux sub-shell
     - vs-code
+    - typescript
     - .NET core
+      - asp.net
+        - blazor (web assembly), razor pages (mvc), razor components, etc.
     - C#
-      - but then limited to C#, which i'm not really interested either for games or web.. i prefer jai/C/dragonruby (language and engine) and ruby+rails/elxiir+phoenix
+      - but then limited to C#, which i'm not really interested either for games or web.. i prefer jai/C/dragonruby (language and engine) and ruby+rails/elixir+phoenix
     - xbox
+      - might as well just buy a gaming laptop nowadays..
