@@ -15,7 +15,7 @@ https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
 
 
 * org-mode
-NOTE: this file serves as a test of org-mode
+NOTE: this file also serves as a test of org-mode
 
 interesting auto-indent..
 
@@ -64,6 +64,8 @@ compare 'n combine meow/default and doom key-chords
 
 
 * config
+
+NOTE: don't you ever use it as admin/sudo!
 
 see config files for notes on config
   - self-document!
@@ -120,6 +122,9 @@ press the initial key-chord, then, in the popup mini-buffer, press c-h to fuzzy 
 
 TODO: finish [[fn:meow-tutor][meow-tutor]]
 
+c-key
+  - TODO: i haven't even got to these yet..!
+
 spc-?
   - show cheat-sheet
     - w/e/b & W/E/B are much improved!
@@ -173,22 +178,41 @@ TODO: play with all the main spc bindings
 
 NOTE: read [[file:/home/ra/.doom.d/modules/editor/meow/config.el][meow config]]
 
+
+NOTE: SKIP TO [meow leader keys]
+  - you don't need to know the rest (doom, original emacs)
+
+NOTE: god-mode/meow uses space
+  - uses space key chords instead of modifier keys:
+    - NOTE: some of these are hidden from the meow menu..
+    - spc-x == c-x, x-?
+    - spc-m = m-?
+      - a good way to see meta bindings
+    - spc-m-x == m-x
+    - spc-x-c == c-x, c-c
+      - NOTE: the second letter is automatically c-
+        - TODO: how to use use a normal letter..??
+
+  
+spc (meow)
+  - moew bindings
+  - *NOTE: m-spc in insert mode* (moew)
+
 m-x / spc-m-x (meow/god)
   - contains every function available (~7500 with default doom install, ~6750 with meow instead of evil key-bindings)
   - usually [module]-[function]
 
 :[command] (evil)
-  - m-x !== :
+  - NOTE: m-x !== :
     - there's sometimes a different number of functions...
     - i think the way they fuzzy find is different..
 
-c-x
-  - original emacs bindings
+c-x / spc-x
+  - original emacs bindings?
   - it has a few funky bindings... i guess that's why doom had to create some sane defaults for it
   - i guess here for consistency, as it will be used by many tutorials and docs..
 
-c-x, c-? / spc-x
-  - NOTE: meow (spc-x) uses k for kmacro instead of kill buffer, use K
+c-x, c-? / spc-x-spc
   - doom's "sane" emacs bindings, many similar to doom's space leader key:
    - dired-jump (j)
    - find file
@@ -211,45 +235,43 @@ c-c, ? / spc (doom)
   - also includes many minor-mode bindings on non-letter keys (as that's all that's left, unbinded)
 
 c-c, c-?, spc-c (in meow)
-  - shows common bindings depending on the mode
-  - this is a great way to quickly and intuitively learn the main functions/bindings of a major mode
-    - TODO: how to scroll through the c-x list..?
+  - *NOTE: doom's c-c, ? has a lot more functions. if you're looking for something, it could be found here*
+  - mode dependent bindings
+  - *this is a great way to quickly and intuitively learn the main functions/bindings of a major mode*
+    - *TODO: how to scroll through the c-x list..?*
 
 c-c, l / spc-l (meow)
   - localleader
-  - another set of mode bindings..??
+  - TODO: another set of mode bindings..??
 
-spc (meow) / m-spc in insert mode (moew)
-  - (these are nearly the complete initial bindings, they actually all fit in the mini-buffer)
-  - NOTE: replaces c-c, ? / spc (doom)
-    - NOTE: doom's c-c, ? has a lot more functions. if you're looking for something, it could be found here
-  - x
-    - c-x, c-?
-    - doom's sane emacs leader-key bindings, mode independent
-  - c
-    - c-c, c-?
-    - mode-dependent bindings
-  - l
-    - c-c, l
-    - mode-dependent bindings
-  - kode
-    - k
-      - lookup/docs
-  - buffers
-    - TODO: missing... is it expected to use the default emacs key chords? spc-x, b/B, k/K, etc.
-    - i mean, maybe there aren't enough bindings related to buffers forit to have it's own key-map
-  - file
-  - insert
-    - seems pretty useless..
-  - search
-  - project
-  - toggle
-  - workspace
-  - version control
+- spc-g == c-m
+  - pure text editing stuff
+    - jump, mark, regex, lisp stuff
+
+- c-spc (in doom? meow doesn't have this binding..)
+  - original emac's bindings?
+
+
+
+  
+
+
+
+
+
+**** meow leader keys:
+  - NOTE: uses a different set of bindings in meow-doom
+    - but looks like the default bindings...??:
+      - (default +bindings +smartparens)) ; NOTE: needed for meow
+      - at the end of init file
+    - NOTE: doom's space key-chords are far more intutive (especially if coming from vi), whereas meow's are sparse, perhaps closer to vanilla, in need of customization..?
+
+
+
 
 TODO: import leader key bindings from helix
 TODO: import doom leader key bindings
-  - it seems very close to c-c, ?, but not quite, as it's missing buffers, search (in file), search (in cwd), etc.
+  - it seems very close to c-c, ? (in no major mode?), but not quite, as it's missing buffers, vi shortcuts (search in file/cwd), other shortcuts, etc.
     - though, the search commands are neater beneath spc-s..
   - see [[file:/home/ra/.emacs.d/modules/config/default/][doom bindings]], evil-bindings.el seems to have everything... hmmmm, can that be stuffed under spc-d?
 
@@ -257,90 +279,89 @@ initially can keep them seperate, in seperate keys (spc-[key]), likely under spc
 
 
 
-**** meow leader keys:
-  - uses a different set of bindings in doom
-    - but looks like the default bindings...??:
-      - (default +bindings +smartparens)) ; NOTE: needed for meow
-      - at the end of init file
-    - doom's space key-chords are far more intutive, but whereas meow's are sparse, perhaps closer to vanilla, in need of customization..?
-    - provides an alt set of mneumonic keys over modifier keys:
-      - maybe the same as god-mode..??
-      - spc-x == c-x, x-?
-      - spc-m = m-?
-        - a good way to see meta bindings
-      - spc-m-x == m-x
-      - spc-x-c == c-x, c-c
-        - NOTE: the second letter is automatically c-
-          - TODO: how to use use a normal letter..??
 
-    - some shortcuts on spc key:
-      - spc-g == c-m
-      - spc-l == c-c, l
-      - spc-k == code-related commands
+spc (meow)
+- moew bindings
+  - TODO: find a way to add name to the leader category
+    - instead of 'v' show '(v)ersion'
+  - mneumonic
+  - &
+    - aya/yas
+  - action embark-act
+    - *interactive way of using the selected region to do something*
+    - search
+    - format
+      - align
+      - delete duplicated lines
+      - indent
+      - lots more..
+  - eval
+    - TODO: maybe more useful for lisp..??
+  - file
+    - f, F (spc-spc in evil/helix), r, d (. in evil?)
+    - pro-tip: spc-f-f creates a file if it doesn't exist!
+  - insert
+    - unicode, emoji, file-name/path
+    - TODO: never use..
+  - j
+    - NOTE: well-placed key left un-binded for the user to create their own menu..?
+  - k(ode)?
+    - *lsp*
+      - i think it was chosen due to it's location: the most used key
+  - l(anguage)? (c-c, l)
+    - *major-mode bindings*
+  - notes
+    - org-mode notes
+      - TODO: set-up org notes folder
+        - *HOLY SHIT, really need this..!*
+  - open
+    - shell, debugger, TODO: seems like a good place to open other programs..
+  - project
+  - quit
+    - quickload, quicksave, etc.
+  - search
+    - search (buffer) (/ in evil), project (spc-/ in evil), cw(d)
+    - otherwise, can use spc-a-(c+)s/r
+  - universal
+    - TODO: meow-universal-argument
+  - toggle
+    - zen/Zen full-screen, word-wrap, line-numbers
+  - workspace
+  - version control
+    - g (= magit command)
 
 
-  - m-?
-    - left/right/up/down
-      - indent/un-indent
-      - word/paragraph navigation in insert mode
-    - backspace
-      - delete back one word
+  - / describe-key
+  - ? cheat-sheet
+    - TODO: currently broken..?? really need to fix emacs.. :/ there used to be a lot more shortcuts..
 
-  - c-m-?
-    - left/right
-      - move back/forward one word
-        - TODO: in any mode..?
-    - down
-      - scroll-left
-        - TODO: not recommended by doom
+  - buffers
+    - TODO: NOTE: missing... is it expected to use the default emacs key chords? spc-x, b/B, k/K, etc.
+    - i mean, maybe there aren't enough bindings related to buffers forit to have it's own key-map
 
-  - meow (default?) key chords
-    - i think uses doom's "sane" defaults for emacs..
-    - spc
-      - / describe-key
-      - ? cheat-sheet
-      - file
-      - workspace
-      - version control
-      - toggle
-      - search
-        - lookup seems really important
-      - o for terminal/debugger?
-      - notes (org)
+
+
+
+
+
+
 
 
 
 *** some useful key chord bindings
 
-
 TODO: bind vundo!!
 
 
-spc-spc
-  - find in project/workspace?
-    - i think based on git
+TODO: merge with above..
 
-spc-s
-  - search (grep)
-  - s  / (evil)
-    - buffer
-  - . / spc-/ (evil)
-   - project/workspace
-  - d
-   - cwd
-
-c-x/spc-f-
-  - f
-    - pro-tip: creates a file if it doesn't exist!
-  - F
-  - r
-  - . (evil?)
-    - open file finder via dired
 
 c-x/spc-x/spc-b
-  - TODO: rebind this vs create my own via spc-[my-key]
-   - spc-j is a good start
+  - *TODO: rebind this vs create my own via spc-[my-key]*
+   - *spc-j is a good start*
+     
   - buffers
+    - NOTE: this menu is missing in meow
   - b/B/spc-b-i
   - *interactive buffer*
     - exactly what i wanted when using helix!!
@@ -352,16 +373,23 @@ c-x/spc-x/spc-b
   - s
     - save
   - left/right
-    - next/previous
+    - next/previous buffer
 
 spc-</>
   - switch buffer
   - strange binding..
     - i don't like holding shift on a second key.. but it is closer than the arrow keys..
+    - NOTE: i think needed for when terminals mis-input arrow keys
+      
+c-x, </>
+  - scroll left/right??
 
-c-x, </> scroll left/right instead
+spc-x-2/3/4/5
+  - *TODO: window management is also missing in meow..*
 
-
+spc-x-;
+  - comment-line
+  - maybe now under spc-c, depending on the mode..
 
 
 
@@ -372,7 +400,10 @@ c-x, </> scroll left/right instead
 https://github.com/emacs-tw/awesome-emacs#starter-kit
 
 
-**DOOM**
+*doom-meow*
+  - what i'm currently learning/discovering emacs on..
+
+*DOOM*
   - i had a great initial experience using this, felt wayyyy easier and way more intuitive than using neovim!
     - helix seems to have taken much of it's space-key-chord shortcuts from doom, making it an easy jump
   - "tailored for Emacs bankruptcy veterans who want less framework in their frameworks, a modicum of stability (and reproducibility) from their package manager, and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite operating system."
