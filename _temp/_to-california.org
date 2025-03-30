@@ -1,81 +1,153 @@
 
-ordered
+* college areas
+  - ordered by the one i think i'd like the most
 
+** small towns, with a small-town vibe!
 *santa cruz*
   - *ocean AND mountains!!*
     - *redwood forests*
+    - *nature lovers unite!!*
   - *most rad, by far*
+    - *THE LAST HOPE* against building yet another boring suburb
   - *arts department has masters' classes for all of my interests:*
     - MFA in film
       - MFA in social documentary
     - MS in playable media and games
       - part of theater department
     - MFA digital arts and new media
-    - B? in creativ tech
+    - B? in creative tech
       - the first
     - MFA in environmental art and social practice
     - PhD in film and digital media
     - also MA/PhD in philosophy and history, including a PhD in feminist studies
   - chill surfer/skater/bohemian culture
   - the tech people that love nature probably came here first
+  - *white*
+    - but hopefully offset by the school..?
+  - *extremely limited by housing*
+  - *proximity to the bay area*
+    - especially san jose jobs!!
+      - would be a crazy commute though..
+    - *TODO: live here until i find a good tech job*
     
-davis
-  - maybe more affordable?
-  - *school is bikeable from town*
-  - *entire school is bikeable*
-  - agriculture, vetrinary
-    - agriculture =/= permaculture
-  - has the only design major, undergrad and grad
-    - looks lame though..
-  - well-praised school
-
 SF
   - *startup culture*
     - now ai :/
+    - and still going..
   - noisebridge
-  - asians!
+  - *dog shit, human shit, needles, fentanyl crisis, homeless crisis*
+  - mostly white, mixed with tech asians, and latinos
     - but no black people :(
   - ocean sucks
-  - good small parks culture
-  - golden gate park and city events
-  - good sense of neighborhoods
+  - *good small parks culture*
+    - holy shit San Diego sucks for having one massive tourist park!!
+  - *golden gate park and city events*
+  - *great sense of neighborhoods*
+    - *small town vibe*
+  - *great hikes*
+    - *great day-to-day city life*
   - city college
     - *FREE SCHOOL*
   - CCA
     - meh, nothing in Cali compares to NY's arts culture..
   - UCSF
     - just medicine
-      
-  goleta/ucsb
+  - *get the feeling you are stuck in SF*
+    - even with a motorcycle, those bridges are no fun, and have tolls
+  - *cold and foggy*
+
+goleta/ucsb
   - just the school/college-town, actual town is useless
-  - expensive area
-  - *school is on the beach!*
-    
+  - expensive area, *extremely limited by housing*
+    - *no one actually live there*
+  - *school is on the beach! and has the mountains behind it!!*
+
+davis
+  - maybe more affordable?
+  - *school is bikeable from town*
+  - *entire school is bikeable*
+  - *agriculture, vetrinary*
+    - *agriculture =/= permaculture*
+  - has the only design major, undergrad and grad
+    - looks lame though..
+    - berkeley has a master's in design too..
+  - well-praised school
+  - *smells like cow poo?*
+  - *in the middle of nowhere*
+  - *midwest climate: too cold and too hot, but no humidity :/*
+
+
+
+** endless car-centric suburbia..
+
 san diego
   - school is lame, STEM only..
     - it's also really ugly, car-centric
-  - ocean beach
+  - *ocean beach*
+    - *a small town of it's own..*
     - can get old quick, though, still cool
     - very white
-  - north park
-    - asian restaurants!
-    - closer to outer latino neighborhoods
-  - endless beaches
-    - all bought up
+    - *the water is COLD*
+    - *often has weird cold beach weather*
+  - *north park*
+    - *hip, young, lively, diverse, bikeable small town*
+      - lots of indie shops 'n restaurants (*and not in strip malls!!*)
+      - a little strange though, like a suburban neighborhood turned hot-spot..
+        - still made for cars
+    - closer to outer asian and latino neighborhoods
+  - asian neighborhoods
+    - at 3x the price of VA Beach..
+    - *strip mall and SUV city, like an extension of LA*
+      - not the asians i'm interested in!!
+    - *no black people in most of San Diego??*
+    - a cooler/chiller alternative to OC..?
+  - *latino neighborhoods*
+    - *more diverse, including a few blacks and filipino enclaves*
+  - *endless beaches*
+    - *all bought up, owned by and live in by white people*
   - transient population
   - lots of tourists
-  - chill surfer/skater/bohemian culture
-  - car-camping culture
+    - they stick to the beaches though.. and bring in easy money!
+  - *chill surfer/skater/bohemian culture*
+    - gets old.. i prefer the energy of NYC, and probably LA too
+  - *car-camping culture*
+    - *RV camps, park next to beach, everything!*
+    - *truly stress free*
 
 berkeley
+  - NOTE: suburban, but doesn't feel as bad as socal/south bay
   - the school's design department seems lame..
-  - boring AF
-  - mostly transient, half international students
+  - *boring AF*
+  - mostly transient, half are international students
   - no ocean, just the bay
     - not even close to the same vibe!!
-    
+    - *feel trapped :(*
+  - screeching BART to SF not so fun
+    - nor is the bay bridge
+  - *old liberal vibe*
+    - *hatch-backs, station wagons, economical, conscious of waste*
+
+LA
+  - TEMP: i may reconsider that this is actually better than berkeley, SD, and surely SJ..
+  - the only thing worse than san jose / south bay and inner asian san diego
+    - *endless suburbs 'n strip malls, welcome to car city*
+    - well, north OC may be more or less the same.. perhaps even better..!
+    - SGV scares me..
+  - *LBC*
+    - *the only thing good about LA..??*
+  - *UCLA*
+    - *the best campus and food*
+      - *TODO: hmmm, maybe not a bad place to work.. i mean, if you're going to be on the campus everyday anyway..*
+    - near hip hollywood, or homeless hollywood.. and burnt malibu/santa monica
+  - UCI
+    - south OC is rich old money
+    - shit campus, similar to UCSD
+
 san jose
-  - ??
+  - OC (also called "south bay"), but more tech bros
+  - at least people actually live here though.. compared to transient berkeley and SF..
+  - no beach..? what about mountains..?
+    - i think i'd feel trapped here..
 
 
  
