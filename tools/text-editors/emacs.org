@@ -1,4 +1,6 @@
 
+NOTE: this file serves as a test for org-mode
+
 * sources
 tips, tutorials, help:
 https://github.com/emacs-tw/awesome-emacs#tutorials
@@ -22,27 +24,32 @@ set-up git
       - can slowly transition to magit
 
 backup doom config files
-  - create a shell script (or elisp function??) to do this
+  - TODO: create a shell script (or elisp function??) to do this
 
 load org repo on start
   - merge my-programming-stuff into main notes?
+    - TODO: currently using my-programming-stuff as my temp org folder
 
-fix emacs gui for chromebook
+c/fix emacs gui for chromebook
   - wayland display error :/
+    - i think it worked after running it via user instead of using sudo!!??
+  - *UPDATE: OMG, muuuuuuch better, and quicker too! <3 <3*
+    - yeah, fuck terminals!!
+      - (except when needed via remote servers..)
 
-try to add doom's evil key-bindings for many other places:
+*try to add doom's evil key-bindings for many other places:*
   - completion in mini-buffer
   - dired
     - truly garbage key-bindings: ^ for up directory?? vs h/l for up/down directory
   - org?
   - etc.
 
-compare 'n combine meow/default and doom key-chords
+*compare 'n combine meow/default and doom key-chords*
 
 
 * config
 
-NOTE: don't you ever use it as admin/sudo!
+*NOTE: don't you ever use it as admin/sudo!*
 
 see config files for notes on config
   - self-document!
@@ -62,20 +69,38 @@ magit
 learn x in y minutes / emacs
   - TODO: how to paste from terminal?
 
+spc-h-spc-m (TODO: can't find this in the meow bindings..?)
+  - meh docs..
+    - better to just try the binded functions in spc-c
+
+spc-h-b-m
+  - maybe quicker to undertand key-bindings than h-m..!
 
 emacs shares movement commands with bash
   - ugh... no wonder why it's so terrible!! :'(
+  - but.. not bad if you still use shell, and even ruby 'n perl/raku!
 
 [movement-command],[number]
   - repeat movement
 
+** some useful bindings
+
+c-arrow-keys
+c-m-left/right
+  - TODO: c-m-up/down broken
+m-down/up
+  - sane navigation bindings :D
 
 [[cmd:recenter-top-bottom][c-l]]
   - center, top, bottom
-    - super useful, never used this feature in another editor..
+    - *super useful*, never used this feature in another editor..
+
+m-s-right/left
+  - move list indents
+  - TODO: is this part of org-mode..?
 
 c-s/c-r
-  - isearch
+  - isearch forward/reverse
     - TODO: redundant, could use shift instead
 
 
@@ -120,7 +145,12 @@ spc-?
     - x
       - x, a
       - x, i
-    - ' repeat working is a blessing!! (it wasn't working in helix..)
+    - ' repeat
+        - this is a blessing!! (it wasn't working in helix..)
+        - f/t, '
+          - find/till char, repeat
+        - ]d, '
+          - next function, repeat
     - ; reverse cursor position on selection from kakoune
     - TODO: N reverse-search missing?
 
@@ -135,6 +165,10 @@ basic navigation is redundant:
 
 s
   - pro-tip: pressing s when nothing is selected kills to end of line!!: genius!
+
+x and w
+  - triggers meow-visual-line / visual-line-mode
+    - then can press arrow keys, or [] (begin/end of thing)
 
 after selecting something (with anything: x, w, W, [p, ].), can press any number to select that number of things
 
