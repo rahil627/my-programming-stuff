@@ -8,7 +8,11 @@
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
-(package! meow)
+;;(package! meow) ; NOTE: add directly in init.el under ':editor'
+
+;; TODO: can try some more themes from here..
+;;(package! modus-themes)
+;;(package! ef-themes)
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
