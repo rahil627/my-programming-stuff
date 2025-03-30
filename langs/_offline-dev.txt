@@ -1,0 +1,41 @@
+
+
+devdocs.io
+  - click on or enable the languages you need
+  - doesn't have docs for external libs
+
+
+
+
+ruby
+
+still seems best to just use ai to auto-generate some boiler-plate code, and work from there..
+  - *TODO may have to try github co-pilot, or whatever that works with emacs..*, and create a good ai workflow with that..
+  - *TODO: try generating phoenix and roda apps side-by-side*
+
+ri
+  - i think ruby comes with it..
+  - maybe have to run it once..?
+
+zenspider.com/ruby/quickref.html
+  - nice!
+github.com/khusnetdinov/rub.fundamental
+  - patterns, principles, structures, threads
+
+
+
+install some gems:
+
+gems come with docs, and sometimes even provide examples
+
+dragonruby
+  - incredible examples..
+
+rails
+  - gem install rails
+    - *just installing this will get you most of the web gems you'd ever need..*
+  - see /guides/
+
+roda
+  - gem install roda
+  - gitlab.com/fiachetti/mastering-roda
