@@ -1,4 +1,43 @@
 
+
+* notes
+
+*NOTE: this probably works with many languages with dynamic runtimes*
+  - *including ruby!!*
+
+spc-o-r
+  - +eval/open-repl-other-window
+
+run the entire program in repl
+  - then can run any function, like pry
+
+run (eval) regions of code
+  - spc-k-e (spc-e in meow)
+    - +eval/buffer-or-region
+
+send regions of code, functions, etc. to a repl
+  - then can run functions, macros, etc.
+  - spc-k-s
+    - +eval/send-region-to-repl
+  - spc-c-??
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * install lisp:
 scoop install sbcl
 
