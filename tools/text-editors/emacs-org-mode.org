@@ -1,0 +1,38 @@
+#+title: Org
+
+
+
+
+* bindings
+
+interesting auto-indent..
+
+i like * over # for headings.. though it could've been any symbol for easy parsing..
+
+*** important
+tab
+  - fold/unfold headings
+    - my favorite feature.. missing from helix??
+
+shift-tab
+  - toggle: overview, with sub-headings, all content
+  - *great for navigation / quickly grasping*
+    - though, a little overview panel would be better..
+
+org-goto
+  - spc-c-j
+  - *great way to navigate, interactively*.. code files def need this mode!!
+
+
+*** others
+org-insert-link
+  - file links actually open the file or directory (via dired)!!
+    -  this is quite incredible... just have to make sure the files are under the same repo..
+
+m-left/right
+  - promote/demote heading
+
+c-m-ret
+  - insert sub-heading, or another bullet
+
+m-ret

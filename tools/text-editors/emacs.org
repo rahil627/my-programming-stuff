@@ -13,29 +13,6 @@ https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
 
 
 
-
-* org-mode
-NOTE: this file also serves as a test of org-mode
-
-interesting auto-indent..
-
-i like * over # for headings.. though it could've been any symbol for easy parsing..
-
-org-goto
-  - great way to navigate.. code files def need this mode!!
-
-shift-tab
-  - toggle: overview, with sub-headings, all content
-
-m-left/right
-  - promote/demote heading
-
-org-insert-link
-  - file links actually open the file or directory (via dired)!!
-    -  this is quite incredible... just have to make sure the files are under the same repo..
-
-
-
 * TODO config
 set-up git
   - i think `gh auth setup-git` doesn't work with magit.. though, there is a gh cli package: consult-gh
@@ -92,8 +69,6 @@ emacs shares movement commands with bash
 [movement-command],[number]
   - repeat movement
 
-tab/s-tab
-  - fold!!, maybe my favorite feature, missing in helix??
 
 [[cmd:recenter-top-bottom][c-l]]
   - center, top, bottom
