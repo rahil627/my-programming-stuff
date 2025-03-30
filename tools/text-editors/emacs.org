@@ -14,8 +14,24 @@ https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
 
 
 
+* praise
+gui, compiled
+  - can start from terminal via 'emacs' command or from the chrome startup menu search thing
+  - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
+  - yeah, fuck terminals!!
+
+e-shell
+  - spc-o-e
+  - incredible, providing auto-complete, etc., and retains the bindings and theme of emacs. it just works like fish shell and wezterm
+
+
+
 
 * TODO config
+c/fix emacs gui for chromebook
+  - wayland display error :/
+    - i think it worked after running it via user instead of using sudo!!??
+
 set-up git
   - i think `gh auth setup-git` doesn't work with magit.. though, there is a gh cli package: consult-gh
     - TODO: setup git
@@ -24,18 +40,14 @@ set-up git
       - can slowly transition to magit
 
 backup doom config files
-  - TODO: create a shell script (or elisp function??) to do this
+  - TODO: create an elisp function to do this
+    - asks you where to save it
+      - similar to how dired-do-copy works
 
 load org repo on start
-  - merge my-programming-stuff into main notes?
+  - TODO: merge my-programming-stuff into main notes?
     - TODO: currently using my-programming-stuff as my temp org folder
 
-c/fix emacs gui for chromebook
-  - wayland display error :/
-    - i think it worked after running it via user instead of using sudo!!??
-  - *UPDATE: OMG, muuuuuuch better, and quicker too! <3 <3*
-    - yeah, fuck terminals!!
-      - (except when needed via remote servers..)
 
 *try to add doom's evil key-bindings for many other places:*
   - completion in mini-buffer
