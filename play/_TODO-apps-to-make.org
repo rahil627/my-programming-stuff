@@ -1,0 +1,111 @@
+#+title:  Todo Apps To Make
+
+ordered from simplest to most complex
+
+shiiiit, i've got my work cut out for me..
+
+*OR, fuck web products, just stream and live the life i want to live*
+
+
+* scraper
+  - jobs
+    - NOTE: currently for personal use only
+    - "junior ruby", "game community", "game support", "ruby support"
+      - can use emacs to search/filter/grep regex data.. :D
+        - emacs as the ultimate data (text) editor
+  - *game data*
+    - for game archive site
+      - though it uses phoenix, can run as seperate ruby scripts..
+  - *cooking recipes/site without the crap*
+    - TODO: is this legal?
+    - should work well from a phone
+  - no web framework, just a simple ruby script using nokogiri
+
+* map
+
+  - roda
+  -> can visualize with a js data viz lib,.. or a js game framework :D
+  -> leads to AR app
+
+** mapping basics
+  - start with a simple map using census data
+    - could get advanced, once it goes to other countries..!
+    - could show migrations by using historical data
+  - *map areas by livability: walkability/bikability/motorcyclability and zoning laws*
+    - *technology to find the best urban area to live in*
+    - zones for suburban strip-mall hell-holes vs places like north park, ocean beach?, SF, NYC
+      - detected by anaylzing google maps..?
+
+** mapping responsibility/acccountability
+  - then can try other data
+    - judge/police/prosecutor names/locations/info
+      - link to people convicted
+
+** mapping hope
+  - then create map apps that allow users to add/update various points of interest
+    - squatting, public and private vending locations, farmer's markets, handicraft markets, camping (car, tent, hammock), public restrooms, public libraries, guerilla gardening/farming, etc.
+    - vegetarian/vegan restaurants, locally-owned businesses
+      - can try scraping from google, yelp, etc.
+        - *could create a yelp for vegan/vegetarian only..* *along with other nature-loving businesses*
+          - this is leading to *businesses with hope*
+    - google maps public map feature?
+      - maybe has api for this..
+
+
+
+* *technology to see history*
+
+** history image AR app
+  - scrape photos related to your location
+  - display them at same coordinate
+  - can it be done via web..?
+
+* technology to connect people
+  - a new craigslist (classifieds posting)
+    - a new job site
+  - a new room and room-mate finder
+  - a sharing site
+    - tools, house, land, property: commodities
+
+* technology to find great art/products/ideas/things
+
+a simple product diplay website
+  - could be whatever
+    - TODO: what products can use a site make-over?
+      - could be whatever i'm passionate about
+      - NOTE: possible to make $$$ here.. very easily with a new car site..
+
+** games
+- see [game archive]
+- phoenix
+** motorcycles
+- really does need a better database/wiki
+  - scrape from all sources
+  - scrape from motorcycle forums, discord, wikis, etc.
+  - allow users to edit
+    - link to existing wiki?
+** weed
+- could easily make the best weed website!
+  - search based on effects, inherited strains, etc.
+- scrape databases
+- have fun making the front-end
+  - *it's the ui/ux that sets it apart from the rest*
+  - try figma
+  - make it trippy using web-gl effects
+  - can start with a roda PWA..? or phoenix-live-view?
+    - some funky node-based diagram in space, with the images of buds, with lines connected those with relationships
+  - should show tree, branch, flower/bud, and then scrape more nice photos of it, when the user asks for it
+** programming languages
+** art
+
+
+* tech for language/cultural preserveration
+indigenous languages
+a digital visualization of all languages, and how they're connected
+a map overlay of languages spoken (and ethnicity)
+
+* tech for nature preservation
+easily see a map of all real nature (old growth), fake nature (cut and re-planted)
+
+* plants, herbs, food
+tech that links plants to herbal and food recipes
