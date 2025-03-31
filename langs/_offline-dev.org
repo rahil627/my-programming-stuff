@@ -2,12 +2,22 @@
 
 devdocs.io
   - click on or enable the languages you need
-  - doesn't have docs for external libs
+    - NOTE: doesn't have docs for external libs
+  - download them to use offline
+    - devdocs.io/offline
+
+ai
+  - no offline ai :(
+    - LLM would require too much compute power
+    - though, it would provide privacy..! and not participate in giving data to the ai
 
 
 
+* ruby
 
-ruby
+TODO:
+  - add gems repo to emacs dirs
+    - create a ruby workspace?
 
 still seems best to just use ai to auto-generate some boiler-plate code, and work from there..
   - *TODO may have to try github co-pilot, or whatever that works with emacs..*, and create a good ai workflow with that..
@@ -19,17 +29,19 @@ ri
 
 zenspider.com/ruby/quickref.html
   - nice!
+
 github.com/khusnetdinov/rub.fundamental
   - patterns, principles, structures, threads
 
 
 
-install some gems:
+** install some gems:
 
 gems come with docs, and sometimes even provide examples
 
 dragonruby
   - incredible examples..
+    - simple, no modules, classes, or anything fancy
 
 rails
   - gem install rails
@@ -39,3 +51,4 @@ rails
 roda
   - gem install roda
   - gitlab.com/fiachetti/mastering-roda
+    - *NOTE: an incredible example of a single, giant .org file*
