@@ -2,16 +2,19 @@
 
 # TODO: un-tested
 
-# ai prompt:
+# ai prompts:
 # using ruby and nokogiri, scrape job posts from the following sites: rubyonremote, workwithindies, hnhiring, workatastartup, remoteok, craigslist, careerspub.universityofclaifornia.edu, elixirjobs.net
 # now abstract the data and do it in a loop
 # try to get the most data by it making a single simple selector
+
+module Ra::Scraper # TODO: can you have just a module of functions (instead of classes?)
 
 require 'nokogiri'
 require 'open-uri'
 require 'uri'
 
-def scrape_job_listings(url, job_selector, text_selector, link_selector, link_prefix = '')
+# "private"
+def scrape url, job_selector, text_selector, link_selector, link_prefix = ''
   begin
     doc = Nokogiri::HTML(URI.open(url))
     jobs = doc.css(job_selector)
@@ -26,7 +29,39 @@ def scrape_job_listings(url, job_selector, text_selector, link_selector, link_pr
   end
 end
 
-job_sites = [
+# "public"
+# input is an array of hashes
+def scrape_data site_data
+  @site_data.each do |site|
+    puts "Scraping #{site[:name]}..."
+    data_bunches = scrape( # TODO: formatting confusing
+      site[:url],
+      site[:job_selector],
+      site[:text_selector],
+      site[:link_selector],
+      site[:link_prefix]
+    )
+
+    data_bunches.each do |job|
+      puts "  Text: #{job[:text]}, Link: #{job[:link]}"
+    end
+  end
+
+  # puts "University of California: Scraping this site is complex and requires JS handling."
+end
+
+end
+
+
+
+
+# begin script
+
+include Ra::Scraper # TODO: can i just import a single function?
+  # do at the beginning as opposed to inline
+
+# fold me!
+site_data = [
   {
     name: 'RubyOnRemote',
     url: 'https://rubyonremote.com/',
@@ -80,19 +115,4 @@ job_sites = [
   }
 ]
 
-job_sites.each do |site|
-  puts "Scraping #{site[:name]}..."
-  jobs = scrape_job_listings(
-    site[:url],
-    site[:job_selector],
-    site[:text_selector],
-    site[:link_selector],
-    site[:link_prefix]
-  )
-
-  jobs.each do |job|
-    puts "  Text: #{job[:text]}, Link: #{job[:link]}"
-  end
-end
-
-# puts "University of California: Scraping this site is complex and requires JS handling."
+Scraper.scrape_data site_data
