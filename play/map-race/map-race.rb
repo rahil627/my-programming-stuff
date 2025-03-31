@@ -2,6 +2,7 @@
 
 # ai prompt:
 # using ruby, roda, the US Census Data, Google Maps, make a web-site similar to bestneighborhoods.org that overlays what races live where
+# TODO: only gets data at a coordinate..? check the APIs for a more broader set of data, based on the view/zoom of a map
 
 # TODO: un-tested
 
@@ -25,7 +26,7 @@ require 'erb'
 # Replace with your actual API keys
 GOOGLE_MAPS_API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY'
 CENSUS_API_KEY = 'YOUR_CENSUS_API_KEY'
-CENSUS_API_URL = 'https://api.census.gov/data/2020/acs/acs5'
+CENSUS_API_URL = 'https://api.census.gov/data/2020/acs/acs5' # NOTE: 2020?
 
 def get_census_data(lat, lng)
   uri = URI("https://geocoding.geo.census.gov/geocoder/geographies/coordinates?x=#{lng}&y=#{lat}&benchmark=4&vintage=4&format=json")
@@ -59,7 +60,7 @@ rescue => e
 end
 
 class BestNeighborhoods < Roda
-  plugin :render, views: 'views'
+  plugin :render, views: 'views' # checks views folder
   plugin :public, root: 'public'
 
   route do |r|
@@ -72,55 +73,10 @@ class BestNeighborhoods < Roda
       lng = r.params['lng'].to_f
 
       r.response['Content-Type'] = 'application/json'
-      get_census_data(lat, lng).to_json
+      get_census_data(lat, lng).to_json # main function
     end
   end
 end
 
 __END__
 
-@@ views/index
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Best Neighborhoods</title>
-  <style>
-    #map { height: 600px; width: 800px; }
-  </style>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= google_maps_api_key %>&callback=initMap" async defer></script>
-  <script>
-    let map;
-
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 37.0902, lng: -95.7129 },
-        zoom: 5
-      });
-
-      map.addListener('click', function(event) {
-        updateCensusOverlay(event.latLng.lat(), event.latLng.lng());
-      });
-    }
-
-    function updateCensusOverlay(lat, lng) {
-      fetch(`/census_data?lat=${lat}&lng=${lng}`)
-        .then(response => response.json())
-        .then(data => {
-          if (data.error) {
-            alert(data.error);
-          } else {
-            let content = `County: ${data.county}<br>Total Population: ${data.total_population}<br>Hispanic/Latino: ${data.hispanic_latino}<br>White: ${data.white}<br>Black: ${data.black}<br>Asian: ${data.asian}`;
-
-            new google.maps.InfoWindow({
-              content: content,
-              position: { lat: lat, lng: lng }
-            }).open(map);
-          }
-        });
-    }
-  </script>
-</head>
-<body>
-  <div id="map"></div>
-</body>
-</html>
