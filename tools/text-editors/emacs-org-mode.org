@@ -29,8 +29,23 @@ org-insert-link
   - file links actually open the file or directory (via dired)!!
     -  this is quite incredible... just have to make sure the files are under the same repo..
 
-m-left/right
-  - promote/demote heading
+s-[arrow-keys]
+  - NOTE: org-mode overrides these to provide more bindings, based on where your cursor is:
+    - (org-support-shift-select) to use original bindings
+  - on heading
+    - cycle tag (TODO, [X]..)
+    - cycle another set of tags..? ([#A], [#B]..)
+  - on list
+    - cycle indent symbol
+    - begin/end of list
+
+c-[arrow-keys]
+
+m-right/left
+  - on heading
+    - promote/demote heading
+  - on list
+    - shift list right/left
 
 c-m-ret
   - insert sub-heading, or another bullet

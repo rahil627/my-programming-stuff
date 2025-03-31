@@ -1,6 +1,11 @@
 
 NOTE: this file serves as a test for org-mode
 
+
+* some thoughts
+slowly but surely, emacs and i are becoming one.
+
+
 * sources
 tips, tutorials, help:
 https://github.com/emacs-tw/awesome-emacs#tutorials
@@ -17,6 +22,7 @@ https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
 * praise
 gui, compiled
   - can start from terminal via 'emacs' command or from the chrome startup menu search thing
+    - TODO: what about doom run..?
   - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
   - yeah, fuck terminals!!
 
@@ -66,7 +72,7 @@ load org repo on start
 see config files for notes on config
   - self-document!
 
-NOTE: first set up the right font and font size, it makes a big big difference!!
+*NOTE: first set up the right font and font size, it makes a big big difference!!*
   - can see a lot more in the mini-buffer!!
   - set font in terminal app settings or in doom's config.el
 
@@ -134,46 +140,55 @@ press the initial key-chord, then, in the popup mini-buffer, press c-h to fuzzy 
 
 TODO: finish [[fn:meow-tutor][meow-tutor]]
 
-c-key
-  - TODO: i haven't even got to these yet..!
+
+
+** key bindings
+
+TODO: merge from my helix and wezterm bindings
 
 spc-?
   - show cheat-sheet
-    - w/e/b & W/E/B are much improved!
-    - o seems like helix's extend_to_parent_node, but strangely seeks out brackets first
-    - [ begin [thing]
-    - ] end [thing]
-      - use this for select to end/beginning of line: [,l and ],l; removes the need for creating key-bindings for this in helix. though quite important keys, it makes sense to put them here
-    - , inner [thing]
-    - . outer [thing]
-      - replaces m (match) key-map of helix, which felt confusing 'n convoluted anyway.. having to press mim or mi(. using letters is much better
-    - v visit
-      - TODO: hmmm, a sort of search buffer??
-    - m merge?
-      - seems to select the space between this line and the end of the last line, where after pressing s/kill would merge the two lines
-      - also places the cursor at the first-non-whitespace in the line, unlike x
-        - m, a
-        - m, i
-    - x
-      - x, a
-      - x, i
-    - ' repeat
-        - this is a blessing!! (it wasn't working in helix..)
-        - f/t, '
-          - find/till char, repeat
-        - ]d, '
-          - next function, repeat
-    - ; reverse cursor position on selection from kakoune
-    - TODO: N reverse-search missing?
 
 spc-/
   - meow-keypad-describe-key
 
-basic navigation is redundant:
-  - TODO: change it? or leave it, as that's the default emacs way..?
-  - c-f/c-b and c-n/c-p == hjkl
-  - m-f/m-b == w/b
-  - c-a/c-e == x,i/x,a
+*** TEMP
+i'm guesing c-[key], c-[key] chords were chosen over c-[key], [key] as they would cause less mistakes..? yet, both are used..??
+
+TODO: play with all the main spc bindings
+
+- spc-b-x / spc-x
+  - make a scratch-buffer in a split-horizontal-window
+
+*** normal (no modifier key)
+  - w/e/b & W/E/B are much improved!
+  - o seems like helix's extend_to_parent_node, but strangely seeks out brackets first
+  - [ begin [thing]
+  - ] end [thing]
+    - use this for select to end/beginning of line: [,l and ],l; removes the need for creating key-bindings for this in helix. though quite important keys, it makes sense to put them here
+  - , inner [thing]
+  - . outer [thing]
+    - replaces m (match) key-map of helix, which felt confusing 'n convoluted anyway.. having to press mim or mi(. using letters is much better
+  - v visit
+    - TODO: hmmm, a sort of search buffer??
+  - m merge?
+    - seems to select the space between this line and the end of the last line, where after pressing s/kill would merge the two lines
+    - also places the cursor at the first-non-whitespace in the line, unlike x
+      - m, a
+      - m, i
+  - x
+    - x, a
+    - x, i
+  - ' repeat
+    - this is a blessing!! (it wasn't working in helix..)
+    - f/t, '
+      - find/till char, repeat
+    - ]d, '
+      - next function, repeat
+  - ; reverse cursor position on selection from kakoune
+  - r replace
+    - works as expected! (unlike helix..)
+  - TODO: N reverse-search missing?
 
 s
   - pro-tip: pressing s when nothing is selected kills to end of line!!: genius!
@@ -182,39 +197,81 @@ x and w
   - triggers meow-visual-line / visual-line-mode
     - then can press arrow keys, or [] (begin/end of thing)
 
+basic navigation is redundant:
+  - TODO: change it? or leave it, as that's the default emacs way..?
+  - c-f/c-b and c-n/c-p == hjkl
+  - m-f/m-b == w/b
+  - c-a/c-e == x,i/x,a
+
 after selecting something (with anything: x, w, W, [p, ].), can press any number to select that number of things
 
 
-** key chords:
+*** s-[key]
 
-i'm guesing c-[key], c-[key] chords were chosen over c-[key], [key] as they would cause less mistakes..? yet, both are used..??
+s-right/left
+  - highlight char right/left
 
-TODO: play with all the main spc bindings
+s-up/down
+  - highlight going up or down
+    - one of those simple things that helix's defaults failed to do
 
-  - spc-b-x / spc-x
-    - make a scratch-buffer in a split-horizontal-window
+*** c-[key] and m-[key]
+TODO: i haven't even got to these yet..!
 
+**** some basics:
+
+c-k
+  - kill-line
+c-j
+  - return-and-maybe-indent
+  - same as ret
+
+c-a
+  - beginning-of-line
+c-e
+  - end-of-line
+
+
+c-[arrow-keys]
+  - *basic nav*
+    - *very useful*, usually beats ][ (end/beginning of shortcuts)
+
+m-down/up
+  - page down/up
+
+m-right/left
+  - *swap with previous/next word*
+    - *TODO: this might be the first binding i want to change.. i never use this..?? and it messes me up!*
+
+**** others
+
+[empty]
 
 *** leader keys
 
 NOTE: read [[file:/home/ra/.doom.d/modules/editor/meow/config.el][meow config]]
 
-
 NOTE: SKIP TO [meow leader keys]
   - you don't need to know the rest (doom, original emacs)
 
-NOTE: god-mode/meow uses space
-  - uses space key chords instead of modifier keys:
-    - NOTE: some of these are hidden from the meow menu..
-    - spc-x == c-x, x-?
-    - spc-m = m-?
-      - a good way to see meta bindings
-    - spc-m-x == m-x
-    - spc-x-c == c-x, c-c
-      - NOTE: the second letter is automatically c-
-        - TODO: how to use use a normal letter..??
+** god-mode/meow
 
-  
+adds an alternate spc key-chord for modifier key combos
+  - NOTE: some of these are hidden from the meow menu..
+
+- spc-x-[key] (c-x, c-[key])
+  - NOTE: the second letter is automatically adds c- modifier
+    - TODO: how to use use a normal letter..??
+
+- spc-m-[key] (m-[key])
+  - a good way to see otherwise hidden bindings
+
+      - spc-x-spc
+  - *NOTE: uses doom's bindings*
+        - *very useful to intuitively find more useful functions..*
+          - this shit never ends..!
+
+** main
 spc (meow)
   - moew bindings
   - *NOTE: m-spc in insert mode* (moew)
@@ -308,25 +365,34 @@ spc (meow)
   - mneumonic
   - &
     - aya/yas
-  - action embark-act
+  - a(ction) embark-act
     - *interactive way of using the selected region to do something*
     - search
     - format
+      - | shell-command-on-region
+      - macro
+        - keyboard macro, not lisp macro..
       - align
       - delete duplicated lines
       - indent
       - lots more..
   - eval
-    - TODO: maybe more useful for lisp..??
+    - TODO: don't think this deserves an entire key..
+        - maybe more useful for lisp..??
   - file
-    - f, F (spc-spc in evil/helix), r, d (. in evil?)
-    - pro-tip: spc-f-f creates a file if it doesn't exist!
+    - f, F (spc-spc in evil/helix), r, d, p
+      - pro-tip: spc-f-f creates a file if it doesn't exist!
+    - m(ove)
+      - much better than jumping to terminal..
   - insert
     - unicode, emoji, file-name/path
     - TODO: never use..
   - j
     - NOTE: well-placed key left un-binded for the user to create their own menu..?
   - k(ode)?
+    - k
+      - doc
+    - d(ef)
     - *lsp*
       - i think it was chosen due to it's location: the most used key
   - l(anguage)? (c-c, l)
