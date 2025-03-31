@@ -2,6 +2,13 @@
 also see the 'scripting languages' section in 'programming lanugages.txt' for notes on
 
 
+https://kddnewton.com/2016/10/11/exploring-cli-best-practices.html
+  - some cli best practices
+  - and a gem to neatly add callbacks (to anything), to use with rails
+
+
+
+
 practice:
 https://learnbyexample.github.io/books/
   - ruby one-liners cookbook
