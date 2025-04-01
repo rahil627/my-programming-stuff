@@ -20,6 +20,8 @@ shiiiit, i've got my work cut out for me..
     - TODO: is this legal?
     - should work well from a phone
   - no web framework, just a simple ruby script using nokogiri
+  -> leads to crawlers
+    -> may lead to ai agents
 
 * map
 

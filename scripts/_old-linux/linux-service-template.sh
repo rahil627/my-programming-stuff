@@ -1,4 +1,4 @@
-# write a service example:
+# ai prompt: write a service example:
 
 cat /etc/systemd/system/setledspermissions.service
 
