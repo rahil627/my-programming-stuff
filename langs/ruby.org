@@ -5,25 +5,32 @@ see [play/ruby-limits.rb]
     - might as well just read the C code though..
 
 
-!/usr/bin/env ruby
 
-TODO: test using emacs with offline docs, to dev without the internet
 
-spc-k-
-TODO: ..maybe requires a local copy of ruby?..
-  - definitely would be better than using the docs!!
-TODO: research into a good setup for offline dev with ruby.. maybe there's already some useful tools out there..
+TODO: test using emacs with offline docs, to dev without the internet:
 
-spc-c[ode]-d[ocs]
-  - module/method
-  - seems to use ri as it's source..
+spc-k-k
+  - +lookup/documentation
+    - NOTE: requires inf-ruby running
+  - when on a word, and if it has docs on it
+    - go to docs
+  - when on a word, but doesn't have docs on it
+    - choose other sources
+      - *NOTE: this threw me off for some time.. maybe i do need to begin reading the manual..* emacs actually is complex..
+  - when on an empty space, search module/method
 
 spc-c-s
   - inf-ruby
     - irb in a buffer?
-    - kinda works like lisp, in which you can throw in pieces of code to the dynamic runtime, to test bits
+    - kinda works like lisp, in which you can throw in pieces of code to the dynamic runtime, to test bits; or, inspect it to see source 'n docs
       - it's a really cool workflow, especially for testing regions of code..
       - can just send a region of var declarations, some functions/modules/classes, then run 'em interactively
+
+spc-c[ode]-d[ocs]
+  - robe-docs
+    - NOTE: requires inf-ruby running
+  - module/method
+  - seems to use ri as it's source..
 
 ri --no-gems (shell command)
   - interactive ruby docs

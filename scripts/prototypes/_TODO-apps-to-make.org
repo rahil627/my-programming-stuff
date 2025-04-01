@@ -6,6 +6,7 @@ shiiiit, i've got my work cut out for me..
 
 *OR, fuck web products, just stream and live the life i want to live*
 
+*TODO: makes emacs more gamey, with more visual effects!*
 
 * scraper
   - jobs

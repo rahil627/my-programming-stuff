@@ -4,7 +4,7 @@ i likely have notes on this elsewhere..
   - TODO: grep it
 
 *csv*
-  - how data is stored
+  - how a lot of data in the world is stored
   - "cannot represent complex, hierarchical data structures"
     - just flat (no hierarchy), tabular data
   - still useful, as it's the simplest form
@@ -17,4 +17,6 @@ i likely have notes on this elsewhere..
 
 json
   - ew
+    - but good for machines, as it's simple to parse
+      - hence, it's the standard for web apis
   - "JSON uses curly braces {} for objects and square brackets [] for arrays, and requires double quotes for strings. It does not support comments."

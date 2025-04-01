@@ -3,6 +3,7 @@
 
 # ai prompt:
 # using ruby and roda, make a web site that inputs a URL, usually of popular cooking websites full of ads, and scrape the recipe and media (photos, video) content from it
+#  - TODO: use sinatra instead..
 
 # write a function that scrapes all the titles and descriptions from a YouTube channel (using ruby/roda web app above)
 
@@ -12,6 +13,8 @@
   # rename the single erb/view to the default name (index?)
 
 # use a switch instead of conditional if/else for the main url matching part, with the last else being the general site scraper function
+
+
 
 # needs some prompt engineering..
 # just scrape text,
@@ -25,17 +28,15 @@
 #   - use rosalina's kitchen as an example
 #     - https://www.youtube.com/channel/UCcb9uxCoIgw7RQjQnlgd0Xw
 
+
 # To run this code:
 
 # Install dependencies:
-# Bash
-
 # gem install roda nokogiri
 # Save the code: Save the code as a .rb file (e.g., recipe_scraper_roda.rb).
 # Create a views directory: Create a directory named views in the same location as your .rb file.
 # Create view files: Copy the index.erb and recipe.erb code into files named index.erb and recipe.erb, respectively, inside the views directory.
 # Run the server:
-# Bash
 # rackup recipe_scraper_roda.rb
 # Open in browser: Open your web browser and go to http://localhost:9292.
 # Enter URL: Enter the URL of a recipe website in the form and click "Scrape Recipe."

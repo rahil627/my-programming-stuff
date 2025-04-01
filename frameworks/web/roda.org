@@ -1,0 +1,11 @@
+#+title: Roda
+
+# NOTE: testing org-babel
+
+#+BEGIN_SRC ruby
+route do |r|
+  r.params['lat'].to_f # contains data passed from view
+  r.response['Content-Type'] = 'application/json'
+    # http response header dictionary?
+      # doesn't look like neither a hash nor array..
+#+END_SRC

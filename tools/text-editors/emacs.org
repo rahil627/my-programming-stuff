@@ -249,12 +249,21 @@ c-k
 c-j
   - return-and-maybe-indent
   - same as ret
+    - TODO: seems redundant.. can try using it instead of return tho..
+
+c-l
+  - toggle center/peek bottom/top depending on cursor position
+    - a very interesting key..
 
 c-a
   - beginning-of-line
 c-e
   - end-of-line
 
+c-ret
+  - +default/new-line-below
+    - does exactly what you want!
+  - org has it's own function
 
 c-[arrow-keys]
   - *basic nav*
@@ -394,7 +403,10 @@ TODO: import doom leader key bindings
 initially can keep them seperate, in seperate keys (spc-[key]), likely under spc-d, spc-j, and keep spc-j as my own custom menu
 
 
-
+see /home/ra/.doom.d/modules/editor/meow/autoload/bindings-qwerty.el
+  - TODO: not sure how to paste a link in the mini-buffer..
+  - this has a list of functions
+    - TODO: use org-babel to display the reference code in this file?
 
 spc (meow)
 - moew bindings
