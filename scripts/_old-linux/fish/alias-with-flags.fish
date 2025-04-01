@@ -1,6 +1,6 @@
 # hmmmm, nvm, seems to work in fish shell by default now..??
 
-# # generated via chatGPT3.5
+# generated via chatGPT3.5
 # make a cli function for the fish shell that allows addings flags to an existing alias, and executing it
 
 function alias-with-flags
