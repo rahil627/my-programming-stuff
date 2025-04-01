@@ -23,13 +23,19 @@ send regions of code, functions, etc. to a repl
   - spc-c-??
 
 
-
-** lisp lang notes
-
+** emacs notes
 eventually, you'll probably naturally read enough lisp code when using emacs
   - spc-f-e
     - find file in ~/.emacs.d
       - TODO: .doommodule is the compiled file..? i can't seem to find the functions for dired..
+
+c-(
+  - auto-add parens in the right place
+  - if you have paraedit
+m-(
+  - if you don't?
+
+** lisp lang notes
 
 (defun ra/post-config ())
   - can use / in the name? for name-spacing?

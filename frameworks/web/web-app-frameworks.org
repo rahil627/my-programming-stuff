@@ -2,15 +2,24 @@
 
 * post-rust-conclusion (10/2024):
 
-still phoenix (with it's default stack) or asp.net for all cases, from small to high-throughput/traffic to massive, and maybe even static. also, by the time you've got a product, live-view-native (for mobile) and blazor will be more developed..!
+ordered from smallest to biggest project size
 
-roda is still great when you want to make a tiny app from scratch, *a single file*, especially when you don't need anything from the beginning (no database / solely api programs, etc.). Very cool DIY feeling. Also, you get another reason to use ruby some more. :) But, you could probably build an empty phoenix project and have just about the same minimal setup.
+the choice between ruby and elixir is tough, as i prefer to use dragonruby for game dev, ruby for small scripts, and there's still a ton of jobs using rails. Phoenix actually is a singular framework that covers all cases, and just ends up being better written, so for personal projects, that actually makes more sense.. :/
 
-rails is still great, easier to grasp than phoenix/elixir, but only if that's too overwhelming, or if you are used to using ruby, as phoenix fixes a lot of problems rails had. Also, rails can't compete with live-view. Also phoenix will get a type system soon!! So.. no. Just stick with elixir.
+still *phoenix* (with it's default stack) for all size projects, from small to high-throughput/traffic to massive, and maybe even static. also, by the time you've got a product, live-view-native (for mobile) will be more developed..!
+  - will save server costs
+
+sinatra is still great when you want to make a tiny app from scratch, *a single file*, as it doesn't seperate routing from logic, as bigger MVCs, including roda. Great for little sites that merely play with api / data already existing on the web
+
+roda is still great when you want to make a small-to-mid-size app from scratch, *a single file*, especially when you don't need anything from the beginning (no database, etc.). Very cool DIY feeling. Also, you get another reason to use ruby some more. :) But, you could probably build an empty phoenix project and have just about the same minimal setup.
+
+rails is still great, but complex. Phoenix fixes a lot of problems rails had. Also, rails can't compete with live-view. Also phoenix will get a type system soon!! So.. no. Just stick with elixir.
   - *NOTE: FAR FAR MORE JOBS STILL USE THIS*
     - *this is enough reason to learn/use it*
       - in addition to being able to use ruby some more :)
     - it's actually quite rare for any company to use phoenix.. they usually just use elixir for parts of that app that have high throughput (messaging, chat, etc.)
+
+
 
 # x/haxe to avoid javascript and have static types (and good compiler errors!) and advanced language features
 #   - html5 + haxe/http/node.js for the simplest gui apps (via html form tags)
@@ -21,6 +30,9 @@ rails is still great, easier to grasp than phoenix/elixir, but only if that's to
 #     - maintained by rudy, but seems a mess.. just use js at this point..
 
 special cases:
+asp.net
+  - if you're used to C#/.NET, as it's quite great now (potential for blazor wasm..? good standard mvc), but still has the baggage of microsoft, like java before it
+    - and honestly, like java, also just impossible to grasp, due to the complexity of it's VM. Whereas with ruby, people (individuals) are still able to write things like prism.c
 static site generators for simple static sites
   - just edit a simple config file and *voila!*, a web-site!
   - although, can still just use phoenix with Plug.static, and have complete control of the site
@@ -38,11 +50,6 @@ to try:
 CLOG for a fun way of making little web apps!
 
 alts:
-roda/ruby
-  - for small web apps, *limited by GIL*
-  - a smaller learning curve compared to elixir
-    - especially if still using dragonruby!!
-  - <3 ruby
 x/haxe-ui
   - to avoid web front-end altogether
     - *UPDATE: but so can ruby via opal..*
@@ -64,6 +71,7 @@ x/flutter (and some similarly implemented rust framework)
   - *single-file web-sites!?!?*
   - still pretty experimental as of 2024
   - still better than it's alternatives in rust, C#, etc.
+  - Google sucks
 
 
 

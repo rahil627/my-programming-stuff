@@ -5,6 +5,9 @@ NOTE: this file serves as a test for org-mode
 * some thoughts
 slowly but surely, emacs and i are becoming one.
 
+- should think about how this differs from tabs..
+  - buffers and windows are seperate, so tabs are just windows
+
 
 * sources
 tips, tutorials, help:
@@ -30,6 +33,8 @@ e-shell
   - spc-o-e
   - incredible, providing auto-complete, etc., and retains the bindings and theme of emacs. it just works like fish shell and wezterm
 
+dired
+  - not quite yazi, but with emacs, it can't be beat!
 
 
 
@@ -54,12 +59,21 @@ load org repo on start
   - TODO: merge my-programming-stuff into main notes?
     - TODO: currently using my-programming-stuff as my temp org folder
 
+*sort m-x functions by which has been binded*
+  - in order to make it more intuitive to learn a mode
+  - no clue how to order them by use..
+    - plain keys, keys with modifiers, others?
 
-*try to add doom's evil key-bindings for many other places:*
-  - completion in mini-buffer
-  - dired
+*try to merge doom's evil key-bindings for many other places:*
+  - *completion in mini-buffer*
+  - *dired*
     - truly garbage key-bindings: ^ for up directory?? vs h/l for up/down directory
-  - org?
+      - h, help
+      - l, refresh/relist
+  - *c-x*
+  - *org*
+  - c-c?
+    - slowly..
   - etc.
 
 *compare 'n combine meow/default and doom key-chords*
@@ -81,6 +95,16 @@ magit
 
 
 
+
+* workspace basics
+it's nice to have dired open, when working within a project, to have a sort of visual view to come back to
+  - TODO: maybe there's some kind of file explorer plug-in that can pop-up via a F-key
+
+it's similarly nice to have an i-buffer window open, to visually see which buffers are open
+
+if working quickly, just do quiksave/quickload (on doom's splash screen)
+
+projects vs workspaces vs persp(ective)
 
 * bindings
 
@@ -142,7 +166,7 @@ TODO: finish [[fn:meow-tutor][meow-tutor]]
 
 
 
-** key bindings
+** key bindings (actual keyboard keys)
 
 TODO: merge from my helix and wezterm bindings
 
@@ -259,19 +283,33 @@ NOTE: SKIP TO [meow leader keys]
 adds an alternate spc key-chord for modifier key combos
   - NOTE: some of these are hidden from the meow menu..
 
-- spc-x-[key] (c-x, c-[key])
-  - NOTE: the second letter is automatically adds c- modifier
-    - TODO: how to use use a normal letter..??
+  - spc-spc
+    - set mark
+      - TODO: hmmmm, must be important..
 
-- spc-m-[key] (m-[key])
-  - a good way to see otherwise hidden bindings
+  - spc-x-[key] (c-x, c-[key])
+    - NOTE: the second letter is automatically adds c- modifier
+      - TODO: how to use use a normal letter..??
 
-      - spc-x-spc
-  - *NOTE: uses doom's bindings*
-        - *very useful to intuitively find more useful functions..*
+  - spc-m-[key] (m-[key])
+    - a good way to see otherwise hidden bindings
+
+  - spc-g (c-m-[key])
+    - go
+      - more navigation stuff..??
+        - TODO: looks pretty useless.. might be able to easily trim this off..
+          - basic navigation via hjkl, arrow-keys + modifiers, ][, seem to cover most of it..
+      - matches c-m-[arrow keys]
+
+  - spc-x-spc, spc-c-spc
+    - *doom's bindings*
+      - *very useful to intuitively find more useful functions from doom's config..*
+        - TODO: merge c-x functions
+          - sould be pretty easy..
+        - TODO: marge c-c function over time (major-mode-dependent)
           - this shit never ends..!
 
-** main
+** key chords
 spc (meow)
   - moew bindings
   - *NOTE: m-spc in insert mode* (moew)
@@ -365,8 +403,12 @@ spc (meow)
   - mneumonic
   - &
     - aya/yas
+  - tab
+    - pro-tip: if a region is highlighted, auto-indents
+    - alt: spc-a-tab
   - a(ction) embark-act
     - *interactive way of using the selected region to do something*
+    - by default, if nothing is selected, it'll select the current line
     - search
     - format
       - | shell-command-on-region
@@ -435,7 +477,7 @@ spc (meow)
 
 
 
-*** some useful key chord bindings
+*** some useful key chord bindings from the original emacs bindings
 
 TODO: bind vundo!!
 
@@ -443,24 +485,33 @@ TODO: bind vundo!!
 TODO: merge with above..
 
 
-c-x/spc-x/spc-b
-  - *TODO: rebind this vs create my own via spc-[my-key]*
-   - *spc-j is a good start*
+c-x/spc-x (spc-b in doom?)
+  - *TODO: create another binding for this..?? or keep the original emacs way?*
+    - *create my own menu via spc-[my-key]*
+      - *start with nothing, building up from scratch*
+    - *spc-j is a good start*
+    - *or could put under spc-f, to make it files 'n buffers*
+      - spc-f-b/B are unbound!
      
   - buffers
     - NOTE: this menu is missing in meow
-  - b/B/spc-b-i
-  - *interactive buffer*
-    - exactly what i wanted when using helix!!
-    - looks similar to dired
-    - should think about how this differs from tabs..
-      - buffers and windows are seperate, so tabs are just windows
-  - k/K
-    - kill
+    - ordered by use:
   - s
     - save
+    - bad habit..
+  - b/B/spc-b-i
+  - *buffer list in dired* and *search buffer interactively*
+    - exactly what i wanted when using helix!!
+  - switch-to-buffer vs persp-switch-to-buffer
+    - found in doom bindings
+    - it seems persp gets rid of the recent files list and all of emacs temporary files
+      - TODO: update binding
+  - k/K
+    - kill
   - left/right
     - next/previous buffer
+      - TODO: yay!! can finally use, now that gui emacs works!!
+        - try this out some more..
 
 spc-</>
   - switch buffer
@@ -481,6 +532,27 @@ spc-x-;
 
 
 
+
+
+
+
+
+
+
+
+
+
+** dired
+mark files 'n folders, then take action
+
+m(ark)
+u(undo)
+
+capital keys for actions, for safety reasons
+  - R, D
+    - R is mv, use it for rename, move, cut/paste
+
+and remember, can use favorite emacs commands to search and manipulate text in the buffer!
 
 * pre-configs
 

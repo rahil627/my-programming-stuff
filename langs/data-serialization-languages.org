@@ -1,0 +1,20 @@
+#+title: Data Serialization Languages
+
+i likely have notes on this elsewhere..
+  - TODO: grep it
+
+*csv*
+  - how data is stored
+  - "cannot represent complex, hierarchical data structures"
+    - just flat (no hierarchy), tabular data
+  - still useful, as it's the simplest form
+
+*yaml*
+  - the readable json
+  - "it uses indentation to define relationships and hierarchy"
+  - "supports complex data structures like lists and dictionaries (key-value pairs)"
+    - no need for lua then..
+
+json
+  - ew
+  - "JSON uses curly braces {} for objects and square brackets [] for arrays, and requires double quotes for strings. It does not support comments."
