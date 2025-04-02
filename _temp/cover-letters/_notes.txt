@@ -1,7 +1,7 @@
 
 
 todo:
-  - turn on phone
+  - phone
     - check status through website
   - passport
     - look for it
@@ -14,11 +14,19 @@ todo:
     - transfer money
 
 
+TODO: programming
+  - setup ai with emacs
+    - try gihub co-pilot trial
+    - continue making web apps with it
+
+
 TODO ASAP:
   - update resume on jobs i applied to
-    - rewrite the babycastles portion
-      - add videos
-    - fix the noisebridge part / sub-title part
+    - meh..?
+    - just update resume
+      - rewrite the babycastles portion
+        - fix the noisebridge part / sub-title part
+        - add videos
 
 
 
@@ -30,7 +38,12 @@ TODO:
 
 
 hacker news jobs:
-  - spellbrush
+end of march
+duckduckgo
+  - technical sourcer
+  - applied but no cover letter
+early march
+- spellbrush
     - tactics rpg games!
       - applied with a short e-mail
 
