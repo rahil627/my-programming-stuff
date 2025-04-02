@@ -8,10 +8,12 @@
 interesting auto-indent..
 
 i like * over # for headings.. though it could've been any symbol for easy parsing..
+  - * is placed in an odd spot on the keyboard though..
+  - # is used for comments in many prog langs anyway, pre-dated markdown by far..
 
 *** important
 tab
-  - fold/unfold headings
+  - fold/unfold headings, sub-headings, sub-sub-headings..
     - my favorite feature.. missing from helix??
 
 shift-tab
@@ -25,8 +27,13 @@ org-goto
 
 
 *** others
+
+*c-l*
+  - another pop-up menu..
+
 org-insert-link
-  - file links actually open the file or directory (via dired)!!
+  - spc-l-l-l
+  - *file links actually open the file or directory (via dired)!!*
     -  this is quite incredible... just have to make sure the files are under the same repo..
 
 s-[arrow-keys]
@@ -45,9 +52,17 @@ m-right/left
   - on heading
     - promote/demote heading
   - on list
-    - shift list right/left
+    - un/indent list right/left (normal-mode)
 
-c-m-ret
-  - insert sub-heading, or another bullet
+c-ret
+  - if on a list
+    - insert list-item
+  - if on empty space
+    - insert heading
 
 m-ret
+  - same as c-ret?
+
+c-m-ret
+  - insert new heading (highest-level), no matter what?
+
