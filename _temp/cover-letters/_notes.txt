@@ -24,7 +24,7 @@ TODO ASAP:
 
 
 TODO:
-  - see TODOs, try using org-mode, lol
+  - see TODOs, try using org-mode agenda, lol
 
 
 
@@ -197,10 +197,10 @@ temp $ jobs:
      - live-view-native in dev!
      -> making my own web apps
    - *rails*
-     - it seems there still isn't many phoenix/elixir jobs..
+     - it seems there still aren't many phoenix/elixir jobs..
      - also, i just LOVE ruby!
    - asp.net
-     - meh, i prefer rails and ruby, though probably better for big code-bases
+     - meh, i much prefer phoenix/elixir, and still even prefer rails/ruby for community reasons, especially for their smaller communities, though, this is probably better than ruby for big code-bases
 
 
 
