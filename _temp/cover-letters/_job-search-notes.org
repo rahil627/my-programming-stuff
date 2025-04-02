@@ -1,6 +1,7 @@
 
 
-todo:
+* TODO list:
+** TODO: ASAP
   - phone
     - check status through website
   - passport
@@ -14,13 +15,14 @@ todo:
     - transfer money
 
 
-TODO: programming
+** TODO: programming
   - setup ai with emacs
-    - try gihub co-pilot trial
+    - try gihub co-pilot trial?
+      - or just use a free one..
     - continue making web apps with it
 
 
-TODO ASAP:
+** TODO ASAP:
   - update resume on jobs i applied to
     - meh..?
     - just update resume
@@ -31,34 +33,55 @@ TODO ASAP:
 
 
 
-TODO:
+** TODO:
   - see TODOs, try using org-mode agenda, lol
 
 
 
 
-hacker news jobs:
-end of march
+
+
+
+* some jobs i applied to:
+** hacker news jobs:
+*** end of march
 duckduckgo
-  - technical sourcer
+  - technical sourcer(er)
   - applied but no cover letter
-early march
+*** early march
 - spellbrush
     - tactics rpg games!
       - applied with a short e-mail
+**** applied but no cover letter necessary:
+- creyos
+- *reverb/etsy*
+  - a musical instrument marketplace
+- *backerkit*
+  - a table-top game and fantasy crowd-funding platform
+  - customer success associate
+    - forgot to save it
+** from linked in:
+- canonical (ubuntu) linux desktop support
+  - all remote company
+  - applied, but i think i applied to this before..
+    - UPDATE: fail
+- padlet
+  - one of the few that use the tech stack i'd personally choose: ruby/rails (or phoneix?)/elixir/react native
+  - applied, but i probably applied to this before too, quite a few times now.. :/
+- huntress
+  - applied to a ruby parser job!!
+    - siiiickk
+    - UPDATE: fail
 
 
-applied but no cover letter necessary:
-  - creyos
-  - *reverb/etsy*
-    - a musical instrument marketplace
-  - *backerkit*
-    - a table-top game and fantasy crowd-funding platform
-    - customer success associate
-      - forgot to save it
 
 
-other products made with ruby on rails:
+
+
+
+
+
+* other products made with ruby on rails:
   - bigcartel
     - make an online store, tailored for artists
   - bigthink
@@ -183,42 +206,56 @@ other products made with ruby on rails:
 
 
 
-from linked in:
-  - canonical (ubuntu) linux desktop support
-    - all remote company
-    - applied, but i think i applied to this before..
-  - padlet
-    - applied, but i probably applied to this before too, quite a few times now.. :/
-  - hunttress
-    - applied to a ruby parser job!!
-      - siiiickk
+
+* job titles:
+  - in general, aim for *early startups/pursuits with friends*
 
 
-
-
-
-
-
-dream jobs / goal:
-  - *ux designer for games*
+  - *game ui/ux designer*
     - sounds even more satisfying than even design studio work, as i could really spend time honing, perfecting ui/ux design/controls
+    - *probably the most fitting job for my nature*
+      - very niche too..
+      - i don't understand how jblow mastered this AND programming!
 
-temp $ jobs:
-  - web product startup jobs using the following tech:
-   - *phoenix/elixir*
-     - built-in gradual typing coming soon!
-     - live-view-native in dev!
-     -> making my own web apps
-   - *rails*
-     - it seems there still aren't many phoenix/elixir jobs..
-     - also, i just LOVE ruby!
-   - asp.net
-     - meh, i much prefer phoenix/elixir, and still even prefer rails/ruby for community reasons, especially for their smaller communities, though, this is probably better than ruby for big code-bases
+  - *product designer*
+    - might get fed up with bad, money-oriented/quantitative management..
+
+  - *product manager*
+
+  - others:
+
+  - visualization?
+    - sounds closest to game programming in the corporate tech world.. but maybe not so fun after all..
+    - requires a lot of SQL :/
+
+  - technical customer service
+  - technical customer success
+  - solutions engineer
+  - sales engagement?
+    - more social
+
+  - systems/server admin(istrator)?
+  - IT?
+  - devops?
+    - more unix, generalist, terminals (emacs?)!
+
+** jobs to practice the craft of programming:
+- *plenty of these are founding engineer jobs within early startups*
+- web product startup jobs using the following tech:
+  - *phoenix/elixir*
+    - built-in gradual typing coming soon!
+    - live-view-native in dev!
+  - *rails*
+    - it seems there still aren't many phoenix/elixir jobs.. (2025)
+      - *and ruby still seems to be thriving..!*
+    - for the <3 of ruby
+  - asp.net
+    - meh, i much prefer phoenix/elixir, and still even prefer rails/ruby for community reasons, especially for their smaller communities, though, this is probably better than ruby for big code-bases
 
 
 
 
-ycombinator startup funding
+* ycombinator startup funding
   - very easy to apply!
     - just send an idea, even if it's the "late deadline"i
       - DONE
@@ -228,14 +265,7 @@ ycombinator startup funding
         - yeah, he would be perfect!! and he lives in SF!
 
 
-
-
-
-
-
-
-
-job sites list
+* job sites list
 
   - through friends
   
@@ -301,19 +331,7 @@ job sites list
       - looks legit, it's just that.. the startups seems so boring.. :/
 
 
-job titles:
-  - game ui/ux designer
-
-  - product designer
-  - product manager?
-
-  - visualization
-
-  - systems/server admin(istrator)?
-  - IT?
-  - devops?
-
-tools:
+* tools:
   - *c* > jai (> rust?) > c++
   - elixir (phoenix)
   - ruby (rails, roda)
@@ -321,7 +339,7 @@ tools:
   - c# (asp.net)
     -> unity, fna/monogame
 
-remote jobs
+* remote jobs
   - remote companies
     - wikimedia (wikipedia)
       - todo: software engineer for the content transform team
@@ -332,7 +350,7 @@ remote jobs
       - support engineer (worldwide/remote)
       - TODO: others jobs??
 
-schools
+* schools
   - both universities nor schools for younger people mostly use outdated enterprise software, which doesn't look fun
     - departments that need a computer person can be fulfilling, as one can be in control of all the software for that department, choosing what one likes, integrating stuff (n8n), making one's own, and also *the social aspect of getting to know everyone*
       - actually, wanting to be a part of the department/organization shouold be the main reason to be there: *choose a department you want to be in* (i.e. UCSC game/film, NYU game/itp, parson's design 'n tech, etc.)
@@ -366,18 +384,19 @@ schools
 
 
 
-ruby contributors
+* ruby contributors
   - https://spreecommerce.org/ruby-on-rails-most-popular-among-top-y-combinator-companies/
 
   - the dot com era startups:
     - shopify
-      - ruby (core language, yjit, core gems), rails, lots of gems
+      - ruby (core language, yjit, core gems), rails, lots of other non-core gems
         - they ensure everything is optimized (interned strings, etc.) because it costs them server $$
     - stripe
       - rails, gems, don't like sorbet so much.. :/
     - checkr
       - background checker
       - applied
+        - fail
       
     - github
       - lots: trilogy db adapter, language highlighting / parsers, etc.
@@ -391,7 +410,7 @@ ruby contributors
         - rails + go services
 
     - *mastadon*
-      - maybe just sponsored, open-source project..
+      - an open-source project, with sponsorship finance strategy
 
     - etsy?
       - reverb
@@ -428,7 +447,7 @@ ruby contributors
         - a software dev agent
 
 
-tech i use and love:
+* tech i use and love:
   - most seem to be open-source..
   - TODO: think of more
 
@@ -501,17 +520,14 @@ netflix?
 
 
 
-FAANG:
-google's products are in a graveyard, terrible design, though pragmatic
-amazon's products are ALL garbage (kindle, fireTV, alexa, echo frames?, etc.)
-  - luna
-    - game streaming market-place, like google stadia?
+* FAANG:
+x/google's products are in a massive graveyard, abandoned, forgetten, without a sense of design, though pragmatic
+x/amazon's products are ALL GARBAGE copies of pop consumer devices (kindle, fireTV, alexa, luna [Google stadia], echo frames?, etc.)
   - mostly web cloud server stuff
-facebook? ew!
-  - vr (meta quest)
-apple is closed off
+x/facebook? ew! just has vr (meta quest)
+x/apple is closed off
 *microsoft* is the clear winner
-  - good recent coop (or co-opt?) of open-source and linux stuff
+  - *good recent coop (or co-opt?) of open-source and linux stuff*
     - linux sub-shell
     - vs-code
     - typescript
@@ -519,6 +535,10 @@ apple is closed off
       - asp.net
         - blazor (web assembly), razor pages (mvc), razor components, etc.
     - C#
-      - but then limited to C#, which i'm not really interested either for games or web.. i prefer jai/C/dragonruby (language and engine) and ruby+rails/elixir+phoenix
+      - but then limited to C#, which i'm not really interested either for games or web.. i prefer jai/C/ruby/elixir/dragonruby (language and engine) and rails 'n phoenix
     - xbox
       - might as well just buy a gaming laptop nowadays..
+      - hasn't made a good game since halo 2..?
+      *- the original xbox live arcade was the nicest for indie devs, though still a pain..*
+        - though, now, it's the switch
+        - providing the XNA framework was kind too
