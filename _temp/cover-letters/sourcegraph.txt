@@ -1,0 +1,20 @@
+
+cover letter:
+heyo.
+
+this is the first time in my life i'm applying to be a... salesman!! haha. But looking at the role, it doesn't seem so bad: I like the idea of understanding bigger concepts, supporting customers, and just having a general understanding of all of the products, nudging better designs and documenting bugs along the way. It sounds like a natural step up from a more technical "customer success" role, but not quite a technical "solutions engineer" role. By nature i'm a community support person, that just so happened to delve into tech for the sake of making artsy games when I was young. So, it's hard to fit me into such big companies, but generalist support and constantly socializing with everyone, customers and engineers like, is where I feel at home.
+
+i'm also a very physical community person, so being in the city, SF or New York, quite matters to me, which may help the relations aspect. I can walk around cities to offices all day, talking to people face to face. :) I mean, I wasn't so interested in all those minds-db events with lame startup ideas going on last time I was in SF, but ai tools to aid people in making stuff is one aspect of ai i'm absolutely down for!
+
+I haven't done tech work for quite some time, but *my oh my* have things changed!.. Though, honestly, indie game makers remain largely unaffected, as it's the art of game design that matters, thankfully.. I'd have to do a bit of catching up on current ai workflows, and understand why this product is better than others.. but if it can convince me that it's genuinely great, surely i'd be able to convince others, technical or not. :)
+
+anyway, I know it's a long shot, but just let me know (via e-mail)! i'm heading up back up the Cali coast by scooter starting today(!!), from San Diego to Santa Cruz. So, i'll be happy to relocate to the SF if needed, as i've lived there thrice before during my lifetime. And it's summer-time again! :D You can probably catch me at the Noisebridge hackerspace once i'm back.. Maybe I can use ai to modify tetris attack to work on the cocktail arcade table we made there last time! :D :D
+
+
+
+
+Why are you a good fit for our open position?
+i'm a big concept person, with tech knowledge, passable tech skill, good design taste, a passion for user experience and interface (hence games controllers/interfaces), that feels most comfy when in social spaces, in a supportive manner, *taking care of others*. I've run traveler hostels for much of my recent life, and artsy 'n permaculture spaces. It's a different world, but as long as supporting others, especially technically, is the role, I feel i would fit.
+
+Why are you a good fit for our open position?
+It attacks a problem that has riddled my dreams, coming from a more artist's/creator's perspective: the experience of making programs sucks. Coming from the digital art making world, the experience of making digital stuff sucked, whether it was mobile video games (iOS objective-c days!), tech art experiences (C++ days), and even dead simple video games (all game engines just suck..). I tend to focus on searching for/wanting/making/designing better tools, better human interfaces, in hopes of a better workflow, so that I don't even think about all the technical crap, and can thus finally focus on the things I wanted to make in the first place! Though I come from games, i'm sure problem applies to the enterprise web world too, especially with those massive code-bases. I'm a stickler for well-designed tools: game engines, frameworks (media, game, web), programming languages, all of these things matters to me, as making them better means making them more accessible, easier, enjoyable, and ultimately, more fun! I think Sourcegraph is in a space, particularly ai agents, where the potential to make it all better is there. And it would be great to relieve the technical stress for others (by selling it). There's just so much potential in optimizing the workflow of human workers via ai agents these days, i'm just curious of the potential of it all, for the sake of technical relief!
