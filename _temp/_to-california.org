@@ -5,9 +5,11 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
 *master the car life first.*
 
 *conclusion: live and work in santa cruz until i get a car and/or find a good tech job in SF/Bay Area*
-  - stick to SF for startup work/learning/experience/network/relations
-  - stick to SC for rad nature-loving community living
-  - go back to NYC for the real deal
+  - *stick to SF/Bay Area for startup work/learning/experience/network/relations*
+  - stick to SC for rad nature-loving community living, or to just take a break from the Bay Area
+  - *go back to NYC for the real deal*
+  - can *try long beach city, though, more for warm weather, community, events, restaurant/cafe/delivery/event work*
+    - need a car to live out there 'n find a place, as there are no hostels nearby
 
 *TODO: add UCLA and UCI to jobs list*
   - it won't hurt trying 'em out.. i'm just here to make money anyway..
@@ -19,6 +21,7 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
 ** big cities
 *** YES NYC
 - *the realest, dopest, passionate, no bullshit, pragmatic, just do it / DIY culture, respectful, hustle*
+  - *even the tech businsses are more real!*
 - *burns one out in a few months*
 - *winters are FREEZING*
   - thus, can only go during the warmer times
@@ -60,13 +63,12 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
       - would be a crazy commute though..
   - *cold :(*
 
-*** LIKELY long beach city (LA)
+*** YES long beach city (LA)
   - see entry under [LA]
   - *might actually have the best housing situtation out of all these in Cali*
   - *maybe worth trying..??*
-*** YES north park (SD)
-  - see entry under [san diego]
-*** OKAY SF
+*** YES SF
+  - *BIG TECH MONEY*
   - *startup culture*
     - *still the center of startups* as of 2025
       - though, they likely move elsewhere after growing in size
@@ -103,21 +105,7 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
     - though, honestly, not much worse than San Diego.. just a bit more ranier
   - good grocery from that one chinatown street
     - now has a new tram line!
-*** davis
-  - maybe more affordable?
-  - *school is bikeable from town*
-  - *entire school is bikeable*
-  - *agriculture, vetrinary*
-    - *agriculture =/= permaculture*
-  - has the only design major, undergrad and grad
-    - looks lame though..
-    - berkeley has a master's in design too..
-  - well-praised school
-  - *smells like cow poo?*
-  - *in the middle of nowhere*
-  - *midwest climate: too cold and too hot, and no humidity :/*
-
-*** NO berkeley
+*** OKAY berkeley
   - suburban, but probably not as as bad as south bay/socal
     - probably closest to north park, san diego
     - a suburb with some essence of life in it.. though not much anymore
@@ -150,6 +138,22 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
         - or so, i thought..!
   - actually better weather than pacific beach and ocean beach in San Diego!
 
+*** OKAY north park (SD)
+  - see entry under [san diego]
+*** davis
+  - maybe more affordable?
+  - *school is bikeable from town*
+  - *entire school is bikeable*
+  - *agriculture, vetrinary*
+    - *agriculture =/= permaculture*
+  - has the only design major, undergrad and grad
+    - looks lame though..
+    - berkeley has a master's in design too..
+  - well-praised school
+  - *smells like cow poo?*
+  - *in the middle of nowhere*
+  - *midwest climate: too cold and too hot, and no humidity :/*
+
 *** san luis obispo
   - caltech
   - otherwise quite a conservative town in the middle of nowhere (industrial vineyards, other farms)
@@ -174,44 +178,54 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
 *** NO LA
   - TEMP: i may reconsider that this may actually be better than berkeley, SD, and surely SJ..
   - has *by far the best energy out of all of California, from SD to SF*
-    - *generally fitter, healthier, happier, more energetic people, the opposite of stingy*
-    - *attracts artists, especially performance artists*
+    - *generally livelier, happier, more energetic people, the opposite of stingy*
+      - though, also, *burnt out*
+    - *has a larger variety of people, beyond the tech people of the Bay Area*
+      - *attracts artists, especially performance artists*
   - kinda has that *too big to fail* energy
-  - *the city itself, however, especially when compared to san diego, feels burnt out, dumpy, dirty, dingy*
-  - *industry and culture sucks compared to NYC, just too fake, no heart*
+  - *industry and culture sucks compared to NYC, just too fake, no heart (except LBC, south-central)*
     - possibly the center of woke culture
-    - just far more stupid, inauthentic
-  - *has the most amount of neighborhoods, always in flux*
+    - just far more complacent, business without assimilation
+  - *has the most amount of neighborhoods, especially cultural ones*
     - *basically, the rest of SoCal, and even NorCal (except SF and SC), can be found in LA:*
     - *each area is a microcosm of California*
-    - MAYBE *the LBC*
+    - *but most suck: are exclusive, ethnic-based, traditional or class-based*, with LBC as one of the rare few exceptions:
+    - *LBC*
       - *the only thing good about LA..??*
       - *oakland on the sea*
         - similar demographics: black, south-east asian, pan-gender
+          - lots of young people, epsecially students
         - similarly ghetto: homeless, drugs, crime
       - *terrible traffic in every direction*
         - thus, you are trapped in there..
         - maybe access to nearby beaches and middle OC?
+          - these areas suck.. better stick to the LBC and retain community relations
+          - westminster is old Vietnamese money/families, complete with cafe/gambling dens
+          - garden groove is old Korean money/families
+            - all are sprawling, strip mall suburbs
+          - seal beach, bolsa chica beach, then huntington beach (costs $15 to park..!)
       - *possibly even better weather than oakland, as you get the ocean wind!*
-      - can't swim here
-        - *the LA river dumps out all it's shit here, and there's a huge harbor*
+        - can't swim here
+          - *the LA river dumps out all it's shit here, and there's a huge harbor*
       - snoopy d o double-g
-    - north-east LA
-      - berkeley?
-    - pasadena/south-pasadena
-      - palo alto?
-    - north OC?
-      - koreans, filipinos, etc.
     - west/ocean-side LA
       - venice beach
         - ocean beach?
       - santa monica
         - pacific beach?
+        - MAYBE *silicon beach*
+          - interesting.. but seems to only be huge companies, not a startup hub like SF AND NYC..?
+    - north-east LA
+      - berkeley?
+    - pasadena/south-pasadena
+      - palo alto?
+    - NO north OC?
+      - vietnamese, koreans, filipinos, etc.
     - chinatown (in dtla)
       - tiny
     - downtown
-      - garbage like san diego's
-    - endless suburbia
+      - like san diego's: garbage
+    - the rest of LA / endless suburbia
       - like south bay and suburban asian san diego, the dirty version
       - *endless tract houses 'n strip malls, welcome to car city*
         - *SGV scared me.. those are not the Asians i was lookin' for..*
@@ -223,6 +237,21 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
     - south OC is rich old money
     - shit campus, similar to UCSD
     - *highest amount of asians* out of all the UCs
+
+*** NO san jose / south bay area
+  - *OC (also called "south bay"), but with even more tech bros, and no girls, at all: man jose*
+    - rich asian tract-house suburbia, like mira mesa/clairemont/etc. in san diego
+  - at least people actually live here though.. compared to transient berkeley and SF..??
+    - not a good thing, as i saw in the suburbs of san diego..
+  - a useless downtown
+  - no beach..? what about mountains..? waterfalls? rivers??
+    - i think i'd feel trapped here..
+  - *tech work / BIG TECH MONEY*
+    - the boring, corporate kind..
+  - *taiwanese tech scene*
+    - see taiwanese facebook groups
+  - *fremont*
+    - *maybe has the most amount of indians AND taiwanese (200k+)*
 
 *** NO san diego
   - *basically, a duller, mellow, less cultured (diversity and ways of living/thinking) LA with nice beaches and cleaner, newer development*
@@ -309,20 +338,6 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
   - beyond downtown is boring suburbs, without the ocean
     - dyin' of thirst
     - *fruitvale has a lot of latino people vending food out on parking lots!!*
-
-*** NO san jose / south bay area
-  - *OC (also called "south bay"), but with even more tech bros, and no girls, at all: man jose*
-    - rich asian tract-house suburbia, like mira mesa/clairemont/etc. in san diego
-  - at least people actually live here though.. compared to transient berkeley and SF..??
-    - not a good thing, as i saw in the suburbs of san diego..
-  - a useless downtown
-  - no beach..? what about mountains..? waterfalls? rivers??
-    - i think i'd feel trapped here..
-  - *tech work*
-    - the boring, corporate kind..
-  - *taiwanese tech scene*
-    - see taiwanese facebook groups
-
 
 * ride back up the coast
 https://bestneighborhood.org/race-in-san-diego-ca/i
