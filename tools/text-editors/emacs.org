@@ -114,6 +114,10 @@ learn x in y minutes / emacs
 
 for major modes
   - see the functions binded to c-c
+f12
+  - gui menu
+    - sometimes shows bindings for the menu item/command
+    - TODO: how is this created..?
 
 
 spc-h-b-m
@@ -294,6 +298,47 @@ basic navigation is redundant:
   - c-a/c-e == x,i/x,a
 
 after selecting something (with anything: x, w, W, [p, ].), can press any number to select that number of things
+
+
+*** [f-keys]
+
+NOTE: with a with a chromebook, i re-bind the search key (below tab) to escape, which blocks the default search+function key binding
+  - so, i can't use these anyway! which is good, as i really shouldn't..
+
+cam keep these empty for project specific bindings, like calling scripts, ci/cd, etc. project actions
+
+*maybe intentionally left empty by meow.. because it's neither mneumonic nor easy to remember*
+  - c-k
+    - seems to cover the standard f-key bindings anyway..
+      - TODO: check doom for f-key bindings
+        - likely the normal vs-code stuff..
+  - indeed, it's better to not bind anything
+
+**** only these two are useful:
+f1
+  - help
+f12
+  - *gui menu*
+    - also can get here by clicking on various items on the status-line
+      - major mode menu, minor mode menu
+      - version control menu
+      - line and column menu
+
+**** TODO the rest can be unbinded:
+f2
+  - 2C 2 column functions
+  - c-x 6
+f3
+  - define keyboard macro
+  - NOTE: redundant, can remove
+    - c-x (
+      - strange
+   - maybe it's a good place, to allow you to use any other key, including key-chords, within the macro..?
+f4
+  - execute keyboard macro
+    - c-x k k
+      - again in normal mode
+    - a little too deep..
 
 
 *** s-[key]
