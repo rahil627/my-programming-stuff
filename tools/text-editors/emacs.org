@@ -112,13 +112,13 @@ projects vs workspaces vs persp(ective)
 
 learn x in y minutes / emacs
 
-for major modes
-  - see the functions binded to c-c
 f12
   - gui menu
     - sometimes shows bindings for the menu item/command
     - TODO: how is this created..?
 
+c-c
+  - for major modes
 
 spc-h-b-m
   - a better view of key-bindings quicker to undertand key-bindings than h-m..!
@@ -218,6 +218,10 @@ TODO: play with all the main spc bindings
       - *TODO: try practicing this..?*
   - s
     - pro-tip: pressing s when nothing is selected kills to end of line!!: genius!
+  - n
+    - search last selection
+    - meow-search
+      - TODO: no meow-reverse-search function nor binding for N
   - o
     - (meow-block) seems like helix's extend_to_parent_node, but strangely seeks out the end of the next set of brackets first..
       - ohhhhh, i think i understand.. it's made for lisp! this and O really is all you need.. emacs and lisp must have been incredibly productive back in the days..
@@ -416,10 +420,13 @@ spc-v-g
   - start here
 
 P push
-  - u upload
+  - p push (default)
+    - main/origin?
+  - u upstream?
     - main/origin?
 *** dired
 mark files 'n folders, then take action
+  - and remember, can use favorite emacs commands to search text in the buffer!
 
 m(ark)
 u(undo)
@@ -427,9 +434,6 @@ u(undo)
 capital keys for actions, for safety reasons
   - R, D
     - R is mv, use it for rename, move, cut/paste
-
-and remember, can use favorite emacs commands to search and manipulate text in the buffer!
-
 
 
 * leader keys
@@ -524,13 +528,15 @@ m-x / spc-m-x (meow/god)
 
 c-x / spc-x
   - meow's emacs bindings, which remains closer to emac's default bindings
+    - *TODO: or is it the default emacs bindings..??*
   - it has a few funky bindings... i guess that's why doom had to create some sane defaults for it
-  - i guess here for consistency, as it will be used by many tutorials and docs..
-  - buffer
-  - save
-  - close
-  - dired-jump (j)
-  - indent interactively!! (tab)
+  - i guess here for consistency, as it will be used by many modules
+  - *TODO: NOTE: still has a few very important functions:*
+    - buffer
+    - save
+    - close
+    - dired-(j)ump
+    - tab indent interactively!!
 
 c-x, c-? / spc-x-spc
   - doom's "sane" emacs bindings, many similar to doom's space leader key, itself similar to emac's original bindings

@@ -21,6 +21,7 @@ interesting auto-indent..
 
 i like * over # for headings.. though it could've been any symbol for easy parsing..
   - * is placed in an odd spot on the keyboard though..
+    - probably expected to use c/m-return anyway.. along with m-left/right
   - # is used for comments in many prog langs anyway, pre-dated markdown by far..
 
 *** important
@@ -32,6 +33,7 @@ shift-tab
   - toggle: overview, with sub-headings, all content
   - *great for navigation / quickly grasping*
     - though, a little overview panel would be better..
+  - org-shifttab
 
 org-goto
   - spc-c-j
