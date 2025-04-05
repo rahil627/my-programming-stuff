@@ -1,7 +1,19 @@
 #+title: Org
 
 
+* how it works
 
+c-h spc m
+  - TODO: really need to bind this..
+  - describe-mode
+
+headings as main structure unit
+  - ways to navigate them: org-shifttab, org-goto, TODO: probably more..
+
+headings can be tagged
+  - *TODO: this is a little strange to me.. i think i prefer line-based tags..*
+  - *TODO: remove most tags and add personal tags here: NOTE, etc.*
+  - headings are categorized by: inactive and active
 
 * bindings
 
