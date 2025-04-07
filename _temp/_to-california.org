@@ -254,22 +254,44 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
     - *maybe has the most amount of indians AND taiwanese (200k+)*
 
 *** NO san diego
-  - *basically, a duller, mellow, less cultured (diversity and ways of living/thinking) LA with nice beaches and cleaner, newer development*
-    - *lacks the energies of: artist culture of LA, tech-startup culture of SF, and research culture of Berkeley 'n Stanford*
-    - *the beach makes it much more livable than suburbs without beaches*
-  - *north park*
-    - *hip, young, lively, liberal, subruban-bikeable small town*, most sim
-      - lots of indie shops 'n restaurants (and not in strip malls!!)
-        - though, still quite strip-malley around hillcrest and a few other areas..
-      - a little strange though, like a suburban neighborhood turned hot-spot, like berkeley..
-        - still made for cars
-      - still quite white.. though, a good amount of latinos from the east/south-east, and asian kids from the north too!
-    - *perfect location*:
-      - *in-between bedroom asian and latino neighborhoods*, where you can get real food.. though, it's all in *over-priced suburban strip malls..*
-      - *close to ocean beach and mission/pacific beach!*
-        - *yet far enough to avoid the cold, coastal weather*
-    - still $1000 minimum for a room in a house/apartment
-  - *ocean beach*
+- *basically, a duller, mellow, less cultured (diversity and ways of living/thinking) LA with nicer beaches and cleaner, newer development*
+  - *lacks the energies of: artist culture of LA, tech-startup culture of SF, and research culture of Berkeley 'n Stanford*
+  - *the beach alone makes it much more livable than suburbs without beaches*
+  - still $1000 minimum for a room in a house/apartment
+- transient population
+  - lots trying to move in, just as many getting out..?
+  - lots living in RVs / cars in/nearby RV parks
+- tourists
+  - not so many..
+  - they stick to the beaches though.. and bring in easy money!
+  - and probably bring the prices up too..
+- *chill surfer/skater/bohemian culture*
+  - gets old.. *i prefer the energy of the city: NYC, and probably even LA todo
+- *car-camping culture*
+  - *RV camps, park next to beach, everything!*
+  - *truly stress free*
+- school (UCSD) is lame, STEM only..
+  - the school's campus is also lame: modern 1960s office buildings, car-centric
+  - kinda in the middle of rich areas: surrounded by the beach, torrey pines, la jolla, small hill/valley neighborhoods
+  - *influenced/created biotech industry*
+    - which is also lame..
+- SDSU (SD state) is a party school, not competitive
+- jobs pay less than LA and Bay Area, yet the price of housing is the same
+
+**** neighborhoods
+***** OKAY north park
+  - *hip, young, lively, liberal, subruban-bikeable small town*, most sim
+    - lots of indie shops 'n restaurants (and not in strip malls!!)
+      - though, still quite strip-malley around hillcrest and a few other areas..
+    - a little strange though, like a suburban neighborhood turned hot-spot, like berkeley..
+      - still made for cars
+    - still quite white.. though, a good amount of latinos from the east/south-east, and asian kids from the north too!
+  - *perfect location*:
+    - *in-between bedroom asian and latino neighborhoods*, where you can get real food.. though, it's all in *over-priced suburban strip malls..*
+    - *close to ocean beach and mission/pacific beach!*
+      - *yet far enough to avoid the cold, coastal weather*
+
+***** NO ocean beach
     - *a small, dumpy, beloved beach-town of it's own..*
     - *like haight st., can get old quick*, though, still cool, as far as music performances go
     - very white
@@ -278,52 +300,34 @@ the car comes first. Then one can live anywhere, including all the hip areas of 
     - very competitive housing
     - *exclusive neighborhood*
     - *very often has weird cold beach weather*
-  - x/pacific beach
+***** NO pacific beach
     - *boardwalk/beach*
       - unaffordable to have anything cool on it
       - *still, just great to have tho.. everyone comes out to this one!!*
     - neighborhood has all the major grocery stores
     - insecure frat boys, proud boys (racists), and military boys fighting
-  - the rest of san diego
-    - *culture-less*, in diversity and ways of living
-    - *strip mall and white-painted SUV subrubs, like an extension of LA*
-      - *new boring tract homes inland/north-east, beyond san diego still a million+..*
-    - *no black people in most of San Diego??*
-  - ?/latino neighborhoods
-    - *more diverse, including a few black and filipino enclaves*
-  - x/asian neighborhoods
-    - at 3-5x the price of VA Beach..
-      - not the asians i'm interested in!!
-        - *though, they do remind me of myself..*
-    - a cooler/chiller/newer alternative to OC..?
-      - but without the industry, creativity, etc., much like VA beach
-  - north county
-    - *endless beaches, all bought up, owned by and live in by white people*
-      - mostly rich white families (with businesses elsewhere?) with boats, SUVs, and other boy toys
-    - similar to west LA (manhattan/hermosa beach), but newer/later history
-    - oceanside
-      - may be the exception, with *a great weekly street market* (biggers than ocean beach!)
-        - maybe people from the inland areas come out for the hustle..
-      - or maybe not, still appears to be bought up by investors, and has a lot of big, ugly, hotels 'n apartment buildings..
-  - transient population
-    - lots trying to move in, just as many getting out..?
-    - lots living in RVs / cars in/nearby RV parks
-  - tourists
-    - not so many..
-    - they stick to the beaches though.. and bring in easy money!
-    - and probably bring the prices up too..
-  - *chill surfer/skater/bohemian culture*
-    - gets old.. *i prefer the energy of the city: NYC, and probably even LA todo
-  - *car-camping culture*
-    - *RV camps, park next to beach, everything!*
-    - *truly stress free*
-  - school (UCSD) is lame, STEM only..
-    - the school's campus is also lame: modern 1960s office buildings, car-centric
-    - kinda in the middle of rich areas: surrounded by the beach, torrey pines, la jolla, small hill/valley neighborhoods
-    - *influenced/created biotech industry*
-      - which is also lame..
-  - SDSU (SD state) is a party school, not competitive
-  - jobs pay less than LA and Bay Area, yet the price of housing is the same
+***** NO the rest of san diego
+- *culture-less*, in diversity and ways of thinking/living
+- *strip mall and white-painted SUV subrubs, like an extension of LA*
+  - *new boring tract homes inland/north-east, and still a million minimum..*
+- *no black people in most of San Diego??*
+  - *this really kills the liveliness of SD..*
+****** [?] latino neighborhoods
+- *more diverse, including a few black and filipino enclaves*
+****** NO asian neighborhoods
+- at 3-5x the price of VA Beach..
+  - not the asians i'm interested in!!
+    - *though, they do remind me of myself..: suburban, computer-oriented*
+- a cooler/chiller/newer alternative to OC..?
+  - but without the community, industry, creativity, etc., also much like VA beach
+****** NO north county
+- *endless beaches, all bought up, owned by and live in by white people*
+  - mostly rich white families (with businesses elsewhere?) with boats, SUVs, and other boy toys
+- similar to west LA (manhattan/hermosa beach), but newer/later history
+- oceanside
+  - may be the exception, with *a great weekly street market* (biggers than ocean beach!)
+    - maybe people from the inland areas come out for the hustle..
+  - or maybe not, still appears to be bought up by investors, and *has a lot of big, ugly, hotels 'n apartment buildings..*
 
 *** NO oakland
   - *??*
