@@ -281,6 +281,13 @@ duckduckgo
 
   - others:
 
+  - research software engineer
+    - at universities
+    - write software to enable researchers to further their research
+    - assist on non-programming researchers on their research projects
+      - *can be several projects, short-term, varying*
+    - teach everyone the ways of programming
+
   - visualization?
     - sounds closest to game programming in the corporate tech world.. but maybe not so fun after all..
     - requires a lot of SQL :/
