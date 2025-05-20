@@ -1,0 +1,7 @@
+
+
+heyo.
+
+i've been out of the tech game for a bit, and so now i'm aimin' for software jobs that deal with the customer/community-side of things: bottom-up, designing from the user's perspective/experience, noting bugs/problems, etc. I come from a very artsy game tech background that was just pure systems programming, and so i've avoided all the javascript framework crap. Luckily for this product, the web part seems pretty simple, and the rest is web APIs and AI crunching, so I feel pretty confident with supporting this. :)
+
+anyway, i'm currently chillin' in Long Beach (LA), on slow motorcycle trip back up the coast. I came down from Berkeley, which is where I worked last summer, but i'd gladly live in SF again. I've still got my crew at the hackerspace over there! Just e-mail me or text me!
