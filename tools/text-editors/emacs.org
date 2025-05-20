@@ -27,15 +27,24 @@ gui, compiled
   - can start from terminal via 'emacs' command or from the chrome startup menu search thing
     - TODO: what about doom run..?
   - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
-  - yeah, fuck terminals!!
+    - yeah, fuck terminals!!
 
 e-shell
   - spc-o-e
-  - incredible, providing auto-complete, etc., and retains the bindings and theme of emacs. it just works like fish shell and wezterm
+  - *incredible, providing auto-complete, etc. without config like fish shell, and retains the bindings and theme of emacs*, thus replacing fish and wezterm
+    - *emacs >>> terminal emulator + shell (+shell config) + file navigator + lazygit*
 
 dired
-  - not quite yazi, but with emacs, it can't be beat!
+  - not quite yazi, but with combined with emacs, *no seperate terminal app can compete*
 
+org-mode
+  - i'm orgin' baby!
+  - *the shift-tab/tab workflow is so natural to my mind.., it aids me to focus, and just be more organized*, as then everything is forced to be under a heading
+    - this lends well to being in habit folding/unfolding code, and just navigating code in general
+
+magit
+  - though i still use github gui app, this def seems worth trying/learning..
+    - TODO: maybe there's a great diff module..?
 
 
 * TODO config
