@@ -379,6 +379,7 @@ duckduckgo
 
   - startups
     - just *live in SF*
+      - *nahhh... no sense of home ;( gotta try to make LA/SGV/LB my home.. build from the heart*
     - *ycombinator*
       - the OG
       - *hnhiring*
@@ -396,17 +397,17 @@ duckduckgo
 
 
 * tools:
-  - *c* > jai (> rust?) > c++
-  - elixir (phoenix)
-  - ruby (rails, roda)
+  - ruby (rails, roda, sinatra) > python
     -> *dragonruby*
+  - *c* > *jai* > rust > c++
+  - elixir (phoenix)
   - c# (asp.net)
     -> unity, fna/monogame
 
 * remote jobs
   - remote companies
     - wikimedia (wikipedia)
-      - todo: software engineer for the content transform team
+      - *todo: software engineer for the content transform team*
       - movement communications specialist, product and tech
     - duolingo
     - gitlab
@@ -415,13 +416,14 @@ duckduckgo
       - TODO: others jobs??
 
 * schools
-  - both universities nor schools for younger people mostly use outdated enterprise software, which doesn't look fun
+  - both universities and schools mostly use outdated enterprise software, which doesn't look fun
     - departments that need a computer person can be fulfilling, as one can be in control of all the software for that department, choosing what one likes, integrating stuff (n8n), making one's own, and also *the social aspect of getting to know everyone*
       - actually, wanting to be a part of the department/organization shouold be the main reason to be there: *choose a department you want to be in* (i.e. UCSC game/film, NYU game/itp, parson's design 'n tech, etc.)
-    - *canvas uses ruby*
-    - moodle uses php, yikes
+    - notes on learning management software (LMS)
+      - *canvas uses ruby*
+      - moodle uses php, yikes
     - *main problem is that you have to live near the campus, pay those costs, be near transient people*
-      - however, *it could feel like a youth hostel*, lol
+      - however, *it could feel like a youth hostel, filled with people with good intentions*
     
 
   - 1. edjoin.org
@@ -536,7 +538,7 @@ duckduckgo
 
   - the dot com era startups:
     - shopify
-      - ruby (core language, yjit, core gems), rails, lots of other non-core gems
+      - *ruby (core language, yjit, core gems)*, rails, lots of other non-core gems
         - they ensure everything is optimized (interned strings, etc.) because it costs them server $$
     - stripe
       - rails, gems, don't like sorbet so much.. :/
@@ -605,8 +607,8 @@ duckduckgo
     - ldtk
   - text editors
     - *focus*
-      - great one to help make
-      - also can practice jai!!
+      - *great one to help make: design and programming!*
+        - *also can practice jai!!*
     - emacs
       - lol
     - lightstorm
@@ -683,9 +685,11 @@ x/apple is closed off
         - blazor (web assembly), razor pages (mvc), razor components, etc.
     - C#
       - but then limited to C#, which i'm not really interested either for games or web.. i prefer jai/C/ruby/elixir/dragonruby (language and engine) and rails 'n phoenix
+      - likely an overtly complex VM (same route as java)... not that ruby isn't, but ruby has good reason: for it's syntax and features
     - xbox
       - might as well just buy a gaming laptop nowadays..
       - hasn't made a good game since halo 2..?
       *- the original xbox live arcade was the nicest for indie devs, though still a pain..*
         - though, now, it's the switch
         - providing the XNA framework was kind too
+    - surface pro actually has potential
