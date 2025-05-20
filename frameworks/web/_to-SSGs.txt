@@ -1,17 +1,92 @@
 
-jekyll
+* conclusion
+for the most basic stuff, use github pages (jekyll, worry-free and free hosting)
+
+when that becomes not enough, can update jekyll to bridgetown to integrate into roda/rack to DIY
+
+if you have rails experience, and think you will eventually move to rails, use sitepress
+  - it will give the option to integrate into rails
+
+build your own cms with rails
+  - there's already some useful libs: avo, alchemy, cms, spina
+  - this'll allow you to add exactly what you need for the project, nothing more
+
+in general, most cms software is garbage
+
+
+
+* from sitepress.cc home-page
+Why Sitepress?
+Static site generators are great frameworks for compiling static websites and publishing them to the web, but they force you to choose between running them completely static or inside of a Rails application. Sitepress lets you do both!
+
+Database-backed Rails content management systems like Refinery CMS and Radiant CMS are difficult to sync between development, test, staging, and production environments, making them difficult to use in multi-stage development or test-driven development workflows.
+
+Projects like High Voltage make it possible to embed a small, basic site into Rails, but they lack powerful features like Frontmatter and Sitemap APIs required to make building non-trivial content sites possible. It also doesn't ship with a static site compiler.
+
+Site generators like Jekyll, Middleman, and Bridgetown were not built with Rails integration as a primary concern, which can make embedding them in a Rails app more difficult because they have more outside dependencies to manage.
+
+*Sitepress is the missing piece. It has all the powerful features you'd expect from a fully featured static site generator, like Frontmatter support and hierarchical page traversal, but it's capable of being embedded inside any Rails, Sinatra, or Rack app. Since all of the content is just a bunch of files, its easy to incorporate Sitepress into a multi-stage or test-driven work environment. Embed it in Rails today, make it stand-alone tomorrow. Or do the opposite.*
+
+If you're a soloprenuer building Rails applications, you'll love how easy it is to build content websites in your Rails app, which means you can spend more time shipping and less time worrying about your content management system.
+
+
+
+
+
+ones that rely on a pop web back-end:
+*bridgetown*
+  - bridges (and updates) jekyll to roda
+
+*sitepress.cc*
+  - can run standalone or integrate into rails
+
+umbraco
+  - asp.net
+
+
+* meh
+[insert many newer frameworks, mostly typescript (strapi, payload, directus, etc.) and php (statamatic, processwire, craft, expressionengine, etc.)]
+  - https://www.reddit.com/r/webdev/comments/1g6c27n/other_than_wordpress_whats_cms_have_you_worked_on/
+  - only a matter of time which one will be abandoned..
+
+* older
+  - during the time of jekyll/hugo/11ty
+
+** ruby
+*jekyll*
   - the OG
-'
-bridgetown
-  - jekyll seems abandoned, so the ruby community continued development with this branch
-  - allows the option to convert to roda framework
+  - *used by gihub pages*
+    - *don't need to worry about having a server!*
+  - *bridgetown*
+    - jekyll seems abandoned, so the ruby community continued development with this branch
+    - *allows the option to convert to roda framework*
+      - hence the name: a bridge to a pop web back-end
+
+middlemen
+  - status: not so maintained..?
+    - https://www.reddit.com/r/rails/comments/15wm43e/comment/jx4wg84/
+  - a newer pop alt to jekyll, alongside bridgetown
+
+nanoc
+  - looks like a simpler alternative to jekyll, at the time of jekyll.. could be a great little one..
+
+**others
+kirby
+  - <3
+    - *has/attracts a good little community, like gamer communities!*
+  - php, vue.js
+
+TYPO3
+  - a person who liked kirby mentioned this
+  - php
 
 11ty
   - the main javascript one
 
 hugo
-  - go, fast but kinda weird experience having to compile it everytimei
+  - go, fast but kinda weird experience having to compile it every-time..
   - also a weird choice in language..
+    - feels like a go project: does what it's supposed to, without thought about customization, architecture, design, and future
 
 to try:
 Nice, haxe, a simple one!, including a cli
