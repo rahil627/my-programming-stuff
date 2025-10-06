@@ -46,9 +46,15 @@
 
 
 
+TODO: check my job filter preferences
 
 * some jobs i applied to:
 ** hacker news jobs:
+*** april
+- fathom
+  - requires a live interview
+- livekit
+  - developer success engineer
 *** end of march
 duckduckgo
   - technical sourcer(er)
@@ -66,6 +72,14 @@ duckduckgo
   - customer success associate
     - forgot to save it
 ** from linked in:
+- perplexity ai
+  - web search focused ai/llm
+  - customer success engineer
+  - product qa engineer
+- codeium/windsurf
+  - text editor with ai
+  - developer relations
+    - the perfect role and product!!
 - canonical (ubuntu) linux desktop support
   - all remote company
   - applied, but i think i applied to this before..
