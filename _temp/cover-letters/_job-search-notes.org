@@ -15,6 +15,11 @@
   - transfer money
 
 
+** TODO job search
+- otta.com seems really good.. stick to that!
+  - can fallback to the other one..
+
+
 ** TODO programming
 1. setup ai with emacs
   - try gihub co-pilot trial?
@@ -45,10 +50,15 @@
 
 
 
+* some jobs i applied to:
+** otta
+*** late october, november
+TODO: get a list of jobs applied to?
+  - or use otta.com to keep the list?
+    - can it be exported/saved?
 
 TODO: check my job filter preferences
 
-* some jobs i applied to:
 ** hacker news jobs:
 *** april
 - fathom
