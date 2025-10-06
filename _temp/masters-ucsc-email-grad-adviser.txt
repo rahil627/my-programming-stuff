@@ -1,0 +1,27 @@
+
+NOTE: not a cover letter!
+
+heyo,
+
+i'm quite interested in this program, as i'm now back in America/Cali.. Since i've been back, i feel the need to take the opportunity here to gather as much as i can before i head back to Taiwan, and/or possibly Hawaii too, taking back as much wisdom as i can with me.. ;)
+
+one thing i really want to make sure is: the campus is indeed on santa cruz, not silicon valley? Unlike many researchers/academicians(?), the location is deeply important to me, as i have deep troubles with this whole uprooting process, and tend to seek and tie myself to the land and the people that tend to it.. I feel Santa Cruz might be such a place for that to happen.
+
+the other is: do you think it's of any use for an old person to apply? I am now ~35 years old. I did a CS degree at a normal age at a no-name local college (though maybe good in hindsight as those C++ pointers weeded most out..), eventually was self-motivated to learn and make little [video] games/prototypes on my own, and then went to NYC during the indie game scene heyday back in 2012-2013, participating in some wild artsy game stuffs, particularly enjoyed making or even modifying games with alt input/controllers and output. Since then, i've been out of this tech world, livin' a far more simpler, primitive grassroots permaculture oriented life in Taiwan and Asia... For the 2014 (or '15?) year i had a half-scholarship for the New School in "art, design, and tech" (MFA), but after having traveled around the world a bit at <=$10/day, the cost was insane to me.. and my mind couldn't fathom living in NYC after experiencing the openness of rural and natural Asia.. Suffice to say, it's been some time i've done some heavy tech work, and i missed out on the whole ml/ai and cloud-computing revolutions (and thus now in a pickle getting jobs). Recently, i've gone through a funky 70's linux/terminal phase on some old devices, took a pretty good survey of the lands of game engines, programming languages, and tools to make gui apps (sadly web apps), and feel things haven't changed, or even went backward, back to simple C and old web MVCs.. but I haven't done any big projects in recent times.
+
+the program looks awesome! It reminds me of MIT Media Lab back in 2013, when I originally was looking for programs to apply to. It too had things like: tangible materials, civic media, city interaction, etc. I love that it's centered around helping/aiding people (and hopefully animals 'n plants too!). I love that the school itself gives that vibe--when i was working at Berkeley last summer, my house-mate and her friends were all from ucsc (she herself taking a break from some deep history of consciousness phd thing..); It was a typical queer-anarchist household in Berkeley. :)
+
+the other program i looked at was ucsb's media, art, technology (MAT). That somehow seems more theoretical and artsy, as opposed to focusing on social/human/ecological impact. USC is famed here for it's game program, but i still prefer the broadness of this, and the people that ucsc and santa cruz attracts.. And i'm definitely not interested in plain STEM/computer science programs of ucb, ucsd, and stanford. Those people scare me. :/
+
+career-wise in America, i really just hope to be able to secure a basic "computer person" job at some practical, impactful humanities/ecological department in academia, as i've lived in communities my entire life: grassroots + DIY artist and ecological, indigenous tribes, permaculture networks, etc., and just can't imagine working without a good atmosphere.. I actually don't think i'd mind the dirty academia work of sys admin and supporting researchers software dev (python/ml, hpc, whatever), as long as the department has more human-centered, global good intentions. I dig that very generalist/broad tech work, along with broadness of humanities. Also, i've always felt there's surely opportunity to make some cool data visualization ui/ux for them, though maybe researchers don't care about that stuff.. Soon after, i'll go back to those grassroots communities, build what i can with those strong-willed kids that chose to live in their rural home-towns, and possibly, cooperate with the local unis there (national dong hua uni in taiwan and possibly hawaii uni at hilo), as long as they're in tune with what's going on with the cultures nearby and not just top-down authority.
+
+..phew, that was long. sorry.
+
+anyway, hopefully i'll get a computer job at one of these coastal Cali schools, and then apply for next year! :)
+
+--OH!, one more thing: will the "games and playable media MS" be back? That looked solid too, very studio-focused (great for making stuff), though i really dig the broader slew of "content creation" electives of computational media too. I wish i could take them all!! I would def consider doing a master's in that too, once i'm back in a game-making mood, or once jai/j-blow's engine comes out. :)
+
+i'll be heading up the coast soon, by motorcycle! Hope to hear from anyone!!
+--
+rahil
+1-757-630-7972
