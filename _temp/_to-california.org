@@ -1,21 +1,174 @@
 
 
-TODO:
+* TODO:
+  - find place ASAP
+    - room in a house is fine!
+      - *LA houses are muuuuuuch nicer!!*
+        - better than SF, Berkeley, very likely SC; similar to SD (though better for the price)
+  - begin work:
+    - NOTE: *aim for a happy, healthy life first*
+    - *asian bars, clubs, karaoke lol*
+      - *for late night work, social, yet within a comfortable, wholesome asian atmosphere <3*
+        - TODO: map out a few and check them out! then ask
+          - *try asian ones first*
+      - get bartending license
+      - try martial arts
+      - search for a free EMT BLS/ALS program
+    - tea shops, coffee shops/cafes
+      - for night work, social
+        - TODO: *search for night/late-night cozy ones*
+          - *especially asian study ones*
+      - library cafe
+    - restaurants
+      - taiwanese, non-guangdong Chinese, asian
+        - *especially taiwanese buffets*
+    - delivery
+      - *doordash, ubereats, foodpanda, weed, liquor, etc.*
+      - *freedom!*
+      - DMV
+        - extend permit
+        - appointment for road test
+      - insurance
+    - find tech work
+      - ruby, C, elixir, clojure, python, go, etc.
+      - *need to make a bunch of stuff first*
+        - *setup ai text-editing-workflow* for emacs
+          - try various ai-assisting editors
+        - *make a bunch of simple web apps* using sinatra
+        - *make a parser for my personal markup language*
+        - *make a bunch of small games* using dragonruby
+      - nearby universities
+        - see [uni-job-search]
+      - *nearby school systems*
+        - long beach unified district
+        - all of SGV
+          - san marino, arcadia, alhambra, temple city, rowland heights, etc.
+
+    - make tech work?
+      - *help setup tech for local businesses*
+        - *restaurant tech*
+
+
+* TODO:
 the car comes first. Then one can live anywhere, including all the melting pot areas of Cali.
 *master the car life first.*
 
-*conclusion: live and work in santa cruz or long beach(!!) until i get a car and/or find a good tech job in SF/Bay Area*
+*conclusion: live and work in santa cruz, santa barbara, or long beach until i get a car and/or find a good tech job in SF/Bay Area*
   - *stick to SF/Bay Area for startup work/learning/experience/network/relations*
   - stick to SC for rad nature-loving community living, or to just take a break from the Bay Area
     - not sure if this is worth doing, as i already have Taiwan/Asia for nature reasons..
   - *go back to NYC for the real deal*
-  - can *try long beach city, though, more for warm weather, community, events, ethnic communities, restaurant/cafe/delivery/event work*
+  - can *try long beach city, for warm weather, diversity, community, art events, nearby ethnic communities, nearby big city, restaurant/cafe/delivery/event work*
     - need a car to find housing there, as there are no hostels nearby :(
 
-*TODO: add UCLA and UCI to jobs list*
+*TODO: add UCLA jobs list*
   - it won't hurt trying 'em out.. i'm just here to make money anyway..
-  - though, i've heard irvine is the most boring place in LA.. :/
-  - and unfortunately, UCLA is surrounded by rich areas: beverly hills, malibu, west-side LA, hollywood
+  - UCLA is surrounded by rich areas: beverly hills, malibu, west-side LA, hollywood and:
+    - distant from the asian, latino, and black areas: the real areas
+
+* resources
+  - https://statisticalatlas.com/place/California/Temple-City/Ancestry#figure/place-in-los-angeles-area
+    - can see race for each area!!
+    - Taiwanese
+      - *irvine, 3800*
+
+      - cerritos, 1000
+
+      - long beach, 400
+
+      - san marino, 600
+      - *arcadia, 1800*
+      - *temple city, 1200*
+      - *alhambra, 900*
+      - san gabriel, 400
+      - monterey park, 450
+      - mayflower, east pasadena, north el monte, etc. ~500+
+        - 4300, hopefully enough..
+
+      - walnut, 1000
+      - hacienda heights, 1500
+      - rowland heights, 1200
+      - diamond bar, 1200
+        - 4900
+
+      - LA, 34,000??
+
+  - Chinese
+    - alhambra, 30000
+    - temple city, 16000
+    - san gabriel, 17000
+    - east san gabriel, 5500
+    - arcadia, 24000
+    - san marino, 5400
+    - south pasadena, east pasadena, south san gabriel, north el monte, mayflower village, etc., +
+      - ~100000+
+
+    - monterey park, 27000
+    - rosemead, 19500
+    - el monte, 20000
+      - ~67000
+
+    - rowland heights, 17500
+    - walnut, 10000
+    - west covina, 11500
+    - diamond bar, 14500
+    - hacienda heights, 13500
+      - ~69000
+        - just lower density housing..
+
+   - irvine, 30000
+
+   - cerritos, 6000
+
+
+   - Filipinos
+     - *long beach, 21000*
+       - valinda, signal hill ~3000
+     - *carson, 20000*
+
+     - cerritos, 8000
+     - bellflower, 5000
+     - artesia, 2300
+     - buena park, 8000
+
+     - anaheim, 14000
+
+     - west covina 11000
+     - walnut, 4500
+     - rowland heights, 4000
+     - diamond bar, 4000
+       - *nice! filipino and taiwanese would be amazing!!*
+
+  - Vietnamese (likely mostly Chinese Vietnamese)
+    - garden grove, 53000
+    - westminster, 37000
+    - midway city, 4200
+    - fountain valley, 12000
+    - huntington beach, 8000
+    - stanton, 7000
+      - *possibly the most densely packed asian ethnic enclave..*
+
+    - irvine, 9000
+
+    - rosemead, 8000
+    - el monte, 8000
+    - alhambra, 4000
+    - monterey park, 3000
+    - temple city, 1500
+      - good enough!
+
+    - santa ana, 25000
+
+  - "Arabs"
+    - irvine, 8000
+    - anaheim, glendale, burbank
+    - diamond bar, 1200
+
+  - Syrians
+    - irvine, 1600
+
+  - Palestinian
+    - irvine, 900
 
 
 * liveable areas
@@ -30,17 +183,61 @@ the car comes first. Then one can live anywhere, including all the melting pot a
   - thus, can only go during the warmer times
     - especially after living in Taiwan..!!
 - *summers are uncomfortably hot 'n humid*
-  - *similar to Tawain, but far more difficult to endure, as unlike Taiwan, convenient food 'n drinks will kill your finances*
+  - *similar to Taiwan, but far more difficult to endure, as unlike Taiwan, convenient food 'n drinks will kill your finances*
 - *i <3 NYC*
   - *everyone does*
   - i respect it too
-*** NO LA
+**** NYC VS LA
+- https://www.reddit.com/r/LosAngeles/comments/2dtgim/nycers_living_in_los_angeles_what_is_better_or/
+
+- Life in NYC is harder than life in LA. Anyone who claims otherwise either has not spent any significant amount of time in NYC as a resident (not a tourist or couchsurfer), or else lived a statistical outlier lifestyle. However, "harder" does not necessarily mean "worse". That part is subjective and depends on the individual.
+
+  NYC has a very specific vibe. The sensibility, the aesthetic, the rhythm, is all very "New York" -- everywhere you go. Some people get a sort of high on this vibe and it drives them. They are usually rather type A and *highly career-focused*.
+
+  Many other residents of NYC just learn to survive. That means ignoring *the negatives -- the sensory assaults, smells, heat, cold -- and domestic compromises* -- and *focusing on their rewards -- neighborhoods, community, the corner bar*. Learning to ignore these negatives changes you because *adaptation is critical*. Again, whether it is preferable or not depends on the person.
+
+  *LA is very diverse. You could say that LA has a less well-defined identity than NYC, or you can say that LA enjoys more variety* (except for weather). Two sides of the same coin. *Very different lifestyles coexist within the confines of LA*. Very different natural environments coexist within the confines of LA. *LA is far more laid back than NYC*, no matter what LA natives seem to think.
+
+  NYC and metro is hands down unbeatable at Italian-American comfort food. LA Italian is more of the Mediterranean style, which can be very good, but tends towards the more fussy, upscale, and less homey to many Americans.
+
+  LA has more diverse Latino cuisine and more modern Asian cuisine. And many more hybrids of both.
+
+  Fresh produce is much better in LA, and often much cheaper. You will see varieties of fruits and vegetables in LA that you didn't even know came in varieties living in the east. On the other hand, great bread products in their many forms are easier to find in NYC.
+
+  *Transportation is a bitch in both cities, don't be fooled into thinking the subways are a magical teleportation device.* Cities with millions of residents can be a schlep to get around. That's why the word exists. Fact of life.
+
+  LA natives tend to underestimate "real" weather and how it can define your life. It is no news that LA weather is typically pleasant and consistent, which may or may not mean boring depending on your background. *NYC weather is highly variable. At times -- like a crisp fall day or just after a fresh snowfall -- it can seem magical in ways you will never see in LA. But much more of the time -- in driving rain, the slushy, dirty weeks after a snowfall, the bitter, snot-freezing cold, or three-outfits-a-day summer humidity -- the weather is your adversary and just another obstacle to overcome to "make it there".*
+
+  So, in sum, they are totally different! Really, *everyone who lives in either city should experience the other. They are so different and some people are more suited to one than the other. You may be suited to one at a certain phase of life and the other later.*
+
+  For me, a NYC area native, *it is much easier to find the peace of mind and space I need to stay sane in LA while still having access to the cosmopolitan amenities I enjoy.* LA also exudes a more creative/artsy vibe which I feel in tune with, compared to the business and financial vibe among many NYC professionals. But with so many millions of inhabitants in each city, there are plenty of MBA's and artists to go around on either coast.
+
+  Go and have fun!
+
+- Well, maybe this is just the right time to make the move! There is no objectively true "better" city. And maybe the city doesn't even matter.
+
+  Sometimes you need to shake up your life. You might discover a new appreciation for what you left, come back and embrace it, or you might discover something you never knew you needed somewhere else. Stasis is the real enemy, not LA.
+
+  In all honesty, I do think that many LA natives take the area for granted. But hometowns are complicated -- we all have baggage linked to where we come from that may not even be related to the place. A newcomer might see the same place through completely different eyes.
+
+  You might find your NYC is different from the NYC of people who grew up there. And if you come back to LA, you might find that LA is then a different LA than the one you grew up with.
+
+  However long you live in NYC, you are guaranteed to have good stories to tell.
+
+- Have you ever visited? The people you encounter day-to-day can be very different, at least compared to LA. People are generally a lot colder and mistrusting of strangers. Because thats the way everyone learns to operate moving around a city packed (and I mean packed) with so many other seemingly crazy, uptight people. You either put up a wall when you are out in public or you leave yourself open to being pestered, slowed down, taken advantage of, or just plain verbally or physically assaulted by a mentally unstable asshole. Meeting people outside of work is hard, its something you really have to actively work at. Its a city of millions thats really easy to feel lonely in.
+
+  The other big difference is not driving, which has major pros and cons as the other commenter already pointed out. Comparing LA and NY is hard, as far as metropolises go, they operate about as differently as possible. The energy in NY is like nothing else, and some people thrive on that enough to outweigh some of the crappy parts of living there.
+
+    - You mentioned earlier people throwing up a "wall" against strangers in public. That's true of some people, but I think most folks just are enjoying their alone time on the train. If you want to strike up a conversation with someone, most people I've found will oblige you, though they will be a little wary in case you are a psycho. I think LA is much lonelier because you spend so much time in your car.
+
+
+      - I can see LA being lonely in its own way. Maybe its just that I have family here that makes it feel less lonely than when I was in NY. Either way, having or finding people you care about to spend time with is kind of essential. I just think that being lonely in LA is easier to live with, whereas being lonely in NY, all the shit you have to deal with there just grates on you even worse, slowly driving you insane.
+
+*** MAYBE LA
 - see entry [below]
 ** places with a small-town vibe!: small-area cities, small towns (college-towns), city/metro neighborhoods
-*** YES long beach city (LA)
+*** MAYBE long beach city (LA)
   - see entry under [LA]
-  - *might actually have the best housing situtation out of all these in Cali*
-  - *worth trying..!!*
 *** OKAY SF
   - *BIG TECH MONEY*
     - the only reason to be here
@@ -56,7 +253,9 @@ the car comes first. Then one can live anywhere, including all the melting pot a
     - *this demographic is really meh*
   - *beach sucks*
     - cold, windy, sand in your eyes, freezing cold water
+  - *city feeling / urban planning*
   - *good small parks culture*
+    - holy shit San Diego, OC, and LA all suck in comparison..
   - *golden gate park and city events*
   - *great sense of neighborhoods*
     - *a great small town vibe for the whole city too*
@@ -151,6 +350,7 @@ the car comes first. Then one can live anywhere, including all the melting pot a
 
 *** NO north park (SD)
   - see entry under [san diego]
+
 *** [?] davis
   - just a college-town, *not a place to set roots in*
     - 66k population, 40k students, just enough to support the school 'n town..
@@ -197,13 +397,13 @@ the car comes first. Then one can live anywhere, including all the melting pot a
 *** NO downtown oakland
   - see entry under [oakland]
   - oaktown?
-** NO endless car-centric suburbia..
+** endless car-centric suburbia..
   - *well, all of Cali except SF and downtown areas is this.. :/*
-*** OKAY LA
-  - *TEMP: i'm reconsidering that this may actually be better than berkeley, SD, and SJ..*
+*** YES LA
+  - *TEMP: i'm reconsidering that this may actually be better than the rest of Cali (berkeley, SD, and SJ)*
   - has *by far the best energy out of all of California, from SD to SF*
     - *generally livelier, happier, more energetic people, the opposite of stingy*
-      - though, also *burnt out*
+      - though, also *burnt out*, *high addiction rate*
     - *generally, easier to get along with, sharing a suburban hustling 'n bustling culture.. similar to how the NYC hustle brings people together*
       - *including whites, latinos, blacks, a few asians.. everyone! :D*
         - *including first generation immigrants!!*.. truly everyone mingles
@@ -211,50 +411,162 @@ the car comes first. Then one can live anywhere, including all the melting pot a
         - this could be fun..!
     - *has a larger variety of people, beyond the tech people of the Bay Area*
       - *attracts artists, especially performance artists*
-      - *attracts first generation immigrants, whom are similarly lively!*, as there are significant existing ethnic enclaves
+      - *attracts first generation immigrants, whom are similarly lively!*, as there are *significant existing ethnic enclaves*
     - has that *too big to fail* energy
-  - nightmare lack of urban planning and architecture
+  - *nightmare lack of urban planning and architecture*
     - *really have to look beyond this to see the beauty of it: the people and their cultures*
-    - actually results in far more comfortable, spacious living/lifestyle, befitting the weather
-      - houses are more spacious, with more luxurious bathrooms, kitchens, etc.
+    - *actually results in far more comfortable, spacious living/lifestyle, befitting the weather*
+      - *houses are more spacious, with more luxurious bathrooms, kitchens, etc.*
       - *the people have a very suburban, comfortable lifestyle too*
   - *industry and culture sucks compared to NYC: just too fake, flaky, stupid (except LBC, south-central)*
+    - though, far more real than the tech people of the Bay Area and the transients of San Diego
     - possibly the center of woke culture
-    - just far more complacent, simple-minded businesses without assimilation nor innovation
+    - just *far more complacent, simple-minded businesses without assimilation nor innovation*
   - *might actually have the best weather in Cali..*, for sub-tropical people like me, asians, blacks, 'n latinos
     - *feels much warmer than san diego, with less wind, though still retaining a good ocean breeze* to clean the air
+      - reminds me of the Taipei basin, with such strong atmospheric changes
     - *can stay outside at night, nearly all year*
       - *can motorcycle/bike at night too*
         - actually easy and comfortable (weather) to drive at night, even by motorcycle.. feel calm, though people do speed through the night..
       - *perfect porch/patio weather*
+      - *LA sunsets are real*
   - *possibly has the greatest amount of affordable housing among the most sought out places to live in California*
-    - *some places go for $650/month!!* (Carson)
-    - quite a few places under $1000, which is far more rare in SD (all of it), Bay Area, and possibly Santa Cruz
-    - *lower minimum wage, average wage, and professional wage, especially in tech*
+    - *some places go for $650/month!!* (Carson, Alhambra)
+    - quite a few places under $1000, which is far more rare in SD (all of it), Bay Area, and Santa Cruz
+    - *lower minimum wage, average wage, and professional wage, especially in tech; but higher than any other place save the Bay Area*
+  - *might actually have the best housing situtation out of all these in Cali*
+    - *big, comfy suburban houses*
+      - or maybe that's OC..
 **** *has by far the most amount of distinct neighborhoods, especially ethnic ones:*
     - *LA is a microcosm of California*
       - basically, the rest of SoCal, and even NorCal (except SF and SC), can be found in LA:
     - *but most suck: are exclusive, ethnic-based, traditional or class-based*, with LBC as one of the rare few exceptions:
-***** YES *LBC*
-- *the only thing good about LA..??*
+***** NO hollywood (central)
+- ??
+***** NO west hollywood (weho)
+- weho, melrose, beverly hills, century city, etc.
+  - feels run down, in material and people
+  - wayyy over-priced for what it is
+***** MAYBE east hollywood / east
+- los feliz, silverlake, echo park, elysian heights?, etc. west of the 5 (atwater village is east of the 5, but fits here)
+  - "Silverlake is white yuppie land"
+    - https://www.reddit.com/r/AskLosAngeles/comments/1g2zleu/asian_community_in_silverlake/
+  - "They are all true walking neighborhoods. In almost any part of those neighborhoods, you can walk to multiple coffee shops, bars, and markets. You don’t have to touch your car unless you have to drive to work, and the less you touch your car, the happier you are in Los Angeles."
+  - possibly too hip/try-hard for even me!
+  - "Silver Lake is for *aging hipsters who missed the boat on the Westside*, and Echo Park is for Gen Z."
+  - on silvelake: "*I thought I would love to be surrounded by creatives but a fair amount are actually people trying to get into acting or music or are an influencer or model.* The west side gets a bad rep for being vain but to me, it appears that’s a section of LA’s population no matter where you are."
+  - "It's centrally located so has relatively easy access to the entire city because the 5 and 101 run through here and take you downtown to the 110 and 10. There's a massive amount of stuff to do all the time, you're 20 minutes from just about every music venue in the city and lots of the food destinations, rent is relatively cheap compared to the west side, and most importantly to me there is a giant amount of outdoor shit to do in walking distance. I can be hiking in Griffith Park, riding my bike on the river trail, or walking around the SL reservoir by stepping outside, no car required. Atwater and Los Feliz are right here for my local shopping, Glendale is right here for my chain store needs... it's just the easiest place in LA to exist because of access. I've lived all over the city and Silver Lake is easily my favorite spot."
+  - "Los Feliz has always been desirable because of the large houses on big lots. The other areas? Well, they were rundown and therefore cheap and so young people could afford to live there. That’s all there is to it."
+  - "I think reverse white flight taking off in the 90s, with neighborhoods like Williamsburg and Silver Lake becoming attractive to young professionals. But Silver Lake had a history of being a gay hub from the 60s and on, and it had an influx of Mexican Americans moving there post WWII, and it was always a place for artists. When Central Americans began arriving en masse to the US in the 70s, many settled in Silver Lake (along with neighboring East Hollywood, Hollywood, along with the hub of Pico-Union and Westlake). The 90026 half of Silver Lake was diverse but notably was where more of the working class Latinos and Asian Americans largely lived, while upper middle-class white people lived in always lived in the 90039 half of Silver Lake , which also has a corner that was more working class. The 90026 side is what changed the most, which is no surprise given its bones of artsy, working class, pre-existing diversity, cheap housing, and cute architecture that make neighborhoods attractive for gentrification. And it didn't matter that south of Sunset there was a lot of gang activity.
+
+    There was a big indie music scene that developed there. And the Sunset Junction Street Festival -- which launched 1981 as a community building effort between newer white gay and longtime Latino residents -- by the end of its run in 2010 had fully merged into that music scene, leaving behind its community roots as it charged $20 for entrance, when it had been free or donation only before.
+
+    It changed a lot in the 2000s, and a lot more in the 2010s. And while it's more yuppy than anything these days, it retains that cachet, that mystique of cool and hip for people of a particular social class (of all races/ethnic backgrounds). For a lot of other people who haven't yet been displaced, it's just home. And for others in the Greater LA area, they also have no idea and have never been."
+  - "It was a coveted area back in 04."
+    -https://www.reddit.com/r/MovingToLosAngeles/comments/1i9aakg/can_someone_explain_to_me_why_everyone_clamors_to/
+***** OKAY koreatown (k-town)
+- *i just never got along with Koreans.., not even in their home country, so they're certainly worse here*
+- unlike LA's chinatown, still serves as a commercial center for Koreans
+  - many or their next generations migrated eastward: glendale, pasadena eastern SGV
+- *okay if you are working in central LA*, yet need a cheap place to live
+- most dense area in LA
+  - therefore the worst parking in LA
+- *asian nightlife*
+  - the only other place may be costa mesa
+- great amount of small restaurants to work at
+- *the only major asian area in central LA*
+  - surrounded by latino neighborhoods and hollywood to the north-west
+- *the only affordable area in LA*
+- "I moved to Pasadena a year ago for work and I’m also in my 20s. Used to live in Ktown before and would never go back at this point. Pasadena is so much nicer in terms of what it has to offer like you said. *The community where I used to live in Ktown was so much different as neighbors kept to themselves and no one on my street fell around my age group. I also had so many safety issues in my building with cars being broken into every night and street parking being so difficult for visitors. Life felt more busy and rushed every morning when I left for work. Traffic was extremely difficult to get around with on busy days. Nothing was really too walkable at night in my area.*
+
+  Pasadena has been the complete opposite and so much more better. Pasadena is great especially once you start to meet more people within your age group that live close to you. Finding those close friends that grew up here made me feel more connected to the city. Now I wouldn’t leave Pasadena anytime soon to be farther away from them."
+- "Lil Tokyo n K Town are *trendy* for the moment only cuz youngsters can’t afford it anywhere else so they decided it’s trendy to live by skid row to be near some Korean barbque and sake. *Its mid city with homeless and crime swarming all over so if you wanna trade peaceful and semi safer for that go for it*"
+***** NO downtown
+- like san diego's: garbage
+****** NO chinatown (next to dtla)
+  - tiny, as in a few blocks..
+  - originally taishan people
+    - NOTE: taishan is a yue language, but distinct from cantonese! (also yue), native to taishan, guangdong
+    - the original chinese railroad workers, 70% of all Chinese Americans in the 1980s
+  - investors bought up places, kicked out tenants, or just let them stay vacant (Chinese people know who's property not to buy..)
+  - covid was the final straw
+  - migrated to western SGV: mostly monterey park, alhambra, etc.
+    - married to non-Taishan Chinese
+****** NO arts district / little tokyo
+- must be a different world to live here..
+- better to just go out here, not live here!
+  - then can go home to the SGV
+- "It’s become a touristic shell of its former self. Before the pandemic I could at least buy some home goods, hardware, and beauty products and such in the village or on 1st and 2nd. Now, every store seems to be an anime figurine store or comfort Japanese food restaurant with some neighborhood and high end sushi in the mix. There also seems to be an influx of Korean businesses replacing previous Japanese business owners, either because of retirement or slumlords "
+- "... With the city changing its rules on street food vendors, i've noticed a lot more carts and trucks setting up shop near the Village area."
+  - https://www.reddit.com/r/AskLosAngeles/comments/1jeduzi/people_who_have_lived_in_la_for_5_years_is_little/
+***** OKAY beach cities LA
+- gets a bad rep, but still the lively, creatively and professionally
+  - *worth trying if you get a job there!*
+- "it was cool for a time because it was cheap and allowed artists and offbeats to move in and make it unique. Now it’s overpriced yet still grimy and a lot of spots are simulacrums. They missed the boat as in they might wake up one day and realize it’s cooler in Venice (literally)."
+- *all rich white folk until the japanese community in torrance*
+  - *"corporate normie white people"*
+  - *a few pockets of asians in sawtelle (japantown), palms (for students at UCLA and working in culver city), brentwood and westwood (around UCLA)*
+    - "Culver City is kind of lame, the same way San Diego is lame."
+- venice beach
+  - like ocean beach, but wayy more expensive, but far more dense and larger too
+  - i don't see any way a hippie could survive here.. it would be like surviving SF..
+- *santa monica*
+  - MAYBE *silicon beach*
+    - interesting.. but seems to only be huge companies, not a startup hub like SF 'n NYC..?
+  - close to *UCLA*
+  - *the best campus and food*
+    - *TODO: hmmm, maybe not a bad place to work.. i mean, if you're going to be on the campus everyday anyway..*
+  - near hip or homeless hollywood.. and the now burnt malibu/pacific palisades..
+- cooler weather
+  - near the coast: *"3 months of the year can also have a pretty bad marine layer and be pretty chilly during May-June and Oct-Nov"*
+- *santa monica mountains*
+  - *year-round!*
+- *access to coastline/malibu*
+  - *mountains and beach!!!*
+- marina del ray
+- playa del ray
+- (el segundo)
+- (LAX)
+***** NO south bay
+- feels like a continuation of west LA's beach cities, slightly cleaner, *more bland, similar to north county San Diego*
+- el segundo?
+- rich, white, coastal areas
+  - manhattan beach
+  - hermosa beach
+  - redondo beach
+  - torrance
+    - japanese community here, otherwise white
+  - palos verdes / ranchos palos verdes
+    - a good amount of rich japanese and taiwanese here, rather isolated, otherwise white
+- inland areas
+  - *gardena*
+    - diverse: latino, black, *biggest japanese community in the US*
+  - *west carson*
+    - diverse: lots of filipinos, and black!
+***** MAYBE LBC
+- *"the only good thing about LA..??"*
 - *oakland on the sea*
   - similar demographics: black, south-east asian, *pan-gender*
+    - *43% latino, 25% white, 14% asian, 12% black*
+      - *gentrified/white* at belmont shores/heights and bixby knolls, and plain white north-east to lakewood, and south-east along the coast
+        - "Belmont bars is like a buncha college kids"
+        - however, that whole south-eastern portion of housing is the perfect beach neighborhood! like pacific beach
+      - latino on the west-side, with only small pockets of asians
+        - mostly rather ghetto, culture-less
+      - *cultureless beyond the pch-1 and on the west-side*
+        - burgers, donuts, pizza, dollar stores, corporate super-markets
     - lots of young people, especially students
+      - likely contributes to asians living there
   - similarly ghetto: homeless, drugs, crime
     - though, possibly less crime than Oakland..
   - similar to east coast cities: philadelphia, baltimore
-    - overshadowed by a nearby bigger city, port, black population, lively music 'n arts, etc.
+    - overshadowed by a nearby bigger city, port, black population, *lively music 'n arts*, etc.
 - *a microcosm of LA, and therefore California*
-  - a mix of good and rough areas, making it a prime place to start busineses, especially for the surrounding bedroom Asian neighborhoods:
+  - a mix of good and rough areas, making it a prime place to start businesses, especially for the surrounding bedroom Asian neighborhoods:
     - those surrounding areas are not fun to live in.. best to stick to the LBC and retain community relations
-    - westminster is old Vietnamese money/families, complete with old retired dudes playing chess at cafe/gambling dens
-    - garden grove is old Korean money/families
-      - all are sprawling, strip mall suburbs
-    - carson has a Filipino population
-    - chinese people seem to be all around too..
 - long beach
   - can easily drive/bike/walk up to several parking lots right next to the beach, like ocean beach: simple satisfaction for the lazy, *i actually love it!*
-    - lots of people playing black music! :D
+    - lots of people biking, walking, roller skating, etc.
   - *the air is much warmer and less windier than san diego, reminds me of Taipei!!*
   - *the water is much calmer*, thanks to it facing south, like a bay, *and it calms me down too :)*
   - can't swim here
@@ -267,37 +579,15 @@ the car comes first. Then one can live anywhere, including all the melting pot a
     - *has the blue line to downtown (can transfer at main station), north-east LA, SGV, etc.* in case of an event
       - just have to think of it as riding the Caltrain in the Bay Area.. it's a very very long-distance train..
       - frightening to go on the wrong time, but maybe alright on the weekends and during events..??
-- has some more beaches nearby: seal beach, bolsa chica beach, then huntington beach (costs $15 to park..!)
+- *has some more beaches nearby: seal beach, bolsa chica beach, then huntington beach*
 - *possibly even better weather than oakland, as you get the ocean wind!*
+  - however, can get quite cool at night
+  - also can get foggy during the summer
+- *has a better, smaller airport*
 - snoopy d o double-g
-***** [?] west/ocean-side LA
-- maybe too white.. rich white like san diego
-- venice beach
-  - like ocean beach
-- santa monica
-  - MAYBE *silicon beach*
-    - *UCLA*
-    - *the best campus and food*
-      - *TODO: hmmm, maybe not a bad place to work.. i mean, if you're going to be on the campus everyday anyway..*
-    - near hip hollywood, or homeless hollywood.. and burnt malibu/santa monica
-      - interesting.. but seems to only be huge companies, not a startup hub like SF 'n NYC..?
-***** [?] north-east LA
-- like berkeley?
-- looks quite boring... maybe too white..??
-***** [?] pasadena/south-pasadena
-- like palo alto?
-- also looks too boring, with big boring financial company headquarters..
-- adjacent to SGV
-***** NO chinatown (in dtla)
-- tiny, as in a few blocks..
-***** NO downtown
-- like san diego's: garbage
-***** NO the rest of LA / endless suburbia
-  - like south bay and asian suburban in san diego, but flatter, and seemingly more endless, as nature is further away
+***** the rest of LA / endless suburbia
+  - like south bay and asian suburbia in san diego, but flatter, and seemingly more endless, as nature is further away (maybe..?)
   - *endless tract houses 'n strip malls, welcome to car city*
-****** NO north OC?
-- vietnamese, koreans, filipinos, chinese, etc.
-****** NO SGV
 ****** YES SGV
 - *SGV scared me.. these are not the Asians i was lookin' for..*
 
@@ -381,43 +671,65 @@ the car comes first. Then one can live anywhere, including all the melting pot a
 ******* NO the north of 210 along the foothills
   - *pasadena*, altadena (north of pas), sierra madre, monrovia (, bradbury, duarte), azusa, etc.
   - seems *really bland, overtly suburban, and over-priced*
+    - it reflects the shops 'n restaurants, being based in a single retro commercial street "downtowns"
+      - has white grocery stores and many corporate chain stores
+        - pasadena has a ton of starbucks
     - crazy expensive for pasadena, high for monrovia, exclusive bradbury and duarte, just leaving sierra madre
     - all white
-      - pasadena
-       - 1-6% chinese/filipino/korean/indian/japanese
-      - altadena
-        - has/had a few black people, before the fire
-      - monrovia
-        - 7% chinese
-      - azusa
-        - only has 2% asians!
-    - all have tiny little "downtowns", which is basically one street intersection with a few over-priced shops.. though, to their credit, it's better than a strip mall!
+  - all have tiny little "downtowns", which is basically one street intersection with a few over-priced shops.. though, to their credit, it's better than a strip mall!
+    - unfortunately, still has big, ugly, bix box "plazas" just south of the residential areas, from pasadena to arcadia
+  - the flat part next to the mountains 'n hills can have mansions!
+  - the actual hilly part, on the way up, have hodge-podge DIY construction: many simple single story homes along a fucked up, narrow road
+    - can be *rustic*, as it is closer to "nature"..
+      - more bugs
+      - likely cooler too, shaded by the mountain? and trees
+      - *kinda reminds me of santa cruz..*, with it's proxmity to nature.. until it hits the mansions just below, and shopping malls after that..
   - *access to the san gabriel mountains*
     - *brushfires come down from those mountain passes!*
+    - *seems completely dried out..??*
   - a recent metro blue line extension now goes through it
     - but seems unnecessary, as most people that live in those areas drive cars, just bringing homeless people to their neighborhoods
 
-******* OKAY just below the 210
+    - pasadena
+     - 1-6% chinese/filipino/korean/indian/japanese
+    - altadena
+      - has/had a few black people, before the fire
+    - monrovia
+      - 7% chinese
+    - azusa
+      - only has 2% asians!
+
+
+******* NO just below the 210
   - south pasadena, san pasqual inc., san marino, east pasadena, east san gabriel, arcadia (stretches above the 210), mayflower village inc.(, irwindale)
+    - far more asian than it's northern neighbors, but possibly even more *boring as fuck, upper-class / hipster-oriented shops 'n restaurants to go out to, no places to eat or drink often, nobody outside*
+      - big, *extremely surburban shopping plazas*, with massive parking lots, where only big chain restaurants survive (asian or not)
+    - further from the more legit southern SGV areas, and further from the foothills of the south
+    - caltech may make much of this area more expensive
+    - *very expensive*, at least between south pas and san marino, still expensive from arcadia to mayflower village
+
     - south pasadena
       - chinese 14%, korean 7%, japanese 3%, filipino/vietnamese 2% each, other asians <1%
         - still good..
     - *arcadia and san marino are exceptional as they have good schools and attracted a large Taiwanese population*
-      - YES arcadia
+      - arcadia
         - 41% chinese, 1-3% korean/taiwanese/filipino/indian/viet/jap/mixed
           - *incredible spread*
-        - *arcadia hosts the 626 Taiwanese night markets* in the parking lot of their main park
+        - 626 Taiwanese night markets
+          - the horse racing track 'n park in arcadia hosts this in it's parking lot turned main area
+          - *sucks, soulless weebo consumerist festival*
+            - possibly reminiscent of the area..
       - san marino
         - low population density, completely residential zoned, large gated properties
+        - *a nightmare*
         - 41% chinese, *5% taiwanese*, japanese/korean/filipino/mixed/indian 1-2%
       - san pasqual
         - above san marino
         - only 4% chinese/japanese, 3% taiwanese, 2% korean
-      - YES east san gabriel
+      - *YES east san gabriel*
         - exceptional here having an abnormally high population density: 15k/sq. mile
         - 35% chinese, filipino/viet/jap/taiwan/mixed/korean/indo/indian 1-4%
           - *niiice spread!!*
-  - *very expensive*, at least between south pas and san marino, still expensive from arcadia to mayflower village
 
 ******* YES above the 10, before the eastern 605 intersection
   - *alhambra, san gabriel (, northern part of rosemead?), temple city*, el monte, baldwin park
@@ -439,29 +751,64 @@ the car comes first. Then one can live anywhere, including all the melting pot a
   - *valley blvd is an endless strip mall of Asian businesses*
     - "On Valley Boulevard alone, there are around 200 restaurants"
     - is the *local route to south-east SGV* (instead of the 10)
+    - feels like *the hip version of garvey, with higher prices*
   - main st. / las tunas has a good amount of strip mall businesses too
     - but it also has stetches of boring automobile dealerships
+    - also, main st. blows
   - *can be on the same horizontal streets to north-east LA, with alhambra being a mere 5 miles away from highland park*
   - seems even more boring then its northern and southern neighbors, *without surrounding nature, in a concrete jungle*
 
 ******* YES below the 10, before the eastern 605 intersection
   - *monterey park, rosemead (north) / south san gabriel (south)*, south el monte (north) / whittier narrows (south) (.., west covina)
+
     - monterey park is asian dominant, then becomes 50/50 asian/latino at rosemead and south san gabriel, then latino from south el monte onward
     - monterey park
+      - *mom 'n pop shops galore*
+        - thus, still *has the most DIY culture* without the pretentiousness of hipster DIY culture
+          - *mostly of elder generations*
+          - along with other ethnic enclaves including SF's and Oakland's Chinatowns and Westminster/Garden Grove
+        - *good rootedness / sense of place and memory, with many places lasting 20+ years!*
+      - *great valley views and hills* on graves st. and surrounding hill areas
+        - *YEP, THE VALLEY VIEW IS MY HOME!*
+          - *wherever i am, i must live close to a view. it's what keeps me centered*
+        - *still not nature tho..*
+      - *the best park: barnes park, behind the library*
+        - also has a view of the valley on the elevated side of the park
+        - very chinese
+        - also garvey park
+      - *the best grocery stores on valley, garvey, atlantic, san gabriel blvd*
+        - along with *the best select-your-dishes buffets*
+        - *much of the commercial culture is hidden in these indoor shopping centers*
+          - *a single "super store" can have ~50 vendors, a food court, and a grocery store!*
+            - *mostly serves a very old population, first generation..* i don't think it'll last very long..
+            - probably will all disappear over time.. losing to online shopping..?
+              - maybe their stock is from mass-produced factories found online anyway..
+          - *some stores / strip mall areas serve as a place for vendors to come out at night too!*
+            - *probably the closest i'll come to Asia in America..*
+            - *great place to start food 'n drink vending*
+              - *TODO: START HERE*, next to nana's truck
+                - also the park in monterey park
+                - not easy, as you need personal transportation and the energy to drive to the place to vend (or work!)
+                - but SF still seems a much better place to start food/drink vending: *infinitely more convenient, walkable, bikeable and no competition*
+              - good progression: from vending outside, to a stall in a shopping center, to one own's store-front or building
       - *chinese 45%*, *japanese 6%*, vietnamese 5%, mixed/filipino/korean 2%, others <=1%
-        - still quite great, though mostly cantonese/taishan from chinatown
+        - still quite great, though a lot of cantonese/taishan migrated from chinatown
+          - and parts of it indeed feel like SF's chinatown (atlantic, garvey, san gabriel blvd)
+          - these are not people to compete with..
+        - *these chinese people are the village business people*
+        - *demographics shift to kids and elderly*
     - south san gabriel
       - chinese 29%, vietnamese 8%, *japanese 7%*, mixed 5%, filipino 4%, *burmese 4%*
         - *incredible spread*
+      - maybe cheaper, denser housing?
     - south el monte
       - chinese/vietnamese 6% each (*80%+ latino*)
   - can add another 5+ miles from north-east LA
   - closer / straight-shot to DTLA / east LA
-    - probably a natural migration for the people from downtown chinatown
-      - yep, 1970s
+    - probably *a natural migration for the people from downtown chinatown*
+      - yep, *1970s*
   - more highway access: 10 (to hollywood/101), 60 (to SM), 710 (to LB)
   - *E/yellow line ends on atlantic in nearby east LA*
-  - garvey blvd, for the monterey park portion, but then quickly becomes latino
 
 ******* NO latino limbo land, between el monte/monrovia to walnut valley
 - latino yet somehow *bland.. like a dead suburb in hampton roads, like in suffolk*
@@ -475,15 +822,33 @@ the car comes first. Then one can live anywhere, including all the melting pot a
   - baldwin park, west covina
 - though some chinese/filipinos are moving in there.. maybe depending on school zoning
 
-******* YES walnut valley area
+******* MAYBE walnut valley area
   - walnut, hacienda heights, rowland heights, diamond bar (, chino hills, eastvale)
+
     - *possibly the densest Taiwanese enclave in the US* along with cupertino in san jose
       - the Taiwanese stats might be under-estimated due to how surveys list race choices
     - *most of the shops are along colima blvd in rowland heights*, parallel to the highway
     - *possibly the best spread of asians i've seen..* save cerritos and irvine
+
+    - *many of the rich asians, including new immigrants, moved here*, from west SGV or their home-country
+    - many work in nearby industrial-zone only city of industry
+      - Taiwanese computer part manufacturing companies with shit work ethics and low wages
+        - includes newegg.com!
+      - 0% business taxes
+      - more like a strip of warehouses next to the highway than a city
+    - *after the western part of SGV, this is the second largest population of Asian Americans in LA, and possibly the US*
+  - good schools
+  - *too isolated and too far from the action of LA..*
+    - you'd have to pass through miles of suburban hellscape to get anywhere
+      - *limited to the 10* to get anywhere
+    - likely creates more insular people too
+  - *"the area is comparatively drier, hotter with worse air quality than the rest of LA"*
+    - yet.. *i felt quite good up in the hills, and greener too!!*
+      - awesome *windy canyon roads that remind of Asia!! :)*
+
     - YES rowland heights
       - chinese 35%, filipino/korean ~6%, taiwan/vietnamese 2%, indian/japanese 1%
-      - the *main strip malls* are here, from mostly taiwanese/chinese mixed with viet/filipino/others to all-korean
+      - *has all of the main strip malls*, from mostly taiwanese/chinese mixed with viet/filipino/others to all-korean
     - OKAY hacienda heights
       - chinese 25%, *korean/taiwanese/japanese/filipino ~3% each*, other asians
       - likely okay, just being adjacent to rowland heights, and being on the same side of the valley
@@ -499,22 +864,9 @@ the car comes first. Then one can live anywhere, including all the melting pot a
       - NOTE: also belongs to latino-land and below the 10 headings
       - chinese 10%, filipino 10%
         - probably the parts zoned within walnut school district
-      - gets *nasty industrial* as it's near industry city
-  - *many of the rich asians, including new immigrants, moved here*, from west SGV or their home-country
-    - many work in nearby industrial-zone only city of industry
-      - Taiwanese computer part manufacturing companies with shit work ethics and low wages
-        - includes newegg.com!
-      - 0% business taxes
-      - more like a strip of warehouses next to the highway than a city
-    - *after the western part of SGV, this is the second largest population of Asian Americans in LA, and possibly the US*
-  - good schools
-  - *too isolated and too far from the action of LA..*
-    - you'd have to pass through miles of suburban hellscape to get anywhere
-      - *limited to the 10* to get anywhere
-    - likely creates more insular people too
-  - *"the area is comparatively drier, hotter with worse air quality than the rest of LA"*
-    - yet.. *i felt quite good up in the hills, and greener too!!*
-      - awesome *windy canyon roads that remind of Asia!! :)*
+      - rather huge area..
+        - parts of it get *nasty industrial* as it's near industry city
+        - rather far inland, and away from the hills, may make it feel like being stuck in a flat, completely urbanized area
 
 ****** [?] north-east LA
 - east of the 5, north of the 10
@@ -577,6 +929,7 @@ the car comes first. Then one can live anywhere, including all the melting pot a
   - notably *lacking small parks*.. *it's suffocating..*, though thankfully the beach air saves it
   - have to ride to hill trails or long/huntington beach
     - *long beach is such a great asset to have nearby!!*
+    - *need to be on/near a hill, and get a view of the entire LA basin!*
 - decrepit strip malls that could've belonged to any lower to middle-class neighborhood in VA Beach
 - old traditional asian money: vietnamese, koreans, etc.
   - *this certain blend of people seem very insular, exclusive*
@@ -617,7 +970,7 @@ the car comes first. Then one can live anywhere, including all the melting pot a
     - a good amount is still Chinese
 
 ****** NO south OC
-- FUCK NO
+- *FUCK NO*
 - rich, *old money, conservative (including Trump)* asians (including Indian) and whites (40% each), and some latinos, some arab, some persian too, rare to *no blacks :(*
   - the "white asians", white-washed
     - asians mostly live on the northeast side, near the hills: northwood point, eastwood, orchard hills, etc. and great park too
@@ -654,6 +1007,8 @@ the car comes first. Then one can live anywhere, including all the melting pot a
 *** [?] san jose / south bay area
   - overall, i think i'd just prefer LA metro / SGV or cities (SF, NYC, etc.)..
     - NOTE: this is the last big metro to explore/travel
+  - *maybe potential in the hills with valley views*
+    - *def worth trying once i get a van*
   - *only worth living here if you have a high-paying tech job nearby..*
   - *basically south OC but with solely tech bros, no girls, at all: man jose*
     - rich, boring asian tract-house suburbia
@@ -670,11 +1025,11 @@ the car comes first. Then one can live anywhere, including all the melting pot a
   - *food still doesn't compare to SGV*
     - https://www.reddit.com/r/FoodLosAngeles/comments/1bsw1qk/which_metro_area_has_better_chinese_food_los/
       - beyond SF (chinatown, richmond) a few Taiwanese spots in southbay (fremont, cupertino, etc.), it doesn't even come close to the SGV
-  - at least people actually live here though.. compared to transient berkeley and SF..??
+  - *at least people actually live here though.. compared to transient berkeley and SF..??*
     - not a great thing, as i saw in the suburbs of san diego..
-  - a useless downtown
-  - *no beach..? what about mountains..? waterfalls? rivers??*
-    - i think i'd feel trapped here..
+  - a dead downtown
+  - no beach..? but has mountains.. maybe waterfalls? rivers??
+    - ride to santa cruz is probably closer than SGV to a beach
   - *tech work / BIG TECH MONEY*
     - the boring, corporate kind.. (*startups are in SF, NYC, a little in LA/seattle*)
   - san jose
@@ -725,6 +1080,7 @@ the car comes first. Then one can live anywhere, including all the melting pot a
     - *close to ocean beach and mission/pacific beach!*
       - *yet far enough to avoid the cold, coastal weather*
   - *over-priced*, better to live in the asian or latino suburbs
+    - *used to be $300-$500 for a room here..*
 ***** NO ocean beach
     - *a small, dumpy, beloved beach-town of it's own..*
     - *like haight st., can get old quick*, though, still cool, as far as music performances go
@@ -756,7 +1112,8 @@ the car comes first. Then one can live anywhere, including all the melting pot a
     - *though, they do remind me of myself..: suburban, computer-oriented*
 - a cooler/chiller/newer alternative to OC..?
   - but without the community, industry, creativity, etc., also much like VA beach
-- *mira mesa feels like an asian virginia beach neighorhood*
+- mira mesa
+  - *feels like an asian virginia beach neighorhood*
   - *filipinos, vietnamese, indian*
     - lots of filipinos too!
       - next to miramar naval base
@@ -786,6 +1143,7 @@ the car comes first. Then one can live anywhere, including all the melting pot a
   - *??*
   - crime scared most people and economy away
     - including the long-enduring chinatown
+  - chinatown is still alive, just dying, but so is the rest of Cali's small businesses..
   - seems for young, hip people.. too young 'n hip..
     - *provides a good counter-balance to berkeley, with street smarts*
     - k-town def for kids
@@ -794,6 +1152,8 @@ the car comes first. Then one can live anywhere, including all the melting pot a
   - actually good weather
   - beyond downtown is boring suburbs, without the ocean
     - dyin' of thirst
+      - the bay coast sucks (save that one protruding part), often is cold, and no colored people
+      - maybe have to go to alameda (island) "beach"
     - *fruitvale has a lot of latino people vending food out on parking lots!!*
       - maybe the start of latino-land..
 
@@ -830,9 +1190,17 @@ the car comes first. Then one can live anywhere, including all the melting pot a
 
 
 
+* a thought i wrote on a reddit post
+i've been thinking about this sentiment for California in general, after recently seeing the suburbs of San Diego (all the seemingly soulless, especially Asian, suburbs beyond north park / ocean beach: mira mesa, clairemont, rancho something, etc.). My guess is that tech work brings first immigrants that are very hard-working, yet still family-oriented, beyond the norm of the countries they came from, as they had the capacity to move to/immigrate and work in America. They're more focused (on owning a house, their children's education), have families/friends back home, and thus just don't have as much of a need for community here, as their kids may desire. You will rarely ever see an Indian from parts of India beyond the business states (gujarat, punjab, and now tamil/bangalore for tech). Similarly, you will never see all the beautiful Taiwanese people that don't work in tech (most of them!). It'll take a few generations, and sometimes just one, for them to see it as you see it. But Chinese culture (including Taiwanese) is very strong, and they spend a lot of effort to retain that culture, so, it's also possible that they just make another San Gabriel Valley, a completely exclusive suburban world of it's own!
+
+i grew up on the east coast, where i just had to assimilate, growing up with a diverse set of friends, mostly filipino 'n black, but also just about every other stranded ethnic-minority around. The only place in Cali i felt a similarly healthy melting pot vibe is in Long Beach City (i arrived to Oakland too late). Berkeley and SF are terrible now (post-pandemic), so i can't even imagine how bad south Bay Area is. It's not you. It's the people.
+
+
+
+
 
 * ride back up the coast
-https://bestneighborhood.org/race-in-san-diego-ca/i
+https://bestneighborhood.org/race-in-san-diego-ca/
   - a great site to see the racial divide in America, and find liveable places amongst other minorities
   - all white along the coast, no minorities in north county
     - except a valley inland from oceanside: vista, san marcos, escondido
@@ -856,7 +1224,7 @@ LA
   - latino
     - try it out..?
 
-no asian until near UCSB
+*no asian until near UCSB*
 
 santa maria
   - latino
@@ -871,8 +1239,11 @@ hwy 101: soledad, salinas
   - all latino
   - good stop before santa cruz..
 
-bay area
-  - san jose, fremont, hayward, tri-valley
+*santa cruz*
+  - an ideal, can go for the summer, then hide behind the bay area's valley for the winter
+
+*bay area*
+  - *san jose, fremont*, hayward, tri-valley
   - vallejo
 
 sacramento
@@ -917,3 +1288,4 @@ The most AZN places are somewhere like Honolulu (16% Whites) , enclaves in and a
 Let me make it clear, it's not about % of Asians, but % of Whites.
 
 Places like Irvine, West Bay, Seattle, Vancouver, despite with large Asian population, are very different from Honolulu or LA ( at least currently) . Because the % of Whites is still very large.
+  - hmmm, super interesting point, and true, at least for irvine and likely seattle too: they pander to white development, working for white corporations instead of creating their own businesses, the DIY culture is lost, and therefore asians lose
