@@ -7,8 +7,6 @@
 - passport
   - look for it
   - ship to samesun hostel
-- driver's license test
-  - anywhere i can get an appointment asap!
 - wells fargo debit card
 - charles schwab
   - password
@@ -29,7 +27,7 @@
    - make all the small ones
      - sinatra -> roda -> rails
      - boring, but should be simple, and force me to learn how the web works, especially contemporary web
-2. continue making small games/prototypes with dragonruby
+2. continue making small games/prototypes with dragonruby (and/or haxe, jai)
    - this would be the simplest thing to do to get back into programming, especially core systems programming
      - making games with dragonruby would force to me make game systems and really architect games
      - it would also force me to learn ruby inside out
@@ -37,12 +35,16 @@
 
 
 ** TODO resume
+- get another domain
+  - update server addresses __contact.org github pages
 - update resume on jobs i applied to
   - meh..?
-  - just update resume
-    - rewrite the babycastles portion
-      - fix the noisebridge part / sub-title part
-      - add videos
+    - just update resume
+      - TODO: rewrite the babycastles portion
+        - fix the noisebridge part / sub-title part
+        - add videos
+      - add a photo?
+      - pass it through some automated resume checker thing (to see how well it parses)
 
 ** TODO
 - see TODOs, try using org-mode agenda, lol
@@ -101,10 +103,6 @@ duckduckgo
   - applied to a ruby parser job!!
     - siiiickk
     - UPDATE: fail
-
-
-
-
 
 
 
