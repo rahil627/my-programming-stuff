@@ -1,0 +1,769 @@
+#+title:  Temp Uni Job Search
+
+
+
+* TEMP reply to reddit (no internet):
+https://www.reddit.com/r/SameGrassButGreener/comments/1bunybh/do_people_exaggerate_the_problems_california_has/
+this is the best answer, from my time in Cali post-covid. The only way to do Cali is to have a traveler's perspective, take the van route, save dough, explore nature, and gtfo.
+in addition to this, i think the economy is very tight here. Silicon Valley, where you must be a senior computer person. Ethnoburbs, where you must be of a certain race (yikes..!! LA is a village, lmao). Public higher ed is overtly competitive (ucb, ucla, ucsd, ucsb..) for both students and workers, competing against the rest of the world.
+
+the (sub)urban development sucks too: two metro-burbs, only one walkable city, a few college-towns/areas (many not walkable!!), with little else in-between.
+
+
+
+* notes (read before getting lost)
+** goals:
+what's the game plan? *work during school year, go to parent's home or Taiwan during the summers/winters?*
+
+whats the goal money? 5 years = 100k * 5 * 70%?
+  - or *as long as i can do it?*
+
+*at the same time, build tea business out of a van*
+  - test income/time for that
+  - can try in different towns/cities/campuses in America
+
+*try different jobs*
+  - *electrician*: hvac
+  - *emt* -> firefighter / para-medic
+
+*at the same time, find a home in America*
+  - *likely a city with lively artists, doing it now*
+  - *vend tea there!*
+
+*at the same time, figure out a remote job (systems dev / devops / sre?)*
+
+*at the same time, master making digital stuff (games, web apps, etc.)*
+
+
+*during breaks, build a home in Taiwan*
+
+
+
+** other notes
+maybe better choosing a place first.. LA (city) vs SB/ucsb vs SC (+ucsc) vs another state , *building a GRASSROOTS community* there, then getting work through personal network..
+  - *logically, no college-town has grassroots* (it's roots are the state or private institution)
+    - *this just leaves santa cruz and la unis (ucla, usc)*, slo/cal poly, and davis (?? was davis a town before the school??)
+  - *art scenes ARE a network of grassroots orgs*
+    - thus, *cities with art scenes, with artists, ready to do stuff, together!*
+      - *beyond that, there is nothing*
+
+hmmm...
+  - in this regard, *NYC was so much easier to jump into..* get involved.. so much more pro-active ("intentional") *more grassroots/DIY*, and all located within the same city, all accessible by subway..
+    - *THE CITY IS THE SCHOOL*
+      - similarly, *TAIWAN IS THE SCHOOL*
+        - reality is the school, but *in an area that's communal*
+
+*DO NOT work during the summer, especially if it's just a college-town: it's boring as fuck*
+  - (though i wouldn't mind santa cruz nor santa barbara during the summer..)
+
+*check for jobs weekly*
+  - *jobs are added nearly every-day starting from around the time that school starts (~august/september)*
+
+*BEWARE: cannot update application once sent!!*
+  - (except stanford)
+  - for UCs, i think can withdraw and re-submit, as long as it's before the initial review date (IRD)
+  - *take time to fill in relevant past work experiences*
+  - when writing the cover letter:
+    *list experiences that show you have the qualifications / ability to do the job*
+
+see [masters-schools.org] for programs i'm interested in at each school
+  - *TODO: this is a really good way to go.. and build a career, in both pro work (higher ed software work) and specialization (games, digital media, new media, etc.)*
+
+
+
+https://www.reddit.com/r/ApplyingToCollege/comments/1b7571c/what_universities_actually_have_happy_students/
+
+
+
+* schools (in cali, ordered by personal desire)
+*TODO: check for unis by different research methodologies: current happiness, happy to have attended, etc.*
+  - *LOOK FOR ONES BASED ON SOCIAL IMPACT, equity/equality, idealist, humanitarian (humanities!!), social work, grassroots??, liberal arts(??), etc.*
+    - *TODO: maybe liberal arts schools really is the way to go... but don't they cost as much as a private uni??*
+  - *LOOK FOR DEPARTMENTS/PEOPLE I'D WANT TO WORK WITH*
+    - *games, film, design, tech, all for social impact*
+      - nyu, usc, parson's, ucsc, mit, cmu, gt, etc.
+        - *hmmm, maybe should stick to my digital media route..* [see masters-schools]
+          - but the only school that's public/affordable and not tech-only are *ucsc* and gt (hci)..
+
+** my personal choices (great vibes and areas!!)
+*** ucla
+- #12 global rank, #2 public uni in the US
+  - which means: *too research-oriented*, though the campus/location may make up for it.. unlike ucb
+  - has a lot of bullshit self-supporting programs that leech off it's brand
+- *best campus*
+  - actually a little college-town within LA..!
+  - *best weather too!!* (along with ucsb)
+  - *best food*
+- *mountains and beach nearby*
+  - *bikeable to beach??*
+  - *should be perfect for car-camping!!*
+- *LA city central*
+  - *LA city vibes*
+  - games: *glitch city*, indiecade
+  - film industry
+    - meh
+  - art museums 'n institutes
+- depts: humanities (#12 undergrad? world), #10-50 in most subjects in the world
+*** ucsb
+- *has the second-most interesting master's program [to me] in cali: media, arts, tech*, up to phd!
+- #90s global rank
+  - *this is a good thing.. avoids the politics and insane competition, which leads to narrow-mindedness*
+- *good beach vibes--possibly the best vibes*, along with being the only party school in the UC system--, great surroundings
+  - *beach and mountains!*
+  - *perfect for food/drink vending..??*
+  - *walkable, and thus bikeable too??*
+  - bland but cohesive architecture
+- short-term *college-town bubble, and therefore no grassroots* :(
+- depts: second-best cs uc after ucb, #18 physics (#12 optics), *national center for ecological analysis and synthesis*, *natural reserve system (largest in the US)*
+  - gaucho game lab
+    - just three courses led by one dude
+  - film courses are mostly theory 'n history
+*** ucsc
+- *has the most interesting master's program, department, and research labs [to me]*
+  - *has the best games research*
+  - *TODO: AIM FOR THIS, THEN PIVOT TO ANOTHER UNI IN ANOTHER STATE* -> *check other warm unis for a good game program*
+  - has a ton of courses for games, content/media creation, media studies, etc.
+- #133 global rank
+  - the lowest ranked uc (not including the ones in the desert)
+  - alternatively, *the least narrow-minded*, and *less focused on STEM and research*
+- *most rad students*
+  - or is it just following american sub-cultures?
+- *most rad town*
+  - ..or is it just surfers..?
+  - *gets COLD during winter* as it's on the coast
+    - *thus difficult to motorcycle in :(*
+  - *able to create roots*
+    - maybe not.. no housing..
+  - *more of a livin' off tha land vibe*
+    - *for a long time, didn't have any corporate shops*
+- nature nearby
+  - beach and mountains! and vibes!
+- campus far from housing/town, great surroundings
+  - *possibly the the least convenient campus..*
+    - maybe okay with a motorcycle..?
+- depts: #13 marine biology, #12 space science, phil, arts, great biotech (genomics?)
+  - insts: *center for computational experience*, *center for research in open source software*, *center for information technology research in the interest of society (CITRUS)*, generative AI, *natural reserve system*
+- insts: game lab (research center)
+- programs: *game (the only one in the UC system) (BS, BA, MS)*, film (social doc MFA), *computational media (MS, PhD; unique)*, *history of consciousness (phd)*
+
+
+** great vibes but bad area
+  - *NOTE: at this point, might as well look for work at unis beyond cali..* [see warm unis]
+
+*** ucd
+- #90s global rank
+- bad climate, dry, no nature
+  - *dry hot during summer, cold during winter*
+  - surrounded by cow pastures? (and poop)
+    - yep: *endless dry, hot, flat land* in the middle of the valley
+      - need a car to drive an hour or two away to the foothills of the mountains
+      - also not near water!!
+- primarily agriculture, animal-science & vet, plant-science, biology, with health/science/law/engineering (STEM) emphasis
+  - *TODO: not sure how natural this is..?*
+  - *yet should still attract plant, animal, and ecology lovers.. or scientists?? :/*
+  - otherwise, #100+ in most subjects
+- *great small-town campus community*, among the best vibes
+  - *bikes!! / most bikeable campus <3*
+  - *affordable town*, though not sure if i can live out of a car there..
+  - *majority asian, latino-serving* 40%, *28% latino*, 21% white
+    - *very interesting demographics..*
+- insts: *insitute for the environment*
+- dept: *design (the only state-aided one in the UC system)*, environmental horticulture, letters and sciences (undergrad, #114 humanities), graduate school of management
+  - *NOTE: ucd health is located in sacramento!! ewww!*
+- programs: #1-2 agricultural economics/science, #1 animal sciences, *#3 ecology*, plant biology, entomology (insects), evolutionary biology
+
+
+** no vibes, but not filthy rich either.. just very very hard-working
+*** ucb
+- #6 in the world, #1 public school in the world
+  - *basically stanford, but public*
+- *zero vibes/energy..? maybe different during school season..*
+  - too serious, workaholics, stressed out
+- *best grad schools in the US/world for nearly everything*
+  - #1 computer science, chemistry, english, history, sociology, psychology, etc.; #2-10 in everything else
+    - *notably better humanities than stanford*
+  - *the best (or second-best) entrepeneur environment*
+- boring surrounding areas (berkeley, oakland: east bay)
+  - *bad food (on and off campus!)*
+    - *over-priced too (also on and off campus!!)*
+  - but liberal!
+    - but old anarchists 'n hippies, and a bunch of international students
+      - *everyone else was priced out*
+        - *thus no grassroots*
+    - very political
+  - must take screeching subway or cross the bridge to SF or even further to reach silicon valley / stanford
+- insts: a ton in: energy/climate, engineering/tech (including *CITRUS*), *international studies*, *social sciences/humanities*
+- depts: humanities (#11 undergrad? world)
+
+
+** ivy vibes, rich, though seems less fratty (i think??), in a bubble..
+*** stanford
+- private, *ivy vibes*
+  - *along with brown, the only ivy i'd be interested in..*
+- *the best of the west*, #1-3 global rank in recent times
+  - *access to the best classes, lectures, etc.*
+  - *the best entrepeneur environment*
+- massive campus
+  - though *an isolated bubble, no grassroots*
+  - *great weather*, better than sf and berkeley/oakland
+- surrounded by boring, ultra-rich suburbs :/
+  - *not bad hiking / mountains around* tho..
+  - *trips to SF, SC, half-moon bay, etc.*
+  - *access to all tech folks*
+    - *proximity to silicon valley*
+- depts: doerr school of sustainability, *the best engineering depts (#1 cs)*, lots of humanities (#8 undergrad? world; *anthropology, philosophy, east asian studies*), #1-5 math/biology/chemistry/economics/etc.
+  - grad: #1 business school, #1-2 law school, design school, top 10 in a lot
+- insts: king center on global development
+
+
+** uni of spoiled children, why go here over ucsb/ucsc/ucd??.. still la tho..
+- only for-profit grad programs make sense (business, dental, media: game, film; etc.)
+- *TODO: check how tuition-free program works, and it's history*
+
+*** usc
+- private
+  - *seems to have a lot of links/contracts with the government for defense-related projects :/*
+  - *most jobs linked to the school of medicine/hospital/healthcare facility*
+    - tons of lab tech jobs
+- #77 global rank, slightly above ucsb/ucd/uci
+- *HR actually quickly checks/rejects job apps*
+  - filter jobs by area of work
+    to avoid health center and faculty jobs
+- *LA city central*
+  - *maybe difficult to car-camp, and will need to escape to nature somehow..*
+  - must live either near campus, koreatown, or culver city
+  - surrounded by shitty areas
+    - *actually has affordable housing nearby!!*
+- *compact campus, but traffic-full area, will feel congested and possibly trapped*
+- *better long-term alumni connections*
+- *very expensive, $70k/year??*
+  - *no financial aid for international students*
+    - *this really affects what kinds of students come in..!!*
+  - *tuition-free for low-income house-holds (<80k), 27% of the 2020 class!!*
+    - *TODO: see how this works..*
+    - *used to be tuition-free for family members!!*
+  - mostly merit-based scholarships which make it about *$37k/year* (half-tuition) combined with needs-based competes with UCLA's *$17k/year* (in and out-of-state!)
+- *growing up as a uni, from old money to new hard workers*, quickly rising in ranks
+- programs: *#1 game*, *#1-3? film*, phil (#72 humanities), #30 business, #1-15 dental, a few other specialties, a ton of research programs/institutes..
+
+
+
+
+** under-paid, little to no research, mostly commuter schools (CSU system)
+- and therefore *no cool research labs* to join (except sdsu)
+- *focuses on teaching undergrads*, and therefore doesn't give out PhDs
+- mostly commuter schools.. (except sdsu and cal poly)
+- cal poly is *far more practical, hands-on*, but limited to technical (applied sciences?) degrees
+
+*** (cal poly slo)
+*** NO sdsu
+- #105 in the US
+- #882 globally.. uhhh, maybe because the rankings focus on research..
+- *23 doctoral programs*
+  - R1 research now (2025?)
+    - but so is ODU.. :/
+  - has some strong niches in non-tech areas
+- people tend to really like the campus, and it stands out in the csu system
+  though i thought it was *bland*, *suburban*, *dry*, quite inland from SD
+- party school
+*** (csu long beach)
+
+
+** other
+*** occidental college, pasadena (near art center, in NELA)
+- ??
+- private liberal arts college
+  - obama, many government folks
+- christian, but not overtly religious
+- ~1800 students, ~280 staff
+  - very few jobs, staff probably rarely changes..
+
+
+
+
+
+
+
+** NO no vibes / uc socially dead / commuter schools
+*** csu long beach
+- #105 in the US
+- *commuter school*
+  - campus is dead
+- *no research labs??*
+  - i guess the focus on teaching would be interesting too..!!
+- great weather, chill beach (unswimmable), great food... hmm..!
+  - however, long beach isn't LA; it's a sleepy place far from LA
+- *small neighborhood/city that i feel i would very quickly outgrow..*
+  - feels like north park: gentrified
+    - lots of white folk moving in..
+  - *one of the few affordable areas in the LA metro*
+- has an airport!
+  - *otherwise it'd be quite difficult to escape the LA urban area from here..*
+- defense industry nearby
+  - ew, the only thing worse than silicon valley
+*** ucsd
+- *no vibes AND is STEM heavy.. AND is health-sciences heavy*
+  - most jobs in the health center
+  - *far too research-oriented*
+- *the very few jobs that it has feels that way too.. :/*
+- #21 global rank!?
+- does it even have humanities departments..?
+  - it does, just have to find community within it..
+- #1 oceanography, bio sciences, bio-engineering/tech
+  - pharmacy, economics, political science, etc.
+  - *very STEM* :/
+- boring, modern (ew) commuter campus
+  - though much better surroundings than uci!!
+  - *great for car-campers!!*
+- most asian after uci (not a good thing..)
+- *in a very rich area (la jolla)*
+  - off-campus housing is usually far away, in highway-surburbia-land
+    (though, i'd sleep in a van parked on a cliff..)
+- next to a cliff, the beach is a wild ride down
+- san diego gets old very very quick
+*** uci
+- #90s global rank, along-side ucd/ucsb
+  - *TODO: is it more well-rounded (not entirely STEM) than ucsd..?*
+    - though, *UCI health is a big part of it* too..
+      - located in orange, CA (ew!), at the intersection of a bunch of highways!! :/
+- commuter campus
+  - not true, plenty of people live on/near campus..
+    - and the campus is alright.. or so some say
+- surrounded by *orange county's suburban hell-hole*, ew
+  - though, has beaches 'n trails
+- *mostly boring asians: suburban, impassionate*, rich OC asians
+  - mostly Chinese from other countries, very competitive
+    - though, because of this, i feel very limited/restricted creativity-wise
+- programs: *computational science (phd with sdsu)*
+
+
+
+
+** NO entirely (or nearly entirely) STEM uni, including health sciences uni, usually research-based
+*** (ucsd)
+*** cal poly SLO
+- *"the gem of the CSU system"*
+- *limited to tech education (polytechnic)*
+  - *TODO: is it??*
+- without research, there's probably far less opportunities to work on research projects 'n centers, and therefore less room for growth in that regard
+- seems like one would get bored quick.. very much a college-town, though it's a town on it's own..
+  - *suprisingly low pay, $55-70k for ITS support specialist*, much better off working for the UC system, in the Bay Area, or working for SLO county ($100k+)
+  - *cost of housing is bad for the low pay in the area*
+    - so, only take it if it the pay is high
+- beach and bay a short drive away, surrounded by hills
+  - but seems to be surrounded by agriculture, not nature..?
+- 50%+ white, ~20% hispanic, <=15% asian
+  - also, the town itself is very white, conservative, agricultural
+  - the most white university in California, but, normal demographics anywhere else in the US..
+*** caltech
+- private
+- entirely science/engineering/tech ("pure and applied sciences")
+- small size with ~2500 students and ~300 faculty
+  - meaning very few job openings, in case one lose's a job
+- pasadena and the campus are *boring as fuck*
+  - "where fun goes to die"
+    - possibly the only place worse than MIT
+      - MIT at least has the media lab..
+  - san gabriel mountains to explore by motorcycle above tho..
+*** ucsf
+- #16 global rank!?
+- entirely health sciences
+  - still can have some researcher dev and systems admin work.. and you'd still be in SF.. but.. meh?..
+  - *sounds more limited/restricting than even a tech school!*
+- *SF, great neighborhood: inner-sunset*, golden-gate park, highway 1, etc.
+  - my second home in the city!
+  - having lived through SD and LA, i would much prefer going back to SF!! :)
+
+
+** NO lifeless area
+*** claremont colleges?
+- *best liberal arts colleges in cali* (by far, and in the US)
+- *only a handful of jobs at each college* due to small size
+  - and must check each college's site
+- *seems to be rather low paying..??*
+- pamona is in the inland empire
+  - (claremont is the only good thing about it)
+  - bad inland valley climate
+  - isolated inland valley location
+    - no way to build grassroots community here..
+- mostly undergraduate
+  - (has one graduate school: ~2000 students, a few hundred faculty, perhaps caltech size)
+  - may get annoying quick, dealing with kids..
+*** cal poly pamona (csu)
+- #3 regional west ranking
+  - though not even close in quality compared to cal poly SLO
+- commuter school
+- on the edge of south-east SGV area and pamona/IE
+  - the only thing worse than orange county (: inland empire)
+- java for CS
+*** sjsu
+- #1667 globally
+- commuter school, though connected to downtown san jose (which itself is a commuter downtown, possibly the worst on the west)
+- *TODO: best cs program in the csu system?, even more so than cal poly SLO??*
+  - feeds directly into silicon valley jobs
+
+
+
+** NO just plain bad
+*** chico state
+- great little college town experience!
+- pretty bad academic rankings, even among regional west, after a bunch of christian unis
+  - though, alongside cal arts, lol
+- drug problems..
+*** cal poly humbolt (previously csu humbolt, humbolt state)
+- all sorts of problems: social, housing, and academic
+- grey, wet weather, especially during the winter
+- extremely white
+*** sonoma state
+- NOTE: suffered from major budget cuts / implosion
+- the only public school to offer liberal arts major
+- ranked pretty low, even in the csu system..
+- TODO: dunno much about this one..
+
+
+
+
+
+* south-east coast (va-fl)
+** MD
+*** umd
+** DC
+- maybe too cold.. but actually has good public transit.. and diversity
+*** georgetown
+- top-tier
+*** washington
+*** maybe more.. just never considered DC as an option.. :/
+** VA
+- *CONCLUSION: VCU / richmond, for their arts program and artsy city vibe!!*
+  uva / charlottesville for a temporary small-town stint to explore the blue ridge mountains, and just an all-round solid school
+*** uva, charlottesville
+- much loved town, but isolating..
+*** NO v-tech, harrisonburg
+- *cold af*
+*** w&m, williamsburg
+- meh area?
+*** NO uofr, richmond
+- well-ranked LAC (#22)
+  - *$65k, yea right, lmao!!*
+- <3 richmond
+- close to home
+- 10 min drive to VCU
+- "From the perspective of an asian, it's bad. From the perspective of a queer student, it's bad too. The school is indeed rich; they give people undeniable package, and people like me couldn't reject it.""
+- "Bro, my advice… unless you’re getting someone else to pay or have a scholarship, do not fall for the private school sales pitch… there’s no reason to pay private school tuition (unless this is for law school or something like that that’ll be expensive everywhere). U of R is extraordinarily expensive and in the scheme of things not all that much more reputable, even in Virginia. It’s definitely a good school but at the high premium you’d end up better off if you take on less debt and just apply yourself at any mid-level public school. Also bigger schools will typically have more academic options, better developed internship placement programs, and a more varied bench of faculty.
+
+  But to answer the actual question, U of R is really right on the outskirts of the city (technically in henrico). Despite Richmond being a bigger and more diverse area with interesting stuff to do and an adequate but not overwhelming amount of density, the U of R area has none of that. It’s not far from the city but it’s far enough to make it a logistical challenge. There are nice houses around that you won’t be able to afford to live in, and a little 2-4 block row of kind of neat shops and restaurants that you can patronize if you take a quick but moderately hilly hike from campus. In the other direction from campus there are some decent options for stuff to do within a short drive, but those things will have more of a sprawl vibe to them. The more culturally Richmond things to do are going to be a 15-20ish minute hump to the Museum district at the nearest end, and shockoe at the furthest end."
+*** (rank jump)
+*** NO w&l, lexington
+- top 20 LAC
+- "W&M preserves the history and the architecture while *W&L preserves the antebellum social hierarchy.*"
+- *"And much more "Old Dominion" than Old Dominion is."*
+- near a military school thing: VMI?
+*** NO gmu, fairfax
+- *outskirts of DC (ew)*
+*** vcu
+- *richmond!*
+  - *in the heart of it*
+  - the only uni with *really good grassroots*, that doesn't feel like a college-town at all
+- *#4 grad fine arts in the US*
+  - *many top 5 programs!!*
+- "i think VCU students are more critical of our school, not because VCU is worse than JMU, but because we're a very opinionated bunch of people. but honestly i do really like it here, and most of the people i know do too. *Richmond is a weird, artsy, progressive city, and VCU is no different. if you're into that sort of thing, then you'll love it here.* if you're looking for a more classic college experience, JMU might be the move."
+- People at VCU don’t have a lot of school pride, but I don’t think that matters too much. *The vibe I get is that people think of themselves as Richmonders first and VCU students second. I personally liked that aspect. Richmond is an incredible campus.* And if I ever wanted a shot of school pride, I’d just go to a basketball game.
+*** NO jmu harrisonburg
+- high-ranked undergrad teaching (us news)
+- "Vcu is diverse and city. *Jmu is all white and Greek life. Nothing to do in a country town other than go to the same 2 bars"*
+- "JMU is a traditional college experience. It’s basically the only thing in Harrisonburg. The people there are nice and I made some good friends, but after a year it was pretty clear that I’d be bored to tears if I stayed for 4 years."
+*** (rank cut-off)
+*** NO odu
+- shit highway commute
+- shit city
+- shit uni
+*** NO hampton
+- private?? wtf!!
+- foreign affairs
+** NC
+*** NO duke, durham
+- see entry in [warm unis]
+- boring af small city/town
+*** NO some other one.. nc state?, raleigh
+*** unc chapel hill
+- the only ok one
+- but *surrounded by boring af soccer-mom suburbs*
+
+*** davidson
+- top 15 liberal arts college
+
+** SC
+*** clemson
+- far west, near the blue ridge mountains
+
+** GA
+*** emory
+- private, high-tier
+*** git
+- tech
+  - seems like a warmer v-tech
+  - *dual-degrees*
+  - *build your own curriculum/path?*
+  - *no humanities :(*
+*** uga
+- seems similar to uva, out in a smaller, loveable town, not too far from atl:
+- athens, ga
+  - maybe has some warm, natural places to explore too!
+- *worth tryin'!*
+*** gsu
+- a bit below in rank compared to the above
+
+** FL
+- nahhh
+  - just check the salaries for uf
+- too red/conservative beyond the college-towns
+  - *no grassroots at all, just built a bubble within a totally different world/culture*
+- crazy people in the government
+- flat: no mountains
+
+
+
+* not cali, but warm :)
+
+https://www.reddit.com/r/ApplyingToCollege/comments/14u9qzm/best_colleges_in_warm_weather/
+
+
+https://www.reddit.com/r/ApplyingToCollege/comments/1ljii9r/colleges_that_are_actually_unique/
+  - st. john's college
+    - read "great books" and discuss, lmao
+
+https://www.reddit.com/r/ApplyingToCollege/comments/1bziqg0/schools_that_are_a_community_rather_than_a_product/
+
+
+** other notes
+** NYC has the excelsior scholarship
+** mass has a consortium of top colleges wherein one can take classes at any campus
+- sounds similar to claremont colleges
+** nc/sc have an in-state tuition agreement
+- as do quite a few groups of mid-west states
+
+** tier 0
+*** minerva
+- live/study abroad in different parts of the world!!
+- 1000 students
+*** deep springs college
+- a commune, 26 students, fully-funded, in the middle of nowhere, on a cow ranch, livin' off the land
+- https://www.reddit.com/r/ApplyingToCollege/comments/17a3sv5/deep_springs_college_admission_ama/
+- https://www.deepsprings.edu/testimonials/
+*** warren wilson college
+- still costs $40k - $20+k
+- 50% queer
+- farm-work, "socially responsible"
+
+** gems
+*** berea
+  - free LAC!!
+*** cooper union
+  - non-profit, free
+  - grad architecture and engineering (just not computers)
+  - but also lots more for undergrad..
+*** julliard
+  - music
+*** alfred
+  - ceramics
+*** sci-arc?
+  - architecture in LA
+*** hampshire college
+  - open curriculum
+
+
+
+*these warmer unis actually have warmer, happier people :)*
+
+aim for good weather during the school season
+
+*** colorado school of mines
+  - engineering
+  - neat location, foot of mountains west of denver
+*** (cal poly)
+** tier 1
+- top 20
+- mostly private, not worth it (unless full/near-full scholarship + matches needs)
+- likely *too narrow-minded / STEM / single-discipline / research-oriented for me..*
+- *also likely has a bunch of narrow-minded rich kids*
+
+** top 10
+** (stanford)
+- the only ivy i'd try, along with brown
+- entrepeneur galore
+** NO duke, durham
+- ivy folks: rich, frats, sports, etc.
+- boring af, isolating area: endless suburbia full of soccer-moms
+  - sounds like the Bay Area (without SF).. :/
+- boring medium-sized city: doesn't have the good things about big cities nor rural towns
+- surrounded by red/confederate areas
+** (ucb)
+- public!
+- ucb not so warm..
+- entrepeneur galore
+
+top 10-20
+** (ucla, umich)
+- public!
+- *SoCal is HOT for at least 8 months (Mar-Oct) of the year..*
+** vanderbilt, nashville
+- very few job listings (~25)
+- more like yale.. more low-key.., ucb/ucla level
+- *"Lmao trust me duke and vandy have a lot of wealthy, stuck up, pretentious trust fund kids as well."*
+- *TODO: only weather is the problem*
+  - *worth trying though, to see the lovely nature nearby.. and nashville aka "music city"!!*
+** rice, houston
+- ~50 job listings, all in a single page site
+- top-tier, ucb/ucla level
+- car city, though campus has light rail in front of it
+- more STEM?
+- swampy houston :)
+  - *worth tryin' for houston*
+    - *great food!*
+  - *good weather during the school season*, terribly hot beyond it
+  - but also very suburby :/
+  - *no other great unis in houston to work at..*
+    - but a good amount of work around..
+- *no greek life*
+  - now that's my kinda private uni..!
+
+
+special (tech, health, liberal arts / teaching colleges):
+** (caltech?)
+** (ucsf?)
+** (claremont colleges) (pamona, claremont mckenna)
+- TODO: check costs
+
+** top 20-30?
+** washu, st. louis
+- *very cheap living*
+  - if they pay well..?
+- shit city? shit state (missouri)??
+  - "St Louis is south enough to be backward but north enough to be cold and not charming."
+- actually has sizable chinese community / asian food
+
+** emory, atl
+- in a posh suburbs of atl
+  - *worth tryin' atl*
+- known for nursing..?? but pre-med isn't that important..
+- TODO: socially dead?
+  - yet listed on happiest..?
+- great campus
+- near ATL entertainment
+- *many nearby great GA schools to work at!*
+
+
+** NOTE: most entries are cold ivies and ivy LACs, all located north-east, which i didn't list :/
+these are the exceptional:
+*** brown, providence
+- the sole exceptional ivy:
+- *open curriculum*
+- *the only relaxed ivy*
+  - thus, the only ivy that's interesting to me
+- *in low-key city* (1.7m)
+
+*** northwestern, chicago
+- sounds nice actually..
+- *located in safe suburbs away from the city :/*
+
+
+
+
+
+
+** tier 2
+- top 30-50
+- nearly all public/state "flagship" unis
+  - the best value, high-research
+  - no need for privates beyond this
+** (ucsd)
+** gt
+- *tech-only*, but *open-curriculum, with liberal arts choices*
+  - though, those liberal arts courses don't seem so great..
+- *a ton of research labs, but all look boring af, too STEM-oriented*
+- *worth tryin' atl* (along with emory, uga too)
+** uva
+- public
+- quite far north-west :/
+  - *TODO: how far from parent's home?*
+    - could only make it home on the weekends, after a 4+(?) hour drive/bus
+** ut, austin
+- tech city, or technoburbs?
+- liberal oasis
+- *elite engineering, yet still a complete state school*
+  - rare beyond ucb
+- cali tech moved here
+- *worth tryin' the town*
+  - but the good food is in houston..
+  - not hot like houston (good or bad..), maybe closer to Cali weather..??
+- lower pay?
+** unc
+- just no engineering program (duke and ncstate probably has it), thus lacking in STEM
+  - *which makes it very, very interesting..!*
+- *maybe closer to parent's home than uva!*
+- trips through the NC coast?
+** uf
+- among the cheapest state unis
+- sounds obnoxious..
+- strangely liberal in a red area and state
+  - in the north-central area, which is really backward..
+
+
+** NO w&m?
+- private??
+- would get bored of the town in a day..
+** NO (uiuc)
+- in the middle of nowhere AND cold
+- "cs&ee is great, the rest is a shitshow"
+
+
+** NO tulane, new orleans
+- (not top-tier)
+- private
+  - not worth cost to attend
+- "Harvard is just the Tulane of New England."
+  - *just no point of paying that kind of money to go here over a state school*
+- jam 'n dance in new orleans!!!
+- 70% white, 93% rich :(
+  - changed to 40% POC recently..
+  - admits the rich
+- https://www.reddit.com/r/Tulane/comments/1f3gg3r/how_is_tulane_like_for_black_studentsstudents_of/
+  - *suffers from lack of diversity in thought and socio-economic-diversity*
+- https://www.reddit.com/r/Tulane/comments/1hl89cf/got_into_tulane_curious_about_lifestylequality_of/
+  - zionist, huge jewish population
+  - "As far as I know, most international students were from China"
+  - "It's undeniable that most students here are white and there are a disproportionate amount of students from the Northeastern U.S., California, and Chicago. There are lots of Jewish students, more so than other religions it seems. In my experience, I've encountered many more international students than expected. I wouldn't say there's a specific region that they mostly come from, but I've met the most from Central Africa, Western Europe, and India - which was surprising since I was told there would be mostly East Asian international students. With that being said, I haven't encountered many Arab students,"
+- *gag order against research on racism*
+- academics: nearly all #100+, except health policy/management
+
+
+** specialized privates:
+** (usc, nyu)
+- *#1-2 game and film*, top 10/30 business, and other speciality grad schools
+- generally solid programs, above ucsb/ucd/uci, but at a much higher cost..
+
+** ?
+** wake forest
+- private?
+- LAC?
+
+** TODO: sift through LACs
+** w&l
+- no
+** davidson?
+
+
+
+** tier 3
+- top 50-100
+** (ucd, ucsb, uci)
+** florida state
+** pepperdine
+- very christian
+** santa clara
+- jesuit, not religious at all
+** university of the south, where??
+** uga, athens
+- in a college-town beyond atl
+- *try this one!*
+** STOPPED HERE.. lol
