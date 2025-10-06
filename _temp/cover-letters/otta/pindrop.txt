@@ -1,0 +1,27 @@
+
+
+heyo,
+
+i'm back in America, slowwwly re-adjusting from rural/permaculture life in Asia..
+
+when i got back, i landed in SF, at it's most dystopian time, spending a good amount of time giving some love to Noisebridge, an old maker/hacker-space.. renovating it with a new crew, ushering in a better, brighter era.. At the time, the space was like a condensed engineering department, with meetups on: intro to programming, infra, robotics/vision, play-testing an mmo browser game with ai agennts and prompt generation, and even finance bros building stock market llm's to compete (on huggingface); meanwhile, outside, several driverless cars whirr around at night. I guess things chnaged a bit.. I was happy just maintaining the space, being there, supporting everyone, show the new folks around. At the time, none of the computer groups really intrigued me, as they were doing things purely for tech's sake as opposed for people's sake, much like a computer science department and program (or possibly any STEM). For me, ai/ml is interesting where it aids people to make stuff, to enable people to actualize their dreams: it's a tool, not an end. And as for Pindrop, well, i guess we need some aid in the form of protection now too..
+
+..so, despite living a totally different life, i don't think i'm completely primitive-minded.. It's just hard for me to cling on to things that lack grassroots, community, a culture that's tied to the land..
+
+anyway, i've actually been searching for a sort of generalist computer admin/support job at a uni, particularly being *the computer support person* for a humanities department, as it'd provide me a broad-minded community to socialize with and a fertile environment to incept, design, make products, collaboratively. In addition, i think it'd be cool to support researchers too, as it seems to involve a mix of infrastructure (on-prem, including hpc) and a very straight-forward, pragmatic style of basic programming that i really dig: python/C scripts with a basic generated gui (streamlit), notably avoiding complex front-end web.. Or so i thought.
+
+as it turns out, universities are soooooo painfully slowwwwwww. At this point, i just wanna get shit done, and so back to the private sector i go.. and my oh my how far ahead it is..!
+
+i found this job using otta.com, which i gleaned from a reddit comment.
+
+purely from a work standpoint, it seems very ideal for the systems dev track: 30 days onprem and cloud, 60 days support dev, 90 days autonomous problem-solving. That's precisely what i'm aiming for!
+
+my game-making background doesn't seem to help much in the new world of distributed-computing and ai; Yet, i'm certain tech support via support dev + sys-admin (-> dev/ops / infra) + customer service is the best techinical paths for me here in the "developed" world, even after nearly a decade of living in Asia. Though i'm technically-inclined, i need the social life and care/service role (can't you tell? :) ). The problem is that: if i make something on my own, i have the freedom to use whatever tools 'n langs i want, of my own taste and joy, for each problem/product; And unfortunately, i really like haxe and ruby/dragonruby, and will likely use jai/untitled-game-engine and elixir/phoenix next. And now with ai, writing programs has become bliss! But now that i'm coming back to the working world, i really hope to master core systems admin, python (go?) and get familiar with the slew of new ai tools.. And doing that while helping people would be quite the ideal job for me, so that i won't be completely hopeless to the next HR person. :)
+
+anyway, it's a very very long shot, but just let me know via e-mail.. i'll begin heading back up the cali coast next week via motorcycle, likely crashing at santa barbara to hibernate for the winter, transitioning to van-life asap, to get an even bigger picture of America, and be able to work anywhere, remotely and physically!
+
+NOTE: if i stay in Cali, i might do the computational media (MS) program at UC Santa Cruz (it seems they've deduced MIT's media lab into actual research) starting fall 2026. It's just that the job market has me beat.. ;(
+
+ra
+
+

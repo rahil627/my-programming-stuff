@@ -1,0 +1,35 @@
+
+
+heyo,
+
+i'm back in America, slowwwly re-adjusting from rural/permaculture life in Asia..
+
+when i got back, i landed in SF at it's most apocalyptic time, post-pandemic, spending a good amount of time givin' some love to Noisebridge, an old maker/hacker/hangout-space. With the energy of a new cohort, we ushered in a better, brighter era.. At the time, the space resembled a condensed engineering department, with meetups on: infrastructure, robotics/vision, play-testing a mmo browser game with ai agents and prompt-based world-generation, and even finance bros building stock market llm's to compete (on huggingface); meanwhile, outside, several autonomous cars eerily whirred around alone at night, all alongside fentanyl and crystal meth doped people. I guess things have changed a bit since i've been gone.. I was content with just maintaining the space, being there, supporting everyone, showing the new folks around. At the time, none of the computer groups really intrigued me, as they were doing things purely for tech's sake as opposed for people's sake, much like a STEM department and program. For me, ai/ml and tech in general is most interesting where it aids/helps people, particularly aiding people to make stuff, to enable people to actualize their dreams: it's a tool, not an end.
+
+..so, despite living a totally different life, i'm not completely primitive-minded, though my mind is still stuck there.. It's just hard for me to cling on to things that lack grassroots, community, a culture that's tied to the land.. all of which California's housing crisis has weeded out.
+
+after escaping SF, i did a temp summer gig at UC Berkeley, which was even more insufferable, in a suburban way. I then rode a motorcycle down the coast. It felt like i entered a 1960s (sub)urban (non-)planning nightmare! The sun was warmer, but the grass wasn't greener. It's a desert! Now i'm heading back up to hang at the coastal towns i skipped.
+
+anyway, i've actually been searching for a sort of generalist computer admin/support job at a university, particularly aiming to become *the computer support person* for a humanities department, as it'd provide me a broader-minded community to socialize with, a big communal space, and a fertile environment to incept, design, 'n make useful products, collaboratively. In addition, i'm interested in supporting researchers too, as it seems to involve core computer skills i want to master: a mix of infrastructure (cloud and on-prem, including hpc!) and a very simple, pragmatic style of programming that i really dig: python scripts with a cli or a basic generated web-gui (streamlit), c-extensions at most, notably avoiding complex web gui/javascript endemic to most web startups--or so i thought.
+
+as it turns out, universities are soooooo painfully slowwwwwww. At this point, i just wanna get shit done, and so, back to the private sector i go, to learn the hard way.. possibly all the way back to SF, where i started! What a trip!
+
+i found this job using otta.com, which i gleaned from a reddit comment. Or rather, it found the job for me! :D
+
+my game-making background doesn't seem to help much in the new world of distributed-computing, ai; Yet, i'm certain tech support via support dev + sys-admin/infra (-> dev/ops) + customer service + knowledge-base/docs-maintenance is the best techinical path for me here in the "developed" world, even after nearly a decade of living in Asia. I recently went through a 70s terminal/linux/unix/emacs phase, and just love the simplicity of hopping around servers 'n editing files. I prefer working from the customer's point-of-view, from outside-in, slowly understanding everything, always having the big picture in mind, thinking like a solo product designer/maker, knowing what needs to be done.. Maybe i belong to startups after all.. Besides, i need the social life of a care/service role, if you couldn't tell. :) The problem is that: when i make something on my own, i have the freedom to use whatever tools 'n languages i want, of my own taste and joy and desires, for each problem/product; And unfortunately, i really like some unpopular, even esoteric tools: for a long time haxe, now ruby/dragonruby, and soon, jai/untitled-game-engine and elixir/phoenix. And now with ai, the language matters even less. But now that i'm coming back to the working world, i really need to master the popular stuff: systems admin foundations, python (go?), the slew of recent ai tools.. And doing that while helping people would be quite the ideal job for me, so that i won't be completely hopeless to the next HR person. :)
+
+anyway, it's a long shot, as there are surely a billion ai fanatics out there, but just let me know via e-mail.. i'll begin heading back up the cali coast next week via motorcycle, likely crashing at santa barbara to hibernate for the winter, transitioning to van-life asap, to get an even bigger picture of America, and be able to work anywhere, remotely and physically!
+
+NOTE: if i do stay in Cali, i might do the computational media (MS) program at UC Santa Cruz (it seems they've deduced MIT's media lab into actual research that the gov would fund) starting fall 2026. It's just that the job market has me beat.. and i feel i could use a crash course. ;(
+
+ra
+
+
+cut:
+Jai solves the mess that is C++ without being forced to use rust's memory solution. Elixir/phoenix results in neat functional programming structured programs for the web, with the bonus of free concurrency. I concede ruby lost the war, but that doesn't stop me from loving it for everything else: one-off-scripts/cli programs/simple web apps.
+
+after some time cleanin' up the maker-space 'n helpin' the homeless in SF, i escaped to Berkeley for a summer stint, which somehow felt even more insufferable and even less rooted than SF..! After that, i rode down the coast via motorcycle to San Diego, livin' 'n explorin' a few areas in SoCal--and i thought i had become primitive! These people live like it's still the 60s(!): zero urban planning. It actually got me yearning/nostalgic about the east-side of America: actual weather (rain, seasons, humidity), actual towns, dense urban areas.. real nature, real people. Also, i've become acclimated to the hot, humid haze of sub-tropical Taiwan.
+
+lastly, the working hours are quite ideal for me, if i live on the west coast: after sunset; east coast: even later? I'm a night computer person; Before that, i'm out in the sun! Surprisingly, it's normal hours in Taiwan too: 8-5!
+
+i don't have experience with cloud stuff (only played with whatever free points i get with GCP). I don't have React experience either. For my own web app ideas, i'm skipping ruby/rails (though keeping roda) to elixir/phoenix, and i'm pretty certain liveview is all i'd ever need. From my understanding, if i really need react components for a page, i can add it for that page.. I'll learn the boundaries of MVC and SPA web-apps soon enough..

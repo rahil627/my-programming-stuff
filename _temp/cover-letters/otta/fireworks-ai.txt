@@ -1,0 +1,25 @@
+
+
+heyo,
+
+i'm back in America, slowwwly re-adjusting from rural/permaculture life in Asia..
+
+when i got back, i landed in SF at it's most dystopian time, spending a good amount of time givin' some love to Noisebridge, an old maker/hacker/hangout-space. With the energy of a new cohort, we ushered in a better, brighter era.. At the time, the space resembled a condensed engineering department, with meetups on: infrastructure, robotics/vision, play-testing a mmo browser game with ai agents and prompt world-generation, and even finance bros building stock market llm's to compete (on huggingface); meanwhile, outside, several autonomous cars eerily whirred around alone at night, alongside fentanyl and crystal meth doped people. I guess things have changed a bit since i've been gone.. I was content with just maintaining the space, being there, supporting everyone, showing the new folks around. At the time, none of the computer groups really intrigued me, as they were doing things purely for tech's sake as opposed for people's sake, much like a STEM department and program. For me, ai/ml and tech in general is only interesting where it aids/helps people, particularly aiding people to make stuff, to enable people to actualize their dreams: it's a tool, not an end.
+
+after that i did a stint at UC Berkeley, which wasn't better, then rode a motorcycle down the coast. It feels like i've entered a 1960s urban (non-)planning nightmare! The grass isn't greener; It's brown! The valley is a desert. I'm heading back up asap, lol!
+
+..so, despite living a totally different life, i don't think i'm completely primitive-minded.. It's just hard for me to cling on to things that lack grassroots, community, a culture that's tied to the land.. all of which California's housing crisis has weeded out. :/
+
+anyway, i've actually been searching for a sort of generalist computer admin/support job at a university, particularly being *the computer support person* for a humanities department, as it'd provide me a broader-minded community to socialize with, a big communal space, and a fertile environment to incept, design, 'n make useful products, collaboratively. In addition, i'm interested in supporting researchers too, as it seems to involve core computer skills i want to master: a mix of infrastructure (cloud and on-prem, including hpc!) and a very simple, pragmatic style of programming that i really dig: python scripts with a cli or a basic generated web-gui (streamlit), with c-extensions at most, notably avoiding complex web gui/javascript, an invasive species in the private sector--or so i thought.
+
+as it turns out, universities are soooooo painfully slowwwwwww. At this point, i just wanna get shit done, and so, back to the private sector i go.. possibly back up to SF..! and my oh my how far ahead these little startups are..!
+
+i found this job using otta.com, which i gleaned from a reddit comment. Or rather, it found the job for me! :D
+
+my game-making background doesn't seem to help much in the new world of distributed-computing, ai; Yet, i'm certain tech support via support dev + sys-admin/infra (-> dev/ops) + customer service + knowledge-base/docs is the best techinical paths for me here in the "developed" world, even after nearly a decade of living in Asia. I prefer working from the customer's point-of-view, from outside-in, always having the big picture in mind, and besides, i need the social life of a care/service role (if you couldn't tell :) ). The problem is that: when i make something on my own, i have the freedom to use whatever tools 'n languages i want, of my own taste and joy and desires, for each problem/product; And unfortunately, i really like some unpopular, even esoteric tools: haxe and ruby/dragonruby, and soon, jai/untitled-game-engine and elixir/phoenix. And now with ai, the language matters even less. But now that i'm coming back to the working world, i really need to master the popular stuff: systems admin foundations, python, and get familiar with the slew of recent ai tools.. And doing that while helping people would be quite the ideal job for me, so that i won't be completely hopeless to the next HR person. :)
+
+anyway, it's a long shot, as there are surely a billion ai fanatic techies out there, but just let me know via e-mail.. i'll begin heading back up the cali coast next week via motorcycle, likely crashing at santa barbara to hibernate for the winter, transitioning to van-life asap, to get an even bigger picture of America, and be able to work anywhere, remotely and physically!
+
+NOTE: if i do stay in Cali, i might do the computational media (MS) program at UC Santa Cruz (it seems they've deduced MIT's media lab into actual research) starting fall 2026. It's just that the job market has me beat.. and i feel i need a crash course. ;(
+
+ra
