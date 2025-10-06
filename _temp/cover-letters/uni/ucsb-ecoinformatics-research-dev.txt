@@ -1,0 +1,30 @@
+
+
+NOTE: didn't withdraw, but didn't re-apply either.. but i don't think i can stomach the data approach.. :/
+  - also the web gui metacatui does not look fun to maintain..
+  - maybe data science isn't for me..
+    - search "is data science boring" in reddit
+    - yeah, it's just about getting/cleaning the precise data you want to present to stakeholders to persuade them about something.. :/
+      though this is better as it's for environmental causes (and data), it's just a fucking stupid quantitative way of saying stop fucking killing the planet
+    - though, some of the data really is cool..: vegetation plot, time series of plants and animals, ecological interactions (pollinators), fossil collections..
+      - see "ncesas data science tools"
+
+NOTE: application review date was in 1/2025
+  - e-mailed NCEAS about it.. maybe they just forgot about the post..
+
+heyo!,
+
+TODO: use this one
+i'm back in America, and ever since i've been back, the rest of the world has been burning in my mind--particularly rural Asia, where i've spent much time-- and more recently Nepal and Indonesia!--, and so, i've had a deep desire to be around an international community, especially one that is passionate about making practical impacts to the entire world--otherwise, i'd be back in my old little Mitsubishi van in Taiwan dealing with local grassroots org problems! :)
+/
+i'm back in the States, and just finished my slow trip down 'n up California, now heading up the coast to stop by a few coastal campuses i missed: usc, ucla, and ucsb, where i'll likely low for winter.. I'm really just trying to get back to doin' some good ol' computer work, ideally at a uni with warm, HUMID weather, and with some actual nature. I recently did some unrelated temp work at UC Berkeley last summer, but i very quickly realized it was summer-time: nobody was there! I now know i need to work during the school year.. for the sake of social life! :)
+
+i'm precisely aiming for these computer person for a department sort of jobs (: maker, automater, admin, support dev, etc.), as i prefer being the lone computer person so that i have the freedom to choose or incept, design, and make the solutions/products myself, directly working with and supporting the people within it.
+
+i haven't done "data science" before, but this one at least has some ideal values: for the sake of nature..! i'd have to think a bit more about the bigger picture here: is it even worth accumulating data (around the world) for the sake of persuading big, fat stakeholders? Do i want to fight the ecological battle using their methods? I'm a little afraid it's too quantitative for my tastes, as a person that lives in permaculture/indigenous/small-farm rural landia.. i believe in simpler, deeper, cultural changes.., which can only come from living with the land.. hmm, yeah.. i'll have to think about this some more.. maybe i'll have to look into how the NSF works..
+
+yet, the job seems alright: build some data tools, mostly in python and R, maybe simple web gui, to help people organize 'n collaborate with data.. Certainly not the sexiest thing... but at least it involves big picture thinking, which comes naturally to me, and combines my previous tech skill with my passion for permaculture (or does it..?), and possibly even my passion for video games too, if it involves creating some data visualizations--that's a niche track i'd really like to dig into!: data viz.
+
+honestly, the only reason i'm back in America is to reboot my computer career, so that i can go back to taking care of the little island of Taiwan. <3 That size of a country should be much easier to map out..!
+
+anyway, just e-mail back, as i've gotta change my local number, again. I'll be moving to LA city this week, near USC, from the desert that is the San Gabriel Valley. Thank god!!

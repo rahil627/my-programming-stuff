@@ -1,0 +1,54 @@
+NOTE: withdrew because position's pay, and i assume rank, is very high up (near $200k)
+
+heyo,
+
+to keep this short:
+from the job pay, this seems like the end-goal of the career i dream of: systems admin supporting researchers--though, i think i'd prefer a bit more tinkering with code too.. I do not have much linux admin experience beyond my personal computers, my personal web server, and free GCP. I actually haven't used linux until more recent years as a personal computer, through an iPad, chromebook, both used during travels, and WSL. Gamers have been historically limited to using Windows, and game-makers tend to create single all-containing binaries; Unix's paradigm is the opposite. And most of my experience comes from the coding-side: game making (including my interest in game/media engine design and programming langauge design), personal small scripts/web-apps/web-sites (ruby, possibly soon elixir), a web-app startup (.NET), a few short stints (AR app, a crap silicon valley job), and just years of interest in computers. Because of this focus, i particularly lack wisdom in security (from the post: "Server hardening, patching and vulnerability mitigation", "Stay current with applicable data protection regulations"; desired: "Familiarity with current security trends, requirements and commonly adopted frameworks (i.e. HIPAA, NIST, CMMC)"), substantial experience in networking (from the post: "bonding", "vlan tagging"), and hpc/slurm. None seem particularly difficult, just lots of surface knowledge that continuously changes.
+
+don't get me wrong: i love the idea of jumping around linux servers as a job--particularly with my fav editors!--, it's just that hasn't been my core passion/motivation for computers.. I'm not the average linux-loving computer user. Unlike many linux lovers, i have no interest in re-creating the desktop OS nor it's apps nor another package manager for the thousandth time, in yet another language. Game makers focus on the product, there's no time for anything else. TODO: Though, i personally tend to idealize better game engines and languages. | I would think that researchers think the same way: just use what works.
+
+
+here's the rest:
+i'm back in America, and ever since i've been back, the rest of the world has been burning in my mind--particularly rural Asia, where i've spent much time, and most recently Nepal and Indonesia!--, and so, i've had a deep desire to be around an international community, especially one that is passionate about making practical impacts to the entire world--otherwise, i'd be back in my old little Mitsubishi van in Taiwan dealing with local grassroots org problems! :)
+
+for that reason, when i came back to America, i immediately took a job UC Berkeley over the last summer (2024), where i got to see how a public school operates, from the dirty side: as a cleaner, alongside the Cantonese/Guangdong and Latina/Central-American working mothers. It was rough, especially as i quicky realized the town is dead during the summer-time, .
+
+for that reason, when i came back to America, i immediately took a job at UC Berkeley over the last summer (2024). There, i got to see how a public school operates, from the dirty side: as a cleaner, alongside hard-working Chinese/Guangdong and Latina/Central-American mothers. It was rough, physically and socially draining, as i quicky realized the town is dead during summer-time, marking a rather unsocial and isolated period of my life.. after experiencing that and more recently the lives of Chinese and Latinos in San Gabriel Valley, i am now even more grateful to have some skill--heck, even just the ability to communicate in English!: as the language barrier is indeed real.. Now i'm givin' it another shot, in another area, during the school year, at a private school: without the government bureacracy, and i hope, with more freedom and empowerment, more risk-taking!
+
+for a long time now, i've wanted to do computer admin/support work, particularly being *that computer person* for a humanities/new media arts/ecological department, as those are my people, and as i'd have the power to choose or write my own simple solutions. Additionally, i'm quite interested in supporting researchers too, as it seems to involve a very simple, pragmatic style of systems programming/scripting that i really like: python/C scripts with a basic generated gui. Unfortunately, my game making background doesn't seem to help much in the new world of cloud-computing and ai nor even in systems administration, save the core systems-programming part. Yet, i'm certain systems admin combined with support dev roles within academia is one of the best techinical paths for me here in the "developed" world, and def the right place to be, even after nearly a decade of living in Asia; I intend to keep my grassroots permaculture family 'n life in Asia forever, but i also would like to have/build a passionate, progressive community here in America too, just with more technical means and academic ends. Though i naturally belong in the grassroots communities near nature (i will severely miss the island life..), i think i'd flourish in an academic setting too, cooperating and supporting others within communal spaces, as i've always done--just replacing grassroots art/ecological/anarchistic folks with institutionalized academic folks. I think it's worth trying both ways of life, and see where they mutually aid each other. Besides, i am the only one in my peer/social group that: is able to tolerate and work with a deeply western and institutionalized way of thinking, is [high-]tech-savvy, and thus has the highest potential to collaborate. My friends all live on the edge, every-day. One bad cop, law suit, or health problem, and it's over. I hope to provide a little safety net.
+
+recently, while in permaculture-land and here in America, i went through a fun 70's programming phase of terminals/shells/scripting/linux/etc., ultimately leading to emacs 'n ruby/dragonruby (and soon jai and possibly elixir/phoenix too). I really enjoy hopping around servers, repos, editing files, using little cli programs, just straight getting stuff done. Also recently, i've surveyed the land of programming languages (especially for game-dev) and gui/app/web/game solutions too, as i personally intend to continue to make games 'n web apps on my own. There's some satisfaction i get in solving problems simply, and choosing the right simple tools (: langs, libs, programs, and products), and i hope continue on that rather broad, generalist path. Though i've got my own tastes in things, i really like that unis tend to use the old things that work: Java/Spring Boot. More recently, when i was at Noisebridge, the folks at the infrastructure meetup shared their self-inflicted-pain of managing NixOS configs on their personal machine, and my mentor at the space, tipped me on TailScale. So, despite living a totally different life, i think i've still got the technical passions within me, it's just that i'm usually motivated by purely personal/friend artistic or grassroots-communal passions/pursuits, as opposed to academic/scientific pursuits; Yet, even if those passions don't overlap with the scientific enterprise, at least they share tech skills: systems programming and general systems admin.
+
+TODO: STOPPED HERE
+
+TODO: enter job-specific stuff here
+
+since i've never held a servers admin job, i've only been able to play with my web server, meaning, i absolutely lack a few experiences, most notably with security, but also with config management and scaling (beyond my personal GCP box). Noisebridge, a makerspace in SF, had some servers to play with, and even nice little infrastructure meetup where peoeple would share things like terminal tricks, experience with nix, love for tailscale, etc., but even most of their experience came from working at a computer lab in Berkeley..
+
+anyway, it's a long shot, but just let me know.. i'll be moving to LA city this week (near USC), from the desert that is the San Gabriel Valley, but i've basically concluded my trip down and up the coast of Cali, and am ready to work anywhere, and am also ready to live out my car... and would happily escape this desert to be back in the Bay, near some mountain/hill forests again. :)
+  - TODO: merge
+anyway, just let me know.. i'll begin heading up the coast next week via motorcycle, stopping by campuses on my way (: ucla, santa barbara, santa cruz), escaping the desert that is the San Gabriel Valley. I've concluded my trip down Cali and am now certain, ready, and willing to work at any one of these great Cali institutions.. and would happily escape these suburbs to be back in a place with some.. passionate energy! (though, i'm a bit scared of entering yet another desert.. :|)
+
+
+
+
+
+
+
+
+
+
+
+heyo,
+
+
+the jobs seems rather technically straight-forward, yet i still do not have this little bit listed in the minimum qualifications:
+"securely configuring and maintaing systems in accordance to IT security policies and frameworks such as UC IS-3, CIS Benchmarks, NIST/ISO standards, etc.", as i usually only deal with my single personal web server, rarely cloud/GCP ($), or at most, a few local (or remote, hidden in a wall somewhere.. lol) servers at a place like Noisebridge, which has no such policies.
+
+i also do not have the following preferred qualifications:
+"IBM BigFix" (--strangely uses "ActionScript"..? which i'm very familiar with, unless it's something different from Adobe's..)
+~"common research software, such as: MatLab, SPSS, SAS, Stata" (not since i was in college)
+any IT certifications (i took the indie software dev route)
+
+
+ra
