@@ -8,6 +8,38 @@ terminal.sexy (website)
   - a web-based 16-color theme maker
 
 
+# emacs
+  - TODO: port aurara
+    - FINALLY, a text editor that will last the ages, and never have to port again!
+  - just use whatever's there..
+
+  - *manegarm*
+    - dark forest green, zelda vibes!!
+      - this one's actually legit.. someone put some love into this one!!
+
+  - outrun-electric
+    - great high-contrast neon vibes
+
+  - laserwave
+    - neon pink, unfortunately plain text too bright
+      - maybe not too difficult to edit it..
+
+  - solizared dark (*dark-high-contrast*, light, oksolar variants)
+    - looks good here, very dim plain text, very comfy
+    - dark-high-contrast version only subtley dims the background color (very good)
+      - good on my shitty chromebook
+    - light version is the only readable light theme i've seen.. yellow background, reminds me of a nvim theme that i liked..
+    - also quite unique, the rest look like atom-material variants
+
+  - tomorrow night, tokyo night (moonlight, palenight, city lights?, etc.), doom one
+    - standards, well ported
+
+  - snazzy
+    - this one was rather unique on helix, plain text too bright
+  - feather-dark
+    - suffers from different header text size in org-mode
+
+
 
 # windows:
 
@@ -33,10 +65,13 @@ tokyonight
 everforest-dark
 
 
-vs-code:
+
+
+# vs-code
   - see vs-code-extensions.txt
   - https://vscodethemes.com/
     - i made it to page 7 and noted a bunch to try below
+
 **aura**
   - the best i've seen so far..
   - dark (soft text)
@@ -93,14 +128,16 @@ pink-cat-boo
 huacat
 
 
-terminal:
-wezterm
+
+
+# terminal:
+## wezterm
   - neon night (goph)
     -  using this, but miss the old neon pink of cyberpunk
   - aura (goph)
   - adventure time
  
-windows terminal:
+## windows terminal:
 https://windowsterminalthemes.dev/
   - cyberpunk 2077
 
