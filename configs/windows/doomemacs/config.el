@@ -55,17 +55,71 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-solarized-dark) ; doom-palenight
-                                      ; doom-tokyo-night, for darker/higher contrast background and comments
-                                      ; doom-moonlight, for lighter background and comments
-                                    ; doom-one
-                                    ; ephemerel
-                                    ; doom-solarized-dark, great! now with hot pink 'n purple!!
-                                    ; doom-laswerwave, a synth pink, nice!
-                                    ; doom-shades-of-purple, nice!
-                                    ; doom-tomorrow-night, similar to gruvbox
+
+;; NOTE: use consult-theme to try them all out on-the-fly
+
+;(setq doom-theme 'doom-manegarm) ; zelda, dark forest vibes,
+  ;; TODO: need to provide alt with dim comments
+  ;; otherwise, this is my favorite theme
+(setq doom-theme 'doom-outrun-electric) ; high-contrast, hard white text
+;(setq doom-theme 'doom-solarized-dark) ; very low-contrast
+;(setq doom-theme 'doom-solarized)
+;(setq doom-theme 'tokyo-night) ; a classic alt between one and outrun-electric
+;(setq doom-theme 'doom-one) ; doom's default, too grey
+
+  ; solaire-mode?
+  ; just removes background color tinge
+
+
   ; NOTE: can use consult-theme to try out all the themes
   ; the ones prefixed with doom- are probably a bit more vetted
+
+  ; TODO: get aura, noctis, and jellyfish!
+
+  ;; - TODO: port aurara
+  ;;   - FINALLY, a text editor that will last the ages, and never have to port again!
+  ;; - just use whatever's there..
+
+  ;; manegarm, dark forest green, zelda vibes!!
+  ;; this one's actually legit.. someone put some love into this one!!
+
+  ; doom-outrun-electric, my favorite included theme, very high-contrast, hard, neon vibes
+
+  ;; laserwave, neon pink, unfortunately plain text too bright
+  ;; maybe not too difficult to edit it..
+
+  ;;doom-solarized-dark, great! very low contrast, now with hot pink 'n purple!!
+  ;; variants: *dark-high-contrast*, light, oksolar variants)
+  ;;   - looks good here, very dim plain text, very comfy
+  ;;   - dark-high-contrast version only subtley dims the background color (very good)
+  ;;     - good on my shitty chromebook
+  ;;   - light version is the only readable light theme i've seen.. yellow background, reminds me of a nvim theme that i liked..
+  ;;   - also quite unique, the rest look like atom-material variants
+
+  ; doom-tokyo-night, my classic fall-back
+    ; between solarized-dark and outrun-electric
+    ; doom-moonlight, lighter background, lighter comments, a more glowy/jellyfish feeling
+    ; doom-palenight, bright background for lower contrast, too bright
+    ; doom-city-lights, ??
+
+  ; feather-dark, fun, just comments are hard to see..
+    ; suffers from different header text size in org-mode
+  ; doom-shades-of-purple, a bit of an overload by the bright background and purple comments..
+    ; text in txt/org files are still white :/
+    ; similar to adventure time
+  ; ephemerel, background may be too bright, lots of use of bold is interesting.. noctis vibes
+
+  ; doom-one, doom's default, based on atom/github theme
+    ; too gray, too boring
+    ; doom-vibrant, a blue-hue variant of doom-one
+  ; doom-tomorrow-night, a solid upgrade from gruvbox
+
+  ; horizon, a good monokai vaiant, except red vars and bright background
+
+  ;; - snazzy
+  ;;   - this one was rather unique on helix, plain text too bright
+
+
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
