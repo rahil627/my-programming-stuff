@@ -8,9 +8,11 @@
 
 spc-o-r
   - +eval/open-repl-other-window
+    - don't bother with editing within the repl window, terminal windows have funky input..
+  - only need this to start it, then can use eval functions
 
 run the entire program in repl
-  - then can run any function, like pry
+  - then can run any function, like pry..??
 
 run (eval) regions of code
   - spc-k-e (spc-e in meow)
@@ -22,6 +24,10 @@ send regions of code, functions, etc. to a repl
     - +eval/send-region-to-repl
   - spc-c-??
 
+** explore lisp programs (emacs) dynamically
+  - spc-l-g
+    - filtered-search through all libs, functions, vars
+  - m-x seems to be a subset of those functions.. (33k vs 7k)
 
 ** emacs notes
 eventually, you'll probably naturally read enough lisp code when using emacs
@@ -42,14 +48,52 @@ m-(
   - requires (), even if empty :/
 
 
+ ;; TODO: wtf is with these elisp comments?
+ ;; one ; confuses the formatter
+ ;; two ;; seems the way to go..
 
+*** symbols
 
+people generally use setq over set, for the convenience, as it is what is expected coming from other languages
+  - the q stands for quoted, and you don't need to quote (') the var
+  - exception: if the value is another symbol (not a literal), you can use set to set it to another symbol
 
+https://www.reddit.com/r/emacs/comments/7jyv0o/whats_the_difference_in_setq_and_set/
 
+lisp has “symbol” concept.
 
+in “normal” languages like python php perl java etc, they have “identifiers”.
 
+in lisp, these “identifiers” are “symbols”. The difference is that, the lisp identifier can be evaluated or stay unevaluated.
 
+if symbols are always evaluated, they are just like identifiers in other non-symbol language.
 
+but in lisp, identifier can be held unevaluated. When identifier is held unevaluated, it becomes an inert thing, somewhat like a string.
+
+(setq x 1)
+
+(message "%s" x) ; prints "1"
+
+(message "%s" 'x ) ; prints "x"
+;; this is printing the symbol itself
+;; that is, the identifier x is unevaluated
+
+To hold evaluation of a identifier, you “quote” it. Like this:
+
+'x
+
+(quote x)
+
+Normally, you write
+
+(set 'x 1)
+
+meaning, you set 1 to the identifier x. You want to quote the symbol, because, otherwise, x will be evaluated, but that usually doesn't make sense, unless its value is another symbol.
+
+while
+
+(setq x 1)
+will quote the 1st arg, the x, for you automatically.
 
 
 
@@ -57,11 +101,16 @@ m-(
 scoop install sbcl
 
 * install a lispy editor:
+
+helix
+  - (coming soon..)
+  - scheme scripting
+
 emacs
   - yay!
 
 lem
-  - an editor written in common lisp!
+  - an editor completely written in common lisp!
   - has several front-ends: ncurses, sdl2, etc.
   - https://github.com/lem-project/lem
   - learn to use it!
@@ -73,17 +122,6 @@ x/portacle
   - https://portacle.github.io/
   - scoop install win-portacle
     - "couldn't find manifest"
-
-
-
-
-
-
-
-
-
-
-
 
 * learning resources:
 
