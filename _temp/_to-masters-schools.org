@@ -6,12 +6,12 @@ TODO:
   - the city has everything: *(GRASSROOTS/DIY) artists (and thus passionate people)*, private work, public work (ew, super slow), cafes/indoor areas to survive the winter blues, social life all year-round
     it's the opposite of the suburbs
     it's the opposite of California
-      - *Cali is artless. Beyond central LA, there is nothing.*
+      - *cali is artless. beyond central LA, there is nothing*
     it's either NYC, central LA, Hawaii, (coastal Cali towns?) or do my own thing somewhere on the south-east coast somewhere :/
 
 
 *check CS masters' programs at all schools*
-  - *most importantly, check the department's research labs, area, projects*
+  - *most importantly, check the department's research labs (group of professors/phds leading it), areas, projects and research centers (seperate institutes)*
   - electives can surely be cool..
   - what are the core classes like?
   - look at past thesis(es?)? projects?
@@ -98,7 +98,7 @@ TODO:
 
 
 *check design schools:*
-  - only ucd
+  - only ucd (TODO: and csulb!!)
     - (ucb and stanford are cash-cows)
   - check the curriculums
     - can one simply choose whatever courses/electives one wants?
@@ -127,7 +127,7 @@ TODO:
 
 
 CONCLUSION:
-*do any systems dev job*
+*do any support dev/engineer/sys-admin job*
   - *try otta.com*
 *try to take and/or audit courses while working at a uni*
   - *this may be enough motivation to lead to some small [personal] projects..*
@@ -146,7 +146,9 @@ CONCLUSION:
 
 *no need for MFA or PhD to teach*
   - and PhDs are only useful for the few that want to be teachers(/researchers?) their entire life (competing for tenure)
-  - *just stack up practical/technical/maker-oriented masters' degrees from whatever countries!*
+    - *how the fuck does tenure work?*
+      - surely it must be useless in the ever-changing field of CS..?
+  - *just stack up practical/technical/(solo)-maker-oriented masters' degrees from whatever countries!*
 
     - 1. ucsc's computational media (or similar)
       - *$$$*
@@ -206,6 +208,7 @@ https://www.ucop.edu/institutional-research-academic-planning/_files/all_UC_SSGP
    - *everything cool happens in "[research] labs" and "research projects" and "research areas"*
    - *nobody is going to fund designers, artists, etc., as they don't have the education to pursue such scientific directions*
      - *this is fucking stupid*
+       - *actually, great cities do (NYC, LA, etc.): they have a ton of foundations/endowments for these non-STEM orgs*
    - ..but *most programs look boring as fuck*, and don't get to the good stuff until the upper courses "special topics" or "electives"
      - TODO: check some more out..
 
@@ -213,31 +216,58 @@ https://www.ucop.edu/institutional-research-academic-planning/_files/all_UC_SSGP
 
 ** public programs
 *** 1. ucsc computational media MS (-> PhD)
-   - (i would def do this first, for the tech skills, and $$)
+   - *i would def do this first, for the tech skills, and $$, and the only phd i can currently imagine doing*
    - *maybe can just work there, and just take the technical courses instead..*
-   - *has research areas i'm interested in, even more so than MIT media lab!!*
+     - i def need a year of.. being stable.. in the right mind, before heading into this..
+   - *has MANY research areas i'm interested in, even more so than MIT media lab!!*
      - *games research is off the chain!!*
        - #1 in the world! (by papers)
          - surprisingly research heavy..
            *combining games and research may be the way to go..!*
            a game researcher..? lol
+           - emotional intelligence lab, some other labs
+   - *ucsc has teh vibes that fit me best!: experimental, social-justice-concerned, care, love: queer punks <3 <3, etc.*
 
-*ucsc also has lots of courses in many of my interests: arts, games, creative technologies, etc.*
-   1. global dev
-      - TODO: really??
-   2. the core courses from *creative technologies*
-   3. the core courses from *games and playable media (MS)*
-      - though, the program is also only *5 quarters*, which is good for ~5 games
-        - *being short and public/cheap makes it more appealing than usc*
-   ?. perhaps there's some general design courses..?
-   +. *various arts courses*
-   +. courses from *social documentary MFA*?
+   - *ucsc also has lots of courses in most/all of my technical interests: arts, games, creative technologies, etc.:*
+     1. the core courses from *creative technologies* (arts department)
+     2. courses from *digital arts and new media* (DANM)
+     3. the core courses from *games and playable media (MS)*
+        - though, the program is also only *5 quarters*, which is good for ~5 games
+          - *being short and public/cheap makes it more appealing than usc*
+     4. courses form *art and design: games and playable media (BA)*
+        - maybe same department that holds creative technologies..
+     ?. perhaps there's some general design courses..?
+     +. *various arts courses*
+     +. courses from *social documentary MFA*?
+   - *ucsc also has lots of rsearch in my non-tech interests:*
+     - global dev
+       - TODO: really??
+     - philosophy
+       - history of conciousness
+     - feminism
+     - etc.
 
-*ucsc has teh vibes that fit me best!: experimental, social-justice-concerned, etc.*
+**** ucsc computational media PhD
+   - NOTE: better to apply first rather than transfer
+     but really need to commit 2+ years
+   - *the PhD route is interesting, in case i can do summers and winters in Taiwan..*
+     - 4 years tho..?? as long as i'm being paid..! (tuition is likely remitted--free)
+         - *TODO: how much do they get paid..? just TA/GSR stipends?? (is it only $24k/year or $2k/month??)*
+          - seems to be fine at $34 * 20 hours max = $2720/month
+         - *will know once i have a master's, no need to think about this now..*
+       - *van-lyfe in Santa Cruz, the sierras, natural parks*
+         - proximity to: stanford, ucb, silicon valley
+         - learn to surf / tolerate cold water? :/
+         - *learn to forage*
+       - nahhh, *i don't think i could tolerate so much cold weather, especially after doing a summer in Taiwan..!*
+         might have to try *georgia tech* or somethin'..
 
-**** RIP. (ucsc games and playable media (MS))
+
+
+*** RIP. (ucsc games and playable media MS), though, still have BS/BA!
   - *SUSPENDED*
     - damn, missed out on this!
+  - part of the computational media department (itself in engineering)
   - #1 games research
   - *doesn't provide broad tech 'n design skills.. just a few electives*
     - though, it depends on the games you make..
@@ -245,19 +275,8 @@ https://www.ucop.edu/institutional-research-academic-planning/_files/all_UC_SSGP
     - *maybe good if you've got 5 game ideas that you want to complete..*
   - also it being at ucsc, gives it a more social jusice-oriented vibe!
     - opportunity for cultural/gender games!
-  - leads to computational media PhD!
-
-**** NEXT. ucsc computational media PhD
-   - *the PhD route is interesting, in case i can do summers and winters in Taiwan..*
-     - 4 years tho..?? as long as i'm being paid..! (tuition is likely remitted--free)
-         - TODO: how much do they get paid..? just TA/GSR stipends??
-         - *will know once i have a master's, no need to think about this now..*
-       - van-lyfe in Santa Cruz, the sierras, natural parks
-         - proximity to: stanford, ucb, silicon valley
-         - learn to surf / tolerate cold water? :/
-         - *learn to forage*
-       - nahhh, *i don't think i could tolerate so much cold weather, especially after doing a summer in Taiwan..!*
-         might have to try *georgia tech* or somethin'..
+  - *leads to computational media PhD!!*
+    - *this would've been the dream route: cs (BS) -> games (MS) -> CM (PhD)*
 
 
 *** 2. ucsb media arts tech MS (-> PhD)
@@ -266,19 +285,24 @@ https://www.ucop.edu/institutional-research-academic-planning/_files/all_UC_SSGP
     - *two years is wayyyy too long!!*
   - get exposed to *creative tech, potentials of i/o*: sensors and sensor processing, digital audio processing, digital video processing, etc.
     then make/focus on what you want!
+  - *based in a solid cs/engineering department*
+    - can sneak into *human-ai experience lab* and prog lang lab
   - *can treat this as an art/maker residency, to pursue my personal physical games directions and think of some social-impacting products*
     - *would be much cheaper to do in another country..*
       - but again.. can make money via grad work..
         - TODO: check grad work stipend (same for all UC?)
   - *learn through art*
-    - far more motivating/interesting than more STEMy programs
+    - *far more motivating/interesting than more STEMy programs*
   - *as it's gov-funded, it likely must result in research to make the gov happy..*
     - research into... what? new media?
 
+*** RIP. ucsc games and playable media (MS)
+  - ;(
 
-*** 2. ucd design MFA
+*** 3. ucd design MFA
   - 2 year
-  - seems a bit inferior to stanford and ucb, especially as it lacks much creative computer stuff and new tech/materials.. and entrepeneurship..
+    - *feels wayyy too long to be stuck in davis..*
+  - seems a bit inferior to stanford and ucb, especially as it lacks much creative computer stuff, new tech/materials, entrepeneurship..
     but def more valueable ($15k/year vs ~$60k+/year)
     - *might not have much grad work, just TA, no research..*
       - *unless one can join any research lab..??*
@@ -291,7 +315,7 @@ https://www.ucop.edu/institutional-research-academic-planning/_files/all_UC_SSGP
 
 
 
-** NO private (or "self-supporting departments/programs"):
+** private (or "self-supporting departments/programs"):
   - would need to apply for a bunch of scholarships
     and likely aren't that many for this kind of work...
     - *would need to win corporate-sponsored design contests.. (like Parson's program)*
@@ -311,9 +335,10 @@ https://www.ucop.edu/institutional-research-academic-planning/_files/all_UC_SSGP
     - TODO: look at the student's work at stanford
   - but *Berkeley's campus and town feels so miserable tho..* i'd much rather be at Stanford! especially for the same price..
 
-*** NO usc game design and dev MS
+*** usc game design and dev MS
   - #1 game design program
     - *TODO: check curriculum*
+    - public schools just suck at design / creativity / art..
   - two years
     - *EXPENSIVE: $55k x 2 years = $110k*
       - *check free tuition for low-income students..*
@@ -341,15 +366,508 @@ https://www.ucop.edu/institutional-research-academic-planning/_files/all_UC_SSGP
 
 
 
-* everything else
+* west coast grad programs:
 
-** notes?
+** stanford
+  - private
+    - expensive, rich kids
+  - #1-2 cs
+  - *practical global impact* is in it's slogan
+  - NO game design
+    - https://www.reddit.com/r/stanford/comments/hps4il/game_design/
+    - seems to only have a few courses as of 2020..?
+*** CS
+- *#1-2 in the world*
+  - *too competitive / researchy*
+*** NO design ("d.school") MS
+    - *the only one that's a MS degree..*
+      - not an art school, all about *designing for engineering*
+    - https://dschool.stanford.edu/study/graduate-degree
+    - *EXPENSIVE two years * $58k/year = $116k*
+    - "I know some people who absolutely love it. I had an okay experience. If your goal is learning, just take 1 or 2 classes. It doesn't matter what you take, like design your Stanford, design your career, etc. *The classes all teach the same basic design thinking methodology, just applied to a different area like school/career/social enterprise/sustainability/etc. So taking too many classes will be kind of repetitive. Imo design thinking as a whole is kind of common sense, but I guess it's hyped up by the d.school. Just my personal opinion - so that's why some people probably have awful experiences - they think they are sitting in a kindergarten decision-making class."*
+    - "Personally I really enjoyed all the dschool classes I took, especially the actual “design” focused ones like *designing data, visual design, interaction design*. I’ve also heard good things about the needfinding class, it’s more like doing social science/research. *Loved the aspect of meeting and working with people from all over the school.*"
+*** symbolic systems
+    - *TODO: hmm..?? taken from CMU?*
+  - computational and mathmatical engineering (ICME; MS, PhD)
+    - "...*studying and developing computational tools in those aspects of applied mathematics central to modeling in the physical and engineering sciences*"
+    - https://icme.stanford.edu/research-impact/student-research/phd-research-spotlights
+      - not so interesting PhD papers.. :/
 
-https://www.reddit.com/r/UXDesign/wiki/degree-programs/
-  - all hci programs
-  - hci seems a bit boring..
-    - *basically ui/ux design, get user feedback, prototype... it's basically game-testing, but without the actual making part*
-      - i'd much rather learn the technical parts at school, to make the product.. or prefer a more broad design program
+
+
+
+** NO ucb
+  - *meh, i'm just not interested nor inspired by neither the town nor school*
+  - #1-2 CS
+  - games?
+    - just a "decal": a student-run class..??
+    - no fun..
+*** EECS/CS
+    - *#1-2 in the world*
+      - *too competitive / researchy*
+    - dual-degree??
+    - *stacked with research labs*
+      - *this is absolutely the way to go, no matter if you don't like STEM or not..!!*
+        *all the money goes here*
+    - *$20k/year for the best education, can't beat it*
+      - *TODO: check out the curriculum*
+        - don't see one.. maybe very tailored to research..
+      - *most people admitted for the master's program are people pursuing a phd, otherwise, only 10/year are admitted*
+        - *i def don't have a chance at this..!*
+        - "Students interested in a research oriented degree should consider applying directly to the MS/PhD program."
+          - "M.Eng is designed for professionals..."
+            - nope, this is some bullshit
+      - must choose a research area:
+        - https://eecs.berkeley.edu/academics/graduate/research-programs/admissions/
+          - *hci*
+            - surely the most popular..
+          - *programming systems*
+            - including languages, tools, etc.
+              - this one is my jam!
+          - education
+          - graphics
+          - ai
+          - cv+ai (EECS)
+*** NO design (MD)
+    - a new program: 2022
+    - 3 semesters + summer internship/work
+    - *EXPENSIVE: $55k x 2 years = $110k*
+        - https://www.reddit.com/r/berkeley/comments/1eyao2x/masters_programs_here_are_sooo_expensive/
+          - "In layman's terms, *a self-supported program* is operated by its parent college for the express purpose of generating profit for the college. (As opposed to for the purpose of educating the future California workforce, or something like that.)"
+    - part of engineeering and environmental departments
+    - makes great use of the entrepeneur spirit of Berkeley
+      - *very much deals with new/"emergent" tech*
+    - studio-based, thesis 2nd-year
+    - teaches design
+      - *i'd love to take these courses!!*
+    - choose your own electives (arch, compsci, etc.) depending on whatever you want to focus on
+*** NO school of information (MIDS, MIMS)
+    - looks like a another *cash-grab "professional degree"*
+      - many of the programs within this school are complete cash grabs, being completely online..!!
+    - ~$82k for 27-units, lmao
+
+
+
+
+** ucla
+  - very STEM selection of grad programs
+    only one interdiscplinary degree
+  - games?
+    - *"games dev classes are basically nonexistant"*
+      - "The specific game dev opportunities available at UCLA are: DESMA 157 Game Design, DESMA 171 Interactivity and Games, *UCLA Game Lab*, and *Bruin Game Studios*. Note that you need to be a DESMA major to enroll in those DESMA classes."
+*** cs
+  - *TODO: how is the CS program?* haven't heard anything about this one..
+    - *check research labs*
+  - watchout for bullshit online program ("engineering MS")
+*** NO digital media arts (BFA, MFA)
+    - graduate program in design: media arts
+    - *MFA is a 3 year program.. :/*
+      - WTF??, wayyyy too long!
+        this would be an insane amount of money..!!
+        - *TODO: check costs!!*
+    - https://www.reddit.com/r/ContemporaryArt/comments/1im7ikq/ucla_mfa_department_of_art/
+      - "I was an undergrad at 35 a couple years ago and befriended many of the permanent faculty; Andrea is still my mentor. Tbh, I think the program as a whole has kinda eroded. A majority of the new faculty are *way too identity/culture/disenfranchised focused and have created a microcosm of mediocrity and a persistent fear of offending.* If you’re gonna show in the New Wight gallery on the main campus, bureaucracy and insurance infringements are gonna whittle your work down to nothing. The facilities are great for both undergraduate and graduate programs. *The community is ehh, most of the students approach the program like a residency that’ll jumpstart their practice into superstardom so some can be a bit too serious.* And, there’s a real physical and academic/mental separation between grad and undergrad…. sometimes it felt fabricated and felt non-beneficial for the greater community. And, idk, *like much of Art Academia today, it’s not fun anymore. It’s too critical and eggshell-y and the people who take chances are seen as the enemy rather than praised.* Good luck on your search. I hope you find the right fit for you…. *I’m looking at Europe.*"
+        - probably how i'd feel--actually, how i felt, even at the age of 23-24!
+      - "I think UCLA made its reputation on its collection of god-like faculty from a generation ago. Baldessari, Chris Burden, Charles Ray.... quite a roster. It's turned over since then. No doubt high quality, but not the rock stars of yore. *One might say that such outsized art world figures can't even exist today in the same way given the proliferation and fracturing of scenes and subworlds.*"
+      - "*There are tons of public schools with MFA in less glamorous cities where you get a stipend and more or less the same education.* Think about what you need (space ? money ? network ? mentorship ?) and choose what fits you best based on that. For example, people like to trash at Yale, but they produced recently graduated artists who do cool work. I also have a friend at Northwestern University who got almost unlimited funding to produce his work during his degree. It's a priceless asset."
+
+
+
+
+    
+** NO ucsd
+  - *please shoot me*
+  - watchout for MAS degree programs, mostly self-supporting bullshit
+    - lots within bio-tech/data-science/etc.
+
+
+** YES usc
+  - private
+    - expensive, rich kids
+    - *likely very tough to get a full merit scholarship.. especially for games..*
+*** cs
+    - #19 in the world
+    - *suprisingly better than ucsb..!?* this makes it #2 after ucb in Cali
+    - *more likely to have scholarships/better funding, then can take game design courses*
+      - *still.. very competitive..*, not worth competing for a so-so private uni..
+    - *TODO: worth checking what research they currently do..*
+*** YES game design (BS, MS)
+    - see [game programs]
+    - #1 in the US
+    - https://catalogue.usc.edu/preview_program.php?catoid=16&poid=24902
+    - 2 years
+    - joint between two departments: engineering and cinematic arts 'n digital media
+
+*** https://cinema.usc.edu/interactive/index.cfm
+    - *TODO: didn't look into these programs..*
+**** interactive media and games (MFA)
+  - the following two sound like they were created because of an industrial endowment.. :/
+**** "Master of Arts  (Cinematic Arts (Media Arts, Games and Health))"
+    - use tech for health, combined with other programs (social work, etc.)
+**** "Master of Fine Arts  (Master of Fine Arts, Interactive Media (Games and Health))"
+    - use tech for health
+
+
+
+
+** YES ucsb
+   - #27 cs, along with uci
+     - though *the enginering department is considered the second best after ucb..*
+   - LA (west/central) a scenic drive away..
+*** YES media arts and technology (mat, MS and PhD!)
+ - 2 years
+ - *seems very much programmy! :)*
+ - https://mat.ucsb.edu/degreePrograms/
+   - *starts with: electronic music/sound design, visual and spatial arts, multimedia engineering*
+     - very cool, similar to "creative technologies" (BA) at ucsc, or a more focused NYU:ITP
+   - https://catalog.ucsb.edu/programs/MSMAT
+   - https://www.mat.ucsb.edu/currentSchedule/
+     - *courses look like an interactive arts program, very input/output-oriented!*, "creative" tech
+       - starts with: art 'n tech, music 'n tech, digital media and engineering
+       - then: *media signal processing*, haptics, *computing with media data*, media and society, etc.
+         - *computing with media data is what i really want to focus on.. not so much the artsy stuff..*
+           - https://catalog.ucsb.edu/courses/MAT%20201B
+         - media signal processing
+           - *use numpy/etc. to proccess sensor signal data*
+         - computational systems for visual art and design
+           - "use creative programming languages and frameworks to create new interfaces for visual expression"
+         - audio programming
+           - use/create DSL/meta-programming to make audio programming langs!
+         - lots of audio/music-related stuff..
+       - *ends in an arts showcase*
+         - *student results suck*
+           - *seems to focus on creating a new digital media/art-form/pathway*
+*** art (MFA)
+ - associated with above
+*** film? (MFA?)
+ - not the best film program: very theoretical
+*** cs (MS)
+ - good categorization of courses:
+   - theory (aglorithms, logic, computation theory, etc.)
+   - systems (os, db, network),
+   - applications (simulation, graphics, advance topics: ai, cv, etc.)
+ - research labs
+   - *gamelab*
+     - *TODO: look into this..*
+   - https://cs.ucsb.edu/index.php/research/laboratories
+     - *human-ai experience (hax) lab*
+       - misha sra
+         - https://sites.cs.ucsb.edu/~sra/index.html
+         - MIT media lab phd
+     - *programming languages lab*
+       - ben hardekopf
+         - https://hardekbc.github.io/research/
+           - very good summary of history of research
+           - designed hardware (ISA) to be verifiable / secure with archlab
+   - the rest are very computer sciency, foundational stuff, most focus on networks
+
+*** interesting grad programs:
+- *global studies*
+- *feminist studies*
+- *chicana/o studies*
+- environmental science and management
+- environmental data
+
+
+
+
+** ucd
+  - cold/hot climate, in the middle of nowhere
+  - *overall feels very STEM, quantitative..*
+    - (from looking at the grad programs..)
+      except the design department! surprisingly not STEM at all!
+  - mostly standard STEM degrees (bio-eng, chem-eng, cs, etc.)
+*** cs (MS, PhD)
+  - looks like pretty standard stuff
+  - *TODO: check the research labs/areas*
+*** NO design (MFA)
+    - *faculty is stuck in the narrow-minded high-academia-art bubble*
+    - https://www.ucdavis.edu/graduate-programs/design
+      - https://catalog.ucdavis.edu/departments-programs-degrees/design/design-mfa/?_gl=1*1fb06hf*_ga*MTEwMzQzNDA0My4xNzU2NDM5MjU5*_ga_2N9JP0W2PC*czE3NTc5NzI3NTkkbzckZzEkdDE3NTc5NzI5MzkkajYwJGwwJGgw
+      - https://programs.gs.ucdavis.edu/api/doc/2913
+    - looks more artsy
+    - 2 years :/
+    - "to work with faculty in the Department of Design *and across departments* in one of the nation’s top public research universities."
+    - "encourages interdisciplinary approaches through research and practice aligning with social and environmental responsibility."
+    - has "interactive design" and "product design" as a "key area" of focus
+      - "Design faculty expertise includes design theory, exhibition, fashion, history, information, interactivity, interior architecture, immersion, lighting, product, textiles, time-based, visual communication, wearables, and more."
+        - reminds me programs 10 years ago.. D&T, ITP
+    - https://arts.ucdavis.edu/pod/research-labs
+      - not so impressive.. :/
+    - https://arts.ucdavis.edu/interactive-design
+      - cool mix of classes from four departments! (design, art, engineering, psychology)
+      - *Katia Vega*
+        - the only one with a cs degree (phd)
+          - *leads the interactive organisms lab*
+      - x/Glenda Drew
+        - nope, art academia, though made a film
+      - x/Jiayi Young
+        - nope, art academia
+    - akshita shivkumar
+      - space/politics/architecture interests
+        - Collective for Socio-spatial and Environmental Praxis (CSEP)
+          - sounds quite lofty..
+      - does works in India a lot
+        - her studio seems completely divorced of India though.. :/
+    - product design
+      - x/Beth
+        - "ecological" circular futures lab
+          - various ehibitions
+          - makerspace contributions
+          - mobile charging area
+        - lame..
+      - x/Thomas Maiorana
+        - more civic
+        - "his research explores the ways which low-resolution prototypes can be used in service of systemic change."
+          - actually, not a bad idea..
+          - tabletop games for learning serious things.. like wildfire safety
+        - designed the design center at the claremont colleges?
+    - interior architecture
+      - an emphasis in Spatial Design to tackle spatial issues in society via Design. The main objective of the program is preparing students to *actively improve experiences of everyday life as it relates to the built environment across scales.*
+    - history and theory of design
+      - "conduct historical research...express their research in multi-media formats"
+    - other faculty have degrees in art history, architecture, design, etc.
+
+*** NO [some undergrad program]
+    - department of cinema and digital media
+      - seems to only have two professors (Boluk and LeMieux) that teach gaming courses
+      - seems good for someone interested in film studies (theory), film-making (production!), and game-design
+        - my interests, when i was young!!
+      - seems to be new and not well put together.. just a bunch of courses thrown together..
+*** NO computational social science (DE for PhD)
+    - use ai/llm to anaylze human behavior, etc.
+      - not interested!
+        also just quite specific.. i guess that's why it's a DE.. (designated emphasis)
+
+*** other interesting programs (to collab with)
+  - *native american studies*
+  - *environmental horticulture and forestry*
+  - NO human development (PhD)
+    - very quantiative..
+
+
+
+
+** YES ucsc
+   - NOTE: BEWARE: some majors may be on silicon valley extension campus..!?!? :/
+     - TODO: just HCI..? or more in computational media..?
+   - #5 in game design (2024)
+     - #5 undergrad computer science: game design (cs:gd, 2023)
+       - same as CS program, but with senior design production
+         - sounds awesome!!
+     - #9 undergrad design (2022)
+       - *TODO: what design program??*
+
+  - *seems to have a ton of options for games, creative tech, arts, and likely can take electives, or audit as one wishes*
+
+*** engineering department:
+**** YES computational media (MS and PhD)
+- http://catalog.ucsc.edu/en/current/general-catalog/academic-units/baskin-engineering/computational-media/computational-media-ms
+  - *GREAT curriculum!!*
+  - *possible to complete in one year to 5 quarters!!*
+- seems much broader.. at the cost of art..
+  - *just have to make more art friends..!*
+    - no problem!! :)
+  - *in the engineering department*
+- *"Impactful: We create media, experiences and ways of understanding that have an impact in the world we live in."*
+  - *yep, this is the right place!*
+- https://engineering.ucsc.edu/departments/computational-media/research/
+  - *alt games lab*
+  - *tech4good*
+  - *social emotional tech*
+  - etc
+    - *FUCK YEAH!*
+- *it seems a lot more social-impact-oriented than ucsb's MAT*
+  - *this may just come with ucsc being more progressive/political/critical..*
+-> computational media PhD
+  - *this is a good sign..*
+  - 4 years with MS in a technical CM degree (games or CM, for example), 5 years without
+    - thus, better to do one of the CM MS degrees first..
+    - anyway, 5 years is crazy!! no thanks.
+      - *5 years in santa cruz is wayyyyy too much of a commitment*
+        - *i could only do 5 years in a place i love (Taiwan)*
+      - *but.. it is a path.. in case i want to open my own department in hawaii or taiwan..??*
+**** DAMN games and playable media (MS)
+- *suspended for 2025-26*
+- https://catalog.ucsc.edu/en/current/general-catalog/academic-units/baskin-engineering/computational-media/games-and-playable-media-ms
+  - very studio-oriented, only 3-4 electives beyond that (nearly 1 per quarter)
+    - TODO: is it possible to work alone on a few projects..??
+  - *5 quarters*, for both technical and non-technial paths
+  - sounds like a fun time to focus on straight up makng games..
+    - *but, unfortunately, isolated from my land, people, 'n culture.. which would be strange..*
+**** cs:gd (BS)
+- https://www.reddit.com/r/UCSC/comments/8r70c8/to_anyone_going_into_the_game_design_programs_bs/
+  - got a lot of flack many years ago.. for not even teaching an engine, or C++, leaving people to make games with.. javascript??
+**** NO HCI (MS)
+- *NOPE: silicon valley campus :(*
+ - santa clara
+- aimed towards professionals (hence it's location)
+- *lots of women!*
+
+*** arts department:
+**** digital arts and new media (DANM, MFA)
+- *TODO: i didn't see this one..*
+- can take these courses through the computational media MS! yay!!
+**** art and design: games and playable media (BA)
+- https://www.reddit.com/r/UCSC/comments/8r70c8/to_anyone_going_into_the_game_design_programs_bs/
+  - BA used to suck 7 years ago..
+  - make games in javascript, no unity or unreal, etc.
+- in a particular arts department: performance, play, and design
+  - mostly courses on: traditional 2d, 3d, performance (dance, etc.), music, one photography course, one film course
+    - *art techniques, not computer-oriented..*
+- *courses: games as art, game as activism, play as radical endevour, designing experiences, aesthetic designs*
+  - *maybe can audit..?*
+- lots of critical theory
+- recently divorced from CS:GS..?
+  - *no need for CS courses*
+    - i personally want more tech courses
+**** creative technologies (BA)
+- looks cool, maker-space stuff are required: *creative coding, sensors/signals/interaction, fabrication, etc.*
+  - *maybe can audit..?*
+- plus all the courses in the arts department (foundational arts, film, theatre, visual arts, etc.)
+- *this would've been awesome when i was young!!*
+  - *it gives the creative skills, leaving the making up to you!*
+**** social documentation (MFA)
+- two years
+- *possibly a film program that fits me the most!*
+  - *also great to have rad/anarchist/ecological students around!*
+**** NO film and digital media (PhD)
+- more of a media studies program.. :/
+
+
+
+
+
+** uci
+*** game design and interactive media (BS)
+*** cs (MS)
+    - *the only highly-educational, state-aided, well-funded program*
+*** NO some digital/interactive art? (MFA)
+    - *3 years*
+      - hell no, not in OC!!
+*** NO hci (MS)
+    - *NOT state-aided: self-supported degree program*
+    - "This is a professional degree that prepares students to be the leaders of the future in human-computer interaction, user experience design and research, product management, and more. This degree should be undertaken by early and mid-career professionals and executives looking to take the next step in their careers. For additional information about this degree program, please see: https://mhcid.ics.uci.edu/"
+    - *seems pretty elementary.. case studies, etc.*
+*** NO computational science (PhD) (note: not computational *media*)
+    - https://catalogue.uci.edu/interdisciplinarystudies/computationalscience_phd/#requirementstext
+    - "https://computationalscience.uci.edu/"
+    - "A joint offering with San Diego State University (SDSU), the Ph.D. program in Computational Science trains professionals capable of developing novel computational approaches to solve complex problems in both fundamental sciences and applied sciences and engineering. A program of study combining applied mathematics, computing, and a solid training in basic science culminates in doctoral research focused on an unsolved scientific problem."
+        - "..Compare, critically evaluate and choose from existing computational approaches or models, or develop new computational approaches or models for solving problems in physical, biological or engineering systems..."
+    - *5 years*
+      - *could never spend that much time in orange county, nor san diego.. :/*
+      - *i would die without art output, humanities, social work, ecological work, etc.*
+    - joint program with SDSU
+      - 18 credits at SDSU, 24 at UCI
+    - summer seminars required
+    - *"The Ph.D. in Computational Science produces broadly educated, research-capable scientists that are well prepared for diverse careers in academia, industry, business, and government research laboratories."*
+    - core courses: scientific computing, math/choas!?, computational PDE (partial differential equations)
+    - *most of the courses seem incredibly practical for research programming*
+      - bio(-info), chem, mech, quantum, data, signal processing
+        - *basically covers all of the hard sciences, but solely focusing on the computational work!*
+*** NO software engineering (MS)
+    - *NOT state-aided: self-supported degree program*
+    - heavily research-oriented
+      - three quarters of individual study/thesis supervision courses :/
+        - *not sure what i'd do here.. as it's not product-oriented, rather software-oriented..*
+    - completely open curriculum
+      - electives on data, networking, ui, engineering
+    - *aimed for people that seek to develop understanding of techniques to create dependable large-scale software*
+      - *seems good for software dev practice..*
+*** embedded and cyber-physical systems (MS)
+    - "systems-of-systems that tightly couple their cyber and physical components"
+      - hmmm, pretty damn important.. instead of relying on creative embedded frameworks like arduino..?
+*** NO cs (not MS?)
+    - *NOT state-aided: self-supported degree program*
+      - wtf.. maybe an online one??
+
+
+
+
+** sdsu?
+  - not sure how their computer department is..
+    - must not be that bad because:
+*** NO computational science (PhD)
+  - joint program with uci
+
+
+** csulb
+*** design
+- TODO: ??
+
+
+** NO sjsu
+  - great silicon valley connections
+  - might be tough car-camping.. (downtown san jose)
+    - *i don't think i could survive the suburbs again..*
+*** NO https://cadre.sjsu.edu/programs.html
+    - BFA and MFA
+      - *probably the cheapest without funding..*
+    - *2.5 to 3 years.. :/*
+      - hell naw!
+
+
+
+
+
+
+
+
+
+* top game programs 
+  - *would much rather do a broader tech media design program first*
+  - *not interested at the moment, unless it's in Taiwan, or a culture i care about.. ;(*
+  - *if i did do one, it'd either be NYC or LA: NYU or USC*. i need the grassroots, playful friends
+
+  - https://www.kmjn.org/game-rankings/
+    - uni rankings based on papers on tech of games
+
+  - *NOTE: many (private??) schools give out free tuition for grad students, regardless if it's out-of-state or not*
+    *in-state-tuition requires living in the state for at least a year prior*
+
+usc
+  - #1 in game design undergrad
+    - there's something to be said about this..
+      - *i think public academia and art/design/creativity just don't go together..*
+
+(cmu, pittsburg)
+  - private
+    - *tuition-free* (including out-of-state and international!!)
+      - must be very, very competitive..
+      - *can try... if for grad school..*
+  - entertainment, technology, culture/computation? (ETC)
+    - *TODO: is this tuition-free too??*
+  - *incredible program, as proved by their incredibly-talented graduates*, though a bit too nerdy for my tastes..
+  - pittsburgh is one of the few cheaper cities/college-towns
+
+nyu
+  - private
+  - game design
+  - ITP
+  - great director/leadership (Frank Lantz)
+
+gt
+  - TODO: hmmm, maybe worth trying..
+    - not sure about out-of-state..
+      - otherwise, just try working there..
+
+(smu guildhall, texas)
+  - private? christian??
+  - *TODO: where and WHAT is this??*
+
+(northeastern)
+  - private, boston
+    - nahhhh, too cold!!
+      - but walkable..!
+
+(utah)
+  - salt lake city!
+
+(kentucky?)
+  - uhhhh, what??
+
+(u of central florida?)
+  - wtf?
 
 
 
@@ -399,462 +917,19 @@ unc?
 
 
 
-** west coast grad programs:
-  - ordered by uni ranking
 
-*** stanford
-  - private
-  - #1-2 cs
-  - *practical global impact* is in it's slogan
-  - NO game design
-    - https://www.reddit.com/r/stanford/comments/hps4il/game_design/
-    - seems to only have a few courses as of 2020..?
-**** CS
-    - *#1-2 in the world*
-**** NO design ("d.school") MS
-    - *the only one that's a MS degree..*
-      - not an art school, all about *designing for engineering*
-    - https://dschool.stanford.edu/study/graduate-degree
-    - *EXPENSIVE two years * $58k/year = $116k*
-    - "I know some people who absolutely love it. I had an okay experience. If your goal is learning, just take 1 or 2 classes. It doesn't matter what you take, like design your Stanford, design your career, etc. *The classes all teach the same basic design thinking methodology, just applied to a different area like school/career/social enterprise/sustainability/etc. So taking too many classes will be kind of repetitive. Imo design thinking as a whole is kind of common sense, but I guess it's hyped up by the d.school. Just my personal opinion - so that's why some people probably have awful experiences - they think they are sitting in a kindergarten decision-making class."*
-    - "Personally I really enjoyed all the dschool classes I took, especially the actual “design” focused ones like *designing data, visual design, interaction design*. I’ve also heard good things about the needfinding class, it’s more like doing social science/research. *Loved the aspect of meeting and working with people from all over the school.*"
-**** symbolic systems
-    - *TODO: hmm..?? taken from CMU?*
-  - computational and mathmatical engineering (ICME; MS, PhD)
-    - "...*studying and developing computational tools in those aspects of applied mathematics central to modeling in the physical and engineering sciences*"
-    - https://icme.stanford.edu/research-impact/student-research/phd-research-spotlights
-      - not so interesting PhD papers.. :/
-
-*** ucb
-  - #1-2 CS
-  - games?
-    - just a "decal": a student-run class..??
-    - no fun..
-**** EECS
-    - *#1-2 in the world*
-    - dual-degree??
-    - *stacked with research labs*
-      - *this is absolutely the way to go, no matter if you don't like STEM or not..!!*
-        *all the money goes here*
-    - *$20k/year for the best education, can't beat it*
-**** NO design (MD)
-    - a new program: 2022
-    - 3 semesters + summer internship/work
-    - *EXPENSIVE: $55k x 2 years = $110k*
-        - https://www.reddit.com/r/berkeley/comments/1eyao2x/masters_programs_here_are_sooo_expensive/
-          - "In layman's terms, *a self-supported program* is operated by its parent college for the express purpose of generating profit for the college. (As opposed to for the purpose of educating the future California workforce, or something like that.)"
-    - part of engineeering and environmental departments
-    - makes great use of the entrepeneur spirit of Berkeley
-      - *very much deals with new/"emergent" tech*
-    - studio-based, thesis 2nd-year
-    - teaches design
-      - *i'd love to take these courses!!*
-    - choose your own electives (arch, compsci, etc.) depending on whatever you want to focus on
-**** NO school of information (MIDS, MIMS)
-    - looks like a another *cash-grab "professional degree"*
-      - many of the programs within this school are complete cash grabs, being completely online..!!
-    - ~$82k for 27-units, lmao
-
-*** ucla
-  - very STEM selection of grad programs
-    only one interdiscplinary degree
-  - games?
-    - *"games dev classes are basically nonexistant"*
-      - "The specific game dev opportunities available at UCLA are: DESMA 157 Game Design, DESMA 171 Interactivity and Games, *UCLA Game Lab*, and *Bruin Game Studios*. Note that you need to be a DESMA major to enroll in those DESMA classes."
-**** cs
-  - *TODO: how is the CS program?*
-    - *check research labs*
-  - watchout for bullshit online program ("engineering MS")
-**** *NO digital media arts (BFA, MFA)*
-    - graduate program in design: media arts
-    - *MFA is a 3 year program.. :/*
-      - WTF??, wayyyy too long!
-        this would be an insane amount of money..!!
-        - *TODO: check costs!!*
-    - https://www.reddit.com/r/ContemporaryArt/comments/1im7ikq/ucla_mfa_department_of_art/
-      - "I was an undergrad at 35 a couple years ago and befriended many of the permanent faculty; Andrea is still my mentor. Tbh, I think the program as a whole has kinda eroded. A majority of the new faculty are *way too identity/culture/disenfranchised focused and have created a microcosm of mediocrity and a persistent fear of offending.* If you’re gonna show in the New Wight gallery on the main campus, bureaucracy and insurance infringements are gonna whittle your work down to nothing. The facilities are great for both undergraduate and graduate programs. *The community is ehh, most of the students approach the program like a residency that’ll jumpstart their practice into superstardom so some can be a bit too serious.* And, there’s a real physical and academic/mental separation between grad and undergrad…. sometimes it felt fabricated and felt non-beneficial for the greater community. And, idk, *like much of Art Academia today, it’s not fun anymore. It’s too critical and eggshell-y and the people who take chances are seen as the enemy rather than praised.* Good luck on your search. I hope you find the right fit for you…. *I’m looking at Europe.*"
-        - probably how i'd feel--actually, how i felt, even at the age of 23-24!
-      - "I think UCLA made its reputation on its collection of god-like faculty from a generation ago. Baldessari, Chris Burden, Charles Ray.... quite a roster. It's turned over since then. No doubt high quality, but not the rock stars of yore. *One might say that such outsized art world figures can't even exist today in the same way given the proliferation and fracturing of scenes and subworlds.*"
-      - "*There are tons of public schools with MFA in less glamorous cities where you get a stipend and more or less the same education.* Think about what you need (space ? money ? network ? mentorship ?) and choose what fits you best based on that. For example, people like to trash at Yale, but they produced recently graduated artists who do cool work. I also have a friend at Northwestern University who got almost unlimited funding to produce his work during his degree. It's a priceless asset."
-
-*** NO ucsd
-  - *please shoot me*
-  - watchout for MAS degree programs, mostly self-supporting bullshit
-    - lots within bio-tech/data-science/etc.
-
-*** usc
-  - private
-    - *likely very tough to get a full merit scholarship.. especially for games..*
-**** cs
-    - #19 in the world
-    - *suprisingly better than ucsb..!?* this makes it #2 after ucb in Cali
-    - *more likely to have scholarships/better funding, then can take game design courses*
-      - *still.. very competitive..*, not worth competing for a so-so private uni..
-    - *TODO: worth checking what research they currently do..*
-**** game design (BS, MS)
-    - #1 in the US
-    - https://catalogue.usc.edu/preview_program.php?catoid=16&poid=24902
-    - 2 years
-    - joint between two departments: engineering and cinematic arts 'n digital media
-
-**** https://cinema.usc.edu/interactive/index.cfm
-    - *TODO: didn't look into these programs..*
-***** interactive media and games (MFA)
-  - the following two sound like they were created because of an industrial endowment.. :/
-***** "Master of Arts  (Cinematic Arts (Media Arts, Games and Health))"
-    - use tech for health, combined with other programs (social work, etc.)
-***** "Master of Fine Arts  (Master of Fine Arts, Interactive Media (Games and Health))"
-    - use tech for health
-
-*** ucsb
-   - #27 cs, along with uci
-     - though *the enginering department is considered the best after ucb..*
-   - LA (west/central) a scenic drive away..
-   - *media arts and technology (mat, MS and PhD!)*
-     - 2 years
-     - *seems very much programmy! :)*
-     - https://mat.ucsb.edu/degreePrograms/
-       - *starts with: electronic music/sound design, visual and spatial arts, multimedia engineering*
-         - very cool, similar to "creative technologies" (BA) at ucsc, or a more focused NYU:ITP
-       - https://catalog.ucsb.edu/programs/MSMAT
-       - https://www.mat.ucsb.edu/currentSchedule/
-         - *courses look like an interactive arts program, very input/output-oriented!*, "creative" tech
-           - starts with: art 'n tech, music 'n tech, digital media and engineering
-           - then: *media signal processing*, haptics, *computing with media data*, media and society, etc.
-             - *computing with media data is what i really want to focus on.. not so much the artsy stuff..*
-               - https://catalog.ucsb.edu/courses/MAT%20201B
-             - media signal processing
-               - *use numpy/etc. to proccess sensor signal data*
-             - computational systems for visual art and design
-               - "use creative programming languages and frameworks to create new interfaces for visual expression"
-             - audio programming
-               - use/create DSL/meta-programming to make audio programming langs!
-             - lots of audio/music-related stuff..
-           - *ends in an arts showcase*
-             - *student results suck*
-               - *seems to focus on creating a new digital media/art-form/pathway*
-   - art (MFA)
-     - associated with above
-   - film? (MFA?)
-     - not the best film program: very theoretical
-   - cs (MS)
-     - good categorization of courses:
-       - theory (aglorithms, logic, computation theory, etc.)
-       - systems (os, db, network),
-       - applications (simulation, graphics, advance topics: ai, cv, etc.)
-     - research labs
-       - *gamelab*
-         - *TODO: look into this..*
-       - https://cs.ucsb.edu/index.php/research/laboratories
-         - *human-ai experience (hax) lab*
-           - misha sra
-             - https://sites.cs.ucsb.edu/~sra/index.html
-             - MIT media lab phd
-         - *programming languages lab*
-           - ben hardekopf
-             - https://hardekbc.github.io/research/
-               - very good summary of history of research
-               - designed hardware (ISA) to be verifiable / secure with archlab
-       - the rest are very computer sciency, foundational stuff, most focus on networks
-
-   - interesting grad programs:
-     - *global studies*
-     - chicana/o studies
-     - *feminist studies*
-     - environmental science and management
-     - environmental data
-
-
-*** ucd
-  - *overall feels very STEM, quantitative..*
-    - (from looking at the grad programs..)
-      except the design department! surprisingly not STEM at all!
-  - mostly standard STEM degrees (bio-eng, chem-eng, cs, etc.)
-    - cs (MS, PhD)
-      - looks like pretty standard stuff
-      - *TODO: check the research labs/areas*
-  - NO [some undergrad program]
-    - department of cinema and digital media
-      - seems to only have two professors (Boluk and LeMieux) that teach gaming courses
-      - seems good for someone interested in film studies (theory), film-making (production!), and game-design
-        - my interests, when i was young!!
-      - seems to be new and not well put together.. just a bunch of courses thrown together..
-  - *NO design (MFA)*
-    - https://www.ucdavis.edu/graduate-programs/design
-      - https://catalog.ucdavis.edu/departments-programs-degrees/design/design-mfa/?_gl=1*1fb06hf*_ga*MTEwMzQzNDA0My4xNzU2NDM5MjU5*_ga_2N9JP0W2PC*czE3NTc5NzI3NTkkbzckZzEkdDE3NTc5NzI5MzkkajYwJGwwJGgw
-      - https://programs.gs.ucdavis.edu/api/doc/2913
-    - looks more artsy
-    - 2 years :/
-    - "to work with faculty in the Department of Design *and across departments* in one of the nation’s top public research universities."
-    - "encourages interdisciplinary approaches through research and practice aligning with social and environmental responsibility."
-    - has "interactive design" and "product design" as a "key area" of focus
-      - "Design faculty expertise includes design theory, exhibition, fashion, history, information, interactivity, interior architecture, immersion, lighting, product, textiles, time-based, visual communication, wearables, and more."
-        - reminds me programs 10 years ago.. D&T, ITP
-    - https://arts.ucdavis.edu/pod/research-labs
-      - not so impressive.. :/
-    - https://arts.ucdavis.edu/interactive-design
-      - cool mix of classes from four departments! (design, art, engineering, psychology)
-      - *Katia Vega*
-        - the only one with a cs degree (phd)
-          - *leads the interactive organisms lab*
-      - x/Glenda Drew
-        - nope, art academia, though made a film
-      - x/Jiayi Young
-        - nope, art academia
-    - akshita shivkumar
-      - space/politics/architecture interests
-        - Collective for Socio-spatial and Environmental Praxis (CSEP)
-          - sounds quite lofty..
-      - does works in India a lot
-        - her studio seems completely divorced of India though.. :/
-    - product design
-      - x/Beth
-        - "ecological" circular futures lab
-          - various ehibitions
-          - makerspace contributions
-          - mobile charging area
-        - lame..
-      - x/Thomas Maiorana
-        - more civic
-        - "his research explores the ways which low-resolution prototypes can be used in service of systemic change."
-          - actually, not a bad idea..
-          - tabletop games for learning serious things.. like wildfire safety
-        - designed the design center at the claremont colleges?
-    - interior architecture
-      - an emphasis in Spatial Design to tackle spatial issues in society via Design. The main objective of the program is preparing students to *actively improve experiences of everyday life as it relates to the built environment across scales.*
-    - history and theory of design
-      - "conduct historical research...express their research in multi-media formats"
-    - other faculty have degrees in art history, architecture, design, etc.
-
-  - computational social science (DE for PhD)
-    - use ai/llm to anaylze human behavior, etc.
-      - not interested!
-        also just quite specific.. i guess that's why it's a DE.. (designated emphasis)
-
-  - human development (PhD)
-    - very quantiative..
-  - *native american studies*
-  - *environmental horticulture and forestry*
-
-
-*** ucsc
-   - NOTE: BEWARE: some majors may be on silicon valley extension campus..!?!? :/
-     - TODO: just HCI..? or more in computational media..?
-   - #5 in game design (2024)
-     - #5 undergrad computer science: game design (cs:gd, 2023)
-       - same as CS program, but with senior design production
-         - sounds awesome!!
-     - #9 undergrad design (2022)
-       - *TODO: what design program??*
-
-  - *seems to have a ton of options for games, creative tech, arts, and likely can take electives, or audit as one wishes*
-
-   - engineering department:
-   - *computational media (MS and PhD)*
-     - http://catalog.ucsc.edu/en/current/general-catalog/academic-units/baskin-engineering/computational-media/computational-media-ms
-       - *GREAT curriculum!!*
-       - *possible to complete in one year to 5 quarters!!*
-     - seems much broader.. at the cost of art..
-       - *just have to make more art friends..!*
-         - no problem!! :)
-       - *in the engineering department*
-     - *"Impactful: We create media, experiences and ways of understanding that have an impact in the world we live in."*
-       - *yep, this is the right place!*
-     - https://engineering.ucsc.edu/departments/computational-media/research/
-       - *alt games lab*
-       - *tech4good*
-       - *social emotional tech*
-       - etc
-         - *FUCK YEAH!*
-     - *it seems a lot more social-impact-oriented than ucsb's MAT*
-       - *this may just come with ucsc being more progressive/political/critical..*
-     -> computational media PhD
-       - this is a good sign..
-       - 4 years with MS in a technical CM degree (games or CM, for example), 5 years without
-         - thus, better to do one of the CM MS degrees first..
-         - anyway, 5 years is crazy!! no thanks.
-           - *5 years in santa cruz is wayyyyy too much of a commitment*
-             - *i could only do 5 years in a place i love (Taiwan)*
-           - *but.. it is a path.. in case i want to open my own department in hawaii or taiwan..*
-   - cs:gd (BS)
-     - https://www.reddit.com/r/UCSC/comments/8r70c8/to_anyone_going_into_the_game_design_programs_bs/
-       - got a lot of flack many years ago.. for not even teaching an engine, or C++, leaving people to make games with.. javascript??
-   - *games and playable media (MS)*
-     - *suspended for 2025-26*
-     - https://catalog.ucsc.edu/en/current/general-catalog/academic-units/baskin-engineering/computational-media/games-and-playable-media-ms
-       - very studio-oriented, only 3-4 electives beyond that (nearly 1 per quarter)
-         - TODO: is it possible to work alone on a few projects..??
-       - *5 quarters*, for both technical and non-technial paths
-       - sounds like a fun time to focus on straight up makng games..
-         - *but, unfortunately, isolated from my land, people, 'n culture.. which would be strange..*
-
-    - *NOPE: silicon valley campus :(*
-       - santa clara
-     - NO HCI (MS)
-       - *lots of women!*
-       - aimed towards professionals (hence it's location)
-
-   - arts department:
-   - art and design: games and playable media (BA)
-       - https://www.reddit.com/r/UCSC/comments/8r70c8/to_anyone_going_into_the_game_design_programs_bs/
-         - BA used to suck 7 years ago..
-       - make games in javascript, no unity or unreal, etc.
-     - in a particular arts department: performance, play, and design
-       - mostly courses on: traditional 2d, 3d, performance (dance, etc.), music, one photography course, one film course
-         - *art techniques, not computer-oriented..*
-     - *courses: games as art, game as activism, play as radical endevour, designing experiences, aesthetic designs*
-       - *maybe can audit..?*
-     - lots of critical theory
-     - recently divorced from CS:GS..?
-       - *no need for CS courses*
-         - i personally want more tech courses
-   - creative technologies (BA)
-     - looks cool, maker-space stuff are required: *creative coding, sensors/signals/interaction, fabrication, etc.*
-       - *maybe can audit..?*
-     - plus all the courses in the arts department (foundational arts, film, theatre, visual arts, etc.)
-     - this would've been awesome when i was young!!
-       - *it gives the creative skills, leaving the making up to you!*
-   - digital arts and new media (DANM, MFA)
-     - *TODO: i didn't see this one..*
-   - *social documentation (MFA)*
-     - two years
-     - *possibly a film program that fits me the most!*
-       - also great to have rad/anarchist/ecological students around!
-   - NO film and digital media (PhD)
-     - more of a media studies program.. :/
-
-
-
-
-
-*** uci
-  - game design and interactive media (BS)
-  - cs (MS)
-    - *the only useful, state-aided, well-funded program*
-  - some digital/interactive art? (MFA)
-    - *3 years*
-      - hell no, not in OC!!
-  - NO hci (MS)
-    - *NOT state-aided: self-supported degree program*
-    - "This is a professional degree that prepares students to be the leaders of the future in human-computer interaction, user experience design and research, product management, and more. This degree should be undertaken by early and mid-career professionals and executives looking to take the next step in their careers. For additional information about this degree program, please see: https://mhcid.ics.uci.edu/"
-    - *seems pretty elementary.. case studies, etc.*
-  - *computational science (PhD)* (note: not computational *media*)
-    - https://catalogue.uci.edu/interdisciplinarystudies/computationalscience_phd/#requirementstext
-    - "https://computationalscience.uci.edu/"
-    - "A joint offering with San Diego State University (SDSU), the Ph.D. program in Computational Science trains professionals capable of developing novel computational approaches to solve complex problems in both fundamental sciences and applied sciences and engineering. A program of study combining applied mathematics, computing, and a solid training in basic science culminates in doctoral research focused on an unsolved scientific problem."
-        - "..Compare, critically evaluate and choose from existing computational approaches or models, or develop new computational approaches or models for solving problems in physical, biological or engineering systems..."
-    - *5 years*
-      - *could never spend that much time in orange county, nor san diego.. :/*
-      - *i would die without art output, humanities, social work, ecological work, etc.*
-    - joint program with SDSU
-      - 18 credits at SDSU, 24 at UCI
-    - summer seminars required
-    - *"The Ph.D. in Computational Science produces broadly educated, research-capable scientists that are well prepared for diverse careers in academia, industry, business, and government research laboratories."*
-    - core courses: scientific computing, math/choas!?, computational PDE (partial differential equations)
-    - *most of the courses seem incredibly practical for research programming*
-      - bio(-info), chem, mech, quantum, data, signal processing
-        - *basically covers all of the hard sciences, but solely focusing on the computational work!*
-  - NO software engineering (MS)
-    - *NOT state-aided: self-supported degree program*
-    - heavily research-oriented
-      - three quarters of individual study/thesis supervision courses :/
-        - *not sure what i'd do here.. as it's not product-oriented, rather software-oriented..*
-    - completely open curriculum
-      - electives on data, networking, ui, engineering
-    - *aimed for people that seek to develop understanding of techniques to create dependable large-scale software*
-      - *seems good for software dev practice..*
-  - embedded and cyber-physical systems (MS)
-    - "systems-of-systems that tightly couple their cyber and physical components"
-      - hmmm, pretty damn important.. instead of relying on creative embedded frameworks like arduino..?
-  - NO cs (MS)
-    - *NOT state-aided: self-supported degree program*
-      - wtf.. maybe an online one??
-
-
-
-
-
-*** sdsu?
-  - not sure how their computer department is..
-    - must not be that bad because:
-  - *computational science (PhD)*
-    - joint program with uci
-
-
-*** NO sjsu
-  - great silicon valley connections
-  - might be tough car-camping.. (downtown san jose)
-    - *i don't think i could survive the suburbs again..*
-  - https://cadre.sjsu.edu/programs.html
-    - BFA and MFA
-      - *probably the cheapest without funding..*
-    - *2.5 to 3 years.. :/*
-      - hell naw!
-
-
-
-
-
-* NO top game programs
-
-  - *not interested at the moment, unless it's in Taiwan, or a culture i care about.. ;(*
-
-  - https://www.kmjn.org/game-rankings/
-    - uni rankings based on papers on tech of games
-
-  - *NOTE: many (private??) schools give out free tuition for grad students, regardless if it's out-of-state or not*
-    *in-state-tuition requires living in the state for at least a year prior*
-
-usc
-  - #1 in game design undergrad
-    - there's something to be said about this..
-      - *i think public academia and art just don't go together..*
-
-(cmu, pittsburg)
-  - private
-    - *tuition-free* (including out-of-state and international!!)
-      - must be very, very competitive..
-      - *can try... if for grad school..*
-  - entertainment, technology, culture/computation? (ETC)
-    - *TODO: is this tuition-free too??*
-  - *incredible program, as proved by their incredibly-talented graduates*, though a bit too nerdy for my tastes..
-  - pittsburgh is one of the few cheaper cities/college-towns
-
-(nyu)
-  - private
-  - game design
-  - ITP
-  - great director/leadership (Frank Lantz)
-
-(gt)
-  - TODO: hmmm, maybe worth trying..
-    - not sure about out-of-state..
-      - otherwise, just try working there..
-
-(smu guildhall, texas)
-  - private? christian??
-  - *TODO: where and WHAT is this??*
-
-(northeastern)
-  - private, boston
-    - nahhhh, too cold!!
-      - but walkable..!
-
-(utah)
-  - salt lake city!
-
-(kentucky?)
-
-(u of central florida?)
-  - wtf?
-
-
-
-
-
-
-* NO tech design / hci
+* NO hci
 ** hci?
+
+https://www.reddit.com/r/UXDesign/wiki/degree-programs/
+  - all hci programs
+  - hci seems a bit boring..
+    - *basically ui/ux design, get user feedback, prototype... it's basically game-testing, but without the actual making part*
+      - i'd much rather learn the technical parts at school, to make the product.. or prefer a more broad design program
+
+
+
+
 https://www.reddit.com/r/hci/comments/1bebo0h/hci_program_rankings/
   - *"Any comment on how most of the 1 year HCI programs are now glorified, 80k dollar bootcamps with no financial aid specifically designed to draw in foreign students who will pay top dollar to attend?"*
 
@@ -904,7 +979,8 @@ https://www.reddit.com/r/ApplyingToCollege/comments/z37nzx/degrees_similar_to_co
 - not sure if i could survive the 'seattle freeze'
 **** A: ucb, umich (sva, cca, art center, parson's)
 ***** (ucb)
-  - *ucb: TODO: maybe just an emphasis of the CS MS? i didn't see this..*
+  - just an emphasis of the CS MS
+    - which is extremely competitive, against the entire world
 ***** umich
   - *TODO: check it out!*
   - cold, but top 3 public uni, and a much-loved uni and campus too
@@ -986,7 +1062,6 @@ https://docs.google.com/spreadsheets/d/1qWCmafgtAJ7376ojOBZhznks0vhn_gjdDiRhCIgz
   - clemson uni, clemson, south carolina
   - georgia state, +$500 monthly stipend
   - jmu??
-  - michigan state (is this not Umich?)
   - northwestern uni
     - $32k stipend??
   - prat?
