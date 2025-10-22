@@ -1,22 +1,46 @@
 
 
 * TODO lists:
+see goals in [uni-job-search]
+
 ** TODO ASAP
+- change oil / maintenance
+- see doctor for left arm/shoulder-blade?
+- change CA address back to 1520 harmon st..??
+  - TODO: ask sam for an address..
 - phone
   - check status through website
 - passport
-  - look for it
-  - ship to samesun hostel
+  - renew it..?? shit..
 - wells fargo debit card
 - charles schwab
   - password
   - transfer money
 
+** TODO move
+- *to santa barbara / coast*
+  - survive the winter
+    - do any job there!
+      - *able hang out at the cs/engineering department?*
+      - *or just some cs/engineering students?*
+    - setup a mobile home
 
 ** TODO job search
-- otta.com seems really good.. stick to that!
+- UPDATE: *FORGET about university jobs, switch to private jobs*
+  - unis are too slow, too bureaucratic, too fake, like governments
+  - *AIM FOR SUPPORT ENGINEER AT SMALL STARTUPS*
+    -> then slowly learn and do everything as needed
+  - and use whatever tech they use!
+    - see [tools...]
+    - *web startups: ruby/rails, elixir/phoenix, js/react, js/node*
+    - *ai/ml startups: python*
+      - *MASTER THESE*
+  -> *make a few friends here, and stick to them for work, create a team*
+    - *FIND SAM!!*
+      - *only he could mentor me through the mess of contemporary tech..*
+- *otta.com seems really good.. stick to that!*
   - can fallback to the other one..
-
+- try discord and twitch again (game social tools)
 
 ** TODO programming
 1. setup ai with emacs
@@ -25,7 +49,7 @@
     -> github co-pilot agent!! 5/2025
 2. continue making web apps with it
    - make all the small ones
-     - sinatra -> roda -> rails
+     - sinatra? -> roda -> rails
      - boring, but should be simple, and force me to learn how the web works, especially contemporary web
 2. continue making small games/prototypes with dragonruby (and/or haxe, jai)
    - this would be the simplest thing to do to get back into programming, especially core systems programming
@@ -33,49 +57,210 @@
      - it would also force me to learn ruby inside out
      - the main problem is that a bit of dragonruby is closed source, but it sounds like the portion most useful to game makers is public..
 
-
 ** TODO resume
 - get another domain
-  - update server addresses __contact.org github pages
+  - update server addresses on github pages
 - update resume on jobs i applied to
-  - meh..?
-    - just update resume
-      - TODO: rewrite the babycastles portion
-        - fix the noisebridge part / sub-title part
-        - add videos
-      - add a photo?
-      - pass it through some automated resume checker thing (to see how well it parses)
+  - TODO: can only update on stanford's system
+- just update resume
+  - pass it through some automated resume checker thing (to see how well it parses)
+  - rewrite the babycastles portion
+    - add videos
+  - add a photo?
 
-** TODO
+** TODO todo
 - see TODOs, try using org-mode agenda, lol
 
 
+* TEMP restaurants 'n tea shops to work at
+
+** NO long beach
+  - UPDATE: decided against living in long beach :/
+  - TODO: delete all of this..??
+northern cafe
+  - chinese, northern chinese..?
+    - soup dumplings, noodle soups, not cantonese
+  - sent e-mail
+
+pad thai classic
+  - sent message via instagram
+
+charm siam
+  - thai
+  - sent message via instagram
+
+great tiger ramen
+  - retro ramen shop, relatively new, or newly renovated
+  - sent message via instagram
+
+kin long beach
+  - thai, trendy
+  - sent message via instagram
+
+pickle banh mi
+  - 4.8 stars on yelp
+  - also has fried rice, spring/egg rolls, etc.
+
+rakkan ramen
+  - chain ramen
+    - the founder/ceo is actually a dope traveller!
+  - applied via web-site, which says they're hiring..!
+
+** NO a bit further..
+  - nahhhhh.. OC is tooooooo boring!
+vinh loi tofu
+  - artesia/cerritos
+  - maybe possible to commute from long beach..??
+  - sent e-mail
+
+** ideal taiwanese shops to work at:
+
+*** vegetarian/vegan:
+sweet veggie
+  - a few locations around SGV
+  - instagram
+    - sent message via instagram
+  - yelp
+    - also sent message.. whoops!
+garden fresh vegan
+  - SGV / hacienda heights
+  - instagram
+    - sent message via instagram
 
 
-* some jobs i applied to:
-** otta
-*** late october, november
+
+
+
+
+* $$$ tools and their main uses in the working world
+
+  - *FOCUS ON THESE!!*
+
+  - hmmm, yeah.. *i'd much rather stick to ruby/rails and elixir/phoenix for web, in addition to python for data sci.. that should cover enough of the startup world..*
+    - leave the java and C# stuff for the big business apps: *stay nimble 'n scrappy!*
+    - forget about low-level/systems dev for now too
+      - can always do C/C++/jai when it comes
+    - fuck mobile
+
+  - because my aim is to continue to make stuff, mostly on my own, these skills seem to overlap well with the skills needed for founding engineer jobs within early startups!
+
+  - *master CRUD web apps and data-sci*
+    -> *more complex web-gui* (react and live-view)
+
+** main tools
+  1. linux
+     - *nearly all servers*
+       - microsoft is the exception
+       - TODO: ask about most popular distros for server use
+         - rocky? debian? opensuse?
+     - *systems admin tools*
+       - distributed computing
+       - config management
+       - networking
+       - task schedulers
+     - *devops tools*
+       - server orchestration/deployment
+       - containerization
+       - ci/cd
+
+  2. *python*
+     - data science (ai/ml/big data/computation)
+       - *ai/ml startups (pytorch, etc.)*
+       - *academic research (numpy, jupytr notebooks, etc.)*
+     - ansible (orchestration?)
+     - *simple enough to rememeber the whole langauge*
+
+  3. *ruby*
+     - *web startups (rails)*
+       - it seems there still aren't many phoenix/elixir jobs.. (2025)
+       - *and ruby still seems to be thriving..!*
+         - there's a TON of sites made in ruby..
+           - *could even work multiple jobs!!*
+     - *niche enough to have a smaller/tighter-knit community of devs/makers*, especially among startups
+     -> dragonruby
+
+  4. *elixir*
+     - *web startups alt (phoenix)*
+       - very few..
+       - *still can use personally, as it's still web dev experience..*, especially tailwindcss, postgresql, etc.
+     - try/understand functional paradigm
+
+  5. *javascript*
+     - web
+       - *react*
+         - all contemporary web rely on this, or try to get around it (htmx, elm?, phoenix liveview, razor components?, etc.)
+       - thankfully replaces mobile dev tools
+
+  6. *c* > *jai* > *c++*
+     - high performance bits / optimization
+       - *via C/C++? extensions for python and ruby*
+     - embedded devices
+       - not my jam
+     -> *jon blow's engine*
+     -> *game optimization*
+
+** no personal use / for a solo-maker
+  OKAY (haxe? == nim >= ocaml >>>) go
+     - high performance bits / optimization (via concurrency)
+       - but without resorting to manual-memory management nor borrow-checker
+       - not sure if haxe has concurrency nor build tools as good as go's though..
+     - nothing to really learn here.. just concurrency..??
+       - and the zen of procedural programming
+     - *better off sticking to haxe..*
+     -> (*no personal use cases* for go)
+
+  NO rust
+     - high performance, memory-safe bits
+     - *too much to learn*, given that i already have the above languages and frameworks to master..
+       - leave this to the systems devs
+     - (great lang and maintainer tho..)
+     -> (*no personal use cases*)
+
+  OKAY clr (c#, f#)
+    - large organizations: businesses, corporations, ngo
+    - web (asp.net/core: entity, razor, blazor?)
+    - *feels walled off to microsoft's land/way (gui tools, etc.), as opposed to the more scrappy open-source/linux way*
+    -> *unity*, fna/monogame
+      - *unity does have the best platform support / porting tho..*
+    -> (*no personal use cases*)
+
+  NO jvm (clojure, scala, kotlin, java, haxe! :D)
+    - very large organizations: businesses, military, research, gov, etc.
+    - web (spring boot??)
+    - *mobile (android)*
+      - this is one great benefit of using the jvm world..
+    - surely solid, but *not a fun langauge, with the exception of clojure and possibly scala*
+      - TODO: is scala mainly functional-oriented?
+    -> (*no personal use cases*)
+
+  NO swift and obj-c
+    - HELL NO
+
+
+* some jobs i applied to
+** from otta
+*** late september, early october
 TODO: get a list of jobs applied to?
   - or use otta.com to keep the list?
     - can it be exported/saved?
 
 TODO: check my job filter preferences
 
-** hacker news jobs:
+** from hacker news jobs:
 *** april
 - fathom
   - requires a live interview
 - livekit
   - developer success engineer
 *** end of march
-duckduckgo
+- duckduckgo
   - technical sourcer(er)
   - applied but no cover letter
 *** early march
 - spellbrush
     - tactics rpg games!
       - applied with a short e-mail
-**** applied but no cover letter necessary:
+*** applied but no cover letter necessary:
 - creyos
 - *reverb/etsy*
   - a musical instrument marketplace
@@ -83,6 +268,7 @@ duckduckgo
   - a table-top game and fantasy crowd-funding platform
   - customer success associate
     - forgot to save it
+
 ** from linked in:
 - perplexity ai
   - web search focused ai/llm
@@ -106,9 +292,324 @@ duckduckgo
 
 
 
+* job sites list
+
+- in general, *AIM FOR EARLY STARTUPS/PURSUITS WITH FRIENDS*
+    - just *more personal*, intimate, and *more flexibility in work: do anything needed*
+
+** through friends
+
+** direct
+
+** startups
+    - just *live in SF*
+      - *nahhh... no sense of home ;( gotta try to make LA/SGV/LB my home.. build from the heart*
+        - nope, fuck america!
+    - *ycombinator*
+      - the OG
+      - *hnhiring*
+        - extracts from hacker news whoishiring
+        - *this is a really good source..*
+      - has a jobs page
+        - TODO: try this now
+      - has a new job matching app
+        - TODO: finish profile
+      - co-founder..? meh :/
+    - *remoteok*
+      - must be super competitive..
+    - wellfound (angellist)
+      - looks legit, it's just that.. the startups seems so boring.. :/
 
 
-* other products made with ruby on rails:
+** niche programming language related sites/discord/matrix/etc.
+  - ruby/elixir jobs
+    - *https://usingrails.com/*
+      - nice!!
+      - *incredible amount of rails jobs.. wow..!*
+        - *ruby is _NOT_ dead*
+    - *rubyonremote.com*
+      - https://rubyonremote.com/remote-jobs-in-us/
+        - look for junior positions
+          - filter may not be so good..
+    - https://elixirjobs.net/
+      - very very few listed, and all except the first page is outdated, though, a good source to see which companies use it..
+      - TODO: just make a few sites with phoenix/elixir, then can apply to these!! :D
+      - relabs
+        - a design studio job!!
+
+
+
+** general sites
+  - otta.com
+    - seems very good so far..
+    - recommends you jobs based on a few preferences/filters
+      - go through ~10 per session
+      - directly apply to the site
+      - generates info about the company
+  - levels.fyi
+    - TODO: try some more..
+    - seems to aggregate from the same boring big company sources, nothing deep
+    - but does provide a very good filter system, possibly easy to scrape..
+  - linkedin
+    - sounds like the most useful nowadays..
+      - seems like the aggregators catch these... nothing special..??
+    - clicking apply doesn't mean you apply through linked it, it usually just goes to the company's website's software
+    - it found and re-activated my old account..?
+      - TODO: finish profile..
+        - no need to even fill out a profile, for most jobs, you must apply through their own website
+    - craigslist
+      - only the true gangstas use this
+    - indeed
+      - meh, though people do say it works..??
+
+  - game studios
+    - *workwithindies*
+      - TODO: keep an eye out for ui/ux design
+    - gamejobs.co
+      - lots of big companies.. :/
+
+  - design studios/agencies
+    - TODO: ??
+
+
+* job titles
+
+path: support engineer (+ customer support) -> support dev + tools dev + dev-ops + sys-admin + design/ui/ux (*everything*)
+  - *in a small startup, you eventually just do everything*
+
+    - just *START AS A SUPPORT ENGINEER FOR A SMALL STARTUP, and slowly creep into doing everything else, as needed*
+
+** designer
+  - *game ui/ux designer*
+    - sounds even more satisfying than even design studio work, as i could really spend time honing, perfecting ui/ux design/controls
+    - *probably the most fitting job for my nature*
+      - very niche too..
+      - i don't understand how jblow mastered this AND programming!
+
+  - product designer (+ ui/ux) for a design studio
+    - *corporate contracts may get tangled with dirty ethics..*
+
+  - product designer (+ ui/ux) for a web/mobile app
+    - *way too fucking lame*
+    - might get fed up with evil/money-oriented/quantitative management..
+
+** NO manager
+  - product manager
+    - lots of managing..
+      - i'm not a manager..
+        - *don't need a manager, just need a skilled maker that can guide a team*
+          - sam is great at this..
+          - *by the time this position exists, the company is too big*
+            - *need small startup teams with flat hierarchies*, no more
+
+** dev
+  - [see tools]
+    - basically: web, data-sci, systems/embedded, mobile
+      - i think i'd only be able to tolerate *web (server) and data-sci*
+        - also, *as a solo maker, those should be my only focuses*, mobile and systems/embedded are for specific cases
+
+*** research
+  - *research software engineer*
+    - (at research universities)
+    - write software to enable researchers to further their research
+      - *mostly python* data-science stuff, and some R
+        - have a ton of data to store, manipulate, etc.
+    - assist non-programming researchers on their research projects
+      - *can be several projects, short-term, varying*
+    - *teach everyone the ways of programming*
+      - this is a good skill to have, and fun!: teaching
+    - *benefits of being at a research university..*
+
+  - visualization engineer? (for data-sci)
+    - seems quite rare..
+    - sounds closest to game programming in the big-org tech world.. but maybe not so fun after all.. as it's still just data-sci
+
+** support
+  - support engineer/dev:
+    - *support engineer*
+      - *sounds like an ideal job for me, especially for starting*: less responsiblity, easily replaceable, quite generalist, usually starts from bugs/"traige", works from outside-in, from design (talking to customers) to programming (software problems, design problems), don't have to deeply care about the product so much (like a product designer/manager)
+    - *dev-ops?*
+      - seems to be a specific set of systems dev skills for deploying web apps..:
+        - in order:
+        - build/make
+        - continuous integration/delivery (github actions/ci, gitlab)
+        - containerization (docker, etc.)
+        - server orchestration (kubernetes, etc.)
+    - *tools engineer*
+      - make in-house tools for devs (and the rest of the company?)
+        - *a solo maker job!!*
+      - this sounds quite *autonomous*, and awesome!
+
+  - customer support:
+    - *dev customer service*
+      - (for products that are for developers)
+    - technical customer service
+    - technical customer success
+    - solutions engineer
+      - set-up and tailor product for each client/customer
+    - sales engagement?
+      - more social
+
+** sys-admin
+  - *systems/server admin(istrator)*
+    - *among the most generalist-skilled jobs*
+      - tons of superficial knowledge/experience
+        - *linux-lovers have me beat here..*
+    - linux
+      - file systems
+      - set-up for multiple users
+    - networking
+    - distributed computing (on prem, cloud, hpc)
+      - on prem: vmware, etc.
+      - cloud: aws, gcp, etc.
+      - hpc: slurm
+    - config management (ansible, etc.)
+    - windows: active directory and azure
+    - [see devops]
+
+
+  - *IT?*
+    - seems to be a pop term for systems admins..?
+
+
+* ycombinator startup funding
+  - very easy to apply!
+    - just send an idea, even if it's the "late deadline"i
+      - DONE
+        - ..DAMN!
+    - seems to prefer having a co-founder.. :/
+      - maybe can ask Sam
+        - yeah, he would be perfect!! and he lives in SF!
+
+
+
+* remote jobs
+  - remote companies
+    - wikimedia (wikipedia)
+      - *todo: software engineer for the content transform team*
+      - movement communications specialist, product and tech
+    - duolingo
+    - gitlab
+      - see entry under ruby contributors
+      - support engineer (worldwide/remote)
+      - TODO: others jobs??
+
+
+* NO schools
+  - *both universities and schools mostly use outdated enterprise software, which doesn't look fun maintaining..*
+    - drupal (a php cms)
+      - this allows departments, research labs, research centers, etc. to build their own sites, yet be managed by a centralized IT unit
+    - departments that need a computer person can be fulfilling, as one can be in control of all the software for that department (sys-admin), choosing what one likes, integrating stuff (n8n), making one's own, and also *the social aspect of getting to know everyone*
+      - actually, wanting to be a part of the department/organization should be the main reason to be there: *choose a department you want to be in* (i.e. *UCSC engineering*, *USC game/film*, NYU game/itp, parson's design 'n tech, etc.)
+        - see [master's schools]
+    - notes on learning management software (LMS)
+      - *canvas uses ruby*
+      - moodle uses php
+    - *main problem is that you have to live near the campus, pay those costs, be near transient people*
+      - however, *it could feel like a youth hostel, filled with people with good intentions..*
+      - *rarely ever has remote work, even for IT/tech jobs*
+    
+** lower ed
+  - 1. edjoin.org
+    - *less competitive than university jobs*
+    - *possibly same pay but in a lower cost-of-living area*
+    - *likely more freedom, power, responsibility*
+    - could be a cushy job..
+
+  - schooljobs/govermentjobs.com
+    - may have to apply through here
+
+  - district job boards
+
+** NO higher ed
+    - see [uni job search]
+
+    - must apply directly
+      - and the process can be a pain, requiring to add work history, etc.
+
+    - less competitive than FAANG and many private jobs
+      - still likely has many goodie asians applying..
+    - *very slow application process ;(*
+    - *very bureacratic*
+      - *especially public/gov-funded ones*
+        - *all built around STEM funding*
+    - *can take some classes: EMT, languages, tech, bootcamps, etc.*
+      - MAYBE, if they somehow make time for it..
+    - *can participate in research / labs* during off-time, at least..
+      - can build a network in specific interests
+        - *but probably very slow and far behind private startups..*
+          - *STARTUPS ARE GRASSROOTED BUSINESSES!*
+            - *STICK TO THE CITIES*
+              - *SF then Hawaii or Taiwan or NYC*
+    - can collaborate with broad interests (during off-time)
+
+
+
+* ruby contributors
+  - *ruby is certainly not dead.. wow!*
+  - https://spreecommerce.org/ruby-on-rails-most-popular-among-top-y-combinator-companies/
+
+  - the dot com era startups:
+    - shopify
+      - *ruby (core language, yjit, core gems)*, rails, lots of other non-core gems
+        - they ensure everything is optimized (interned strings, etc.) because it costs them server $$
+    - stripe
+      - rails, gems, don't like sorbet so much.. :/
+    - checkr
+      - background checker
+      - applied
+        - fail
+      
+    - *github*
+      - lots: trilogy db adapter, language highlighting / parsers, etc.
+    - *gitlab*
+    - *dropbox!!*
+      - TODO: check for jobs!!
+
+    - *twitch!!*
+      - source leaked recently
+        - https://www.reddit.com/r/rails/comments/q44pv3/has_anyone_done_any_digging_around_twitchs_rails/
+        - rails + go services
+
+    - *mastadon*
+      - an open-source project, with sponsorship finance strategy
+
+    - etsy?
+      - reverb
+    - *airbnb*
+    - *doordash*
+      - *postmates*
+      - *instacart*
+      - *uber? uber eats?*
+      - food panda?
+
+    - coinbase
+    - zendesk
+
+    - basecamp/37signals
+
+  - newer
+    - cruise (ai car)
+
+    - gusto
+    - poshmark
+    - drizly
+      - bought out by uber eats
+
+    - gingko
+    - flexport
+
+    - block
+      - founder of twitter, cash app, afterpay, tidal, etc.
+      - goose
+        - a software dev agent
+
+
+
+* other products made with ruby on rails
+  - *better yet, i could probably make products better than any of these on my own..*
+    - *then just build a team in Taiwan!*
+
   - bigcartel
     - make an online store, tailored for artists
   - bigthink
@@ -220,16 +721,19 @@ duckduckgo
 
   - *worldpackers*
     - didn't find a careers page
-    - TODO: *should make a free work-exchange site (workaway, helpx), hostel booking site (hostelbookers), and a hostel volunteer site (worldpackers)*
+    - TODO: *should make a free work-exchange site (workaway, helpx, woof), hostel booking site (hostelbookers), hostel volunteer site (worldpackers), and house-sharing site (couchsurfing)*
+      - this is also my jam..
   - watsi
     - fund healthcare for people in need around the world
     - no careers site, just an old job posted on their blog
       - i still sent a short e-mail
   - *weedmaps*
     - !!!
-    - this is a great example of a store i could easily maintain..
+    - *this is a great example of a store i could easily maintain..*
     - just sent a short e-mail
-    - TODO: *should make the best weed strain site, alcohol site, cooking site*
+    - TODO: *should make the best weed strain site, alcohol site, cooking site..*
+      - man, i could kill at this..
+        - all in functional elixir/phoenix too!!
 
 
 
@@ -242,403 +746,11 @@ duckduckgo
 
 
 
-* restaurants 'n tea shops to work at
-
-** NO long beach
-  - UPDATE: decided against living in long beach :/
-northern cafe
-  - chinese, northern chinese..?
-    - soup dumplings, noodle soups, not cantonese
-  - sent e-mail
-
-pad thai classic
-  - sent message via instagram
-
-charm siam
-  - thai
-  - sent message via instagram
-
-great tiger ramen
-  - retro ramen shop, relatively new, or newly renovated
-  - sent message via instagram
-
-kin long beach
-  - thai, trendy
-  - sent message via instagram
-
-pickle banh mi
-  - 4.8 stars on yelp
-  - also has fried rice, spring/egg rolls, etc.
-
-mian(taste)
-  - chain sichuan
-  - sent message via instagram
-
-rakkan ramen
-  - chain ramen
-    - the founder/ceo is actually a dope traveller!
-  - applied via web-site, which says they're hiring..!
-
-** NO a bit further..
-  - nahhhhh.. OC is tooooooo boring!
-vinh loi tofu
-  - artesia/cerritos
-  - maybe possible to commute from long beach..??
-  - sent e-mail
-
-** ideal taiwanese shops to work at:
-
-*** vegetarian/vegan:
-sweet veggie
-  - a few locations around SGV
-  - instagram
-    - sent message via instagram
-  - yelp
-    - also sent message.. whoops!
-garden fresh vegan
-  - SGV / hacienda heights
-  - instagram
-    - sent message via instagram
-
-
-
-
-* job titles:
-  - in general, aim for *early startups/pursuits with friends*
-
-
-  - *game ui/ux designer*
-    - sounds even more satisfying than even design studio work, as i could really spend time honing, perfecting ui/ux design/controls
-    - *probably the most fitting job for my nature*
-      - very niche too..
-      - i don't understand how jblow mastered this AND programming!
-
-  - *product designer*
-    - might get fed up with bad, money-oriented/quantitative management..
-
-  - *product manager*
-
-  - others:
-
-  - research software engineer
-    - at universities
-    - write software to enable researchers to further their research
-    - assist on non-programming researchers on their research projects
-      - *can be several projects, short-term, varying*
-    - teach everyone the ways of programming
-
-  - visualization?
-    - sounds closest to game programming in the corporate tech world.. but maybe not so fun after all..
-    - requires a lot of SQL :/
-
-  - technical customer service
-  - technical customer success
-  - solutions engineer
-  - sales engagement?
-    - more social
-
-  - systems/server admin(istrator)?
-  - IT?
-  - devops?
-    - more unix, generalist, terminals (emacs?)!
-
-** jobs to practice the craft of programming:
-- *plenty of these are founding engineer jobs within early startups*
-- web product startup jobs using the following tech:
-  - *phoenix/elixir*
-    - built-in gradual typing coming soon!
-    - live-view-native in dev!
-  - *rails*
-    - it seems there still aren't many phoenix/elixir jobs.. (2025)
-      - *and ruby still seems to be thriving..!*
-    - for the <3 of ruby
-  - asp.net
-    - meh, i much prefer phoenix/elixir, and still even prefer rails/ruby for community reasons, especially for their smaller communities, though, this is probably better than ruby for big code-bases
-
-
-
-
-* ycombinator startup funding
-  - very easy to apply!
-    - just send an idea, even if it's the "late deadline"i
-      - DONE
-        - ..DAMN!
-    - seems to prefer having a co-founder.. :/
-      - maybe can ask Sam
-        - yeah, he would be perfect!! and he lives in SF!
-
-
-* job sites list
-
-  - through friends
-  
-  - direct
-
-  - general sites
-  - levels.fyi
-    - TODO: try some more..
-    - seems to aggregate from the same boring big company sources, nothing deep
-    - but does provide a very good filter system, possibly easy to scrape..
-  - linkedin
-    - sounds like the most useful nowadays..
-      - seems like the aggregators catch these... nothing special..??
-    - clicking apply doesn't mean you apply through linked it, it usually just goes to the company's website's software
-    - it found and re-activated my old account..?
-      - TODO: finish profile..
-        - no need to even fill out a profile, for most jobs, you must apply through their own website
-    - craigslist
-      - only the true gangstas use this
-    - indeed
-      - meh, though people do say it works..??
-
-  - game studios
-    - *workwithindies*
-      - TODO: keep an eye out for ui/ux design
-    - gamejobs.co
-      - lots of big companies.. :/
-
-  - design studios/agencies
-    - TODO: ??
-
-  - ruby/elixir jobs
-    - *https://usingrails.com/*
-      - nice!!
-      - *incredible amount of rails jobs.. wow..!*
-        - *ruby is _NOT_ dead*
-    - *rubyonremote.com*
-      - https://rubyonremote.com/remote-jobs-in-us/
-        - look for junior positions
-          - filter may not be so good..
-    - https://elixirjobs.net/
-      - very very few listed, and all except the first page is outdated, though, a good source to see which companies use it..
-      - TODO: just make a few sites with phoenix/elixir, then can apply to these!! :D
-      - relabs
-        - a design studio job!!
-
-
-  - startups
-    - just *live in SF*
-      - *nahhh... no sense of home ;( gotta try to make LA/SGV/LB my home.. build from the heart*
-    - *ycombinator*
-      - the OG
-      - *hnhiring*
-        - extracts from hacker news whoishiring
-        - *this is a really good source..*
-      - has a jobs page
-        - TODO: try this now
-      - has a new job matching app
-        - TODO: finish profile
-      - co-founder..? meh :/
-    - *remoteok*
-      - must be super competitive..
-    - wellfound (angellist)
-      - looks legit, it's just that.. the startups seems so boring.. :/
-
-
-* tools:
-  - ruby (rails, roda, sinatra) > python
-    -> *dragonruby*
-  - *c* > *jai* > rust > c++
-  - elixir (phoenix)
-  - c# (asp.net)
-    -> unity, fna/monogame
-
-* remote jobs
-  - remote companies
-    - wikimedia (wikipedia)
-      - *todo: software engineer for the content transform team*
-      - movement communications specialist, product and tech
-    - duolingo
-    - gitlab
-      - see entry under ruby contributors
-      - support engineer (worldwide/remote)
-      - TODO: others jobs??
-
-* schools
-  - both universities and schools mostly use outdated enterprise software, which doesn't look fun
-    - departments that need a computer person can be fulfilling, as one can be in control of all the software for that department, choosing what one likes, integrating stuff (n8n), making one's own, and also *the social aspect of getting to know everyone*
-      - actually, wanting to be a part of the department/organization shouold be the main reason to be there: *choose a department you want to be in* (i.e. UCSC game/film, NYU game/itp, parson's design 'n tech, etc.)
-    - notes on learning management software (LMS)
-      - *canvas uses ruby*
-      - moodle uses php, yikes
-    - *main problem is that you have to live near the campus, pay those costs, be near transient people*
-      - however, *it could feel like a youth hostel, filled with people with good intentions*
-    
-
-  - 1. edjoin.org
-    - less competitive than university jobs, possibly same pay but in a lower cost-of-living area
-  - schooljobs/govermentjobs.com
-    - may have to apply through here
-  - district job boards
-
-  - universities
-    - less competitive than FAANG and many private jobs
-      - still likely has many goodie asians applying..
-    - can take some classes, do EMT, etc.
-
-    - https://www.niche.com/colleges/search/best-colleges/s/california/
-
-    - ordered by my desire
-
-    - USC
-      - private
-      - *top film and game programs*
-        - #2 in design school in the country? (by niche)
-      - closer to DTLA, making it centrally accessible, but undesirable location to live near..
-    - art center
-      - seems to be more vocational art tech: graphic design, cinematography, animation, etc.
-      - *game, film, etc. arts*
-        - in the future, can try game and entertainment design support teaching jobs
-      - *pasadena*
-    - caltech
-      - would be impossible to compete for a tech job here..!
-      - small, ~2000 students, thus among the most selective, a top 10 super research college
-      - *pasadena/SGV!! perfect location*
-
-
-    - minerva
-      - *travel and learn on your own time, auto-didacts*
-        - *now this is how i'd build my school!!*
-      - ~1000 students
-      - SF for the US portion
-        - will be close to the startup scene
-    - stanford
-      - bay area / silicon valley network
-      - *TODO: should try this out..*, since i didn't like the public school organization (UC Berkeley)
-    - claremont colleges
-      - *top undergraduate liberal arts college in the country*, alongside stanford
-        - *the sort i belong in*
-      - added two graduate schools (5Cs -> 7Cs), but i think it's mostly medicine related..
-      - isolated, further east of SGV, very white/culture-less around the college
-      - https://www.hmc.edu/human-resources/employment-at-harvey-mudd/employment-at-other-claremont-colleges/
-        - each college is a seperate organization/business, and so each one has it's own employmeent site.. :/
-
-    - UC
-      - *LA* (big city) > *santa cruz*, *davis*, *santa barbara* (small-towns, nature) > berkeley, san diego, *irvine* >>>> riverside, merced
-        - *UCLA is central to LA*, and i'd def fit in there as opposed to Berkeley!
-        - *UCLA is also a top design school*, alongside USC, NYU, CMU, UPenn, etc.
-      - jobs.universityofcalifornia.edu
-
-
-    - PERSONAL CUTOFF
-    - x/calarts
-      - vocational art tech such as animation
-      - valencia, CA
-        - really, really far from LA
-    - x/otis college of art and design
-      - over-priced
-      - area full of homeless people
-    - CSU
-      - calpoly(technic)
-        - SLO
-          - up there with UCSD
-        - x/pamona
-          - doesn't make the cut in quality
-          - west of pamona city, on the hills
-            - maybe commutable from *covina and diamond bar*
-        - x/humboldt
-        - sacramento?
-      - LB
-        - top two state in LA
-          - similar to UCSB, but with a faaaaaar stronger urban community
-          - has a good design school, along with UCD
-        - *long beach!!*
-          - would be perfect to live 'n work in LB!!
-      - san diego state
-        - party school, yet has the same ranking at LB
-      - fullteron
-        - top two state in LA
-        - north OC..??
-
-      - CUTOFF IN QUALITY
-      - sacramento state
-      - (UC Riverside)
-      - san jose state
-        - not sure where this fits..?? same as san diego state?
-      - san francisco state
-      - x/LA
-        - heard bad things..
-        - *west of alhambra/monterey park*
-      - x/Dominguez Hills
-        - heard bad things..
-        - carson
-
-      - x/religious
-        - pepperdine
-        - layola
-
-        - azusa
-
-
-
-
-* ruby contributors
-  - https://spreecommerce.org/ruby-on-rails-most-popular-among-top-y-combinator-companies/
-
-  - the dot com era startups:
-    - shopify
-      - *ruby (core language, yjit, core gems)*, rails, lots of other non-core gems
-        - they ensure everything is optimized (interned strings, etc.) because it costs them server $$
-    - stripe
-      - rails, gems, don't like sorbet so much.. :/
-    - checkr
-      - background checker
-      - applied
-        - fail
-      
-    - github
-      - lots: trilogy db adapter, language highlighting / parsers, etc.
-    - gitlab
-    - *dropbox!!*
-      - TODO: check for jobs!!
-
-    - *twitch!!*
-      - source leaked recently
-        - https://www.reddit.com/r/rails/comments/q44pv3/has_anyone_done_any_digging_around_twitchs_rails/
-        - rails + go services
-
-    - *mastadon*
-      - an open-source project, with sponsorship finance strategy
-
-    - etsy?
-      - reverb
-    - *airbnb*
-    - *doordash*
-      - *postmates*
-      - *instacart*
-      - uber? uber eats?
-      - food panda?
-
-    - coinbase
-    - zendesk
-    - basecamp/37signals
-
-
-
-
-
-  - newer
-    - cruise (ai car)
-
-    - gusto
-    - poshmark
-    - drizly
-      - bought out by uber eats
-
-    - gingko
-    - flexport
-
-
-    - block
-      - founder of twitter, cash app, afterpay, tidal, etc.
-      - goose
-        - a software dev agent
-
-
-* tech i use and love:
+* tech i use and love
   - most seem to be open-source..
   - TODO: think of more
 
+  - discord!!
   - design tools
     - simple ones.. for music-making, film-making, game-making
   - game engines and tools
@@ -670,29 +782,37 @@ garden fresh vegan
     - well, i don't love it..
 
 
-favorite big tech:
-  - many from SF
-  - many started by y-combinator
+
+
+
+* favorite big tech
+  - *many from SF*
+  - *many started by y-combinator*
+
+  - *these would have big to massive code-bases.. would really need to be into software-architecture..*
+    - unless you get a support engineer role!
 
 *y-combinator*
 
 *discord*
    - python, *elixir*, rust, react, *react-native*, electron
-   - gamer culture
+   - *gamer culture*
 craigslist
   - advertises on craigslist ;)
 wikipedia
   - php :/
 *twitch*
-  - rails!!
-  - gamer culture
+  - *rails!!*
+    - whoa..!!
+  - *gamer culture*
   - TODO: *should just be a streamer..*
     - *IN TAIWAN!! (for taiwan/chinese audience :D)*
       - permaculture life, playing games (game history, criticism, etc.), making games??, cooking!, selling in night markets!, hostel life?: *MY LIFE*
 youtube
   - just solid tools, no agenda (not much at least..)
-github
-  - rails!
+*github*
+  - *rails!*
+  - bought by microsoft..?
 
 doordash
 *etsy*
@@ -704,32 +824,56 @@ netflix?
   - trying to do game stuff
     - has game studios
 
+spotify
+  - *quite expensive at $10/month!*
 
 
 
-
-* FAANG:
-x/google's products are in a massive graveyard, abandoned, forgetten, without a sense of design, though pragmatic
-x/amazon's products are ALL GARBAGE copies of pop consumer devices (kindle, fireTV, alexa, luna [Google stadia], echo frames?, etc.)
+* NO FAANG (unless microsoft has an office beyond washington..)
+x/google
+  - helps government do evil things
+    - wikileaks
+    - contributes to genocide
+      - isreal "defence" project nimbus
+  - products are in a massive graveyard, abandoned, forgetten, without a sense of design, though pragmatic
+  - responsible for spreading simple programming languages: python > ruby, dart > haxe, go > any garbage-collected lang
+x/amazon
+  - products are ALL GARBAGE copies of pop consumer devices (kindle, fireTV, alexa, luna [Google stadia], echo frames?, etc.)
   - mostly web cloud server stuff
-x/facebook? ew! just has vr (meta quest)
-x/apple is closed off
-*microsoft* is the clear winner
+x/facebook?
+  - ew! just has vr (meta quest)
+  - bought instagram.. quite late tho..
+x/apple
+  - is closed off
+nvidia
+  - actually don't know much about it..
+  - but surely mostly hardware work, except firmware..??
+*microsoft*
+  - hmmm, not in FAANG..?? *what's the N? netflix??*
+    - maybe nvidia..
+  - *the clear winner*
+  - *hq location sucks tho..*
+    - bellevue, washington (state) (near seattle)
+      - where indians go to die
+      - maybe not far from uwash?
   - *good recent coop (or co-opt?) of open-source and linux stuff*
+    - bought github?
     - linux sub-shell
     - vs-code
     - typescript
+      - started it? or helped it grow?
     - .NET core
       - asp.net
         - blazor (web assembly), razor pages (mvc), razor components, etc.
-    - C#
+    - CLR/C#/F#
       - but then limited to C#, which i'm not really interested either for games or web.. i prefer jai/C/ruby/elixir/dragonruby (language and engine) and rails 'n phoenix
-      - likely an overtly complex VM (same route as java)... not that ruby isn't, but ruby has good reason: for it's syntax and features
+      - likely an overtly complex VM (same route as java)... not that ruby's isn't, but ruby has good reason: for it's syntax and features
     - xbox
       - might as well just buy a gaming laptop nowadays..
-      - hasn't made a good game since halo 2..?
+      - hasn't made a good game since halo 2..? ..lol.. yikes!
       *- the original xbox live arcade was the nicest for indie devs, though still a pain..*
-        - though, now, it's the switch
+        - though.. *now, it's the switch*
         - providing the XNA framework was kind too
     - surface pro actually has potential
+      - ..though it took a very very long time to catch up to Apple..
     - *is okay with hiring indians, and allowing them up the ladder, up to level of CEO :)*
