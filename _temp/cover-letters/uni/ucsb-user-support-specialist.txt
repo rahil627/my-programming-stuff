@@ -1,7 +1,7 @@
 
 
-TODO: withdraw/re-apply after "review" status?
-  - maybe send another e-mail about it..?
+withdraw/re-apply after "review" status?
+  - NOPE, it's over :/
 
 heyo,
 
