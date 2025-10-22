@@ -1,0 +1,329 @@
+
+TODO: apply to a few startup jobs during the day while i edit this late night
+
+TODO: can ask about past examples statements
+
+* The Statement of Purpose
+This should be a concise, well-written essay about your background and your reasons for pursuing
+graduate study in the field you have chosen. The requirements for your Statement of Purpose may
+vary depending on the program you are applying to:
+
+from CMPM site:
+Please describe your plans for graduate study or research and for your future occupation or
+profession. Include any information that may aid the selection committee in evaluating your
+preparation and qualifications for graduate study at the University of California, Santa Cruz.
+Recommended length is a concise 2-4 pages single spaced.
+
+* The Personal History Statement
+This is required of all applicants. This statement will be used in conjunction with your application
+for graduate admission and financial support. Please note that the Personal History Statement
+should not duplicate the Statement of Purpose. As with the Statement of Purpose, the requirements
+may vary depending on the program you are applying to:
+
+** TODO Go to Graduate Programs; scroll down and click on the name of the program you’re applying
+to; read the page for details on what to include in your personal history statement.
+
+* references
+Sam!, NYC refs too old.., Taiwan refs? :/, shit..
+
+* what is computational media?
+from ai:
+Computational media is an interdisciplinary field that combines computer science with creative and critical thinking to *design and build new media products and experiences*. It treats *computation as a medium* for artistic expression and problem-solving, rather than just a tool. Students in computational media programs learn to develop everything from interactive games and animations to data visualizations and custom digital tools.
+
+
+from the UCSC site:
+TODO
+
+
+* from a guide on a reddit post
+https://www.reddit.com/r/gradadmissions/comments/d2hrqr/the_ultimate_guide_to_applying_to_engineering/
+
+Statement of Purpose: When you were applying to undergrad schools, you probably wrote a Personal Statement, but this is different. For grad schools, you write a Statement of Purpose, which should answer these questions: *What do you want to study? Why do you want to study it? What experience do you have in this field? What do you plan to do with your degree? Why is this program a good fit? You should be tailoring your SoP to each program you apply to.* I followed a formula with mine that worked very well: *I started talking about my specialized area of interest and the skills/experience I have related to it. Then I discussed my future goals, and ended with a paragraph tailored to each program about why I was interested in that specific department at that specific institution.*
+
+Get as many people as possible to proofread your application: advisors, professors, your LoR writers, even other students.
+
+Things to Avoid: Pretty much anything that happened before undergrad, clichés (ex: from a very young age, I knew I was destined to be an engineer…”), anything overly negative, passive voice, casual writing including contractions, and using acronyms without defining them beforehand
+
+Your Experiences: My application was a bit unique because I didn’t have academic research experience. My undergrad school had a mandatory co-op program and I couldn’t financially afford to take a >50% pay cut to do research instead of co-op. Instead, I used my co-op to explore the world of R&D, focusing as much as I could on the “R” part of R&D. I got heavily involved in doing testing and experiments for my company, and managed a long-term testing project that was extremely similar to a research project a grad student would be working on in a lab. I discussed that project in my SoP, and interviewers/admissions panels were impressed that I was able to operate with that level of independence.
+
+
+* research labs
+[
+Expressive Intelligence Studio
+  - exploring the intersection of artificial intelligence, art, and design. Our goal is to create compelling new forms of interactive art and entertainment that provide deeply autonomous, generative, and dynamic responses to interaction. A major thrust of this work is advanced AI for interactive narrative and video games. This includes dynamically-constructed branching narratives; intent-driven game generation; social simulation and autonomous characters; language, story, and world generation; game data analysis; and intelligent support for media design.
+  - analysis
+  - tools
+  - media/game experiences
+Game User Interaction and Intelligence
+  - quite broad..
+  - modeling process of playing games + map, model visualize player experiences
+    - limited to video games..?
+    - quite meta..
+  - games for change
+    - health, climate, education, etc.
+  - game tools, engines, etc.
+Interaction Dynamics
+  - harness the power of technologically-mediated storytelling and play by delving into their design, development, and the way audiences experience them. With this expertise, we craft innovative tools and experiences and deepen understanding of their use across diverse technological applications—whether it's creating impactful and entertaining games, developing AI tools for research and design, or exploring the many possible applications of virtual agents across these domains.
+  - also quite broad..
+    - a visual novel toolkit for emotes
+      - i dig this one..
+    - cultural study of mmo game player communities
+    - serious games
+
+
+
+ALT Games
+  - alt learning tech and games
+
+Lab ASSIST
+  - disabilities
+Lab Augmented Design
+  - no clue..
+Authentic User Lab
+  - We characterize this relationship of technology with subcultures, design systems to support their notion of authenticity, and fashion new frameworks and methods to inform designs that help people strive for meaningful lives. We subscribe to the idea that society as a whole can learn a great deal about how to live from subcultures, the delightful, diverse microcosms they are.
+Center for Computational Experience
+  - TODO
+Misfit
+  - "the lab with a culture of care"
+  - Misfit Theory gives us a way to think about how a specific body and mind either fit or don’t fit into a space at a given time. As a lab, we put an emphasis on the lived experiences of the communities and individuals we work with.
+SET (Social Emotional Technology)
+  - chasing play on social media
+  - wearables
+    - cute one to remind you to walk
+    - vulnerability
+Tech4Good Lab
+  - We see an educational system where learning is situated in real-world work, contributing to community needs, and motivated by curiosity and passion. We seek economic structures that support individuals in reaching their full calling and contribution, and where mercy and justice are baked into the core. We dream of communities built on interdependent collaboration, authentic relationships, and a shared mission to foster flourishing.
+]
+
+
+
+
+
+* purpose
+as my history suggests, i'm a generalist, at life and hopefully at computering too.
+
+by nature, i'm a support person. I live among groups of people, and particularly help execute projects.
+
+yet, also by nature, i can be a maker, with a good taste in design.
+
+
+although games are my childhood passion, and films my teenage passion, and even a philosophy/fiction as an adult,
+
+i feel i've got to merge it all, my interests in culture, permaculture, tech, design, art, urban planning, all of it.
+
+
+
+
+* future occupation/profession
+[Please describe your plans for graduate study or research and for your future occupation or profession. Include any information that may aid the selection committee in evaluating your preparation and qualifications for graduate study at the University of California, Santa Cruz.]
+
+to me, culture, location, friends, family are all way more important than building a career. My career is limited to my home-lands. Home is where i must make a career.
+
+i have promised long ago to live in Taiwan forever, among my small-hometown-loving friends, and our social network of back-to-nature friends in nearby countries. Why wouldn't i live my dream? If i am forced to live in America again, it'll be between: Virginia Beach, to take care of my parents, and either NYC, Santa Cruz (and coastal Cali), or Big Island, Hawaii, depending on where i feel most at home. I'm betting on Big Island, as it's the closest thing to Taiwan, culturally, geographically, and in distance.
+
+living in rural 'n remote areas means: living off the land, taking care of each other, livin' the slow life, ever so slowly understanding the ecology around us, and politicking with everyone around--real politics--, as we all share the same land, sea, and air. There's an infinite amount of skill, knowledge, and wisdom that comes from living such a life. None of it is computer-related
+
+[what to do with the degree]
+a PhD, i hope, would enable me to work with, or at least communicate with universities local to my rather remote abodes: National Donghua University on the east side of Taiwan, and in case i make a home in Hawaii, University of Hawaii in Hilo. Both hold similar programs i am fond of: those related to ecology (tropical conservation, sustainable agriculture, etc.) and indigenous peoples/cultures (revitalization, education, social work, etc.). [TODO] Though Donghua Uni feels a bit more grassrooted than the rest in Taiwan, there's still a great divide in the people that work in that university and the local people that live just outside of it. I hope to live outside of it, yet be able to speak inside of it, getting a better understanding of how all of the sides think: northern Taiwan, southern Taiwan, various indigenous tribes, hakka, migrant workers, and the university folks. As a person who grew up in the West, possibly the most American in my entire family--the wildly playful NYC artist type--, and went back to Asia, not even my own native country, i feel i'm in a rare position to communicate, mediate, and at times, concept, design, and make solutions to local problems, possibly technical solutions.
+
+[TODO: main path]
+Beyond that, my only path is to create my own products.
+
+my ideal (re-)starting for-profit tech job within an existing institution may simply be "support tools engineer" for academia, making little tools to support various orgs of people (individuals, research groups, departments) to do their work. From scripts to gui-apps to visualization-apps to games, i'd concept, design, and make whatever's most needed, using computational means. In addition, i wouldn't mind learning and doing the needed basic infrastructure work either. [TODO: wouldn't mind research.. but the products come first] There's very likely some hard-working supportive tech people under the vague title of "systems-admin" or "IT" already doing this. Besides, there are no tech companies in the areas i live in. They are afraid of typhoons, hiding on the other side of the mountains.
+
+[TODO: be less cynical]
+for the sake of quick money and just sheer tech practice, i may join some early startups in SF while i'm still here, in America and especially once i'm in Santa Cruz. I personally have zero interest in the trendy ai/web meetup cess-bubble, but startups happen to fit my desire for doing a very broad range of work (and anyway, big companies would never hire me). Startups also provide a far more personable, intimiate, memorable experience, as it's a(n) (ad)venture between just a few passionate peers, possibly turning into great friends that want to stick together. An example job here may be generalist support tech job for some ruby/rails web monster or python ai/ml thing. This path is far more likely to have the incredible luxuty of working remotely, so i can be back home. This would also buy me significant financial freedom, possibly enough for my life-time.
+
+
+
+TODO: kinda a study goal?
+
+beyond the tech stuff, one side-job i want to try is emergency medical technician (EMT)/paramedic, specialized for rural/remote/wilderness. It's the part of medicine i can do on my own. Alcholism, motorcycle crashes, typhoons/land-slides, heat flashes, fat feet, red teeth (areca/betel nut), over-working, are all the norm in old Asia. It'd be nice to be able to take more care of the people around me, legally. Luckily, this skill doesn't require much course-work, though it differs greatly by country and local gov. To me, it's just another life-long survival skill. It'll complement my friends whom are quite savvy on the traditional side of medicine: food, exercise/massage, and a maintaining a healthy social life. Maybe there's some room for improvement to the paramedic's tool-kit.
+
+yep, my life is an open-ended open-world rpg game.
+
+i am not certain if i'll ever need to do independent research, nor interpretive practice, as i may not work at a uni for the rest of my life. To me, it's just an opportunity to see how academia works, how science works, how to differentiate what's useful within the research paper and funding games. NGOs play similar fund-raising games. Naturally, i'd personally be more interested in making computational tools to support others with those endevours. Surely now with ai, that research process has already shifted. As for interpretive practice, at the moment, it merely sounds intellectually interesting, or interesting merely to the intellectuals. If i were to divide my interests into the way that acedemia divides knowledge, my travelling soul would probably fit the methods of cultural anthropology and human geography, but very soon after, i'd surely find myself reaching out for something real, not encoded in continental philosophy and academic terms: eco-anarchism, eco-feminism, some metaphorical science-fiction 'n fantasy, zines?.. and then something a friend wrote long ago, then recent conversations, real personal experiences. I try not to go into academic riff-raff. I like living in the world around me, using the languages around me, but sometimes, during the winter, i may fall into deep philosophical rabbit holes. Again, even here, i'd be more interested in making an app/platform like Genius (song lyrics) for writers, philosophers, scientists, where people can create discussions based on profound bits of text. I'd rather reach out to new media, games, films, apps, mixed-media, not back to the old canons. But i may have gotten the idea of "interpretive practices" completely wrong.
+
+
+* plans for study or research
+[*Please describe your plans for graduate study or research and for your future occupation or profession. Include any information that may aid the selection committee in evaluating your preparation and qualifications for graduate study* at the University of California, Santa Cruz.]
+
+
+Statement of Purpose: When you were applying to undergrad schools, you probably wrote a Personal Statement, but this is different. For grad schools, you write a Statement of Purpose, which should answer these questions: *What do you want to study? Why do you want to study it? What experience do you have in this field? What do you plan to do with your degree? Why is this program a good fit? You should be tailoring your SoP to each program you apply to.* I followed a formula with mine that worked very well: I started talking about my specialized area of interest and the skills/experience I have related to it. Then I discussed my future goals, and ended with a paragraph tailored to each program about why I was interested in that specific department at that specific institution.
+
+[what study?]
+ideally, i'd inhale every class there is on the CMPM web-site, see where it goes, what happens, in that time and space, with those people around me. That's how i live my life: i adapt to, live with, and naturally support the people around me, like an ameoba, naturally exploring and creating new directions 'n projects we share passions for. Unfortunately, universities aren't so open-ended.
+
+[why study?]
+i hope to always have the ability to crawl to a computer and make anything i dream of, quickly, wherever i am, wherever my mind may be. I had that feeling early on, during the Flash and openFrameworks days, but have since lost it. Technically, i hope to be decent at making video games, as that's core systems programming. Then i can make cultural games with my friends, mixing in their arts and the lives of the people around me, whom are all extremely creative, just not via digital mediums. Ultimately i should be able to quickly create and stitch together game systems with Jon Blow's engine/jai (and C?), avoiding the painful parts of game-engine making (graphics renderers, porting, etc.), yet having the power of manual memory-management without the pains of C++, and not be limited in any way. Learning by making games. From video games, itself essentially an i/o program, i want to get a solid general understanding of how i/o works, down to the electronics. I am certainly not an electrical person, but i have no choice, it's the physical reality. I also hope to master web, as that's the ubitiquis cross-platform GUI now, using quick solo-feasible pop frameworks: elixir/phoenix, ruby/rails, and even at times game/media engines that export to js/canvas (vs d5.js). I need to be able to maintain multiple web projets by myself. I'm hoping forcing a functional paradigm will help with maintenance and code-sharing. Lastly, i'd like to gather a bit more generalist knowledge and experience of basic systems admin stuff: networking, distributed computing, and now ai/ml. Game-making severely lacks these skills common to today's job market. I am actually unemployable. I've gotta catch up. To me this is simple stuff that can be gleaned from learning resources on the internet, playing with a bunch of old servers. I'm hoping i can land a systems admin sort of job to cover that spectrum of work.
+
+if i aim for the one year master's route, i'm a little afraid there isn't much space for any extra courses: just two topics, as i'd need two-three electives to fulfill the "interpretive practices" area requirement. On the other hand, at the moment, i don't know if i'd belong to the research side of things required to take the PhD route, as i value the more pragmatic, making, doing way-of-life. However, this program's research labs seem to contain a rare mix of both: people write research papers, but they back it up with a digital product--or is the other way around?. Now that, i may be able do!
+
+there are so many directions i could go, i've merely listed a few off the top of my head. I'm old now, a bit tired too. During my life-time, i've filled a few notebooks with ideas, designs, and philosophies, and though i've left them all behind, it seems i haven't quite forgotten a few of the directions i'm passionate about. Further below i have listed a few of those directions. [TODO: reads strange to say further below]
+
+before that, i must confess, my passion for my favorite childhood medium, games, particularly video games, have greatly waned long ago, circa 2014. I am now far more interested in paths that lead to social impact, even better of it applies universally. Paths include: care (misfits <3), love, aid (ASSIST, Center for CE?), reality (authentic user lab, tech4good), hope, grassroots community-building/organizing (tech4good), family and local politics, basic/holistic health, social-justice, 'n so on.
+
+[TODO: too negative]
+pondering a bit now on how i could ever betray my childhood passions.. I simply get the icky feeling that many of the game-related--mostly video-game--labs (GUII, EIS, ID?) attempt to analyze (video?) games via quantitative methods. This leads to two icky problems: the games must be simple enough to analyze and that the research can be abused for pyschological use/profit. The games i loved weren't mere linear nor multi-linear experiences (narrative games), they rely on a ton of emergent (game)play that derive from multiple systems (many creative) and multiple players (think: street games, maker games--perhaps now via Minecraft, Dreams for the newer generations--, open games--Animal Crossing, Stardew Valley--, fighting games, etc.). In such games, a playful player maybe begin by immediately attacking their friends, or even start looking for ways to exploit the game. To me, qualitative studies/reviews make sense here, the sort that Kill Screen used to publish. Though, the more philosophical analytics approach could be interesting.. In addition to that, i'm not crazy about AI (much of EIS), except as an aid/tool for people to make stuff. And even there, i'd have to personally guage what elements of a game i feel okay about AI generating. When i came back to America, at Noisebridge, there were two people making a rather ambitious browser game, wherein people can make ai-agent characters, generate environments via prompts, generate dialog scenes with film-like camera movement, all in a huge open world. I had absolutely no interest. Then i look at the kids playing Minecraft, moving things block by block, and i think: it's gonna be alright. Maybe it's similar to the difference between hand-crafting and manufacturing things, gardens vs industrial farms: one has a soul? It's very possible i'm completely wrong about all of this though, as i've only taken a glance at the web-sites.
+
+i could even divide the labs into two distinct categories: interactive media research and social impact. I think the key is figuring out how to make meaningful social impacts via really good/fun interactive media experiences (if they can align at all). Sadly, looking at my own personal directions now, they are similarly divided. The vehicle for my product-ideas with an intended social impact are merely basic web/phone apps, and my game-directions are pure games, without intentions.
+
+i don't think it's a simple task, as i've personally never played a good "serious game" nor "educational game" (save STEM: Kerbal, Zack's electronics) in my life-time (though maybe things have improved since). Starting the other way around is even worse: create a barely-interactive working social impact app, then try to improve that experience by fitting in some game/computational ideas: "gamification". Forced intentions lead to barely-interactive activities in the name of games. Strangely, on the contrary, games may unintentionally create some serious, educational experiences. This may be one of the main obstacles/tasks of my "studies", and i'm afraid one cannot use science for it. I just have to let it happen.
+
+
+
+
+* possible "research" directions
+
+a lot of my personal dream projects map quite well to the existing research labs.
+
+feel free to skip around.
+
+
+** authentic digital experiences:
+life in rural Asia narrows the scope of what i'd want to make: i'd only want to make things that people around me would use. That means: no expensive equipment (VR), only having the capability of barely being able to use a smart-phone, and availability of nearby cheap electronics: sensors, wires, old PCs, and recycled/old electronics.
+
+when i live in those areas, my mind/world is similarly limited to the culture around me, in that language, in that way of life, nothing beyond it. Then, when i look at a computer, the internet, it feels like a foreign world through alien technology. Perhaps the folks at the authentic lab feel similar.
+
+then the maker side in me wants to build a digital world through that narrow cultural lens: a world for my culture. Web 2.0(?) (youtube, shorts, instagram, etc.) are really good at maintaining culture, and the algorithms work to keep people moving within it. A person who watches African dances will receive similarly cultured stuff. The algorithms work.
+
+Google search is interestingly country-based.
+
+for the most part, my friends from rural reas just watch youtube videos, in addition to personal messaging apps. Maybe watch what other farmers are doing things, some funny videos in their culture, some adjacent culture, and nature.
+
+when thinking like a traveler, i get the desire to see a more fair share of the world. I'd want Google images/videos/etc. should return content more equally from around the world. It'd be nice to create some more options in this regard, with a nice interface. We have the ability to search, but there's more to it.
+
+on another level, this is hard for me to imagine how a child, even babies, takes in such information, as when i grew up, i inhaled wikipedia/text, not youtube/videos.
+
+it has taken me more than a year to adapt back to America, and i still refuse much of it.
+
+*** digital documentation of village inventiveness:
+one product direction here is to create a site to documents the inventions indie farmers/gardeners/foragers make, perhaps their methods too. Surely a lot of it has been recorded on youtube already, but i've been wanting to document their houses, full of neat little tools, usually in houses they built, and honda cub motorcycle copies hitched to some DIY trailer.  I think it was Kevin Kelly(?) that had similar little site that did this, as he was a bit fascinated by Amish inventions. The content isn't very computational, but hopefully the product is. To me, they are the ultimate DIY artists, really using the environment around them to survive, everyday.
+
+
+labs: authentic user experience
+courses: history of consciousness, cultural anthropology?
+
+
+
+** digital justice/accountability/civics:
+i don't know how far one can go at a public (government-funded) school with this, but, i haven't seen much tech for justice/accountability. Surely there's some dark magics blocking this. Here it makes sense to start with the uni and go outward, to local gov, then national gov. The process is straight-forward: figure out where the major problems are, who's accountable, and then take action. This goes back to a problem of digital journalism, but also an apathetic civic mind-set in America, further fractured by (sub)urban planning and scary policing. Clearly, one can list some real data about real people in real locations, which may incite some real actions, or at least, some more antagonisms. Indonesia's recent news is an example of this, of what simply watching filthy rich corrupt-royal kids can do to an extremely poor population that luckily can afford internet service 'n smartphones. Nepal too. In England, that's an entertainment commodity: a reality show! In America, surely we can build better accountability tracking visualizations, timelines, linked to videos (far more persuasive than text). The digital journalism for "war" (genocide) seems pretty good, why not here, at home?
+
+the housing crisis of Santa Cruz is fertile ground. The real-esate buyers have technology to map out land/value/rent/profit, yet people don't have tech to map property-owner/history of rent/building problems? There's rate my professor. How about rate my landlord? Rate my police officer? There's a lot of public gov data to play with here.. but a lot more to crowd-source. If we shared our stories with each other, we'd eventually figure out who the greedy/corrupt(/evil) are. Unforunately, we don't have the tech to share and orgnanize our personal stories. Instead, once someone is brave enough to publicly share their story, we cry together and say "me too". That's not a very good system (though, social media is better than nothing!).
+
+in Taiwan, politics is everywhere, including digitally. One pro-takeover legislation gets announced, they all go to the streets. America's too big, and it's political culture too alienated, and it's policing too scary to stand up to. Cultural change starts within. Santa Cruz is quite rare in being a small town (not just a college-town) with such caring people. The possibilites here are endless.
+
+on the positive side, there needs to be ways/maps for the people, including those without homes, to find out where the areas/parks with not-so-terrible cops/park-rangers are, so they have a safe place to sleep 'n survive. It's be easy to crowd-source markers for available arable land to garden, safe/lawful places to park, food (waste) to recycle (eat). This might sound like some anarchist delirium, but people need to survive, a sane place to recover, and the government shelters are aren't sane and many don't survive. The main problem in this direction is that centralizing the data would provide the cops with all the info/targets, making it easy to arrest, raid, 'n whatever other tactics.
+
+note: i'm a grassroots person that believes in improving culture (as Taiwanese do) not rules, and tend not to care much for states, until their problems get to my shack
+
+courses: topics in crowd-sourcing and collaboration, socially engaged art, digital activism?, that one marxist human geographer?
+institutes: mit civic media?
+
+
+** mapping history to space
+TODO: exists?
+if we uploaded our past pictures of the world, and mapped it, we could see the past through augmented reality (or Google Maps street-view style for those unable). A mapping of history to space is far more sensual 'n provacative then writing it down with some characters. It would create dialog and discussions about what happened, here. What happened to that farm? A history of urbanization, gentrification, collapse. Surely all those travel videos and selfies can be put to better use..
+
+along with that, we can map historical writings (or history writings?) to space too, like AR park signs for the rest of the world.
+
+i just feel history is stuck in the textual world, or the minds of elderly, divided from reality. If only we could see it, maybe it'll change us. Maybe.
+
+
+** digital documentation of art/media:
+this project aims to digitize all art/media. Letterboxd is excellent for films and film-lovers, Goodreads is meh for books, but there's nothing good for games, and once it gets to new media or fine arts, it's over. Maybe an art, performance or mediated, took place or existed at an event in some grungey venue in a city, or at a school exhibition, or in a random town during a road-trip. Surely people can share their favorite art experiences in a more organized manner. Many are even recorded, on youtube, or a private instagram or facebook post. But none of those platforms are organized.
+
+*** TODO repeated in the games area
+personally, my favorite games as a kid were playground and sports game variants (horse, tag variants) and video game mods ("custom maps"): games that people modified or made using a game's provided making tools. Later in life, it was little locally-made indie game jam games, as they held far more individual expression. The games i loved can't be found easily. Though, maybe we do share playing the great traditional American game "the floor is lava" and Indian games like carrom and kite-fighting. I think the same problem exists for many other mediums. Fame drowns out the small voices. And with more 'n more quantiative, profiting tech platforms, it only became worse.
+
+there's def some problems here: mapping out/categorizing art directions, the limits of documenting art, but something's better than nothing!
+
+once that there's some database, people can create lists of works, much like play-lists, similar to how professors may curate a set of multi-media works to study. For example, a play-list/course on urban development or the effects of technology may include Jia Zhangke's films, but instead of Zhangke, it's some profound film-maker on Vimeo or even a personal web domain you never even heard about.
+
+create the platform, and leave the curation of the mess that is web 2.0 (TODO?) to the next gen. Technology and contemporary culture have coincidedly shifted generations, yet, the tools to organize it all seem to be missing.. or, also very possible: i am too old and just don't understand the ways the next gens organize digital things.
+
+courses: ai-agent-assisted web crawlers?
+labs: this seems to be a past endevour by professor Noah. Unfortunately, the links to GameSage and GameSpace are dead. Also, i'd have to look into the features of MobyGames.
+
+
+** digital language learning and preservation:
+while travelling Asia, i was able to learn bits of languages the old school way: i carried a travel book with common phrases and vocab and an alphabet (if there was one). For more advanced study, i had a grammar book series which was accompanied by audio dialogs, a specific dictionary app (Pleco is amazing for Chinese, and so is touch screen input), a flash cards app if i felt disciplined, messaging apps with keyboard input, watching movies with sub-titles, and just speaking like a pure-hearted 5-year-old: absolutely shamelessly. Unfortunately, i had trouble grasping a few languages: hokkien(?) minnan-yu (a dialect in of the "southern people" of China, a lot of whom immigrated to Taiwan: aka Taiwanese), and many indigenous languages.
+
+my friends all hail from the southern and eastern part of Taiwan. My ethnic Chinese friends speak Taiwanese, and on the east side including one outer island, my non-ethnic-Chinese and mixed friends speak indigenous languages. There are efforts in Taiwan to bring back Taiwanese at their schools (if political luck continues), however, the learning resources for the indigenous languages were really rough to gather. I'd hope the local university there is helping out, as it holds the the main native studies program there. I'd love to investiage more when i go back. Chinese people are proud of and love documenting the history of their own culture, and so i'm certain the Taiwanese feel empathy to do the same for their fellow indigenous people.
+
+i'd like to tackle this digitization (and therefore preservation) problem, and make it accessible. A phone app is enough. It's def worth re-thinking this whole language-learning tool thing, seriously (not duolingo). Honestly, i feel like the native people need to create their own alphabets and ditch the roman one.. if they even want to write anything down.. Of course, each language would require each tribe's consent.
+
+i'm familiar with bits of language learning, the old way: learning the sounds, then some basic vocab and grammar, then dig deep into side-by-side (assimil's method) text, and/or repeated audio dialog (pimsleur's method), assisted by timed repitition of flash cards (Anki app).. The polyglots have figured it out. It'd be nice to make a generalized app that uses those known pedagogical methods, then perhaps crowd-source the dialog, to get the reality of dialects, accents, and the most common curse-words.
+
+here, i'm completely unfamiliar how far ai has gone. Are people now learning with specfic voice models (llm)? Is it ethical, especially considering first language acquisition and ai indigenous models? It might be fun creating models of some truly memorable local villager characters i've come across..
+
+in addition, i'd have to look into input keyboards for those languages, and if it's QWERTY, making some cute key-stickers too!
+
+institutes: National Donghua University
+labs: authentic user experience lab?, tech4good?
+courses: computational models of discourse and dialog?
+
+
+** a few game directions:
+i save the best direction for last.
+
+at the age of 4-5, i played all games equally: made-up street/play-ground games (foursquare variants, sports variants; freeze tag at neighborhood scale), table-top games, video games (Nintendo, Tandy 2000? -> MS-DOS). Later, many of those playground/street games digitized into starcraft mod games ("custom maps") with 8 players online, half-life mod games of 32+ players, and in some mmo games of even more players (custom ragnarok servers, or whatever free ones i found via mpogd.com?). As time went on, it seems kids have stopped playing on the street, or even stopped playing altogether. I was the last one left still riding a bicycle around my neighborhood, hopping ditches, picking mulberries.
+
+later, when i moved to NYC during the indie heydey circa 2012-13, inhaling the billion of ideas going on within NYC's art scenes, a few of exhibitions 'n events organized by Babycastles left a deeper imprint in my mind:
+
+physical (i/o) games:
+these games quickly come to mind: [Johann Sebastian] Joust (by that copenhagen artist collective), which abused a sensor within the useless but prevelant Playstation Move(?) controller, and which most resembled the street games i used to play (tag); that game with a bra controller by Kaho Abe or Anna Anthropy (TODO?); a simple one-button game modded to use foot pedals as input (at a Venus Patrol party?); and  Benett Foddy's rock climbing game modded to use two DDR pads as input. They all exemplified a highly-effective and productive way to quickly make new physical games that result in new physical experiences: create play-ground games with a little tech or just mod(ify) existing games with an alt(ernative) controller/input. They all created very memorable experiences, as it's been 10+ years since, with some even leading to rather unforgettable intimate game-play experiences, like an intimate dance! <3
+
+the problem with these games is the effort required to make the input devices, or to find a public space/arcade to install them (apparently, not so bad in NYC..). Back in that time, Makey Makey, a microcontroller that made it simple and convenient to hook up playable-media to common computer inputs came out. I wonder if there's more that can be done here..
+
+because of that limitation of what technology is ubitiqous, at that time, i personally opted to make iOS games, as touch screens were still rather new, and touch input games were pretty much untouched. One game i made was similar to the wire-loop carnival game, but for 10+ touch inputs, and therefore 10+ players (technically. physcially: the most amount of people that can fit around an iPad), forcing people to get touchy (it won some game jam). I also made, with the design help of my friend Jon, a little multi-device, multi-player party game that resembles flip cup, the drinking game, allowing at max 16(?) devices * 5-10 inputs = 80-160 players(??) (via iOS gamekit sdk). That game sadly remains un-released. Objective-C and Xcode made me realize how sufferable and lonely the experience of making video games really is (or was it living in SF..?). That experience stopped me from making games for the next decade.
+
+(note: i mention these games because the alt controller exhibitions were done collectively with the super-vibrant NYC indie game scene organized with Babycastles, not of my own doing.)
+
+cultural games:
+the cultural exhibitions (chinese, arabic) by Babycastles expressed through games how different our minds are. In particular, i remember in the corner of one exihibition there was a game that a very young Indian kid made that modified GTA3 to fit the world around him: India, complete with rickshaws, characters dressed in traditional clothing (: lango jambo with sunglasses), and with billboards of hindi movies and Parle G crackers. To the kid it was surely natural, a fun thing to do, like myself when i was young, play-testing and editing starcraft maps or half-life mods. But being a gamer, having played everything i could find, then playing that at an old age, made me realize: perhaps, no game i ever played to that point represented India, Indian culture (maybe prince of persia was the closest..?).
+
+in addition, many games here digitized their traditional arts, for example, using the aesthetics of Chinese ink paintings, Arabic rug patterns, and the drawings of ancient Egypt.
+
+this cultural direction may also be tied to my desire for authenticity/reality. The physical aspect seems to be antagonist to this newfound screen-based culture that i straight-up abandoned when i was in Asia, yearning for my own highly-physical childhood.
+
+another topic of interest is traditional games, especially street games played across cultures, but all the others too (card games, etc.). I've been thinking about making digital versions of some, but then i think about what that means: not playing the actual physical games! How brain-washed by screens and *video*-game-making have i become?? Instead, i'd rather just document them. I'm personally quite fond of the kite-fighting game played in my parent's state in India.. as stupidly dangerous it can be, transforming an entire state into a kite-fighting play-ground--no, battle-ground!!--, is something only India, or an equally playful, wild culture, can pull off. And after living through most of east and south-east Asia, i very much admire this very playful festiveness. :)
+
+a game documentation site for all games would be the first project within the more broader art/media documentation project (see documentation of art/media). It's my childhood's media, one that i want to preserve (or perhaps i want to preserve that child-like playfulness..??).
+
+i don't know if any "research" will come out of all of this, hence the real reason it is listed here as last. The other directions just have more obvious, benevolent outcomes that a public uni may require. Surely, in the current era of ubitiqious screens, some funky, memorable, physical game experiences that hark the era of neighborhood super soakers battles could cure today's sedentary habits? Anyway, it's also a path for me to study i/o electronics.
+
+labs: ALT Games Lab, SET (TODO: who made that hindu spiritual god game?)
+courses for physical games: playable media (not physical..), social and emotional human computer interaction, collaborative research group: experimental play, sensors and other input/output (TODO??), creative coding (?), psychology of play
+courses for cultural games: history of consciousness, computer graphics for games
+note: UCSB's media, art, tech program seems quite good for i/o too
+
+
+** gamey visualizations tools for data:
+this is an obvious track for game-makers, particularly game-engine tinkerers that work within academia: build various visualization tools for various researchers, likely involving big data (data-science). Yet, i haven't seen much on either the data-science front nor the journalism front (persuasive web, augmented, or generated video visualizations). Data-science seems to be satiated by plotting libs on jupyter notebooks to furnish as proof on a research paper. Being at a research uni, i would really like to see them at work, understand what they are looking for, then design 'n make visualization software that they need, and maybe can even play with. Surely, there's more and better ways to understand data, to: manipulate it, spot anomalies, search for specific things, or stumble upon something one wasn't looking for, but happy to have discovered it by playing around a bit! The hopeful result: a playful visualization tool-kit, with the sensibilities of a good game designer.
+
+this is a direction i'm not experienced in at all (data-science, bio-tech, etc.) AND may need to re-visit graphics for (batch-rendering of distributed nd-arrays of data?). But it is a direction i'd consider to actually be employed: support research dev and infrastructure. It's also just a very good application of graphics and visualization, which are skills common to games.
+
+courses: data-science in computational experiences, data-driven discovery and visualization, data-science, computer graphics, advanced visualization, participatory design?, art and science?
+
+
+** social documentary:
+i doubt there'll be time for this one, but using social documentary and images to critique of the world (critical theory?) around me is def the lone film-making path for my nature, via a rather rare method: Chris Marker's "film essays". That is actually how my mind works: gather insight from visual reality, then piece it together with words, but if it can be done with pure images, even better. Another direction may be Vincent Moon's one-shot videos that fleetingly document ethnic cultures through performance. This again aims to expose or document the authenticity/reality.
+
+
+personal works: "Humans of Taipei" (inspired by Humans of New York), a video doc on various handicraft street workers, and a tiny video of a door-to-door street vendor (both in Penang, Malaysia)
+courses: expanded documentary, moving image archives and the frontier of information?, courses from the socdoc MFA?
+
+* cut:
+
+(similarly, how different cultures use tech: what's app / line is note-worthy)
+
+this is not normal, as every other universitys' programs' labs i've seen aim for pure STEM research topics, where their applications to humans are somewhere far off in the distance.
+
+possibly NYC, which at the moment is surprisingly the only place i feel at home in America; possibly Santa Cruz (and coastal Cali), which i'm hoping will become another home; and i'm betting on Big Island, Hawaii,
+
+, save communication apps, and watching some videos of how people of a similar culture are livin'.
+
+ Perhaps i could convince the city people to crowd-fund some projects.
+
+* history

@@ -1,0 +1,683 @@
+
+* TODO
+1. read through entire site for application process
+  - CMPM grad student handbook
+    - 68 pages of all i'd ever need
+
+2. schedule a meeting with a grad advisor
+  - via web-site
+  - prep questions
+
+
+likely have to have research direction in mind, or a series of products in mind
+
+...but i like nearly all of the faculties' directions..!! :/
+
+not sure if i can do this without going back to Taiwan.. (i really need the world i live in.. to even make anything..)
+  - TODO: really need my notebooks.. FUCK!! ;( ;(
+    - i had a life-time of ideas in those!!!!
+
+
+POST-READING THE FUCKING MANUAL
+
+well, one thing is for sure.. *this is the most game-related uni in the UC system, and probably all of california, save USC*
+  - the next best thing on the west is probably uwash's human-centered design program
+
+*** questions to ask grad advisor
+      - maybe NYU was the way to go.. :/
+        - *grad students get paid $30/hour!*
+          - *ITP MPS*
+            - counts as STEM
+            - proper art school vibes: passionate, loving, smart, holistic
+            - *can have great scholarships, fellowships, etc.*
+              - *all worth learning, since i'm more into this artsier route than research/research-based grants*
+          - "game center" MFA
+            - freedom to work with all departments, like a design program: film, itp/interactive, engineering, etc.
+            - but ITP is wayyyyy cooler..
+          - IDM
+            - part of engineering, so far more tame..
+              - *half the cost?*
+              - "As a research-active program within NYU Tandon School of Engineering, IDM faculty collaborate in research that integrates digital media and society."
+                -  Our projects range from using motion capture technology to reimagine theatrical performance, to developing novel uses of virtual/augmented reality for health and wellness, to the integration of STEAM learning into special needs education, to the development of citizen science tools to empower NYC residents to monitor and report on noise pollution in their communities, to helping NASA JPL develop next-generation user interfaces for space exploration, to assisting with the search and visualization of the historical record of New York City.
+                  - actually, kinda my jam.. *very civic-minded*
+              - (dis)ability lab
+            - actually sounds very close to UCSC's computational media, but far less gamey
+      - what about USC?
+        - game design and development (cinematic arts department)
+          - far broader, all interactive media
+          - *the best program in America*, though i'd argue for NYU
+        - cs with game dev track (MS) (engineering department)
+          - courses only, no research
+            - therefore, no GSR
+            - https://www.reddit.com/r/USC/comments/1fjrs52/honest_review_for_the_masters_in_cs_program_at/
+              - lots on reddit say "cash cow"
+        - grad work
+          - https://www.reddit.com/r/USC/comments/gmu0rn/comment/frb365m/
+            - $20/hour for a master's student working at the lab.. :/
+            - probably need to be phd..
+          - https://www.reddit.com/r/USC/comments/18ma4ff/ms_students_not_eligible_for_being_a_ta_anymore/
+            - no TA for master's students (2023)
+            - TA jobs are union jobs now. MS students aren’t in the union. Can’t get a union job if you’re not in the union.
+        - from the handbook
+          - "https://graduateschool.usc.edu/wp-content/uploads/2021/02/TA_RA_AL_Handbook_graduate_School.pdf"
+          - "PhD students will be prioritized over master’s students for all TA, RA, and AL positions"
+          - "All TA, RA, and AL appointments include tuition units, health insurance and access to the student health center,
+  and a stipend."
+          - "A 50% TA, RA, or AL appointment includes tuition remission up to 12 units per semester of the
+  appointment and 6 units of tuition remission for the summer following the assignment. "
+          - *meh, sounds like the same as any other uni.. no worse*
+    - UCSC
+      - https://www.reddit.com/r/UCSC/comments/qvqwxw/comment/hkyeqzj/
+        - https://apo.ucsc.edu/compensation/salary-scales/index.html
+
+          page 36 of the first link
+
+          Masters students are often not given salaried positions during their time as a graduate student. The standard work week for a PhD track graduate student is a 50% TA-ship/GSR, so the value $5,015.33 on page 36 is cut in half to a value of $2507.67. Recently I have been a fellow not a GSR or TA, and my fellowship is actually slightly less, but my last pay stub reflecting work in this category was for $2,216.37, meaning almost $300 per month is taken out due to taxes or various other fees. Some is placed into a retirement account, for example.
+
+          Depending on department, pay over the summer can range from 0% to 100%. There are also scales to GSR pay but the minimum amount is around the same value per month as a 50% TA position.
+
+
+          EDIT: it is worth noting that UC will soon meet with the union that represents TAs and GSIs to renegotiate these rates. If I were you I could not make decisions with the assumption that the pay will increase significantly.
+
+          Also, a union which represents GSRs and (maybe...?) fellows is in the process of being recognized and will begin bargaining (the main disagreement right now is about who the members of the union are). Also unlikely that pay scales will change significantly because of this.
+
+        - Remember: a TA isn't being paid to research and complete a degree. They're being paid to grade papers, lead sections, teach undergrads, etc. And from that point of view it's actually not that bad of a salary. If you actually spend 20 hours a week (50%) time doing TA duties, you're making approximately $30/hr. My typical week as a TA has actually been more like 12 hours spent on TA duties and the rest fucking around on nonsense research questions that don't lead anywhere. I have to say that I don't feel undercompensated relative to other salaried workers at the university, like departmental admin. Even compared to faculty at less expensive schools, like my CSU undergrad, the pay seems reasonable compared to how little work I do.
+          - hmm, well, it can't be as bad as cleaning apartments all day..!! :D
+          - besides, teaching will be cool..! i like reading essays, hearing people's thoughts 'n ideas, talking, collaborating..
+     - "Can confirm. Take home is around $2200 a month. You generally get a decent tax return (I get around $800) though as they go a bit overboard on the income tax withholding."
+       - $3000 would be alright.. i think??
+
+
+
+
+
+
+ honestly, the program really isn't bad.. it even fits my nature..!:
+   - just write an essay and have a portfolio?? lol, what..??
+   - just need to figure out personal direction..
+     - i have so many..
+
+  - also, unlike game programs, it's research-oriented, thus, a real academic degree, not just "professional"
+    - i get to see how academia really works
+
+  - with it, can i go to Hawaii or Taiwan and start my own shit? Teach some classes?
+    - meanwhile, run my own grassroots shit, take care of my peoples n land
+
+
+
+
+- *TODO: what are the core courses about??*
+  - look into these, as this will waste half the time.. :/
+
+- *TODO: check cost of ms in one year*
+
+- TODO: what grad programs in Hawaii/Hilo?
+  - would have to be a resident before beginning, which isn't bad.. if i move now..?
+
+- what grad programs in Taiwan?
+  - scholarships?
+  - fellowships?
+
+
+- ask grad adviser..
+  - if i plan to live in Taiwan, and possibly Hawaii/big island when in America, would this degree help in any way?
+
+  - apply to both programs or just one?
+
+  - better to do master's then decide later, or phd, then leave early with a master's?
+
+  - NOTE: phd must be done in 3 years (save dissertation)
+    - are summers enough of a break to survive that??
+
+  - master's with a fuck-ton of courses in one year? can i come back later for a phd?
+    - how probable is TA/GSR (for master's students)?
+
+  - ms in one or two years?
+  - phd in two years?? (for "advancement"), then some more time for dissertation (just some writing)
+
+  - *i don't think i can survive 3 years of santa cruz.. especially during the winter!!*
+    - *however, i do think i could survive 3 years of new york..!! (with summers in Taiwan!!)* :D ..heck probably even LA!
+    - 3 years is a home.. which means i gotta do it in Taiwan.. :/
+      - and computational studies probably won't transfer to any program in Taiwan..
+
+there's a one-year MS program:
+the core 3 CMPM courses, CMPM297, two topics courses, 1 MS thesis research
+  - the phd and master's both have the same required courses, the rest is up to you
+
+
+
+
+
+
+
+
+
+* notes from handbook:
+
+purpose of the program is to make you a scientist :/
+
+*holy shit, more than half of the faculty are game makers!!*
+
+
+** Financial Support
+*The CMPM department is committed to supporting Ph.D.
+graduate students throughout their studies, provided they
+maintain good academic standing and normative time to
+degree.* Support is provided in the form of Teaching
+Assistantships (TAs), Graduate Student Researchships
+(GSRs), and a limited number of fellowships.
+
+*The Master’s program is a self-funded program, meaning
+that students in the M.S. program are expected to fully fund
+their academic and living expenses with their own resources
+for the duration of the program. Students in the M.S.
+program should not expect to receive any form of financial
+support or employment (Teaching Assistantships or
+Graduate Student Researchships) from the department.*
+  - yikes..!!
+
+
+
+Students should arrive to UCSC with enough money to cover living expenses for
+four to six weeks, until their first fellowship check or
+paycheck.
+
+
+TA positions cover in-state tuition, health insurance, and
+student services fees. Campus Fees are not covered in full
+by TA positions, but the department covers campus fees for
+1st year PhD students and will typically cover the campus
+fees in subsequent years as a courtesy, as funds allow.
+Here is the link to current salary scales
+
+Students must be enrolled in at least 10 credits and be in
+good academic standing to be eligible for a TA position.
+
+
+GSRs automatically cover in-state tuition, health insurance,
+student services fees, campus fees, and non-resident
+tuition (excluding Summer quarter).
+
+
+(from page 36)
+There is no formal teaching requirement, but CMPM
+graduate students are generally expected to serve as
+Teaching Assistants (TAs) at least 1-2 quarters during their
+graduate career. These assignments are often done during
+the first two years. However, students should be aware that
+some faculty members expect their students to TA multiple
+times in order to extend their graduate student support
+resources.
+
+
+
+
+** courses
+
+*** Core Courses (15 credits)
+  - NOTE: for both MS and PhD!
+● CMPM 201 Introduction to Computational Media (5
+credits)
+● CMPM 202 Computation Media Research (5
+credits)
+● CMPM 203 Computational Media Methods (5
+credits)
+
+*** pre-approved electives
+
+*** media creation
+CMPM 1G46ame AI
+  - ?? as in NPCs..??
+CMPM 1G47enerating Worlds
+CMPM 1I4n8teractive Narrative
+CMPM 1C50reating Digital Audio
+CMPM 1A51lgorithmic Music for Games
+*CMPM 1G64ame Engines*
+  - absolutely!
+*CMPM 1G79ame Design Practicum*
+  - might as well get my game design degree in..
+CMPM 2A44rtificial Intelligence in Games
+CMPM 2C45omputational Models of Discourse and
+Dialogue
+  - hmmm, worth ivestigating..
+CMPM 2I4n8teractive Narrative (2?)
+CMPM 2G65enerative Methods
+CSE 160Introduction to Computer Graphics
+CSE 161Introduction to Data Visualization
+CSE 165Data Programming for Visualization
+  - skip these..??
+CSE 183Web Applications
+  - eh.. what do they use to teach it..?
+  - better to audit.. lol
+*CSE 260Computer Graphics*
+*CSE 261Advanced Visualization*
+*CSE 263Data Driven Discovery and Visualization*
+  - note: the above three are 200-level
+
+*** interpretive practices
+
+background/intro courses:
+● HISC 1: *Introduction to History of
+Consciousness*
+  - YUP
+● FDM 225: Software Studies
+  - ??
+● Psych 116: Communication
+Technology, Culture and Human
+Development
+  - probably full of freshmen.. :/
+● ANTH 151: Workshop in
+Ethnography
+  - YUP
+
+*CMPM 1G76ame Systems*
+  - sounds core..??
+*CMPM 2T9o0pAics in Computational Media: Media
+Constellations (Nathan Altice)*
+  - okay..?
+DANM 2R01ecent Methods and Approaches to
+Digital Arts and Culture
+DANM 2D02ialogues and Questions in Digital Arts
+and Culture
+*FILM 136VCisual Culture and Technology: History
+of New Media*
+  - history!!
+FILM 177Digital Media Workshop: Computer as
+Medium
+*FILM 194NCew Media Theory Seminar: Games,
+Representation, and the Cinematic*
+  - dope!!
+FILM 225Software Studies
+FILM 283New Media Art and Digital Culture
+*HAVC 14D1aNta Cultures: Art, Technology, and the
+Politics of Visual Representation*
+  - ?? sounds nice..
+
+*** special topics
+CMPM 2S4o3cial Computing Research: Design,
+Algorithms, and Incentives
+CMPM 2A4I4in Games
+CMPM 2I4n8teractive Storytelling
+CMPM 2G6e5nerative Methods
+CMPM 2T9o0pAics in Computational Media (taken
+multiple times can count as multiple
+Topics courses provided the instructors
+are different)
+CMPM
+290J/
+DANM 250D
+*Playable Media*
+  - YUP
+*CMPM 2S9o0cKial and Emotional Approaches to
+Human Computer Interaction*
+  - YES
+CMPM
+290P/
+*DANM 290P
+Topics in Computational
+Cinematography*
+  - ??
+DANM 2C50oAllaborative Research Project Group:
+Art and Science
+  - science? ew
+DANM 2C50oBllaborative Research Project Group:
+*Socially Engaged Art*
+  - hmmm
+DANM 2C50oCllaborative Research Project Group:
+Performance and Embodiment
+ - hmmm
+DANM 2C50oEllaborative Research Project Group:
+*Experimental Play*
+  - MY PEOPLE
+FILM 22M8 oving Image Archives and the
+Frontiers of Information
+*FILM 23E0xpanded Documentary*
+*FILM 23T4oward an Ethics of New Media*
+*GAME 2A3d2vanced Game Technologies*
+  - hmm, how advanced..??
+*GAME 2C3o8mputer Graphics for Games*
+  - YES
+GAME 2G40ame Usability
+GAME 2F5o0undations of Serious Games
+
+GAME 2M52odeling and Simulation
+GAME 2G51ames User Research
+*GAME 2A9d0vAanced Topics in Games*
+CSE 245/
+LING 245/
+CMPM 245
+Computational Models of Discourse and
+Dialogue
+*CSE 260Computer Graphics*
+  - might actually be too nerdy, but good education!
+  - try graphics in games instead
+*CSE 261Advanced Visualization*
+*CSE 263Data Driven Discovery and Visualization*
+  - yeahhh! *game devs for data-science!*
+CSE 265/
+DANM 231
+*Human-Computer Interaction*
+CSE 290TLopics in Crowdsourcing and
+Collaboration
+
+
+
+
+
+** master's
+M.S. students must satisfy their disciplinary capstone by
+writing a thesis.
+
+The MS Thesis should generally include the following
+components:
+● Introduction: Describing the research problem,
+the contribution, and a description of the rest of
+the thesis.
+● Literature Review: A discussion of the literature
+that relates to the thesis research.
+● Description of System or Study: If making a
+system or media experience, the thesis should
+include a detailed description of the system
+and design. If the primary contribution is a
+study, it should include a description of the
+study goals and methodology.
+● Evaluation: A description of the methodology
+and results for evaluating the system/media
+experience, or a discussion of the results of the
+study.
+● Conclusion: The contributions
+
+
+
+
+Master’s Students Wishing to Pursue
+the Ph.D.
+Master’s students who wish to transfer to the Ph.D. track
+must first obtain their faculty advisor’s approval, draft a
+timeline to complete all milestones, and identify a plan for
+financial support. Students can then submit a Petition to
+Transfer Programs to the Graduate Director to transfer from
+the Master’s track to the Ph.D. track. The form is then
+submitted to the Graduate Advisor and on to Graduate
+Division. If the transfer is approved, students must
+complete the requirements for the Ph.D., including exams
+and additional coursework.
+  - sounds like it's best to apply for phd, then drop-out for master's if it doesn't work out
+    but in this case.. it's only a 1-year difference from master's and phd.. soo..
+    and the master's program is "fully-funded by the student" and shouldn't expect anything..
+      - sooo yeah, it's phd or nothing!
+        as long as you're in good academic standing, doing some TA work, it's all good.
+        - but *$24k/year in santa cruz might be the struggle life :/*
+          - for 3 years..
+            - not including summers?
+            - *this is a really big deal.. 3 years of my life..!!*
+              - *i thought the master's could be done in 1 year (+summer)..??* hmmm
+
+
+
+
+** phd
+..wait a minute, *phd in three years..??*.. that actually might be doable..
+
+
+PhD Foundation Areas
+CM Ph.D. students must also satisfy demonstrate
+competency in three non-curricular areas:
+1. Demonstrate an understanding of media creation in
+a CM context.
+2. Demonstrate an understanding of computer
+programming sufficient to carry out CM research.
+3. Demonstrate an understanding of interpretive
+practices sufficient to carry out CM research.
+  - this is actually PERFECT
+    - media creation/studies + programming + interpretive (like cultural anthropology..??)
+
+
+a take-home essay exam consisting of
+three sets of prompts, of which students answer two.
+Students have a set deadline to complete the exam. The
+goal is to measure students’ understanding of, and ability to
+synthesize and apply, core computational media knowledge
+(history, theory, research approaches, and evaluation
+methods). This is the material covered in the CM core
+courses.
+  - perfect for me, i'm an essayist by nature!
+
+
+Students may only take the exam twice.
+
+
+In extraordinary circumstances the graduate director may
+give a student the option of taking the first-year exam
+without having taken the core coursework (CMPM 201,
+CMPM 202, and CMPM 203) during any quarter. Those who
+pass may complete the degree without taking the core
+courses.
+  - hmmmmm
+
+
+
+The Ph.D. Comprehensive Exam measures students’
+preparation to perform independent CM research. In the
+Computational Media department, the Comprehensive
+Exam (CE) focuses on preparation for dissertation work,
+including research and writing skills as well as foundational
+knowledge of the CM field. The Comprehensive Exam is
+also the means by which the Foundation Areas are
+evaluated. The Comprehensive Exam must be taken by the
+end of a student’s 2nd year in the program. It takes place
+before Advancement, because Advancement is focused on
+proposing a specific dissertation project, which should only
+happen after the preparatory work that is the focus of the
+CE.
+[1] The exam itself includes two aspects: an essay
+(literature review) and a portfolio.
+
+
+
+
+As with the first year exam, students who pass the
+comprehensive exam at the Ph.D. level are done with the
+exam. Students who pass at the M.S. level may elect to
+leave the program with an M.S., upon completion of all M.S.
+requirements
+
+
+The literature review should focus on integrating 2-3 areas
+related to the student’s likely dissertation research. Work on
+the review typically begins significantly before the quarter
+the student first attempts the exam, because the student
+has already developed an interest in their research areas.
+This may have led to studying literature related to their
+research interests in the context of taking courses, writing
+literature reviews for their own projects and publications,
+reading/exploring in lab meetings and on their own, and
+potentially attending conferences and workshops at which
+related topics are covered.
+
+
+
+Quarter Before CE:
+○ Enroll in 5-unit Independent Study (CMPM
+297) with Faculty Advisor: It is recommended
+that students enroll in a 5-unit Independent
+Study with their Faculty Advisor focused on
+doing further reading in their areas and
+formalizing their reading list for the exam
+(which may include traditional academic
+literature, such as conference/journal papers
+and scholarly books, as well as media
+projects of various sorts).
+○ One goal of the exam is to demonstrate a
+student’s ability to think critically about their
+field and its products, so the reading list
+should include items that will support this
+type of writing.
+○ Please note if you have already taken
+independent studies to prepare for your
+comprehensive exam, you do not need to
+take an independent study course
+specifically the quarter before you take the
+exam
+
+
+
+
+
+Comprehensive Exam Components
+1. Literature Review/Essay: Reading a significant
+body of material in two or three depth areas of CM
+from a list developed by student, advisor, and
+CMPM 206 instructor, integrating it, and writing
+about it.
+2. Portfolio: A portfolio review of CM projects,
+including:
+a. A detailed written description of the
+computational system-building goals and
+process of at least one project led (in this
+aspect) by the student; and
+b. A detailed written description of the mediamaking goals and process of at least one
+
+
+s, in essence, a literature review in the area of the
+student’s planned research, ideally providing preparation for
+the dissertation. It should make a critical contribution to the
+field’s understanding of the student’s research area. A
+simple summary of the work of others, without new
+synthesis, organization, and argumentation, will not result in
+a Ph.D.-level pass. The Literature Review serves as an
+evaluation of the Interpretative Practices Foundation Area
+requirement.
+
+
+
+Students in different research areas will have a different mix
+of types of materials. For a student integrating
+interpretive/critical/theoretical, technical/scientific, and
+media/art/design approaches, a reading list might consist of
+roughly 10 books, 30 articles, and 15 media works, half of
+which are already familiar to the student. Other types of
+material can be added, based on their sort and the effort
+involved. For example, long dissertations might be counted
+as books, while short ones as a number of articles — and
+similarly a long game might count for more, in the media
+works category, than a film
+  - this actually isn't bad at all..!!
+
+
+
+The final essay should demonstrate the student’s ability to
+perform these key skills for a successful CM dissertation:
+● Undertake a meaningful literature search (the topics
+in the essay should not all be ones well-covered by
+previously published reviews)
+● Understand the types of literature appropriate for
+their planned dissertation work, both foundational
+and recent
+● Synthesize within and across research areas
+● Carry out meta-cognition on their research areas
+and critically interpret the things created within
+them (not just taking the assumptions of one type
+of research at face value)
+● Make a novel argument that contributes to the
+field’s knowledge (the nature of the argument and
+
+
+
+
+Portfolio
+The other aspect of the comprehensive exam is the
+Portfolio. Just as the essay demonstrates a student’s
+ability in one of the CM curriculum’s Foundation Areas
+(Interpretative Practices) the portfolio demonstrates it in two
+others (Programming and Media Creation). As with the
+essay, the portfolio is organized around the student’s
+dissertation plans. For example, for students with
+technically ambitious dissertation plans, the programming
+proficiency demonstrated in the portfolio must be
+significantly higher than for students planning dissertation
+work using off-the-shelf technologies. However, no matter
+their dissertation plans, students must show at least a
+fundamental level of knowledge in these areas, as it is the
+comprehensive exam that evaluates the PhD program’s
+foundation requirements (which is why preparation in these
+areas must be complete before taking the exam).
+Students’ portfolios should contain 3-5 computational media
+works, with non-CM projects potentially included as
+supplementary material. A pure technology project or
+traditional artwork might be included as supplementary
+material, but the portfolio should be able to stand without
+them.
+
+
+In order to be eligible to undertake the qualifying
+examination, students must have completed all coursework
+requirements, cleared any “Incomplete” grades, and fulfilled
+the First-Year Exam and Comprehensive Exam
+requirements.
+The Qualifying Exam must be taken by the end of Ph.D.
+students’ 3rd year in the program.
+
+
+The oral presentation and questioning typically takes two
+hours (45 minute oral presentation, approximately 20
+minutes for public Q & A, followed by questions from the
+committee
+
+
+If the student passes, they may nevertheless be advised to
+take further coursework. If the student fails, they may be
+given the option of re-taking the examination with the same
+committee after further preparation and guidance. If a
+student fails twice, they must leave the program. A terminal
+Master's degree may subsequently be awarded, provided
+that the student has satisfied the requirements for the
+Master's degree, including submission of a written thesis or
+project, or passing the Comprehensive Examination.
+
+
+
+Students must meet with their Dissertation Reading
+Committee at least once per year until completion of the
+Ph.D. degree. The committee will provide continuing
+guidance throughout the development of the dissertation,
+provide ongoing assessment of the student's progress, and
+evaluate the completed dissertation. In addition to
+evaluating a student's progress and providing input on the
+direction and scope of a student's research project,
+members of the Dissertation Reading Committee can
+provide an additional source of mentorship and advocacy
+during a student's Ph.D. training.
+
+
+
+because the primary work in the Ph.D. is
+independent research under the supervision of a faculty
+adviser, students are expected to be working with a
+research adviser at all times. T
+
+
+
+Normative time for completion of the dissertation is three
+years from the date of advancement to candidacy, and six
+years in total. Students who fail to complete the degree in
+six years must request a program extension from the
+Graduate Division.
+
+
+In order to maintain good academic
+standing, students must advance to candidacy within the
+first three years, and complete the degree within the
+subsequent three years.
+
+
+If the Ph.D. degree is not awarded within 7 years from the
+date of advancement to candidacy, the student's candidacy
+will lapse and the student will be required to pass a new
+Qualifying Exam prior to submitting the dissertation or to
+undergo another formal review as directed by the student's
+department,
+
+
+
+
