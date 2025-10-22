@@ -37,14 +37,14 @@
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW ; NOTE: doom-tokyo-night's bold colors look great!
        ;;indent-guides     ; highlighted indent columns
        ;;ligatures         ; ligatures and symbols to make your code pretty again
-       ;;minimap           ; show a map of the code on the side
+       minimap           ; show a map of the code on the side ; TODO: trying..
        modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink cursor line after big motions
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       ;;tabs              ; a tab bar for Emacs
-       ;;treemacs          ; a project drawer, like neotree but cooler
+       tabs              ; a tab bar for Emacs ; TODO: try it! hmm, may have to choose between this and workspaces..
+       treemacs          ; a project drawer, like neotree but cooler ; TODO: try it!
        ;;unicode           ; extended unicode support for various languages
        (vc-gutter +pretty) ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -59,11 +59,11 @@
        file-templates    ; auto-snippets for empty files
        fold              ; (nigh) universal code folding
        ;;(format +onsave)  ; automated prettiness
-       ;;god               ; run Emacs commands without modifier keys ; NOTE: maybe included with meow
+       ;;god               ; run Emacs commands without modifier keys ; NOTE: included within meow, don't activate
        ;;lispy             ; vim for lisp, for people who don't like vim
-       multiple-cursors  ; editing in many places at once
+       multiple-cursors  ; editing in many places at once ; TODO: main key-chord (c-x m) is busted by meow's keypad input (m inputs meta key)
        ;;objed             ; text object editing for the innocent
-       ;;parinfer          ; turn lisp into python, sort of
+       parinfer          ; turn lisp into python, sort of ; TODO: try it!
        ;;rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        word-wrap         ; soft wrapping with language-aware indent
@@ -72,8 +72,8 @@
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
        ;;eww               ; the internet is gross
-       ;;ibuffer           ; interactive buffer management ; NOTE: maybe uses dired instead..?
-       undo              ; persistent, smarter undo for your inevitable mistakes
+       ibuffer           ; interactive buffer management ; TODO: didn't this already exist..??
+       undo              ; persistent, smarter undo for your inevitable mistakes ; TODO: vs vundo??
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -150,7 +150,7 @@
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
        ;;lua               ; one-based indices? one-based indices
-       markdown          ; writing docs for people to ignore
+       markdown          ; writing docs for people to ignore ; TODO: temporary, until i convert to org-mode ;)
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
@@ -165,7 +165,7 @@
        ;;raku              ; the artist formerly known as perl6
        ;;rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
-       (ruby);+rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+       (ruby);+rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"} ; TODO: does this include robe?
        ;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
@@ -174,12 +174,12 @@
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       ;;web               ; the tubes
-       ;;yaml              ; JSON, but readable
+       ;;web               ; the tubes ; TODO: ??
+       yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
 
        :email
-       ;;(mu4e +org +gmail) ; TODO: e-mail in org-mode??
+       ;;(mu4e +org +gmail) ; TODO: e-mail in org-mode?? this may be the only way i get through thousands of emails!!
        ;;notmuch
        ;;(wanderlust +gmail)
 
