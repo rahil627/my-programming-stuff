@@ -45,6 +45,41 @@ if working quickly, just do quicksave/quickload (on doom's splash screen)
 TODO: projects vs workspaces vs persp(ective)
 
 
+** language specific dev
+*** ruby
+the localleader map (c-c l) is really neat 'n simple
+
+it has the following functions:
+
+robe-start
+  - if there's no project, may ask you to run inf-ruby, an inferior ruby process. from then on, i think it's the normal dynamic lang run-time dev experience, similar to elisp: send code into the run-time/process, introspect it, etc.
+    - may run into problems loading libs/gems in correctly.. as there is no project / (gem) bundler setup..
+  - the process will provide a repl console: irb
+    - irb itself is it's own thing.. providing a cli to do a lot of things..
+      - if you don't bundle the project, and just want to try running some script, use irb to load libs..??
+
+robe-doc
+  - introspects the running process for docs, so you are reading the docs in the code, not from some seperate external source
+    - maybe that's why they say emacs is "self-documenting"..
+  - how does it differ from irb's show_doc?
+    - it makes use of emacs search engine mini-buffer, making it a far better experience than irb
+
+c-c l s
+  - send code key-map
+  - can send a require gem statement
+
+c-c k
+  - i don't think robe module uses the lsp..
+  
+(irb)
+  - introspect objects (run methods), debug, load files/libs, etc.
+  - introspection explorer portion mimics cli commands: ls, cd
+
+(completion)
+  - pressing tab works, but functions aren't ordered.. :/
+    - may have to try zed after all..
+    - or maybe a lsp module for ruby??
+
 * bindings
 ** a few quick ways to learn, interactively via run-time introspection:
 
@@ -90,7 +125,6 @@ emacs/meow philosophy
   - TODO: though, could add F for reverse find
     - no built-in function..? maybe emacs prefers moving forward only..?
   - helix used shift as a reverse modifier, i don't think emacs uses that idea..
-
 
 ** TODO some useful functions (to bind?)
 
@@ -667,7 +701,6 @@ c-s-/ or c-?
 
 
 
-
 *** mini-buffer
 *PRO-TIP: c-s to show search history*
 *PRO-TIP: m-s to use regex search*
@@ -711,7 +744,6 @@ c-c ! to trigger the menu
 *** vundo
 
 TODO: mark, diff??
-
 
 ** god-mode/meow
 
@@ -848,7 +880,6 @@ c-c, l / spc-l (meow)
   - binded to c-spc
     - set-mark-command
 
-
 **** meow leader keys:
   - NOTE: uses a different set of bindings in meow-doom
     - but looks like the default bindings...??:
@@ -952,7 +983,6 @@ spc (meow)
   - buffers
     - TODO: NOTE: missing... is it expected to use the default emacs key chords? spc-x, b/B, k/K, etc.
     - i mean, maybe there aren't enough bindings related to buffers forit to have it's own key-map
-
 
 
 
