@@ -1,12 +1,37 @@
 #+title:  Todo Apps To Make
 
+
+see personal notebooks and other writings
+see grad school app writings
+  - TODO: merge from there
+    - use org-mode powers!!
+
 ordered from simplest to most complex
 
 shiiiit, i've got my work cut out for me..
 
-*OR, fuck web products, just stream and live the life i want to live*
+*OR, fuck web products, just live the life i want to live, and stream it!*
+  - youtube/twitch $$
 
-*TODO: makes emacs more gamey, with more visual effects!*
+*basically, i'm creating my own view of the world, what i want to see, digitally*
+  - without all teh crap, bare-bones, craigslist style
+
+
+* personal tools/tech/productivity
+text editor
+  - emacs
+    - port aurara
+    - makes emacs more gamey, with more visual effects!
+    - TODO: setup for offline dev
+      - ruby, elixir, haxe, jai
+    - TODO: setup ai / code-assistance
+  - focus
+    - TODO: download and use it again!!
+    - port aurara
+  - zed
+    - TODO: download and use it again!!
+    - can focus on making shit!!
+
 
 * scraper
   - jobs
@@ -19,25 +44,44 @@ shiiiit, i've got my work cut out for me..
       - though it uses phoenix, can run as seperate ruby scripts..
   - *cooking recipes/site without the crap*
     - TODO: is this legal?
+    - see [site-content-scraper.rb]
     - should work well from a phone
   - no web framework, just a simple ruby script using nokogiri
   -> leads to crawlers
+    - *crawl the entire web for stuff??*
     -> may lead to ai agents
+      - *ai agents that crawl the web??*
+        - sounds like the matrix..!!
+
+
+# from scraper script
+# this is also an interesting program, as it can lead to more general social media / videos / web 2.0 / reality? to web 1.0 / text / database ideas..
+#   - every sports game/match (publicly available)
+#     - this is actually huge.. $$$
+#       - start with ssbm and battle rap (the sports i watch)
+#       - then e-sports
+#       - then real sports
+#       - and movies!
+#   - every anything that is publicly available..
+#   - every police video doing something wrong
+#
+#  - yeah... i just need to make shit... i can think of a billion ideas!
+
 
 * map
 
   - roda
-  -> can visualize with a js data viz lib,.. or a js game framework :D
+  -> can visualize with a js data viz lib,.. or a js game framework (haxe->js!!) :D
   -> leads to AR app
 
 ** mapping basics
   - start with a simple map using census data
-    - could get advanced, once it goes to other countries..!
-    - could show migrations by using historical data
+    - could already get advanced, once it goes to other countries..!
+    - could show migrations by using historical data (+time)
   - *map areas by livability: walkability/bikability/motorcyclability and zoning laws*
     - *technology to find the best urban area to live in*
-    - zones for suburban strip-mall hell-holes vs places like north park, ocean beach?, SF, NYC
-      - detected by anaylzing google maps..?
+    - zones for suburban strip-mall hell-holes vs places like ocean beach, SF, NYC
+      - detected by analyzing google maps..?
 
 ** mapping responsibility/acccountability
   - then can try other data
@@ -60,17 +104,24 @@ shiiiit, i've got my work cut out for me..
 
 ** history image AR app
   - scrape photos related to your location
+    - or chosen location
   - display them at same coordinate
   - can it be done via web..?
+    - sure! just allow access to geolocation sensor
 
 * technology to connect people
   - a new craigslist (classifieds posting)
     - a new job site
-  - a new room and room-mate finder
+  - *a new room and room-mate finder*
+    - very much needed..
   - a sharing site
     - tools, house, land, property: commodities
 
 * technology to find great art/products/ideas/things
+
+this is turning out to be a *documentation* project: document and organize the world
+
+most of these are things that can be consumed: consumption consumerism, commodities (except art)
 
 a simple product diplay website
   - could be whatever
@@ -80,13 +131,14 @@ a simple product diplay website
 
 ** games
 - see [game archive]
-- phoenix
 ** motorcycles
 - really does need a better database/wiki
   - scrape from all sources
   - scrape from motorcycle forums, discord, wikis, etc.
   - allow users to edit
     - link to existing wiki?
+  - could also make it pretty like letterboxd
+    - allow reviews, user photos, etc.
 ** weed
 - could easily make the best weed website!
   - search based on effects, inherited strains, etc.
@@ -98,17 +150,48 @@ a simple product diplay website
   - can start with a roda PWA..? or phoenix-live-view?
     - some funky node-based diagram in space, with the images of buds, with lines connected those with relationships
   - should show tree, branch, flower/bud, and then scrape more nice photos of it, when the user asks for it
+** tea
+- now that's a bit more sober than weed..!! :)
+** alcohol
+- *big $$ here*
 ** programming languages
+- single page, features matrix, editable
+  - might as well use wikipedia instead for this..
 ** art
+- documenting all art is kinda insane..
+  - what is art?? lol
+- ...but considering how poorly games are documented, surely all arts suffer form poor documentation.. and amazing unknown artists
 
 
 * tech for language/cultural preserveration
 indigenous languages
 a digital visualization of all languages, and how they're connected
-a map overlay of languages spoken (and ethnicity)
+  - sounds/phenomes?, vocabulary, etc.
+a map overlay of languages spoken (and ethnicity, and culture?, gender?)
+
+indigenous music
+  - an app to listen to different areas in the world
+    - ambience, but also including indigenous dances, day-to-day talking, singing at night
+
+building homes
+cooking
+foraging
+farming
+games
+etc.
 
 * tech for nature preservation
-easily see a map of all real nature (old growth), fake nature (cut and re-planted)
+easily see a map of all real nature ("old growth"), fake nature (cut and re-planted)
 
 * plants, herbs, food
 tech that links plants to herbal and food recipes
+  - pharmacology?
+
+* responsiblity
+** tech to calculate the people/govs responsible killing the planet the most
+this'll be interesting to build an equation for.. ecological damage
+
+also a good visualization
+
+*** tech to calculate the people/govs reponsible for killing other people the most
+deadliest people
