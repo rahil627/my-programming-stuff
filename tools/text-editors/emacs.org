@@ -1,12 +1,10 @@
 
-NOTE: this file serves as a test for org-mode
+NOTE: this file serves as a play-ground for org-mode
 
 
-* some thoughts
-slowly but surely, emacs and i are becoming one.
+slowly but surely, emacs and i are becoming one..
 
-- should think about how this differs from tabs..
-  - buffers and windows are seperate, so tabs are just windows
+one million glorious lines of text-based power
 
 
 * sources
@@ -21,105 +19,44 @@ configs of great programmers:
 https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
 
 
-
-* praise
-gui, compiled
-  - can start from terminal via 'emacs' command or from the chrome startup menu search thing
-    - TODO: what about doom run..?
-  - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
-    - yeah, fuck terminals!!
-
-e-shell
-  - spc-o-e
-  - *incredible, providing auto-complete, etc. without config like fish shell, and retains the bindings and theme of emacs*, thus replacing fish and wezterm
-    - *emacs >>> terminal emulator + shell (+shell config) + file navigator + lazygit*
-
-dired
-  - not quite yazi, but with combined with emacs, *no seperate terminal app can compete*
-
-org-mode
-  - i'm orgin' baby!
-  - *the shift-tab/tab workflow is so natural to my mind.., it aids me to focus, and just be more organized*, as then everything is forced to be under a heading
-    - this lends well to being in habit folding/unfolding code, and just navigating code in general
-
-magit
-  - though i still use github gui app, this def seems worth trying/learning..
-    - TODO: maybe there's a great diff module..?
-
-
-* TODO config
-c/fix emacs gui for chromebook
-  - wayland display error :/
-    - i think it worked after running it via user instead of using sudo!!??
-
-set-up git
-  - i think `gh auth setup-git` doesn't work with magit.. though, there is a gh cli package: consult-gh
-    - TODO: setup git
-  - sync repo
-    - TEMP: installed github desktop, so i just don't have to worry about version control
-      - can slowly transition to magit
-
-backup doom config files
-  - TODO: create an elisp function to do this
-    - asks you where to save it
-      - similar to how dired-do-copy works
-
-load org repo on start
-  - TODO: merge my-programming-stuff into main notes?
-    - TODO: currently using my-programming-stuff as my temp org folder
-
-*sort m-x functions by which has been binded*
-  - in order to make it more intuitive to learn a mode
-  - no clue how to order them by use..
-    - plain keys, keys with modifiers, others?
-
-*try to merge doom's evil key-bindings for many other places:*
-  - *completion in mini-buffer*
-  - *dired*
-    - truly garbage key-bindings: ^ for up directory?? vs h/l for up/down directory
-      - h, help
-      - l, refresh/relist
-  - *c-x*
-  - *org*
-  - c-c?
-    - slowly..
-  - etc.
-
-*compare 'n combine meow/default and doom key-chords*
-
-
 * config
 
 *NOTE: don't you ever use it as admin/sudo!*
 
-see config files for notes on config
+see [config.el] for notes on config
   - self-document!
 
 *NOTE: first set up the right font and font size, it makes a big big difference!!*
   - can see a lot more in the mini-buffer!!
   - set font in terminal app settings or in doom's config.el
 
-magit
-  - is really good, def the emacs and git ways.. but i def prefer github desktop..!
-
-
-
 
 * workspace basics
 it's nice to have dired open, when working within a project, to have a sort of visual view to come back to
   - TODO: maybe there's some kind of file explorer plug-in that can pop-up via a F-key
+    - TODO: try treemacs
 
 it's similarly nice to have an i-buffer window open, to visually see which buffers are open
+  - TODO: maybe also part of treemacs?
 
-if working quickly, just do quiksave/quickload (on doom's splash screen)
+if working quickly, just do quicksave/quickload (on doom's splash screen)
+  - quitting doom emacs does this by default
 
-projects vs workspaces vs persp(ective)
+TODO: projects vs workspaces vs persp(ective)
+
 
 * bindings
-
-** a few quick ways to learn:
+** a few quick ways to learn, interactively via run-time introspection:
 
 learn x in y minutes / emacs
+
+
+*find-function (c-h f)*
+  - NOTE: contains all functions, and thus differs from m-x
+    - 30k vs 7k functions
+      
+*find-var (c-h v)*
+
 
 f12
   - gui menu
@@ -129,21 +66,22 @@ f12
 c-c
   - for major modes
 
-spc-h-b-m
-  - a better view of key-bindings quicker to undertand key-bindings than h-m..!
+*c-h b* / spc h b
+  - b
+    - all bindings
+  - m
+    - a better view of key-bindings quicker to undertand key-bindings than h-m..!
+  - i
+    - minor modes
 
-spc-h-spc-m
+c-h m
   - describe-mode
     - TODO: can't find this in the meow bindings..?
     - replaced by main info-emacs-manual
-      - TODO: i might prefer it binded to h instead..
+      - TODO: i might prefer it bound to h instead..
 
 spc-h-M
   - doom/describe-active-minor-mode
-
-emacs shares movement commands with bash
-  - ugh... no wonder why it's so terrible!! :'(
-  - but.. not bad if you still use shell, and even ruby 'n perl/raku!
 
 [movement-command],[number]
   - repeat movement
@@ -153,13 +91,23 @@ emacs/meow philosophy
     - no built-in function..? maybe emacs prefers moving forward only..?
   - helix used shift as a reverse modifier, i don't think emacs uses that idea..
 
-** some useful bindings
 
-c-arrow-keys
-c-m-left/right
-  - TODO: c-m-up/down broken
-m-down/up
-  - sane navigation bindings :D
+** TODO some useful functions (to bind?)
+
+find-function
+find-var
+  - maybe dependent on language.. dynamic languages only
+  - hence they're under spc-l-g (for elisp)
+
+** TODO some useful bindings
+
+spc-spc (c-spc)
+  - set-mark-command
+    - TODO: this must be important..??
+
+m-x / spc-m-x (meow/god), : (evil)
+  - contains every function available (~7500 with default doom install, ~6750 with meow instead of evil key-bindings)
+  - usually [module]-[function]
 
 [[cmd:recenter-top-bottom][c-l]]
   - center, top, bottom
@@ -167,119 +115,386 @@ m-down/up
 
 m-s-right/left
   - move list indents
-  - TODO: is this part of org-mode..?
+  - hmmm, didn't know m-s was ever used..!
 
 c-s/c-r
   - isearch forward/reverse
     - TODO: redundant, could use shift instead
 
-
-
-
+c-h f/v
+describe-function
+describe-var
 
 
 some notes:
  - NOTE: it's still vi, so still need to re-map caps lock to escape
  - NOTE: f1-key is tough on a chromebook keyboard, but quite useful!
 
-help:
-press the initial key-chord, then, in the popup mini-buffer, press c-h to fuzzy search it
-  - TODO: why is that not the default..?
-
-
 
 *** meow bindings
 
 TODO: finish [[fn:meow-tutor][meow-tutor]]
 
-
-
 ** key bindings (actual keyboard keys)
 
-TODO: merge from my helix and wezterm bindings
+TODO: PENDING: merge from my [helix] and [wezterm bindings]
+  - see [config.el]
 
-spc-?
-  - show cheat-sheet
+notably emacs shares movement commands with bash
+
+describe-key
 
 spc-/
   - meow-keypad-describe-key
 
-*** TEMP
-i'm guesing c-[key], c-[key] chords were chosen over c-[key], [key] as they would cause less mistakes..? yet, both are used..??
+spc-h-b
+  - see all bindings interactively
 
-TODO: play with all the main spc bindings
+*** some design notes on modifier keys, big keys, and other un-used keys from my [helix config]
 
-- spc-b-x / spc-x
-  - make a scratch-buffer in a split-horizontal-window
 
-*** normal (no modifier key)
+# notes from helix config to merge..
+# some possible keys:
+# **esc**
+#  - should be free TODO: don't use OS to bind it
+#  - could save for a list of shell commands/scripts
+# `/~
+# **arrow keys for four more modes!!**
+
+
+small un-bound keys:
+
+back-quote (`)
+  - ~ was used by games to toggle the dev console
+  - used for lowercase/uppercase in helix
+    - these key-chords were really annoying in emacs.. to the point of disabling them by default..!!
+slash (/)
+  - / was used by vim to signify search
+    - maybe because file-paths have a lot of them..
+back-slash (\)
+  - can be big on certain keyboards..
+  - in helix, runs a shell command (:sh ...)
+    - TODO: see quickrun
+    - though, less needed, as you'd likely just write (or generate with ai!) the functions with elisp..
+  - i think | was used by helix for piping a program on a selection..??
+    - it was a really interesting advanced function..
+    - c-c a |
+      - shell-command-on-region
+
+
+other big keys:
+
+caps-lock/search (on chrome os) is re-mapped to escape at os level
+
+tab
+  - NOTE: c/m-tab are often used by programs and window managers, possibly all major oses
+  - cycle menus, words, completions, and certain major-mode stuff (org-cycle)
+  - org uses it heavily
+    - including s-tab
+  - spc-x(/-spc) tab is really good too
+
+backspace might be open to being re-mapped
+  - maps to <DEL> by default
+  - thanks to D (backward-delete), may not need
+    - d, c-d, m-d all feel better than pressing backspace..
+  - c-<DEL> and m-<DEL>
+  - though, it's also nice to have a big ol' delete key too..
+    - at least while transitioning..
+
+return
+  - TODO: overlaps with c-j??
+  - org-mode makes a ton of use out of this one..
+    - new line, new list item, new header, etc. (org-return)
+  - i re-mapped this in helix for normal-mode only
+    - this turned out to be quite a satisfying key to press when i did this in helix..
+      - i used it as my own personal menu
+        - it contained much of c-c q
+          - (quit, save, restart, open/reload config, etc.)
+        - sometimes i'd put bindings in it temporarily, until i figure out a place for them, or more likely, figure out i don't need them: i just have to learn more about the editor's functionalities
+
+
+
+
+
+
+modifiers:
+
+control and alt keys mappings are swapped on windows and chrome os at os level
+
+(c)ontrol is the main modifier key to use
+
+(m)eta/alt provides an alternative modifier key to use
+  - NOTE: in helix and other terminal text editors, alt (no alt+shift) is reserved for terminal/tmux commands
+    - thus no need for a weird modifier key combo.. these two are enough
+  - these tend to be mapped to (alt)ernative functions
+    - i haven't even explored these yet..
+
+(c)ontrol + (m)eta
+  - i haven't even explored these yet..
+    - seems to be more code-oriented movement.. especially on C-M-? (don't know further down a key-sequence..)
+
+(c)ontrol + (s)hift
+  - was often used to denote the opposite action as control+key
+    - this notion was by me, not emacs
+      - this seems to have been replaced by meow-reverse (;)
+        - ..genius!!
+  - NOTE: this is usually un-bound in both terminal editors and emacs because terminals often prioritize the control modifier, making this input really unreliable
+    - newer terminal emulators such as alacritty and kitty may have worked around this problem..
+  - TODO: in emacs C-S-[key] maps to C-[key] as a fallback
+    - maybe a meow thing..
+  - this is generally open to re-map, but mostly limited to GUI-mode..
+
+right-control and right-alt are rarely ever used because i tend to use the modifier keys on the left-side
+  - TODO: really should fix this bad habit.. actually.. i have a lot of bad keyboard habits..
+
+super (windows/mac key) is left untouched
+  - linux kernal (and KDE Plasma) calls this meta, and alt remains alt
+  - though it's possible over-ride it, providing yet another great key
+    - better to over-ride the tab key instead
+  - NOTE: doesn't exist on chromebook's keyboards
+
+hyper is an extra option, though there isn't dedicated key for it..
+  - this sounds like the perfect replacement for tab/caps-lock/backspace
+
+shift also symbolizes extending selection
+  - S-[hjkl] all work as expected
+  - S-[arrow-keys] work too
+
+arrow-keys work as expected in emacs (thankfully!!):
+  - moves one char
+  - S- highlights
+    - works in combination with other modifiers:
+  - C-right/left moves by words
+  - C-down/up moves by paragraphs
+    - this one feels great!
+  - M-right/left  drag-stuff-right/left
+    - NOTE: i changed this to end/begin of line
+      - though, this one is actually really cool..!!
+      - maybe should update down/up to use drag-stuff-down/up!!
+        - TODO: C-M-down/up/left/right?? vs M- ..?
+    - though, because of the pop use of x/m + i/a, it's rarely needed
+    - c-x t transposes-lines
+  - M-down/up page down/up
+
+function keys
+TODO: i haven't even tried the function keys yet..!
+  - could use for toggling plugins (tree panel, terminal, build/run/de-bug, etc.).. but would i use it that often..?
+  - could use for display management (buffer/window/tab) too
+    - f1/f2 seems to be bound to previous/next buffer..
+      - TODO: change system keys to require using a modifier key?
+
+*** some ways to check bindings
+
+spc-?
+  - meow-cheat-sheet
+
+spc-h-b-t
+
+see [bindings-qwerty.el]
+
+*** normal-mode keys (no modifiers)
+
+NOTE: these bindings are amazing! i wouldn't change a thing!!
+
+see [meow docs TUTORIAL.org states keypad]
+
+compared to helix, notably lacks:
+  - v for visual-mode
+    - x to start it..?
+  - g for goto-mode
+    - *c-m- is certainly strange.. i might eventually just un-bind that entirely..*
+  - m for match-mode
+    - *replaces four keys?: [],.*
+  - z for view-mode
+    - though this is an existing emacs minor mode..
+    - possibly broken by meow bindings..??
+  - w window-mode
+    - ??
+
+**** un-bound
+  - `
+  - /
+  - \
+
+**** movement
   - hjkl
-  - g
-    - cancel selection, instead of ;
-  - w/e/b & W/E/B are much improved!
-  - i/a/A/I
-    - no need for o/O (open below/above) in vi
-  - z
-    - undo cursor position
-    - TODO: Z should be redo
-  - d/D
-    - reverse delete!! (alt to backspace)
-      - *TODO: try practicing this..?*
-  - s
-    - pro-tip: pressing s when nothing is selected kills to end of line!!: genius!
-  - n
-    - search last selection
-    - meow-search
-      - TODO: no meow-reverse-search function nor binding for N
-  - o
-    - (meow-block) seems like helix's extend_to_parent_node, but strangely seeks out the end of the next set of brackets first..
-      - ohhhhh, i think i understand.. it's made for lisp! this and O really is all you need.. emacs and lisp must have been incredibly productive back in the days..
-      - quicker than ,/.r/c
-      - maybe the major-mode re-binds this..?
-  - O
-    - (meow-to-block)
-  - [ begin [thing]
-  - ] end [thing]
-    - use this for select to end/beginning of line: [,l and ],l; removes the need for creating key-bindings for this in helix. though quite important keys, it makes sense to put them here
-  - , inner [thing]
-  - . outer [thing]
-    - replaces m (match) key-map of helix, which felt confusing 'n convoluted anyway.. having to press mim or mi(. using letters is much better
-  - m merge?
-    - seems to select the space between this line and the end of the last line, where after pressing s/kill would merge the two lines
-    - also places the cursor at the first-non-whitespace in the line, unlike x
-      - m, a
-      - m, i
-  - x
-    - x, a
-    - x, i
-  - ' repeat
+    - HJKL for shift selection
+
+  - NOTE: the default emacs movement shortcuts are retained:
+  - TODO: redundant, change it? or leave it, as that's the default emacs way..?
+    - c-f/c-b and c-n/c-p == hjkl
+    - m-f/m-b == w/b (and m-n/m-p aren't bound)
+    - *c-a/c-e* =/= x,i/x,a
+      - this one is acually useful
+        - c-a is interactive, jumping between first non-whitespace to beginning of line
+
+**** special
+  - ;
+    - reverse cursor position on selection from kakoune
+    - not only reverse cursor position, but reverses the direction of interactive selection!!
+  - -
+    - negative-argument allows you to do things in an opposite way too
+      - (- f a) will select up to a in the reverse direction
+        - though (f a ;) seems better seems more intuitive to me in this case.. can toggle the direction with ;
+
+  - '
+    - repeat
     - this is a blessing!! (it wasn't working in helix..)
     - f/t, '
       - find/till char, repeat
     - ]d, '
-      - next function, repeat
-  - ; reverse cursor position on selection from kakoune
-    - not only reverse cursor position, but reverses the direction of interactive selection!!
-  - r replace
-    - works as expected! (unlike helix..)
-  - TODO: N reverse-search missing?
+      - end of function, repeat
 
-  - unbound:
+  - <escape>
+    - ignore
+      - meow-escape
+
+**** insert
+  - i/a & I/A
+    - no need for o/O (open below/above) in vi
+
+**** selection
+  - most of these activate selection
+  - most of these expand current selection
+    - arrow keys (with modifiers)
+    - e/b, E/B
+    - ]/[
+    - ,/.
+  - numbers (123456789) expand selection by repeating a function n times
+
+  - g (; in evil)
+    - cancel selection
+    - TODO: repeat of escape..?
+      - meow-cancel-selection vs meow-escape
+      - as long as caps lock is escape, both are ergonomic to me..
+  - z
+    - undo selection
+    - TODO: Z should be redo..? hmm..
+
+
+  - x
+    - x i/a
+    - x s
+    - x ; x
+  - m
+    - merge
+    - seems to select the space between the beginning of line and the end of the last line
+      - press m again to select the space between two lines, regardless of where you cursor is
+    - m s
+      - merges the two lines
+    - also places the cursor at the first-non-whitespace in the line, unlike x
+      - m a
+        - first non-whitespace
+      - x i
+        - beginning of line
+      - m i ~= x a
+        - end of line
+
+
+  - w/e/b & W/E/B are much improved!
+
+  - [ begin [thing]
+  - ] end [thing]
+  - , inner [thing]
+  - . outer [thing]
+    - replaces m (match) key-map of helix, which felt confusing 'n convoluted anyway.. having to press mim or mi. using letters is much better
+    - use these for select to end/beginning of line(??): [,l and ],l; removes the need for creating key-bindings for this in helix. though quite important keys, it makes sense to put them here
+
+**** seek (and select)
+these will break the current selection (and create a new one), instead of expanding it
+
+  - v visit
+    - it's search filter is very picky: case-sensitive, symbols attaches to the beginning or end..
+      - though maybe difficult to remember symbols, it makes it really good to narrow down choices
+    - replaces / in vi
+    - searches and selects
+      - spc-s-s/S only searches
+    - (then press n / ; n)
+      - saves to regex-kill-ring
+    - TODO: docs mention a way of setting regex for it..
+    - TODO: haven't figured out how visit differs from isearch-   forward/backward (c-s, c-r)
+      - actually, these seem like wayyy more complicated interactive functions.. full of even more emacs-styke key-bindings
+
+  - o
+    - meow-block
+      - seeks out the next pair of closing-symbols, and goes to the end of it
+        - great to seek function parameters
+        - also great to seek the end of functions
+          - perfect for editing comments
+        - must be incredible for lisp..!!
+        - inner/outer/begin/end thing doesn't seek: they assume you are in the thing
+
+      - TODO: pressing it again doesn't hop to the next block
+  - O
+    - meow-to-block
+      - can press again
+
+  - f/t
+    - find/till
+
+**** delete shit
+  - d/D
+    - reverse delete!! (alt to backspace)
+      - *TODO: try practicing this..?*
+      - *TODO: this frees backspace!!*
+  - s
+    - pro-tip: pressing s when nothing is selected kills to end of line!!: genius!
+      - no need for c-k
+  - c
+    - change
+      - delete and insert
+        - only saves one key press
+
+**** search 'n replace
+  - n
+    - search last selection
+      - expected to use ; for reverse search
+  - r
+    - replace
+      - works as expected! (unlike helix..)
+  - (see R, G, Y)
+
+  - un-bound:
     - q, T, F, V, <, >, /, {, }, :, ", _, =, \, |
       - avoids mapping to non-nmeumonic(?) symbols
 
-  - *advanced meow functions:*
-  - v visit
-    - *TODO: hmmm, a very simple search buffer by word?? it's an interesting filter though.. try it out!*
-      - not sure when i'd use this over spc-s-s/S..
-    - replaces / in vi
+**** yank (copy) 'n paste, or replace, undo
+  - TODO: i don't understand why this notion is reversed in meow..
+    - meow-save 'n meow-yank
+  - p
+    - paste
+  - (see P under advanced)
+  - y
+    - yank
+  - r
+    - replace
+  - u
+   - undo
+     - kinda just tacked this one on here..
+
+  - G
+    - grab *secondary selection*
+      - hooooooly shiiiit
+  - R
+    - *swap with grabbed/secondary selection*
+  - Y
+    - copy primary selection and paste over secondary selection
+      - great in case you are in the area you want to paste in first, a sort of reverse copy/paste
+
+**** *advanced meow functions:*
+
   - U
     - *undo in selection*
+    - TODO: maybe bind to vundo instead
   - P
     - *yank from kill ring* (meow-yank-pop)
       - stores killed and yanked text
-  - X
+      - seems to store system-clipboard yanked texts too!!
+      - it's also interactive, so you can preview it in the buffer..!!
+
+  - X and Q
     - meow-goto-line
+    - TODO: can unbind these..
 
 
   - G
@@ -299,6 +514,7 @@ TODO: play with all the main spc bindings
     - meow uses god-mode which binds spc-m to meta menu
     - spc c spc m
       - found in doom bindings..
+*** insert-mode keys
 
 x and w
   - triggers meow-visual-line / visual-line-mode
@@ -312,20 +528,30 @@ basic navigation is redundant:
 
 after selecting something (with anything: x, w, W, [p, ].), can press any number to select that number of things
 
+everything else relies on emacs original bindings which are on:
+see [c-key] and m-[key]
+and other big keys
 
 *** [f-keys]
 
-NOTE: with a with a chromebook, i re-bind the search key (below tab) to escape, which blocks the default search+function key binding
-  - so, i can't use these anyway! which is good, as i really shouldn't..
+NOTE: with a chromebook, i re-bind the search key (below tab) to escape, which blocks the default search+function key binding
+  - must use escape + [f-key]
 
-cam keep these empty for project specific bindings, like calling scripts, ci/cd, etc. project actions
+on my chromebook
+  - f1/f2 have left/right arrows etched on them, some kind of special back/forward key
+    - <XF86backward>, <XF86forward>
+    - these are auto-magically binded to next/prev buffer!!
+      - can be used to bind to next/prev window, workspace/tab, etc.
 
-*maybe intentionally left empty by meow.. because it's neither mneumonic nor easy to remember*
-  - c-k
-    - seems to cover the standard f-key bindings anyway..
-      - TODO: check doom for f-key bindings
-        - likely the normal vs-code stuff..
-  - indeed, it's better to not bind anything
+
+i think doom uses these to toggle various modules, such as treemacs (file/code explorer pane), minimap?, etc.
+  - see [doom bindings file]
+  
+  
+can keep these empty for project specific bindings, like calling scripts, ci/cd, etc. project actions
+
+  
+quite minimal..
 
 **** only these two are useful:
 f1
@@ -337,53 +563,75 @@ f12
       - version control menu
       - line and column menu
 
-**** TODO the rest can be unbinded:
+**** the rest can be unbound:
 f2
   - 2C 2 column functions
   - c-x 6
+    - TODO: i dunno about this one.. loll
+      - maybe ask the emacs folks..
 f3
   - define keyboard macro
-  - NOTE: redundant, can remove
+    - makes sense to be away from the normal keys..
+  - NOTE: possibly redundant, can remove
     - c-x (
-      - strange
-   - maybe it's a good place, to allow you to use any other key, including key-chords, within the macro..?
+    - c-x )
+      - strange place..
 f4
   - execute keyboard macro
     - c-x k k
       - again in normal mode
     - a little too deep..
 
-
 *** s-[key]
 
-s-right/left
-  - highlight char right/left
+see meow-cheatsheet
 
-s-up/down
-  - highlight going up or down
-    - one of those simple things that helix's defaults failed to do
+see [normal-mode keys]
+  - many are used by meow-mode's normal-mode
+
+s-hjkl (HJKL)
+
+s-[arrow-keys]
 
 *** c-[key] and m-[key]
+
 TODO: i haven't even got to these yet..!
+
+these contain the original emacs bindings
+
+these are generally consistent across modes (normal and insert) in meow
 
 **** some basics:
 
-c-k
-  - kill-line
-c-j
-  - return-and-maybe-indent
-  - same as ret
-    - TODO: seems redundant.. can try using it instead of return tho..
+key-chord trigger keys:
+c-x
+c-c
+c-h
 
-c-l
-  - toggle center/peek bottom/top depending on cursor position
-    - a very interesting key..
+c-npfb
+  - emacs basic movement keys
 
 c-a
   - beginning-of-line
     - this combined with f simplifies cusor placement
 c-e
   - end-of-line
+- these two are immensely useful..
+    
+c-hjkl:
+  - these suck
+(c-h)
+  - (help-map)
+c-k
+  - kill-line
+c-j
+  - return-and-maybe-indent
+  - same as ret
+    - TODO: seems redundant.. can try using it instead of return tho..
+c-l
+  - toggle center/peek bottom/top depending on cursor position
+    - a very interesting key..
+
 
 c-ret
   - +default/new-line-below
@@ -398,24 +646,35 @@ m-down/up
   - page down/up
 
 m-right/left
-  - *swap with previous/next word*
-    - *TODO: this might be the first binding i want to change.. i never use this..?? and it messes me up!*
+  - was strangely transpose
+    - *swapped with previous/next symbol*
 
 c-/
   - undo-fu-only-undo
-  - vs u for meow-undo
+  - use u for meow-undo instead
 c-s-/ or c-?
   - undo-redo
-  - TODO: def need a new binding for this..
-    - U?
-      - U for meow-undo-in-selection
-        - *hmmmm.. that's quite powerful actually.. wow..* i think i'll keep that..!
-  - *vundo is really useful too*
-    - interactive undo/redo timeline
+  - moved to U
 
 **** others
 
 [empty]
+
+
+
+
+
+
+
+
+
+*** mini-buffer
+*PRO-TIP: c-s to show search history*
+*PRO-TIP: m-s to use regex search*
+
+press the initial key-chord, then, in the popup mini-buffer, press c-h to fuzzy search it
+  - TODO: 
+    
 ** modules
 *** magit
 github desktop, or likely any other gui, seems to be much simpler to grasp and use.. However, upon my first comparison, *it seems magit show far more details in the diff changes, whereas github desktop glances over it*, just highlighting the whole line red or green. So, it may be worth playing with some more..
@@ -444,18 +703,36 @@ capital keys for actions, for safety reasons
   - R, D
     - R is mv, use it for rename, move, cut/paste
 
+*** flycheck (syntax checker)
+just use the gui, mode-line, click on the little error/warning/info icons on the botttom right
 
-* leader keys
+c-c ! to trigger the menu
 
-NOTE: read [[file:/home/ra/.doom.d/modules/editor/meow/config.el][meow config]]
+*** vundo
 
-NOTE: SKIP TO [meow leader keys]
-  - you don't need to know the rest (doom, original emacs)
+TODO: mark, diff??
+
 
 ** god-mode/meow
 
 adds an alternate spc key-chord for modifier key combos
   - NOTE: some of these are hidden from the meow menu..
+see [meow docs TUTORIAL.org under keypad]
+
+
+TODO: get my answer from https://www.reddit.com/r/emacs/comments/1oacbht/halp_im_drowning_by_keybindings_doommeow_includes/
+
+adds space as an alternate key to trigger key-chords, as opposed to modifier key combos
+
+*NOTE: all of these are hidden from the meow spc menu..*, hence it being quite small.. i guess it assumes you remember these..??
+
+
+
+from meow's readme.org
+ - when a key other than =x= / =h= / =c= / =m= / =g= is pressed in Keypad state, it is directly looked up in the leader keymap. This module sets =doom-leader-map= (bound to =C-c= by default) as the leader keymap. So, for example, =SPC s p= produces =C-c s p=.
+
+see [[file:/home/ra/.doom.d/modules/editor/meow/config.el][meow config]]
+  - link to where doom binds to meow..??
 
   - spc-spc
     - set mark
@@ -570,11 +847,6 @@ c-c, l / spc-l (meow)
 - spc-spc
   - binded to c-spc
     - set-mark-command
-
-  
-
-
-
 
 
 **** meow leader keys:
@@ -692,9 +964,6 @@ spc (meow)
 
 *** some useful key chord bindings from the original emacs bindings
 
-TODO: bind vundo!!
-
-
 TODO: merge with above..
 
 
@@ -778,6 +1047,7 @@ x/spacemacs
     - sounds like 'oh my zsh', which is *not* good
 
 prelude
+  - TODO: worth trying, now that you can try emacs with different configs via a flag
   - way more stripped down, much closer to vanilla emacs
   - Prelude is basically a very light starter kit, whereas doom is a whole garage full of tools. (This does not mean doom has more utility, it just comes with more going on out of the box)
   - recommended by that one emacs guy from noisebridge
@@ -823,7 +1093,6 @@ add a shortcut
 
 https://gist.github.com/rahil627/e9d150adc8dcc36846f5f6d0a4465665
   - my gist on installing doom for chromeos, including building emacs 29
-
 
 ** notes on how to maintain doom (+ post-install notes)
 
