@@ -133,21 +133,20 @@ pony
 classics:
 *haskell*
   - *to experience the magic of functional paradigm*
-  - *native compilation and garbage-collected!!* i wonder why it's not so practical..
+  - *native compilation and garbage-collected!!*
 *lisp (common lisp sbcl via lem or emacs-lisp via emacs)*
+  - then can compare with ruby
+    - (which also provides an interactive run-time experience)
   - try CLOG
     - like red but for web
+  - *use doom emacs (and therefore elisp)*
+  - use helix with the scheme plugin system (maybe there's a git branch..??)
+  - try lem again (scbl)
   - *try sbcl*
     - *try it for instances when i'd reach for a native-compiled lang*
-    - a very interesting alternative to C and Go, with similar performance but infinite power
-  - *use doom emacs (and therefore elisp)*
-  - use scheme in helix (maybe there's a git branch..??)
-  - try lem again (scbl)
+    - a very interesting alternative to C and Go, with similar performance but infinitely more expressive power
   - **true zen programming**
     - god-like macros, "interactive" dev experience including debugging, 'n more!
-  - perfect for scripting extension languages
-    - similar to ruby, can easily make your own speghetti world, but with even more power
-    - lacks libraries, especially when compares to the main systems languages
   - looking at a basic cli program, i can see why lisp might not be the way..
     - https://stevelosh.com/blog/2021/03/small-common-lisp-cli-programs/
     - maybe roswell..?
@@ -159,6 +158,7 @@ classics:
   - possibly provides the best programming experience
     - the dream is to be able to make games with it
     - "Smalltalk, most readable language, you can alter *any* part of it while it's running making the killer dev experience"
+      - can't do that with any scripting lang..?
   - **glamorous tool-kit**
 
 
@@ -295,7 +295,9 @@ x/bash and/or powershell
   - batch commands / extremely simple scripts (in bash)
   - basic shell functions (in bash)
     - might as well use ruby/python here too..??
+    - could just generate bash with ai
     - *TODO: or emacs/eshell/emacs-lisp??*
+      - if eshell is made in lisp, can't just use e-lisp?? :o
   - (use bash over alts like zsh/fish/kitten for portability)
 ruby > python (> shell langs) (> go)
   - (alt for shell language)
@@ -361,6 +363,10 @@ python
 
 ** haxe the swiss-army-knife -> jai
 
+TODO: when haxe is running in a VM, how does it differ from any other scripting language??
+  - there's introspection, etc.
+  - just need to make an emacs plugin..??
+
 C
   - core
 haxe
@@ -396,27 +402,30 @@ jai
 
 
 C
-  - core / "C-extensions"
+  - core
     - game-engine
-dragonruby (an mruby fork, with C "extensions")
+    - high-performance libs (C-extensions)
+    - many language impls, including CRuby
+    - embedded devices
+dragonruby (an mruby fork)
   - *game scripting*
-ruby (and C core and "extensions")
+ruby
   - *web* (tiny to large projects), *scripting*, *shell magic*
 elixir
   - *web* (scalable to massive traffic), *concurrency*, *functional-paradigm*
 lisp (common lisp, scheme, emacs lisp)
-  - text editor extension (*emacs*, helix)
-    - emacs is a dynamic run-time!!
+  - text editor extension (*emacs*, *helix*)
+    - emacs is a dynamic run-time machine!!
   - *very high performance* native-compiled binary (scbl)
 mruby, "mruby/C"?, picoruby (and C)
-  - embedded, extension lang?
+  - embedded extension lang..??
     - only if that program is written in C..
 
 
 actually.. elixir/sbcl would be a wild web combo..
   - elixir for web back-end
   - scbl for high-performance, not-completely-functional areas
-  - ruby for the rest
+  - (ruby for the rest)
 
 *** the lost dream (rip crystal)
 although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they wouldn't share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Beyond syntax, they aren't very much alike. Crystal is closer to Haxe, relying on macros for meta-programming. Elixir is more functional, with some dynamic magic of Ruby to it, but stuck with a VM. Only Ruby (and mRuby) seems to have it's own unique style of built-in meta-programming. Thus, it's better to just stick to Haxe 'n Ruby for most cases, and keep Elixir for web, as a special-case.
@@ -766,6 +775,7 @@ owner
 
 ** ancient gods, but not popular (not enough to maintain pop libs)
 *** Lisp
+  - UPDATE: a little rough to read, but wayyy better than learning the syntax of yet another language!! Actually, i may prefer it over most languages.. especially when used as a scripting extension lang. The core of the program however, may be nice to have something more C-like..
   - second-oldest language, after fortran
   - **at the same the the simplest syntax yet the most powerful language, still!**
     - **a history of programming languages reveal that they are only *just* now catching up to Lisp, and still, they've only caught up to it's features, but not it's implementation which allow the real wild stuff (see below), in addition to creating a lot more complex syntax**
@@ -774,20 +784,33 @@ owner
   - **the simplest sytax**: '(function arg)', that's it!
     - thus **easy to parse / interpret / compile**
   - **"interactive programming"**
-    - evaluate regions of code, compile regions of code into the lisp image, etc.
+    - eval/compile regions of code into the run-time
+    - introspect all functions, vars, libs easily
+      - this allows editors (emacs) to provide info upon hover
+    - you're basically programming from within the program..
     - **"interactive debugging"**
       - aren't these common to all dynamic/run-time langs?
+  - *perfect for use as a scripting extension language*
+    - text editors, games, big systems programs, etc.
   - can be used for everything??:
     - scripting, systems, embedded, and functional!
     - *the problem seems to be that it gets difficult to maintain once too large*
-  - "Yes, they are different languages, working atop different platforms. They have different semantics, vastly different core libraries, etc. Yet at the same time, somehow, there's little mental overhead when switching between them.
+      - *similar to ruby, can easily make your own speghetti world, but with even more power*
+  - *lacks libraries, especially when compared to the main systems languages*
+  - "*Yes, they are different languages, working atop different platforms. They have different semantics, vastly different core libraries, etc. Yet at the same time, somehow, there's little mental overhead when switching between them.*
 
-    I don't have any difficulties moving between Fennel, Clojurescript, Clojure, LFE, Clojure-Dart. But if I had to manage writing code and maintain multiple projects in Lua, Javascript, Java, Erlang and Dart - I would claim that my name is Guy Stele Jr. and I am a very smart programmer. Alas, I'm not that smart, that's why I chose Lisp."
+    *I don't have any difficulties moving between Fennel, Clojurescript, Clojure, LFE, Clojure-Dart.* But if I had to manage writing code and maintain multiple projects in Lua, Javascript, Java, Erlang and Dart - I would claim that my name is Guy Stele Jr. and I am a very smart programmer. Alas, I'm not that smart, that's why I chose Lisp."
+    - covers javascript, jvm, beam, dart (ew), lua (why??)
+      - just lacking clr?
+    - embeds to C (many schemes)
+    - is a native systems lang itself (cl, racket)
+      - ..that really is everything..!!
+        - *but i also think haxe's solution may be better..*
 
   TODO: merge with above
     - Lisp pioneered many ideas in computer science, including tree data structures, automatic storage management, dynamic typing, conditionals, higher-order functions, recursion, the self-hosting compiler,[8] and the read–eval–print loop.[9]
     - The name LISP derives from "LISt Processor".[10] Linked lists are one of Lisp's major data structures, and Lisp source code is made of lists. Thus, Lisp programs can manipulate source code as a data structure, giving rise to the macro systems that allow programmers to create new syntax or new domain-specific languages embedded in Lisp.
-      - and so, everything instruction is within parenthesis :o
+      - and so, every instruction is within parenthesis :o
 
 **** dialects
 ***** **Common Lisp**
