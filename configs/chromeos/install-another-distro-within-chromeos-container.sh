@@ -1,4 +1,10 @@
 
+# WARNING: NOTE: don't do this again.. it's flaky, not worth messing with. also, the default distro Debian works perfectly fine.
+#   - often-times the container wouldn't be recognized by the vm (lxc), requiring one to restart the vm several times. Then, often-times, the chrome terminal app wouldn't work..
+
+# if you do, trying re-using the default container name: penguin
+#   - the vm/lxc setup seems to be hard-coded to use that name, even if you change it, leaving the container that was originally labeled penguin in limbo
+
 https://wiki.archlinux.org/title/Chrome_OS_devices/Crostini
   - main article to follow
   - TODO: update this

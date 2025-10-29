@@ -3,6 +3,8 @@
 # just a script to install emacs and a few other things
 # fuck the rest of the terminal crap, emacs is all i need
 
+# may have moved this to my emacs notes..
+
 # just install github desktop for now..
 # downlaoad/wget from github.com/shiftkey/desktop/releases
 # - NOTE: CAUTION: 500mb!! maybe better to learn magit..

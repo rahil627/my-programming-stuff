@@ -35,21 +35,21 @@
        ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
        ;;(emoji +unicode)  ; 🙂
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW ; NOTE: doom-tokyo-night's bold colors look great!
-       ;;indent-guides     ; highlighted indent columns
+       ;;indent-guides     ; highlighted indent columns ; NO: it's a little jarring.. i'd rather not.. much prefer the clean, un-cluttered, zen space. treemacs-indent-guides-mode is also an eye-sore, even with a beautiful theme! i'm surprised this isn't included natively..
        ;;ligatures         ; ligatures and symbols to make your code pretty again
-       minimap           ; show a map of the code on the side ; TODO: trying..
-       modeline          ; snazzy, Atom-inspired modeline, plus API
-       nav-flash         ; blink cursor line after big motions
+       ;; minimap           ; show a map of the code on the side ; NOTE: spc t m, pretty neat, but i didn't see any benefit of this on a small laptop.. also, it doesn't react to org (nor code?) folding.. 
+       modeline          ; snazzy, Atom-inspired modeline, plus API ; NOTE: possibly over-kill, though a mode-line has always been in emacs.. maybe even came from it..!
+       nav-flash         ; blink cursor line after big motions ; NOTE: it's these small interactions that really make a difference
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       tabs              ; a tab bar for Emacs ; TODO: try it! hmm, may have to choose between this and workspaces..
-       treemacs          ; a project drawer, like neotree but cooler ; TODO: try it!
+       tabs              ; a tab bar for Emacs ; NOTE: this may be over-kill, but it's pretty, and seems to be project-based TODO: test native tabs module, especially tab-line-mode
+       treemacs          ; a project drawer, like neotree but cooler ; NOTE: it provides great integreation with project(tile) and workspaces, giving you a view of both, depending on what buffer you are on. otherwise, it'll still show the cwd
        ;;unicode           ; extended unicode support for various languages
        (vc-gutter +pretty) ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        ;;window-select     ; visually switch windows
-       workspaces        ; tab emulation, persistence & separate workspaces
+       workspaces        ; tab emulation, persistence & separate workspaces ; TODO: hmmm, may be to choose between the new native tab module vs this traditional concept..?? 
        zen               ; distraction-free coding or writing
 
        :editor
@@ -57,27 +57,27 @@
        (meow +qwerty) ; seem to include a packages.el with meow in it.. ; NOTE: this package was added by me, not in doom
 
        file-templates    ; auto-snippets for empty files
-       fold              ; (nigh) universal code folding
-       ;;(format +onsave)  ; automated prettiness
-       ;;god               ; run Emacs commands without modifier keys ; NOTE: included within meow, don't activate
-       ;;lispy             ; vim for lisp, for people who don't like vim
+       ;;fold              ; (nigh) universal code folding ; crucial, after using org-mode..
+       (format) ; +onsave ; automated prettiness ; TODO: can try, but not +onsave!! NOTE: there's also a set of functions for lint (see GUI menu by clicking on the language in the mode-line).. what's the difference..??
+       ;;god               ; run Emacs commands without modifier keys ; WARN: don't activate included within meow 
+       ;;lispy             ; vim for lisp, for people who don't like vim TODO: try iy, will it bind over meow? seems like an interesting set of key-bindings.. very code-centric.. TODO: could try to generalize it..
        multiple-cursors  ; editing in many places at once ; TODO: main key-chord (c-x m) is busted by meow's keypad input (m inputs meta key)
-       ;;objed             ; text object editing for the innocent
-       parinfer          ; turn lisp into python, sort of ; TODO: try it!
+       ;;objed             ; text object editing for the innocent TODO: very interesting new concept: object-based movement?
+       parinfer          ; turn lisp into python, sort of ; TODO: try it! ..just dims parenthesis..? lmao!! that actually may be all you need.. to prevent sight paralysis
        ;;rotate-text       ; cycle region at point between text candidates
-       snippets          ; my elves. They type so I don't have to
+       snippets          ; my elves. They type so I don't have to ; NOTE: might include default snippets for many languages.. is this the module behind pressing [keyword] tab..??
        word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
-       ;;eww               ; the internet is gross
-       ibuffer           ; interactive buffer management ; TODO: didn't this already exist..??
+       ;;eww               ; the internet is gross ; TODO: need to (re-)compile emacs with libxml?? urgh.. sudo apt install libxml2-dev .. but i'm def not compiling emacs..!! doom already has a bunch of config flags.. see c-h v system-configuration-features to see compiler flags and linked third party libs
+       ibuffer           ; interactive buffer management ; NOTE: i think this module is native to emacs, but this updates it greatly by re-organizing buffers by projects (and possibly workspaces) 
        undo              ; persistent, smarter undo for your inevitable mistakes ; TODO: vs vundo??
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
-       eshell            ; the elisp shell that works everywhere
+       eshell            ; the elisp shell that works everywhere ; NOTE: can just use (async-)shell-command (m-! and m-&) and comint for interoreters instead.. then there's nothing to load.. it uses the default shell ; TODO: not sure what benefit one gets with the shell being wrriten in emacs lisp, save the consistency of being able to write all of your batch files, functions, etc. in lisp..
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
        ;;vterm             ; the best terminal emulation in Emacs
@@ -106,12 +106,12 @@
        ;;prodigy           ; FIXME managing external services & code builders
        ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
-       ;;tree-sitter       ; syntax and parsing, sitting in a tree... ; TODO: test vs ruby
+       tree-sitter       ; syntax and parsing, sitting in a tree... ; NOTE: possibly can slow things down.. TODO: test, TODO: does it it have tree-based movements?? TODO: need to install grammars
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
        (:if (featurep :system 'macos) macos)  ; improve compatibility with macOS
-       tty               ; improve the terminal Emacs experience ; TODO: TEMP: until gui is fixed
+       tty               ; improve the terminal Emacs experience
 
        :lang
        ;;agda              ; types of types of types of types...
@@ -165,7 +165,7 @@
        ;;raku              ; the artist formerly known as perl6
        ;;rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
-       (ruby);+rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"} ; TODO: does this include robe?
+       (ruby);+rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"} ; NOTE: seems to include robe (connect to irb / run-time), rspec, bundler, etc.
        ;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
@@ -174,7 +174,7 @@
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       ;;web               ; the tubes ; TODO: ??
+       web               ; the tubes ; NOTE: html, css, etc., maybe basic js too? though the lsp impl would surely be superior..
        yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
 
@@ -193,3 +193,4 @@
        :config
        ;;literate
        (default +bindings +smartparens)) ; NOTE: needed for meow
+

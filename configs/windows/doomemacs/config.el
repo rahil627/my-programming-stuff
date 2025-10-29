@@ -4,13 +4,20 @@
 ;; sync' after modifying this file!
 
 
+;;; some helpful bindings..
 ;; doom/reload to reload private config
 ;; c-h r r / spc q r (my alt binding)
 
 ;; doom/restart-and-restore spc q r (R in my config)
 ;;   - not sure of another way to reset to the original run-time state..
 
-;; NOTE: this file serves as a play-ground for LISP~~!!
+;; backup doom config files
+;;   - c-c f C
+;;     - doom/copy-this-file
+
+
+
+;;; NOTE: this file serves as a play-ground for lisp~~!!
 
 ;; eval line/region
 ;; spc o r
@@ -18,44 +25,42 @@
 ;; spc e / spc l e
 ;;   - to quickly try something
 
-;; search through functions
-;; spc l g f
+;; spc l g
+;;  - introspect (via search engine) through libs, functions, vars
 
-;; TODO: spc l for elisp is all fucked up :/
-;; so much for a good elisp env..
+
+
+
+
+;;; some TODO from emacs.org
 
 ;; TODO: install monofoki font (on chromebook)!!
 
-
-
-;; some TODOs from emacs.org
-
-;; * TODO config
 ;; c/fix emacs gui for chromebook
 ;;   - wayland display error :/
-;;     - i think it worked after running it via user instead of using sudo!!??
+;;     - NOTE: i think it worked after running it via user instead of using sudo!!??
 
 ;; set-up git
 ;;   - i think `gh auth setup-git` doesn't work with magit.. though, there is a gh cli package: consult-gh
 ;;     - TODO: setup git
 ;;   - sync repo
-;;     - TEMP: installed github desktop, so i just don't have to worry about version control
+;;     - TEMPFIX: installed github desktop, so i just don't have to worry about version control
 ;;       - can slowly transition to magit
 
-;; backup doom config files
-;;   - TODO: create an elisp function to do this
-;;     - asks you where to save it
-;;       - similar to how dired-do-copy works
 
 ;; load org repo on start
 ;;   - TODO: merge my-programming-stuff into main notes?
 ;;     - TODO: currently using my-programming-stuff as my temp org folder
 
+;; re-sort key-bindings by letters first, special keys, symbols, numbers last
+
 ;; *sort m-x functions by which has been bound*
 ;;   - in order to make it more intuitive to learn a mode
+;;   - maybe expensive to do every-time you open it..
 ;;   - no clue how to order them by use..
 ;;     - plain keys, keys with modifiers, others?
 
+;; *compare 'n combine meow/default and doom key-chords and leader keys*
 ;; *try to merge doom's evil key-bindings for many other places:*
 ;;   - *completion in mini-buffer*
 ;;     - ??
@@ -69,7 +74,6 @@
 ;;     - slowly..
 ;;   - etc.
 
-;; *compare 'n combine meow/default and doom key-chords*
 
 ;; update org tags: TODO, OKAY, YES, etc.
 
@@ -82,32 +86,94 @@
 
 
 
-
-; NOTE: added by me!
-(defun ra/post-config ()
-  ; called after doom's defaults
-
-
     
-  ;; ERRORS and TEMPorary FIXes:
+  ;;; ERRORs and TEMPorary FIXes:
 
-  ;; FIXME: something wrong with nongu elpa..
+  ;; TODO: merge doom trouble-shooting notes from emacs.org
+
+  ;; doom
+  ;;   - runs help
+
+  ;; doom-sync
+  ;;   - this one is quick..
+
+  ;; doom sync -u
+  ;;   - this re-fetches all, takes longer, < 1 min
+
+  ;; doom sync --rebuild && doom sync -u
+  ;;   - re-builds all packages, 8 mins on an ancient chromebook
+  ;;   - watch out!.. can break everything if it doesn't complete..
+
+  ;; doom sync -gc
+  ;;   - used to be 'doom purge'
+  ;;   - can do this once in a while to clean shit up..
+  ;;   - removes packages repos and "grafts" them..?
+  ;;   - compacts package repos?
+  ;;     - in case you're low on space..
+  ;;     - but in my experience, barely any was saved.. 40mb
+
+
+  ;; for common errors about packages:
+  ;;   - https://github.com/doomemacs/doomemacs/issues/7482
+  ;;     - "For me, usually a combination of these commands usually works. Sometimes I'll need to repeat these multiple times"
+  ;; doom sync -u
+  ;; rm -rf ~/.config/emacs/.local/straight/repos/[repo-with-error]
+
+
+  ;; in addition to the above, other things to try:
+  ;; doom env clear
+  ;;   - can rebuild with doom env
+  ;; (setq native-comp-jit-compilation nil) ;; just eval this while trouble-shooting, don't un-comment!
+  ;;  - temporarily turn off native comp
+
+
+
+
+
+
+
+
+  ;; NOTE: the following errors all fixed themselves after breaking my build via doom rebuild failing, then fixing it by running doom sync
+
+  ;; TODO: i accidentally renamed the git remote uri "y" for the dirvish (code-folding) package
+
+  ;; ~doom first hook error git-commit
+  ;; user-error: Error in a Doom startup hook: doom-after-init-hook, doom-run-first-hooks-if-files-open-h, (doom-hook-error doom-first-file-hook global-git-commit-mode (file-missing "Cannot open load file" "No such file or directory" "cond-let"))
+  ;; Error: failed to incrementally load git-commit because: (file-missing Cannot open load file No such file or directory cond-let)
+
+  ;; something wrong with nongnu package..
   ;; from log: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
-  ;;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3") ;; nope, breaks everything..
 
-  ;; FIXME: error on ws-butler-mode..??
+  ;; error on ws-butler-mode..??
   ;; did emacs partially update..?? :/
   ;; look for this in the ~/.doom.d/
   ;; i temporarily commented it out..
   ;; (use-package! ws-butler
+  ;; TODO: ensure i un-commented this..
+
+  ; TEMPFIX: i dunno why this began turning on..
+  ;(global-whitespace-mode -1)
+
+
+
+
+
+
+
+
+
+
+; NOTE: added by me!
+(defun ra/load-config ()
+  ; called after doom's defaults
+  (ra/init-config)
+  (ra/bind-keys)
+
+)
+
+(defun ra/init-config ()
 
   
-  ; FIXME: TEMPFIX: i dunno why this began turning on..
-  (global-whitespace-mode -1)
-
-
-
-
   ; turn off some shit i don't use
   ; maybe better to start a fresh config, lol..
 
@@ -131,19 +197,24 @@
   (setq default-directory "/home/ra/my-stuff/repos/")
     ; NOTE: running doom with sudo would make ~/ == /.root/
 
-  ; try to remove all pop-up delays
-  (setq meow-keypad-describe-delay 0)
-    ; makes it feel wayyyy more snappy!! :D
-    ; TODO: still a funky delay when i change buffer using the keypad as opposed to direct key-binding..
-    ; TODO: still have a delay for c-x, c-c..
-    ;   - i can't find this under vars.. :/
 
+  ;; meow
   ;; see other vars listed in CUSTOMIZATIONS.org
   ;; meow-expand-hint-remove-delay ;; i think the number hint..
   ;; meow-use-clipboard ;; use system clipboard
 
+  ; try to remove all pop-up delays
+  (setq meow-keypad-describe-delay 0)
+    ; makes it feel wayyyy more snappy!! :D
+    ; TODO: still a funky delay when i change buffer using the keypad as opposed to direct key-binding..
+
   (setq which-key-idle-delay 0.1)
     ; used by doom for key-binding pop-ups
+  
+  ;; TODO: show all keys
+  ;;   - i found this function, but no clue, as emacs is currently broken, and so i can't use c h v properly.. :/
+  ;;     - though, i did discover this when emacs was broken.. so..
+  ;;(setq which-key-show-remaining-keys 1.0)
 
 
   (+global-word-wrap-mode) ; vs toggle? or run global-word-wrap-mode after done loading all buffers..??
@@ -165,10 +236,19 @@
     ; also nice to have space for the pop-up bindings menu
     ; spc-t-z/Z
 
-  (tab-bar-mode)
+  ;;(scroll-bar-mode)
+  ;;  - would be nice, but looks hideous!! :/
+
+  ;; (tab-line-mode)
+  ;;   - 1 tab for each buffer
+  ;;     + tiny buttons to scroll right/left
+  ;;   - native??
+  ;;   - tiny amount of space too..
+  
+  ;; (tab-bar-mode)
     ; new: still testing
     ;   - TODO: doesn't save upon exiting / quicksave
-    (desktop-save-mode 1)
+    ;; (desktop-save-mode 1)
     ;  - my attempt to save tabs upon close
     ;  - fucks up full-screen / zen on start..
     ;  FIXME: is this toggling whitespace-mode for some reason!!??
@@ -196,34 +276,24 @@
     ; really need bind tab-next
     ;   - ah well, time to use the touch-pad for something!
 
-  ; workspaces seem fine too, and already binded by meow..
+  ; workspaces seem fine too, and already bound by meow..
   ; it's just lacking a persistent display..
 
 
-  ; TODO: not sure what happened to treemacs.. :/
-  ;   - need to run doom/reload once i have internet again
-  ;   - might not have enough space..??
-
-  ; TODO: not sure what happened to parainfer.. :/
 
 
-  (ra/bind-keys)
+  ;; if you use the "tabs" module under ui in doom
+  ;;   - smells like an overkill thing.. watch out.. but beautiful with my current theme..!!
+  ;; (centaur-tabs-mode t)
+  ;;   - NOTE: doom turned this on for me automatically last time..
+  ;; (setq centaur-tabs--buffer-show-groups t)
+  ;;   - TODO: try this one out..
+  ;; (centaur-tabs-enable-buffer-reordering t) ;; vs 'left
+  ;;   - it's rather smart ordering..
+  ;;
+  ;; then bind centaur-tabs-forward/backward
 
 
-  ; TODO: TEMP: JUST TESTING IN REPL..
-  ;; (meow-normal-define-key ;meow-define-keys
-  ;;     '("C-SPC" . execute-extended-command) ;;  space-space is nice too, c-s = "completion", use m-s instead?
-
-
-  ;;     ;; THIS IS FUCKED
-  ;;     ;; it binds fine, but fucks up everything..
-  ;;     ;; TODO: just see someone else's config..!! doh
-  ;;     ;; NOTE: this binds whatever function C-p is bound to the next function
-  ;;     '("C-p" . meow-clipboard-yank) ;; originally previous-line, not even meow-previous!
-  ;;     '("C-y" . meow-clipboard-save) ;; originally yank, not even meow-save!
-  ;;   ;; C-r = "meow-clipbaord-replace" ; TODO: this function is missing..
-
-  ;;  )
 
   ;; TODO: see meow-var.el
   ;; this lists all of the key-board macros, which if you change, will fuck things up..
@@ -240,6 +310,8 @@
 
 )
 
+
+
 (defun ra/bind-keys ()
   ;; finally, beginning to alter meow-doom's defaults key-bindings.. it must have been really really good, as i had to immediately alter helix's, a lot!
 
@@ -247,12 +319,7 @@
 
 
   ;; see notes in [emacs.org]
-  ;; TODO: merge to key-binding notes in [emacs.org]
-
-  ;; TODO: slowly compare 'n merge my helix bindings
-
-  ;; could un-bind backspace..
-  ;; currently maps to <DEL>, which is nice for laptop keyboards
+  ;; TODO: ALMOST DONE..: slowly compare 'n merge my helix bindings
 
 
   ;; see CUSTOMIZATIONS.org
@@ -317,13 +384,12 @@
 
 
 
-    ;; originally X is meow-go-to-line, but it also binded to Q..
+    ;; originally X is meow-go-to-line, but it also bound to Q..
     ;;   - TODO: what the.. two bindings..?? un-bind both!!
-
+    ;; later, i re-bind X to er/expand-region
+    
     ;; TODO: just unbind C-=, will never find that..!
-
-    ;; TODO: might actually want to un-bind j/k, to rid the habit.. and begin using n/p
-    ;;   - i have no idea what it originally was..
+    ;;   - is it intended for use in insert-mode..??
 
 
     ;; can un-bind nearly all f-keys, leaving f1 and possibly f10
@@ -342,103 +408,97 @@
     ;;   - macro play?
     ;; f10
     ;;   - gui right-click menu
+    ;;
+    ;; f9
+    ;;   - treemacs
+    ;;     - tough on a chromebook: escape + volume down key..
+    ;;       - use alt: spc-o p/P
 
 
 
+
+   ;;; un-bind some keys??
    ;; NOTE: nope, don't fuck with emacs' original bindings, bad things will happen
-
-   ;; some emacs original bindings i don't use..
-   ;; however, i should use them for insert mode!!
-   ;;   - notably all bound to c- modifier
-   ;;   - so.. kept for consistency across both modes..
-   ;;   - ..and mini-buffers
+   ;;   - meow re-uses the original bindings, using key-board macros, in case any other plugin updates it
+   ;;     - the mini-buffer / pop-ups / any read-only buffers may also use these bindings..
    ;;   - i think keeping this prevents the madness that evil bindings has to go through... just gotta stick with it, don't fight it
    ;;     - also, if you change the keyboard layout, it's a good thing, as it's mneumonic, as opposed to whatever's on the home-row
 
-   ;; main movement:
-   ;; c-n/p = next/previous-line
-   ;;   - j/k = meow-next/previous
-   ;; c-f/b = forward/backward-char
-   ;;   - l/h = meow-left/right
+   ;; NOTE: can open help-with-tutorial to play with the original bindings..
+    
+   ;; see emacs.org
 
-   ;; c-j is similar to ret +electric
-   ;; c-k kill-line
-   ;;   - already have s for meow-kill instead
-   ;;   - m-k kill-sentence
-   ;;     - kills up to .
-   ;;     - an alt for f . s
-   ;; c-l recenter-top-bottom
-   ;;   - i don't use this, but maybe i should..??
-   ;; c-h = help keymap
-   ;;   - might be complicated to un-bind c-h, yet keep the menu.. :/
+   ;; it's a bit tempting to bind hjkl, but fuck it
+   ;;   - anyway, it's notably not mneumonic
 
+
+    
+
+   ;;; how to bind keys
    ;;
-   ;; c-w = kill region
-   ;;
-   ;; c-i = TAB (from <tab> key)
-   ;;   - interesting.. indent, no need for a whole key, lol
-   ;;     - it even feels more ergonomic!!
-   ;;     - but still need tab for a bunch of other functions.. so just makes sense for insert-mode
-   ;;
-   ;; c-s = isearch-forward
-   ;;   - i much prefer spc-s-s +default/search-buffer
-   ;;   - but still very useful, just going to the next one..
-   ;;     - doesn't feel very interactive..??
-   ;; c-r = isearch-backward
-   ;;   - TODO: now this is confusing!!
-   ;;   - honestly should use shift modifier more..
-   ;;     - ahhhh, but can't.. terminals..
-   ;;     - m-s?
-   ;;       - brings up some another search menu.. :/
-   ;; c-m-s/r = regex search
-   ;;   - now that's a good use of meta!
-   ;;
-   ;; TODO: c-o vs c-j vs <ret> ??
-   ;; open-line vs electic-newline-and-maybe-indent
-
-
-
-
-
-
-
-
-
-
-   ;; how to bind keys (from docs)
+   ;; from the docs
    ;; (meow-define-keys
    ;;   'normal ;; 'STATE ; see list of states/keymaps above
-
+   ;;   
    ;;   ;; bind to a command
    ;;   '(\"a\" . meow-append)
    ;;   '("U" . undo-fu-only-undo ) ;; NOTE: TODO: use capital letter, not S-u ?? yet you can do C-S-u??
-
+   ;;   
    ;;   ;; bind to a keymap
    ;;   (cons \"x\" ctl-x-map)
    ;;   ; binds spc-x to spc-x-map
-
+   ;;   
    ;;   ;; bind to a keybinding which holds a keymap
    ;;   '(\"c\" . \"C-c\")
-
+   ;;   
    ;;   ;; bind to a keybinding which holds a command
    ;;   '(\"q\" . \"C-x C-q\"))"
-
+   ;;
+   ;;
    ;; more examples from keybindings_QWERTY.org
-   ;;   (meow-leader-define-key ; NOTE: this is a shortcut function to define leader state (C-c) not keymap (spc)
+   ;;   (meow-leader-define-key ; this is an alt function to define the base leader key-map (C-c / spc)
    ;;    ;; SPC j/k will run the original command in MOTION state.
+   ;;      - TODO: i actually don't know why this exists.. to quickly quit the binding menu..??
    ;;    '("j" . "H-j")
    ;;    '("k" . "H-k")
+   ;;      - binded by the lsp key-map..
    ;;    '("1" . meow-digit-argument)
    ;;    '("/" . meow-keypad-describe-key)
    ;;    '("?" . meow-cheatsheet))
-
-   ;; some personal examples, quite confusing..
+   ;;    ...
+    ;;   (meow-motion-define-key ;; TODO: still don't know what the motion state is..
+    ;; '("j" . meow-next)
+    ;; '("k" . meow-prev)
+    ;; '("<escape>" . ignore))
+   ;;
+   ;;    (meow-normal-define-key
+    ;; '("Y" . meow-sync-grab)
+    ;; '("z" . meow-pop-selection)
+    ;; '("'" . repeat)
+    ;; '("<escape>" . ignore))
+   ;;
+   ;;
+   ;; some personal examples
    ;;'leader ; NOTE: defaults to c-c.. from var mode-specific-map
+   ;;
+   ;; '("q Q" . nil) ;; NOTE: undefined or nil are okay..
+   ;;  - un-bind a key
+   ;;
+   ;;'("q r" . doom/reload)
+   ;;  - normal key-maps work fine..
+   ;;  
+   ;;"c s" ; must be c-c c s / spc c s
+   ;;"l r" ; must be c-c c l r / spc l r
+   ;;  - i'm guessing these link to the original key-maps as well..
+   ;;
+   ;; TODO: NOTE: still not quite sure how c-x and c-h works..!!
    ;;   - don't know how to get to c-x ?.. :/
-   ;;'("x b" . consult-buffer) ; c-c x b / spc-c x b
-   ;;'("b" . consult-buffer) ; c-c b / spc b
+   ;; NOTE: there's fallback on the key sequences by meow's keypad..
+   ;;'("b" . consult-buffer) ; c-c c-b -> c-c b / spc b
+   ;;'("x b" . consult-buffer) ; c-c (c-x -> x) (c-b -> b) / spc-c x b
    ;;'("SPC x b" . consult-buffer) ; spc spc x b
-
+   ;;
+   ;;
    ;; list of states
    ;; (defvar meow-keymap-alist
    ;;   `((insert . ,meow-insert-state-keymap)
@@ -472,30 +532,74 @@
 
 
 
+
+
+
+
   (meow-define-keys
    'normal ; if you use 'meow-define-keys
    'insert ; TODO: this doesn't work..
            ; TODO: how to replacement macro or goto in lisp?
            ; TODO: does insert-mode use m- to trigger normal-mode c- bindings??
+   ;;  - FIXME: these only get bound for normal-mode, not insert-mode..
+   ;;    - though, surprisingly, i see no strange other behavior doing it this way..
+
+   ;;(eval-defun 'define-normal-and-insert-keys) ;; quote or not??
+   ;;(eval 'define-normal-and-insert-keys)
+   ;;  - TODO: can't just eval some code..??
+   ;;(defun define-normal-and-insert-keys ()
+
+
+   ;;; a few things first..
+   '("M-u" . vundo ) ;; Braid
+   ;;   - how could this not be bound..??
+   ;;   this is very meta..
+   ;; TODO: maybe need pop-up menu for mark/diff-vundo..
+
+
+   ;; for dat old game console feel
+   ;;   - mneumonic c-c (o)pen-map is really good too
+   ;;     - NOTE: TODO: other-window does not go to mini-buffer??
+   '("`" . +eshell/toggle ) ;; c-c o e/E
+   '("~" . +eval/open-repl-other-window ) ;; c-c o r/R
+   ;; c-` = +popup-toggle ;; default, matches quite well with this default..
+   ;; m-` = tmm-menubar ;; default
+   ;;   - menubar, the emacs way, lol..
+
+   ;; in doom's bindings
+      ;; ;;; popups
+      ;; (:when (modulep! :ui popup)
+      ;;   "C-x p"   #'+popup/other
+      ;;   "C-`"     #'+popup/toggle
+      ;;   "C-~"     #'+popup/raise) ;; c-s-`
+
+
    
 
 
+   ;;; MOVEMENT
+   ;;  - keeping movement consistent across meow's normal-mode and emacs
 
-   ;; a few things first..
-      '("M-u" . vundo ) ;; Braid TODO: maybe need pop-up menu for mark/diff-vundo
-   ;;   - how could this not be bound..??
-   ;;   this is very meta..
+   ;; there are three sets of movement (even on a tiny laptop keyboards)
+   ;; 0/c/m-arrow keys
+   ;;   - all
+   ;; c/m-npfb
+   ;;   - emacs
+   ;; hjkl
+   ;;   - vim, evil, meow
 
+   ;; NOTE: shift is reserved for selection, in combination with these movement bindings
 
-
-
-   ;; MOVEMENT
-   ;;  - keeping movement consistent across normal and insert modes for now..
-
+      
+   ;; single character/line movement
+   ;; arrow keys = c-npfb = hjkl (vim, meow) + c-a/e
+   ;;   - these all work as expected..
+   
+   ;; a little personal binding
    ;; TODO: i quite miss this basic movement on c-j/k..
    ;;   - must fight.. the.. temptation..!!
-   ;; NOTE: but, as these aren't mneumonic, they wouldn't translate well to other keyboards anyway..
-   ;;'("C-j" . forward-paragraph )
+   ;; NOTE: but, as these aren't mneumonic, so they wouldn't translate well to other keyboards anyway..
+   ;;'("C-j" . forward-paragraph ) ;; TODO: new-line, duplicate of enter, though maybe different behavior..
    ;;'("C-k" . backward-paragraph )
    ;; FIXME: k breaks a crucial emacs key-binding..
    ;; s is running backward-paragraph
@@ -506,61 +610,150 @@
 
 
 
-   ;; default was transpose text left/right, which is an interesting function.., but doesn't match M-down/up = page down/up, or the general theme of cursor movement (and selection with shift-modifier) for arrows
-   ;; these are classic emacs bindings, so i mapped it to the key-bindings instead
-   ;; M-<down>/<up> = page down/up ;; NOTE: this works really well
-   ;;   - NOTE: maps to <next>/<prior> ??
-   ;;     - don't fuck with it..
-   ;;   - could use meow-page-down/up
-   '("M-<left>" . meow-back-symbol ); C-a, doom/backward-to-bol-or-indent alts: beginning-of-line, beginning-of-line-text
-   '("M-<right>" . meow-next-symbol ) ; C-e, doom/forward-to-last-non-comment-or-eol alt: end-of-line
-
-   ;; TODO: missing a really cool drag-stuff-down/up/left/right here..
-   ;;   - supposed to be on c-down/up..
-   ;;   - this is an improvement over transpose functions (c-x t, c-x c-t, m-t, c-m t)
-   ;;   - m-up/down in vs-code
-
-
-   ;; C-M-<right>/<left> moves by sexp
-   ;; C-M-<down>/<up> scroll-left/right ;; strange binding, but useful..
-   ;;  - can instead use c-x >/<
-   '("C-M-<up>" . begin-of-defun )
-   '("C-M-<down>" . end-of-defun ) ;; c-m-end, this works for moving by function, unlike inner/outer/end/begin-thing which all get stuck
-   ;;   - TODO: FAIL: FIXME: seems to be mapped to C-<next>.. which itself is mapped to a disabled function.. :/
-
-
-   ;; use emacs-style insert-mode c-npfb (no selection, just move/jump cursor)
-   ;; fb seems binded correctly (char, c-word, m-symbol, c-m-exp)
-   ;; can choose consistentcy with insert mode:
-   ;; c-n = next-line
-   ;; c-p = previous-line
-   '("M-n" . forward-paragraph ) ;; sp-next-sexp
-   '("M-p" . backward-paragraph ) ;; sp-previous-sexp
-   ;;   - NOTE: my preferred way of moving around
+   ;; word/paragraph movement
+   ;; c-[arrow keys] = m-npfb (no hjkl) + m/a-e
+   ;; fb seems bound correctly (char, c-word, m-symbol, c-m-exp)
+   ;; m-n/p were unbound by default..
+   '("M-n" . forward-paragraph ) ;; vs page-down, forward-sentence (m-e), sp-next-sexp
+   '("M-p" . backward-paragraph ) ;; vs page-up, backward-sentence (m-a), sp-previous-sexp
+   ;;   - NOTE: this is a GREAT way to move around text in general, and is my preferred way of moving around
+   ;;   - this matches down/up arrows, which are foward/backward-paragraph by default
+   ;;   - it also matches org-forward/backward-paragaph
    ;;   - also excellent with shift selection
-   ;;   - TODO: create next/previous function if not fallback to page down/up
-   ;; or more options for normal mode..
-   ;; '("C-n" . forward-paragraph ) ;; not bound! PERFECT!!
-   ;; '("C-p" . backward-paragraph )
-   ;; '("M-n" . meow-page-down ) ;; sp-next-sexp
-   ;; '("M-p" . meow-page-up ) ;; sp-previous-sexp
-   ;;    - i'd rather not fuck with emacs bindings for such little gain..
-   ;; C-M-n/p = next/prev exp ;; NOTE: this is a GREAT way to move around, it has some advanced behavior, jumping from identifiers within an expression, to expressions, to entire functions
+   ;;   
+   ;; m-e/a = forward/backward-sentence
+   ;;   - is a really neat and unique way to move too, and puts the force the left hand
+   ;;   - it skips to '.', but if it doesn't find one, continues to the begin/end of a paragraph
 
 
-   ;; in helix, i (ab)used c-hjkl
-   ;; TODO emacs uses these on some bullshit..
-   ;; C-j = "page_down" # C-f, C-d; NOTE: goto_window_top by default
-   ;; C-k = ["page_up", "goto_window_top"] # C-b, C-u
-   ;; C-h = "goto_first_nonwhitespace" # gh # NOTE: does not select by default, use H/L key-maps
-   ;; C-l = "goto_line_end"  # gl;
+   
+   ;; drag/transpose stuff around
+   ;; m-[arrow-keys] (notably no mirrored bindings here)
+   ;;   - NOTE: i'm keeping the default drag-stuff for now, until i find a place for it..
+   ;;   - NOTE: chrome os maps these to page-down and page-up keys by default (<next>/<prior> in emacs. maybe the traditional name for page down and up keys)
+   ;;   - NOTE: chrome os maps m-left/right to <home>/<end> by default
+   ;;
+   ;; m-[arrow keys] = drag/transpose shit by default
+   ;;   - TODO: NOTE: this breaks two themes: movement and selection (when combined with shift)
+   ;;     - def need to move this elsewhere.. or make it interactive..??
+   ;;     - maybe some other modifier key..?? loll
+   ;;       - TODO: `/~ as third modifier??
+   ;;   - emacs was surely ahead of it's time with this one..
+   ;; M-down/up/left/right ;; default: drag-stuff-down/up/left/right
+   ;;   - this is a really cool function!!
+   ;;     - NOTE: this even works with moving selections!!
+   ;;       - NOTE: this prevents a TON of cut 'n pasting
+   ;;   - this is an improvement over transpose functions (c-x t, c-x c-t, m-t, c-m t)
+   ;;   - m-up/down in vs-code too
 
 
-   ;; # C-S-k = "kill_to_line_start" # NOTE: currently conflicts with buffer/pane mappings
-   ;; don't actually have anything for this..
+
+
+   ;; semantic-based movement
+   ;; c-m-[arrow keys] = c-m-npfb + c-m-a/e
+   ;;   - these are actually awesome..
+   ;;   - helix had some really good tree-sitter based selecction, i think i mapped them to i/o.. not sure about movement though..
+   ;;
+   ;; c-m-f/b = forward/backward-sexp
+   ;;   - NOTE: this is a GREAT way to move around code, it has some advanced behavior, jumping from expresions (identifiers) within a list (expression), to jumping lists (expressions) when outside a list
+   ;; C-M-n/p = forward/backward-list
+   ;;   - not as needed since c-m-f/b is so good..
+   ;;   - TODO: maybe can create a function to use next/previous (de)function, if not fallback to page down/up
+   ;;     - also can update c/m-v with it..
+   ;;
+   ;; C-M-<right>/<left> forward/backward-sexp
+   ;;   - NOTE: once your're out of a function, it behaves like next/previous-sexp
+   ;; C-M-<down>/<up> down/backward-up-list moves down and up a nested list (of functions)
+   ;;  - NOTE: this is different from c-m-n/p forward/backward list, which is what'd you'd usually want
+   ;;  - that's some advanced shit..
+   ;;'("C-M-<up>" . "C-M-a" ) ;; defun / function definition
+   ;;'("C-M-<down>" . "C-M-e" ) ;; this works for moving by function
+   ;;  - this is a great alternate to moving down/up nested functions..
+   ;;  - TODO: maybe sp-next/previous-sexp, since i lost this re-binding m-n/p
+   ;;
+   ;;
+   ;; c-m-a/e = functions
 
 
 
+   
+   ;; C-M-<page-down>/<page-up> scroll-left/right ;; strange binding, but useful..
+   ;;  - can instead use c-x >/<
+
+
+
+
+   ;; c/m/c-m-a/e bindings
+   ;;   - these are all perfect <3
+   ;;     - emacs movement is actually incredible.. incredibly smart..!
+   ;;   - signifies begin/end
+   ;;     - possibly the same as <home>/<end> keys
+   
+
+
+   
+   ;; c/m-v
+   ;;   - for the nostalgia of some past time..
+
+   
+
+
+   ;; an extra set of movement keys added by me
+   ;;   - c-s- is often more comfortable than reaching for the meta key on many laptops, but unfortunately, it's used by shift to select in combination with the movement bindings (c-npfb and arrow keys), thus only hjkl is open for hacking, as c-hjkl aren't movement commands (and thus there's nothing to select..)
+   ;;   - these are open to be re-bound Later down this config file..
+   ;; 
+   ;;
+   ;; NOTE: put your favorite movement bindings here!!
+   ;;  - these match my oft used custom helix bindings for c-hjkl
+   ;;
+   ;;  - some possibilities:
+   ;;  
+   ;;  - page down/up is another GREAT and FAST way to move around text in general, especially in case a major-mode (org-mode..) is giving you trouble..
+   ;;    - consider this the key-board alt to mouse scrolling (it's function is even named scroll..)
+   ;;    - also, the defaults c/m-v are just.. antiquated
+   ;;    - TODO: conceptually it belongs on m-down/up.. but it's used by drag functions by default..
+   ;;    - TODO: could update the binding to move by function (m-a/e), if not, fall-back to move by page
+   ;;    
+   ;;  - forward/backward-paragraph
+   ;;    - this is a much needed alt for m-n/p, which is tough to reach on some key-boards
+   ;;      - however, because this binding includes shift, it's better to use page-down/up here, as you likely aren't selecting pages of text.. or are you..??
+   ;;    - there's already also m-down/up for paragraph movement
+   ;;    
+   ;;  - M-a/e is an awesome emacs original..
+   ;;    - unfortunately, it stops at '.'
+   ;;      - though, even then, it's still quite interesting.. as, what other character would you stop on, within a chunk of text / paragraph?
+   ;;      - TODO: need to create an alt function.. could even replace c-a/e 
+   ;;
+   ;;
+   '("C-S-j" . "C-v")
+   ;;  - NOTE: c-j is kinda open for re-binding too, but c-k isn't..
+   '("C-S-k" . "M-v")
+   ;;  - i think i use page down/up most often, especially for org-mode, as i tend to take notes with lists
+   ;;  - besides, there's enough bindings for forward/backward paragraphy!! (m-n/p, c-down/up)
+   '("C-S-h" . backward-paragraph ) ; meow-back-symbol vs C-a vs M-a vs C-M-a
+   '("C-S-l" . forward-paragraph ) ; meow-next-symbol vs C-e vs M-e vs C-M-e
+   ;;  - could try something else here..
+   ;;  -> c-l works well with this..
+
+   ;; '("C-S-j" . "C-v")
+   ;; '("C-S-k" . "M-v")
+   ;; '("C-S-h" . "M-a") ;; good for writings, interesting for code..
+   ;; '("C-S-l" . "M-e")
+
+
+   
+   
+   ;; END OF BASIC MOVEMENT
+
+
+
+
+   
+   ;; # C-S-k = "kill_to_line_start"
+   ;;  - don't actually have anything for this..
+   ;;    - c-s-a s
+
+   
    ;; TODO: jump backward/forward
    ;;   - maybe not "jump".. TODO: +vertico/jump-list is really good though..
    ;;   - ask ai
@@ -587,123 +780,153 @@
 
 
 
-   ;; for completeness' sake
+   ;;; for completeness' sake
 
    ;; delete
+   ;;  - NOTE: i generally don't use big keyboards, so no need to worry about the delete key
+   ;;  - generally deletes forward
    ;; d = meow-delete
    ;; D = meow-backward-delete
-   ;; '("C-d" . meow-backward-kill-word ) ;; doom/delete-backward-word, backward-kill word (affects kill-ring?) TODO: over-rides d, it must be used by a keyboard macro..
+   ;; C-d = delete_char ;; forward
+   ;; M-d = kill_word ;; forward
+   ;;
+   ;; optional: could bind this in normal-mode only, to open add delete symbol..
+   ;;   - nah, it's a pain.. don't fight against emacs..
+   ;;   - it's better to have consistency across both modes
+   ;; '("C-d" . meow-backward-kill-word ) ;; doom/delete-backward-word, backward-kill word (affects kill-ring?) FIXME: over-rides d, it must be used by a keyboard macro..
    ;;   - meow--kbd-delete-char = C-d
-   ;;   - well, maybe it's better to have consistency across normal and insert modes..
-   '("M-d" . meow-backward-kill-word ) ;; symbol, default: kill-word
+   ;;'("M-d" . meow-backward-kill-word ) ;; symbol?, default: kill-word
    ;; meow-beacon-kill-delete ;; delete all selections.. not sure how it would differ from s..
-
-   ;; TODO: merge with above, as i want to keep the modes consistent..
-   ;; C-d = "delete_char" # forward, default
+   ;; 
    '("C-S-d" . meow-backward-delete ) ;; to match D, alts: backward-delete-char, backward-delete-char-untabify
-   ;;   - TODO: no need for -untabify..?
-   ;;   - NOTE: can be re-binded further down this config.
+   ;;   - TODO: -untabify..?
+   ;;   - NOTE: can be re-bound further down this config.
 
-   
-   ;; NOTE: leaving backspace alone, which maps to <DEL> (use "DEL"), as it may be used in various ways.. and behaves differently
 
+   ;; backspace
+   ;;   - NOTE: seems to map to <DEL> (use "DEL" when binding here..?), as it may be used in various ways.. and behave differently
+   ;;   - NOTE: chrome os maps a-backspace to delete by default
+   ;;   - unlike delete, backspace always goes back
+   ;;   
    ;; backspace = backward-delete-char-untabify ;; default
    ;; C-backspace = backward-kill-word ;; default
    ;; '("C-DEL" . meow-backward-kill-word ) ;; default: backward-kill word (affects kill-ring?), alts: doom/delete-backward-word
    '("M-DEL" . meow-backward-kill-symbol ) ;; default: backward-kill-word
-   ;; C-S-backspace = kill-whole-line ;; strange default.. but okay!..
-   ;;   - backspace always goes back
-
-   
-   ;; some ideas from my helix config found under insert-mode
-   ;;
-   ;; use c/m-backspace for these..
-   ;; # C-w = "delete_word_backward" # default is inverted
-   ;; C-S-w = "delete_word_forward" ;; NOTE: currently close-buffer
-   ;; C-b = "delete_word_backward" # an extra key that makes sense
-   ;;
-   ;; emacs defaults:
-   ;; C-w = kill-region ;; default, meow replaces this with s (meow-kill)
-   ;;   - "{Kill ("cut") text between point and mark."
-   ;;   - not sure what this does when a region isn't selected..
-   ;; M-w = kill-ring-save ;; default
-   ;;   - NOTE: notably not mneumonic..
-   ;;   - s for save used by search
+   '("M-<backspace>" . meow-backward-kill-symbol ) ;; default: backward-kill-word
+   ;;   - just in case this changes on another os..
+   ;;   - TODO: shouldn't use meow key-board macros..
+   ;;     - yet, i can't find any other kill-symbol functions..??
+   ;; C-S-backspace = kill-whole-line ;; interesting that this was actually bound, and quite a great default too!.. especially when in insert-mode.. can re-map to something else later down this config if needed..
 
 
 
 
    
-   
 
-   ;; ideas from my helix config
-
-
-
+   ;; re-bind
    ;; spc-m-x is too long
    ;; m-x is what i should be using..
    ;;   - with the right-side key
-   ;;  - FIXME: these only get binded for normal-mode, not insert-mode..
-   ;;    - though, surprisingly, i see no strange other behavior doing it this way..
-   ;;  - NOTE: should update time delay between the pop-up menu..
-   ;;  - TODO: set vs setq (queue? of symbols?)
-   ;;  - TODO: try using right-meta with index/pinky and press x with left thumb
-   ;;    - though, i feel like c/m-space makes sense..
-   ;;    - TODO: ask how people press these keys (which fingers, comfortably)
+   ;;     - TODO: try using right-meta with index/pinky and press x with left thumb
+   ;;       - though, i feel like c/m-space makes sense..
+   ;;       - TODO: ask how people press these keys (which fingers, comfortably)
    '("M-SPC" . execute-extended-command)
    ;;  - TODO: originally cycle-spacing
    ;;    - actually an interesting command..
    ;;  - NOTE: in insert-mode, meow binds M-spc to the leader menu..
    ;;  - FIXME: used by objed plugin: objed-activate
-   ;;  - bound to : in vim/helix
-   '("C-SPC" . "C-x") ;; space-space is actually AWESOME(!!), c-spc = "completion", use m-spc instead?
+   ;; '("SPC-SPC" . "C-x") ;; space-space is actually AWESOME(!!)
+   ;;  - NOTE: this leads to c-x c-? map.. hmmm
+   ;;    - TODO: no clue how to access the c-x ? map..
+   ;;      - not SPC . C-x-SPC
+   ;;      - not SPC . C-x
+   ;;      - not SPC-SPC . C-x
+   ;;
+   ;; NOTE: C-SPC may have been used for completion before (doom +evil?)..
+   (cons "C-SPC" ctl-x-map)
+   ;;  - TODO: NOTE: this skips the key-pad and goes straight to emacs' orginal key-chord sequence input handler..
    ;;  - in meow, spc-spc dispatches c-spc
-   ;;  - TODO: it's still c-x ? instead of c-x ?.. :/
-   ;;  - TODO: originally set-mark-command
+   ;;    - NOTE: but it doesn't work with this cons method of binding a key-map.. :/
+   ;;  - TODO: re-bind the default set-mark-command
+   ;;    - seems to have an alt binding C-@.. really obscure..
+   ;;
+   '("C-S-SPC" . set-mark-command) ;; or cycle-spacing
+   ;;  - a temporary re-binding..
+   
+
+
+
+   
+   ;; TODO: NOTE: now only c-h left, which still requires you to use the original key-chord (or spc-h-spc in meow)..
 
 
 
 
 
 
-
-
-   ;; buffer nav sucks
-   ;; c-x right/left
-   ;; ooooh shit, found out it's bound to f1/f2!! that's not bad..
-   ;;   - just try practicing using c-x instead of spc-x
-   ;; # c-,/. for next/previous buffer?
-   ;;   - meh, can't think of anything.. okay for now..
-   ;; TODO: should have many of these key-pairs to cycle next/previous
-
-
-
-
-   ;; display management (buffer/windows/tabs)
+   ;;; alt display management (buffer/windows/tabs)
    ;; a lot of these are stuffed in the c-x menu, which i don't enjoy..
-   ;;   - TEMP: i consider these bindings a temporary crutch..
+   ;; NOTE: can abuse c-s- modifier here via GUI and good contemporary terminal apps
+   ;;   - though, c-s- could be saved for even more advanced functions.. lol
    ;; in helix, i used C-S-hjkl, but here, i use C-S-npfb, to stay consistent with emacs classic bindings
-   ;; NOTE: FUCK, C-S-npfb is need to move AND select stuff
+   ;; NOTE: FUCK, C-S-npfb is needed to move AND select stuff
    ;;   - reverted back to my old helix bindings (hjkl)
-   ;; NOTE: can always use the mouse for tabs
-   ;; NOTE: can abuse c-s modifier here via GUI and good contemporary terminal apps
+   ;; NOTE: can always use the mouse for tabs..
    ;; FIXME: TODO: nope, doom even uses these!! check for existing bindings!!
    ;; can check doom's +emacs-bindings.el
+   ;;   - just r and s? no..??
    ;; TODO: could try capslock-[key] (<escape>-[key])
    ;; can try using the F-keys
    ;;   - doom may use this to toggle various modules (tree, mini-map, debug, etc.)
-   ;;   - next/previous buffer seems to already be binded to f2/f1
+   ;;     - seems only f9 for tree..
+   ;;   - next/previous buffer seems to already be bound to f2/f1
    ;; also could create a menu for all display management
    ;;   - should try to fit into the original c-x
-   ;;   - the original way may be the way to go after all.. lol
+   ;;     - the original way may be the way to go after all.. lol
    ;; TODO: c-x t/T switch tab (instead of c-x t ret)
 
+
+
+   ;; special chromebook keys
+   
+   ;; <- and -> (f1/f2)
+   ;;  - lol, i really like this binding.. a pair of keys work really well here.. and what a strange little pair i have here..
+   ;;  - i actually like that it's away from the main keys... by the time i need to change buffers, i need a break!
+   ;; '("<XF86forward>" . next-buffer ) ;; default
+   ;; '("<XF86Back>" . previous-buffer ) ;; default
+   '("C-<XF86Forward>" . next-window-any-frame ) ;; TODO: flip with next/prev-buffer..?
+   '("C-<XF86Back>" . previous-window-any-frame )
+   '("M-<XF86Forward>" . tab-next ) ;; TODO: can swap this with workspace later..
+   '("M-<XF86Back>" . tab-previous )
+   '("C-M-<XF86Forward>" . +workspace/switch-right )
+   '("C-M-<XF86Back>" . +workspace/switch-left )
+
+
+   ;; chromebook reload key (f3)
+   ;; or could use for doom/reload and restart doom/restart-and-restore..   
+   '("<XF86Reload>" . kill-buffer ) ;; NOTE: thankfully triggers mini-buffer search
+   '("C-<XF86Reload>" . +workspace/close-window-or-workspace ) ;; close/quit windows, not kill (as you're not actually killing anything..)
+   ;;  - quit-window
+   ;;    - kills the buffer..??
+   '("M-<XF86Reload>" . tab-close ) ;; too confusing, just use mouse, don't want to do by accident..
+   '("C-M-<XF86Reload>" . +workspace/kill )
+
+   
+   ;; maybe f4 for splitting..??
+   ;;   - nope, chromebook's function takes over (maximize/minimize)
+   ;;  - vs c-x 0/1/2/3/4
+
+
+
+   
+   ;; a few crutches i still haven't figured out..:
+   ;;   - can abuse the c-s- modifier here
+   
    ;; q > k > w > c by feeling
 
-   ;; the emacs way
-   '("C-S-j" . next-buffer ) ;; n
-   '("C-S-k" . previous-buffer ) ;; p
-   '("C-S-w" . kill-buffer ) ;; k NOTE: thankfully triggers mini-buffer search
+   ;;'("C-S-j" . next-buffer ) ;; n
+   ;;'("C-S-k" . previous-buffer ) ;; p
+   ;;'("C-S-w" . kill-buffer ) ;; k NOTE: thankfully triggers mini-buffer search
    ;;  - c-x K / spc-x-K is hella annoying!!
 
    ;; C-S-n = ":new" # :n
@@ -713,74 +936,64 @@
    ;;     - doesn't show up on filtered buffer list
 
 
-   ;; c-x 2/3 is so weird.. def need to rid these old emacs bullshit!!
+   ;; c-x 2/3 is still weird to me.. def need to rid these old emacs bullshit!!
    ;;   - though, i am indeed running out of keys here.. so maybe it's not as bad after all..
-   '("C-S-v" . split-window-right ) ;; c-x 3, maybe from helix's defaults
+   '("C-S-v" . split-window-right ) ;; c-x 3
    '("C-S-s" . split-window-below ) ;; c-x 2
-   '("C-S-c" .  +workspace/close-window-or-workspace) ;; close/quit windows, not kill (as you're not actually killing anything..)
+   '("C-S-c" . +workspace/close-window-or-workspace) ;; close/quit windows, not kill (as you're not actually killing anything..)
+   ;;   - FIXME: not working..
    ;; a ton of alts:
-   ;; +workspace/close-window-or-workspace (c-x 0?)
+   ;; +workspace/close-window-or-workspace (c-x 0)
    ;;   - quit-window
    ;;   - delete-window (c-x 0)
    ;; meow-quit
    ;;   - "kill buffer or window"
    ;;     - seems to kill buffers and not quit window..??
    ;; delete-other-windows (c-x 1)
-   ;;   - this one is nice too..
+   ;;   - TODO: this is a nice shortcut..
    ;; kill-buffer-and-window
 
    '("C-S-o" . other-window ) ;; matches c-x o other-window
    ;;   - good enough for now!!
-   ;;'("C-S-f" . next-window-any-frame ) ;; l, test vs next-window
-   ;;'("C-S-b" . previous-window-any-frame ) ;; h
-   ;;   - these weren't even binded..
+   ;;'("C-S-j" . next-window-any-frame ) ;; l, test vs next-window
+   ;;'("C-S-k" . previous-window-any-frame ) ;; h
+   ;;   - these weren't even bound..
 
    ;; NOTE: can worry about this later, once i choose workspaces vs tabs
-   '("C-S-h" . tab-next ) ;; f cycles tabs?
-   '("C-S-l" . tab-previous ) ;; b
-   ;;  - alts: tab-last, tab-recent, tab-switch
-   '("C-S-q" . tab-close ) ;; too confusing, just use mouse, don't want to do by accident..
+   ;; '("C-S-h" . tab-next ) ;; f cycles tabs?
+   ;; '("C-S-l" . tab-previous ) ;; b
+   ;; ;;  - alts: tab-last, tab-recent, tab-switch
+   ;; '("C-S-q" . tab-close ) ;; too confusing, just use mouse, don't want to do by accident..
    ;;  - NOTE: not mnuenomic
    ;;  - w matches browser ui
    ;;  - q feels too powerful, feels like it should close emacs..!!
+   '("C-S-t" . tab-switch )
    ;; c-x t o/O = next/previous
    ;;   - i think this is strange.. must come from other-window..
 
 
-   ;; special chromebook keys <- and -> in place of f1/f2
-   ;; '("<XF86forward>" . next-buffer ) ;; default
-   ;; '("<XF86backward>" . previous-buffer ) ;; default
-   '("C-<XF86forward>" . next-window-any-frame ) ;; test vs next-window
-   '("C-<XF86backward>" . previous-window-any-frame )
-   '("M-<XF86forward>" . tab-next )
-   '("M-<XF86backward>" . tab-previous )
 
-
-
-
+   
 
   )
 
 
 
 
-
-
-
-
   (meow-define-keys
-   'normal ; if you use 'meow-define-keys
+   'normal
 
+   ;; NOTE: only define things for meow's normal-mode here, mostly letters and s-letters
+   ;;   - modified keys, special keys, etc. are all defined globally further above
 
+   
    ;; A FEW THINGS FIRST..
-
-
 
    ;; i quite miss helix's return key functionality, it sorta just went to the beginning of the next line.. def worth trying out..
    ;; though, in emacs, if you are in the beginning or end of line, it will continue that way too.. it's smarter
    ;; you just have to rely on c-a/e
-
-
+   ;;  - NOTE: unlike helix, you can actually insert stuff in normal-mode here.. mostly tabs 'n new-lines
+   
    ;; wtf is with the redo binding
    ;; don't touch the original emacs binding on C-/
    ;; '("u" . undo-fu-only-undo ) ;; default is meow-undo NOTE: may be a problem with undo-fu-only-undo
@@ -789,6 +1002,7 @@
    ;; '("U" . "C-S-/" ) ;; hmm, binding to another key didn't work either..
    ;; '("U" . "C-?" )
 
+   
    ;; C-u = command-universal-argument
    ;; C-c u = meow-universal-argument
 
@@ -797,20 +1011,24 @@
 
    ;; meow-comment is un-bound
    ;; this can't be right..
-   ;; c-x ; = comment-line
+   ;;   - FOUND IT!!
+   ;;     - M-;
+   ;; c-x c-; = comment-line
    ;; TODO: bind to c-x ; (currently only in c-x c-;) in keypad
+   ;;   - comment-set-column??
+   ;;     - set to 10..??
    ;; c-; = embark-act
    ;;   - spc-a
    ;;   - ; again to comment/un-comment region
    ;;   - act on symbol/region/expression/..?
    ;;   - okay, this is kinda amazing..
    ;;     - yeah... emacs is teh shit..
-   ;; could also use / and #, both un-binded
-
-   ;; just some extra bindings..
-   ;;   - should try not to use symbols for anything
+   ;;     
+   ;; could also use / and #, both un-bound
+   ;;   - should try not to use symbols for anything though..
+   ;;   - NOTE: who knows, maybe major-modes actually bind these for you!!
    ;;'("/" . meow-comment ) ; C-like langs, notably signified search in vim
-                          ; NOTE: i left c-/ and c-s-/ alone: default undo/redo
+                          ; NOTE: leave c-/ and c-s-/ alone: default undo/redo
    ;;'("#" . meow-comment ) ; ruby-like langs
    ;; alts: comment-dwim (M-;) /line/region
    ;; NOTE: neither moew-comment nor comment-dwim do anything without anything selected in elisp.. :/
@@ -823,20 +1041,12 @@
 
 
 
-   ;; SELECTION
+   ;;; SELECTION
    ;;   - these notably belongs solely to normal-mode
 
-   ;; i haven't gotten used to using meow-block, and am missing the tree-sitter based expand/contract selection
-   ;; revert to vim?/helix bindings
-   ;;
-   ;; TODO: C-= is a terrible binding for something so useful..
-   ;;   - it is an interactive function, only requires one key-binding
-   ;;   - this is more useful than inner/outer/begin/end!!
-   ;;
-   ;;
-   ;; some extra temporary bindings
-   ;;'("=" . er/expand-region )
-   '("+" . er/expand-region )
+
+   ;; i initially thought inner/bounds-of-thing's symbol meant any non-letter/number char... it turned out to mean symbol in emacs lisp (identifier) :/
+   ;;   - TODO: add that to the things list (symbolic char)
 
    ;; though should play with default meow-block some more..
    ;;'("o" . er/expand-region ) ; meow-block
@@ -844,17 +1054,25 @@
    ;; C-o open-line ;; TODO: might not need with return/S-ret, though slightly different functionality..
    '("M-o" . er/expand-region ) ;; this is too hard too find :/
    '("X" . er/expand-region ) ;; interesting.. default was meow-line (goto line)
-   ;;  - TODO: - is used by default for er/contract-region and 0 for reset region, which both are inconvenient, though, may quit the function before ever using it.. so not too bad..
-   ;;    - TODO: z doesn't do anything.. this would be the ideal binding: pop-selection
+   ;;  - HACK: hacky conditional impl:
+   ;;    - if arg is < 0, contract; = 0, reset; > 0 expand
+   ;;      - this is why is it bound to - 0 =         
+   ;;    - z doesn't do anything.. this would be the ideal binding: pop-selection
+   ;;      - but this would limit it to normal-mode.
+   ;;    - NOTE: it's possible to write another function but..
+   ;;      eh, might not wanna fight this one, lol..
+   ;;      besides it only uses one binding, not 3
+   ;;      X x x esc is enough
 
 
    ;; from helix:
-   ;; hmmm, this one is missing, maybe similar to er/extend and contract (C-=, =/-)
+   ;; hmmm, this one is missing, maybe similar to er/extend and contract (C-=, =/-/0)
    ;; though, still a little different, as helix's expanded to the semantic node's beginning and end..
+   ;; maybe similar to i/o?
    ;;
    ;; if tree-sitter
-   ;; H = "extend_to_first_nonwhitespace" # c-s-a and m-s-left cover this..
-   ;; L = "extend_to_line_end" # kill-line and c-s-e and m-s-right cover this
+   ;; H = "extend_to_first_nonwhitespace" # c-s-a covers this..
+   ;; L = "extend_to_line_end" # c-s-e and kill-line cover this
    ;; else
    ;; H = "extend_parent_node_start"
    ;; L = ["extend_parent_node_end", "extend_char_left"]
@@ -887,6 +1105,16 @@
    ;; TODO: can un-bind M-p for page-up?
 
 
+  ;; merge with above
+  ;; i was playing with this in the repl..
+  ;;     ;; THIS IS FUCKED
+  ;;     ;; it binds fine, but fucks up everything..
+  ;;     ;; TODO: just see someone else's config..!! doh
+  ;;     ;; NOTE: this binds whatever function C-p is bound to the next function
+  ;;     '("C-p" . meow-clipboard-yank) ;; originally previous-line, not even meow-previous!
+  ;;     '("C-y" . meow-clipboard-save) ;; originally yank, not even meow-save!
+  ;;   ;; C-r = "meow-clipbaord-replace" ; TODO: this function is missing..
+
 
 
 
@@ -895,9 +1123,9 @@
 
 
 
-   ;; lol.. i miss this little trick..
+   ;; lol.. i miss this little trick from helix..
    ;; maybe have to create a function for it..
-   ;; + is un-binded
+   ;; + is un-bound
    ;; - negative-argument
    ;;   - kinda like meow-reverse..??
    ;; minus = "decrement" # only A-minus is mapped to merge_selections, 'minus' not '-', for parsing reasons
@@ -924,60 +1152,117 @@
       'insert
 
 
+    ;; for the moment, i'm trying to keep things consistent across normal and insert modes, so they are bound together in the same place further above..
+
     
   )
 
 
 
-
+  ;; some annoying problems first:
+  ;; 
+  ;;'("x ESC" . nil)
+  ;;'("c ESC" . nil)
+  ;;   - NOTE: these work fine in meow's key-pad, it's a problem of emacs's original key-chords.. TODO: you must fix it there
+  ;;   - these bindings make it hard to <escape> emacs's key-chord input handler
+  ;;     - it seems to insert a meta key into the sequence..
+  ;;   - TODO: how to escape emacs's key sequence input handler?
+  
 
 
   (meow-define-keys
-      'leader ;; c-c
+      'leader ; c-c / spc
 
     ;; POP-UP MENU ("KEYPAD") BINDINGS GO HERE!!
+    ;;   - same as doom's leader key
 
     ;; examples:
     ;; '("z" . consult-buffer) ; spc-z
-    ;; '("C-x b" . consult-buffer) ; spc-x b
-
+    ;; '("C-x b" . consult-buffer) ; c-x b / spc x spc b
+    ;; '("C-x C-b" . consult-buffer) ; c-x c-b / spc x b
 
 
     ;; so far so good... as i just discovered i was using the wrong key-chords the whole time..!! lmao
 
+    
+    ;;'("x" . "C-x") ;; or ctl-x-map (no quotes) ;; FIXME: nope, neither solutions work
+    ;;'("h" . "C-h") ;; or help-map
+    ;;  - an attempt to map spc-x/h to c-x/h ? (instead of c-x/h c-?)
+    ;;  - NOTE: if you do this, there's no way to access c-x x-? and c-h c-?
+    ;;    - TODO: also, there's no way to see a pop-up with those bindings otherwise..
+    ;;  - NOTE: this breaks the convention of how meow keypad works: c-? c-? then fall-back to c-? ?, which may make it even more confusing.. :/
+    ;;    - spc-x/h-spc isn't that bad anyway.. it's a nice key-chord that alternates keys with the thumb..
+    ;;
+    ;; if you do figure it out.. maybe can hack in a C-x/h input?
+    ;;   - at the moment, they're undefined..
+    ;;'("C-x" . "C-x")
+    ;;'("C-h" . "C-h")
 
-
+    
+    ;;; spc q
     '("q q" . "C-x C-c") ;; who would ever want to kill-emacs..!!?? (..without saving)
-    ;'("q Q" . "C-x C-c") ;; Q seems to have the right function..
-
+    ;;  - TODO: save-buffers-kill-emacs vs save-buffers-kill-terminal
+    ;;  - Q seems to already have the right function bound to it: the same as c-x c-c..
+    ;;  - use K to kill-emacs, but even that saves all buffers.. i feel it shouldn't
+    ;;  - TODO: can get rid of these extra bindings.. the original binding was on c (c-x c-c) anyway..
+    '("q Q" . nil)
+    '("q K" . nil) ;; could bind to just kill-emacs (no save)
+    
     '("q r" . doom/reload) ;; or c for config
+    ;;  - TODO: may want to flip these, as i tend to want the below function more.. yet not bad, as i won't ever restart by accident..
     '("q R" . doom/restart-and-restore) ;; was doom/restart
-    ;; doom/find-file-in-private-config ;; c-c f p/P
+    ;; doom/find-file-in-private-config ;; c-c f p/P.. that actually makes more sense then to have it here..
 
-    '("o t" . +eshell/toggle)
-    ;; - t is for terminal
-    ;; though, likely chose e to support having multiple terminal app bindings..
+    
+    ;;; spc o
+    ;; (:when (modulep! :term eshell) ;; FIXME: didn't work.. and need it!!
 
-    ;; TODO: could bind to ~ (tilde) to repl for the old dev console feel
+      '("o s" . +eshell/toggle)
+      ;;'("o t" . +eshell/toggle)
+      ;; - s for shell, or t for terminal
+      ;; though, doom likely chose e to support having multiple shell app bindings..
+      ;; TODO: '-' for dired-jump seems like a strange binding..?? move to f?
+      ;;   - spc-o-f and spc-q-f are used for frames..
 
+    ;; )
 
-  ) ; define-keys 'keypad
+    
+  ) ; meow-define-keys 'leader spc
 
 
 
   (meow-define-keys
-      'keypad ;; spc??
+    'keypad ;; meow-keypad, a seperate interactive program, NOTE: not a key-map!!
 
-    ;; '("x" . "C-x") ;; lol nice try, but damn near broke everything with this one..
+    ;; change inputs of the program?
 
-    ;;'("x <escape>" . nil) ;; FIXME: damn near broke everything!!
-    ;;'("C <ESCAPE>" . nil) ;;  - and this was the one time i asked ai for help..
-    ;; these bindings make it hard to <escape> doom's pop-up menus..
-    ;; TODO: is this is how you bind non-modified keys??
-    ;;   - try unspecified??
-    ;; TODO: is this is also how you un-bind keys??
-  )
+    ;;'("z" . "C-") ; ERROR: meow-keypad-start-with: Wrong type argument: commandp, ctl-x-map
+    ;;  - hmmm, yeah, i think it's for input..
+    ;;  
+    ;;  - trying to map spc-x to c-x ? not c-x c-?
+    ;;  - not sure how to do this for the first time only..
 
+    ;; the real problem is that the whole c-x c-x thing is hard-coded.. would have to alter the meow keypad file..
+    ;;   - and actually experience some lisp..!!
+    ;;     - nahhh, this is kinda rough.. though being able to see every function tool-tip and variable value on hover is fire!!
+    ;;     - TODO: ask meow maintainers if they can create an optional flag..
+    ;;       - or better yet, ask ai to create it.. in a modular way, so that i can add it here in my config file..!!
+    ;;       - i tried a little hack, didn't quite work..
+    ;;         - and lisp is kinda rough to read.. :/
+    ;;           - i much prefer ruby or haxe..
+    ;;     - NOTE: meow-keypad-try-execute does have nice fallback strategy tho..
+    ;;       - "This function supports a fallback behavior, where it allows to use `SPC x f' to execute `C-x C-f' or `C-x f' when `C-x C-f' is not bound."
+    ;;   - see meow-keypad-mode
+    ;; search meow--keypad-handle-input-event in meow-keypad.el
+    ;; perhaps around these lines:
+       ;; (meow--keypad-keys
+       ;;  (push (cons 'control key) meow--keypad-keys))
+       ;; ((alist-get input-event meow-keypad-start-keys)
+       ;;  (push (cons 'control (meow--parse-input-event
+       ;;                        (alist-get input-event meow-keypad-start-keys)))
+       ;;        meow--keypad-keys))
+
+  ) ; meow-define-keys 'keypad
 
 
    ;; (TODO: still going through my helix config..)
@@ -1080,6 +1365,7 @@
   ;; this one's actually legit.. someone put some love into this one!!
 
   ; doom-outrun-electric, my favorite included theme, very high-contrast, hard, neon vibes
+  ;   - diff doesn't look good..
 
   ;; laserwave, neon pink, unfortunately plain text too bright
   ;; maybe not too difficult to edit it..
@@ -1123,7 +1409,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/my-stuff/repos/my-programming-stuff") ; TODO: should set to repo!!
+(setq org-directory "~/my-stuff/repos/my-programming-stuff")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -1164,4 +1450,4 @@
 
 
 ;; NOTE: added by me!
-(ra/post-config)
+(ra/load-config)

@@ -7,16 +7,16 @@ https://www.reddit.com/r/Crostini/comments/e8o6es/dropbox_within_linux_for_chrom
 move taskbar to the side (to free up vertical screen space)
   - right click taskbar...
 
+enable trash!!
+  - chrome://flags
+    - search for trash
+
 install linux (called "crostini" by the internets)
   - i used the defualt 10gb
   - then can go to Files app and share folders with linux
   - WARN: only update debian through chromeOS, not through linux!
     - https://www.reddit.com/r/Crostini/comments/14g1o2s/debian_12/
       - Historically Google has waited until after Debian's first point update has been released to update Crostini, at which point users are given the opportunity via the UI to upgrade existing containers. Also, at this point, new containers are built using the new stable version (i.e. bookworm). For non-technical people this is the safest way to go - just wait the couple of months or so and you'll be prompted.
-
-enable trash!!
-  - chrome://flags
-    - search for trash
 
 change font
   - from terrible Tinos to something else!
@@ -42,5 +42,5 @@ increase dpi on vs code
 # limit systemd journal log file size
 sed -i "s/SystemMaxUse=.*/SystemMaxUse=50M/" /etc/systemd/journald.conf
 
-# check it
-#grep "#SystemMaxUse" /etc/systemd/journald.conf
+#   - check it
+grep "#SystemMaxUse" /etc/systemd/journald.conf
