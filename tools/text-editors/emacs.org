@@ -54,19 +54,35 @@ see [config.el] for notes on config
   - set font in terminal app settings or in doom's config.el
 
 
-* workspace basics
-it's nice to have dired open, when working within a project, to have a sort of visual view to come back to
-  - TODO: maybe there's some kind of file explorer plug-in that can pop-up via a F-key
-    - TODO: try treemacs
+* (g)ui design
 
-it's similarly nice to have an i-buffer window open, to visually see which buffers are open
-  - TODO: maybe also part of treemacs?
+current setup:
+treemacs
+centaur-tabs
+  - testing.. quite nice thus far..
+    - works well with windows and projects, reducing the tabs related to the project (if not, cwd?) of the current buffer, and to that window
+  - maybe have to wean myself off of this over time..
 
+    
+dired vs tree plugin
+ibuffer vs tree plugin
+  - tree plugins are far more compact, visual, enabling one to grasp far more info far more quickly
+  - dired and ibuffer both take up a whole page-sized buffer, and has their own esoteric bindings..
+  - ibuffer, with doom's "ibuffer" plugin enabled, does however display all buffers together, categorized by project..
+
+minimap (de-map)
+  - felt useless..
+    - maybe okay if you have spare screen space..
+  - people seem to use this as a replacement for the scroll bar, which is likely turned off by default..
+  
 if working quickly, just do quicksave/quickload (on doom's splash screen)
   - quitting doom emacs does this by default
+  - at times, may need to save workspace session to a file (spc q s) 
 
+  
 TODO: projects vs workspaces vs persp(ective)
 
+TODO: centaur-tabs vs native tab-bar-mode and tab-line-mode
 
 ** language specific dev
 *** ruby
