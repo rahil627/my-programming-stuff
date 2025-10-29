@@ -1,9 +1,10 @@
 
 TODO: md to org function??
 
-# looking for:
+* looking for
 sane defaults
   - don't want to waste time configing all day, need to focus!
+  - if not, must have a great shared config set-up
 inuititive learning experience
   - quick to re-learn and jump deep into again
 a good non-modal experience
@@ -30,17 +31,23 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
       - the most important, as then there are no restrictions/limitations
     - 4. can see the source code
     additional pillars:
-    - 5. written in lisp or smalltalk or a similarly powerful interactive dev runtime
+    - 5. written in lisp or smalltalk or a similarly powerful interactive dev run-time
 
   - tests:
     - vscode
-      - probably? (maybe there's way to toggle this..), yes, **yes, but not simple** (have to write an extension, or add a custom shell command), sure (but hella complex), no
+      - probably? (maybe there's way to toggle this..), yes, **yes, but not simple** (have to write an "extension", which is quite a process..), sure (but hella complex), no
+    - atom
+      - TODO: was this actually "completely hackable"?
+    - sublime
+      - yes, yes, yes? (limited to api), *no?* (shareware)
     - helix
       - no (can request 'n discuss), yes, **not yet (but even then, limited to the api/interface provided to the scripting lang)**, yes, sorta (limited to api)
     - **lem**
-      - likely, sure, **yes!**, yes, yes
+      - yes, sure, **yes!**, yes, yes
+    - **textbringer**
+      - yes, sure, **yes!**, yes, yes
     - **emacs**
-      - of course yes to all, though you probably wouldn't want to look at the source code..
+      - of course yes to all
   
   
   
@@ -48,7 +55,7 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
   
   
 
-# conclusion:
+* conclusion
 
 emacs (doom-meow), for everything, for life
   - restricr yourself to insert-mode for a more zen experience
@@ -172,7 +179,7 @@ other:
 
 
 
-key-bindings:
+* key-bindings
 meow > my custom helix bindings > helix >> nvim
   - NOTE: emacs is special, as it's focus is on insert-mode, as it doesn't add another (distractful) layer of key-bindings on top of that..
   - text editing only
@@ -203,31 +210,40 @@ some readings
 
 
 
+* the list
 
-# gui editors:
-## newer, simpler, things to try:
+gui editors:
 
-** textbringer**
+** experimental / hobby projects
+  - usually spear-headed by one person, in a more niche language, thus making it harder to build momentum
+
+** textbringer
+  - *TODO: this sounds like heaven..*
+    - *i would write plugins for this all day..!!*
   - *an emacs-like machine using ruby*
     - there's also a plugin for a mail agent and a mastodon client!
       - this is probably due to it's great library system..
     - TODO: how does performance compare to elisp? native-compiled elisp?
-  - TODO: this sounds like heaven..
+  - this would lend well with ruby's eco-system.. especially for web stuff, but also database..
 
-micro
+
+## newer, simpler, things to try:
+  - all of these are in heavy development as of later 2024
+
+** TODO micro
   - go(lang)
     - i'm already not interested.. lol. i much prefer products by the rust folks..
       - these go programs often have a similar fate as google products: they are made just as quickly as they are abandoned
       - though, go does have the terminal/text-editing libs..
 
-lem
-  - unfortunately, buggy as shit: crashes when a pop-up window is open and you alt+tab away :( i was very close to really getting into lisp-mode too!!
+** lem
+  - UPDATE: unfortunately, *buggy as shit: crashes when a pop-up window is open and you alt+tab away :( i was very close to really getting into writing lisp too!!*
   - still... quite a great introduction to lisp, as there aren't too many functions (unless you're hacking at the core of the editor..), and you can quickly write your own functions and map them to commands 'n keys, all in a few lines, all in one file... simple..!
     - though, if you're only using the functions given, then it would be no different than using helix and writing scripts with the functions it provides..
   - https://www.reddit.com/r/emacs/comments/1b4a2tq/what_do_you_guys_think_of_the_lem_ide/
     - emacs default key-mappings, Dired-like file explorer, Projectile-like stuff, Paraedit-like structured edit... sounds like it basically learned and took the good things from emacs with it
   - completely written in common lisp (sbcl?)
-    - (emacs has a C core, particularly for it's display)
+    - (emacs has a C core, particularly for it's display, but mostly just for it's compiler)
     - **and thus can be extended or completely altered in common lisp too :)**
     - fast, compiled
     - modular front-end: sdl2 for gpu-powered gui, ncurses for terminal
@@ -244,11 +260,11 @@ lem
   - made specfically for common lisp, though it can support any lang
   - made by a Japanese person!
 
-4coder
+** 4coder
   - part of the handmade-hero movement
     - therefore written in C/C++, and also therefore **can be extended using just about any programming langauge**
     
-lapce
+** lapce
   - STATUS: felt quite in development when i tried it last, with very few extensions/languages
   - yet another sublime/vs-code copy in rust
     - already has advanced features: modal, lsp, remote dev, built-in terminal..
@@ -260,8 +276,7 @@ lapce
       - TODO: but then you'd have to compile every little function down to WASI..??
     - AssemblyScript resembles javascript
 
-
-**glamourous toolkit**
+** TODO glamourous toolkit
   - kind of **the emacs of smalltalk**, but made in ~2020?, after 6 years of dev, 14 years of research
     - "It seems an editor/database query engine/ browser with a object oriented language Pharo as control/scripting language, while emacs is an editor with emcas-Lisp as the scripting language."
   - *the moldable development environment*: uses the features of smalltalk, especially it's built-in IDE, as tools to create your own specific applications: like for code-base exploration/documentation, build an editor, etc.
@@ -277,45 +292,55 @@ lapce
 
 
 
+
+  
+
+
+
+
+
+
+
+** YES newer standards
   - all of these are in heavy development as of later 2024
 
-
-**focus (editor)**
+*** focus (editor)
   - the best text editor experience i've had in quite some time.. made me try sublime text, which is what it basically is: **sublime text with better design**
   - incredible speed, incredible defaults, incredibly simple, lives up to it's name and induces focus
     - **learn everything in 5 minutes: find file via fuzzy search, set up workspaces, command prompt, config**
       - very well designed find file in workspace and open file via path
     - great little view mode (c+a+arrow keys)
     - some sane defaults (and great sense of design) include:
-      - great, simple key-bindings, closest to sublime-text
+      - great, simple key-bindings
       - infinite undo-history for all files during the session, even after closing it..??
       - jumping the cursor back after highlight or viewing
-      - saving config hot-reloads it
+      - *saving config hot-reloads it*
       - diff on the scroll bar
-        - i forgot how gooood scrolling felt..!
-  - gpu-powered gui, no terminal interface
+        - *i forgot how gooood smooth(?) scrolling felt..!*
+  - gpu-powered gui, *no terminal interface*
   - **made with jai**
-  
-**helix**
-  - STATUS: still developing gui-front-end, scheme scripting, but off to a great start as a terminal editor
-  - kakoune with sane defaults
+
+*** helix
+  - STATUS: still developing gui-front-end, scheme scripting and plugin architecture, but off to a great start as a simple terminal editor
+  - *sane defaults, just works, fast (rust)*
+    - **great sane defaults with the most essential features already built-in, config-free(!!): tree-sitter, lsp, dap**
+  - kakoune bindings by default (in addition to emacs bindings when in insert-mode..)
   - **the best key-bindings/keyboard-interface of all past worlds: vim, doom-emacs, and kakoune**
-    - doom-emacs's intuitive pop-up menus
-    - vim-like key-bindings, but more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
+    - *NOTE: despite this, the functions behind the bindings can be quite stupid, compared to the smarter functions by emacs, which just comes from years of progress..*
+    - doom-emacs's intuitive pop-up menus and leader-key key-chords
+    - modal key-bindings, but compared to vim: more intuitive, lower learning curve, less key-bindings, and perhaps even less key-strokes
     - kakoune style more interactive workflow: selection -> action flow (vs vim’s action -> selection flow): wd vs dw
-  - **great sane defaults with the most essential features already built-in, config-free(!!): tree-sitter, lsp, dap**
-    - this makes it quite a great successor/improvement over kakoune, but i don't think it has as good shell integration.. yet?
   - "helix for vscode" extension to ease transition / aid in using both at the same time
     - TODO: ...no pop-up menus tho..?
-  - vi/terminal/buffer/keyboard style navigation: file picker, buffers and buffer list, jump markers and jump lists
+  - emacs-style buffer navigation: file picker, buffers and buffer list, jump markers and jump lists
     - **requires a bit more cognitive load..**
       - often have to use terminal to navigate file-system, then opening helix is begin a "workspace" at the current location**
-  - **because it was made for terminals, it suffers from a lot of terminal clunkiness**
+  - terminal versoin still suffers from a lot of terminal clunkiness
     - mouse input, scrolling, etc. all just feel meh
     - **the ui just doesn't compared to gui, making it lack much sense of ui design**
-  - **because the core is meant to be rust, and every other feature in scheme, it still lacks basic features as of 10/2024**
+  - **because the core is meant to be rust, and every other feature in scheme, it still lacks very basic features as of 10/2024**
     - file/buffer/symbol tree
-      - the vi/keyboard-style navigation is favored
+      - the buffer navigation is favored
     - zen-mode
   - scheme scripting
     - !!!, finally, get to use lisp :) 
@@ -325,12 +350,12 @@ lapce
   - rust
     - truly a force of reckoning those people
 
-
-
-
-## newer standards
-**zed**
-  - windows binary not built for you..??
+*** zed
+  - *NOTE: ruby actually worked without any configuriation/customizatoin*.. which is something no editor i've encountered has done..
+    - (makes sense, given it's makers..)
+  - *batteries-included, just works*
+    - it's actually incredible..
+  - *windows binary not built for you..??*
     - possibly an attack on windows, as atom was killed by vs-code, and github was bought out by microsoft
     - https://github.com/TakumiBC/zed-windows/releases
       - this repo uses github actions to build it for you
@@ -343,23 +368,81 @@ lapce
     - somehow **looks even more beautiful than sublime and even vs-code by default..!**
       - and has aura theme extension(!!) (had to manually install for sublime)
   - rust
-    - **extensions must be written in rust (and compiled to webassembly)**
+    - **extensions must be written in a WASI language**.. i think..
+      - *given that vs-code already has a ton of plugins, i don't know how many people are willing to re-write everything in assembly-script..* or the other systems langs..
       - https://zed.dev/docs/extensions/developing-extensions
       - https://zed.dev/extensions
-      - this def makes it harder to write extensions, but at least it'll be of higher quality, as the language itself will filter out programmers, and, it won't suffer from memory problems
+      - *this def makes it harder to write extensions, but at least it'll be of higher quality, as the language itself will filter out programmers, and, it won't suffer from memory problems*
   - from the makers of atom (and tree-sitter) at github
 
 
 
 
 
-## current standards:
-
-(emacs)
-  - under [#classics]
 
 
-**kakoune**
+
+** current standards:
+
+*** (emacs)
+  - evolves with time
+    - thanks to it's implementation
+  - see [[classics]]
+
+*** vs code
+  - made using electron (web stack rendered by chromium/node.js). and therefore:
+    - PROBLEM: **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
+  - so dominant that it made most other editors abandonware
+    - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
+      - **by far the most extensions thanks to having the biggest community one-click install**
+        - NOTE: this is the main reason to use it
+  - has extensions for all of the classic key-bindings
+    - "helix for vs-code" is good, merging helix bindings with vs-code bindings and gui cursor, but missing the pop-up menus
+  - *plugins are a bit of a pain to make*, especially compared to the simply writing a function in lisp, thus creating a barrier between you and and the ideal editor experience
+  - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows, etc.
+  - 2016
+
+*** sublime text
+  - BUG: ruby lsp
+    - this stopped me from working in it (see [[conclusion]])
+    - WARNING: **lsp plugins are not maintained by sublime, thus still relies on community, which is much smaller than vs-code, emacs, nvim**
+  - **the best simple gui text editor, replacing notepad++**
+  - **designed for speed and simplicity**
+    - **written in C++, extensions written in python**
+      - TODO: python can interop with C++??
+      - *if only it used ruby.. :/. it's actually quite an ideal editor..*
+    - **30mb, fast, simple**
+      - thanks to this, imo, it destroys both atom and vs-code
+  - **great defaults**
+    - took a few minutes to setup lsp, just use command pallette -> install packages
+      - just as seamless as vs-code! i only had to install the theme manually
+      - config files are seperated by extension, as opposed to vs-code, which has it all in a single file
+    - looks great too, and has aura theme
+  - all the standard features: file explorer, zen mode, etc.
+    - **the product is complete**, nothing to add, just fix bugs for a long long time
+  - extensions in python
+    - terminal, git, etc.
+      - because the extensions are written in python, the cross-platform terminal (terminus) had to be written in python too :/
+  - *perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's open-source community*
+    - perhaps used to require more effort to install extensions..? now seems just as easy...
+  - **shareware (as in winrar closed-source bug you until you buy a license)**
+    - **closed-source**
+    - **$100 for a 3 year license, or, bug you from time to time :/**
+    - this def killed it..
+    - TODO: sublime merge is another app that's really well regarded too, perhaps also shareware..?
+
+
+
+
+
+
+** history, and some old favs
+
+NOTE: i missed out on the era of atom and sublime.. by the time i got back to the computer, vs-code was out
+  - notably, sublime lives on! and is much cherished..
+
+*** kakoune
+  - PROBLEM: no plugin eco-system, by design
   - https://github.com/mawww/kakoune/blob/master/doc/design.asciidoc
     - the **DIY** unix editor, **modular**
       - a new classic in it's own category
@@ -374,11 +457,11 @@ lapce
         - this is one of it's main features
       - no plugins, rather, has `%sh{...}`(??) and socket interfaces and .kak bash scripts
         - **though great in theory, sucks in reality, as external programs/processess must be able to read the buffer and send something back, through the client/socket interface, and somehow work well together**
-          - **tree-sitter, lsp, dap suck**
+          - **tree-sitter, lsp, dap support suck**
             - helix included these to overcome this limitation of kakoune, stunting kakoune's community
         - must write scripts (.kak) to glue / provide api to other programs
-          - should mostly just be wrappers to cli programs
-          - can be written in any language..?
+          - should mostly just be wrappers to small console/cli programs
+          - *kak script is notably cryptic*
         - can use shell expansion within kakoune command-line %sh{...}
         - can easily hook up fzf, yazi/broot, fd, ripgrep, etc.
           - **in <=50 lines of config**
@@ -399,128 +482,103 @@ lapce
 
 
 
-
-
-
-## ew or problems
-
-x/vs code
-  - made using electron (web stack rendered by chromium/node.js). and therefore:
-    - PROBLEM: **heavy, uses a lot of RAM and CPU, eats up laptop batteries**
-  - so dominant that it made most other editors abandonware
-    - cross-platform, open-source, community-oriented, electron/web-style-dev, all helped it sky-rocket past previous-gen text editors
-      - **by far the most extensions thanks to having the biggest community one-click install**
-        - NOTE: this is the main reason to use it
-  - has extensions for all of the classic key-bindings
-    - "helix for vs-code" is good, merging helix bindings with vs-code bindings and gui cursor, but missing the pop-up menus
-  - plugins are a bit of a pain to make, especially compared to the lisp-extending experience, thus creating a barrier between you and and the ideal editor experience
-  - simple, easily-recognizable os-like gui: tabs, show/hide panels/windows
-  - 2016
-
-
-(note: i missed out on the atom vs sublime generation)
-
-x/atom
-  - NOTE: i never tried this one..
+*** atom
+  - directly replaced by vs-code
   - set many standards:
-    - **the electron framework** (see the relation in it's name?) was created in the process of making this
+    - **the electron framework** (see the relation in it's name?)
     - **tree-sitter** was also developed by github for the project
   - **hackable to the core**
     - unlike vs-code
-  - ...people don't seem to have liked this one.. probably for the same reasons they don't like vs-code..
-    - sublime text was much favored due performance of C++/native
+    - TODO: looks into this..
+  - ...people don't seem to have liked this one.. probably for the same reasons they don't like vs-code.. (electron/browser)
+    - sublime text, it's direct competitor during it's time, was favored due performance of C++/native
   - though historically important, basically replaced by vs-code, since microsoft had acquired github..
     - **github ended maintenance on it at the end of 2022**
-  - made by github!!
+  - **made by github!!**
+
+*** a few little basic gui classics
 
 
-x/sublime text
-  - BUG: ruby lsp
-    - this stopped me from working in it (see above in conclusion)
-    - PROBLEM: **lsp plugins are not maintained by sublime, thus still relies on community, which is much smaller than vs-code, emacs, nvim**
-  - **the best simple gui text editor, replacing notepad++**
-  - **designed for speed and simplicity**
-    - **written in C++**, extensions written in python
-    - **30mb, fast, simple**
-      - thanks to this, imo, beat out both atom and vs-code
-  - **great defaults**
-    - took a few minutes to setup lsp, just use command pallette -> install packages
-      - just as seamless as vs-code! i only had to install the theme manually
-      - config files are seperated by extension, as opposed to vs-code, which has it all in a single file
-    - looks great too, and has aura theme
-  - all the standard features: file explorer, zen mode, etc.
-    - **the product is complete**, nothing to add, just fix bugs for a long long time
-  - extensions in python
-    - terminal, git, etc.
-      - because the extensions are written in python, the cross-platform terminal (terminus) had to be written in python too :/
-  - perhaps the most loved text editor pre-vs-code, the real victor vs atom, but eventually lost to the momentum of vs-code's open-source community
-    - perhaps used to require more effort to install extensions..? now seems just as easy...
-  - **shareware (as in winrar closed-source bug you until you buy a license)**
-    - **closed-source**
-      - **must use provided python api to write extensions**
-    - **$100 for a 3 year license, or, bug you from time to time :/**
-    - this def killed it..
-    - sublime merge is another app that's really well regarded too, perhaps also shareware..?
-
-
-
-
-## old standards / history:
-
-### basic gui classics:
-**komodo-edit**
+komodo-edit
   - my fav from college ~2007
-kate
-  - a linux classic?
+    - i found this trying to find something for python..
+      
 notepad++
   - a windows classic, same as ever, still cute and functional for an old 90s thing
-textmate
-  - a mac classic
-**notepad2**
+    
+notepad2
   - a classic windows notepad replacement
   - TODO: try notepad4
+    
+kate
+  - a linux classic?
+    
+textmate
+  - a mac classic?
 
 
 
+*** classics
 
-*the* classics:
 notably, most current text editors still use the key-bindings from these two editors: neovim for modal text editing and emacs for non-modal. So, once you learn one of them, newer editors often provide bindings for both. vscode derives it's key-bindings from emacs.
 
 however, the bindings of vim's hjkl is dependent on qwerty keyboards (and therefore inferior to emacs)
 
-though both originally were terminal apps, now emacs can be used as a native gui app, and even neovim has neovide (rust)
+though both originally were terminal apps, now emacs can be used as a native gui app, and even neovim has it's own front-ends (neovide, written in rust)
 
-**emacs**
-  - much more than a text editor, it's often lovingly called an OS! based on the concept of text buffers
+**** emacs
+  - much more than a text editor, it's often lovingly called an OS! based around the concept of text buffers
     - **this has the great benefit that everything is written in the same language, morever, the most dynamic language of all time (lisp). Otherwise, you'd have to use an entire set of tools, wherein each tool can be writtern in a different langauge, have different onpinions, and just not work as seamlessly together: terminal, terminal multi-plexer, text editor, git tui, file-manager tui, knowledge-base tui, and so on.**
       - **at the moment, for me, all of the tools i use are now written in rust, which is infinitely harder than lisp to edit, let alone develop.** The language itself is complex, along with it's memory-management mode, plus, you have to compile it.. It's all a pain. Whereas with emacs, you just need to know one language, no memory-management
-      - also, simply, **none of the other languages are as dynamic as lisp**. For every program written in a systems lang (including rust), an interface (ffi/abi) is required, and then another dynamic language is used (lua, a lisp). In that case, why not just use lisp to begin with..?? **Lisp just seems like the right choice for programmers' tools.**
+      - a fzf like search-engine integrates with many other features and plugins seamlessly:
+        - find file
+        - search (grep) text
+        - find displays (buffer, window, workspaces..)
+        - completions
+        - introspect dynamic run-times
+          - and therefore commands (functions of emacs)
+      - e-shell
+        - NOTE: can also just start a native shell immediately via (async-)shell-command..
+        - spc-o-e
+        - *incredible, providing auto-complete, etc. without config like fish shell, and retains the bindings and theme of emacs*, thus replacing fish and wezterm
+          - *emacs >>> terminal emulator + shell (+shell config) + file navigator + lazygit*
+      - dired
+        - not quite yazi, but since it's integrated with emacs, i feel *no seperate terminal app can compete*
+      - also, simply, **none of the other languages are as dynamic as lisp**. For every program written in a systems lang (including rust), an interface (api) is required, and then another dynamic language is used on top fo that (lua, a lisp). In that case, why not just use a dynamic langauge to begin with..?? tools.**
       - i think this thought continued to this reddit post i made:
         - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
   - elisp
     - actually interesting to use, and dirt simple (especially when compared to the cryptic syntax of vimscript!!)
-    - because it's lisp, you're basically extending the program itself, not merely some extension part of the program
   - probably incepted, if not popularized, many great text editing ideas (because it's so easy to extend / write your own functions):
     - vundo
       - visual undo tree
-    - kill-ring  
+    - kill-ring
+      - interactive paste function
     - expand-region
     - interactive tab
     - etc.
-  - mature (possibly the oldest of all currently used code), well-written plugins
+  - mature (possibly the oldest of all currently used code), well-written plugin eco-system
     - org-mode
+      - i'm orgin' baby!
       - **the ultimate knowledge-base software, simple yet powerful**
+      - *the shift-tab/tab workflow is so natural to my mind.., it aids me to focus, and just be more organized*, as then everything is forced to be under a heading
+      - this lends well to being in habit folding/unfolding code, and just navigating code in general
       - **org-babel**
         - can combine programming languages, using the output of one as the input of another, perhaps similar to the much much later jupyter notebooks
+        - probably the basis of jupyter notebooks..
     - magit
       - **the best git experience**
+      - though i still use github gui app, this def seems worth trying/learning..
+        - TODO: magit-diff
     - auctex
       - the best latex experience
     - slime (common lisp), geiser (scheme), cider (clojure)
-      - **the best lisp dev environents**
+      - **the best lisp dev environments**
+        - naturally..
       - portacle is an emacs config set up for common lisp dev
-    - particularly great for dynamic langauges, as it is one itself
+    - particularly great for other dynamic langauges too
       - ruby (python?, javascript?)
+        - LSP doesn't make use of the info via introspection..??
   - "m-x is godsend"
     - run any command (function?) that exists in the program
   - **meow**
@@ -533,7 +591,7 @@ though both originally were terminal apps, now emacs can be used as a native gui
       - a great starter config that makes a really nice onboarding experience
       - *i really really liked this, found it very quick to find and precisely just what i needed*
       - **intuitive space-bar menu to ease learning**
-      - **contains evil-mode / vim-keybindings by default**
+      - **have choice between emacs (good) vs evil-mode / vim-keybindings**
       - this guy truly is a blessing..
         - *most people go on to make their own text editor, but why not simply modify an existing great one, that has stood the test of time..?*
     - prelude
@@ -541,11 +599,17 @@ though both originally were terminal apps, now emacs can be used as a native gui
     - minimal_emacs.el
       - another minimal/light-weight starter-kit
   - x/slow startup time
-    - used to be slow, but with emacs 28, now there's **native compilation**..!
+    - UPDATE: emacs 28 added **native compilation**..!
       - https://www.youtube.com/watch?v=bhjO22s6snU
         - how it was made, presented by it's maker
     - from 18+ seconds to < 3 seconds (6x+) to load doom-meow with 170+ packages on my ancient shitty chromebook
+      - UPDATE: 2 seconds for 170 packages via native compilation on the same shitty old chromebook
       - might as well take that time to reflect a bit..
+  - terminal and gui modes
+    - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
+      - yeah, *fuck terminals!!*
+    - *use emacs on servers!!*
+      - emacs bindings are used across shell editors (nano, pico, etc.) and most text editors (vs-code)
   - every person that i've personally met that uses emacs is a great great programmer/problem-solver/doer
   - emacs itself is a deep pot of speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
     - 1.7 million lines of code
@@ -557,38 +621,12 @@ though both originally were terminal apps, now emacs can be used as a native gui
   https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
 
 
-TODO: merge with above
-gui, compiled
-  - can start from terminal via 'emacs' command or from the chrome startup menu search thing
-    - TODO: what about doom run..?
-  - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
-    - yeah, *fuck terminals!!*
-  - native compilation improved startup time from 12-20 seconds to 3 seconds on an ancient chromebook (for doom-meow: 170+ packages)
-
-e-shell
-  - spc-o-e
-  - *incredible, providing auto-complete, etc. without config like fish shell, and retains the bindings and theme of emacs*, thus replacing fish and wezterm
-    - *emacs >>> terminal emulator + shell (+shell config) + file navigator + lazygit*
-
-dired
-  - not quite yazi, but since it's integrated with emacs, i feel *no seperate terminal app can compete*
-    - find-file (+history c-s) is good enough..
-
-org-mode
-  - i'm orgin' baby!
-  - *the shift-tab/tab workflow is so natural to my mind.., it aids me to focus, and just be more organized*, as then everything is forced to be under a heading
-    - this lends well to being in habit folding/unfolding code, and just navigating code in general
-
-magit
-  - though i still use github gui app, this def seems worth trying/learning..
-    - TODO: maybe there's a great diff module..?
 
 
 
-
-
-x/neovim (nvim)
+**** KILL neovim (nvim)
   - NOTE: i must have tried this soon after lua support was added, and people were still migrating, as were plugins
+  - NOTE: also, i could've benefitted greatly by simply by using a pre-config (lazyvim?)
   - "With the 0.5 release of Neovim on 2 July 2021, it gained built-in support for the LSP, Tree-sitter, and more complete Lua support – including the support for configuration scripts written in Lua instead of VimL."
     - really slow to catch up to the times
     - as of 2024, 40% is still written in vimscript
@@ -596,51 +634,52 @@ x/neovim (nvim)
     - terrible experience setting up lsp, as there were 3-4 various plugins (deoplete? neoplete??), all of them require config, all worked half-assed, with CoC having the best results and being general. best to just use the built-in lsp with lua, but, meh. even that required config
   - a very very bad learning curve and on-boarding experience, especially from vanilla neovim. bad for learning the key-bindings. bad for setting up for development. bad for finding good sources to do everything. just plain bad.
 
-
-x/vim
-  - modal (normal, insert, visual/select, command)
-      - **adds quite a heavy cognitive load**
-  - *heavily* key-board input user interface
-      - *i personally feel more comfy using a touch-screen/mouse/keyboard combo*
-      - it's legacy is based on it's key-mappings: modes, motions, actions, etc.
+**** vim
+  - maybe made vi extensible..??
   - written in C and vim script
     - and vimscript is terrible
     - best to try various starter configs with sane defaults
 
+**** vi
+  - modal (normal, insert, visual/select, command)
+    - **adds quite a heavy cognitive load**
+    - *heavily key-board-oriented* input user interface
+      - *i personally feel more comfy using a touch-screen/mouse/keyboard combo*
+      - it's legacy is based on it's modes and key-mappings: motions and actions, and how they compose together, etc.
 
 
 
-
-IDEs:
+** IDEs:
 mostly langauge-specific
   - and therefore limiting for general-use, when using many languages, in addition to simple writing / note-taking
+  - only useful for big projects written in a single language, though,  nowadays, a single project can be written using multiple languages!..
 
-generally adds these features: **integrated interactive debugger, profiler**, advanced code completion, advanced refactoring, better file navigation (go to definition in deep libraries 'n back), tasks runner (including tests), database integration
+generally adds these features: **integrated interactive debugger, profiler**, advanced code completion, advanced refactoring, better file navigation (notably *great go to definition functionality*, especially for more difficult to implement dynamic langs), tasks runner (including tests), database integration
   - though, nowadays, with LSP an DAP protocols gaining popularity, only the most advanced features make IDEs stand out
-
-**vs studio**
+  
+*** vs studio
   - the standard advanced IDE with the most features
     - it's combo with C# set the standard for IDEs
   - seems to be mostly focused on C/C++/C# compared to other langs..??
   - microsoft
     - therefore took a long time before making vs-mac
 
-various IDEs by JetBrains
+*** language-specific IDEs by JetBrains
   - seems to fill the gap vs-studio has left with other languages
-  - seems annoying to have a different IDE for every language... only nice for huge projects written in a single language, but nowadays, a single project can be written using multiple languages!..
+  - widely considered the best IDE for nearly every major language except javacript and C#
   - quite special for having good IDEs for dynamic languages like ruby and python
     - https://www.reddit.com/r/ruby/comments/11ji4u7/rubymine_or_vs_code_extensions_for_debugging_in/
       - "I keep trying to switch off of Rubymine and I keep going back. Debugging in Code is good enough, like no issue, once you find the right combination of articles to help you set it up. Autocomplete, intellisense, and similar are much worse, whether you use Solargraph or Sorbet + Ruby-LSP, and there are essentially zero refactoring actions. But the real killer feature for me is that Rubymine let’s me search, add breakpoints in, or jump to a definition in gems used in my application."..."But the real real killer feature is that it all just works, no hassle. Sure it’s a little sluggish sometimes. Sure the interface is a lil heavy. Sure the plug-in ecosystem is way less active. I got work to do, damnit."
   - recently seperated into language specific IDEs:
     - https://www.jetbrains.com/ides/
-    - rubymine
-      - ruby, the standard for it
-    - rider
-      - c#, games?
-    - intellij
+    - *intellij*
       - java, jvm langs?, the standard for it
         - i think this was their first/main editor that started their business
-    - pycharm
+        - also helped that eclipse fucking sucked
+    - *rubymine*
+      - ruby, the standard for it
+        - though, i wonder how it compares with emacs' ruby-mode/robe..
+    - *pycharm*
       - (python)
     - etc.
 
