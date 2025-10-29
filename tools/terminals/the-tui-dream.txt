@@ -1,5 +1,9 @@
 
-TODO: NOJOKE: *emacs might just be the tui-dream*
+
+
+UPDATE: CONCLUSION: *emacs is the tui-dream*
+
+
 
 related to:
 linux.txt

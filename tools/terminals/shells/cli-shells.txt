@@ -1,10 +1,26 @@
 
+
+UPDATE again:
+now with ai, you can ask for it to generate what you need in either: powershell, bash/linux cli tools, and ruby/linux cli tools, and see which one's the simplest. TODO: Or maybe you can automate emacs..? emacs scripts?? LOL
+
+
+
 UPDATE:
 powershell feels light-years ahead of unix / linux shell stuff
+  - actually has ruby-like arrays 'n hashes focus and syntax
+  - TODO: but it's probably far heavier than simply running dash..
 and i love ruby
 these two are all i'd ever need
 trash the rest (fish, bash, all of it)
-  - though, if i ever have to use linux, fish is the way to go.. as it maintains the old unix way of streaming text via output/input
+  - though, if i ever have to use linux, fish (alongside bash 'n dash) is the way to go.. as it maintains the old unix way of streaming text via output/input
+
+
+# get file-path of shell
+which [shell name]
+
+# change shell, will send you a prompt
+chsh
+
 
 
 
@@ -24,13 +40,13 @@ https://github.com/pry/pry
 conclusion:
 use any cool contemporary shell for personal use (zsh, fish, ion, etc.) but write the simplest scripts (basically just executing multiple commands and maybe a few control structures) in bash for portability, and everything else in your favorite general programming language (scripting or compiled). It's not worth adding another language to your memory, when it could be much better used toward a remembering single general programming langauge.
 
-CLI shells combine a programming language ("shell language", "scripting language") with the terminal (the ability to execute commands, including running command-line programs... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/env lang' (general "scripting languages": ruby, python, etc., and even lua), or even a *slight* bit extra code from compiled languages might be okay in cases of larger scripts. **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell has the power of a great standard library: .NET library, in addition to being as powerful as a general programming language, and now with the recent addadditionitin of being cross-platform, bash has no benefits, save for the fact it was used since the beginning of computers. For people that are neither a fan of .NET (or Microsoft as a whole), however, that choice doesn't make much sense, and it is best to choose a general programming languge: for me, that's Haxe (hscript?) and Ruby.*
+CLI shells combine a programming language ("shell scripting language") with the shell/terminal (the ability to execute commands, including running command-line programs)... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/env lang' (general "scripting languages": ruby, python, etc., and even lua), or even a *slight* bit extra code from compiled languages might be okay in cases of larger scripts. **Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, *near-instantly* (no startup time with dash), and then run *those* scripts from another process (via another script, program, or even **service**), leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell is just an infinitely more consistent language, data-oriented (as opposed to text-stream-oriented), in addition to being as powerful as a general programming language (can even use the .net lib..), and now with the recent addaddition of being cross-platform, where does that leave bash..? I guess bash is still there as a simple thing to run commands.. For people that are neither a fan of .NET/CLR, however, that choice doesn't make much sense, and it is best to choose a general programming languge: for me, that's Haxe (hscript?) and Ruby.*
 
 Linux is definitely about it's CLI tools, and scripts are a way to string them together. It's just normal, how Linux works.
 
 Windows, i feel, isn't as CLI heavy, so you won't be using it as often--you'd be using GUI apps--, and when you do, it's probably more in a programming way/feel (writing a program) rather than a quick script way/feel (that just runs a chain of commands--linux cli programs).
 
-For Windows, you'd get more familiar with the .NET standard library, which'll transfer into C#. For Linux, you'd need to be savvy enough to be able to find useful CLI programs (could be written in bash or *any* other programming language*) in package managers (https://archlinux.org/packages/) or github, be able to use them, and then execute them in a script. As far as i know, Bash doesn't really have a standard library to do stuff(??). It wasn't really meant for general programming. Whereas for Powershell, you can do everything that Bash does, but you'd be more inclined to leverage it's programming power and it's standard library more, rather than rely on other CLI programs, written in god know whats langauge. But at that point, you might as well choose your favorite programming language, thus making Powershell quite useless.
+For Windows, you'd likely get more familiar with the Microsoft way of doing things, Powershell and .NET standard library, which'll transfer into C#, and general programming. For Linux, you'd need to be savvy enough to be able to find useful CLI programs in package managers (https://archlinux.org/packages/) or github, be able to use them, and then execute them in a script. As far as i know, Bash doesn't really have a standard library to do stuff(??). It wasn't really meant for general programming. Whereas for Powershell, you can do everything that Bash does, but you'd be more inclined to leverage it's programming power and it's standard library more, rather than rely on other CLI programs. But at that point, you might as well choose your favorite programming language, thus making Powershell quite useless too.
 
 Linux is a mess of CLI programs and scripts, written in *tons* of different languages. Windows is a lot more insular, with just powershell (although of course you can install any language and run any script too). That's just the feeling i get.
 
@@ -39,7 +55,7 @@ Nowadays, Windows has Windows Sub-system for Linux (WSL), so that you can retain
 
 
 # a note on seperation
-a shell's terminal can be used without ever using it's scripting language (save beyond running commands), and vice versa, so, **choose both (the terminal, real or emulator, and shell scripting language) seperately**. You can use fish with bash scripts, or zsh with fish scripts. It doesn't really matter. Only that you'd need to install a zsh or fish interpreter to run them (and for that reason, bash is still accumulating it's monolithic mess).
+a shell's terminal can be used without ever using it's paired scripting language (save beyond running commands), and vice versa, so, **choose both (the terminal app and shell scripting language) seperately**. You can use fish with bash scripts, or zsh with fish scripts. It doesn't really matter. Only that you'd need to install a zsh or fish interpreter to run them (and for that reason, bash is still accumulating it's monolithic mess).
 
 
 
@@ -181,9 +197,10 @@ ash = Almaquish shell
 
 
 the current bourne-like POSIX-compliant shells:
-dash = ? Almaquish shell
+*dash* = d..? Almaquish shell
   - based on ash, and therefore also light-weight, quick
-  - used internally by Ubuntu to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
+  - used internally by Debian to handle shell tasks/services/scripts as it's lighter 'n faster: ~100kb! (compared to 1mb)
+    - *super-fast!*
 
 zsh = z? shell
   - a super-set of bash, used on contemporary desktop systems
@@ -255,11 +272,5 @@ csh, tcsh, one other one = c shell, improved c shell, ane one other one
 
 
 
-
-# get file-path of shell
-which [shell name]
-
-# change shell, will send you a prompt
-chsh
 
 

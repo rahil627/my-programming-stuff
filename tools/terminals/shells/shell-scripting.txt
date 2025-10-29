@@ -1,5 +1,5 @@
 
-also see the 'scripting languages' section in 'programming lanugages.txt' for notes on
+also see the 'scripting languages' section in 'programming lanugages.txt'
 
 
 https://kddnewton.com/2016/10/11/exploring-cli-best-practices.html
