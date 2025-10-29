@@ -7,6 +7,29 @@ slowly but surely, emacs and i are becoming one..
 one million glorious lines of text-based power
 
 
+BEWARE: WATCH OUT FOR THE DANGERS OF EMACS
+USE FOCUS EDITOR INSTEAD
+
+
+some readings..
+  - land of lisp, little schemer, K&R, structure and interpretation of compilers
+
+
+* praise from matz
+
+- https://news.ycombinator.com/item?id=6094610
+  - matz made a powerpoint on emacs?? gotta love him!
+    - 1988
+  - emacs made me realize anything can be changed by a programmer, it is total freedom
+    - i could edit without thinking key-binding
+    - *i wrote my own email client, in emacs lisp. it was my first non-trivial lisp program. i used it everyday.*
+    - 1993
+      - started ruby
+        - from emacs, it uses integers as pointers, mark and sweep gc, similar object model, then a smalltalk-like oo system on top. For syntax, i wanted a algol/ada/eiffel-like one.
+        - but as an emacs-addict, i needed a langauge mode... *if i couldn't make ruby-mode to work, the syntax of ruby would've changed*
+          - *TODO: did matz write ruby-mode??*
+
+
 * sources
 tips, tutorials, help:
 https://github.com/emacs-tw/awesome-emacs#tutorials
@@ -128,6 +151,13 @@ emacs/meow philosophy
   - helix used shift as a reverse modifier, i don't think emacs uses that idea..
 
 ** TODO some useful functions (to bind?)
+
+most likely they exist somewhere, just gotta find it..
+  - c-h b b
+
+m-x cd
+  - change working dir
+    - useful to limit for find file
 
 find-function
 find-var
@@ -1039,6 +1069,11 @@ adds space as an alternate key to trigger key-chords, as opposed to modifier key
 from meow's readme.org
  - when a key other than =x= / =h= / =c= / =m= / =g= is pressed in Keypad state, it is directly looked up in the leader keymap. This module sets =doom-leader-map= (bound to =C-c= by default) as the leader keymap. So, for example, =SPC s p= produces =C-c s p=.
 
+
+TODO: merge with above
+  - This is done cleverly, too. The first key you press after SPC becomes the modifier that is applied to every key following it. So C-x C-f becomes <SPC> x f, and C-c C-v C-t still becomes <SPC> c v t. To escape modification, you press SPC again. Critically, you can omit the SPC if the key you press matches exactly one non-modified key and no modified-keys.
+
+
 see [[file:/home/ra/.doom.d/modules/editor/meow/config.el][meow config]]
   - link to where doom binds to meow..??
 
@@ -1160,11 +1195,15 @@ c-x / spc-x-spc
         - TODO: also m-o? i must've re-bound this to expand region.. hmm
     - projects
     - save
-    - directory viewer
+    - directory
+      - note: can also arrive here via find file by selecting a directory
     - dired-(j)ump
     - tab indent interactively!!
     - left/right arrows
       - left/right buffer
+    - c-x D
+      - delete this file! never have to leave emacs! :D
+      - TODO: move to spc f by doom..?? i don't think so..
 
   
     - NOTE: doom updates the following:
@@ -1236,6 +1275,8 @@ c-h b k
   - doom's start with doom-leader-
   - ctl-x-keymap
 
+c-h b m
+  - *which-key-show-major-mode*
 
 
 
@@ -1314,6 +1355,15 @@ spc (meow)
   - toggle
     - zen/Zen full-screen, word-wrap, line-numbers
   - workspace
+    - w
+      - select
+        - handles/no need for the following key-bindings:
+        - c, n, p, 1..9
+      - create, next, prev
+    - l
+      - load
+        - NOTE: can find several autosaves here, just in case..!
+        - alt: spc q L (doom/load-session)
   - window? (doom+evil)
   - version control
     - g (= magit command)
@@ -1337,6 +1387,9 @@ spc (meow)
     - bound to c-spc..??
     - set-mark-command
   
+
+  
+
 
 
 
