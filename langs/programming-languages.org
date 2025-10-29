@@ -1263,6 +1263,17 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
     - **neither javascript nor Node.js really have a standard library, hence the development of a chaos of terrible libraries**
       - yikes!!
   - retarded manual type checking (===, NaN, etc.)
+  - has a few, limited meta-programming features
+    - (likely for compiler efficiency reasons)
+    - eval
+      - alt: Function keyword to create functions at run-time
+    - introspection
+      - see chrome developer tools
+        - dev console
+    - dynamic property creation and modification
+    - a dynamic way to extend object (prototype-based) functionality
+    - proxy and reflect api
+      - TODO: re-read..
   - deno, bun
     - alt standalone runtimes/VMs
     - deno is the succesor of node.js, made from the same guy, admitting his faults
@@ -1278,6 +1289,22 @@ https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_script
     - *sys admin / devops tools: ansible*
   - *pretty mundane, simple, straight-forward (procedural) can't go wrong with using this as a scripting langauge*
     - and therefore doesn't attract a rad, innovative community as ruby does
+    - has a few meta-programming features..
+      - beyond introspection and decorators, it seems these are generally warned against ever using..
+      - introspection (the inspect module)
+        - quite complete..
+      - eval/exec/compile
+        - TODO: i mean, isn't this all you neeed..??
+      - metaclasses
+        - the class that defines how other classes are created
+          - modify or extend classes during creation
+            - NOTE: not at run-time.. thus nothing special here..
+      - decoraters
+        - "functions that take another function as an argument and return a new, modified function"
+          - does this count as meta-programming..?
+      - money patching..??
+        - never knew it had this..!!
+        - lol, probably it's most dynamic feature..
   - *"Much of the language consists of special cases rather than general features that combine in orthogonal ways." (as ruby does)*
   - *the syntax is among the most readable, and it shows by it's popularity and love from first-time programmers*
     - although, it's just a preference... **i def prefer delimiters over whitespace as delimiter**
