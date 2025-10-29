@@ -1408,6 +1408,8 @@
   ;;   - FINALLY, a text editor that will last the ages, and never have to port again!
   ;; - just use whatever's there..
 
+  ;; NOTE: all of these can be dimmed by "night-mode" on laptops, which make the colors "warmer", making more themes more tolerable, or even more comfortable..!
+
   ;; manegarm, dark forest green, zelda vibes!!
   ;; this one's actually legit.. someone put some love into this one!!
 
@@ -1425,14 +1427,16 @@
   ;;   - light version is the only readable light theme i've seen.. yellow background, reminds me of a nvim theme that i liked..
   ;;   - also quite unique, the rest look like atom-material variants
 
+  ; feather-dark, fun, just comments are hard to see..
+    ; quite simiolar to helix's default theme.. not bad..!
+    ; suffers from different header text size in org-mode
+
   ; doom-tokyo-night, my classic fall-back
     ; between solarized-dark and outrun-electric
     ; doom-moonlight, lighter background, lighter comments, a more glowy/jellyfish feeling
     ; doom-palenight, bright background for lower contrast, too bright
     ; doom-city-lights, ??
 
-  ; feather-dark, fun, just comments are hard to see..
-    ; suffers from different header text size in org-mode
   ; doom-shades-of-purple, a bit of an overload by the bright background and purple comments..
     ; text in txt/org files are still white :/
     ; similar to adventure time
