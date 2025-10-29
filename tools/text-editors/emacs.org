@@ -466,7 +466,73 @@ it also had:
   - m-e/a
     - moving by sentences is actually quite good, for both prose and code!
       - TODO: i don't see much need for c-a/e then.. should just combine their functionality..
-  
+
+
+
+
+   main movement:
+   c-n/p = next/previous-line
+     - j/k = meow-next/previous
+   c-f/b = forward/backward-char
+     - l/h = meow-left/right
+
+   todo: these would be the first things i'd try to re-bind..
+   c-j is similar to ret +electric
+     - a little different from return's functionality..
+     - todo: maybe can bind this to a movement function.. (next paragraph or page-down)
+       - have c/m-v
+     - todo: c-o vs c-j vs <ret> ??
+     - open-line vs electic-newline-and-maybe-indent
+   c-k kill-line
+     - already have s for meow-kill instead
+       - ahh, but need it for insert-mode..
+     - m-k kill-sentence
+       - kills up to .
+       - an alt for f . s
+
+     - sort of peek around, without moving the cursor..
+     - i don't use this, but maybe i should..??
+   c-h = help keymap
+     - might be complicated to un-bind c-h, yet keep the menu.. :/
+
+   c-spc
+     - mark a point
+   
+   c-w = kill region
+     - NOTE: notably not mneumonic..
+     - fixme: doesn't work properly with meow selection..??
+     - "{kill ("cut") text between point and mark."
+       - intended to be use after making a selection using set-mark
+     - warning: todo: really dangerous functionality when nothing is selected
+       - not even sure what this does when a region isn't selected..
+   m-w = kill-ring-save
+     - s for save used by search
+   
+   c-i = tab (from <tab> key)
+     - interesting.. indent, no need for a whole key, lol
+       - it even feels more ergonomic!!
+   <backtab> (s-<tab>) isn't bound (here in elisp-mode..)
+     - but it is in org-mode..
+   
+   c-s = isearch-forward
+     - i much prefer spc-s-s +default/search-buffer
+     - but still very useful, just going to the next one..
+       - doesn't feel very interactive..??
+   c-r = isearch-backward
+     - todo: now this is confusing!!
+     - honestly should use shift modifier more..
+       - ahhhh, but can't.. terminals..
+  - m-r
+    - move-to-window-line-top-bottom
+      - TODO: this belongs with c-l 
+  - m-s??
+    - brings up some key-sequence..
+  - c-m-s/r = regex search
+     - now that's a good use of meta!
+       - but why c-m-??
+         - c-m- does have the theme of code-related stuff..
+         - TODO: maybe can bind to both m- and c-m-..
+
 *** meow-mode
 
 TODO: move this heading to down to the end
@@ -1012,8 +1078,6 @@ m-ret
 
 c-m-ret
   - insert new heading (highest-level), no matter what?
-
-
 
 **** org-babel
 
