@@ -44,7 +44,7 @@ https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
 
 * config
 
-*NOTE: don't you ever use it as admin/sudo!*
+*NOTE: DON'T YOU EVER USE IT AS ADMIN/SUDO!*
 
 see [config.el] for notes on config
   - self-document!
@@ -118,6 +118,13 @@ c-c k
   - pressing tab works, but functions aren't ordered.. :/
     - may have to try zed after all..
     - or maybe a lsp module for ruby??
+*** lisp
+
+parinfer (> paredit?)
+  - handles parenthesis for you
+
+lispy
+  - modal bindings
 
 
 * bindings
@@ -181,6 +188,14 @@ find-var
   - hence they're under spc-l-g (for elisp)
 
 ** TODO some useful bindings
+
+command+click
+  - *pop-up buffer menu, categorized!!*
+    - WTF!?
+
+meta-click
+  - mouse-secondary-save-then-kill
+    - kinda like G/grab..
 
 spc-spc (c-spc)
   - set-mark-command
@@ -1130,8 +1145,14 @@ c-c ! to trigger the menu
 *** vundo
 
 TODO: mark, diff??
+  - *hooollyyy shiiiiit*
 
 ** meow's inherent god-like-mode
+
+NOTE: it's wayyyy more comfortable to press space-bar over any of the bottom-left key-chords (c-x, c-c). Even (spc x spc) is better, though it adds two more key-presses. The right alt key is the size of a normal key, and still hard to reach with my thumb, making (m-x) particularly difficult.. :/. I tried using emacs' original key-chords while playing with vanilla, but it felt like i was using a space cadet keyboard.. my hands never on the home row..
+  - TODO: try to get into habit of pressing right-control with thumb
+  - try finding some way to swap the right modifier keys on a chromebook..? nah.. then i'd have to rely on using left control for c-x and c-c!!
+
 
 adds an alternate spc key-chord for modifier key combos
   - NOTE: some of these are hidden from the meow menu..
@@ -1555,18 +1576,22 @@ https://github.com/emacs-tw/awesome-emacs#starter-kit
   - what i'm currently learning/discovering emacs on..
 
 *DOOM*
-  - i had a great initial experience using this, felt wayyyy easier and way more intuitive than using neovim!
+  - PERSONAL NOTE: i had a great initial experience using this, felt wayyyy easier and wayyyy more intuitive and wayyyy smarter (built-in functions do what you except) than using neovim!
     - helix seems to have taken much of it's space-key-chord shortcuts from doom, making it an easy jump
-  - "tailored for Emacs bankruptcy veterans who want less framework in their frameworks, a modicum of stability (and reproducibility) from their package manager, and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite operating system."
+  - "Doom is a configuration framework for [[https://www.gnu.org/software/emacs/][GNU Emacs 26.3+]] tailored for Emacs bankruptcy veterans who want less framework in their frameworks and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite OS.
+
+    Doom is an opinionated collection of reasonable (and optional) defaults with a focus on performance (both runtime and startup) and on abstraction-light, readable code design, so that there is less between you and Emacs.""
   - "fast, closer to metal, opinionated, no forced plug-ins, nix/guix"
-  - 150 modules!
+  - 150 modules! ..and that's just what's on by default!
   - "If you want something closer to what you know, and less involved to customize (less barebones basically), doom is what you want."
   - "I have tried them both and vanilla as well. I like doom the best - it has better shortcuts out the box, less buggy, uses traditional elisp for configuration as opposed to spacemacs which uses a proprietary thing you have to learn."
   - recommended by that one emacs guy from noisebridge
+  - the maintainer treats it like a full-time job
+    - it might just be..
 
 x/spacemacs
   - "a community-drive emacs distro"
-    - sounds like 'oh my zsh', which is *not* good
+    - sounds like 'oh my zsh', which is *not good*
 
 prelude
   - TODO: worth trying, now that you can try emacs with different configs via a flag
@@ -1620,6 +1645,13 @@ https://gist.github.com/rahil627/e9d150adc8dcc36846f5f6d0a4465665
 
 ** notes on how to maintain doom (+ post-install notes)
 
+
+
+my notes:
+see more notes in config
+
+
+
 from github repo page:
 doom sync
   - to synchronize your private config with Doom by installing missing packages, removing orphaned packages, and regenerating caches. Run this whenever you modify your private init.el or packages.el, or install/remove an Emacs package through your OS package manager (e.g. mu4e or agda).
@@ -1630,7 +1662,6 @@ doom doctor
 doom env
   - to dump a snapshot of your shell environment to a file that Doom will load at startup. This allows Emacs to inherit your PATH, among other things.
 doom build to recompile all installed packages (use this if you up/downgrade Emacs).
-
 
 
 post-install notes: (from the doom install cli script)
@@ -1654,6 +1685,20 @@ But before you doom yourself, here are some things you should know:
 
 Have fun!
 
+*** when shit breaks
+
+it's time to learn vanilla emacs
+
+emacs -q
+  - pure emacs, --no-init-file
+  - it's actually quite okay.. it reminds me of notepad++, with a beige background color and colorful org headers..
+    - i'm surprised org-mode works.. with colorful headings!!
+
+emacs -Q
+  - or --quick
+    - even leaner..
+
+
 ** install icons
 run nerd-icons-install-fonts function within emacs
   - TODO: not working..
@@ -1670,3 +1715,4 @@ After you doom sync and restart Emacs, Meow will start in Normal state, so make 
 The leader and localleader bindings are defined in <a href=”doom-module::config default +bindings”>doom-module::config default +bindings, so that module is required for them to work.
 
 This module will not work smoothly with doom-module::editor evil, doom-module::editor god, or doom-module::editor objed. You must disable those modules in your doom! block to use this one.
+
