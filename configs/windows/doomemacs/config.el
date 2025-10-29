@@ -80,6 +80,53 @@
 
 
 
+;; TODO: merge this, from another file..
+;; TODO: todo list for doom emacs
+;;   - aka make emacs my home
+;; set org dir
+;;   - need to do this in order to link org files
+;;   - is it possible to have multiple org dirs?
+;;   - otherwise, should set the org dir to the parent repos folder?
+;;   - or maybe create a new folder, with all the notes repos?
+;; org id?
+;;   - set org-id-link-to-org-use-id
+;; **try meow bindings**
+;;   - just seems far less intrusive to the ways of emacs, requiring far less configs than vi/evil-mode, while still adding a kakoune-style workflow, which requires less memory/cognitive load
+;;   - https://github.com/meow-edit/doom-meow
+;;     - need to find a way to combine doom and meow...
+;; re-map/bind keys
+;;   - NOTE: do after setting up/trying meow bindings
+;;     - still prefer a lot of evil bindings, especially for things like dired, navigation in the mini-buffer, etc.
+;;     - really miss the / and : vi bindings
+;;       - m-x and m-c-s are terrible
+;; edit the welcome screen
+;;   - add spc-f-f
+;;   - add spc-g
+;; try to setup doom emacs on *everything*
+;;   - NOTE: would require a key-board..
+;;     - take an apple keyboard instead of chromebook?
+;;   - chromebook
+;;     - i really do like this keyboard.. and the battery life is incredible, and it costs nothing... easy to throw around, charge in public places, and not worry about..
+;;       - the giant control, alt, and caps lock keys work really well, and are simple to bind via chromeos settings
+;;   - ipad mini 2
+;;   - android obamaphones
+;;     - heard it has a very good (and free!) terminal app..
+;;   - iphone 7
+;;   - iphone SE
+;;     - likely not enough battery
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
