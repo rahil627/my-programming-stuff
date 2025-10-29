@@ -3,57 +3,10 @@ this serves as a todo list during travel using/learning the ways of (doom) emacs
 
 
 
-TODO: todo list for doom emacs
-  - aka make emacs my home
-**setup git**
-**fix $doomdir**
-  - NOTE: github issue
-  - doom emacs currently doesn't recognize "~/.doom.d/" for doom configs dir
-set org dir
-  - need to do this in order to link org files
-  - is it possible to have multiple org dirs?
-  - otherwise, should set the org dir to the parent repos folder?
-  - or maybe create a new folder, with all the notes repos?
-org id?
-  - set org-id-link-to-org-use-id
-**try meow bindings**
-  - **NOTE: do this before it's too late!!**
-  - just seems far less intrusive to the ways of emacs, requiring far less configs than vi/evil-mode, while still adding a kakoune-style workflow, which requires less memory/cognitive load
-  - https://github.com/meow-edit/doom-meow
-    - need to find a way to combine doom and meow...
-**fix doom gui**
-  - colors suck on the default chromeos terminal
-  - also copy/paste sucks
-    - remember: right click to paste in
-**get a better theme**
-  - TEMP: using tokyo-night for now
-  - NOTE: fix gui first. then don't have to bother with getting a better terminal app
-  - highlights in diff are useless, and plain text is too boring, and comments are too dark
-re-map/bind keys
-  - NOTE: do after setting up/trying meow bindings
-    - still prefer a lot of evil bindings, especially for things like dired, navigation in the mini-buffer, etc.
-    - really miss the / and : vi bindings
-      - m-x and m-c-s are terrible
-  - redo sucks
-  - going to next paragraph sucks: gets stuck on empty lines
-    - or, just doesn't work at all..!
-edit the welcome screen
-  - add spc-f-f
-  - add spc-g
-try to setup doom emacs on *everything*
-  - NOTE: would require a key-board..
-    - take an apple keyboard instead of chromebook?
-  - chromebook
-    - i really do like this keyboard.. and the battery life is incredible, and it costs nothing... easy to throw around, charge in public places, and not worry about..
-      - the giant control, alt, and caps lock keys work really well, and are simple to bind via chromeos settings
-  - ipad mini 2
-  - android obamaphones
-    - heard it has a very good (and free!) terminal app..
-  - iphone 7
-  - iphone SE
-    - likely not enough battery
-
-
+1. apply to a few jobs via otta.com
+2. head to SB
+   - thursday, or whenever it warms up again
+   
 
 TODO: main
   - a numbered todo list seems nice... priority is good. can only do so much at a time
