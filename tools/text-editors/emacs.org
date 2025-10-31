@@ -54,7 +54,7 @@ see [config.el] for notes on config
   - set font in terminal app settings or in doom's config.el
 
 
-* (g)ui design
+* TODO (g)ui design
 
 current setup:
 treemacs
@@ -130,59 +130,6 @@ emacs/meow philosophy
   - TODO: though, could add F for reverse find
     - no built-in function..? maybe emacs prefers moving forward only..?
   - helix used shift as a reverse modifier, i don't think emacs uses that idea..
-
-** TODO some useful functions (to bind?)
-
-most likely they exist somewhere, just gotta find it..
-  - c-h b b
-
-m-x cd
-  - change working dir
-    - useful to limit for find file
-
-
-** TODO some useful bindings
-
-command+click
-  - *pop-up buffer menu, categorized!!*
-    - WTF!?
-
-meta-click
-  - mouse-secondary-save-then-kill
-    - kinda like G/grab..
-
-spc-spc (c-spc)
-  - set-mark-command
-    - TODO: this must be important..??
-
-m-x / spc-m-x (meow), : (evil)
-  - contains every function available (~7500 with default doom install, ~6750 with meow instead of evil key-bindings)
-  - usually [module]-[function]
-
-[[cmd:recenter-top-bottom][c-l]]
-  - center, top, bottom
-    - *super useful*, never used this feature in another editor..
-
-m-s-right/left
-  - move list indents
-  - hmmm, didn't know m-s was ever used..!
-
-c-s/c-r
-  - isearch forward/reverse
-    - TODO: redundant, could use shift instead
-
-c-h f/v
-describe-function
-describe-var
-
-
-some notes:
- - NOTE: it's still vi, so still need to re-map caps lock to escape
- - NOTE: f1-key is tough on a chromebook keyboard, but quite useful!
-
-*** meow bindings
-
-TODO: finish [[fn:meow-tutor][meow-tutor]]
 
 ** key bindings (actual keyboard keys)
 
@@ -399,6 +346,55 @@ spc-?
 spc-h-b-t
 
 see [bindings-qwerty.el]
+
+*** TODO some useful functions (to bind?)
+
+m-x cd
+  - change working dir
+    - useful to limit for find file
+
+*** TODO some useful bindings
+
+command+click
+  - *pop-up buffer menu, categorized!!*
+    - WTF!?
+
+meta-click
+  - mouse-secondary-save-then-kill
+    - kinda like G/grab..
+
+spc-spc (c-spc)
+  - set-mark-command
+    - TODO: this must be important..??
+
+m-x / spc-m-x (meow), : (evil)
+  - contains every function available (~7500 with default doom install, ~6750 with meow instead of evil key-bindings)
+  - usually [module]-[function]
+
+[[cmd:recenter-top-bottom][c-l]]
+  - center, top, bottom
+    - *super useful*, never used this feature in another editor..
+
+m-s-right/left
+  - move list indents
+  - hmmm, didn't know m-s was ever used..!
+
+c-s/c-r
+  - isearch forward/reverse
+    - TODO: redundant, could use shift instead
+
+c-h f/v
+describe-function
+describe-var
+
+
+some notes:
+ - NOTE: it's still vi, so still need to re-map caps lock to escape
+ - NOTE: f1-key is tough on a chromebook keyboard, but quite useful!
+
+*** meow bindings
+
+TODO: finish [[fn:meow-tutor][meow-tutor]]
 
 *** emacs
 
