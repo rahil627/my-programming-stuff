@@ -72,21 +72,42 @@ move lisp to scripting langs
 
 
 ** a few thoughts to remember
-*** only languages that are close to C/C++ can be optimized
-  - TODO: i'm not sure if this true.. any langauge can be optimal.. it's up to the implementation..
+*** all machines speak in C (and now llvm ir)
+
+if the target machines include mobile devices and consoles, then the language must transpile to C, as it's very unlikely for it (the language) to have the man-power to create build tools (assemblers?) for every machine
+
+though, it seems if the language supports llvm, then most targets are possible.. (+optimizing compiler)
+  - https://llvm.org/
+
+https://ziglang.org/download/0.15.1/release-notes.html#Target-Support
+  
+**** android
+"The issue with Android is that it's very difficult to make a full-blown application without at least some Java. *The whole UI basically requires Java.* You can make an application component in C, but you need to compile it as a library that gets loaded into a Java application that provides the user interface to it. The closest you can get to a pure C application is if you handle all user interaction yourself, receiving raw touchscreen inputs and drawing shapes on the screen using OpenGL ES or whatever interface Android currently uses for that. Maybe since I last checked, someone has made some helper C libraries that could be used instead of the native UI system but I'm not aware of them. You'd have to look for those. I know of several libraries that are almost like that, but not quite: they're all C++."
+  - https://www.reddit.com/r/cprogramming/comments/1494gut/native_c_compiled_binaries_on_android/
+  - however, this may not apply to games, which simply directly use the graphics renderers..
+  
+
+
+*** hardware is optimized for C
+
+only languages that are close to C/C++ can be optimized
+  - a kind of myth, but it sure is much easie to reason about what's actually happenning
+    - though nowadays, with such advanced hardware.. who knows..
+  - JIT/VM can be faster, as it can provide more info the compiler and enable them to optimize for real-world patterns. Instead, the efforts of optimization are shifted toward the compiler, as opposed to the human.
+    - i def prefer this approach..
   - see [programming-concepts]
+    
 *the further things get away from C, the less optimized it will be, because hardware is optimized for C, no other language, with the main problem being cache misses (fetching some data from RAM as opposed to one of the memory caches nearby the CPU), especially in the case of games.* *Haxe, being a language made by a game-dev, provides complete control over C, and is able to create macros to generate things like C-structs, C-arrays, and structure of arrays. That is a rare exception*. Otherwise, the *C-like languages (jai, zig, odin) are more cognizant of hardware*.
-
-
-*** my desire for good design in a language is wrong. It just has to be C or C-like.
-
-i feel ruby is the best language, but, it suffers from being farrrr away from C. Even it's simplest data types: int, is 64-bit object, and can't be shortened to 8 bits, which would then be optimized by hardware (SSE, SIMD, etc.). The more abstraction, the more problems. It's human to want a nicely designed langauge, and ruby accomplishes that, but once things require good performance, it all comes down to C.
+  - how do programs written data-oriented in ruby compare to c?
+    - it looks exactly like dragonruby's examples: top-level data structures (hashes, arrays, structs) alongside top-level functions. it just avoids using objects (and thus extra method calls), as there's enough of that going on beneath
+    
+i feel ruby is the best language, but, it suffers from being farrrr away from C, far from the hardware. Even it's simplest data types: int, is 64-bit object, and can't be shortened to 8 bits, which would then be optimized by hardware (SSE, SIMD, etc.). The more abstraction, the more problems. It's human to want a nicely designed langauge, and ruby accomplishes that, but once things require good performance, it all comes down to C.. or a very good vm (think: jvm, v8, clr).
 
 *ruby is in a constant battle between being the ideal language designed for humans, providing freedom and power in the neatest form, and being performant. It's not easy.*
 
-perhaps the generation of optimized C is the way to go, as Haxe does via hashlink vm/byte-code to C compiler, then going through the llvm. Using ruby/yjit or haxe/hashlink (jit) for dev, llvm for release.
+though, you can write "C extensions" for the high-performance bits.. or write the core of a program in C, then choose an embedded ruby impl.. dragonruby, surely, is the best solution in ruby land..
 
-dragonruby, surely, has the best solution as far as ruby goes..
+*perhaps the generation of optimized C is the way to go, as Haxe does via hashlink vm/byte-code to C compiler. *Using the vm for dev, then generating C for release.*, possibly passing it through llvm for further optimizations.
 
 
 
