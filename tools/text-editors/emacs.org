@@ -4,10 +4,10 @@ NOTE: this file serves as a play-ground for org-mode
 
 slowly but surely, emacs and i are becoming one..
 
-one million glorious lines of text-based power
+one million glorious lines of text-based power~~!!!
 
 
-BEWARE: WATCH OUT FOR THE DANGERS OF EMACS
+BEWARE: WATCH OUT FOR THE WORMHOLE THAT IS EMACS
 USE FOCUS EDITOR INSTEAD
 
 
@@ -116,6 +116,7 @@ c-c k
 
 (completion)
   - pressing tab works, but functions aren't ordered.. :/
+    - TODO: fix this..??
     - may have to try zed after all..
     - or maybe a lsp module for ruby??
 *** lisp
@@ -1590,9 +1591,10 @@ m-spc
 m-x / spc-m-x (meow) / : (evil) / m-/ (evil?)
   - command prompt
   - contains every function available (~7500 with default doom install, ~6750 with meow instead of evil key-bindings)
+    - note: this is a subset of all functions: (c-h f) shows ~35k
   - usually [module]-[function]
   - this one notably is neither a key-chord nor on the key-map..
-    - *TODO: add to base spc keymap*
+    - i added to m-spc
 
     
 c-x/spc-x (spc-b in doom?)

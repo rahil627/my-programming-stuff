@@ -21,9 +21,12 @@ i'm having trouble passing in a list of &rest args for some reason.. maybe just 
   - requires (), even if empty :/
 
 
- ;; TODO: wtf is with these elisp comments?
- ;; one ; confuses the formatter
- ;; two ;; seems the way to go..
+;; TODO: wtf is with these elisp comments?
+;; one ; confuses the formatter
+;; two ;; seems the way to go..
+
+;;; denotes a heading that can be folded
+  - i really like this feature, even if it's un-related to code--solely used by the editor / formatter..
 
 *** symbols
 
@@ -70,17 +73,14 @@ will quote the 1st arg, the x, for you automatically.
 
 
 
-* install lisp:
+* install lisp
 scoop install sbcl
 
-* install a lispy editor:
-
-helix
-  - (coming soon..)
-  - scheme scripting
+* install a lispy editor
 
 emacs
   - yay!
+  - emacs lisp
 
 lem
   - an editor completely written in common lisp!
@@ -89,6 +89,11 @@ lem
   - learn to use it!
     - https://lem-project.github.io/usage/usage/
 
+helix
+  - (coming soon..)
+  - scheme scripting
+    - though rust at it's core, interacting via api
+  
 x/portacle
   - an emacs config specialized for common lisp
     - meh, i already learned doom-meow-emacs..
