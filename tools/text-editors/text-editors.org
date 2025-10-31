@@ -1,59 +1,80 @@
 
 TODO: md to org function??
 
-* looking for
+* what i want
 sane defaults
   - don't want to waste time configing all day, need to focus!
-  - if not, must have a great shared config set-up
+  - if not, have a tasteful, un-bloated shared config set-up
 inuititive learning experience
   - quick to re-learn and jump deep into again
-a good non-modal experience
+a good non-modal editing experience
   - if modal, a useful insert mode
 not slow / heavy
   - focus editor has spoiled me..
-  - i guess terminal-based is fine..
-    - it's more the ram/cpu hogging i don't like
-    - but also focus editor is just really, really fast
+  - native gui
+    - though terminal edtiros may be ok.. now with gpu-powered terminal apps
 a simple way to write extensions
-  - preferably in lisp, or a lispy lang
+  - the more dynamic/interactive the scripting language the better
 unrestrictive
   - see the "four pillars" below
-  
-  - tests:
-    - focus
-      - excels greatly at the first four
+a decent community?
+  - *the LSP requires quite a bit of effort for each language as one must create an interface between the text editor and each language's language-server*, thus a healthy dev community is required to maintain them all
+    - TODO: i think..
+    - *this is kinda make it or break it.. i can't live without completions!! :/*
+    - exception: languages with introspection can be implemented without the lsp (such as the way emacs handles  )
+      - TODO: i think..
+  - hence, bustling dev communities have a greater chance of building open-source contributor momentum than others
+    - (various rust editors, vs-code, sublime text, textbringer, micro: rust, js, python, ruby, go)
+  - however, *if it's written in a language that i like, such a ruby, haxe, or jai, then i'd be more compelled to write whatever i need*
+    - so, i wouldn't mind helpin' with textbringer or focus editor, but may struggle against emacs (and emacs lisp), and would def struggle with rust editors..!
 
+
+** the four pillars
 https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_with_amir_rajan/
-  - *four pillars:*
-    - 1. can see the function when you press a button
-    - 2. can set a key to a series of functions: a macro
-    - 3. **can create your own function**
-      - the most important, as then there are no restrictions/limitations
-    - 4. can see the source code
-    additional pillars:
-    - 5. written in lisp or smalltalk or a similarly powerful interactive dev run-time
-
+  - 1. can see the function when you press a button
+  - 2. can set a key to a series of functions: a key-board macro
+  - 3. **can create your own function**
+    - the most important, as then there are no restrictions/limitations
+  - 4. can see the source code
+  additional pillars (by me):
+  - 5. is completely hackable, down to the core (not merely api)
+  - 6. has simple C ffi / extensions
+    - for vast plugin potential
+  - 7. has a good library eco-system
+    - for easy plugin potential
+    
   - tests:
     - vscode
       - probably? (maybe there's way to toggle this..), yes, **yes, but not simple** (have to write an "extension", which is quite a process..), sure (but hella complex), no
     - atom
       - TODO: was this actually "completely hackable"?
     - sublime
-      - yes, yes, yes? (limited to api), *no?* (shareware)
+      - yes, yes, *yes (limited to api)*, *no?* (shareware)
     - helix
       - no (can request 'n discuss), yes, **not yet (but even then, limited to the api/interface provided to the scripting lang)**, yes, sorta (limited to api)
-    - **lem**
-      - yes, sure, **yes!**, yes, yes
-    - **textbringer**
-      - yes, sure, **yes!**, yes, yes
-    - **emacs**
-      - of course yes to all
-  
-  
-  
-  
-  
-  
+
+    these generally pass the four pillars, even the fifth(!):
+    1. **lem**
+       - yes to all
+       - *entirely written in common lisp, thus perhaps the only editor (listed here) to claim to be "completely hackable"*
+       - common lisp has C ffi
+         - though, that does make things complicated..
+    2. **textbringer**
+       - yes to all
+         - TODO: how does sublime text differ?
+       - though *relies on "C extensions"* for high-performance bits and just plain solid libs
+         - TODO: C ffi vs C extensions? what's better
+         - TODO: what are the limiations of hackability of C extensions? it's probably a good idea to limit what is exposed for each C lib..
+       - has the potential of ruby libs
+    3. **emacs**
+       - yes to all, with a few minor limitations:
+         - if you want to use a C lib, you must write *"C modules", as there is no C ffi*
+           - TODO: how does parainfer-rust-mode work?? just a binary?
+           - though this forces people to not rely on C and instead write more emacs lisp..
+         - a bit of the core is written in C
+           - most of it being the lisp compiler
+             - which may one day be ported to guile compiler
+    
 
 * conclusion
 
@@ -62,19 +83,26 @@ emacs (doom-meow), for everything, for life
 
 focus, to just simply write/express, *zen*, *extremely fast*, zero cognitive load
 
-zed (if not, vs-code), for a quick sane defaults ide, and to focus on the work, and for ai workflows
+zed (if not, vs-code), for a quick sane defaults ide, and to focus on the work, and for ai workflows, and for multi-player
+  - *TODO: closed-source, for planned to be for profit..??*
 
 helix, for a snappy terminal editor with great defaults, including great default key-bindings
-  - *has the potential to replace zed (and emacs..!?) once the scheme plugin system is out..*
+  - *has the potential to compete with emacs once the scheme plugin system is out..*
     - taking it's sweet time to do this.. but has great leaders
   - great for crafting your own key-bindings
 
-text-bringer or lem, if you want to help re-make emacs in ruby (and C) or common lisp, or to write plugins in ruby!!
-    
+lem, if you want to help re-make emacs in common lisp, or just write some plugins in cl..
+  - *has great potential.. with a good amount of contributers..*
+  - it's also completely written completely in common lisp, which no other editor can claim
+
+text-bringer, for the love of ruby!! <3 <3
+  - would be really fun to write plugins for this.. considering its libs
+
 that is all.
 
 
 
+* a quick overview
 
 TODO: should use these categories, and merge most of this down..
 
@@ -277,11 +305,12 @@ TODO: now if only it worked with dragonruby.. hmmm
   
 **** lem
   - UPDATE: unfortunately, *buggy as shit: crashes when a pop-up window is open and you alt+tab away :( i was very close to really getting into writing lisp too!!*
+    - TODO: try terminal version.. that seems to fare better..
   - still... quite a great introduction to lisp, as there aren't too many functions (unless you're hacking at the core of the editor..), and you can quickly write your own functions and map them to commands 'n keys, all in a few lines, all in one file... simple..!
   - https://www.reddit.com/r/emacs/comments/1b4a2tq/what_do_you_guys_think_of_the_lem_ide/
     - emacs default key-mappings
     - sane default plugins included: Dired-like file explorer, Projectile-like project-orientation, Paraedit-like structured edit... sounds like it basically learned and took the good things from emacs with it
-  - completely written in common lisp (sbcl?)
+  - *completely written in common lisp (sbcl?)*
     - (emacs has a C core, particularly for it's display, but mostly just for it's compiler)
     - **and thus can be extended or completely altered in common lisp too :)**
     - fast, compiled
@@ -292,7 +321,7 @@ TODO: now if only it worked with dragonruby.. hmmm
           - "I've been wondering why there isn't a C FFI which would eliminate the need for new C code to be written for every library integration, and which would allow everything to be written in elisp.""
           - "Political Reasons...However, I do agree that CFFI would have been helpful, not because it would make for less code, but because it would enable people to implement extensions without needing to wait for devs to make it available through the official release.
             Observe that tree-sitter was available as a module before it was available in the core, but for some reason, modules are not a thing in the Emacs community."
-          - "As for FFI it is handy but it lacks compile time checking. It's not always easy to use ie converting pointers and C types. Emacs also has Emacs C modules which works nicely if you need to interface with C."
+          - "*As for FFI it is handy but it lacks compile time checking. It's not always easy to use ie converting pointers and C types. Emacs also has Emacs C modules which works nicely if you need to interface with C."*
     - smaller, more manageable code-base
       - doesn't plan to become an OS
     - common problems of new projects: lack of docs, bugs, etc.
@@ -304,7 +333,7 @@ TODO: now if only it worked with dragonruby.. hmmm
     - therefore written in C, and also therefore **can potentially be extended using any programming langauge**
     
 
-*** open-source mometum
+*** open-source momentum
 has the momentum of bigger language-based-dev-communities
 
 **** TODO micro
@@ -579,7 +608,7 @@ both originally were terminal apps and still can be used as such, though now, em
       - https://www.youtube.com/watch?v=bhjO22s6snU
         - how it was made, presented by it's maker
     - from 18+ seconds to < 3 seconds (6x+) to load doom-meow with 170+ packages on my ancient shitty chromebook
-      - UPDATE: 2 seconds for 170 packages via native compilation on the same shitty old chromebook
+      - UPDATE: ~5 seconds first load, ~2 seconds after that, for 170 packages and 50 modules via native compilation on the same shitty old chromebook
       - might as well take that time to reflect a bit..
   - terminal and gui modes
     - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
@@ -595,7 +624,6 @@ both originally were terminal apps and still can be used as such, though now, em
       - ~1500 primitives??
 
   https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
-
 
 
 
@@ -668,7 +696,6 @@ NOTE: i missed out on the era of atom and sublime.. by the time i got back to th
     - 2011
     - source: "why kakoune" site
     - source: great answer in reddit comment on: "anyone still using kakoune?"
-
 
 *** atom
   - DISCONTINUED, and replaced by vs-code
