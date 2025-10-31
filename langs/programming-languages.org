@@ -1379,7 +1379,8 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
   - embeds/interops with C++?
 
 **** PHP
-  - TODO: is this a general-use language?? or just specific to web? it must be a scripting lang.. i def didn't compile it..
+  - though it can be used as a general-use language, it's main feature is being able to be embedded into html.. making it rather specialized for web dev..
+    - other langs have templating systems seperate from the language, creating a bit more abstraction, and less powerful, whereas embedded php can do anything
   - NOTE: still very much in use, with the most popular web frameworks: from wordpress to drupal to laravel to craftcms
     - surely no serious web app uses this though..??
   - $var, $func?, $_special_var, $everything
@@ -1576,7 +1577,10 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - "Dart is also a hard sell because, no matter the task, there's other languages with super interesting advantages. If you want a performant CLI, just use Go tbh. If you want a driver, just use Rust tbh. If you want a highly performant and concurrent back-end, just use Elixir tbh. If you want to tap on an existing ecosystem with lots of manpower to make your back-end, .NET Core is very popular, unfortunately. If you want to make videogames, you probably don't want to make an entirely new framework and game engine, so you'd end up with C++ or C#. GUI apps are like the only place where Dart truly shines via Flutter, and even that isn't totally figured out. Dart doesn't abuse FFI enough for its platform-dependent code to be entirely in Dart, which would be fucking amazing tbh."
  
 *** TODO Go (golang)
-  - *TODO: NOTE: i think it's defining feature is the portable binary build system, which is something that requires quite a bit of man-hours*
+  - NOTE: i think it's only defining feature is the binary build system (and minimal std lib), which is something that requires quite a bit of man-hours.. (now that other langs have simply added fibers..)
+    - each binary supports one platform at a time, it's just easier to "cross-compile", meaning build from any platform for all platform
+    - but then again, doesn't rust, zig, etc. all have this..?
+      - rust seems to require a bit more effort to set-up, and zig probably requires a bit more digging into the docs or trial 'n error.. whereas with go, it sounds like one command "go build" and changing the architecture var
     - any other lang can adopt the fibers concurrency model
   - *"Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."*
   - *compiled python, or a high-level C, intended to replace python in high-performance areas*
@@ -1594,15 +1598,16 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - **thus making it tougher to make frameworks for all of my major use-cases: games, web-apps, gui apps**
   - *at the speed of C too! :o*
   - great garbage collector
-    - *yet you can still use pointers 'n references, it's just "safer"..?*
+    - *TODO: yet you can still use pointers 'n references..?*
   - **great build system**, compiles to a 2MB+ executable binary which contains the runtime (including the garbage collector), which can be configured to be cut down further
   - **great C FFI**: just import the C psuedo-package
     - (no "C extension" as in python/ruby)
   - a simple-to-use **concurrency** implementation, from occam lang?
   - **BAD type system**
-    - **took a long time to get generics**
+    - TODO: why?
+  - **took a long time to get generics**
   - Google, but open-source
-    - **like all Google products, it's very lackluster, with some plain stupid designs, and just not well thought-out**
+    - **like all Google products, it's very lackluster, with some plain stupid design shortcomings, and just not well thought-out**
   - https://github.com/rromulos/command-vault/blob/master/cmdvault/cmd/main.go
     - a good example of a simple cli app
   - https://www.reddit.com/r/golang/comments/14vvwon/when_would_you_not_recommend_go_over_rust/
