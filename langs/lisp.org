@@ -2,46 +2,19 @@
 
 * notes
 
-** dynamic lang functions
-*NOTE: this probably works with many languages with dynamic runtimes*
-  - *including ruby!!*
+see emacs.org/dynamic langs
 
-spc-o-r
-  - +eval/open-repl-other-window
-    - don't bother with editing within the repl window, terminal windows have funky input..
-  - only need this to start it, then can use eval functions
+TODO: merge from vanilla emacs notes
 
-run the entire program in repl
-  - then can run any function, like pry..??
 
-run (eval) regions of code
-  - spc-k-e (spc-e in meow)
-    - +eval/buffer-or-region
+it seems you can define a function (defun) within a function, and then call it..
 
-send regions of code, functions, etc. to a repl
-  - then can run functions, macros, etc.
-  - spc-k-s
-    - +eval/send-region-to-repl
-  - spc-c-??
+i'm having trouble passing in a list of &rest args for some reason.. maybe just set a temp var to pass in..??
 
-** explore lisp programs (emacs) dynamically
-  - spc-l-g
-    - filtered-search through all libs, functions, vars
-  - m-x seems to be a subset of those functions.. (33k vs 7k)
 
-** emacs notes
-eventually, you'll probably naturally read enough lisp code when using emacs
-  - spc-f-e
-    - find file in ~/.emacs.d
-      - TODO: .doommodule is the compiled file..? i can't seem to find the functions for dired..
 
-c-(
-  - auto-add parens in the right place
-  - if you have paraedit
-m-(
-  - if you don't?
 
-** lisp lang notes
+--
 
 (defun ra/post-config ())
   - can use / in the name? for name-spacing?

@@ -120,6 +120,8 @@ c-c k
     - or maybe a lsp module for ruby??
 *** lisp
 
+see [lisp.org]
+
 parinfer (> paredit?)
   - handles parenthesis for you
 
@@ -182,10 +184,6 @@ m-x cd
   - change working dir
     - useful to limit for find file
 
-find-function
-find-var
-  - maybe dependent on language.. dynamic languages only
-  - hence they're under spc-l-g (for elisp)
 
 ** TODO some useful bindings
 
@@ -1146,7 +1144,77 @@ c-c ! to trigger the menu
 
 TODO: mark, diff??
   - *hooollyyy shiiiiit*
+*** dynamic langs
 
+i'm guessing these functions work with several languages with dynamic runtimes
+  - lisp
+    - all
+  - *including ruby!!*
+    - yup, via robe plugin
+  - *TODO: elixir??*
+    - it'll be sick to jump from ruby to elixir dev, in emacs!!
+  - python??
+  - lua?
+
+
+
+**** introspection related
+
+explore dynamic programs (including emacs) interactively via emacs
+
+c-c c / spc-l
+  - language-dependent key-map
+  - *bindings for language-related plugins will pop up here*
+    
+c-c c g / spc-l g (meow)
+  - *interactively search through all libs, functions, vars*
+  - goto key-map
+  - find-function
+  - find-var
+  - note: if it's a buffer of emacs code, it will search through emacs, similar to the helpful- functions
+
+  
+  
+**** eval related 
+spc-e
+  - *note: if it's emacs-lisp, you can simply feed code into emacs*, no need for a seperate repl process!
+  
+spc-o-r
+  - +eval/open-repl-other-window
+    - *note: don't bother with editing within the repl window, terminal windows have funky input..*
+  - only need this to start it, then can try to do as much as you can within emacs buffers
+
+run (eval) regions of code
+  - spc-k-e / spc-e (doom-meow)
+    - +eval/buffer-or-region
+  - i think this merely runs the code (TODO: by insantiating a sub-process?), outputting anything to the echo areas..
+    - except: in the case of emacs-lisp, in which i think it behaves like +eval/send-region-to-repl
+
+TODO: run the entire program in repl?
+  - what happens when you run the main/entrance function of a program?
+  - then can run any function..??
+  
+send regions of code to a repl
+  - (after to open a repl/vm? process)
+  - then can run functions, macros, etc., or use data created (vars, objects, etc.)
+  - spc-k-s
+    - +eval/send-region-to-repl
+  - spc-c-??
+
+
+**** lisp
+
+eventually, you'll probably naturally read enough lisp code when using emacs
+  - spc-f-e
+    - find file in ~/.emacs.d
+
+c-( / c-s-9
+  - auto-add parens in the right place
+  - if you have paraedit?
+m-( / c-s-0
+  - move to next expression(?) and auto-indent
+
+  
 ** meow's inherent god-like-mode
 
 NOTE: it's wayyyy more comfortable to press space-bar over any of the bottom-left key-chords (c-x, c-c). Even (spc x spc) is better, though it adds two more key-presses. The right alt key is the size of a normal key, and still hard to reach with my thumb, making (m-x) particularly difficult.. :/. I tried using emacs' original key-chords while playing with vanilla, but it felt like i was using a space cadet keyboard.. my hands never on the home row..
