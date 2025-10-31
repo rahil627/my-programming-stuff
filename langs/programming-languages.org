@@ -384,18 +384,24 @@ lisp
     - unless textbringer is good..
 
 
-** haxe the swiss-army-knife -> jai
+** haxe the swiss-army-knife, and jai
 
 TODO: when haxe is running in a VM, how does it differ from any other scripting language??
   - there's introspection, etc.
   - just need to make an emacs plugin..??
 
+haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of actionscript, yet with a great simple standard library that gives it a more zen-like procedural flow, and yet fully-featured (macros, ADTs, pattern matching), and a rad little game-dev community around it
+  
 C
-  - core, optimization
+  - libs, high-performance parts, optimization
 haxe
-  - *very general*, garbage-collected, VM + transpile to C + interpreter!!
+  - very general-use, garbage-collected, VM + transpile to C + interpreter!!
     - game
-      + hscript for hot-reload / dynamic run-time
+      - TODO: hscript for hot-reload / dynamic run-time?
+      - made by a pro game maker, so the language is designed to handle games
+        - especially the hashlink vm and hashlink to C generation
+        - though i think the language was intially designed to be extremely general: cross-platform and cross-language..
+          - this made development far more complicated, halting features until they make sense across all transpilers (unified threading)
     - scripting (via --interp flag)
       - though a bit clunky experience compared to ruby..
     - *standalone programs*
@@ -404,8 +410,9 @@ haxe
     - use C, C++, jvm libs (via transpilers)
       - *the ultimate glue langauge*
 jai
-  - *manual memory management*
-    - game, near C-level performance/embedded but with high-level features!!
+  - *manual memory management*, *near C-level performance*, but with high-level features
+    - games (..and other high-performance areas)
+      - made for games by a pro game maker, so the language is designed for it
 
 *** suffers from lack of popularity/libs:
   - (but doesn't every other langauge?)
@@ -420,39 +427,50 @@ jai
   - ai/ml
     - haxe seems to be weaning off the python transpiler..
     - just not worth fighting it..
+      - you'd have to basically interface with the "C extensions" of python libs, since that's where all the work is happening... in which case, a scripting language makes more sense..
+        - TODO: i'm actually not sure how haxe/hashlink/C work together..
 
 
-** the ruby and lisp dream (dynamic run-time magic machines)
+** the lispy ruby dream: magical dynamic run-time machines
+
+
+why not aim for the best dev experience and the most expressive semantics?
+
+these languages are lispy, in that they provide a good amount of run-time features, leading to a more interactive dev experience: build the program while it's running, iterating piece-by-piece.. build simple games/media, high-traffice web-sites, high-performance programs, scripts, text editor extensions, all interactively..! yep, you can have it all. this is the way for gamers that crave interaction :D.. but also for noob programmers (like me) whom would benefit from seeing the program's state at any time
+  - pry at a point, introspect (anything and everything), add some shit (into the program up to that point), pry again?
+    - TODO: though ideal for big constantly running apps like games, i'm not really sure if this is a better debugging experience than a normal systems dev lang..
+
 
 
 C
-  - core
-    - game-engine
-    - high-performance libs (C-extensions)
-    - many language impls, including CRuby
-    - embedded devices
+- core
+  - high-performance bits for ruby (C-extensions)
+    - *game-engine*, *SDL*
+  - core program for mruby
 dragonruby (an mruby fork)
-  - *game scripting*
+  - *game*
+    - notably, interactive game making
 ruby
   - *web* (tiny to large projects), *scripting*, *shell magic*
 elixir
-  - *web* (scalable to massive traffic), *concurrency*, *functional-paradigm*
+  - *web* (scalable to massive traffic), *parallelism*, *functional-paradigm*
 lisp (common lisp, scheme, emacs lisp)
-  - text editor extension (*emacs*, *helix*)
+  - text editor extension (*emacs*, *helix*, *lem*)
     - emacs is a dynamic run-time machine!!
-  - *very high performance* native-compiled binary (scbl)
+  - *high performance alt to C* with native-compilation (scbl)
 mruby, "mruby/C"?, picoruby (and C)
-  - embedded extension lang..??
-    - only if that program is written in C..
+  - embedded scripting/extension
+    - rust is tough to beat for embedded devices..
+    - but in the case of apps that simply want to make use of existing C libs, and build a little core program using them, these langs can provide simple scripting and still get all the benefits of ruby (dynamic run-time / interactive dev, beautiful language..)
 
 
-actually.. elixir/sbcl would be a wild web combo..
+actually.. elixir/sbcl(/ruby) would be a wild web combo..
   - elixir for web back-end
-  - scbl for high-performance, not-completely-functional areas
+  - scbl for high-performance, less-functional areas
   - (ruby for the rest)
 
 *** the lost dream (rip crystal)
-although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they wouldn't share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Beyond syntax, they aren't very much alike. Crystal is closer to Haxe, relying on macros for meta-programming. Elixir is more functional, with some dynamic magic of Ruby to it, but stuck with a VM. Only Ruby (and mRuby) seems to have it's own unique style of built-in meta-programming. Thus, it's better to just stick to Haxe 'n Ruby for most cases, and keep Elixir for web, as a special-case.
+although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they wouldn't share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Beyond syntax, they aren't very much alike. Crystal is closer to Haxe, a garbage-collected static lang relying on macros for meta-programming. Elixir is more functional, with some dynamic magic of Ruby to it, but stuck with a big VM. Only Ruby (and mRuby) seems to have it's own unique style of built-in meta-programming features. Thus, it's better to just stick to Haxe 'n Ruby for most cases, and keep Elixir for web, as a special-case.
 
 
 
