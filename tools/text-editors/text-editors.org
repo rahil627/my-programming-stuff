@@ -235,19 +235,46 @@ meow-doom > doom's evil bindings > helix > emacs > nvim
 usually spear-headed by one person, in a more niche language, thus making it harder to build momentum
 
 **** textbringer
-  - UPDATE: it's terminal-only, very bare, seems like a one-man hobby project by a japanese kid
-    - NOTE: uses emacs key-bindings, and there's no pop-up display (which-key), so you had better completed your super-saiyan emacs training!!
+  - UPDATE: it's terminal-only, quite bare, like vanilla emacs, seems like a one-man hobby project by a japanese kid, but surprisingly complete..!!
+    - NOTE: uses emacs key-bindings by default, and there's no pop-up display (which-key), so you had better completed your super-saiyan emacs training!!
   - *an emacs-like machine using ruby*
     - *this sounds like heaven..*
       - *i would write plugins for this all day..!!*
-    - there's also a plugin for a mail agent and a mastodon client!
-      - this is probably due to *ruby's great library system*..
-        - actually, this makes a big difference..
-    - TODO: how does performance compare to native-compiled elisp?
-      - seems like the core of it uses C..
-        - (as i had to take the time to build "C extensions"..)
+  - there's also a plugin for a mail agent and a mastodon client!
+    - this is probably due to *ruby's great library system*..
+      - actually, this makes a big difference..
+    - *you probably can also "C extensions" so.. well, damn, with these two library eco-systems, you can do nearly everything!!*
+  - describe-class/method uses ri
+    - seems similar to helpful functions (helpful-callable/var/etc.), bringing up a list of functions/vars to search docs for, within the source code
+  - eval_region
+  - it actually has more than i thought..
+    - find file, buffer list
+    - re-map key-bindings, create key-maps, and even modes and plugins!!
+      - *this puts it on the level of helix, but infinitely more hackable..!!*
+  - TODO: how does performance compare to native-compiled elisp?
+    - seems like the core of it uses C..
+      - (as i had to take the time to build "C extensions"..)
   - gem install textbringer, then run txtb
 
+id actually keep this as an alt terminal text editor.. for when i just want vanilla emacs.. but in ruby. though, theres not much reason for it, as you could just execute shell commands which can be a ruby script (shell-command / m-!) or apply a ruby script on a selected region (shell-command-on-region / m-|), both which can be done in most editors including helix, or better yet, keep a buffer and repl/process open and usee the the ruby robe plugin to interact with it (eval code/region, introspective ri docs, completion based on introspection etc.). its all a bit indirect, but surely not bad.. considering you get the rest of emacs..
+  - TODO: what benefit does it have over emacs' ruby-mode (robe?)? as long as the text editor (emacs) provides potential for deep integration (do things based on introspected info, eval, etc.), what would textbringer bring, save the difference in languages?.. though, *i would much much prefer writing and having ruby extensions over lisp..!!*
+    - ..maybe that's enough reason!
+
+however, if for some reason much of what you're doing is text (including data??) wrangling, in ruby, this is the perfect scratch-pad!! it just needs the act/execute-command-on-region function, so that you can run custom commands on regions of text. who knows how far it can go..?? i mean you can require anything.. you can require nokogiri, create a function/command using it, run it, output (via puts) to the buffer, then continue by using that as input.. *the buffer then becomes the source of i/o for the program~~!!* instead of stream-based shells, which output (to another program) to the shell's display area (echo), programs (or regions of code) in textbringer output to the buffer. then again.. *if you can save vars, you can store whatever data you need into the text-editor-program*.. it could be an awesome interactive data munging thing.. i believe the repl can take in entire massive programs.. i mean, it's the standard CRuby interpreter/vm, no? then you can create new commands using any libs!! i'm' not sure how much you'd' want to inject into the text-editor's' process, but people seem to love emacs for it..!!
+  - TODO: create shell-command-on-region function!
+  - TODO: try eval a var, and look for it
+  - TODO: try eval def, and look for it
+  - TODO: re-visit why he chose define_command over normal eval def, beyond the docs, which don't work..
+    - "definable anywhere"
+    
+C extensions, unfortunately is not as simple as say, in go or zig.. otherwise, it would be awesome to quickly throw in C programs, and play with that.. in ruby, dynamically!! :o *now that would be the ultimate media making program.. the pain-point is how easily it integrates with C..* *..perhaps it should've been written with mruby instead, or.. dragonruby..??* LOL
+  - TODO: try creating a C extension for a pop program... let's say.. tree-sitter, and some completion thing (fzf?), based on introspection
+    - now that's some good homework..!! :D
+  - re-create which-key, but with ascii art :)
+      
+TODO: now if only it worked with dragonruby.. hmmm
+
+  
 **** lem
   - UPDATE: unfortunately, *buggy as shit: crashes when a pop-up window is open and you alt+tab away :( i was very close to really getting into writing lisp too!!*
   - still... quite a great introduction to lisp, as there aren't too many functions (unless you're hacking at the core of the editor..), and you can quickly write your own functions and map them to commands 'n keys, all in a few lines, all in one file... simple..!

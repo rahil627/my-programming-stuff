@@ -1,0 +1,44 @@
+
+    
+yimax, in ruby!! whaaaat??
+
+it seems like the core keyboard functions are covered.. not bad!!
+
+has buffers, windows, find file.. lots! wow..
+
+  
+f1 b/k/c/m
+- describe bindings, keys
+- describe class, method
+  - uses ri
+    - lol.. kinda sick.. i mean, that's' basically what does..: display intropected docs
+  
+m-;
+  - eval (ruby code!!)
+  - puts actually puts stuff in the buffer
+
+
+
+buffer = Buffer.current
+# buffer.insert "inserting into the buffer object!"
+buffer.re_search_backward(/yimax/)
+buffer.replace_match("yimax")
+
+# hmm, it seems eval read the comment..
+
+eval_expression
+eval_buffer
+eval_region
+
+define_command(:hello) do
+  # ERROR: :doc "docs" arg didn't work..
+  p 'herro'
+end
+# highlight the above and m-x eval_region
+
+includes key bindings, key-maps, and even defining modes!!
+
+ruby is actually sick..
+
+whoa.. this guy was the author of the curses.gem!
+
