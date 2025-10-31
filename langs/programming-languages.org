@@ -1,10 +1,4 @@
 
-
-TODO: git commit org conversion, re-order:
-move lisp to scripting langs
-
-
-
 * some notes
 ** j blow on mookash podcast about jai
   - *C macros straight up replaced a string, making it powerful, as you could just replace half-identifiers, half-expressions, or anything. It doesn't have to be compilable code. But that's also what made it completely un-debuggable. Non-hygenic: global variables in the namespace are used, and must be careful.*
@@ -119,10 +113,6 @@ likely re-occuring from 10 years ago, to now, again, as i revisit technology
 TODO: get from notebook
 
 
-
-
-
-
 * TODO to try
 https://tekkie.wordpress.com/2007/07/19/squeak-is-like-an-operating-system/
   - great read on smalltalk, which is, just a vm/runtime
@@ -201,7 +191,6 @@ TODO!: move to prog langs notes
 
 todo:
 clojure-like repl:
-https://www.reddit.com/r/ruby/comments/10i6pr7/is_parallel_threading_never_going_to_be_a_thing/
 https://github.com/clojure-emacs/cider/discussions/3422
 https://www.reddit.com/r/Clojure/comments/sm80ed/why_is_clojures_repl_better_than_other_dynamic/
 
@@ -258,39 +247,52 @@ https://www.quora.com/Is-learning-the-Phoenix-web-framework-easier-for-experienc
 
 * what do i want?
 what langauge is best for my needs? what do i desire in a language?
-see [game-engines], [web-frameworks], [app-frameworks], [scripting-languages], etc.
+
+see [game-engines], [web-frameworks], [app-frameworks], etc.
   - *note: there's no way to maintain libs, so there's no choice for certain domains*:
     - ai/ml
       - python
     - web
-      - pop web langs
+      - pop web langs and javascript
 
+        
 in general:
 **have the option to provide a garbage-collector**
-**expressive / featureful**
-  - so, not go or other restricted langs
-transpile to C (or machine code!)
+**expressive**
+  - so, not google's langs (go, python, dart?) nor other restricted langs
+compile to machine code (either natively or via transpile to C)
   - it should provide a binary
     - even better if portable
   - it should be pretty fast
   - for most platforms: desktop OSs, iOS (+ iPadOS), consoles, embedded devices, etc.
-provide a VM, so that you only need to compile (transpile to C or down to native) for the final product
+provide a VM, so that you only need to build/compile to native code for the final product
+  - TODO: if a language has a VM, what's stopping it from providing some run-time powers? introspection, eval code/functions? doesn't haxe's hashlink VM provide those capabilities?
 provide an interpreter, so that you can quickly run little scripts
-  - not so important.. a VM is enough..
+  - not so important.. a VM is enough
 aimed for games (and other "creative" applications that use various input/output hardwares): :D
-provide an option of memory management, for fine-tuning intense memory changes: textures going in 'n out, etc.
+provide an option of memory management, for fine-tuning intense memory changes (textures going in 'n out, etc.)
   - write "unmanaged code"
   - make it very easy to interop with C (bonus if C++!!)
 be designed to be cross-platform, or at least have that in mind
   - maintain a set of libraries for target platforms: android > iOS > desktop OSs > consoles > everything else, in that order
+    - *because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, it must rely on it's ability to transpile to C*
 
 answer:
-1. haxe, jai?, nim
-2. clr/C# (aot), jvm?
-x. (swift)
+1. haxe, jai
+   - i don't know if jai will allow a garbage collector..
+   - beef requires memory management, with a focus on custom allocators
+2. ocaml, nim, nelua, scheme(s).. lots!
+3. clr/C#
+   - now aot
+4. jvm
+   - ??
 
+alt: dragonruby and ruby (and C)
+  - to try a more interactive dev experience.. especially with emacs!!
 
+surprisingly, i chose the right langauge all along..!!
 
+<3 haxe
 
 
 * conclusion:
@@ -307,20 +309,26 @@ x/bash and powershell
   - TODO: windows computers would still require a linux thing to run it..??
     - and linux computers would need to install powershell (probably easier..)
     - maybe neither bash nor powershell are worth it.. might as well use ruby (restricted to included std libs)!
-      - ruby is just excellent as a scripting lang, it even contains a lot of the bash/shell idioms built-in..
+      - *ruby is just excellent as a scripting lang, it even contains a lot of the bash/shell idioms built-in..*
         - i believe ruby even has the pipe operator..
       - *TODO: maybe the shell interpreter is so simple that it has an advantage in startup time..??*
+        - dash vs ruby?
     - could just generate bash with ai..
     - *TODO: does emacs/eshell/emacs-lisp have any advantages..? introspect and modify the shell program?? lol**
   - NOTE: use bash over alts like zsh/fish/kitten for portability
   - batch commands
   - extremely simple scripts
-  - basic shell functions
-ruby > python (> shell langs) (> go)
+  - basic shell functions/aliases
+ruby >>> python (>>>> shell langs) (>>>> go)
+  - (alt for games/media)
+    - dragonruby
+      - *for interactive game dev!!*
   - (alt for shell language)
-    - possibly easier/more convenient to install on all systems..
+    - possibly easier/more convenient to install on all systems than bash 'n powershell
       - often auto-installs on linux, when a program uses it..
     - just restrict self to use the std libs
+    - file utils lib with shell-like aliases
+      - mv, cp, etc.
   - web apps (back-end) that don't need concurrency
     - ruby on rails for quickly making a complete web app
     - roda for simple, modular dynamic sites
@@ -331,7 +339,7 @@ ruby > python (> shell langs) (> go)
     - github ci?, actions?, gitlab ci?
   - data-munging
   - and other things that require dynamic run-time magics
-haxe (>? nim)
+haxe (>? nim =? nelua)
   - high-performance apps yet still uses a garbage collector
     - games, media
       - unfortunately suffers from not having a popular, easy-to-learn media/game framework
@@ -354,8 +362,8 @@ haxe (>? nim)
       - Sys.runCommand("ls") vs `ls'` isn't that bad..
   - transpile to js
   - glue lang / transpilers for all major libs: C, C++, jvm, js
-jai (> nim =? beef)
-  - very-high-performance apps with manual-memory-management options
+jai (=? beef >? nim)
+  - very-high-performance apps with manual-memory-management options and tools
     - games, media
       - jon blow's engine
     - embedded
@@ -371,7 +379,7 @@ elixir
   - anything else that requires concurrency (actor model) AND fits within a functional paradigm
 rust
   - embedded devices
-  - anytime memory-safety is important
+  - anytime memory-safety is crucial
 
 *** no choice:
 javascript
@@ -404,8 +412,8 @@ haxe
           - this made development far more complicated, halting features until they make sense across all transpilers (unified threading)
     - scripting (via --interp flag)
       - though a bit clunky experience compared to ruby..
-    - *standalone programs*
-    - high-performance (via transpile to C)
+    - can build single-file bytecode or binary
+    - high-performance (via VM and transpile to C)
       - C data structure macros
     - use C, C++, jvm libs (via transpilers)
       - *the ultimate glue langauge*
@@ -806,7 +814,7 @@ Most dynamic languages are also dynamically typed, but not all are. **Dynamic la
 
 
 
-* the main list
+* the list
 ## a few contemporary languages, old and new
 
 order of notes:
@@ -1045,6 +1053,7 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
     
     - java:
     - clojure
+      - game note: i think you could use libgdx with it, but it wouldn't work well, as it's functional, with many features hindering performance greatly, when compared to using java..
       - solves a major problem in the JVM world: the need a of good language, that is simple and quick, yet functional annd makes great use of JVM's excellent multi-threading
       - *"It’s a glue language for assembling components, most of which are written in Java."*
         - *special use case: if you want to use java's libs, but not java nor scala, this is probably the quickest way.. and concurrent*
@@ -1676,7 +1685,7 @@ at first i thought games really needed it, but as all dynamic languages interfac
   
 **** [?] Beef
   - STATUS: up-to-date as of 2024. very consistent development. currently native desktop OSs, mobile is in early alpha
-  - basically C#, but with options for memory management, *made for making games*
+  - loads of memory management-related features, thus *suitable for high-performance games and game-making*
     - **"Beef allows for safely mixing different optimization levels on a per-type or per-method level, allowing for performance-critical code to be executed at maximum speed without affecting debuggability of the rest of the application."**
       - a pretty killer feature
     - "Memory management in Beef is manual, and includes **first-class support for custom allocators.** Care has been taken to reduce the burden of manual memory management with language ergonomics and runtime safeties – **Beef can detect memory leaks in real-time, and offers guaranteed protection against use-after-free and double-deletion errors.** As with most safety features in Beef, these memory safeties can be turned off in release builds for maximum performance."
@@ -1819,13 +1828,14 @@ at first i thought games really needed it, but as all dynamic languages interfac
  - *closest to how hardware works*
  - frameworks: RayLib, not really the best for making frameworks, as it's lacking a lot of features; it'll more or less end up like RayLib: a ton of functions included in the top-level namespace, as there is no concept of namespace!
  - manual memory management via "raw" pointers and the const key-word
- - "Many people would tell you that the biggest burden when programming in C is worrying about buffer overflows and accidentally dereferencing null pointers. However, I think that what can make programming in C tedious on a day-to-day basis is that the **C language doesn’t provide many tools to manage complexity. There are no modules or namespaces**, so you have to prefix identifiers to avoid name collisions. You have to worry about the order of your declarations and adding prototypes in the right places. A lot of information is duplicated in various header files. Constants and macros use the C preprocessor, which can lead to strange bugs. There are no classes or interface types to cleanly encapsulate functionality, and there are no standard container types. We implemented our own dynamic array type, which we had to manipulate through awkward preprocessor macros with no type checking."**
+ - "Many people would tell you that the biggest burden when programming in C is *worrying about buffer overflows and accidentally dereferencing null pointers*. However, I think that what can make programming in C tedious on a day-to-day basis is that the **C language doesn’t provide many tools to manage complexity. There are no modules or namespaces**, so you have to prefix identifiers to avoid name collisions. *You have to worry about the order of your declarations and adding prototypes in the right places. A lot of information is duplicated in various header files. Constants and macros use the C preprocessor, which can lead to strange bugs. There are no classes or interface types to cleanly encapsulate functionality, and there are no standard container types. We implemented our own dynamic array type, which we had to manipulate through awkward preprocessor macros with no type checking."*
  - **_not_ object-oriented**
    - and interestingly, it forces you to write in a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, you are able to do what is needed without thinking about how to do it. There's a whole philosophy about this vocalized by Casey Muratori and his hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
  - no string class!, "C-strings" are just arrays of chars
- - has header files, which is annoying, but it seems nowadays people just write everything in the header file..!?
+ - has header files, which is annoying
+     - TODO: but it seems nowadays people just write everything in the header file..!?
  - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
- - OpenFrameworks also has Raylib's beauty (not sure if it's C or C++ tho..)
+ - OpenFrameworks also has Raylib's beauty (not sure if it was C or C++ tho..)
  - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, *dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow and optimized*
 
 **** OKAY Zig
@@ -2963,7 +2973,6 @@ https://www.youtube.com/watch?v=klE9bzWJbHc
 https://www.youtube.com/watch?v=baClkzcfxu0
   - jai > zig from the same streamer
 
-
 *** Robert's opinion
 Robert has ported CrossCode to every popular platform, including *two generations of consoles(!)*, in addition to writing a JS AOT compiler, a super-powered low level framework (Kha), and basically the next SDL (Kinc)
 
@@ -2974,7 +2983,6 @@ Smalltalk, most readable language, you can alter *any* part of it while it's run
 Java had good marketing, otherwise, it stole from Smalltalk (VM, object-oriented) and dumbed down the object-oriented part from true objects to mere class prototypes
 
 Basic was the Java of it's time
-
 
 *** Zeta's opinion
 Zeta has written: a game engine on top of Robert's Kinc lib, and is now writing an ARM assembler (for Hashlink), and is tinkering with writing an OS
