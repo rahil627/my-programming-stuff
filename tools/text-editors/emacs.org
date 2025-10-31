@@ -84,51 +84,6 @@ TODO: projects vs workspaces vs persp(ective)
 
 TODO: centaur-tabs vs native tab-bar-mode and tab-line-mode
 
-** language specific dev
-*** ruby
-the localleader map (c-c l) is really neat 'n simple
-
-it has the following functions:
-
-robe-start
-  - if there's no project, may ask you to run inf-ruby, an inferior ruby process. from then on, i think it's the normal dynamic lang run-time dev experience, similar to elisp: send code into the run-time/process, introspect it, etc.
-    - may run into problems loading libs/gems in correctly.. as there is no project / (gem) bundler setup..
-  - the process will provide a repl console: irb
-    - irb itself is it's own thing.. providing a cli to do a lot of things..
-      - if you don't bundle the project, and just want to try running some script, use irb to load libs..??
-
-robe-doc
-  - introspects the running process for docs, so you are reading the docs in the code, not from some seperate external source
-    - maybe that's why they say emacs is "self-documenting"..
-  - how does it differ from irb's show_doc?
-    - it makes use of emacs search engine mini-buffer, making it a far better experience than irb
-
-c-c l s
-  - send code key-map
-  - can send a require gem statement
-
-c-c k
-  - i don't think robe module uses the lsp..
-  
-(irb)
-  - introspect objects (run methods), debug, load files/libs, etc.
-  - introspection explorer portion mimics cli commands: ls, cd
-
-(completion)
-  - pressing tab works, but functions aren't ordered.. :/
-    - TODO: fix this..??
-    - may have to try zed after all..
-    - or maybe a lsp module for ruby??
-*** lisp
-
-see [lisp.org]
-
-parinfer (> paredit?)
-  - handles parenthesis for you
-
-lispy
-  - modal bindings
-
 
 * bindings
 ** a few quick ways to learn, interactively via run-time introspection:
@@ -1145,7 +1100,10 @@ c-c ! to trigger the menu
 
 TODO: mark, diff??
   - *hooollyyy shiiiiit*
-*** dynamic langs
+
+*** language specific dev
+
+**** dynamic langs
 
 i'm guessing these functions work with several languages with dynamic runtimes
   - lisp
@@ -1157,9 +1115,7 @@ i'm guessing these functions work with several languages with dynamic runtimes
   - python??
   - lua?
 
-
-
-**** introspection related
+***** introspection related
 
 explore dynamic programs (including emacs) interactively via emacs
 
@@ -1174,9 +1130,7 @@ c-c c g / spc-l g (meow)
   - find-var
   - note: if it's a buffer of emacs code, it will search through emacs, similar to the helpful- functions
 
-  
-  
-**** eval related 
+***** eval related 
 spc-e
   - *note: if it's emacs-lisp, you can simply feed code into emacs*, no need for a seperate repl process!
   
@@ -1205,17 +1159,69 @@ send regions of code to a repl
 
 **** lisp
 
+see [lisp.org]
+
+
+modules
+  - parinfer (> paredit?)
+    - handles parenthesis for you
+
+  - lispy
+    - modal bindings
+
+
+
 eventually, you'll probably naturally read enough lisp code when using emacs
   - spc-f-e
     - find file in ~/.emacs.d
 
+
+  
+TODO: these aren't lisp-related..
+  - you can probably use embark-act instead..
+    
 c-( / c-s-9
-  - auto-add parens in the right place
-  - if you have paraedit?
+  - auto-add parens around selection
+    - TODO: i miss this function from helix..
 m-( / c-s-0
   - move to next expression(?) and auto-indent
 
+**** ruby
+
+the localleader map (c-c l) is really neat 'n simple
+
+it has the following functions:
+
+robe-start
+  - if there's no project, may ask you to run inf-ruby, an inferior ruby process. from then on, i think it's the normal dynamic lang run-time dev experience, similar to elisp: send code into the run-time/process, introspect it, etc.
+    - may run into problems loading libs/gems in correctly.. as there is no project / (gem) bundler setup..
+  - the process will provide a repl console: irb
+    - irb itself is it's own thing.. providing a cli to do a lot of things..
+      - if you don't bundle the project, and just want to try running some script, use irb to load libs..??
+
+robe-doc
+  - introspects the running process for docs, so you are reading the docs in the code, not from some seperate external source
+    - maybe that's why they say emacs is "self-documenting"..
+  - how does it differ from irb's show_doc?
+    - it makes use of emacs search engine mini-buffer, making it a far better experience than irb
+
+c-c l s
+  - send code key-map
+  - can send a require gem statement
+
+c-c k
+  - i don't think robe module uses the lsp..
   
+(irb)
+  - introspect objects (run methods), debug, load files/libs, etc.
+  - introspection explorer portion mimics cli commands: ls, cd
+
+(completion)
+  - pressing tab works, but functions aren't ordered.. :/
+    - TODO: fix this..??
+    - may have to try zed after all..
+    - or maybe a lsp module for ruby??
+
 ** meow's inherent god-like-mode
 
 NOTE: it's wayyyy more comfortable to press space-bar over any of the bottom-left key-chords (c-x, c-c). Even (spc x spc) is better, though it adds two more key-presses. The right alt key is the size of a normal key, and still hard to reach with my thumb, making (m-x) particularly difficult.. :/. I tried using emacs' original key-chords while playing with vanilla, but it felt like i was using a space cadet keyboard.. my hands never on the home row..
