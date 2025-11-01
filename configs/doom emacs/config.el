@@ -1308,12 +1308,38 @@
 
 
 
+
+
+
+  ;; TODO: try playing with this..
+  ;; meow-keypad-start-keys
+
+  ;;(setq meow-keypad-start-keys "((?c . ?c) (?h . ?h) (?x . ?x))")
+  ;;  TODO: must learn lisp.. :/
+  
+  ;; Default: ='((?c . ?c) (?h . ?h) (?x . ?x))=
+
+  ;; Alist of keys to begin keypad translation. For instance, given the default
+  ;; value, pressing "c" in keypad mode will look up it's value in the alist, and
+  ;; add "C-c" to the keypad.
+  ;;
+  ;; Alist of keys to begin keypad translation. When a key char is pressed,it's corresponding value is appended to C- and the user is prompted to finish the command.
+
+  
+
+
   (meow-define-keys
     'keypad ;; meow-keypad, a seperate interactive program, NOTE: not a key-map!!
 
     ;; change inputs of the program?
 
-    ;;'("z" . "C-") ; ERROR: meow-keypad-start-with: Wrong type argument: commandp, ctl-x-map
+    ;; '("?q" . "?q") ; TODO: is this how it works..??
+    
+    ;; '("x" . "C-x") ; WARN: this breaks everything..
+    ;; '("x" . "x") ; inserts x..
+    ;; '("x" . nil) ; "without inital keys"
+    ;; '("C-x" . "C-x") ; doesn't do anything..??
+    ;;  - ERROR: meow-keypad-start-with: Wrong type argument: commandp, ctl-x-map
     ;;  - hmmm, yeah, i think it's for input..
     ;;  
     ;;  - trying to map spc-x to c-x ? not c-x c-?
