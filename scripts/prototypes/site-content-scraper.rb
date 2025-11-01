@@ -3,7 +3,7 @@
 
 # ai prompt:
 # using ruby and roda, make a web site that inputs a URL, usually of popular cooking websites full of ads, and scrape the recipe and media (photos, video) content from it
-#  - TODO: use sinatra instead..
+#  - TODO: try sinatra instead..
 
 # write a function that scrapes all the titles and descriptions from a YouTube channel (using ruby/roda web app above)
 
@@ -22,11 +22,60 @@
 #   - i remember it works really well on the phone..
 #   - NOTE: yeah, put this on the backburner..
 
+# can't rely on css name
+#   - look for "ingredients" in css/DOM, and "ingredients" in the text
+
 # hmmm, nowadays, and especially in more social places such as Taiwan, people are more likely to post videos on youtube, so you must scrape from youtube's descriptions
 # TODO: this is a simpler, more practical start
 #   - create a new function for this
 #   - use rosalina's kitchen as an example
 #     - https://www.youtube.com/channel/UCcb9uxCoIgw7RQjQnlgd0Xw
+
+
+
+# this is very good web practice, it's the quintessential CRUD app!
+# + some web-scraping action!
+# it's also a perfect test comparison for haxe for web (via ai, lol)
+#   - and python (flask, django) and javascript (i don't even know..) too
+
+
+# goal:
+# input: web-site
+# output: output stream (for unix/cli) or yaml file or web-page
+
+
+# this has some implementation problems..
+# ...this is the sort of task ai is very good at.. but then that would cost ai compute..
+# TODO: 1. build an ai agent?
+# could try building an ai-agent that does this..
+#   - test on serveral sites (youtube, tiktok?, various basic web-sites)
+#     - test multiple languages!!
+#       - okay, this is very ai is really needed and good at..!!
+#   - improve it, until the output is good enough
+#   - then tell it to write the program down, in ruby (and haxe, jai, python, js)
+
+
+# zero project: output to stream, for simple cli testing
+
+# first project: output via a web page, so anyone can use it (: recipe scraper!)
+
+# second project: output to yaml file, in order to build a database for a seperate site
+
+
+# 2. save data to a simple database (a yaml file)
+
+# 3. create a simple CRUD app using phoenix or rails
+#   - TODO: is sinatra or roda okay for CRUD apps?
+#     - can it be done with a yaml file? or do you already need a database?
+#       - ..i think the advanced search function alone would require a yaml db adapter or something..
+#   - search
+#     - advanced
+#       - by ingredient
+#   - provide link to source: video, tiktok, web-site
+
+# need own server (and domain)
+#   - (can't do via github pages ;( )
+
 
 
 # To run this code:
@@ -44,6 +93,7 @@
 
 require 'roda'
 require 'nokogiri'
+
 require 'open-uri'
 require 'uri'
 require 'fileutils'
@@ -57,6 +107,8 @@ class WebScraper < Roda
     begin
       html = URI.open(url).read
       doc = Nokogiri::HTML(html)
+
+      doc.search()
 
       title = doc.css('h1').text.strip
       ingredients = doc.css('.wprm-recipe-ingredients li').map(&:text).map(&:strip)
