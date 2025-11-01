@@ -1,0 +1,676 @@
+
+hello.
+
+this is me, communicating via vanilla emacs.
+
+and in only seconds, i feel non-modal text-editing is indeed the way to go.. you type a character, and there it goes..!!
+
+however, without a pop-up menu displaying all the bindings on key-chords, it really does rely entirely on memory.. but c-h c-q / quick-menu isn't so bad..
+
+vanilla emacs notable has a standard gui menu. The tool-bar (file, edit, options... help), the most packed tool-bar of an app that i can recall, notably with the key-chord bindings next to the word. It also has a very ugly (chromebook, but without the theme) bar below that for: new file, open file, an icon of a drawer (workspace??, no tooltip to via words..), save file, undo, cut, copy, paste, search (isearch!). It seems to change based on the current situation. For example, during an i(nteractive)-search, or while reading a manual where it resembles the buttons a browser or e-book app may have: back, forward, previous, next. Maybe a sort of mode-based menu..
+
+
+honestly, this whole experience offline with a text editor reminds me of the joy of playing with alpine linux cli for the first time on an old iPad.. there's really something alluring about such a simple time.. perhaps their simplicity leads to creativity.
+
+
+i tried "Emacs Psychotherapist", but it seems too simple of a program.. perhaps reminiscent of the old ai..
+
+then i stumbled upon the FAQs which contains a history of emacs, a concept index, and a history of version release (see below).
+  - zile is a minimal emacs, at ~130kb.
+    - mentioned somewhere in the FAQs..
+
+then i stumbled upon an "introduction to emacs lisp", within the "more manuals" menu item
+  - here, i skipped to the juicy stuff: interpreter and implementation
+    - lisp is so simple, that it's easier to just read how the language actually works: it's implementation
+
+
+
+
+
+
+* some notes on "a history of emacs"
+
+EMACS = Editor MACroS
+RMS = Richard M. Stallman
+Guy Steele = on several standards committees, including scheme
+
+the first emacs was a set of macros written in 1976 by RMS for the editor TECO... Emacs was started by Guy Steele as a project to unify the many divergent TECO command sets and key bindings at MIT, and completed by RMS.
+  - TODO: there a TECO package on emacs
+
+
+* concept index
+
+this is like a list of all the links of a wiki..!! or.. the index of a web-site.
+
+
+* going through the version release notes..
+
+29
+  - tree-sitter
+  - LSP via e-glot
+  - PGTK
+    - wayland and something support
+  - outline-mode
+    - minor mode to help display long lists of bindings..?? loll
+
+28
+  - optional native compilation of lisp files
+    --with-native-compilation
+  - nongnu epla archive is enabled by default alongside gnu elpa
+    - FIXME: my error is here.. it's the reason why i'm playing with vanilla emacs now..!!
+  - cairo graphics lib is used by default
+  - shortdoc-display-group
+  - 24-bit color on terminals
+  - C-x 4 4 [command], C-x 5 5 [command]
+    - wow, still adding more commands, lmao!!
+  - repeat-mode
+
+27
+  - native json parsing
+  - early init
+    - doom uses this
+  - built-in support for tabs?? (tab-bar and tab-line)
+    - TODO: whaaat?? strange decision.. then why a package?.. maybe doom removed it, lmao
+
+26
+  - "a limited form of concurrenc with lisp threads"
+  - ... STOPPED HERE.
+
+
+interesting to see the dev of such an old piece of software.. older than me!
+
+
+
+
+
+* introduction to emacs lisp
+
+some highlights/snippets 'n notes..
+
+it's actually a really cool way to learn programming: from within a running program!!
+  - though, learning via game-making is even cooler..
+
+
+
+
+** about the author
+
+[this was the last secion]
+
+Robert J. Chassell (1946-2017)
+
+start work with gnu emacs in 1985
+founding director and treasurer of the FSF
+co-author of the Texinfo manual
+
+"He had an abiding interest in social and economic history and flew his own airplane."
+
+
+**preface
+
+welp.. time for some old school reading..!! :D
+
+Much of this introduction is dedicated to walkthroughs or guided
+tours of code used in GNU Emacs... Having GNU Emacs is like having a dragon’s cave of treasures.
+  - awesome! 
+
+Learning about these features of Emacs is like learning new routes around your home town.
+  - <3
+
+ GNU Emacs Lisp is largely inspired by Maclisp, which was written at
+MIT in the 1960s.  It is somewhat inspired by Common Lisp, which became
+a standard in the 1980s.  However, Emacs Lisp is much simpler than
+Common Lisp.  (The standard Emacs distribution contains an optional
+extensions file, ‘cl-lib.el’, that adds many Common Lisp features to
+Emacs Lisp.)
+
+
+keychord, since it is similar to the
+way you play a chord on a piano.  If your keyboard does not have a
+<META> key, the <ESC> key prefix is used in place of it.  In this case,
+‘M-C-\’ means that you press and release your <ESC> key and then type
+the <CTRL> key and the ‘\’ key at the same time.  But usually ‘M-C-\’
+means press the <CTRL> key along with the key that is labeled <ALT> and,
+at the same time, press the ‘\’ key.
+  - hmmm, maybe legacy key-oards..??
+
+
+
+** list processing
+
+LISP = LISt Processing
+
+the programming language handles _lists_ (and lists of lists) by putting them between parentheses.  The parentheses mark the boundaries of the list. Sometimes a list is preceded by an apostrophe ‘'’, called a “single-quote” in Lisp.(1)  Lists are the basis of Lisp.
+
+*** ?
+
+A list in Lisp—any list—is a program ready to run.  If you run it (for which the Lisp jargon is “evaluate”), the computer will do one of three things: do nothing except return to you the list itself; send you an error message; or, treat the first symbol in the list as a command to do something.  (Usually, of course, it is the last of these three things that you really want!)
+
+The single apostrophe, ‘'’, that I put in front of some of the example lists in preceding sections is called a “quote”; when it precedes a list, it tells Lisp to do nothing with the list, other than take it as it is written.  But if there is no quote preceding a list, the first item of the list is special: it is a command for the computer to obey.  (In Lisp, these commands are called _functions_.)  The list ‘(+ 2 2)’ shown above did not have a quote in front of it, so Lisp understands that the ‘+’ is an instruction to do something with the rest of the list: add the numbers that follow.
+
+(+ 2 2)
+(this is a quoted list)
+  - eval these two via c-x c-e
+
+The name of the Lisp interpreter comes from the word for the task done by a human who comes up with the meaning of an expression—who interprets it...You can also evaluate an atom that is not part of a list—one that is not surrounded by parentheses; again, the Lisp interpreter translates from the humanly readable expression to the language of the computer.
+
+
+footnotes:
+  - Emacs shows integer values in decimal, in octal and in hex, and also a character
+
+*** error
+
+*** symbol names and function defs
+
+*** lisp interpreter (basic overview)
+
+TODO: move near top, before implementation
+
+Based on what we have seen, we can now start to figure out what the Lisp
+interpreter does when we command it to evaluate a list.  First, it looks
+to see whether there is a quote before the list; if there is, the
+interpreter just gives us the list.  On the other hand, if there is no
+quote, the interpreter looks at the first element in the list and sees
+whether it has a function definition.  If it does, the interpreter
+carries out the instructions in the function definition.  Otherwise, the
+interpreter prints an error message.
+  - yep, simply awesome
+
+   This is how Lisp works.  Simple.  There are added complications which
+we will get to in a minute, but these are the fundamentals
+
+**** complications
+
+1. eval symbols
+2. special forms
+  - an unusual function, very few
+  - defining a function
+3. macros
+  - *a construct that translates a lisp expression into another expression*, that is to be evaluated in place of the original expression
+4. nested lists
+  - if the function/command is none of the above, check to see if the list has a list inside of it. if there is, figure out what to do with it (the inner list), and then it works on the outside list. If there is yet another list, work on that first, and so on. It always works on the innermost list first, to evaluate the result of that list. The result may be used by the enclosing expression.
+
+otherwise, the interpreter works left to right, from one expression to the next.
+
+
+
+examples:
+  - 'if' is a special form
+  - 'when' is a macro
+  - 'defun' used to be a special form, but now it's a macro
+
+
+**** byte-compiling
+
+One other aspect of interpreting: the Lisp interpreter is able to
+interpret two kinds of entity: humanly readable code, on which we will
+focus exclusively, and specially processed code, called “byte compiled”
+code, which is not humanly readable.  Byte compiled code runs faster
+than humanly readable code.
+
+
+   You can transform humanly readable code into byte compiled code by
+running one of the compile commands such as ‘byte-compile-file’.  Byte
+compiled code is usually stored in a file that ends with a ‘.elc’
+extension rather than a ‘.el’ extension.  You will see both kinds of
+file in the ‘emacs/lisp’ directory; the files to read are those with
+‘.el’ extensions.
+
+
+*** evaluation
+
+When the Lisp interpreter works on an expression, the term for the
+activity is called “evaluation”.  We say that the interpreter “evaluates
+the expression”.  I’ve used this term several times before.  The word
+comes from its use in everyday language, “to ascertain the value or
+amount of; to appraise”
+
+... TODO
+
+
+
+...
+
+
+** TODO: list implementation (ch. 9)
+
+TODO: though ch. 9, move this up after the prefece
+
+atoms are recorded in a straightforward fashion; if the implementation is not straightforward in practice, it is, nonetheless, straightforward in theory.  The atom ‘rose’, for example, is recorded as the four contiguous letters ‘r’, ‘o’, ‘s’, ‘e’.
+
+A list, on the other hand, is kept differently.  The mechanism is equally simple, but it takes a moment to get used to the idea.  A list is kept using a series of pairs of pointers.  In the series, the first pointer in each pair points to an atom or to another list, and the second pointer in each pair points to the next pair, or to the symbol ‘nil’, which marks the end of the list.
+  - hmm, a linked list..
+
+   A pointer itself is quite simply the electronic address of what is pointed to.  Hence, a list is kept as a series of electronic addresses.
+
+
+*** lists diagrammed
+
+         ___ ___      ___ ___      ___ ___
+        |___|___|--> |___|___|--> |___|___|--> nil
+          |            |            |
+          |            |            |
+           --> rose     --> violet   --> buttercup
+
+
+In the diagram, each box represents a word of computer memory that holds
+a Lisp object, usually in the form of a memory address...
+
+
+
+*** symbols as a chest of drawers
+
+you might imagine a symbol as being a chest of drawers.  The function definition is put in one drawer, the value in another, and so on.  What is put in the drawer holding the value can be changed without affecting the contents of the drawer holding the function definition, and vice versa.
+
+   Actually, what is put in each drawer is the address of the value or function definition.  It is as if you found an old chest in the attic, and in one of its drawers you found a map giving you directions to where the buried treasure lies.
+
+   (In addition to its name, symbol definition, and variable value, a symbol has a drawer for a “property list” which can be used to record other information.
+
+**** ascii art
+
+   Here is a fanciful representation:
+
+
+                 Chest of Drawers            Contents of Drawers
+
+                 __   o0O0o   __
+               /                 \
+              ---------------------
+             |    directions to    |            [map to]
+             |     symbol name     |             bouquet
+             |                     |
+             +---------------------+
+             |    directions to    |
+             |  symbol definition  |             [none]
+             |                     |
+             +---------------------+
+             |    directions to    |            [map to]
+             |    variable value   |             (rose violet buttercup)
+             |                     |
+             +---------------------+
+             |    directions to    |
+             |    property list    |             [not described here]
+             |                     |
+             +---------------------+
+             |/                   \|
+
+
+
+TODO: how much space does a pointer take, nowadays?.. is everything 32/64 bits = 4-8 bytes..?
+
+
+
+*** exercise:
+
+no clue what i'm doing.. just a guess..
+
+(set flowers violet buttercup)
+(cons flowers honeysuckle rose more-flowers)
+(cars flowers fish)
+
+
+
+
+
+
+** car, cde, cons: fundamental functions (ch. 7)
+
+
+In Lisp, ‘car’, ‘cdr’, and ‘cons’ are fundamental functions.  The ‘cons’
+function is used to construct lists, and the ‘car’ and ‘cdr’ functions
+are used to take them apart.
+
+
+
+names 'n history:
+
+ ‘car’ is an acronym
+from the phrase “Contents of the Address part of the Register”; and
+‘cdr’ (pronounced “could-er”) is an acronym from the phrase “Contents of
+the Decrement part of the Register”.  These phrases refer to the IBM 704
+computer on which the original Lisp was developed.
+
+   The IBM 704 is a footnote in history, but these names are now beloved
+traditions of Lisp.
+ ‘car’ is an acronym
+from the phrase “Contents of the Address part of the Register”; and
+‘cdr’ (pronounced “could-er”) is an acronym from the phrase “Contents of
+the Decrement part of the Register”.  These phrases refer to the IBM 704
+computer on which the original Lisp was developed.
+
+   The IBM 704 is a footnote in history, but these names are now beloved
+traditions of Lisp.
+
+
+
+
+all are non-destructive functions. They don't alter the list, they just report the element(s).
+
+
+
+
+car and cdr:
+
+the car of a list is the first item in a list
+
+  (car '(rose violet daisy buttercup))
+
+
+the cdr is the rest of the list
+
+  (cdr '(rose violet daisy buttercup))
+
+
+
+  For operating on lists, the names ‘first’ and ‘rest’ would make more
+sense than the names ‘car’ and ‘cdr’.  Indeed, some programmers define
+‘first’ and ‘rest’ as aliases for ‘car’ and ‘cdr’, then write ‘first’
+and ‘rest’ in their code.
+
+   However, lists in Lisp are built using a lower-level structure known
+as “cons cells” (*note List Implementation::), in which there is no such
+thing as “first” or “rest”, and the CAR and the CDR are symmetrical.
+Lisp does not try to hide the existence of cons cells, and programs do
+use them for things other than lists.  For this reason, the names are
+helpful for reminding programmers that ‘car’ and ‘cdr’ are in fact
+symmetrical, despite the asymmetrical way they are used in lists.
+
+
+
+note that in the previous example, cdr has parenthesis around it. car returns an element, whereas cdr returns a list
+
+however, the first element doesn't have to be a symbol, it can be a list too!:
+
+     (car '((lion tiger cheetah)
+            (gazelle antelope zebra)
+            (whale dolphin seal)))
+
+
+     (cdr '((lion tiger cheetah)
+            (gazelle antelope zebra)
+            (whale dolphin seal)))
+
+
+   Also, in the first chapter, in the discussion about atoms, I said
+that in Lisp, certain kinds of atom, such as an array, can be separated
+into parts; but the mechanism for doing this is different from the
+mechanism for splitting a list.  As far as Lisp is concerned, *the atoms
+of a list are unsplittable*.  (See Lisp Atoms)  The ‘car’ and ‘cdr’
+functions are used for splitting lists and are considered fundamental to
+Lisp.  *Since they cannot split or gain access to the parts of an array,
+an array is considered an atom.*  Conversely, the other fundamental
+function, ‘cons’, can put together or construct a list, but not an
+array.  (*Arrays are handled by array-specific functions.*  *Note Arrays:
+(elisp)Arrays.)
+  - maybe that's why they're called atoms..
+  - probably due to implementation differences: array vs linked-lists
+
+
+
+cons:
+
+cons constructs lists
+
+it is the inverse of car and cdr
+
+(cons 'pine '(fir oak maple))
+  - eval it
+
+We often say that ‘cons’ puts a new element at the beginning of a
+list, or that it attaches or pushes elements onto the list, but this
+phrasing can be misleading, since ‘cons’ does not change an existing
+list, but creates a new one.
+
+
+
+TODO: stopped here
+
+
+
+
+
+
+
+
+* emacs lisp reference manual
+
+** macros
+
+
+“Macros” enable you to define new control constructs and other language
+features.  A macro is defined much like a function, but instead of
+telling how to compute a value, it tells how to compute another Lisp
+expression which will in turn compute the value.  We call this
+expression the “expansion” of the macro.
+
+   Macros can do this because they operate on the unevaluated
+expressions for the arguments, not on the argument values as functions
+do.  They can therefore construct an expansion containing these argument
+expressions or parts of them.
+  - hence unevaluated symbols are important
+    - TODO: do identifiers (in other langs) have any meaning, un-evaluated??
+
+   If you are using a macro to do something an ordinary function could
+do, just for the sake of speed, consider using an inline function
+instead.  See Inline Functions.
+
+
+     (defmacro inc (var)
+        (list 'setq var (list '1+ var)))
+
+     (setq x 0)
+     
+     (inc x) ;; input symbol, not mere value
+       - inc --"expands"-> (setq x (1+x))
+
+
+   When this is called with ‘(inc x)’, the argument VAR is the symbol
+‘x’—_not_ the _value_ of ‘x’, as it would be in a function.  The body of
+the macro uses this to construct the expansion, which is ‘(setq x (1+
+x))’.  Once the macro definition returns this expansion, Lisp proceeds
+to evaluate it, thus incrementing ‘x’.xs
+
+
+
+*** expansion of a macro call
+
+A macro call looks just like a function call in that it is a list which
+starts with the name of the macro.  The rest of the elements of the list
+are the arguments of the macro.
+
+   Evaluation of the macro call begins like evaluation of a function
+call except for *one crucial difference: the macro arguments are the
+actual expressions appearing in the macro call.  They are not evaluated
+before they are given to the macro definition.  By contrast, the
+arguments of a function are results of evaluating the elements of the
+function call list.*
+
+   Having obtained the arguments, Lisp invokes the macro definition just
+as a function is invoked.  *The argument variables of the macro are bound
+to the argument values from the macro call, or to a list of them in the
+case of a ‘&rest’ argument.*  And the macro body executes and returns its
+value just as a function body does.
+
+   The second crucial difference between macros and functions is that
+*the value returned by the macro body is an alternate Lisp expression,
+also known as the “expansion” of the macro.  The Lisp interpreter
+proceeds to evaluate the expansion as soon as it comes back from the
+macro.*
+
+   Since the expansion is evaluated in the normal manner, *it may contain
+calls to other macros.*  It may even be a call to the same macro, though
+this is unusual.
+
+   Note that Emacs tries to expand macros when loading an uncompiled
+Lisp file.  This is not always possible, but if it is, *it speeds up
+subsequent execution*.  *Note How Programs Do Loading::.
+
+   You can see the expansion of a given macro call by calling
+‘macroexpand’.
+
+
+
+TODO: stopped here.
+
+
+
+*** macros and byte compilation
+
+You might ask why we take the trouble to compute an expansion for a
+macro and then evaluate the expansion.  Why not have the macro body
+produce the desired results directly?  The reason has to do with
+compilation.
+
+   When a macro call appears in a Lisp program being compiled, the Lisp
+compiler calls the macro definition just as the interpreter would, and
+receives an expansion.  *But instead of evaluating this expansion, it
+compiles the expansion as if it had appeared directly in the program.*
+As a result, the compiled code produces the value and side effects
+intended for the macro, but executes at full compiled speed.  This would
+not work if the macro body computed the value and side effects
+itself—they would be computed at compile time, which is not useful.
+
+   *In order for compilation of macro calls to work, the macros must
+already be defined in Lisp when the calls to them are compiled.*  The
+compiler has a special feature to help you do this: if a file being
+compiled contains a ‘defmacro’ form, the macro is defined temporarily
+for the rest of the compilation of that file.
+
+   Byte-compiling a file also executes any ‘require’ calls at top-level
+in the file, so you can ensure that necessary macro definitions are
+available during compilation by requiring the files that define them
+(*note Named Features::).  To avoid loading the macro definition files
+when someone _runs_ the compiled program, write ‘eval-when-compile’
+around the ‘require’ calls (*note Eval During Compile::).
+
+TODO: hmmm, how does this differ from C-macros, which also replace/"expand" code..??
+
+
+
+TODO: stopped at 14.4 defining macros
+
+
+
+
+
+
+* TODO: some notes on emacs, especially the original key-bindings..
+
+TODO: merge this to emacs.org
+
+
+the info buffer is interesting... it behaves like an e-book, but most insteresting is that the top-most element is "the info directory"..
+  - seems to have it's own bindings.. :/
+  - q
+    - quit
+      - this inconsistency is very annoying..
+  - d
+    - directory
+
+
+
+
+not a binding, but config related:
+TODO: not sure about auto-save..
+  - it would prevent my bad habit of saving.. yet:
+  - what if it saves at a time i don't want it to..??
+    - TODO: maybe instead need a don't save for the next few minutes function
+     
+
+
+
+sometimes c-[key] results in c-m-[key]..??
+
+escape
+  - i think maps to meta for legacy key-board compatibility reasons.. this really should go.. :/
+    - and thus c-g is the main escape button
+      - though, this is in a much better position..
+
+
+
+notably *emacs' key-sequence input handler doesn't handle fall-back like meow's.*
+
+m-[arrow keys]
+  - doesn't drag stuff!!
+    - NOTE: it must've been added by doom..
+    - it was one of the few bindings that didn't feel right, easily caused mistakes..
+      - TODO: create an interactive function for it..?
+       - c-x t for transpose?
+  - m-left/right moves by word
+  - m-down/up are undefined
+
+
+
+TODO: why have meow-block over m-n/p forward/backward-list..?
+
+
+m-r
+  - this is another neat, original function..
+    - probably good in cases where the text has no structure: neither paragraphs nor code..
+    - also just good in general..
+    - also well-placed near m-a/e
+
+
+
+m-w
+  - kill-ring-save
+    - copy
+    - quite hard to find.. though conceptually doeos fit the w key..
+      - doesn't match c-y for yank
+        - NOTE: this is actually a mind-fuck..
+
+
+m-n
+  - clone-buffer
+    - this one really fucked me up..
+
+
+
+*c-h c-q*
+  - quick-help
+  - a nice little simple pop-up display for common bindings, just 5 commands per category.. maybe worth re-creating for doom-meow.. or maybe it still work..!!
+  - also, *the pop-up menu stay open, which is nice in this case..*
+   - maybe toggle-popup?
+
+
+
+from quick-help:
+
+c-spc
+  - mark
+    - yep, that was indeed the original binding..
+
+
+c-x w
+  - write
+  - there's actually write and save..!!
+    - i've been using the wrong command the whole time..
+      - TODO: maybe behaves the same once the file is saved..??
+
+
+c-x c-x
+  - swap
+    - notably the only one on a key-chord..
+      - though, you def wouldn't use it much..
+
+
+c-x p r
+  - search 'n replace, at project-level!!
+
+c-x u
+  - undo (alt to c-/ ??)
+  - this would get annoying..
+
+m-%
+  - search 'n replace (buffer?)
+  - must come from the bash days.. :/
+
+m-q
+  - re-format
+  - why q..??
+
+m-g g
+  - go to line
+    - yep, g is for go
+  - but why m-g..??
+    - looks like another key-map.. but very few bindings on it..
