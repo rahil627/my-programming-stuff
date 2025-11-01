@@ -941,23 +941,34 @@
    ;;  - i actually like that it's away from the main keys... by the time i need to change buffers, i need a break!
    ;; '("<XF86forward>" . next-buffer ) ;; default
    ;; '("<XF86Back>" . previous-buffer ) ;; default
-   '("C-<XF86Forward>" . next-window-any-frame ) ;; TODO: flip with next/prev-buffer..?
-   '("C-<XF86Back>" . previous-window-any-frame )
-   '("M-<XF86Forward>" . tab-next ) ;; TODO: can swap this with workspace later..
-   '("M-<XF86Back>" . tab-previous )
-   '("C-M-<XF86Forward>" . +workspace/switch-right )
-   '("C-M-<XF86Back>" . +workspace/switch-left )
-
+   ;;   - NOTE: next/previous-buffer can jump projects
+   ;;     - this an interesting experience to visually see if you have centaur-tabs enabled..
+   ;;   - alts: projectile-next/previous-project-buffer
+   '("C-<XF86Forward>" . projectile-next-project-buffer )
+   '("C-<XF86Back>" . projectile-previous-project-buffer )
+   ;; '("C-<XF86Forward>" . next-window-any-frame )
+   ;; '("C-<XF86Back>" . previous-window-any-frame )
+   ;; '("M-<XF86Forward>" . tab-next ) ;; native impl, does it work for both tab-bar-mode and tab-line-mode..??
+   ;; '("M-<XF86Back>" . tab-previous )
+   '("M-<XF86Forward>" . +workspace/switch-right )
+   '("M-<XF86Back>" . +workspace/switch-left )
+   '("C-M-<XF86Forward>" . next-window-any-frame ) ;; just here for completion (frame), i hope i don't have to open another emacs program..!!
+   '("C-M-<XF86Back>" . previous-window-any-frame )
+   ;;  - i normally use c-x o / c-s-o other-window to hop windows
+   
 
    ;; chromebook reload key (f3)
-   ;; or could use for doom/reload and restart doom/restart-and-restore..   
-   '("<XF86Reload>" . kill-buffer ) ;; NOTE: thankfully triggers mini-buffer search
+   ;; or could use for doom/reload and restart doom/restart-and-restore..
+   ;; TODO: could use for switch-buffer/project/workspace/frame/window(?)..
+   '("<XF86Reload>" . "C-x k" ) ;; kill-buffer NOTE: thankfully triggers mini-buffer search
    '("C-<XF86Reload>" . +workspace/close-window-or-workspace ) ;; close/quit windows, not kill (as you're not actually killing anything..)
    ;;  - quit-window
    ;;    - kills the buffer..??
-   '("M-<XF86Reload>" . tab-close ) ;; too confusing, just use mouse, don't want to do by accident..
-   '("C-M-<XF86Reload>" . +workspace/kill )
+   ;;'("M-<XF86Reload>" . tab-close ) ;; too confusing, just use mouse, don't want to do by accident..
+   '("M-<XF86Reload>" . +workspace/kill )
+   '("C-M-<XF86Reload>" . "C-c q f" ) ;; delete-frame / doom/delete-frame-with-prompt
 
+   
    
    ;; maybe f4 for splitting..??
    ;;   - nope, chromebook's function takes over (maximize/minimize)
