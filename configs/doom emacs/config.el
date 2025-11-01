@@ -1303,7 +1303,20 @@
 
     ;; )
 
-    
+
+      ;; TODO: these toggles are useful for when shit is slow, especially lsp, possibly broken tree-sitter, formatters, etc.
+      ;;   - i may even prefer them off by default.. especially formatters
+      ;; from helix:
+      ;; [keys.normal.space.t]
+      ;; # NOTE: jacked this from someone else, still haven't used..
+      ;; # vs in my custom mode?..
+      ;; a        = ":toggle-option auto-completion"
+      ;; s        = ":toggle-option auto-save"
+      ;; f        = ":toggle-option auto-format"
+      ;; h        = ":toggle-option lsp.display-inlay-hints"
+      ;; l        = ":toggle-option lsp.enable"
+
+      
   ) ; meow-define-keys 'leader spc
 
 
