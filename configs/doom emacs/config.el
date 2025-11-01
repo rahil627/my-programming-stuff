@@ -1386,14 +1386,38 @@
 
 ;; NOTE: use consult-theme to try them all out on-the-fly
 
-;(setq doom-theme 'doom-manegarm) ; zelda, dark forest vibes,
-  ;; TODO: need to provide alt with dim comments
-  ;; otherwise, this is my favorite theme
+
+;; bright: light
+;; dim: outrun
+;; late night: solarized-dark
+
+;; light:
+;; (setq doom-theme 'doom-earl-grey) ; light
+;; (setq doom-theme 'doom-flatwhite) ; light, highlighter
+
+
+;; purple:
 (setq doom-theme 'doom-outrun-electric) ; high-contrast, hard white text
-;(setq doom-theme 'doom-solarized-dark) ; very low-contrast
-;(setq doom-theme 'doom-solarized)
-;(setq doom-theme 'tokyo-night) ; a classic alt between one and outrun-electric
-;(setq doom-theme 'doom-one) ; doom's default, too grey
+                                        ; this one is amazing, similar to aura, especially with night-mode / warm colors!!
+;; (setq doom-theme 'feather-dark) ; low-contrast, slightly-visible comments, purple tinge, that lovable ugly one from helix: boo-berry! lol
+;; (setq doom-theme 'doom-shades-of-purple) ; childish, very bright back-light
+;; (setq doom-theme 'doom-laserwave)
+
+
+;; unique:
+;; (setq doom-theme 'doom-manegarm) ; zelda, dark forest vibes, quite unique
+;;  -  TODO: need to provide alt with dim comments, though the whole theme is quite dim already..
+;; (setq doom-theme 'doom-solarized-dark) ; very low-contrast, for the late night
+;; (setq doom-theme 'doom-solarized-dark-high-contrast) ; brighter italicized comments, notably changes pink functions to blue
+
+;; oldies with cool (blue'ish) colors:
+;; (setq doom-theme 'monokai-ristretto) ; a nice variant and revival of a classic
+;; (setq doom-theme 'tokyo-night) ; a classic alt between one and outrun-electric
+;; (setq doom-theme 'doom-one) ; doom's default, too grey
+;;   - doom-vibrant, a higher-contrast variant
+;; ayu-dark seems fine too..
+
+
 
   ; solaire-mode?
   ; just removes background color tinge
@@ -1407,6 +1431,14 @@
   ;; - TODO: port aurara
   ;;   - FINALLY, a text editor that will last the ages, and never have to port again!
   ;; - just use whatever's there..
+
+  ;; a few light themes first:
+  ;; doom-flatwhite
+  ;;   - unique highlighter style, dim
+  ;; doom-earl-grey
+  ;;   - slightly modified doom-one-light which makes it cozier
+  ;;   - italic comments, dimmer text? or less contrast?
+  ;; doom-one-light
 
   ;; NOTE: all of these can be dimmed by "night-mode" on laptops, which make the colors "warmer", making more themes more tolerable, or even more comfortable..!
 
@@ -1437,7 +1469,7 @@
     ; doom-palenight, bright background for lower contrast, too bright
     ; doom-city-lights, ??
 
-  ; doom-shades-of-purple, a bit of an overload by the bright background and purple comments..
+  ; doom-shades-of-purple, a bit of an overload by the bright background and bright purple comments.. otherwise, quite fun 'n funky
     ; text in txt/org files are still white :/
     ; similar to adventure time
   ; ephemerel, background may be too bright, lots of use of bold is interesting.. noctis vibes
