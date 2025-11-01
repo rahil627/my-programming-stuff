@@ -130,22 +130,17 @@ red
   - my dream lang
   - insane ambition on the language itself, but also a gui system
   - https://www.red-lang.org/p/about.html
-pony
-  - STATUS: abandoned, changed to a research project?
-  - **wild ambition**
-  - actor model for concurrency built-in
 
 classics:
 *haskell*
   - *to experience the magic of functional paradigm*
   - *native compilation and garbage-collected!!*
 *lisp (common lisp sbcl via lem or emacs-lisp via emacs)*
-  - then can compare with ruby
-    - (which also provides an interactive run-time experience)
+  - TODO: then can compare with ruby
+  - *continue using doom emacs (and therefore elisp)*
   - try CLOG
-    - like red but for web
-  - *use doom emacs (and therefore elisp)*
-  - use helix with the scheme plugin system (maybe there's a git branch..??)
+    - like red (lang) but for web
+  - try helix again with the scheme plugin system (maybe there's a git branch..??)
   - try lem again (scbl)
   - *try sbcl*
     - *try it for instances when i'd reach for a native-compiled lang*
@@ -258,24 +253,26 @@ see [game-engines], [web-frameworks], [app-frameworks], etc.
         
 in general:
 **have the option to provide a garbage-collector**
-**expressive**
+**feature-ful**
   - so, not google's langs (go, python, dart?) nor other restricted langs
 compile to machine code (either natively or via transpile to C)
   - it should provide a binary
     - even better if portable
-  - it should be pretty fast
   - for most platforms: desktop OSs, iOS (+ iPadOS), consoles, embedded devices, etc.
-provide a VM, so that you only need to build/compile to native code for the final product
-  - TODO: if a language has a VM, what's stopping it from providing some run-time powers? introspection, eval code/functions? doesn't haxe's hashlink VM provide those capabilities?
+it should be pretty fast
+  - not python slow
+provide a quick-compilation option so that you only need to build/compile to native code for the final product
 provide an interpreter, so that you can quickly run little scripts
   - not so important.. a VM is enough
-aimed for games (and other "creative" applications that use various input/output hardwares): :D
-provide an option of memory management, for fine-tuning intense memory changes (textures going in 'n out, etc.)
+*aimed for games/interactive media* :D
+  - (and other "creative" applications that use various input/output hardwares)
+provide an option of memory management
+  - for fine-tuning intense memory changes (textures going in 'n out, etc.)
   - write "unmanaged code"
   - make it very easy to interop with C (bonus if C++!!)
 be designed to be cross-platform, or at least have that in mind
   - maintain a set of libraries for target platforms: android > iOS > desktop OSs > consoles > everything else, in that order
-    - *because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, it must rely on it's ability to transpile to C*
+    - *because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, especially consoles, it must rely on it's ability to transpile to C*
 
 answer:
 1. haxe, jai
@@ -299,26 +296,18 @@ surprisingly, i chose the right langauge all along..!!
 languages sorted by their use cases
 
 ** personal tool(-kit) waterfall:
-  - TODO: move to another file..?
 
 ordered from simplest to most difficult (manual-memory management):
 
 *** my general-use langs:
 x/bash and powershell
-  - TODO: get rid of this..??
-  - TODO: windows computers would still require a linux thing to run it..??
-    - and linux computers would need to install powershell (probably easier..)
-    - maybe neither bash nor powershell are worth it.. might as well use ruby (restricted to included std libs)!
-      - *ruby is just excellent as a scripting lang, it even contains a lot of the bash/shell idioms built-in..*
-        - i believe ruby even has the pipe operator..
-      - *TODO: maybe the shell interpreter is so simple that it has an advantage in startup time..??*
-        - dash vs ruby?
-    - could just generate bash with ai..
-    - *TODO: does emacs/eshell/emacs-lisp have any advantages..? introspect and modify the shell program?? lol**
-  - NOTE: use bash over alts like zsh/fish/kitten for portability
+  - NOTE: ruby is just excellent as a scripting lang, that there's no need to use these save for:
   - batch commands
   - extremely simple scripts
-  - basic shell functions/aliases
+  - TODO: maybe the shell interpreter is so simple that it has an advantage in startup time over ruby..??
+  - TODO: does emacs/eshell/emacs-lisp have any advantages..? introspect and modify the shell program/process?? lol
+    - you could write scripts in emacs-lisp using existing functions in emacs.. but then you'd need emacs running.. though it is more portable than a linux vm.. lol
+  - NOTE: use bash/powershell over alts like zsh/fish/kitten for portability
 ruby >>> python (>>>> shell langs) (>>>> go)
   - (alt for games/media)
     - dragonruby
@@ -362,6 +351,9 @@ haxe (>? nim =? nelua)
       - Sys.runCommand("ls") vs `ls'` isn't that bad..
   - transpile to js
   - glue lang / transpilers for all major libs: C, C++, jvm, js
+C
+  - mostly to interop with C libs
+  - or when things get hairy..
 jai (=? beef >? nim)
   - very-high-performance apps with manual-memory-management options and tools
     - games, media
@@ -388,42 +380,45 @@ javascript
 python
   - data-science: big data, ml/ai, math, stats, biotech, etc.
 lisp
-  - embedded scripting lang for emacs (emacs-lisp) and helix (scheme/steel) text editors
-    - unless textbringer is good..
+  - embedded scripting lang for emacs (emacs-lisp), helix (scheme/steel), and lem (common-lisp) text editors
+    - unless i build upon textbringer (ruby!)..!!
 
 
 ** haxe the swiss-army-knife, and jai
 
-TODO: when haxe is running in a VM, how does it differ from any other scripting language??
-  - there's introspection, etc.
-  - just need to make an emacs plugin..??
+haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow, and still yet fully-featured (macros, ADTs, pattern matching), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is straight-forward, simple programming.
 
-haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of actionscript, yet with a great simple standard library that gives it a more zen-like procedural flow, and yet fully-featured (macros, ADTs, pattern matching), and a rad little game-dev community around it
-  
+the VM already provides introspection, yet there's also hscript, a scripting language (interpreter, run-time eval), which shares the same syntax (thus little to no porting, to nor from the scripting lang, is necessary), in case you need to eval some code at run-time.
+
+as much as i love ruby's syntax and expressiveness, it's really tough to beat this, which just feels far more simpler, straight-forward.. and with a sane std lib. to me, it's go(lang) done right, before it ever existed.
+
+the vs-code haxe extension likely already has good integration, with common lsp features (completion..), debugging (compile-time checking and run-time errors and breakpoints within vm that make use of introspection), and profiling (or is this a seperate app?)
+  - TODO: just gotta make an emacs plugin!
+
 C
   - libs, high-performance parts, optimization
 haxe
-  - very general-use, garbage-collected, VM + transpile to C + interpreter!!
+  - very general-use, garbage-collected, VM + transpile to C + interpreter!!, hscript, compiler options.. options galore!
     - game
-      - TODO: hscript for hot-reload / dynamic run-time?
       - made by a pro game maker, so the language is designed to handle games
         - especially the hashlink vm and hashlink to C generation
-        - though i think the language was intially designed to be extremely general: cross-platform and cross-language..
-          - this made development far more complicated, halting features until they make sense across all transpilers (unified threading)
+        - though, i think the language was intially designed to be extremely general: cross-platform and cross-language.. i think it's finally honing in / cutting off crap on v5
+    - high-performance
+      - NOTE: the maker's studios' games run fine in just the VM, so until the product is ready for release to a non-desktop-os, there's no reason to ever even compile to C
     - scripting (via --interp flag)
       - though a bit clunky experience compared to ruby..
-    - can build single-file bytecode or binary
-    - high-performance (via VM and transpile to C)
+    - can build a single bytecode file or a native binary (via C)
+      - update: and a hxb: pre-compiled haxe binary file..??
       - C data structure macros
-    - use C, C++, jvm libs (via transpilers)
-      - *the ultimate glue langauge*
+    - when you need libs or must integrate with existing code: C, C++, jvm, js (php?, c# soon again) (via transpilers)
+      - the ultimate glue langauge
 jai
-  - *manual memory management*, *near C-level performance*, but with high-level features
+  - *manual memory management*, *near C-level performance*, yet with high-level features
     - games (..and other high-performance areas)
       - made for games by a pro game maker, so the language is designed for it
 
 *** suffers from lack of popularity/libs:
-  - (but doesn't every other langauge?)
+  - makes up for via transpilers
   - web
     - why not?
       - haxe has great js transpiler!
@@ -431,25 +426,32 @@ jai
       - probably doesn't have a simple concurrency pattern (fibers, beam)
         - though, i have no idea how the hashlink VM works..
         - ..but neither does ruby..
-      - tink/http lib tried..
+      - tink/http -> haxe.http?
   - ai/ml
     - haxe seems to be weaning off the python transpiler..
     - just not worth fighting it..
-      - you'd have to basically interface with the "C extensions" of python libs, since that's where all the work is happening... in which case, a scripting language makes more sense..
-        - TODO: i'm actually not sure how haxe/hashlink/C work together..
+      - you'd have to basically interface directly with the "C extensions" of python libs anyway, since that's where all the work is happening... in which case, a scripting language is a fine solution
 
 
 ** the lispy ruby dream: magical dynamic run-time machines
 
-
 why not aim for the best dev experience and the most expressive semantics?
 
-these languages are lispy, in that they provide a good amount of run-time features, leading to a more interactive dev experience: build the program while it's running, iterating piece-by-piece.. build simple games/media, high-traffice web-sites, high-performance programs, scripts, text editor extensions, all interactively..! yep, you can have it all. this is the way for gamers that crave interaction :D.. but also for noob programmers (like me) whom would benefit from seeing the program's state at any time
+these languages are lispy, in that they provide a good amount of run-time features, leading to a more interactive dev experience: build the program while it's running, iterating piece-by-piece.. build simple games/media apps, high-traffice web-sites, high-performance programs, scripts, text editor extensions, all interactively..! yep, you can have it all. this is the way for gamers that crave interaction :D.. but also for noob programmers (like me) whom would benefit from seeing the program's state at any time
   - pry at a point, introspect (anything and everything), add some shit (into the program up to that point), pry again?
-    - TODO: though ideal for big constantly running apps like games, i'm not really sure if this is a better debugging experience than a normal systems dev lang..
+    - TODO: though ideal for big constantly running apps like games, i'm not really sure if this is a better debugging experience than a normal systems dev lang.. how does it differ from breakpoints?
 
 
+this group of languages notably *hinder performance*, as there's apparently quite a bit of *overhead*. in ruby, understandably, there's overhead from the everything-is-an-object model (unlike lua?), which creates extra method calls, but there also must be overhead calling functions from C, and lastly from dynamic typing (type checking at run-time). in contrast, haxe, i think, only suffers from calling from C when using the VM option, and even that is mitigated when using the C transpiler/generation option. *of these, only common lisp excels*.. but then you're stuck writing lisp.. though, by the time you run into performance problems, you probably have learned quite a bit about programming!
+  - TODO: what other overhead is there?
 
+
+notably, ruby and elixir are considered among the most beautiful languages, in syntax and expressiveness, nudging devs to use the languages' vast features to build neatly solved programs as opposed to straight-forward procedural programs. This is exemplified by their libs. They also often tend to aim to be more verbose/readable, functional. Where static langs find their rougher beauty in C++-style enums, generics, pattern matching, macros, these languages opt for composable modules/mix-ins, simple functions and function-chains, and possibly even more magical dynamic object creation and dynamic function creation. It can get pretty wild..
+    
+in the world of web-browser-as-gui, these langs excel in having the best web frameworks: phoenix, rails, roda. These are worth practicing if you plan to work on or with web products.
+
+
+  
 C
 - core
   - high-performance bits for ruby (C-extensions)
@@ -461,13 +463,13 @@ dragonruby (an mruby fork)
 ruby
   - *web* (tiny to large projects), *scripting*, *shell magic*
 elixir
-  - *web* (scalable to massive traffic), *parallelism*, *functional-paradigm*
+  - *web (high-traffic/throughput)*, *parallelism*, *functional-paradigm*
 lisp (common lisp, scheme, emacs lisp)
   - text editor extension (*emacs*, *helix*, *lem*)
     - emacs is a dynamic run-time machine!!
-  - *high performance alt to C* with native-compilation (scbl)
+  - *high performance alt to C* with native-compilation (sbcl)
 mruby, "mruby/C"?, picoruby (and C)
-  - embedded scripting/extension
+  - *embedded scripting/extension*
     - rust is tough to beat for embedded devices..
     - but in the case of apps that simply want to make use of existing C libs, and build a little core program using them, these langs can provide simple scripting and still get all the benefits of ruby (dynamic run-time / interactive dev, beautiful language..)
 
@@ -823,25 +825,24 @@ frameworks
 the rest
 owner
 
-** scripting langs (dynamic langs, automatic memory-management)
+** scripting langs (dynamic run-time, dynamically-typed, automatic memory-management)
 
-languages that have a dynamic run-time (meaning: you can alter the program at run-time), often dynamic typing (meaning: the type is unknown until run-time), thus enabling the languages to have various program-altering meta-programming features (beyond macros and introspection), and thus providing a more "interactive" dev experience (meaning: you can see the entire program's current state and alter it while it's running)
-  - TODO: then how would it differ from VM langs like C# and java..??
+languages that have a dynamic run-time (meaning: *you can alter the program at run-time; usually meaning: eval, run/execute code while the program/process is running*), often dynamic typing (meaning: the type is unknown until run-time--since new code can be inserted/eval'd at any-time, and thus the object/data can be of any type once it reaches execution), thus enabling the languages to have various program-altering features: *meta-programming* (meaning: *to alter the program in various ways while it's running*; which is beyond introspection, which doesn't alter anything, and beyond macros, which are executed at compile-time), and thus enabling them to *provide a more interactive dev experience*
+
+other languages, such as haxe (hashlink vm), and i'm guessing C# and java too, all at compile code to bytecode (haxe, clr?, jvm bytecode) first before feeding it into the vm (i'm guessing for optimization purposes..). Since the code has already been transformed into bytecode before execution, usually a pre-compiled file, there would be no way for newly inserted/evaluated code to interact with it (TODO: unless you make a way for bytecode to interact with it, or other bytecode..?).
+
+thus, in order to compile code at run-time, you'd need a whole 'nother compilation process (hscript), which'll likely take longer to execute/run, as it's starting from a high-level language, not bytecode (likely, because who knows what optimizations may come up during run-time..).
 
 
-because so much computing is done through the web/internets, these blew up. *In order to build a web program, the end-user does not need a natively-compiled program/binary.* The program simply lives on the server.
 
-furthermore, *you can simply edit these while it's on a server. No need to compile or build.* Just save the file. This is how web-sites are being made, with massive amounts of people working on them, at the same time.
+*** TODO some thoughts on native compilation vs interpreter/vm
 
-also, since browsers run on javascript, many web sites themselves are dynamic run-time machines!! (hence the dev console in which you can run any function)
+TODO: merge with above
 
-the greatest con seems to be that they often (all the major ones) dynamically-typed, and so type-checking can only occur at run-time (as the object can be of any type once it reaches execution)
-
-*** some thoughts on native compilation vs interpreter/vm
 though static languages have made a popular return, thanks to it's type-checking, better debugging experience, and better performance, i still feel **scripting languages ease-of-editing-and-developing** make them impossible to rid. Furthermore, the **power and expressiveness of dynamic languages, especially lisp, but even ruby, make them my personal choices for nearly all cases nowadays. Dynamic runtimes are where all the magic and fun happens (though, static lang compile-time macros are cool too).** In the case of needing memory management / performance, just use C (though, probably not simple, depending on ffi/c-extension-api). The only major loss is the C++ and Rust libs.
 
-in a dynamic/scripting language, **there is no build process. That means every user doesn't need to figure out how to set up build tools, nor how to build it, nor build it for multiple platforms. It just works everywhere. The only thing necessary is downloading the runtime (interpreter or vm/byte-code compiler), which is even often pre-installed on many os's, or easy to get from a package/installer**, in the case of python and ruby. Or, in the case of embedded scriptings languages such as lua, the runtime is already included within the program. Ultimately, **all the user has to to is edit the file/program, and re-run the program.** It doesn't get better than that! **Whereas with a compiled langauge, **upon every single edit, they'd have to rebuild/compile the program**, in addition having the compiler and build tools set-up.
-  - **TODO: not true at all, need to use the fucking dreaded library systems (all are terrible) to download each lib. You just pray that it works. That there's no version conflict. That each program has listed the versions of each library it needs. By the end of which, you have a ton of versions of the same fucking library..*
+in languages with a vm implementation or a simpler interpreter, **there is no build process. That means every user doesn't need to figure out how to set up build tools, nor how to build it, nor build it for multiple platforms. It just works everywhere. The only thing necessary is downloading the runtime (interpreter or vm/byte-code compiler), which is even often pre-installed on many os's, or easy to get from a package/installer**, in the case of python and ruby. Or, in the case of embedded scriptings languages such as lua, the runtime is already included within the program--no need to install anything (as in dragonruby). Ultimately, **all the user has to to is edit the file/program, and re-run the program.** It doesn't get better than that! **Whereas with a compiled langauge, **upon every single edit, they'd have to rebuild/compile the program**, in addition to having the compiler and build tools set-up.
+  - **TODO: not true at all, need to use the fucking dreaded library systems (all are terrible) to download libs used by the program. You just pray that it works. That there's no version conflict. That each program has listed the versions of each library it needs. By the end of which, you have a ton of versions of the same fucking library..*
     - *yeah, okay, maybe binaries are better for the end user.. and with ci/cd github actions, it'll build automatically!*
 
 *"no helpful IDEs. It's hard to reason about dynamic code before you run it, so it's very hard to write tools to help you reason about it."*
@@ -852,17 +853,8 @@ in a dynamic/scripting language, **there is no build process. That means every u
 
 
 
-TODO: merge with above
-post-windows update:
-see [cli-and-tui-frameworks] for similar thoughts on scripting vs natively-compiled
 
-welp, glad i ended up never ended up using scripting langauges!
 
-though i quite love ruby's design (array/hash-splat, blocks, mix-ins, syntax, etc.), it's just not worth installing it to run it for most people. The advent of go's easy build system has shown the importance of compiling to machine code to build binaries that work everywhere. Now, windows has all of linux's superior programs re-written in rust, go, 'n zig; So much so, that there's no need for linux anymore. And building for Windows is crucial--as i use it myself!! So, it's best to stick to compiled languages where things are guaranteed to work, build everywhere, and provides a good debugging experience...
-
-the biggest difference will be the libraries and the succintness (what makes it beautiful are it's main cons: dynamic typing syntax and libraries that use meta-programming). Go has a minimal yet powerful standard library whereas ruby's libraries are often over-engineered, and have a lot of character: often elegance, a bit of quirkiness, and a good amount of magic. In go, you just write/program straight-forwardly, like the languages itself. Also in go, there's a bunch of error handling code (by design) that takes up space and hinders readability. Both python and ruby (and even typescript) scripts will result in more succint, easier to read programs, but maybe not by a large enough margin to outweigh the ability to create portable executables for every platform, and provide easy concurrency. Haxe's standard library is closer to go, minimal-yet-powerful (thanks to it's maker's style), yet it's open-source-community libraries are often closer to ruby, full of meta-programming magic. Kinda the best of both worlds... unfortunately, haxe being much older than go, wasn't built with concurrency in mind, and didn't even get threads into it's std lib until v4 (not simple, considering it transpiles to several langs..).
-
-if i could, i'd choose elixir for most things: it's just as magical and rad as ruby, but contemporary. But it's use cases are narrow: basically, web servers, special functional paradigm use cases, and furthermore, it is among the worst choices for making cli programs (very slow vm startup). :( Anyways, there's always haxe.. maybe nim..? and soon jai.. and still ruby, for when you don't need to build a binary for an end-user (web/apps, scripts!).. and after all, *web is today's main gui..! So, in turn, ruby is actually more practical than all of those natively-compiled langs! Wild how that works.. <3*
 
 
 
@@ -884,6 +876,30 @@ TODO: see https://stackoverflow.com/questions/17253545/scripting-language-vs-pro
 
 https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_scripting_in_2023_decision/
   - i asked in /r/AskProgramming
+*** TODO some other thoughts
+
+TODO: merge with above
+
+post-windows update:
+
+see [cli-and-tui-frameworks] for similar thoughts on scripting vs natively-compiled
+
+the biggest difference will be the libraries and the succintness (what makes it beautiful are it's main cons: dynamic typing syntax and libraries that use meta-programming). Go has a minimal yet powerful standard library whereas ruby's libraries are often over-engineered, and have a lot of character: often elegance, a bit of quirkiness, and a good amount of magic. In go, you just write/program straight-forwardly, like the languages itself. Also in go, there's a bunch of error handling code (by design) that takes up space and hinders readability. Both python and ruby (and even typescript) scripts will result in more succint, easier to read programs, but maybe not by a large enough margin to outweigh the ability to create portable executables for every platform, and provide easy concurrency. Haxe's standard library is closer to go, minimal-yet-powerful (thanks to it's maker's style), yet it's open-source-community libraries are often closer to ruby, full of meta-programming magic. Kinda the best of both worlds... unfortunately, haxe being much older than go, wasn't built with concurrency in mind, and didn't even get threads into it's std lib until v4 (not simple, considering it transpiles to several langs..).
+
+
+
+  
+*** some thoughts about the case of web dev
+
+because so much computing is done through the web/internets, these blew up. *In the case of a web program, the end-user does not need a program on their computer system.* The program simply lives on the server. Thus, *any language can be used!*. VM langauges, including all scripting languages, are totally fine, as the vm is always running (code is fed into a running vm and in return it spits out html/js). Also in this case, startup time doesn't matter either (beam vm).
+
+furthermore, *you can simply edit these while it's on a server. No need to compile or build anything (TODO: though, you'd probably want a deployment process..)* Just replace the file. This is how web-sites are being made, with massive amounts of people working on them, at the same time. Everyone can work on various files, and there's no reason for everyone to find a stopping point to re-build/compile.
+
+also, since browsers have a javascript run-time, browsers themselves are dynamic run-time machines!! (hence the dev console in which you can run any function)
+
+
+TODO: merge with above
+*web is today's main gui..! So, in turn, ruby is actually more practical than all of those natively-compiled langs! Wild how that works.. <3*
 
 
 *** YES Lisp
@@ -1318,32 +1334,7 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
       - *Ruby is dead. Long live Ruby...What’s happened to Ruby is that it’s matured.* It doesn’t have a bunch of folks jumping up and down saying “do everything in Ruby!” … what it does have is lots of people quietly getting lots of shit done in Ruby … just like a ton of other languages that nobody’s super-excited about anymore.
       - *Ruby is anything but simple. Simple would imply a single way of doing something. Ruby gives you five ways of doing everything. I legit think it's one of the most complex languages that's in common use.*
 
-*** NO Javascript
-  - actually may have a better development story than python!
-  - *an old dynamic language used by browsers that has over time become used for everything, especially after node.js enabled writing web backend code with it*
-    - "JavaScript (later: ECMAScript), originally a very small, highly domain-specific language, limited to running within a web browser to dynamically modify the web page being shown, that later developed into a widely portable general-purpose programming language.""
-  - surprisingly *MIGHT JUST BE THE MOST READABLE POP SCRIPTING LANG!*
-  - through Node.js, Express.js (sinatra-inspired micro-framework), etc. 'middle-ware" frameworks, it can then be used server-side
-    - **neither javascript nor Node.js really have a standard library, hence the development of a chaos of terrible libraries**
-      - yikes!!
-  - retarded manual type checking (===, NaN, etc.)
-  - has a few, limited meta-programming features
-    - (likely for compiler efficiency reasons)
-    - eval
-      - alt: Function keyword to create functions at run-time
-    - introspection
-      - see chrome developer tools
-        - dev console
-    - dynamic property creation and modification
-    - a dynamic way to extend object (prototype-based) functionality
-    - proxy and reflect api
-      - TODO: re-read..
-  - deno, bun
-    - alt standalone runtimes/VMs
-    - deno is the succesor of node.js, made from the same guy, admitting his faults
-  - Google's v8 engine is a JIT marvel, much like java's VM, but massive, unweildy
-
-*** NO Python
+*** KILL Python
   - perhaps the most popular scripting language (after javascript), even as of 2022(!!), in direct competition to ruby
   - frameworks and libraries seems to be more scientific-oriented, with machine learning, *ai, math*, 'n so on
     - numpy, tensor flow / *pytorch*, plotting libs, jupyter notebooks, etc.
@@ -1392,6 +1383,30 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
     - *Google just sucks at long-term vision, design, and maintenance*
     - has that google feel to it: it works, but that's it
 
+*** KILL Javascript
+  - actually may have a better development story than python!
+  - *an old dynamic language used by browsers that has over time become used for everything, especially after node.js enabled writing web backend code with it*
+    - "JavaScript (later: ECMAScript), originally a very small, highly domain-specific language, limited to running within a web browser to dynamically modify the web page being shown, that later developed into a widely portable general-purpose programming language.""
+  - surprisingly *MIGHT JUST BE THE MOST READABLE POP SCRIPTING LANG!*
+  - through Node.js, Express.js (sinatra-inspired micro-framework), etc. 'middle-ware" frameworks, it can then be used server-side
+    - **neither javascript nor Node.js really have a standard library, hence the development of a chaos of terrible libraries**
+      - yikes!!
+  - retarded manual type checking (===, NaN, etc.)
+  - has a few, limited meta-programming features
+    - (likely for compiler efficiency reasons)
+    - eval
+      - alt: Function keyword to create functions at run-time
+    - introspection
+      - see chrome developer tools
+        - dev console
+    - dynamic property creation and modification
+    - a dynamic way to extend object (prototype-based) functionality
+    - proxy and reflect api
+      - TODO: re-read..
+  - deno, bun
+    - alt standalone runtimes/VMs
+    - deno is the succesor of node.js, made from the same guy, admitting his faults
+  - Google's v8 engine is a JIT marvel, much like java's VM, but massive, unweildy
 
 *** KILL other more specialized scripting langs
 **** Perl
@@ -1423,34 +1438,38 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
   - hack (language)
     - a typed dialect of php by facebook
 
+** static langs (statically-typed, automatic memory-management)
 
+this is a vague un-named category (i made up "static langs").. but since languages can change, it makes 'em tough to categorize.. in general, they have these traits:
+  - have a garbage collector, on by default, and most do not provide a way manage memory (save nim)
+  - little to no run-time features, save introspection, for optimization reasons, and just being able to reason about the code (at compile-time) better
+    - and thus static-typing for compile-time checking
+  - may have advanced compile-time features: macros
+  - may have strongly typed systems, good (ocaml) and bad (go)
+    - TODO: wtf does this mean..
+  - may have advanced compiler checking (provide checking and error-reporting for advanced features like: gadt, enum, generics, macros??, etc.)
+  - a bytecode/vm implementation, though they may also provide a way to transpile to C or llvm-ir or even native assemblies
 
-** garbage-collected, static langs (automatic memory-management)
+*these languages provide the best compromises while retaining high-performance and automatic memory-management*. their only losses are the dynamic run-time features, and possibly manual memory-management features/options (which is often done in C anyway..)
+  - TODO: NOTE: it seems the biggest difference, or design decision, comes down to: to eval (at run-time) or not. if not, you open the potential for a bunch of (much easier) optimization and compile-time checking.. i now see why people are so against dynamic run-time langs.. the interactive dev just isn't worth it.. especially when you can compile an entire program into bytecode (or native in the case of jai!) in a second or two.
+  
+there's quite a bit of competition in this category..
 
-NOTE: this is a vague category.. but since languages can change, it makes 'em tough to categorize.. in general, they have these traits:
-  - garbage collector is provided and on by default, and most do not provide a way manage memory
-  - most do not provide the dynamic run-time power of lisp or ruby, possibly for optimization reasons, and just being able to reason about the code better
-  - most opt for static-typing for compile-time checking
-
-though many of these languages start with a VM implementation, due to having a garbage-collector, they may also develop to transpile to C or even assembly, both either JIT or AOT
-
-there's too many in this area..
-  - "I think the issue with Nim and Crystal is that if you want a language with garbage collection, you already have so many options out there. If you want a language without garbage collection, you’ve basically got C, C++, Rust, and Zig. If you think that C++ and Rust are too complicated, then you’ve really just got C and Zig."
-    -  https://www.reddit.com/r/ProgrammingLanguages/comments/10hu5md/why_is_zig_so_much_more_successful_than_crystal/
-      - many great comments on the state of languages
-      - basically, as languages came out, users flocked toward them, in particular: go, rust, elixir. Any language after them would have much catching up to do.
+but none are nearly as cool as haxe!!
   
 *** YES (lisp)
 - common lisp/scbl
+  - PERSONAL NOTE: i'd personally give this a shot, as it's infinitely more interesting than go.. yet perfectly fine for it's same domain too (high performance, concurrency)
+  - great native compilation
 - scheme/stalin?
-- invented the garbage collector
+- invented the garbage collector!
 - see [[lisp]]
 
 *** YES (OCaml)
   - see [[OCaml]]
     - it's not purely functional, is garbage-collected, and very much belongs here
       - i think like rust, it's functional by default (uses the same keyword too: let)
-  - the oldest of these listed entries, yet, still great, even has parallelism, and a great generational garbage-collector... i personally don't know of it's faults, beyond it suffering from a small community..
+  - the oldest of these listed entries (after lisp), yet, still great, even has parallelism, and a great recent generational garbage-collector... i personally don't know of it's faults, beyond it suffering from a small community..
 
 *** YES Haxe
   - **my favorite general-use systems language**: simple 'n clean, *light-feeling*--feels like a scripting language!, **more powerful than C# and even nim's macros**, but without all the *heaviness* of it, **feeling more like a cross between actionscript and ocaml: though not nearly as expressive nor beautiful as ruby**, just *siiiick*, garbage collector depends on the target, **low-key best language of all-time**
@@ -1466,7 +1485,22 @@ there's too many in this area..
       - *a runtime (JIT/bytecode and AOT/C), debugger, cpu profiler, memory profiler, graphics profiler (nvidia nsight), and bundle of game-related libs:*
         - *SDL, directx (vulkan was a pain), web-gpu soon, some basic native ui api, common stb-like libs, steam/console stuff, etc.*
           - basically what Adobe AIR did, but updated
-      - concurrency (used by all of their games..)
+      - a few optimizations listed on the site:
+        "HL bytecode is strictly typed
+        Fast anonymous objects access using typed "virtuals"
+        *Static dispatch of object methods when no override exists*
+        *Compact memory representation for all values*
+        Inference to reduce null field access checks to the minimum (soon)
+        *Low level access for pointers, single float, 8 and 16 bits integers"*
+        - ..all this stuff really puts it ahead of other general-use langs.. especially the dynamic ones..
+        - *much of this is probably impossible without compile-time type checking..*
+      - introspection
+        - via reflect and type api, and @:rtti metadata
+      - Dynamic keyword, though it is recommended to avoid it..
+      - no eval
+        - as by this time the code is already transformed into bytecode or C
+        - (note: see hscript for run-time eval)
+      - concurrency (barely used by their games..)
         - **all of northgard runs on a single cpu thread/core, it's just the gpu that's struggling**
         - **their dune game only recently added threads**
       - https://haxe.org/blog/hashlink-indepth/
@@ -1497,6 +1531,12 @@ there's too many in this area..
     - https://www.youtube.com/watch?v=gazZSJFGnck
       - **"shiro game tech stack"**
         - **hscript, hide (domkit-based retained gui), castledb (game database), hxbit (serialization), MPman (network stuff, cross-platform, including consoles, the only part that's closed-source)**
+  - *hscript*
+    - *TODO: NOTE: if you want to see a how a simple implementation of a language, this is it..*
+    - "Haxe script is a complete subset of the Haxe language."
+    - "In some projects it's sometimes useful to be *able to interpret some code dynamically, without recompilation*."
+    - *shares the same syntax with haxe, so the code is completely re-usable, in case you want to put it into the core program*
+    - "*It is dynamically typed but allows all Haxe expressions apart from type (class,enum,typedef) declarations.*"
   - like C#, it has many contemporary features: anonymous functions, local functions, ADTs, properties, etc. and even a macro system (not sure if C# has this...), but far more succint and simple, without bloat, to the point
     - also has **macros** powerful than C#'s code generator and nim's macro system, both of which came much much later
       - https://github.com/SomeRanDev/Haxe-MagicArrayTools
@@ -1523,22 +1563,42 @@ there's too many in this area..
   - it being used by games in production keep the langauge and various game engines 'n media frameworks well-maintained
   - made by one French guy
   - **my fav :)**
-  
+
+
+this is an example of hscript:
+#+begin_src js
+  // TODO: add haxe to org-babel!!
+  var script = "
+	var sum = 0;
+	for( a in angles )
+		sum += Math.cos(a);
+	sum; 
+";
+var parser = new hscript.Parser();
+var program = parser.parseString(script);
+var interp = new hscript.Interp();
+interp.variables.set("Math",Math); // share the Math class
+interp.variables.set("angles",[0,1,2,3]); // set the angles list
+trace( interp.execute(program) ); 
+#+end_src
   
 in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a combination of the maker’s favorite languages mixed together. None are really innovative. Only only a few will catch on, become popular, have libraries, and live on... but that doesn’t mean they shouldn’t be used. Use whatever makes you happy! :) Anyway, it can be really cool making your own little world in your favorite language... As long as it works with C/C++, the worst case is you have to write some “interop” or otherwise “wrapper” code. 
 
-*** YES (Nim)
+*** OKAY (Nim)
   - see [[nim]]
   - have option to choose to use a garbage collector to handle memory
 
-*** Nelua
-  - NOTE: i see no reason to use it over haxe, save that it's simpler
+*** [?] Nelua
+  - NOTE: i see no reason to use it over haxe, save that it's simpler, more composable..
   - lua-like in many ways: syntax, minimal design / few features that can be used to create more features via meta-programming
     - "Nelua tries to be more minimal and generate more readable and compact C code.", when comparing it to nim
   - garbage collector is optional (on by default)
   - compiles (generates/transpiles) to C
   - *compiler written in lua, and thus completely modifiable!*
-    - hmmmm, lol
+    - TODO: *hmmmm..*, lol
+  - transpiles to C, no native compilation
+    - in this case, i see no reason not to use haxe instead..
+  - TODO: can it make use of lua's libs??
 *** NO Crystal
   - *PROBLEM: slow dev*
     - PROBLEM: currently suffers from runtime struggles (memory usage, compile time (no incremental compilation))
@@ -1584,7 +1644,7 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - comes with a good javascript transpiler
   - and just when you thought go was boring as shit..!!
   - flutter
-    - "paint ui"
+    - "paint ui" - henrik, of doom emacs
     - basically made the language just to have this framework
     - *has hot-reload, which makes mobile dev a far better experience*
       - *TODO: but then again, can't any lang do this..??*
@@ -1603,11 +1663,13 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
   - https://www.reddit.com/r/dartlang/comments/1bbbexg/comment/ku8ct38/
     - "Dart is also a hard sell because, no matter the task, there's other languages with super interesting advantages. If you want a performant CLI, just use Go tbh. If you want a driver, just use Rust tbh. If you want a highly performant and concurrent back-end, just use Elixir tbh. If you want to tap on an existing ecosystem with lots of manpower to make your back-end, .NET Core is very popular, unfortunately. If you want to make videogames, you probably don't want to make an entirely new framework and game engine, so you'd end up with C++ or C#. GUI apps are like the only place where Dart truly shines via Flutter, and even that isn't totally figured out. Dart doesn't abuse FFI enough for its platform-dependent code to be entirely in Dart, which would be fucking amazing tbh."
  
-*** TODO Go (golang)
+
+*** KILL Go (golang)
   - NOTE: i think it's only defining feature is the binary build system (and minimal std lib), which is something that requires quite a bit of man-hours.. (now that other langs have simply added fibers..)
     - each binary supports one platform at a time, it's just easier to "cross-compile", meaning build from any platform for all platform
     - but then again, doesn't rust, zig, etc. all have this..?
       - rust seems to require a bit more effort to set-up, and zig probably requires a bit more digging into the docs or trial 'n error.. whereas with go, it sounds like one command "go build" and changing the architecture var
+      - in haxe, you'd have to generate C, then compile for each platform (via gcc, llvm, etc.). otherwise, just ship the bytecode and vm, which may be even simpler and more portable.., at least for x86-64
     - any other lang can adopt the fibers concurrency model
   - *"Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."*
   - *compiled python, or a high-level C, intended to replace python in high-performance areas*
@@ -1644,16 +1706,18 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - "Simplicity as a feature. Go is so simple that I find it really easy to elevate my thinking from the language or small-scale problem up to architectural concerns. Because I spend more time with my head in this place, I often find I end up with better overarching solutions. *The unique niche of simple, high-level, but not obscuring the implementation details often makes my architectures even better than Python or Javascript."*
     - **"On Rust's side, the number one killer feature is correctness. Go has nil panics, goroutines stomping on shared memory, etc. In Go, you still have to program defensively, similar (but not nearly as bad) as writing good Python code. With error return values and being such a simple language this quickly becomes second nature, but it's still unnecessary cognitive load."**
     - *"As making the right choice for yourself, unless GC matters, personally, I'd start with Go, just because it's going to be incredibly easy to pick up for a Python dev, and immediately brings a lot to the table. Once you write some Go and start bumping up against the dark corners (every language has these), you'll develop an appreciation for why you might want Rust and have a better sense of if and when the learning investment is worth it for you."*
-        - *the perfect starter compiled programming language*
+      - *the perfect starter compiled programming language*
 
 
 *** KILL JVM
   - see [[meh, not interested]]
   - libGDX
+  - the most advanced vm
 *** KILL CLR
   - see [[meh, not interested]]
   - Unity
   - XNA/FNA
+  - top 5 most advanced vm (after jvm, v8, beam..?)
 
 
 ** systems langs (manual memory-management, native compilation, statically-typed)
@@ -1696,7 +1760,7 @@ at first i thought games really needed it, but as all dynamic languages interfac
   - Maddy (of Celeste) made an engine in it, but seems to have abandoned it..
 
 **** YES Nim
-  - NOTE: probably the most practical among this, crystal, 'n julia, and even does a few things better than haxe
+  - PERSONAL NOTE: among the most practical, general-use among newer langs.. but i don't see much reason over haxe, save manual memory management, which in case i'd rather just write C for..
   - **"aims for efficiency, then expressiveness, then elegance, has metaprogramming too, in that order"**
     - this is a good way to categorize languages..
   - "It combines successful concepts from mature languages like Python, Ada and Modula."
@@ -1704,18 +1768,18 @@ at first i thought games really needed it, but as all dynamic languages interfac
     - brings the disgusting tab-delimited syntax of python to the world of systems langs :'(
   - "performance-oriented, allowing for many kinds of optimizations and implementations"
     - **memory management options: various garbage collectors (current default), reference-counting (future default), rust-like move semantics (most recent)**
-      - this is it's main difference
+      - this is it's defining feature
   - programming paradigm agnostic
-  - transpiles to C thus can easily interface with C/C++/Objective-C (therefore easier access to iOS?) and javascript, like haxe and crystal
-  - writing macros don't require a different syntax, so it's "elegant" as advertised
+  - transpiles to C
+  - *writing macros don't require a different syntax*, so it's "elegant" as advertised
     - https://stackoverflow.com/questions/77803775/is-it-possible-to-globally-modify-the-ast-in-nim
       - **not as powerful as haxe's macros?**
       - "In Haxe, it's possible to iterate through and modify a project's entire AST prior to typing using @:build macros. I was wondering if it was possible to do something similar with Nim?"
         "Nim has a rich and powerful macro API for AST reading and modification, but is this possible to do outside of explicit macro calls to the content held in other declarations? Could I, say for example, rewrite a specific function at compile-time prior to the generation of the output?"
-      - "No. macros only have access to their corresponding subtree of the AST."
+      - "No. *macros only have access to their corresponding subtree of the AST.*"
     - https://nim-by-example.github.io/macros/
       - **i wouldn't call these macros _elagant_ by any means... nor even the language**
-    - **many features in the language are implemented usnig macros, therefore keeping the core quite small**
+    - **many features in the language are implemented using macros, therefore keeping the core quite small**
     - https://community.haxe.org/t/macros-when-and-why-is-if-macro-if-macro-required/2530/6
       - "All that aside, Nim and Rust macros don’t quite compare with Haxe’s, where it’s not uncommon to use 3rd party libs, networking, file system, databases, the operating system (invoking other CLI tools) and what not. It’s also common to call into the compiler to perform typing and what not (which as far as Google tells me is not possible in Nim or Rust). Properly separating code is therefore vital in the long run."
   - pop contemporary features: generics, closure, functional paradigm features, type inference, macro, statement as expression, etc.
@@ -1888,7 +1952,7 @@ at first i thought games really needed it, but as all dynamic languages interfac
     - // build with `zig build-exe cimport.zig -lc -lraylib`
     - const ray = @cImport({ @cInclude("raylib.h"); });
 
-**** Odin
+**** [?] Odin
   - *more stable dev history than zig*
   - not the best tool-chain, especially debugger and auto-complete
   - from the hand-made network
@@ -1901,32 +1965,35 @@ at first i thought games really needed it, but as all dynamic languages interfac
     - **but doesn't come with a package manager**, again, very opinionated..
   - influenced by Go
 
-**** V(lang)
+**** [?] V(lang)
   - C-like
   - gc optional
 
+
 **** garbage-collected, but C-like or simple, performance-oriented
-***** YES (Lisp/Common Lisp/SCBL)
-- PERSONAL NOTE: i'd personally give this a shot, as it's infinitely more interesting than go (and lua).. yet perfectly fine for it's same domain too (high performance, concurrency)
-- see [[lisp]]
-- TODO: is scheme/stalin native?
-- great native compilation
-***** (Nelua)
-- see [[Nelua]]
-- garbage collector is optional
-- transpiles to C, no native compilation
-  - in this case, i see no reason not to use haxe instead..
-- a very interesting alternative..
-  - TODO: can it make use of lua's libs??
-***** (Go)
+
+there's a few languages that would fit here as a good C replacement, yet still with the aid of a garbage collector.. either via native compilation or generating C
+
+***** (go)
 - see [[Go]]
   - though no manual memory management..:
-- intended as an alt to C in places you need high-performance and/or concurrency
+- *intended as an alt to C in places you need high-performance and/or concurrency*
   - *great libs in these specific domains too*
 - certainly has a C-style procedural paradigm too
   - this is what makes it so restrictive
 - great native compilation / build system
 
+***** (common lisp)
+  - maybe not as simple, but just as fast!
+    - it might be more modular.. like adding CLOS..
+  - see [[common lisp]]
+***** (scheme)
+  - stalin?
+  - the various ones that generate C
+  - see [[scheme]]
+***** (nelua)
+  - this one is interesting..
+  - see [[nelua]]
 
 
 
@@ -2279,17 +2346,24 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
 
 
 *** pony
-  - **...maybe the most ambitious language project in goals..**
+  - STATUS: abandoned, changed to a research project
+  - **..maybe the most ambitious language project in goals..**
+  - actor model for concurrency built-in
   - uses actor model for concurrency
     - TODO: how does this differ from elixir/erlang?
     - maybe the first langauge to do this, and therefore solve a really, really big problem
     - https://www.ponylang.io/discover/why-pony/#isolated-data-is-safe
     - "“reference capabilities”. Reference capabilities allow you to label different bits of data based on how that data can be shared. The Pony compiler will then verify that you are in fact correctly using the data based on the labels you provide. Reference capabilities combined with Pony’s actor model of concurrency makes for a powerful pairing."
-    - "The problem with concurrency is shared mutable data. If two different threads have access to the same piece of data then they might try to update it at the same time. At best this can lead to those two threads having different versions of the data. At worst the updates can interact badly resulting in the data being overwritten with garbage. The standard way to avoid these problems is to use locks to prevent data updates from happening at the same time. This causes big performance hits and is very difficult to get right, so it causes lots of bugs."
-    - "Any data that is immutable (i.e. it cannot be changed) is safe to use concurrently. Since it is immutable it is never updated and it’s the updates that cause concurrency problems."
-    - "If a block of data has only one reference to it then we call it isolated. Since there is only one reference to it, isolated data cannot be shared by multiple threads, so there are no concurrency problems. Isolated data can be passed between multiple threads. As long as only one of them has a reference to it at a time then the data is still safe from concurrency problems."
-    - "The code within a single actor is never run concurrently. This means that, within a single actor, data updates cannot cause problems. It’s only when we want to share data between actors that we have problems."
-    - "By sharing only immutable data and exchanging only isolated data we can have safe concurrent programs without locks. The problem is that it’s very difficult to do that correctly. If you accidentally hang on to a reference to some isolated data you’ve handed over or change something you’ve shared as immutable then everything goes wrong. What you need is for the compiler to force you to live up to your promises. Pony reference capabilities allow the compiler to do just that."
+    - the problem with concurrency 101
+      - "The problem with concurrency is shared mutable data. If two different threads have access to the same piece of data then they might try to update it at the same time. At best this can lead to those two threads having different versions of the data. At worst the updates can interact badly resulting in the data being overwritten with garbage. The standard way to avoid these problems is to use locks to prevent data updates from happening at the same time. This causes big performance hits and is very difficult to get right, so it causes lots of bugs."
+
+        Any data that is immutable (i.e. it cannot be changed) is safe to use concurrently. Since it is immutable it is never updated and it’s the updates that cause concurrency problems.
+
+        If a block of data has only one reference to it then we call it isolated. Since there is only one reference to it, isolated data cannot be shared by multiple threads, so there are no concurrency problems. Isolated data can be passed between multiple threads. As long as only one of them has a reference to it at a time then the data is still safe from concurrency problems.
+
+        The code within a single actor is never run concurrently. This means that, within a single actor, data updates cannot cause problems. It’s only when we want to share data between actors that we have problems.
+
+        By sharing only immutable data and exchanging only isolated data we can have safe concurrent programs without locks. The problem is that it’s very difficult to do that correctly. If you accidentally hang on to a reference to some isolated data you’ve handed over or change something you’ve shared as immutable then everything goes wrong. What you need is for the compiler to force you to live up to your promises. Pony reference capabilities allow the compiler to do just that."
 
 *** streem
   - "a stream based concurrent scripting language. It is based on a programming model similar to the shell, with influences from Ruby, Erlang, and other functional programming languages."
@@ -2314,50 +2388,71 @@ https://en.m.wikipedia.org/wiki/Domain-specific_language
     - html, xml & json, yaml & toml, postscript, latex?, gml (game maker language), UnityScript, GDScript, and so on
 
 *** shell scripting langs
-although specialized, very useful, *unavoidable*
 
 TODO: see/merge? [cli-shells] for shell scripting langs
 
-also, you might just be able to use programming languages within a shell!
+TODO: windows computers would still require a linux vm to run it..? and linux computers would need to install powershell (much simpler..)
+
+
+although specialized, still useful, perhaps more accurately, unavoidable, due to legacy reasons, however:
+
+*given an actual, complete language and a solid ide, i feel infinitely more able to glue together shell crap (pipes, processes, whatever), and just solve problems. With bash, i feel i'm basically confined to piping streams of text between various existing linux cli programs, of which lack any sense of consistency, particularly cli prog flags. The only sane way to solve problems with bash/linux is to rely on ai (that one ai shell..). And if i'm going to use ai, it's probably even easier to just generate precisely what i need in a proper language, which'll be more maintainable, as it's all in a readable language*
+
+also, *ruby is just a fucking great scripting langauge*. it feels it was made to directly replace bash, even including a few bash syntax ideas (ew)
+
+also, *it's easier to install ruby on all desktops oses* than to install a linux vm on windows.. though installing powershell on linux should be easy..
+  - TODO: surely there's a bash shell for windows..?? ..but then you'd be missing the linux cli programs..
+    - yeah, linux cli is fucking garbage, lmaoo
+
+however, *running a basic series of commands does indeed work fine and quick with dash*.. no need for a big scripting language interpreter.. *especially if it's being run a billion times..*
+
+
+**** IDEA ruby interpolation within a shell
+
+also see [[streem]]
+
+you might just be able to use programming languages within a shell!..
   - https://github.com/tombenner/ru
   - in might also be included in pry: https://github.com/pry/pry
     - "We can also interpolate Ruby code into the shell. In the example below we use the shell command cat on a random file from the current directory and count the number of lines in that file with wc:"
       - .cat #{Dir['*.*'].sample} | wc -l
         44
 
-**** some notes extracted from to-scripting-languages:
 
-from [cli-shells]
+
+  
+**** post-windows powershell update
+
 UPDATE:
 powershell feels light-years ahead of unix / linux shell stuff
 and i love ruby
-these two are all i'd ever need
+and haxe
+these three are all i'd ever need
+(and even then, i'd likely reach for ruby over powershell..)
 trash the rest (fish, bash, all of it)
   - though, if i ever have to use linux, fish is the way to go.. as it maintains the old unix way of streaming text via output/input
 
-post-windows powershell update:
-powershell is what i was looking for. You get the .net framework--if you need it--, and a very neat and organized shell-scripting language. It's refreshing, clear, easy-to-understand, and infinitely more organized compared to linux shell scripts, which feels like a bunch of glue of open-source crap. Finally, a solid general-purpose lang made for shells! Yeah, it's verbose, it's got all that .net ilk, but it just feels light-years better than the old linux stuff. Instead of glueing small linux apps together (sed/awk, head, tail, cat, etc.), you just have a very simple standard library (get-content -first/-last 10 vs head/tail) with a great standard help feature. If ever there was a place that needed standards, it was shell-scripting!
+powershell is what i was looking for. You get the .net framework--if you need it--, and a very neat and organized shell-scripting language. It's refreshing, clear, easy-to-understand, and infinitely more organized compared to linux shell scripts, which feels like a bunch of glue of open-source crap. Finally, a solid general-purpose lang made for shells! Yeah, it's verbose, it's got all that verbose microsoft .net ilk, but it just feels light-years better than the old linux stuff. Instead of glueing small linux apps together (sed/awk, head, tail, cat, etc.), you just have a very simple standard library (get-content -first/-last 10 vs head/tail) with a great standard help feature. If ever there was a place that needed standards, it was shell-scripting!
   - i take that bit about the .net framework back, it's huge!!... it should not belong in a shell scripting lang!! i feel it assumes you are working within microsoft..
 
-
-
-shell scripting vs general scripting languages:
-
-also see my notes in [cli-shells.txt]
-
+**** some notes extracted from to-scripting-languages:
 
 TODO: i wonder if the speed of these simple langs are lightning fast though.. in that case, maybe a totally fine reason..!
 
+from [cli-shells]
 
-basically, my conclusion was that the shell scripting languages are limited, simple, domain-specific (DSL), and in the end, i think i imagine i will end up reaching out for a more general-purpose scripting language (ruby, python, lua?, etc.) for both the more extensive standard library and the pop libraries in the package manager.
+shell scripting vs general scripting languages:
 
-in addition, the bash-like shells (all except fish) have a bit of cryptic syntax, especially using the $. It's not bad however, considering how tiny the language is, but using $ for vars is hella old. Also there's a problem with escaping quotes ("$var" vs $var vs one more way...). Crap like that just sucks. But now that there's ai, maybe it doesn't matter..
+basically, my conclusion was that the shell scripting languages are extremely limited, simple, domain-specific, and in the end, i think i imagine i will end up reaching out for a more general-purpose scripting language (ruby) for both the more extensive standard library and the pop libraries in its package manager.
 
-Overall, the shell scripting langauges (bash/zsh, fish, etc.) are great tools for simple scripting: stringing together commands (via the pipe operator: |), managing processes (running commands externally, in a sub-shell, or switching processes), taking in arguments from the command line ($1, $2, $argsv), and so on. But once you want to do a bit more, you'd have to know Linux CLI programs/tools really well to do what you want, whereas, with a more general scripting langauge, you can just do what you want with the normal ways of programming: with an actual type system (in shell scripting langs, vars are strings), with a solid std lib, with helpful external libs.
+in addition, the bash-like shells (all except fish) have a bit of cryptic syntax, especially using the $. It's not bad however, considering how tiny the language is, but using $ for vars is hella old. Also there's a problem with escaping quotes ("$var" vs $var vs one more way...). Crap like that just sucks. But now that there's ai, maybe it doesn't matter anymore.. or maybe it does, as someone still has to read it..
+  - TODO: they should just transpile to bash..
+
+Overall, the shell scripting langauges (bash/zsh, fish, etc.) are great tools for simple scripting: stringing together commands (via the pipe operator: |), managing processes (running commands externally, in a sub-shell, or switching processes), taking in arguments from the command line ($1, $2, $argsv), and so on (though, so are general scripting langs..). But once you want to do a bit more, you'd have to know Linux CLI programs/tools really well to do what you want, whereas, with a more general scripting langauge, you can just do what you want with the normal ways of programming: with an actual type system (in shell scripting langs, vars are strings), with a solid std lib, with helpful external libs.
 
 Ah, that leads to another problem: because all vars are strings, they are a pain to do conditional control flow upon. In fish, for example, you'd have to use a program(?) called test with various flags. So instead of a boolean it'd be:
 `if test -z condition` or `if set -q condition`
-...or something like that. Definitely not ideal. And probably worse in bash.
+...or something like that. Definitely not ideal. Though probably worse in bash..
 
 
 **** Bash (+zsh)
@@ -2395,7 +2490,7 @@ purescript
 
 note: many other languages have js transpilers
 great ones
-  - haxe, dart, f#
+  - haxe, dart, f# (clr?)
 
 good ones?
   - ruby (opal)
@@ -2406,7 +2501,7 @@ good ones?
 
 *** other
 
-sed and AWK
+sed and awk
   - two text processing languages used mainly in Unix-like environments.
 
 
@@ -2838,29 +2933,29 @@ note: benchmarks are usually impractical, only exacerbating very specific differ
 
 *** tier 1:
   - manual memory management
-  - compiles to native machine code see [[systems langs]]
+  - compiles to native machine code, see [[systems langs]]
   - no difference here really, just depends on the programmer's ability
-    - though, Rust's memory-management implementation does have it's trade-offs
+    - though, Rust's memory-management implementation does have it's trade-offs..
 
 **C** (clang > gcc)
-(Zig, V, etc.)
+(**Jai?**)
+(Zig, V, Odin?, etc.)
 Chapel (??)
 (Fortran)
 
 C++ (clang++ > g++)
 **Rust**
-(**Jai?**)
 Swift (llvm, reference-counting or borrow-checker)
 
 *** tier 1.5:
   - adds a garbage collector
   - yet simple enough to be very fast
   - native compilation
-  - note: go's portable binary is also way bigger
+  - note: go's portable binary is much bigger
 
 Go
 **common lisp (sbcl)** - great alternative to Go, perhaps even the original go!
-scheme (stalin)
+*scheme (stalin)* - TODO: $$?
 
 
 *** tier 2:
@@ -2868,19 +2963,18 @@ scheme (stalin)
   - native compilation
   - fully-featured / general-use langs
 
+**Julia** (AOT??) - crazy fast for a complex dynamic lang..??
+  
 Crystal (llvm) - PROBLEM: extremely slow compile times (default, no flags) even for the most trivial hello world code
-
-**Julia** (AOT??) - crazy fast for a complex dynamic lang..
-Nim (clang) - clang speeds!
+Nim (clang) - clang speeds! TODO: ..but c/llvm compilation must suck..
+**Haxe** (via transpiled/generated c/llvm or c++)
 
 C# (aot/native?)
 D?
-(Haskell?)
+(Haskell?) - functional, and fast??
 **OCaml** - suprising for a (impure) functional lang! updated to a great generational garbage collector
-Dart (dart2native)
+Dart (dart2native) - under-rated, without the corporate bloat
 Mojo
-
-**Haxe** (via transpiled/generated c/llvm or c++) - TODO: no clue where it belongs.. maybe not even in this tier..
 
 *** tier 2.5:
   - though not natively-compiled, their VMs have had so much work and money put into it that it performs just as well
@@ -2892,42 +2986,40 @@ Java (JVM) - *fastest vm*
 C# (CLR)
   - F#.. are there any other CLR langs..??
 
+jRuby - ?? TODO: surely the fastest implementation of ruby..??
 
 *** tier 3:
   - very complex, contemporary bytecode/vm JIT implementations written by gods
   - **NOTE: many consoles and iOS don't allow JIT compilers**
 
-**Julia** (JIT, but can AOT) - how the eff... as fast as JS?? NOTE: very slow startup times, and specific to simple, repetitive computations (number operations, etc.)
+**Julia** (JIT, but can AOT) - how the eff... as fast as JS?? NOTE: very slow startup times, and specific to simple, repetitive computations (number operations, etc.), which is what most benchmarks usually are..
 JS (bun, node) - surely the *most complex vm* in terms of optimization..??
 *Lua (LuaJIT -j) - the JIT that set the standard*
-Scheme (gambit)
-**Haxe (hashlink, JIT?)** - probably below dart, but fuck dart
-Dart (JIT, also has AOT) - surprisingly fast, or maybe not, since it's google
+Scheme (gambit) - TODO: generated C?
+**Haxe (hashlink, JIT?)** - probably below dart, but fuck dart, and google too!
+Dart (JIT, also has AOT) - surprisingly fast, or maybe not.. since it's google
 (python/pypy and ruby/truffleruby would go here but are impractical)
+
+*dragonruby* - ?? further optimizations..?? "an order of magnitude slower than LuaJIT"
+*mRuby* - ?? it should be faster than ruby, as it discards certain features, and uses bytecode..
 
 **Elixir** (BEAM) - particularly bad for simple CPU tasks used in benchmarks (slow startup time?) but note: the magical concurrency that occurs in BEAM puts it on top of most dynamic languages, especially when it come to real applications, without having to hand-write concurrency structures
 
-*Ruby (YJIT, 3.3)* - a practical alt run-time (unlike python's pypy)
+*Ruby (YJIT, 3.3)* - a practical/complete alt run-time, now standard
 PHP - opcode/vm-like runtime, surprisingly slow.. probably ranked higher..
 (Pascal?)
 
-*** tier 3.5:
-  - lisp just so happens to be so small 'n simple that it can be compiled on-the-fly
-    - "Chez compiles all code prior to execution and does not do any dynamic code generation during runtime."
-      - *TODO: how does this differ from AOT?*
-        
 Scheme (Chez) - still as slow as ruby JIT?? something must be wrong here..
-
 
 *** tier 4:
   - standard interpreted bytecode/vm impementations for dynamic langs
     - it gets hazy where it's interpreted and where it uses a vm
-  - the differences here can be much bigger, but by 2024, they are all about the same, with python about 2x slower than the others
+  - the differences here can be much bigger in this tier, but by 2024, they are all about the same, with python about 2x slower than the others
 
 **Lua (LuaJIT -joff) - still the fastest interpreter too!**
 Racket
 
-**Wren** - intentionally written to have a simple vm, and performs really well too
+**Wren** - intentionally written simply, and still performs really well too
 Clojure (Babashka interpreter)
 **Ruby** (3.0, CRuby/standard impl) - magical runtime by Japan. suprising for such a complex langauge. very different from the early versions
 Lua (5.4) - the LuaJIT guy isn't too happy about this..
@@ -3018,6 +3110,10 @@ https://www.reddit.com/r/ruby/comments/5c1prl/ruby_vs_python/
   
 https://blog.discord.com/using-rust-to-scale-elixir-for-11-million-concurrent-users-c6f19fc029d3
 ** other crap
+
+https://www.reddit.com/r/ProgrammingLanguages/comments/10hu5md/why_is_zig_so_much_more_successful_than_crystal/
+      - many great comments on the state of languages
+      - basically, as languages came out, users flocked toward them, in particular: go, rust, elixir. Any language after them would have much catching up to do.
 
 
 https://github.com/learn-anything/programming-languages#multi-paradigm
