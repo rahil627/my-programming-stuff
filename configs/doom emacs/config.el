@@ -272,19 +272,29 @@
       ; spc-t-b - big font mode
     ; maybe can help with focus..? or maybe too big..
 
+  ;; (toggle-frame-fullscreen)
+    ; ahhhh, peace and emacs.. :3
+    ; also nice to have space for the pop-up bindings menu
+    ;   - nahhh, prefer my windows, full-screen is too much.. feel confined.. within a window, it feels like notepad! and not a massive IDE!! :D
+    ;   - prefer a pasge-like window in the middle of the screen
 
 
+
+
+
+  
     ; these require a module
     ; make sure it's not commented out in init.el
 
-  (+zen/toggle-fullscreen)
+  
+  ;; (+zen/toggle-fullscreen)
     ; NOTE: doesn't affect when run in terminal
-    ; ahhhh, peace and emacs.. :3
-    ; also nice to have space for the pop-up bindings menu
+    ; alias for writeroom-mode?
+    ; just increases font size..??
     ; spc-t-z/Z
 
   ;;(scroll-bar-mode)
-  ;;  - would be nice, but looks hideous!! :/
+  ;;   - TODO: would be nice, but looks hideous!! :/
 
   ;; (tab-line-mode)
   ;;   - 1 tab for each buffer
@@ -607,8 +617,9 @@
    ;; for dat old game console feel
    ;;   - mneumonic c-c (o)pen-map is really good too
    ;;     - NOTE: TODO: other-window does not go to mini-buffer??
-   '("`" . +eshell/toggle ) ;; c-c o e/E
-   '("~" . +eval/open-repl-other-window ) ;; c-c o r/R
+   '("`" . +eval/open-repl-other-window ) ;; c-c o r/R
+   '("~" . +eshell/toggle ) ;; c-c o e/E
+   ;;   - may not need, if i use (async)-shell-command..
    ;; c-` = +popup-toggle ;; default, matches quite well with this default..
    ;; m-` = tmm-menubar ;; default
    ;;   - menubar, the emacs way, lol..
@@ -619,6 +630,7 @@
       ;;   "C-x p"   #'+popup/other
       ;;   "C-`"     #'+popup/toggle
       ;;   "C-~"     #'+popup/raise) ;; c-s-`
+      ;;     - raises popup to current buffer, for better viewing
 
 
    
@@ -937,6 +949,7 @@
    ;; special chromebook keys
    
    ;; <- and -> (f1/f2)
+   ;;  - NOTE: this binding is god-send.. even just for next/previous buffer
    ;;  - lol, i really like this binding.. a pair of keys work really well here.. and what a strange little pair i have here..
    ;;  - i actually like that it's away from the main keys... by the time i need to change buffers, i need a break!
    ;; '("<XF86forward>" . next-buffer ) ;; default
@@ -1228,6 +1241,10 @@
   
 
 
+
+
+  
+
   (meow-define-keys
       'leader ; c-c / spc
 
@@ -1238,6 +1255,8 @@
     ;; '("z" . consult-buffer) ; spc-z
     ;; '("C-x b" . consult-buffer) ; c-x b / spc x spc b
     ;; '("C-x C-b" . consult-buffer) ; c-x c-b / spc x b
+    ;; '("q q" . "C-x C-c") ; NOTE: when binding to a key-binding, pop-up will display "unknown"
+
 
 
     ;; so far so good... as i just discovered i was using the wrong key-chords the whole time..!! lmao
