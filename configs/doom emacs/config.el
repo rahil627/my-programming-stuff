@@ -333,9 +333,9 @@
     ; really need bind tab-next
     ;   - ah well, time to use the touch-pad for something!
 
-  ; workspaces seem fine too, and already bound by meow..
-  ; it's just lacking a persistent display..
-
+  ; workspaces seem fine too, and already bound by doom..
+  ; TODO: it's just lacking a persistent display..
+  (setq doom-modeline-workspace-name 1) ;; FIXME: hmm not working..??
 
 
 
