@@ -28,6 +28,28 @@ i'm having trouble passing in a list of &rest args for some reason.. maybe just 
 ;;; denotes a heading that can be folded
   - i really like this feature, even if it's un-related to code--solely used by the editor / formatter..
 
+*** some basics
+
+defun in a defun test
+
+#+begin_src elisp
+(defun ra/test ()
+  (defun ra/test-inner ()
+    (which-key--echo "hello"))
+  (ra/test-inner))
+
+(ra/test)
+
+
+
+(defun ra/test-hello ()
+    (which-key--echo "hello"))
+
+(ra/test-hello)
+#+end_src
+
+
+
 *** symbols
 
 people generally use setq over set, for the convenience, as it is what is expected coming from other languages

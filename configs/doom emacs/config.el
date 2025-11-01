@@ -34,6 +34,11 @@
 
 ;;; some TODO from emacs.org
 
+
+;; TODO: figure out a neat way to combine insert-mode and normal-mode bindings, without having to resort to a top-level defun
+;;   - defun in defun works..
+
+
 ;; TODO: install monofoki font (on chromebook)!!
 
 ;; c/fix emacs gui for chromebook
