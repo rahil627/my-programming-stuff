@@ -57,7 +57,7 @@
        (meow +qwerty) ; seem to include a packages.el with meow in it.. ; NOTE: this package was added by me, not in doom
 
        file-templates    ; auto-snippets for empty files
-       ;;fold              ; (nigh) universal code folding ; crucial, after using org-mode..
+       fold              ; (nigh) universal code folding ; crucial, after using org-mode..
        (format) ; +onsave ; automated prettiness ; TODO: can try, but not +onsave!! NOTE: there's also a set of functions for lint (see GUI menu by clicking on the language in the mode-line).. what's the difference..??
        ;;god               ; run Emacs commands without modifier keys ; WARN: don't activate included within meow 
        ;;lispy             ; vim for lisp, for people who don't like vim TODO: try iy, will it bind over meow? seems like an interesting set of key-bindings.. very code-centric.. TODO: could try to generalize it..
