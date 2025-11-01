@@ -11,10 +11,6 @@ BEWARE: WATCH OUT FOR THE WORMHOLE THAT IS EMACS
 USE FOCUS EDITOR INSTEAD
 
 
-some readings..
-  - land of lisp, little schemer, K&R, structure and interpretation of compilers
-
-
 * praise from matz
 
 - https://news.ycombinator.com/item?id=6094610
@@ -30,6 +26,13 @@ some readings..
           - *TODO: did matz write ruby-mode??*
 
 
+* personal note
+
+using emacs, i feel like i've learned quite a bit of the power of dynamic run-times, at least: introspection and eval, and how they can provide another program (a code editor) info and add bits of code to a running program (emacs itself or a seperate repl/process)
+
+next up, i think, will be more dynamic magicks via ruby (dragonruby). Adding bits of code is cool, but altering objects in a game while it's running..?? that'll be next level!!
+
+
 * sources
 tips, tutorials, help:
 https://github.com/emacs-tw/awesome-emacs#tutorials
@@ -40,6 +43,11 @@ zaiste video series
 
 configs of great programmers:
 https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
+  - TODO: can finally grasp this..!!
+
+    
+some pop readings:
+  - land of lisp, little schemer, K&R, structure and interpretation of compilers
 
 
 * config
@@ -1056,8 +1064,16 @@ c-c c-v / spc c v
     - TODO: change to c? (check-source-block checks header arguments..??)
       - maybe flip with '!'?
 
-*** magit
-github desktop, or likely any other gui, seems to be much simpler to grasp and use.. However, upon my first comparison, *it seems magit show far more details in the diff changes, whereas github desktop glances over it*, just highlighting the whole line red or green. So, it may be worth playing with some more..
+*** TODO magit
+
+TODO: i really should try to use this more.. besides github desktop seems to be an electron app!! :/
+  - i mean, makes sense, as the code is shared with github.com..
+
+github desktop, or likely any other gui, seems to be much simpler to grasp and use.. However, upon my first comparison, *it seems magit show far more details in the diff changes, whereas github desktop glances over it, just highlighting the whole line or even entire sections of code red or green*. So, it may be worth playing with some more..
+
+magit is really really integrated to the editor, so that wherever you click a change, it'll jump to the precise location in either the current version (which buffer is likely alrady open) or past version (which must be generated using git..)
+
+diffs are quite ugly, no matter the theme
 
 spc-v
   - version control
@@ -1067,11 +1083,15 @@ spc-v-g
   - status
   - start here
 
+magit-diff
+  - TODO: not bound?
+  
 P push
   - p push (default)
     - main/origin?
   - u upstream?
     - main/origin?
+      
 *** dired
 mark files 'n folders, then take action
   - and remember, can use favorite emacs commands to search text in the buffer!
@@ -1151,7 +1171,6 @@ send regions of code to a repl
   - spc-k-s
     - +eval/send-region-to-repl
   - spc-c-??
-
 
 **** lisp
 
@@ -1648,7 +1667,7 @@ https://github.com/emacs-tw/awesome-emacs#starter-kit
   - what i'm currently learning/discovering emacs on..
 
 *DOOM*
-  - PERSONAL NOTE: i had a great initial experience using this, felt wayyyy easier and wayyyy more intuitive and wayyyy smarter (built-in functions do what you except) than using neovim!
+  - PERSONAL NOTE: i had a great initial experience using this, felt wayyyy easier and wayyyy more intuitive and wayyyy smarter (built-in functions do what you except) than using helix!
     - helix seems to have taken much of it's space-key-chord shortcuts from doom, making it an easy jump
   - "Doom is a configuration framework for [[https://www.gnu.org/software/emacs/][GNU Emacs 26.3+]] tailored for Emacs bankruptcy veterans who want less framework in their frameworks and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite OS.
 
