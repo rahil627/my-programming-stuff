@@ -43,7 +43,7 @@
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       tabs              ; a tab bar for Emacs ; NOTE: this may be over-kill, but it's pretty, and seems to be project-based TODO: test native tabs module, especially tab-line-mode
+       tabs              ; a tab bar for Emacs ; NOTE: this may be over-kill, and against emacs traditional buffer-oriented workflow, but it's very pretty, and they're grouped by project, offering an interactive visual view of what buffers are open for each project TODO: test native tabs module, especially tab-line-mode.. they're supposedly very customizable..
        treemacs          ; a project drawer, like neotree but cooler ; NOTE: it provides great integreation with project(tile) and workspaces, giving you a view of both, depending on what buffer you are on. otherwise, it'll still show the cwd
        ;;unicode           ; extended unicode support for various languages
        (vc-gutter +pretty) ; vcs diff in the fringe
@@ -111,12 +111,12 @@
 
        :os
        (:if (featurep :system 'macos) macos)  ; improve compatibility with macOS
-       tty               ; improve the terminal Emacs experience
+       tty                 ; improve the terminal Emacs experience
 
        :lang
        ;;agda              ; types of types of types of types...
        ;;beancount         ; mind the GAAP
-       (cc +lsp)         ; C > C++ == 1
+       (cc +lsp)           ; C > C++ == 1
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
@@ -125,9 +125,9 @@
        ;;data              ; config/data formats
        ;;(dart +flutter)   ; paint ui and not much else
        ;;dhall
-       (elixir +lsp)             ; erlang done right
+       (elixir +lsp)       ; erlang done right
        ;;elm               ; care for a cup of TEA?
-       emacs-lisp        ; drown in parentheses
+       emacs-lisp          ; drown in parentheses
        ;;erlang            ; an elegant language for a more civilized age
        ;;ess               ; emacs speaks statistics
        ;;factor
@@ -150,11 +150,11 @@
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
        ;;lua               ; one-based indices? one-based indices
-       markdown          ; writing docs for people to ignore ; TODO: temporary, until i convert to org-mode ;)
+       markdown            ; writing docs for people to ignore ; TODO: temporary, until i convert to org-mode ;)
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
-       org               ; organize your plain life in plain text
+       org                 ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
@@ -165,17 +165,17 @@
        ;;raku              ; the artist formerly known as perl6
        ;;rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
-       (ruby);+rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"} ; NOTE: seems to include robe (connect to irb / run-time), rspec, bundler, etc.
+       (ruby);+rails)      ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"} ; NOTE: seems to include robe (connect to irb / run-time), rspec, bundler, etc.
        ;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
-       sh                ; she sells {ba,z,fi}sh shells on the C xor
+       sh                  ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       web               ; the tubes ; NOTE: html, css, etc., maybe basic js too? though the lsp impl would surely be superior..
-       yaml              ; JSON, but readable
+       web                 ; the tubes ; NOTE: html, css, etc., maybe basic js too? though the lsp impl would surely be superior..
+       yaml                ; JSON, but readable
        ;;zig               ; C, but simpler
 
        :email
