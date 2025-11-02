@@ -1,6 +1,8 @@
 
 
-tips:
+* tips:
+
+#+begin_src sh
 # search packages by string
 pacman -Ss 'postgre'
 
@@ -17,10 +19,11 @@ sudo pacman -S base-devel
 # make AUR package
 # -s = --syncdeps, -i = --install
 makepkg -si
+#+end_src
 
+* update
 
-# update
-
+#+begin_src sh
 # updates entire OS, including all packages
 sudo pacman -Syu
 
@@ -29,14 +32,15 @@ sudo pacman -Sy archlinux-keyring && sudo pacman -Su
 
 # update user-made packages
 yay -Sua
+#+end_src
 
-
-# maintenance
+* maintenance
 
 # periodically remove unused/cached packages
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)
 https://wiki.archlinux.org/title/system_maintenance#Unused_packages_(orphans)
 
+#+begin_src sh
 # remove all the cached packages that are not currently installed, and the unused sync databases, execute:
 # Warning: One should avoid deleting from the cache all past versions of installed packages and all uninstalled packages unless one desperately needs to free some disk space. This will prevent downgrading or reinstalling packages without downloading them again.
 pacman -Sc
@@ -60,13 +64,15 @@ pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | paste - - | column -t |
 # update mirrors
 # sudo reflector -n 100 --sort score -c US --save /etc/pacman.d/mirrorlist
 # update country in the service's config /etc/xdg/reflector/reflector.conf
+#+end_src
 
+* notes
 
-
-notes:
-
+#+begin_src sh
 # check file-systems mounted
 mount | grep ext4
 mount | grep vda
 # /dev/vda on /opt/google/cros-containers type ext4 (ro,relatime)
+#+end_src
+
 
