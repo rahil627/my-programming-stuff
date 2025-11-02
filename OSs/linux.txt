@@ -311,16 +311,6 @@ gui file-managers:
 https://www.reddit.com/r/swaywm/comments/ja93ss/comment/g8ojr1a/?utm_source=reddit&utm_medium=web2x&context=3&rdt=48122
 They all suck in their own way.
 
-terminal file-managers:
-vifm
-  - quirky and feels slower than python-based ranger.
-
-nnn
-  - fast, but too unconfigurable and unusable.
-
-mc
-  - old school midnight commander
-
 pcmanfm
   - too basic, thunar is too basic, QT-based (pcmanfm-qt, dolphin) suffer from a disappearing menus QT bug, and dolphin is kinda bloated and practically pulls in the whole KDE suite.
 

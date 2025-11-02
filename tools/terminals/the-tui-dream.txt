@@ -186,8 +186,12 @@ nnn
 fff
   - simple, fast
   - written in bash :o
+vifm
+  - quirky and feels slower than python-based ranger.
 mc (midnight commander)
   - for that old school feel
+
+
 
 
 text editors:

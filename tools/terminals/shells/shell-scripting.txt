@@ -1,4 +1,14 @@
 
+
+
+UPDATE: i have no use for shell scripts. see [programming-languages.org]. ruby is just superior in every way, save, possibly for running batches of commands quickly. Otherwise, it's ruby scripts, emacs functions, haxe programs.
+
+
+
+
+
+
+
 also see the 'scripting languages' section in 'programming lanugages.txt'
 
 
