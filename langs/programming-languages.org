@@ -964,7 +964,32 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
     - used in Deep Space and Mars Rover
   - https://awesome-cl.com/
     - awesome common lisp repo site
+  - CLOS
+    - a more generic implementation of objects, where all methods are generic, and classes are simple a collection of methods
+      - this is very close to data-oriented paradigm.. just adding the cost of multiple-dispatch
+    - uses multiple-dispatch, like small-talk, based on argument types
+    - https://mendhekar.medium.com/the-finest-object-system-youve-never-heard-of-d2e26339b03c
+      - a simple comparison
+        - behavior and structure
+          - "The problem with this design choice of merging structure and behavior is that the world of abstract information system design is very different from the physical world."
+          - simula OO: usually end up creating more abstractions: inheritance (via interface/virtual methods or sub-classes)
+        - dispatch: match the name of a method to a specific piece of code to run
+          - simula OO: one dispath table per object
+          - CLOS: quite complicated, there's an order of precedence, from specific/"specialized" to more general
+        - can add methods to basic/internal types
+        - generic functions are basically functions, and can be passed around
+        - can modify existing classes by adding functions
+        - meta-object protocol (mop)
+          - sounds similar to metaclass, the things that create classes, or in this case, everything within the this system
+          - can modify it everything
   - solid dev tools (SLY/SLIME/emacs)
+  - trial game engine
+    - used to make a little open-world 2d game: kandria
+    - https://github.com/Shinmera/talks/blob/master/gic2021-highly-dynamic/paper.pdf
+      - the person wrote this little overview on why common lisp for games
+        - includes CLOS uses
+    - https://shirakumo.org/
+      - other software by that person and friends
   - **the CLOG web framework**
     - a totally awesome way to make websites in pure lisp!! (via websockets)
   - emacs itself has some cl-like things
