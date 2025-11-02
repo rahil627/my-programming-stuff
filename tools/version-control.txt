@@ -1,4 +1,27 @@
 
+
+
+software for your version control software
+
+
+magit
+  - will take time to learn..
+  - c-c c-c is a terrible joke to hide the git commit finalize binding..
+
+github desktop
+  - git made stupid simple
+  - keep it open, and it will track changes and auto check-mark what has been changed since, once you click on it again
+  - sometimes git renames fail (or it might be me renaming without git..)
+  - diffs aren't very smart..
+  - maybe electron :/
+
+
+
+
+
+
+version control software
+
 https://www.reddit.com/r/gamedev/comments/1bsptek/what_should_i_use_for_source_control_and_why_in/
   - for games, the problem is non-code files: binaries and size limit (5gb)
   - why git lfs?: "It has a “checkout” feature which forces all files to be read-only until you manually check them out (like a library book). This will sync with the server and allow your coworkers to see what files you are working on. It useful for large projects that involve a lot of binary files as they can’t be diff-merged anyway, so traditional source control loses some of its value in that regard.
