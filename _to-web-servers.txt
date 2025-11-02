@@ -1,3 +1,77 @@
+
+
+MERGED THIS BIT FROM ANOTHER FILE:
+
+ssh: 
+keep private key to your-self, on your personal device (the client)
+put public key on the device you want to log in to (the server)
+
+
+methods:
+ecdsa > rsa > dsa
+  - ecdsa seems good (as of 2022)
+  - rsa is inefficent, but prolly works fine for sizes 2048 and higher
+  - dsa seems deprecated
+--
+
+plesk sucks:
+Plesk ended up eating quite a lot of memory running apache2, mysql for a single Wordpress site. In addition, fail2ban was taking up memory too, perhaps a problem with logs(?). Then, it was impossible to delete on Ubuntu 20.04: Plesk said it's a "bug" ;(. It was a pain to unsinstall, looking for scripts on GitHub gists, and using aptitude to delete packages. Thus, stick to static sites, and let them be hosted by either GitHub or DigitalOcean's new App ("PaaS") service. Later on, if needed, can host it myself using nginx, *without web host control panel software*. ...and now i have to re-install the server because it left such a mess! :( But at least i'm now down to 250mb memory / virtual memory! :)
+
+
+
+
+to ubuntu desktop:
+
+startup and sessions (application)
+  - can de/select startup services, and see which services are currently running
+to cli:
+
+apt
+  - apt install [software name]
+  - apt remove [software name]
+  - apt purge [software name]
+    - this removes config files
+
+
+
+htop
+  - sort view then sort-by column, or tree view (no auto-sorting)
+  - virtual memory can have crazy numbers, don't worry
+  - kill only kills processes 1 by 1, it's better to use killall process-name
+  
+kill [process id]
+killall [process name]
+
+
+programs:
+aptitude
+   - a gui for apt
+
+
+
+
+
+to linux:
+etc/environments
+  - contains paths to stuff
+  - told me local/bin, which contains a few things i installed
+
+/etc/ssh
+  - /sshd_config
+
+
+
+
+
+
+
+
+
+
+
+ORIGINAL FILE:
+
+
 10/2020
 
 general:
