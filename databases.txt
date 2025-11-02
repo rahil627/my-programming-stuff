@@ -1,4 +1,21 @@
 
+
+relational vs "nosql"
+relational are the traditional spreadsheet-like column 'n rows
+nosql can have various forms, but generally meant for less related data
+
+relational db's:
+**postgres**
+  - the standard
+**sqllite**
+  - if you have never touched databases before you may want to start with SQLite so you don't have to worry about setting up a database, connecting to it, and deploying it. Everything you do in SQLite is available in Postgres, but not the opposite way around.
+
+
+
+
+
+some other shit..
+
 BaaS databases:
   - back-end as service?
   - use simple api's so that you can offload db mental-load
@@ -12,13 +29,3 @@ firebase
   - open-source firebase
   - **uses a standard postgres db**
     - **makes it easier to port over to server**
-
-relational vs "nosql"
-relational are the traditional spreadsheet-like column 'n rows
-nosql can have various forms, but generally meant for less related data
-
-relational db's:
-**postgres**
-  - the standard
-**sqllite**
-  - if you have never touched databases before you may want to start with SQLite so you don't have to worry about setting up a database, connecting to it, and deploying it. Everything you do in SQLite is available in Postgres, but not the opposite way around.

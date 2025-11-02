@@ -1,3 +1,21 @@
+
+
+NOTE: this must be quite old..
+
+game engine main loop:
+while( user doesn't exit ) {
+for each frame {
+  check for user input
+  run AI
+  resolve collisions (move bacK, remove, etc)
+  draw graphics (?)
+  play sounds
+}
+}
+
+
+
+other crap:
 Some of the best samples can be found in game jam games. Just check Ludum Dare for the framework you are interested in, and possibly even a game that does what you want to.
 
 object-oriented model vs component model
@@ -26,7 +44,10 @@ moving in 2d in a non-orthoganal direction
 			//dx = Math.sin(angle * Flash.RADIAN);
 			//dy = Math.cos(angle * Flash.RADIAN);
 
-game update
+
+
+
+game update:
   player update
     player's children updates
       etc.
@@ -37,12 +58,3 @@ game update
   
   as opposed to enter_frame event? The only difference is that there is an order.
 
-while( user doesn't exit ) {
-for each frame {
-  check for user input
-  run AI
-  resolve collisions (move bacK, remove, etc)
-  draw graphics (?)
-  play sounds
-}
-}
