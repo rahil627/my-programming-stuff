@@ -3,16 +3,23 @@
 may overlap with [programming-languages], [programming-concepts], and possibly more..
 
 * process
-high-level lang -> LLVM -> target platform assembly
-C/C++ (optional?: -> LLVM for optimizing) -> target platform assembly (maybe prefers a compiler?)
 
-high-level lang -> LLVM -> generated C (to link to consoles, mobile) -> target platform assembly
+systems langs (C, C++, rust, go, zig, etc.) -> target platform assembly
+  - gcc, msvc, go build, etc.
+
+high-level lang -> llvm ir -> target platform assembly
+  - via llvm
+
+high-level lang (optional: -> LLVM for optimizing) -> generated C (to link to consoles, mobile) -> target platform assembly
   - LLVM dropped C backend in v3.1  
     - this project revived it https://github.com/JuliaComputingOSS/llvm-cbe
     - however, this sounds impossible for any non-trivial program
 
 
 * platform-specific
+
+WARNING: for iOS and many consoles (except switch?), "cannot execute writeable regions", thus cannot use JIT compilation
+
 mobile
   - iOS uses C(/objective-C)
     - yet somehow haxe's C++ could be used..??
@@ -25,7 +32,6 @@ consoles:
     - as a direct path from high-level language to console hardware architecture is crazy..
 
 
-warning for iOS and consoles: "cannot execute writeable regions", thus cannot use JIT compilation
 
 
 
