@@ -1,5 +1,16 @@
+
+  
+
+* random link
+
 https://learn-elixir.dev/blogs/creating-reusable-ecto-code
   - to re-create the magic of RoR
+
+
+* cli commands
+
+org seems to work well for shell, or anything that uses # for comments..
+  - no need for org-babel here!
 
 # install elixir
 # see elixir.txt
@@ -68,7 +79,7 @@ http://localhost:4000/
 
 
 
-# set-up a database
+* set-up a database
 
 # can use this mix script to generate basic schemas
 # schemas are table-like data entities?
@@ -109,7 +120,7 @@ https://hexdocs.pm/ecto/Ecto.Schema.html#timestamps/1
 
 
 
-# creating a context/controller/views/templates
+* creating a context/controller/views/templates
 
 def have to do some reading..
 go through all of the guides in the manual:
@@ -145,7 +156,7 @@ https://hexdocs.pm/ecto/3.10.1/Ecto.Repo.html#schema-api
 
 
 
-# some common db commands
+* some common db commands (psql)
 # TODO: move to postgressql.txt somewhere
 pg_ctl start/stop/restart?/status
 
@@ -189,7 +200,7 @@ select * from table_name; # remember the semi-colon!
 
 
 
-## generate some data
+* generate some data
 # https://medium.com/geekculture/phoenix-understanding-how-to-seed-data-c2be863ddd1d
 #  - very good post teaching how to use seeds.exs, mix aliases, and faker lib
 
@@ -197,7 +208,7 @@ select * from table_name; # remember the semi-colon!
 
 
 
-# some common mix tasks
+** some common mix tasks
 
 # re-create db
 pg_ctl start
@@ -218,7 +229,7 @@ mix ecto.drop
 
 
 
-# naming conventions
+* naming conventions
 The convention is to have:
 plural for context: Games.ex
 singular for schema: Game.ex
@@ -232,7 +243,7 @@ UpperCamelCase
 
 
 
-# file structure
+* file structure
 /
   - mix.exs
     - main project file
@@ -250,7 +261,7 @@ UpperCamelCase
 
 
 
-
+* hmm
 
 https://thephoenixtutorial.org/book/ch1_from_zero_to_deploy
   - looks like a simple, one-page-html tutorial..
@@ -271,7 +282,7 @@ SKIPPING TUTORIAL, just go with ai and make the app
 
 
 
-TODO: merge from last time
+* TODO merge these notes from my last session
 # see https://hexdocs.pm/phoenix/directory_structure.html
 
 
