@@ -93,15 +93,9 @@ ai is amazing for building skeletons/boiler-plate code, and just building enough
 
 every langauge has a server, so really cuold choose anything, but more important is that it's in a language and framework that you'd want to use, and makes you happy... and stable
 
-*ASP.NET*
-  - familiar C#, compiled (therefore easy to debug!!), the best tools, front-end wasm potential (blazor)
-
 *phoenix*
   - heavy traffic: parallel, etc.
   - a successor to ruby's back-end frameworks (rails), yet maintaining the simplicity of ruby's micro-frameworks (roda)
-  
-TODO: merge with above
-  *phoenix*
   - rough learning curve
     - but if you don't know ruby, it's probably just as rough learning rails
   - particularly *phoenix live view*
@@ -116,26 +110,32 @@ TODO: merge with above
       - https://blog.sequinstream.com/liveview-is-best-with-svelte/
     - extremely stable
       - used by discord, telegram, whatsapp, pinterest, and countless others
-  
-*roda and other ruby micro-frameworks*
-  - superceded by phoenix, however
-  - *still great for simple, quick, personal, incremental-developing, low-traffic apps*
-  - quicker to develop than elixir, as you're not forced into a functional-paradigm
-    - also ruby is just more hackable.. it's a different way of developing, but not scalable unless very careful
-  - for educational purposes: old school classic web app making in a minimalist style
-  - https://www.reddit.com/r/ruby/comments/16j7r1w/web_frameworks_actively_maintained_in_2023/
-    - list of web app frameworks currently maintained as of 2023
-  - it's also still just nice to use a scripting language, making it simple to update pages 'n server-side stuff
-    - and dragonruby!!
-    
-x/rails
+
+rails
   - superceded by phoenix
   - still great if you remember/use ruby, and still easier to learn and faster to use than writing elixir... but really should try to use phoenix first
   - for big stuff
   - magical (code is more mysterious, less explicit)
     
 
+*ASP.NET*
+  - familiar C#, compiled (therefore easy to debug!!), the best tools, front-end wasm potential (blazor)
 
+  
+*roda and other ruby micro-frameworks*
+  - superceded by phoenix, however
+    - (phoenix is great for small web apps too)
+  - *still great for simple, quick, personal, incremental-developing, low-traffic apps*
+  - quicker to develop than elixir, as you're not forced into a functional-paradigm
+    - also ruby is just more hackable.. it's a different way of developing, but not scalable unless very careful
+  - for educational purposes: old school classic web app making in a minimalist style
+  - it's also still just nice to use a scripting language, making it simple to update pages 'n server-side stuff
+    
+
+
+
+
+  
 front-end:
 *html/css/javascript*
   - until i figure out why the rest was made
@@ -152,6 +152,9 @@ other tools:
     - an app to help make ui components
 
 
+
+
+  
 
 all-in-one-solutions:
 
@@ -449,12 +452,17 @@ PHP
 
 
 
-* just some notes:
+* just some notes from reddit:
+
+https://www.reddit.com/r/ruby/comments/16j7r1w/web_frameworks_actively_maintained_in_2023/
+  - list of web app frameworks currently maintained as of 2023
+
+
 https://elixirforum.com/t/rails-and-phoenix-as-one-person-frameworks/44779/4
-(my post!)
+  - (my post!)
 Overall, I agree with DHH, that we have seen a huge ramp-up in complexity in the last decade when it comes to web development. Much of it was necessary and caused by improvements in standards and practices around security, privacy, user experiences, etc.
 
-However, some of this complexity was brought by moving the logic to the client, which naturally creates a split between client and server. The movement started with Phoenix+LiveView shows the server is equally capable of powering rich and interactive user experiences. And now, with esbuild, sass, and tailwind-standalone, we can get rid of npm and limit JavaScript to the front-end only, as it was 10 years ago.
+However, *some of this complexity was brought by moving the logic to the client, which naturally creates a split between client and server. The movement started with Phoenix+LiveView shows the server is equally capable of powering rich and interactive user experiences. And now, with esbuild, sass, and tailwind-standalone, we can get rid of npm and limit JavaScript to the front-end only, as it was 10 years ago.*
 
 https://www.reddit.com/r/elixir/comments/zd9o07/comparing_phoenix_to_rails_in_december_2022/
 I've been a rubyist for over 10 years. Elixir for about 4. I will always love ruby for what it is. My 2 cents
