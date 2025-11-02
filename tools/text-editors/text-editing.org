@@ -154,8 +154,37 @@ view
   - haven't used yet...
 
 
+** merged from [vs-code]
 
-** merged from key-mappings.txt..
+
+classic-style movement:
+
+TODO: wtf is the f-key?? there's a function key..?
+
+c+left/right
+  - previous/next word
+
+f+left/right
+  - beginning/end of line
+
+c+backspace
+  - delete word
+
+f+up/down
+  - beginning/end of buffer (page up/down)
+
+alt+left/right
+  - *go to previous/next place you went to (includes other files!)*
+    - TODO: this one is a notable exception..
+    - most of the time, we move lines down/up, not words/symbols right/left
+
+alt+up/down
+  - move current line up/down
+
+
+
+
+** merged from [key-mappings]..
 keys-bindings:
 
 
@@ -255,9 +284,9 @@ some interesting windows key mappings:
 
 
 
-** komodo edit bindings ~2007
+** default komodo edit bindings ~2007
 
-merged from komodo-edit-cheat-sheet.txt:
+merged from [komodo-edit-cheat-sheet]:
 
 NOTE: although ancient--i think i used it in a class for python, back when python was very new..--, the key-mappings are quite standard, very emacs-y
 

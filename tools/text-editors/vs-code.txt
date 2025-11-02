@@ -18,7 +18,7 @@ git: clone
   
 useful key-bindings:
 can just download an extension for your favorite key-bindings
-  - helix (kakoune) >? doomemacs > vim
+  - helix (kakoune) >? doomemacs (evil) > vim
 
 main:
 c+p (s+f)
@@ -56,26 +56,5 @@ https://github.com/jasonwilliams/vscode-helix/tree/main/src/actions
   - shortcuts listed in these files
 
 https://marketplace.visualstudio.com/items?itemName=jasew.vscode-helix-emulation
-
-
-
-classic-style movement:
-c+left/right
-  - previous/next word
-
-f+left/right
-  - beginning/end of line
-
-c+backspace
-  - delete word
-
-f+up/down
-  - beginning/end of buffer (page up/down)
-
-alt+left/right
-  - go to previous/next place you went to (includes other files!)
-
-alt+up/down
-  - move current line up/down
 
 
