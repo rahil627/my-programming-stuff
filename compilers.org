@@ -1,5 +1,8 @@
 
-process:
+
+may overlap with [programming-languages], [programming-concepts], and possibly more..
+
+* process
 high-level lang -> LLVM -> target platform assembly
 C/C++ (optional?: -> LLVM for optimizing) -> target platform assembly (maybe prefers a compiler?)
 
@@ -9,32 +12,36 @@ high-level lang -> LLVM -> generated C (to link to consoles, mobile) -> target p
     - however, this sounds impossible for any non-trivial program
 
 
-platform-specific:
+* platform-specific
 mobile
-  - iOS uses C/C++
-  - Android uses Java, and thus game dev cares about it
+  - iOS uses C(/objective-C)
+    - yet somehow haxe's C++ could be used..??
+  - Android uses Java
+    - mainly for ui crap, for game dev, they just need access to the renderer..
+      - not sure if java's C interop (jni) is used..
 
 consoles:
-  - all consoles use C/C++
-  - can alternativly run a simple game in the browser using JS, but at like 1% gpu power
+  - all consoles are targeted via C/C++ compilers
+    - as a direct path from high-level language to console hardware architecture is crazy..
 
 
-warning for iOS and consoles: "cannot execute writeable regions", thus cannot use JIT compilation, and thus cannot run a complex javascript game, as without JIT it'd be too slow
+warning for iOS and consoles: "cannot execute writeable regions", thus cannot use JIT compilation
 
 
 
-notes:
+* C and C++ interops
 linking/including C++ libs into a C host program is possible but not advisable due to *the non-standardization of name-mangling*, however you can "spend a few days writing a C-style wrapper for the C++ library."
-the other way around, i think works fine though(??)
+  - the other way around, i think works fine though(??)
 
 
 > C++ can call C functions, `extern "C"` exists.
 > C cannot call C++ function "out of the box".
 
 "...for every single function (and all the overloads of that function).":
-```cpp
+#+begin_src cpp
 extern "C" foo_some_method(Foo &foo) {
   foo.someMethod();
 }
-```
+#+end_src
+
 
