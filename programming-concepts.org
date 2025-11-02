@@ -349,6 +349,25 @@ also can inherit an interface to extend it. For example, ISprite, ISuperSprite, 
 
 
 
+
+* from _temp.txt
+
+vocab (C++)
+
+const data
+  - stores string literals and other data whose values are known at compile time
+stack
+  - stores automatic variables. typically allocation faster than dynamic storage (heap or free store). constructed/destroyed immediately after allocation/deallocation.
+free store
+  - dynamic memory allocated/freed by new/delete. object lifetime can be less than allocation time; objects can be allocated without being initialized or destroyed without being deallocated.
+heap
+  - another dynamic memory area. allocated/freed by malloc/free and their variants.
+global/static variables and objects
+  - ?
+malloc
+  - subroutine for performing dynamic memory allocation
+
+
 * possibly from my school days / C++ / basic concepts, data structures, etc.
 
 a lot of this probably belongs to [programming-language-concepts]..
