@@ -8,6 +8,121 @@ shift+right-click
   - show the classic, full "context-menu"
 
 
+merged from another file:
+
+powertoy's keyboard manager
+  - remap keys
+    - caps lock -> escape
+  - remap shortcuts (in-app key-combos)
+    - TODO: find fav terminal key-bindings for windows OS
+      - helix...
+
+touchpad shortcuts:
+(until i upgrade to a touch-screen laptop)
+windows key -> touchpad
+
+old, don't use these:
+press lower-left corner of touchpad
+  - left-mouse-click
+press lower-right corner of touchpad
+  - right-mouse-click
+
+tap
+  - left-mouse-click
+two-finger-tap
+  - right-mouse-click
+double-tap, drag
+  - multi-select
+
+gestures:
+two-finger, move up/down
+  - scroll (inverted)
+pinch
+  - zoom, or scroll entire document quickly
+
+three/four-fingers
+  - up (w+tab)
+    - view apps and workspaces
+      - then swipe down to go back
+  - down
+    - show desktop (w+d)
+      - then swipe up, restore desktop
+
+three-fingers
+left/right (alt+tab)
+  - change apps
+
+four-fingers
+left/right (w+c+left/right)
+  - change workspace
+
+
+
+
+keyboard shortcuts:
+
+classic:
+alt+tab
+  - show apps (in current workspace) and select next app
+  + alt+tab again to move selection to next app
+  + alt+shift+tab to move selection to previous app
+c+tab/c+s+tab
+  - next/previous tab in app (browser, terminal, editor, etc.)
+c+s
+  - save
+c+w
+  - close
+f2
+  - rename
+
+
+windows key:
+w+s+/
+  - shortcuts help (requires powertoys)
+w
+  - open search (apps, settings, documents, edge browser search)
+w+a
+  - open "action center"/"quick settings" (wifi, bluetooth, music, etc. similar to iOS swipe down)
+w+tab
+  - "task view": sift through apps and workspaces
+w+c+left/right
+  - next/previous workspace
+
+
+w+[up/down/left/right]
+  - maximize, minimize, split left, split right
+    - once split left/right, can split again into quarters with w+up/down
+drag window+shift
+  - show fancyzones (powertoy)
+    - w+s+` to open fancyzones editor
+    - todo: can save commonly-used custom window sizes here
+w+d
+  - show desktop
+    - press w+d again to restore desktop
+w+m
+  - minimize all windows
+    - (permanently, unlike show desktop)
+
+
+w+[1-8]
+  - open app from taskbar, from ordered from left to right
+w+e
+  - open file explorer
+w+l
+  - settings
+
+
+maybe not so useful:
+w+c+d
+  - add a workspace
+    - no delete shortcut..?
+
+
+
+
+
+
+
 
 naming conventions:
 in general, spaces are fine and is the norm for windows at least since '95
@@ -104,11 +219,52 @@ scoop
 note: there's also windows sandbox to install stuff in temporarily
 
 conclusion:
-scoop for sandboxing/trying apps?
+
+scoop > winget > chocolatey
+
+scoop for most apps, especially apps that you'd expect linux to have, as it's the cleanest, sandboxed, and often adds it to the terminal and start menu ("shims?")
 winget for essentials to be integrated into windows, allowing windows to backup your settings
-chocolatey for others apps not on winget/windows store
+chocolatey as last resort
 
 
 https://daftdev.blog/2024/04/01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use/
+
+
+
+windows cli
+
+merged from another file:
+
+
+interaction:
+https://learn.microsoft.com/en-us/powershell/module/psreadline/about/about_psreadline_functions?view=powershell-7.4#completion-functions
+fish-like autosuggestion:
+"complete"
+  - tab
+    - then tab/s+tab again to cycle next/previous completion
+"menucomplete"
+  - c+space
+  - TODO: should be automatically done
+"possiblecompletions"
+  - a+=
+    - wtf?
+
+
+
+
+
+# install powershell
+#  - doesn't require dotnet framework?
+# install winget
+
+
+winget search -q discord
+# winget install [[-q] <query>...] [<options>]
+winget install Discord.Discord
+
+
+
+
+	
 
 
