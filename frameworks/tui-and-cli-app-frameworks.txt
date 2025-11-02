@@ -6,17 +6,23 @@ https://github.com/c-blake/cligen
 
 
 conclusion:
-tl;dr. ruby for personal single-file std-lib-only scripts/cli apps. otherwise, any general language that has native compilation: haxe, **haskell**, go, etc. **forget the tui dream!**, just skip to a gui
 
-besides, there are interesting options to make gui apps (via web browser and/or native) now, see [app-frameworks]. some newer ones even have a ncurses back-end..! even the old **haxe-ui** has one!!
+tl;dr:
+1. ruby or haxe (--interp) or whatever fav lang for personal single-file std-lib-only scripts/cli apps. otherwise, any general language that has native compilation would work too: common lisp/sbcl(!!), ocaml, haskell, go, etc.
+
+2. think: can you simply ai generate an emacs function or plugin?
+
+3. **forget the tui dream!, just skip to a gui**
+  - see [app-frameworks]
+
 
 
 my thoughts:
-the main problem is that your program (cli or tui) is only runnable from a terminal, which really really *really* limits the users (though, perhaps not as limiting as writing an emacs module ;) )
+*the main problem is that your program (cli or tui) is only runnable from a terminal, which really really *really* limits the users* (though, perhaps not as limiting as writing an emacs module ;) )
 
-however, the overhead (in code length and execution) of cli is trivial: an options parser is often even included in the std lib, and if not, is also trivial or just plain unnecesary. cli just adds literally a few lines of code. compare that to using an entire gui framework..
+*however, the overhead (in code length and execution time) of cli is trivial*: an options parser is often even included in the std lib, and if not, is also trivial or just plain unnecesary. *cli just adds literally a few lines of code. compare that to using an entire gui framework(!!)*..
 
-tui is a bit more work, usually requiring working with curses/ncurses, or some lib/framework on top of that, making cross-platform solutions (flutter-like) more appealing, though, tui still has a much simpler build process: no need to build a native executable for each platform, it just has to display to the terminal, which is a sort of cross-platform solution in itself
+tui is a bit more work, usually requiring working with curses/ncurses, or some lib/framework on top of that, making cross-platform solutions more appealing, though, tui still has a much simpler build process: no need to build a native executable for each platform, it just has to display to the terminal, which is a sort of cross-platform solution in itself
 
 
 

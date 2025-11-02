@@ -1,6 +1,19 @@
 
+
+for the most part, game engines may just trump these apps..
+
+i'd much rather use dragonruby or haxe/heaps for any sort of creative app making.. just gotta do the programming...
+
+though, it could be fun playing with these, to get some ideas, understand how 2d and 3d graphics work, in a much simpler manner..
+
+
 todo: find notes on this
 
 p5.js
   - processing for web, by the processing foundation
 
+d3(?).js
+
+openframeworks
+libgdx
+etc.
