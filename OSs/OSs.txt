@@ -17,17 +17,19 @@ TODO: merge original file
   - with pro: native sandbox, bitlocker
 
 linux
+  - good for automating / building reproducible configs
   - good to learn the ancient ways of cli
-  - good for building reproducible configs
-  - non-corporate / pro free and open-source software (foss) community
     - not sure if this is a pro..
+  - non-corporate / free and open-source software (foss)-oriented community
+    - not sure if this is a pro either..
 
 mac
   - no games / graphics
   - propietary crap
-    - architecture
+	- propietary hardware
+	- propietary accessories
+      - including basic cables
+    - propietary architecture
 	  - ARM, powerpc
-	- cables
-	- additional hardware
   - makes it difficult for developers to make apps
     - requires apps to be native-looking (and thus runs into the cross-platform ui problem)
