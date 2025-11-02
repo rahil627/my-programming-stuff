@@ -825,13 +825,22 @@ frameworks
 the rest
 owner
 
-** scripting langs (dynamic run-time, dynamically-typed, automatic memory-management)
+** dynamic langs aka scripting langs (dynamic run-time, dynamically-typed, automatic memory-management)
 
 languages that have a dynamic run-time (meaning: *you can alter the program at run-time; usually meaning: eval, run/execute code while the program/process is running*), often dynamic typing (meaning: the type is unknown until run-time--since new code can be inserted/eval'd at any-time, and thus the object/data can be of any type once it reaches execution), thus enabling the languages to have various program-altering features: *meta-programming* (meaning: *to alter the program in various ways while it's running*; which is beyond introspection, which doesn't alter anything, and beyond macros, which are executed at compile-time), and thus enabling them to *provide a more interactive dev experience*
 
 other languages, such as haxe (hashlink vm), and i'm guessing C# and java too, all at compile code to bytecode (haxe, clr?, jvm bytecode) first before feeding it into the vm (i'm guessing for optimization purposes..). Since the code has already been transformed into bytecode before execution, usually a pre-compiled file, there would be no way for newly inserted/evaluated code to interact with it (TODO: unless you make a way for bytecode to interact with it, or other bytecode..?).
 
 thus, in order to compile code at run-time, you'd need a whole 'nother compilation process (hscript), which'll likely take longer to execute/run, as it's starting from a high-level language, not bytecode (likely, because who knows what optimizations may come up during run-time..).
+
+
+
+
+https://en.m.wikipedia.org/wiki/Dynamic_programming_language
+In computer science, a dynamic programming language is a class of high-level programming languages, which at runtime execute many common programming behaviours that static programming languages perform during compilation. These behaviors could include an extension of the program, by adding new code, by extending objects and definitions, or by modifying the type system. Although similar behaviors can be emulated in nearly any language, with varying degrees of difficulty, complexity and performance costs, *dynamic languages provide direct tools to make use of them*. Many of these features were first implemented as native features in the Lisp programming language.
+
+Most dynamic languages are also dynamically typed, but not all are. Dynamic languages are frequently (but not always) referred to as scripting languages, although that term in its narrowest sense refers to languages specific to a given run-time environment.
+
 
 
 
