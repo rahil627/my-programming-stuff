@@ -1,3 +1,14 @@
+
+
+
+CONCLUSION: forget linux, stick to windows for personal computers, and just get by with emacs on linux servers
+
+
+i don't even see a reason to org this, as i won't be using it..
+
+
+
+
 https://www.reddit.com/r/pop_os/comments/xuq2pm/can_someone_explain_to_me_like_im_five_why_linux/
 macOS and Windows has a single platform vendor, Apple and Microsoft.
 
@@ -269,7 +280,7 @@ desktop environments (DE):
 
 main:
 KDE (Plasma)
-  - highly customizable
+  - contemporary, highly customizable
 mate
   - also well-received
 cinnamon
@@ -278,13 +289,14 @@ gnome
 
 lightweight:
 xfce
+  - very old feeling
   - often used for servers 'n old computers just to be remoted into
 lxqt
 
 
 custom:
 compositers / WMs:
-  - to put windows in the write place
+  - to put windows in the right place
 sway
 i3
 wayland
@@ -299,6 +311,7 @@ gui file-managers:
 https://www.reddit.com/r/swaywm/comments/ja93ss/comment/g8ojr1a/?utm_source=reddit&utm_medium=web2x&context=3&rdt=48122
 They all suck in their own way.
 
+terminal file-managers:
 vifm
   - quirky and feels slower than python-based ranger.
 
@@ -321,20 +334,6 @@ polybar
   - easy to customize
 
 ...
-
-
-
-# linux apps (create a new file?)
-
-gui text editors:
-code (vs code)
-kate
-
-remote access apps:
-chromeRDP
-noVNC
-  - vnc is the open-source remote tech
-
 
 
 
