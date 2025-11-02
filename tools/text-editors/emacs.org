@@ -1597,12 +1597,15 @@ the last notes from emacs-key-mappings.txt:
     - autocomplete
   - abbrev-with-popup-window
 
-m
+    
+c-x i
+  - insert file
+  - TODO: re-bind somewhere..?
+  - this one got lost in doom, but is quite cool for merging shit
+  
+m??
   - / (or c-p in vi's insert-mode)
     - autocomplete
-
-      
-
 
 m-spc
       (:when (modulep! :editor objed +manual)
