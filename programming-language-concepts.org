@@ -1,5 +1,13 @@
 
-# paradigms
+
+
+this file was messy, just org'd it, it's very incomplete..
+
+probably can merge from [haxe] and [ruby]
+
+
+
+* paradigms
 
 "Programming paradigms are a way to classify programming languages based on their features. Languages can be classified into multiple paradigms.
 
@@ -57,7 +65,12 @@ https://en.m.wikipedia.org/wiki/Comparison_of_multi-paradigm_programming_languag
 
 
 
-# programming language elements
+* programming language elements
+
+these notes generally use haxe and ruby as examples
+  - which is good, as it covers an advanced static lang and a complex dynamic lang
+
+
 
 see the docs for haxe
   - this covers the basic and many advanced features of most programming languages
@@ -73,14 +86,14 @@ see the docs for other languages
   - language-specific features are noted in seperate notes for each programming language (ruby.txt for ruby, etc.)
 
 
-## types
+** types
 
-### basic types
+*** basic types
 bool - 1 bit?
 int - 8, 16, 32, 64 bits
 float - 8, 16, 32, 64 bits
 
-### advanced types
+*** advanced types
 class (instance)
 enum (instance)
 anonymous structure
@@ -90,7 +103,7 @@ abstract
 monomorph
 
 
-## expressions
+** expressions
 tell what a program should do
 
 https://www.rubyguides.com/2016/02/ruby-procs-and-lambdas/
@@ -115,131 +128,11 @@ binding class (ruby)
   - used internally by proc/lambda/closure to anchor vars 'n methods to be used out of scope
 
 
+*** in depth, copied examples
+**** block/lambda/proc/closure (ruby)
+***** blocks
 
-
-
-## features
-
-
-### macros
-
-
-### compiler metadata
-i think the metadata is sent to the compiler to to either conditionally do different stuff or run a macro...
-
-haxe's list of compiler metadata, for example, is exhausting, mostly due to it's multi-target nature
-  - https://haxe.org/manual/cr-metadata.html
-
-
-## compilers
-"The Haxe Compiler is typically invoked from command line with several arguments which have to answer two questions:
-What should be compiled?
-What should the output be?"
-
-generally the answers are a Main class for input, and
-a target platform: this could be source code, bytecode, machine code
-
-### compiler flags
-haxe's options for compiling, for example, are exhausting, mostly due to it's multi-target nature
-  - https://haxe.org/manual/compiler-usage-flags.html
-
-### a build file
-usually a standard build file is provided to store the compiler options, for convenience
-
-
-
-
-## standard library:
-although not part of the actual programming language, it's bundled along with most general programming languages, though it can be excluded, for example: embedded scripting languages such as Lua and Wren
-
-### standard library structure
-std lib strucutre from haxe's docs, expanded a few categories:
-Standard Library
-String
-Data Structures
-  - Array
-  - Vector
-  - List
-  - GenericStack
-  - Map
-  - Option(?)
-Regular Expressions
-Math
-Lambda
-Template
-Reflection
-Serialization
-Xml
-Json
-Input/Output
-Sys
-  - Threading
-  - Standard IO Streams
-  - Process
-x/Remoting
-  - replaced by sockets?
-Unit Testing
-Haxe 3 Compatibility
-
-there's also target-specific stuff.. (todo)
-
-
-
-### standard library in details
-
-### processes, threads, and fibers
-processes
-  - run a process--basically a another OS program/executable
-  - example api:
-    - pID, close, exit code, kill
-    - readonly: input stream, output stream, error output stream
-      - https://haxe.org/manual/std-input-output-process.html
-
-threads
-  - like another Main() process
-  - generally you don't have control of this
-    - "...typically switching between threads is handled by the operating system, a process known as *preemptive scheduling*. Fibers, by contrast, are *cooperatively scheduled*: they must voluntarily yield control, usually at the behest of the programmer."
-      - https://thoughtbot.com/blog/meet-fiber-thread-s-cooperative-cousin
-  - from the haxe docs:
-    - "All spawned threads are treated as daemon threads, meaning that the main thread will not wait for their completion."
-    - "Due to threads having access to a shared memory space with all the Haxe variables and objects, it is possible to run into issues due to deadlocks and race conditions. The standard library provides some core synchronization constructs in the sys.thread package."
-      - https://haxe.org/manual/std-threading.html
-
-fibers
-  - "Fibers are primitives for implementing light weight cooperative concurrency in Ruby. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by the programmer and not the VM."
-    - from Ruby's docs on Fiber: https://ruby-doc.org/core-2.1.1/Fiber.html
-
-
-
-
-
-
-
-http://www.craftinginterpreters.com/a-map-of-the-territory.html
-  - this chapter lays out the all of the concepts about *how programming languages work* very simply and lightly
-
-https://dinghy.xyz/posts/experts-and-beginners/
-  - although only a few posts on this site, has very good ideas on making a creative-oriented game framework
-
-https://snowkit.github.io/snow/guide/code.html
-  - coding conventions by snowkit (which included the luxe guy)
-
-difference between pointer and reference (in C)
-  - https://stackoverflow.com/questions/4995899/difference-between-pointer-and-reference-in-c
-    - a very very good answer!
-    - basically: reference is like a goto, there is no memory allocated for it
-    - pointer is actual data, and has memory allocated for it ("dereferencing" it leads to whatever it's pointing at)
-
-
-
-
-
-
-
-
-# in depth, copied examples
-## ruby block/lambda/proc/closure
-### blocks
+#+begin_src ruby
 def one_two_three # block is passed implicitly
   yield 1
   yield 2
@@ -260,8 +153,12 @@ def do_something_with_block
   # otherwise throws an error
   yield
 end
+#+end_src
 
-### lambda
+
+***** lambda
+
+#+begin_src ruby
 say_something = -> { puts "This is a lambda" } # -> or lambda keyword
 say_something.call
 # "This is a lambda"
@@ -274,8 +171,12 @@ my_lambda.call
 my_lambda.() # not too bad, but can confuse with method calls?
 my_lambda[] # ??
 my_lambda.=== # wtf
+#+end_src
 
-### proc
+
+***** proc
+
+#+begin_src ruby
 my_proc = Proc.new { |x| puts x }
 my_proc = proc { |x| puts x }
 
@@ -303,9 +204,12 @@ end
 
 p call_proc
 # Prints "Before proc" but not "After proc"
+#+end_src
 
 
-### closures
+***** closures
+
+#+begin_src ruby
 def call_proc(my_proc)
   count = 500
   my_proc.call
@@ -316,3 +220,122 @@ my_proc = Proc.new { puts count }
 
 p call_proc(my_proc)
 # prints "1"
+#+end_src
+
+
+
+** features
+
+see [haxe]
+
+*** compiler metadata
+i think the metadata is sent to the compiler to to either conditionally do different stuff or run a macro...
+
+haxe's list of compiler metadata, for example, is exhausting, mostly due to it's multi-target nature
+  - https://haxe.org/manual/cr-metadata.html
+
+
+** compiler options
+"The Haxe Compiler is typically invoked from command line with several arguments which have to answer two questions:
+What should be compiled?
+What should the output be?"
+
+generally the answers are a Main class for input, and
+a target platform: this could be source code, bytecode, machine code
+
+*** compiler flags
+haxe's options for compiling, for example, are exhausting, mostly due to it's multi-target nature
+  - https://haxe.org/manual/compiler-usage-flags.html
+
+*** a build file
+usually a standard build file is provided to store the compiler options, for convenience
+
+
+** standard library
+although not part of the actual programming language, it's bundled along with most general programming languages (embedded languages are an exception)
+
+*** standard library structure
+std lib structure from haxe's docs, expanded a few categories:
+Standard Library
+String
+Data Structures
+  - Array
+  - Vector
+  - List
+  - GenericStack
+  - Map
+  - Option(?)
+Regular Expressions
+Math
+Lambda
+Template
+Reflection
+Serialization
+Xml
+Json
+Input/Output
+Sys
+  - Threading
+  - Standard IO Streams
+  - Process
+x/Remoting
+  - replaced by sockets?
+Unit Testing
+Haxe 3 Compatibility
+
+TODO: there's also target-specific stuff..
+
+*** standard library in details
+
+(empty)
+
+*** processes, threads, and fibers
+processes
+  - run a process--basically a another OS program/executable
+  - example api:
+    - pID, close, exit code, kill
+    - readonly: input stream, output stream, error output stream
+      - https://haxe.org/manual/std-input-output-process.html
+
+threads
+  - like another Main() process
+  - generally you don't have control of this
+    - "...typically switching between threads is handled by the operating system, a process known as *preemptive scheduling*. Fibers, by contrast, are *cooperatively scheduled*: they must voluntarily yield control, usually at the behest of the programmer."
+      - https://thoughtbot.com/blog/meet-fiber-thread-s-cooperative-cousin
+  - from the haxe docs:
+    - "All spawned threads are treated as daemon threads, meaning that the main thread will not wait for their completion."
+    - "Due to threads having access to a shared memory space with all the Haxe variables and objects, it is possible to run into issues due to deadlocks and race conditions. The standard library provides some core synchronization constructs in the sys.thread package."
+      - https://haxe.org/manual/std-threading.html
+
+fibers
+  - "Fibers are primitives for implementing light weight cooperative concurrency in Ruby. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by the programmer and not the VM."
+    - from Ruby's docs on Fiber: https://ruby-doc.org/core-2.1.1/Fiber.html
+
+
+
+
+
+* some more resources
+
+http://www.craftinginterpreters.com/a-map-of-the-territory.html
+  - this chapter lays out the all of the concepts about *how programming languages work* very simply and lightly
+
+https://dinghy.xyz/posts/experts-and-beginners/
+  - although only a few posts on this site, has very good ideas on making a creative-oriented game framework
+
+https://snowkit.github.io/snow/guide/code.html
+  - coding conventions by snowkit (which included the luxe guy)
+
+difference between pointer and reference (in C)
+  - https://stackoverflow.com/questions/4995899/difference-between-pointer-and-reference-in-c
+    - a very very good answer!
+    - basically: reference is like a goto, there is no memory allocated for it
+    - pointer is actual data, and has memory allocated for it ("dereferencing" it leads to whatever it's pointing at)
+
+
+
+
+
+
+
+
