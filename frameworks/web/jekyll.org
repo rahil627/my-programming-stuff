@@ -1,9 +1,17 @@
+
+
+
+
 displays the value from the vars set in the config file
-in the config.yml:
+
+#+begin_src yaml
+# in config.yml
 nav:
   whatever: site.com
   whatever: site2.com
-  ...
+#+end_src
+
+#+begin_src html
 <div class="link-wrapper-mobile">
     {% if site.nav %}
         {% for link in site.nav %}
@@ -21,3 +29,4 @@ nav:
         {% endfor %}
      </ul>
      {% endif %}
+#+end_src

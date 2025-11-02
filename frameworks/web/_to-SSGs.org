@@ -13,8 +13,6 @@ build your own cms with rails
 
 in general, most cms software is garbage
 
-
-
 * from sitepress.cc home-page
 Why Sitepress?
 Static site generators are great frameworks for compiling static websites and publishing them to the web, but they force you to choose between running them completely static or inside of a Rails application. Sitepress lets you do both!
@@ -43,14 +41,17 @@ ones that rely on a pop web back-end:
 umbraco
   - asp.net
 
+* meh CMSs
 
-* meh
-[insert many newer frameworks, mostly typescript (strapi, payload, directus, etc.) and php (statamatic, processwire, craft, expressionengine, etc.)]
+NOTE: not SSGs
+
+[insert many newer frameworks: mostly typescript (strapi, payload, directus, etc.) and php (statamatic, processwire, craft, expressionengine, etc.)]
   - https://www.reddit.com/r/webdev/comments/1g6c27n/other_than_wordpress_whats_cms_have_you_worked_on/
-  - only a matter of time which one will be abandoned..
+  - only a matter of time which ones will be abandoned..
 
-* older
-  - during the time of jekyll/hugo/11ty
+* from the older SSG file..?
+
+during the time of jekyll/hugo/11ty
 
 ** ruby
 *jekyll*
@@ -70,7 +71,7 @@ middlemen
 nanoc
   - looks like a simpler alternative to jekyll, at the time of jekyll.. could be a great little one..
 
-**others
+** others
 kirby
   - <3
     - *has/attracts a good little community, like gamer communities!*
@@ -96,7 +97,6 @@ Zero Static, haxe, another simple one, about 5 files, lol
   - https://github.com/01010111/zero-static
 
 
-
-research:
+* research:
 https://staticgen.com -> https://jamstack.org/generators/
   - list of SSGs (and headless CMSs) by github stars
