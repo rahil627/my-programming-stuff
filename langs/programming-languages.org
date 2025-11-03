@@ -2786,11 +2786,14 @@ C#
 - originally developed by JetBrains (the IDE maker), but the language eventually was chosen by Google to be the main language for Android app devs
   - hence it's better designed than google's other languages
   
-***** Groovy
-  - *TODO: what happened to it?*
+***** RIP Groovy
+  - kotlin killed it, along with bad tooling (editor integration, etc.)
+    - kotlin also allows creating DSLs
   - "Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk. It can be used as both a programming language and a scripting language for the Java Platform"
   - "Most valid Java files are also valid Groovy files. Although the two languages are similar, Groovy code can be more compact, because it does not need all the elements that Java needs. This makes it possible for Java programmers to learn Groovy gradually by starting with familiar Java syntax before acquiring more Groovy programming idioms."
     - huh, sounds cool..! sounds like just what the JVM world needs!
+    - yep, most poeple seem to call it mostly syntactic sugar
+  - gradle (build tool)
 
 ***** Java
   - PERSONAL NOTE: this is a world i've seem to have avoided, just out of taste... i think this is because when i started, it had a god-awful IDE compared to C++'s Visual Studio: i had to use Eclipse, which was garbage that unfortunately couldn't be collected :/
