@@ -4,6 +4,34 @@ see [play/ruby-limits.rb]
   - for an inquiry into how ruby data is stored
     - might as well just read the C code though..
 
+dark magicks
+  - see starred repos under the category "dark magicks"
+    - drb
+      - dRuby is a distributed object system for Ruby. It allows an object in one Ruby process to invoke methods on an object in another Ruby process on the same or a different machine.
+    - tombenner/ru
+      - "Ruby in your shell!"
+    - (adamwiggins/s-mage)/rush
+      - "Ruby replacement for bash"
+    - pry
+      - "A runtime developer console and IRB alternative with powerful introspection capabilities."
+
+ai
+  - ruby-openai/mistral-ai
+    - likely officially use python..
+  - huginn
+    - "Create agents that monitor and act on your behalf. Your agents are standing by!"
+      - might as well do this yourself.. and make it maintainable, readable..
+      - it's just generated scripts and a task-scheduler, with some common "actions".. maybe some way that flow together..
+
+        
+language-related
+  - prism parser
+  - syntax-tree
+    - "Syntax Tree is a suite of tools built on top of the internal CRuby parser. It provides the ability to generate a syntax tree from source, as well as the tools necessary to inspect and manipulate that syntax tree. It can be used to build formatters, linters, language servers, and more."
+  - yarv
+     "A Ruby object layer on top of the YARV virtual machine"
+    - the above three by the same prson
+  - yjit
 
 
 
