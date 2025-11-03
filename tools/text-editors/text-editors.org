@@ -78,14 +78,21 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
 
 * conclusion
 
-emacs (doom-meow), for everything, for life
+1. emacs (doom-meow), for everything, for life
   - *restrict yourself to insert-mode for a more zen experience*
 
-focus, to just simply write/express, *zen*, *extremely fast*, zero cognitive load
+2. focus, to just simply write/express, *zen*, *extremely fast*, zero cognitive load
+  - a small project, written extremely well in jai, if i get into that lang..
 
-zed (if not, vs-code), for a quick sane defaults ide, and to focus on the work, and for ai workflows, and for multi-player
+s. text-bringer, for the love of ruby!! <3 <3, also for life
+  - a project i feel i can contribute to, make mine
+  - would be really fun to write plugins for this.. considering its libs
+
+3. zed (if not, vs-code), for a quick sane defaults ide, and to focus on the work, and for ai workflows, and for multi-player
   - *TODO: closed-source, for planned to be for profit..??*
 
+    
+upcoming:
 helix, for a snappy terminal editor with great defaults, including great default key-bindings
   - *has the potential to compete with emacs once the scheme plugin system is out..*
     - taking it's sweet time to do this.. but has great leaders
@@ -95,8 +102,6 @@ lem, if you want to help re-make emacs in common lisp, or just write some plugin
   - *has great potential.. with a good amount of contributers..*
   - it's also completely written completely in common lisp, which no other editor can claim
 
-text-bringer, for the love of ruby!! <3 <3
-  - would be really fun to write plugins for this.. considering its libs
 
 that is all.
 
@@ -148,18 +153,13 @@ editors with features by default (vs-code-like):
 
 semi-hackable (via api + scripting lang architecture), plugin-oriented editors:
 0. helix
-  - NOTE: once the gui and scheme scripting is out, i think it'll become my favorite.. i just find the terminal to be a clunky interface, and really miss using mouse/touch
-  - a contemporary vi implementation in rust, with kakoune workflow, and with **sane defaults**
+  - NOTE: once the gui and scheme scripting is out, i think it'll become my favorite..
+  - a contemporary kakoune implementation in rust, with **sane defaults**
   - works in terminal (and thus great for remote terminal use)
     - but because of this, doesn't feel as good as gui editors... terminals are just a pain
   - a good step towards emacs
-    - https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
-      - an emacs user switches to helix and mentions some good plugins
-      - TODO: try them!
-  - TODO: a version with a file-tree feature is on a git branch
-    - though, it intentionally avoids these features in favor of a more vi-style workspace editing via file/buffer list ui
   - scheme scripting coming soon!!
-    - but just scripting, the core is rust.. so not as malleable as emacs, lem, or atom
+    - but just scripting, the core is still rust..
 x. nvim
   - painful config, terrible lsp plugins, zero discoverability, no design nuances, stupid fanatics-riddled bindings and community
 
@@ -167,32 +167,39 @@ x. nvim
 completely hackable editors:
 0. **emacs (doom)**
   - OMG. FUCK TERMINALS. THIS IS ALL YOU'D EVER NEED!!
-    - replaces: text-editor, shell, file-manager, git app, knowledge-base, etc.
+    - replaces: text-editor, shell, file-manager, git app, knowledge-base, e-mail, chat, browser (text)..
   - **great discoverability makes it very quick to understand and extend**
   - potential is unlimited, written in lisp, **one tool-set to rule them all**
     - https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
   - **meow, the best key-bindings**
     - doom with evil-mode in particular makes vi-mode seamless across all these packages
   - great way to build up own leader-keys / key-chords
-*. kakoune
-  - like helix without the batteries
+  - great way to build up functions too
+1. textbringer
+   - *PERSONAL NOTE: worth having as a simple personal editor, one that i can actually understand as a whole and can contribute to*. like haxe, it feels *grassrootsy*, really understanding the tools that i use: text editor, language, game engine
+   - *a tiny passion/home-brew project made by one japanese guy*
+   - replicates vanilla emacs quite well, in addition to providing the basics: windows, completion, plugin-system, etc.
+   - *written entirely in ruby, with C extensions used by a few gems*
+   - *ruby feels far better to work with than lisp, far more elegant too*
+     - *great to pair with dragonruby and web dev*
+   - *could really specialize an entire editor for a single language*
+e. lem
+  - WARN: BUGGY as of 10/4/2024
+  - *truly completely malleable* as it is entirely written in common lisp
+  - seems like a great way to learn common lisp
+x. kakoune?
+  - helix solves it's problems by providing the much wanted batteries
   - for the unix dream
     - great for using/learning unix tools for everything
+      - you must glue together unix tools such as fzf to the editor using infamous kakscript
     - also great for using any language write to tools to do anything with kakoune (thanks to it's client-server model)
       - ruby + kakoune <3??
-      - unfortunately, this prevents it from having a healthy plugin eco-system, as everyone can and will choose their favorite language..
-  - probably the most well scoped text editor (..not trying to do everything in order to satify everybody)
-*. lem
-  - WARN: BUGGY as of 10/4/2024
-  - looks like a great way to try common lisp without emacs
-    - actually kind of a dream, to write everything in scbl.. including the editor!
-  - *truly completely alterable* as it is written in common lisp all the way down (no C), making it the most malleable text editor
+    - conversely, these two systems prevent it from having a healthy plugin eco-system (in favor of improving the unix eco-system instead)
 
 complete IDEs:
   - vs-studio
     - for advanced debugging / monitoring features
   - jetbrains IDEs
-    - $
     - language-based
      - $$
 
@@ -263,7 +270,9 @@ meow-doom > doom's evil bindings > helix > emacs > nvim
 usually spear-headed by one person, in a more niche language, thus making it harder to build momentum
 
 **** textbringer
-  - UPDATE: it's terminal-only, quite bare, like vanilla emacs, seems like a one-man hobby project by a japanese kid, but surprisingly complete..!!
+  - UPDATE: it's terminal-only, quite bare, like vanilla emacs, seems like a one-man hobby project by a japanese kid-now-adult, but surprisingly complete..!!
+    - https://github.com/shugo/textbringer/issues/153
+      - i messaged the maintainer here.. asking about limits
     - NOTE: uses emacs key-bindings by default, and there's no pop-up display (which-key), so you had better completed your super-saiyan emacs training!!
   - *an emacs-like machine using ruby*
     - *this sounds like heaven..*
@@ -271,17 +280,19 @@ usually spear-headed by one person, in a more niche language, thus making it har
   - there's also a plugin for a mail agent and a mastodon client!
     - this is probably due to *ruby's great library system*..
       - actually, this makes a big difference..
-    - *you probably can also "C extensions" so.. well, damn, with these two library eco-systems, you can do nearly everything!!*
+    - *you probably could also use "C extensions" so.. well, damn, with these two library eco-systems, you can do everything!!*
+      - though, at the cost of creating C interops (extensions or ffi)
   - describe-class/method uses ri
     - seems similar to helpful functions (helpful-callable/var/etc.), bringing up a list of functions/vars to search docs for, within the source code
+    - ri might be standard, in the std lib, compared to pry..
   - eval_region
   - it actually has more than i thought..
     - find file, buffer list
     - re-map key-bindings, create key-maps, and even modes and plugins!!
       - *this puts it on the level of helix, but infinitely more hackable..!!*
-  - TODO: how does performance compare to native-compiled elisp?
-    - seems like the core of it uses C..
-      - (as i had to take the time to build "C extensions"..)
+  - sounds like the core of it uses C.. but github shows 100% ruby.. hmmm
+      - i had to take the time to build "C extensions"
+        - maybe they were in seperate gems..
   - gem install textbringer, then run txtb
 
 id actually keep this as an alt terminal text editor.. for when i just want vanilla emacs.. but in ruby. though, theres not much reason for it, as you could just execute shell commands which can be a ruby script (shell-command / m-!) or apply a ruby script on a selected region (shell-command-on-region / m-|), both which can be done in most editors including helix, or better yet, keep a buffer and repl/process open and usee the the ruby robe plugin to interact with it (eval code/region, introspective ri docs, completion based on introspection etc.). its all a bit indirect, but surely not bad.. considering you get the rest of emacs..
@@ -302,7 +313,6 @@ C extensions, unfortunately is not as simple as say, in go or zig.. otherwise, i
       
 TODO: now if only it worked with dragonruby.. hmmm
 
-  
 **** lem
   - UPDATE: unfortunately, *buggy as shit: crashes when a pop-up window is open and you alt+tab away :( i was very close to really getting into writing lisp too!!*
     - TODO: try terminal version.. that seems to fare better..
@@ -387,7 +397,7 @@ also note: these are very different text editors..
 
 *** focus (editor)
   - the best text editor experience i've had in quite some time.. made me try sublime text, which is what it basically is: **sublime text with better design**
-  - incredible speed, incredible defaults, incredibly simple, lives up to it's name and induces focus
+  - *incredible speed, incredible defaults, incredibly simple, lives up to it's name and induces focus*
     - **learn everything in 5 minutes: find file via fuzzy search, set up workspaces, command prompt, config**
       - very well designed find file in workspace and open file via path
     - great little view mode (c+a+arrow keys)
@@ -608,7 +618,7 @@ both originally were terminal apps and still can be used as such, though now, em
       - https://www.youtube.com/watch?v=bhjO22s6snU
         - how it was made, presented by it's maker
     - from 18+ seconds to < 3 seconds (6x+) to load doom-meow with 170+ packages on my ancient shitty chromebook
-      - UPDATE: ~5 seconds first load, ~2 seconds after that, for 170 packages and 50 modules via native compilation on the same shitty old chromebook
+      - UPDATE: ~5-13? seconds first load, ~2 seconds after that, for 170 packages and 50 modules via native compilation on the same shitty old chromebook
       - might as well take that time to reflect a bit..
   - terminal and gui modes
     - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
@@ -628,7 +638,7 @@ both originally were terminal apps and still can be used as such, though now, em
 
 
 
-*** KILL neovim (nvim)
+*** KILL nvim (neovim)
   - NOTE: i must have tried this soon after lua support was added, and people were still migrating, as were plugins
   - NOTE: also, i could've benefitted greatly by simply by using a pre-config (lazyvim?)
   - "With the 0.5 release of Neovim on 2 July 2021, it gained built-in support for the LSP, Tree-sitter, and more complete Lua support – including the support for configuration scripts written in Lua instead of VimL."
