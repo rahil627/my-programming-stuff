@@ -300,14 +300,22 @@ languages sorted by their use cases
 ordered from simplest to most difficult (manual-memory management):
 
 *** my general-use langs:
-x/bash and powershell
-  - NOTE: ruby is just excellent as a scripting lang, that there's no need to use these save for:
+eshell >> bash and powershell
+  - NOTE: ruby is excellent as a scripting lang, so there's no need to use shell scripting langs, save for:
   - batch commands
-  - extremely simple scripts
-  - TODO: maybe the shell interpreter is so simple that it has an advantage in startup time over ruby..??
-  - TODO: does emacs/eshell/emacs-lisp have any advantages..? introspect and modify the shell program/process?? lol
-    - you could write scripts in emacs-lisp using existing functions in emacs.. but then you'd need emacs running.. though it is more portable than a linux vm.. lol
-  - NOTE: use bash/powershell over alts like zsh/fish/kitten for portability
+  - starting/running other programs (spawning processes)
+    - aync / concurrently or sequentially
+    - especially if done frequently
+  - piping (output of one program | input of next program | ...)
+  - eshell
+    - you could write scripts (functions) in emacs-lisp, using all of the existing functions of emacs and emacs-lisp..
+    - but then you'd need emacs running.. though it would still be more portable than re-creating linux in a vm..
+   - https://www.youtube.com/watch?v=9xLeqwl_7n0
+     - eshell is actually kinda sick..
+       - great integration with emacs
+       - mix elisp with shell commands!
+     - also, since it's a vm, it'll work anywhere..
+  - NOTE: use bash/powershell over non-posix alt shells like zsh/fish/kitten for portability
 ruby >>> python (>>>> shell langs) (>>>> go)
   - (alt for games/media)
     - dragonruby
@@ -380,7 +388,7 @@ javascript
 python
   - data-science: big data, ml/ai, math, stats, biotech, etc.
 lisp
-  - embedded scripting lang for emacs (emacs-lisp), helix (scheme/steel), and lem (common-lisp) text editors
+  - scripting lang for emacs (emacs-lisp), helix (scheme/steel), and lem (common-lisp) text editors
     - unless i build upon textbringer (ruby!)..!!
 
 
