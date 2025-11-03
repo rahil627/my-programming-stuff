@@ -33,23 +33,6 @@ using emacs, i feel like i've learned quite a bit of the power of dynamic run-ti
 next up, i think, will be more dynamic magicks via ruby (dragonruby). Adding bits of code is cool, but altering objects in a game while it's running..?? that'll be next level!!
 
 
-* sources
-tips, tutorials, help:
-https://github.com/emacs-tw/awesome-emacs#tutorials
-discord
-discourse
-zaiste video series
-
-
-configs of great programmers:
-https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
-  - TODO: can finally grasp this..!!
-
-    
-some pop readings:
-  - land of lisp, little schemer, K&R, structure and interpretation of compilers
-
-
 * config
 
 *NOTE: DON'T YOU EVER USE IT AS ADMIN/SUDO!*
@@ -1661,6 +1644,47 @@ spc-x-;
 
 
 
+* install
+
+** linux (debian)
+go to about chromeos
+install linux environment
+  - installs debian with wayland
+    - no need for xwayland, should just work
+
+download a snapshot of emacs
+  - https://emacs.secretsauce.net/
+  - i had trouble getting the package to work, seemed to require different versions of several libs
+
+build emacs
+  - https://harryrschwartz.com/2022/12/08/how-i-build-emacs-from-source-on-debian
+    - ```sudo apt install \
+  build-essential \
+  libgtk-3-dev \
+  libgnutls28-dev \
+  libtiff5-dev \
+  libgif-dev \
+  libjpeg-dev \
+  libpng-dev \
+  libxpm-dev \
+  libncurses-dev \
+  texinfo```
+  - https://gist.github.com/zoliky/0445b20676bfa85450d7df006066ceb7
+    - `sudo apt-get install build-essential`
+      - includes gcc
+    - `sudo apt install libtree-sitter-dev`
+    - `wget http://mirrors.nav.ro/gnu/emacs/emacs-29.4.tar.xz`
+    - `tar xvf emacs-29.4.tar.xz`
+    - `./configure --prefix="$HOME/.local/emacs/" --without-compress-install --with-native-compilation --with-json --with-mailutils 
+--with-tree-sitter`
+
+
+
+
+see [[install doom]]
+
+
+  
 * pre-configs
 
 https://github.com/emacs-tw/awesome-emacs#starter-kit
@@ -1700,7 +1724,7 @@ prelude
 
 
 * doom
-** install (doom)
+** install doom
 follow the directions on the github
 fish_add_path ~/.config/emacs/bin
 
@@ -1792,12 +1816,11 @@ emacs -Q
   - or --quick
     - even leaner..
 
-
 ** install icons
 run nerd-icons-install-fonts function within emacs
   - TODO: not working..
 
-** install meow key-bindings for doom
+** install doom-meow
 doom-meow
 https://github.com/meow-edit/doom-meow
 mkdir -p ~/.doom.d/modules/editor && git clone https://github.com/meow-edit/doom-meow ~/.doom.d/modules/editor/meow
@@ -1809,4 +1832,22 @@ After you doom sync and restart Emacs, Meow will start in Normal state, so make 
 The leader and localleader bindings are defined in <a href=”doom-module::config default +bindings”>doom-module::config default +bindings, so that module is required for them to work.
 
 This module will not work smoothly with doom-module::editor evil, doom-module::editor god, or doom-module::editor objed. You must disable those modules in your doom! block to use this one.
+
+
+* sources
+tips, tutorials, help:
+https://github.com/emacs-tw/awesome-emacs#tutorials
+discord
+discourse
+zaiste video series
+
+
+configs of great programmers:
+https://gist.github.com/amirrajan/b3e4af5e06ad46e1b390aae2d0a44e47
+  - TODO: can finally grasp this..!!
+
+    
+some pop readings:
+  - land of lisp, little schemer, K&R, structure and interpretation of compilers
+
 
