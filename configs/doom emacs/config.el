@@ -22,7 +22,7 @@
 ;; eval line/region
 ;; spc o r
 ;;   - open repl
-;; spc e / spc l e
+;; spc l e / spc e
 ;;   - to quickly try something
 
 ;; spc l g
@@ -272,7 +272,8 @@
   (+global-word-wrap-mode) ; vs toggle? or run global-word-wrap-mode after done loading all buffers..??
     ; spc-t-w
 
-  ;(doom/increase-font-size ())
+  ;; (doom/increase-font-size)
+  ;; TODO: doesn't work here, though it works if i run it when the program has started..
     ; children/elderly mode
       ; spc-t-b - big font mode
     ; maybe can help with focus..? or maybe too big..
@@ -546,7 +547,7 @@
    ;; '("q Q" . nil) ;; NOTE: undefined or nil are okay..
    ;;  - un-bind a key
    ;;
-   ;;'("q r" . doom/reload)
+   ;;'("q r" . some-function)
    ;;  - normal key-maps work fine..
    ;;  
    ;;"c s" ; must be c-c c s / spc c s
@@ -593,26 +594,20 @@
 
 
 
-
-
-
-
-
   (meow-define-keys
    'normal ; if you use 'meow-define-keys
-   'insert ; TODO: this doesn't work..
-           ; TODO: how to replacement macro or goto in lisp?
-           ; TODO: does insert-mode use m- to trigger normal-mode c- bindings??
-   ;;  - FIXME: these only get bound for normal-mode, not insert-mode..
-   ;;    - though, surprisingly, i see no strange other behavior doing it this way..
-
-   ;;(eval-defun 'define-normal-and-insert-keys) ;; quote or not??
-   ;;(eval 'define-normal-and-insert-keys)
-   ;;  - TODO: can't just eval some code..??
-   ;;(defun define-normal-and-insert-keys ()
+           ; 
+  ;; (defun ra/bind-common-key-bindings ()
+  ;;(setq ra-common-key-bindings ( ;; TODO: hmmm, can't pass a list..??
 
 
-   ;;; a few things first..
+
+
+
+
+
+
+   
    '("M-u" . vundo ) ;; Braid
    ;;   - how could this not be bound..??
    ;;   this is very meta..
@@ -784,11 +779,13 @@
    ;; an extra set of movement keys added by me
    ;;   - c-s- is often more comfortable than reaching for the meta key on many laptops, but unfortunately, it's used by shift to select in combination with the movement bindings (c-npfb and arrow keys), thus only hjkl is open for hacking, as c-hjkl aren't movement commands (and thus there's nothing to select..)
    ;;   - these are open to be re-bound Later down this config file..
-   ;; 
+   ;;     - NOTE: c-s- sometimes doesn't work.. :/
    ;;
    ;; NOTE: put your favorite movement bindings here!!
    ;;  - these match my oft used custom helix bindings for c-hjkl
    ;;
+   ;; TODO: really just need smooth scrolling with next/prev paragraph, as most gui editors do..
+   ;; 
    ;;  - some possibilities:
    ;;  
    ;;  - page down/up is another GREAT and FAST way to move around text in general, especially in case a major-mode (org-mode..) is giving you trouble..
@@ -883,11 +880,14 @@
    ;; 
    '("C-S-d" . meow-backward-delete ) ;; to match D, alts: backward-delete-char, backward-delete-char-untabify
    ;;   - TODO: -untabify..?
+   ;;   - or kill-whole-line? to match c-s-<bakspace>
+   ;;     - nahh, keep this, i use this quite a lot now in normal-mode.. though i still need the backspace key in insert-mode..
    ;;   - NOTE: can be re-bound further down this config.
 
 
    ;; backspace
    ;;   - NOTE: seems to map to <DEL> (use "DEL" when binding here..?), as it may be used in various ways.. and behave differently
+   ;;     - and it's not chromeos..
    ;;   - NOTE: chrome os maps a-backspace to delete by default
    ;;   - unlike delete, backspace always goes back
    ;;   
@@ -977,6 +977,10 @@
 
 
    ;; special chromebook keys
+
+   ;; TODO: really just need more direct bindings here.. see focus editor:
+   ;;   - c-p for switch buffer
+   ;;   - c-w for close-buffer
    
    ;; <- and -> (f1/f2)
    ;;  - NOTE: this binding is god-send.. even just for next/previous buffer
@@ -987,7 +991,7 @@
    ;;   - NOTE: next/previous-buffer can jump projects
    ;;     - this an interesting experience to visually see if you have centaur-tabs enabled..
    ;;   - alts: projectile-next/previous-project-buffer
-   '("C-<XF86Forward>" . projectile-next-project-buffer )
+   '("C-<XF86Forward>" . projectile-next-project-buffer ) ;; FIXME: NOTE: doesn't seem to always switch within the project.. ahhh i see, if it's not under a project, under the grab-all "default" project, it'll behave differently.. :/
    '("C-<XF86Back>" . projectile-previous-project-buffer )
    ;; '("C-<XF86Forward>" . next-window-any-frame )
    ;; '("C-<XF86Back>" . previous-window-any-frame )
@@ -1022,7 +1026,8 @@
    
    ;; a few crutches i still haven't figured out..:
    ;;   - can abuse the c-s- modifier here
-   
+   ;;     - NOTE: c-s- sometimes doesn't work.. :/
+
    ;; q > k > w > c by feeling
 
    ;;'("C-S-j" . next-buffer ) ;; n
@@ -1076,7 +1081,7 @@
 
    
 
-  )
+  ) ;; end of ra/bind-common-key-bindings
 
 
 
@@ -1238,7 +1243,7 @@
 
 
 
-  ) ; define-keys 'normal
+  ) ; define-keys 'normal and 'insert
 
 
 
@@ -1305,8 +1310,9 @@
     ;;'("C-x" . "C-x")
     ;;'("C-h" . "C-h")
 
-    
+
     ;;; spc q
+    ;; NOTE: i use `/~ key for repl/eshell and defaults: c/m-` for pupup/tmm-menu-bar
     '("q q" . "C-x C-c") ;; who would ever want to kill-emacs..!!?? (..without saving)
     ;;  - TODO: save-buffers-kill-emacs vs save-buffers-kill-terminal
     ;;  - Q seems to already have the right function bound to it: the same as c-x c-c..
@@ -1315,10 +1321,9 @@
     '("q Q" . nil)
     '("q K" . nil) ;; could bind to just kill-emacs (no save)
     
-    '("q r" . doom/reload) ;; or c for config
-    ;;  - TODO: may want to flip these, as i tend to want the below function more.. yet not bad, as i won't ever restart by accident..
-    '("q R" . doom/restart-and-restore) ;; was doom/restart
-    ;; doom/find-file-in-private-config ;; c-c f p/P.. that actually makes more sense then to have it here..
+    '("q r" . doom/restart-and-restore) ;; was doom/restart
+    '("q R" . doom/reload) ;; or c for config
+    ;;  - TODO: seems to run 'doom sync -B -e', which requires the internet.. :/
 
     
     ;;; spc o
@@ -1334,6 +1339,17 @@
     ;; )
 
 
+
+      ;; new key-maps
+      
+      ;;; spc b
+      ;;   - i feel this would match (spc w n/p/k/etc.), which feels quite good to press.. but i don't know if i really need a whole nother key-map for it.. as (spc x b/k) + f1/f2 are enough..
+      ;;   - TODO: see evil leader map for ideas
+
+
+      
+
+      
       ;; TODO: these toggles are useful for when shit is slow, especially lsp, possibly broken tree-sitter, formatters, etc.
       ;;   - i may even prefer them off by default.. especially formatters
       ;; from helix:
