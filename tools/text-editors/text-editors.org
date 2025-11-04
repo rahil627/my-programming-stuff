@@ -170,8 +170,8 @@ x. sublime text
         - **LSPs aren't maintained by sublime :/**
   - has aura theme!!
   - **shareware, bugs you about buying a license**
-  
-  
+
+
 editors with features by default (vs-code-like):
 0. **zed**
   - I FOUND IT!! I FINALLY FOUND IT!!!
@@ -266,7 +266,7 @@ meow > my custom helix bindings (even more kakoune-like) > helix >> nvim
   - *NOTE: hjkl is not keyboard layout agnostic!!*, thus it's actually better to stick to emacs' mneumonic key-bindings, even if it's a bit unweildy..
 
 
-  
+
 leader-keys / key-chords
   - general leader-key-bindings for functions
 
@@ -344,12 +344,12 @@ however, if for some reason much of what you're doing is text (including data??)
   - TODO: try eval def, and look for it
   - TODO: re-visit why he chose define_command over normal eval def, beyond the docs, which don't work..
     - "definable anywhere"
-    
+
 C extensions, unfortunately is not as simple as say, in go or zig.. otherwise, it would be awesome to quickly throw in C programs, and play with that.. in ruby, dynamically!! :o *now that would be the ultimate media making program.. the pain-point is how easily it integrates with C..* *..perhaps it should've been written with mruby instead, or.. dragonruby..??* LOL
   - TODO: try creating a C extension for a pop program... let's say.. tree-sitter, and some completion thing (fzf?), based on introspection
     - now that's some good homework..!! :D
   - re-create which-key, but with ascii art :)
-      
+
 TODO: now if only it worked with dragonruby.. hmmm
 
 **** lem
@@ -380,7 +380,7 @@ TODO: now if only it worked with dragonruby.. hmmm
 **** TODO 4coder
   - part of the handmade-hero movement
     - therefore written in C, and also therefore **can potentially be extended using any programming langauge**
-    
+
 
 *** open-source momentum
 has the momentum of bigger language-based-dev-communities
@@ -421,7 +421,7 @@ is this even an editor..? or just some way to make use of small-talk??
 
 
 
-  
+
 
 ** newer standards
   - all of these are in heavy development as of later 2024
@@ -488,7 +488,7 @@ also note: these are very different text editors..
       - the buffer navigation is favored
     - zen-mode
   - scheme scripting
-    - !!!, finally, get to use lisp :) 
+    - !!!, finally, get to use lisp :)
     - https://github.com/helix-editor/helix/pull/8675
     - until the scripting feature is out, it lacks a lot of things that would likely become scripted plugins: file manager, more advanced debugging, etc.
     - though it will have lisp scripting, it is written in rust, and thus not really malleable as a program written entirely in a scripting a language, and definitely nowhere close to a program written entirely in lisp. in hackabilty, it's worse than vs-code, which is written entirely in a scripting language: javascript
@@ -530,7 +530,7 @@ also note: these are very different text editors..
 ** current standards:
 
 *** (emacs)
-  - gets better with time.. and it's been 60+ years..? 
+  - gets better with time.. and it's been 60+ years..?
     - thanks to it's implementation
   - see [[classics]]
 *** (nvim)
@@ -585,7 +585,7 @@ also note: these are very different text editors..
 
 
 
-  
+
 ** classics
 
 notably, most current text editors still use the key-bindings from these two editors: neovim for modal text editing and emacs for non-modal. So, once you learn one of them, newer editors often provide bindings for both, emacs for default (insert-mode) and an optional extension for vi-like modal bindings (normal-mode)
@@ -717,7 +717,7 @@ both originally were terminal apps and still can be used as such, though now, em
 
 
 
-  
+
 ** history, and some old favs
 
 NOTE: i missed out on the era of atom and sublime.. by the time i got back to the computer, vs-code was out
@@ -781,17 +781,17 @@ NOTE: i missed out on the era of atom and sublime.. by the time i got back to th
 komodo-edit
   - my fav from college ~2007
     - i found this trying to find something for python..
-      
+
 notepad++
   - a windows classic, same as ever, still cute and functional for an old 90s thing
-    
+
 notepad2
   - a personal classic windows notepad replacement
   - TODO: try notepad4
-    
+
 kate
   - a linux classic?
-    
+
 textmate
   - a mac classic?
 
@@ -805,7 +805,7 @@ mostly langauge-specific
 
 generally adds these features: **integrated interactive debugger, profiler**, advanced code completion, advanced refactoring, better file navigation (notably *great go to definition functionality*, especially for more difficult to implement dynamic langs), tasks runner (including tests), database integration
   - though, nowadays, with LSP an DAP protocols gaining popularity, only the most advanced features make IDEs stand out
-  
+
 *** vs studio
   - the standard advanced IDE with the most features
     - it's combo with C# set the standard for IDEs
@@ -839,4 +839,4 @@ https://pawelgrzybek.com/the-joy-of-learning-helix-and-probably-other-modal-term
   - todo: read
 
 
-    
+
