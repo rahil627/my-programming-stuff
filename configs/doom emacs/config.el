@@ -1608,3 +1608,30 @@
 
 ;; NOTE: added by me!
 (ra/load-config)
+
+
+
+;; some extra functions..
+;; NOTE: just use ai to generate these
+;;   - and ask it to make them interactive as possible
+;;   - just this simple capability really does make quite a difference..
+;;     - though, i guess in lesser editors you could just put it in a script and run it on a region
+;;       the problem with that is the execution is done async via seperate sub-process, and so if anything happens during that time, maybe problems could occur..?
+
+;; because pandoc requires 173mb...
+;; the headers may be all i need
+;; and make it interactive
+;;   - actually quite cool, to make a function interactive / edit a region..!
+(defun ra/convert-markdown-headers-to-org (start end)
+  "Converts Markdown headers within the region START to END to Org-mode headers.
+   Markdown headers like '# Header' become '* Header', '## Subheader' becomes '** Subheader', etc."
+  (interactive "r") ; Makes the function interactive, operating on the region
+  (save-excursion
+    (goto-char start)
+    (while (search-forward-regexp "^#+\\s-+" end t)
+      (let* ((match-start (match-beginning 0))
+             (match-end (match-end 0))
+             (num-hashes (- match-end match-start 1)) ; Number of '#' characters
+             (org-stars (make-string num-hashes ?*)))
+        (delete-region match-start match-end)
+        (insert org-stars " ")))))
