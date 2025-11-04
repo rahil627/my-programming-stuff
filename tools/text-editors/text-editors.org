@@ -126,6 +126,26 @@ that is all.
 
 
 
+* TODO dev
+
+make textbringer more accessible, ideally to the level of focus editor, but limited to terminal
+  - start by offering a very simple alternative to the notoriously hideous emacs bindings
+    - x/make the config simple too, like focus, also hot-reloadable
+      - vs hackable.. as the whole thing is a ruby program.. introspect and search for the right vars 'n functions..?? i mean, that's what i do in emacs.. peer m-x completions and describe-vars..
+        - just provide a little guide in the config file to where useful settings in the program may be... which objects, or naming patterns for various settings
+        - *this is actually a great project to really learn how ruby works..*
+    - are arrow keys not bound by default or is it a terminal problem??
+      - TODO: download 'n try on wezterm
+      - AND HERE
+  - even with emacs bindings i'm having troubles..
+    - TODO: add escape key as alternative to c-g to escape the mini-buffer (key sequence input, m-x, find file, etc.)
+      - again, might be a terminal problem..
+  - at least add which-key?
+    - TODO: maybe instead just show bindings after pressing tab..
+      - START HERE
+  - focus editor has a ton of little design ideas to copy, as a great zen starting base
+
+
 * a quick overview
 
 TODO: should use these categories, and merge most of this down..
