@@ -677,6 +677,12 @@
    ;; word/paragraph movement
    ;; c-[arrow keys] = m-npfb (no hjkl) + m/a-e
    ;; fb seems bound correctly (char, c-word, m-symbol, c-m-exp)
+   ;; NOTE: flipped word for symbol, to kill shit quicker by default
+   ;; 
+   '("M-f" . sp-forward-symbol )
+   '("M-b" . sp-backward-symbol )
+   ;;   - FIXME: these require +smartparens module
+   ;;   
    ;; m-n/p were unbound by default..
    '("M-n" . forward-paragraph ) ;; vs page-down, forward-sentence (m-e), sp-next-sexp
    '("M-p" . backward-paragraph ) ;; vs page-up, backward-sentence (m-a), sp-previous-sexp
@@ -684,6 +690,16 @@
    ;;   - this matches down/up arrows, which are foward/backward-paragraph by default
    ;;   - it also matches org-forward/backward-paragaph
    ;;   - also excellent with shift selection
+   ;;   
+   '("C-<right>" . sp-forward-symbol ) ;; not even bound by default..!!
+   '("C-<left>" . sp-backward-symbol )
+   ;;   - FIXME: these require +smartparens module
+   ;;   - TODO: there's a forward-symbol, but no backward-symbol..?? 
+   ;;   - meow-next/back-symbol/word seem to highlight be default.. :/
+   ;;   - also back instead of previous is terrible, even if it's bound to b..
+   ;;   
+   ;;
+   ;;   
    ;;   
    ;; m-e/a = forward/backward-sentence
    ;;   - is a really neat and unique way to move too, and puts the force the left hand
@@ -709,7 +725,10 @@
    ;;       - NOTE: this prevents a TON of cut 'n pasting
    ;;   - this is an improvement over transpose functions (c-x t, c-x c-t, m-t, c-m t)
    ;;   - m-up/down in vs-code too
-
+   ;;
+   ;; '("M-<right>" . "M-f" )
+   ;; '("M-<left>" . "M-b" )
+   ;;   - NOTE: the defaults often trip me up.. these move by word, which is what is what i expect.. but i think i'll keep transposed right/left, as it works with selections too..
 
 
 
