@@ -1,32 +1,39 @@
 
-TODO: md to org function??
 
 * what i want
 sane defaults
-  - don't want to waste time configing all day, need to focus!
-  - if not, have a tasteful, un-bloated shared config set-up
+  - don't want to waste time configing all day, need to focus! (focus, textbringer)
+  - if not, have a tasteful, un-bloated shared config set-up (doom)
 inuititive learning experience
-  - quick to re-learn and jump deep into again
+  - quick to re-learn and jump deep into again (focus)
 a good non-modal editing experience
-  - if modal, a useful insert mode
+  - if modal, a useful main editing/insert mode (*angry face at helix*)
 not slow / heavy
-  - focus editor has spoiled me..
+  - (helix and focus editor have spoiled me..)
   - native gui
-    - though terminal edtiros may be ok.. now with gpu-powered terminal apps
+    - though terminal editors may be ok.. now with gpu-powered terminal emulator apps (wezterm)
+
+extra:
 a simple way to write extensions
-  - the more dynamic/interactive the scripting language the better
+  - (hmm, this may limit it to dynamic langs..)
+  - (well, kakoune found an indirect way..)
+  - if not perhaps provide running a shell command on the region
+  - at least provide running a reg-ex replacement/substitution, interactive
+uses a highly dynamic/interactive scripting language
+  - bonus points if it's ruby, being the best and most ideal dynamic lang
 unrestrictive
   - see the "four pillars" below
+
 a decent community?
-  - *the LSP requires quite a bit of effort for each language as one must create an interface between the text editor and each language's language-server*, thus a healthy dev community is required to maintain them all
+  - *the LSP requires quite a bit of effort for each text editor AND for each language, as one must create an interface between the text editor and each language's language-server*, thus a healthy dev community is required to maintain them all
     - TODO: i think..
+    - furthermore, languages with introspection can be implemented without the lsp (such as the way emacs handles)
     - *this is kinda make it or break it.. i can't live without completions!! :/*
-    - exception: languages with introspection can be implemented without the lsp (such as the way emacs handles  )
-      - TODO: i think..
+      - but for game programming, it might be alright, as i'd mostly be using functions and data i created..
   - hence, bustling dev communities have a greater chance of building open-source contributor momentum than others
-    - (various rust editors, vs-code, sublime text, textbringer, micro: rust, js, python, ruby, go)
+    - (rust, js, python, ruby, go: various rust editors, vs-code, sublime text, textbringer, micro)
   - however, *if it's written in a language that i like, such a ruby, haxe, or jai, then i'd be more compelled to write whatever i need*
-    - so, i wouldn't mind helpin' with textbringer or focus editor, but may struggle against emacs (and emacs lisp), and would def struggle with rust editors..!
+    - thus, i'd LOVE helpin' with textbringer (and perhaps adding a few bare necessities to focus editor too!), but i may have to resort to ai generation for emacs (and emacs lisp), and i'd def struggle with rust editors..!
 
 
 ** the four pillars
@@ -38,11 +45,12 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
   - 4. can see the source code
   additional pillars (by me):
   - 5. is completely hackable, down to the core (not merely api)
-  - 6. has simple C ffi / extensions
-    - for vast plugin potential
-  - 7. has a good library eco-system
+  - 6. has a good library eco-system
     - for easy plugin potential
-    
+  - 7. has simple C ffi / extensions (..or is made with rust..)
+    - for vast plugin potential
+    - (also for easier dev: no need to re-write tree-sitter, etc.)
+
   - tests:
     - vscode
       - probably? (maybe there's way to toggle this..), yes, **yes, but not simple** (have to write an "extension", which is quite a process..), sure (but hella complex), no
@@ -51,56 +59,67 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
     - sublime
       - yes, yes, *yes (limited to api)*, *no?* (shareware)
     - helix
+      - TODO: move this down with the main contenders..?
       - no (can request 'n discuss), yes, **not yet (but even then, limited to the api/interface provided to the scripting lang)**, yes, sorta (limited to api)
 
     these generally pass the four pillars, even the fifth(!):
-    1. **lem**
-       - yes to all
+    1. **textbringer**
+       - *passes all pillars*
+       - *the program itself is entirely written in ruby*, though certain libs/gems may use "C extensions" for high-performance bits (and just plain solid libs?)
+       - has the wild potential of ruby libs
+       - has the vast potential of C libs
+         - TODO: C ffi vs C extensions?
+           - it's probably a good idea to limit what is exposed for each C lib anyway..
+    2. **lem**
+       - *passes all pillars*
        - *entirely written in common lisp, thus perhaps the only editor (listed here) to claim to be "completely hackable"*
+       - not the best library eco-system, but possibly the best one in the lisp world
        - common lisp has C ffi
          - though, that does make things complicated..
-    2. **textbringer**
-       - yes to all
-         - TODO: how does sublime text differ?
-       - though *relies on "C extensions"* for high-performance bits and just plain solid libs
-         - TODO: C ffi vs C extensions? what's better
-         - TODO: what are the limiations of hackability of C extensions? it's probably a good idea to limit what is exposed for each C lib..
-       - has the potential of ruby libs
     3. **emacs**
-       - yes to all, with a few minor limitations:
-         - if you want to use a C lib, you must write *"C modules", as there is no C ffi*
-           - TODO: how does parainfer-rust-mode work?? just a binary?
-           - though this forces people to not rely on C and instead write more emacs lisp..
-         - a bit of the core is written in C
-           - most of it being the lisp compiler
-             - which may one day be ported to guile compiler
-    
+       - doesn't pass the extra pillars, but is so exceptional that it forced everyone to write in it's own language!
+       - now has *"C modules" (as emacs-lisp doesn't have any C-ffi)
+         - though if it can be done in emacs lisp, that is highly-recommended..
+       - now has native compilation
+         - TODO: is this truly native, or just bytecode??
+       - TODO: how does parainfer-rust-mode work?? just a binary?
+       - a bit of the core is written in C
+         - most of it being the lisp compiler
+           - which may one day be ported to guile compiler
+             - which then would enable running code in various prog langs
+               - that would be wild.. emacs just gets better 'n better..!!
+
 
 * conclusion
+
+*. focus, the new notepad.exe, to just simply write/express, *zen*, *extremely fast*, zero cognitive load
+  - a small project, written extremely well in jai, once i get my hands on that game engine..
+
+*. zed (if not, vs-code), for a quick beautiful sane defaults complete ide, to focus on the work, and for ai workflows, and for multi-player
+  - *TODO: is it closed-source, for planned to be for profit..??*
+
+s. text-bringer, for the love of ruby!! <3 <3
+  - *a project i feel i can contribute to, really make mine, and enjoy it too!*
+    - *the project's scale is perfect: vanilla emacs terminal only*: basically helix without the modal-mode, but instead of rust/scheme, all ruby!!
+  - would be really fun to write plugins for this.. considering its libs
+  - *actually has unlimited potential*
+  - TODO: only 200kb?? i guess because it doesn't include the ruby compiler, nor its libs...
 
 1. emacs (doom-meow), for everything, for life
   - *restrict yourself to insert-mode for a more zen experience*
 
-2. focus, to just simply write/express, *zen*, *extremely fast*, zero cognitive load
-  - a small project, written extremely well in jai, if i get into that lang..
-
-s. text-bringer, for the love of ruby!! <3 <3, also for life
-  - a project i feel i can contribute to, make mine
-  - would be really fun to write plugins for this.. considering its libs
-
-3. zed (if not, vs-code), for a quick sane defaults ide, and to focus on the work, and for ai workflows, and for multi-player
-  - *TODO: closed-source, for planned to be for profit..??*
-
-    
-upcoming:
-helix, for a snappy terminal editor with great defaults, including great default key-bindings
+2. helix, for a snappy batteries-included terminal editor with great defaults, including great default key-bindings
   - *has the potential to compete with emacs once the scheme plugin system is out..*
     - taking it's sweet time to do this.. but has great leaders
   - great for crafting your own key-bindings
 
-lem, if you want to help re-make emacs in common lisp, or just write some plugins in cl..
+
+upcoming (buggy):
+ lem, if you want to help re-make emacs in common lisp, or just write some plugins in cl..
   - *has great potential.. with a good amount of contributers..*
-  - it's also completely written completely in common lisp, which no other editor can claim
+  - it's also completely written completely in common lisp
+  - unfortunately, i don't feel there's enough reason to create yet another lisp editor..
+    - though, surely, the lisp people know better of the benefits of common lisp over emacs lisp than me..
 
 
 that is all.
