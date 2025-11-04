@@ -32,7 +32,15 @@
 
 
 
-;;; some TODO from emacs.org
+
+
+;; use FOCUS EDITOR to FOCUS, emacs is a deep deep rabbit-hole!!
+;;   - alternatively, use textbringer (emacs vanilla, but in ruby!!)
+
+;; change file associations to focus editor
+
+
+
 
 
 ;; FIXME: WARNINGS
@@ -42,6 +50,17 @@
 ;; 
 ;; Could not read ‘org-id-locations’ from /home/ra/.emacs.d/.local/cache/doom-docs-org-ids, setting it to nil
 ;; File local-variables error: (user-error Not in a valid workspace (nil))
+
+
+
+
+
+
+
+
+;;; some TODO from emacs.org
+
+;; change file associations to focus editor
 
 ;; https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
 ;;   - an emacs user switches to helix and mentions some good plugins
