@@ -1507,6 +1507,9 @@
   ;; - just use whatever's there..
 
   ;; a few light themes first:
+  ;; doom-shades-of-purple
+  ;;   - bright enough to see during the day!!
+  ;;   - makes great use of transparency too..
   ;; doom-flatwhite
   ;;   - unique highlighter style, dim
   ;; doom-earl-grey
