@@ -601,7 +601,13 @@
   ;;(setq ra-common-key-bindings ( ;; TODO: hmmm, can't pass a list..??
 
 
+   ;;; these abuse emacs defaults in normal-mode, can be confusing..
+   ;; '("C-b" . "C-x b" ) ;; FIXME: somehow binds h too??
+                          ;; TODO: damn, i really need this
+   
+   ;;; a few things first..
 
+   '("C-<tab>" . "C-x b" ) ;; NECESSARY
 
 
 
