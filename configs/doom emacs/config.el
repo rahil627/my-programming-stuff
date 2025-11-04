@@ -35,6 +35,24 @@
 ;;; some TODO from emacs.org
 
 
+;; FIXME: WARNINGS
+;; ⛔ Warning (org-element): ‘org-element-at-point’ cannot be used in non-Org buffer #<buffer _TODO-apps-to-make.org> (fundamental-mode)
+;;
+;; Undo-Fu-Session discarding: file length mismatch for "/home/ra/.emacs.d/lisp/doom-editor.el"
+;; 
+;; Could not read ‘org-id-locations’ from /home/ra/.emacs.d/.local/cache/doom-docs-org-ids, setting it to nil
+;; File local-variables error: (user-error Not in a valid workspace (nil))
+
+;; https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
+;;   - an emacs user switches to helix and mentions some good plugins
+
+
+;; FIXME: kill-line kills visually, it misses word wrap.. and i like my word wrap!!
+
+;; is '+package-name/function' standard naming convention in emacs..??
+
+;; TODO: should merge/move doom bindings up to my config... i'll just have to deal with updates..
+
 ;; TODO: figure out a neat way to combine insert-mode and normal-mode bindings, without having to resort to a top-level defun
 ;;   - defun in defun works..
 
