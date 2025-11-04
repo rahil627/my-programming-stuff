@@ -396,19 +396,34 @@ also note: these are very different text editors..
   - zed is a batteries-included vs-code in rust
 
 *** focus (editor)
-  - the best text editor experience i've had in quite some time.. made me try sublime text, which is what it basically is: **sublime text with better design**
+  - *the best text editor experience i've had in quite some time*.. made me try sublime text
   - *incredible speed, incredible defaults, incredibly simple, lives up to it's name and induces focus*
     - **learn everything in 5 minutes: find file via fuzzy search, set up workspaces, command prompt, config**
       - very well designed find file in workspace and open file via path
-    - great little view mode (c+a+arrow keys)
     - some sane defaults (and great sense of design) include:
       - great, simple key-bindings
       - infinite undo-history for all files during the session, even after closing it..??
+      - *multiple cursors made simple, and intutive!*
+        - when selecting text, if >= 3 chars, highlight matching text, c-d to add cursor to next highlighted matching text
+        - also works well with the plain interactive search (select text, c-f, enter, s-enter)
+      - buffers are seperate from "editors"
+        - buffers -> the recently opened files retain on the file picker (on top if you have it set on a workspace), i don't even know how to close them.. thus retaining undo-history
+        - editors, i think, are opened buffers (which you can close at any time, which sorta just suspends it..)
       - jumping the cursor back after highlight or viewing
+        - a cursor jump counts in the undo-history
       - *saving config hot-reloads it*
       - diff on the scroll bar
+        - actually having a scroll bar..
         - *i forgot how gooood smooth(?) scrolling felt..!*
-  - gpu-powered gui, *no terminal interface*
+      - scroll bar as mini-map
+        - size of scroll-bar = size of buffer?
+        - a line for the cursor
+  - gpu-powered gui, *no terminal interface*\
+    - this makes movement particularly standout
+      - *great smooth scrolling*
+        - (also, fuck terminals)
+        - great movement on c-down/up
+      - great little view mode (c+a+arrow keys)
   - **made with jai**
 
 *** helix
