@@ -894,8 +894,14 @@
    ;; backspace = backward-delete-char-untabify ;; default
    ;; C-backspace = backward-kill-word ;; default
    ;; '("C-DEL" . meow-backward-kill-word ) ;; default: backward-kill word (affects kill-ring?), alts: doom/delete-backward-word
-   '("M-DEL" . meow-backward-kill-symbol ) ;; default: backward-kill-word
-   '("M-<backspace>" . meow-backward-kill-symbol ) ;; default: backward-kill-word
+   ;; '("M-DEL" . meow-backward-kill-symbol ) ;; default: backward-kill-word
+   ;; '("M-<backspace>" . meow-backward-kill-symbol ) ;; default: backward-kill-word
+   ;; NOTE: i flipped these to kill shit quicker by default..
+   ;;       i think the default behavior is retained in the mini-buffer anyway, where you wouldn't want to delete entire file-paths
+   '("C-DEL" . meow-backward-kill-symbol )
+   '("C-<backspace>" . meow-backward-kill-symbol )
+   '("M-DEL" . meow-backward-kill-word )
+   '("M-<backspace>" . meow-backward-kill-word )
    ;;   - just in case this changes on another os..
    ;;   - TODO: shouldn't use meow key-board macros..
    ;;     - yet, i can't find any other kill-symbol functions..??
