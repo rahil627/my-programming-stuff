@@ -1433,7 +1433,7 @@
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
-;; - `doom-font' ; Monofoki
+;; - `doom-font'
 ;;   -- NOTE: this makes a big big difference, as emacs can display alot more in the mini-buffer for auto-complete
 ;;   -- NOTE: terminals have their own appearance settings
 ;;   -- TODO: fail, the primary font to use
@@ -1448,11 +1448,39 @@
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+;;(setq doom-font "Fira Code-14")
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
+;;   - then search for 'mono', though not all monospaced fonts have 'mono' in it..
+
+
+;; TODO: downlaod and set Monofoki
+;;(setq doom-font "Monofoki")
+
+;; exploring shit on a chromebook
+;; (setq doom-font "Cousine")
+;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
+;;   - there's notably no vertical line width, making it quite compact..
+(setq doom-font "DejaVu Sans Mono")
+;;  - not bad!.. kinda cute... far more spacey.. actually quite close to Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
+;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
+;;     - need about 14 or 15
+
+;;(setq doom-font "Roboto") ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
+;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
+;;  - TODO - create a function to switch from reuglar and mono-spaced font
+;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
+;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
+;;
+;;
+
+
+;;(doom/increase-font-size) ;; FIXME: wrong args? :/
+;;(doom/increase-font-size) ;; twice to skip a missing size..?
+
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
