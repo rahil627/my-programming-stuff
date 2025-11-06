@@ -18,15 +18,27 @@ shiiiit, i've got my work cut out for me..
 
 
 * personal tools/tech/productivity
+game engine
+  - let others handle this..
+  - i only need to make the core skeletons of these.. basically, contribute to dragonruby's sample apps
+    
+  - dragonruby
+  - heaps
+  - jon blow's engine
+
 text editor
+  - textbringer
+    - create basic bindings (next/previous word)
+      - download wezterm, may just be a terminal problem..
+    - make it generally more usable
   - emacs
     - port aurara
     - makes emacs more gamey, with more visual effects!
     - TODO: setup for offline dev
-      - ruby, elixir, haxe, jai
-    - TODO: setup ai / code-assistance
+      - ruby (+dragonruby), elixir, haxe, jai
+    - TODO: setup ai / code-assistance?
+      - nah, with so many ai programs (web and desktop apps), just copy/pasta
   - focus
-    - TODO: download and use it again!!
     - port aurara
   - zed
     - TODO: download and use it again!!

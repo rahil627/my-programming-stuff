@@ -1,5 +1,40 @@
 
 
+
+TODO: set-up:
+  1. dragonruby
+    - make games fuck the rest.
+      - web and ai are boring are fuck.
+        - stick to reality: cooking food, making tea, gardening, that's life!!
+  2. haxe
+
+  3. ruby
+  4. elixir
+
+  - textbringer
+    - ruby?
+  - emacs
+    - dragonruby
+      - etags
+        - TODO: FIXME: seems like shit
+      - lsp?
+        - seems over-kill..
+    - ruby
+      - ruby-mode
+    - haxe?
+      - shit.. :/
+      - TODO: see supported editors..
+        - TODO: write myself..
+          - emacs + textbringer LSP support
+    - elixir
+      - yep, +lsp?
+    
+merged from elsewhere:
+setup heaps and imgui
+try imgui with ruby!
+  - https://github.com/vaiorabbit/ruby-imgui
+  
+
 devdocs.io
   - click on or enable the languages you need
     - NOTE: doesn't have docs for external libs
@@ -26,6 +61,11 @@ still seems best to just use ai to auto-generate some boiler-plate code, and wor
 ri
   - i think ruby comes with it..
   - maybe have to run it once..?
+  - seems to grep docs straight from the code..
+    - can search objects, functions, possibly vars
+  - TODO: not sure how to browse objects though..
+  - f/b to move down/up
+  - q to quit
 
 zenspider.com/ruby/quickref.html
   - nice!
@@ -52,3 +92,6 @@ roda
   - gem install roda
   - gitlab.com/fiachetti/mastering-roda
     - *NOTE: an incredible example of a single, giant .org file*
+
+* haxe
+ ...
