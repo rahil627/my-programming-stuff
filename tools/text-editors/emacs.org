@@ -51,11 +51,20 @@ see [config.el] for notes on config
 current setup:
 treemacs
   - TODO: this only shows file-trees, not code trees..??
-centaur-tabs
+centaur-tabs vs gobal-tab-line-mode
   - testing.. quite nice thus far..
+    - the visual tabs (buffer) tend to help me minimize the amount of buffers per workspace, creating new workspaces as needed
+    - [search-engine]/switch-workspace-buffer also  works really well, searching buffers by workspaces
     - works well with windows and projects, reducing the tabs related to the project (if not, cwd?) of the current buffer, and to that window
+    - TODO: i might prefer tab-line-mode's default of showing all buffers/tabs more, instead of grouping by project.. as i don't care which project the file comes from.. though, it is nice to distinguish by projects too..
+    - tab-line-mode takes even lesss space, just one line, whereas centaur-tabs takes two or three
   - maybe have to wean myself off of this over time..
 
+
+    - for example:
+    - emacs, notes, todo, [project] ... [project n]
+
+  
     
 dired vs tree plugin
 ibuffer vs tree plugin
@@ -355,11 +364,17 @@ command+click
 meta-click
   - mouse-secondary-save-then-kill
     - kinda like G/grab..
+    - it's quite strange how it selects..
+      - not based on a mark..
+    - it goes into select mode, so you can click more to expand it
+    - click again in the same place to kill
 
 spc-spc (c-spc)
   - set-mark-command
-    - TODO: this must be important..??
+    - *this is actually a nice n' simple way to create selection and jump between points*
+    - pop-global-mark / meow-pop-to-global-mark
 
+      
 m-x / spc-m-x (meow), : (evil)
   - contains every function available (~7500 with default doom install, ~6750 with meow instead of evil key-bindings)
   - usually [module]-[function]
@@ -384,10 +399,6 @@ describe-var
 some notes:
  - NOTE: it's still vi, so still need to re-map caps lock to escape
  - NOTE: f1-key is tough on a chromebook keyboard, but quite useful!
-
-*** meow bindings
-
-TODO: finish [[fn:meow-tutor][meow-tutor]]
 
 *** emacs
 
@@ -493,7 +504,11 @@ it also had:
 
 *** meow-mode
 
-TODO: move this heading to down to the end
+https://github.com/meow-edit/doom-meow
+
+TODO: finish [[fn:meow-tutor][meow-tutor]]
+
+TODO: move this heading to down?
 
 aka normal-mode in moew-mode, which is confusing, insert-mode is the normal one in emacs.. and i still don't know what command-mode even is..!!
 
@@ -504,10 +519,14 @@ NOTE: *you should FOCUS on the editing layer, as that's where all the work happe
 the new layer is mostly a key-board oriented way of doing everything other than inserting characters, most of which is normally done by other input devices: movement, seeking, selecting and doing various things with that selection. Normally, you'd use a mouse or touch-screen for jumping, selection, and scrolling, in addition to the arrow keys and/or emacs movement bindings (c-npfb), including shift. With the new layer, you instead do everything with the key-board.
 
 nowadays with prevalent touch-screens, i would imagine that is the way to go, especially for ergonomics, but also for reducing such a great mental burden. You don't think: just touch where you want the cursor to jump, or to select something, and with the ability to modify the touch input handler, the possibilities are endless: multiple-selection via multiple touches, gestures to swap selections, multi-tap to expand selection, and endless gestures to do anything else, with the power of 10+ inputs.  
-  - *TODO: check/create touch input handler and bindings for emacs*
+  - *TODO: check/create touch input handler and a set of default bindings (including gestures!) for emacs*
 
 
 NOTE: these bindings by meow are amazing! i wouldn't change a thing!!
+
+;; TODO: merge
+;;   - just seems far less intrusive to the ways of emacs, requiring far less configs than vi/evil-mode, while still adding a kakoune-style workflow, which requires less memory/cognitive load
+
 
 c-h b t
   - see them all, clearly!!
@@ -936,7 +955,7 @@ f4
 
 *** mini-buffer
 
-*TODO: how to scroll through the c-x list..?*
+*TODO: how to scroll through which-key pop-ups??*
   - only page down/up??
     - i might have to re-bind down/up arrows..
 
@@ -944,10 +963,17 @@ just press escape to close mini-buffers including pop-ups
   - no need to buffer-kill them
 
 *PRO-TIP: c-s to show search history*
-*PRO-TIP: m-s to use regex search*
+  - as there's no need for c-s for i-search there
+*PRO-TIP: m-s/r to use regex search*
+
+c-backspace
+c-y yank
+m-y yank-pop (yank from kill ring)
 
 press the initial key-chord, then, in the popup mini-buffer, press c-h to fuzzy search it
   - TODO: what?? maybe in doom..??
+    - I FOUND IT!! press f1
+      - TODO: doesn't work for meow's key-pad..
     
 ** modules
 *** org-mode

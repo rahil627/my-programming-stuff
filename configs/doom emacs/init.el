@@ -43,7 +43,7 @@
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       tabs              ; a tab bar for Emacs ; NOTE: this may be over-kill, and against emacs traditional buffer-oriented workflow, but it's very pretty, and they're grouped by project, offering an interactive visual view of what buffers are open for each project TODO: test native tabs module, especially tab-line-mode.. they're supposedly very customizable..
+       tabs              ; a tab bar for Emacs ; NOTE: this may be over-kill, and against emacs traditional buffer-oriented workflow, but it's very pretty, and they're grouped by project, offering an interactive visual view of what buffers are open for each project TODO: global-tab-line-mode is far more compact and the next/previous-buffer works correctly!
        treemacs          ; a project drawer, like neotree but cooler ; NOTE: it provides great integreation with project(tile) and workspaces, giving you a view of both, depending on what buffer you are on. otherwise, it'll still show the cwd
        ;;unicode           ; extended unicode support for various languages
        (vc-gutter +pretty) ; vcs diff in the fringe

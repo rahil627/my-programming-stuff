@@ -82,6 +82,8 @@
 ;;   - an emacs user switches to helix and mentions some good plugins
 
 
+
+
 ;; FIXME: kill-line kills visually, it misses word wrap.. and i like my word wrap!!
 
 ;; is '+package-name/function' standard naming convention in emacs..??
@@ -137,9 +139,8 @@
 
 
 
-
 ;; TODO: merge this, from another file..
-;; TODO: todo list for doom emacs
+;; todo list for doom emacs
 ;;   - aka make emacs my home
 ;; set org dir
 ;;   - need to do this in order to link org files
@@ -148,10 +149,6 @@
 ;;   - or maybe create a new folder, with all the notes repos?
 ;; org id?
 ;;   - set org-id-link-to-org-use-id
-;; **try meow bindings**
-;;   - just seems far less intrusive to the ways of emacs, requiring far less configs than vi/evil-mode, while still adding a kakoune-style workflow, which requires less memory/cognitive load
-;;   - https://github.com/meow-edit/doom-meow
-;;     - need to find a way to combine doom and meow...
 ;; re-map/bind keys
 ;;   - NOTE: do after setting up/trying meow bindings
 ;;     - still prefer a lot of evil bindings, especially for things like dired, navigation in the mini-buffer, etc.
@@ -174,9 +171,19 @@
 ;;     - likely not enough battery
 
 
-
-
-
+;; only happens to one file..
+;; ⛔ Warning (org-element): org-element--cache: Org parser error in _TODO-apps-to-make.org::1165. Resetting.
+;; The error was: (wrong-type-argument integer-or-marker-p nil)
+;; Backtrace:
+;; "  backtrace-to-string(nil)
+;;   org-element-at-point()
+;;   org-at-item-p()
+;;   org-indent-add-properties(#<marker at 1 in _TODO-apps-to-make.org> 7101 (0 2 0))
+;;   org-indent-initialize-buffer(#<buffer _TODO-apps-to-make.org> (0 2 0))
+;;   org-indent-initialize-agent()
+;;   apply(org-indent-initialize-agent nil)
+;;   timer-event-handler([t 0 0 200000 t org-indent-initialize-agent nil idle 0 nil])
+;; "
 
 
 
@@ -338,37 +345,32 @@
     ;   - prefer a pasge-like window in the middle of the screen
 
 
-
-
+  ;; (auto-save-default t) ;; d: t
+  
+  ;; (desktop-save-mode 1)
+  ;; TODO: try this when autosave and manual save are fucking up
 
   
-    ; these require a module
-    ; make sure it's not commented out in init.el
-
-  
-  ;; (+zen/toggle-fullscreen)
-    ; NOTE: doesn't affect when run in terminal
-    ; alias for writeroom-mode?
-    ; just increases font size..??
-    ; spc-t-z/Z
-
   ;;(scroll-bar-mode)
   ;;   - TODO: would be nice, but looks hideous!! :/
+  ;; (setq x-toolkit-scroll-bars nil) ;; nope, didn't work..
+  ;;   - i think chromeos's "gtk" is the problem
+  
 
-  ;; (tab-line-mode)
+  ; workspaces seem fine too, and already bound by doom..
+  ; TODO: it's just lacking a persistent display..
+  (setq doom-modeline-workspace-name t) ;; FIXME: hmm not working..??
+  ;; (setq doom-modeline-project-name t) ;; no need, as the file-name expands
+
+  
+
+  ;; (global-tab-line-mode)
   ;;   - 1 tab for each buffer
   ;;     + tiny buttons to scroll right/left
-  ;;   - native??
+  ;;   - standard to emacs
   ;;   - tiny amount of space too..
   
-  ;; (tab-bar-mode)
-    ; new: still testing
-    ;   - TODO: doesn't save upon exiting / quicksave
-    ;; (desktop-save-mode 1)
-    ;  - my attempt to save tabs upon close
-    ;  - fucks up full-screen / zen on start..
-    ;  FIXME: is this toggling whitespace-mode for some reason!!??
-
+  ;; (global-tab-bar-mode)
     ; takes very little space.. nice!!
     ;
     ; might not need to do this, it may show up after you create a second tab
@@ -392,9 +394,42 @@
     ; really need bind tab-next
     ;   - ah well, time to use the touch-pad for something!
 
-  ; workspaces seem fine too, and already bound by doom..
-  ; TODO: it's just lacking a persistent display..
-  (setq doom-modeline-workspace-name 1) ;; FIXME: hmm not working..??
+
+
+
+  
+  
+  
+    ; these require a module
+    ; make sure it's not commented out in init.el
+
+  
+  ;; (+zen/toggle-fullscreen) ;; i don't see a zen package.. though there is a writeroom one.. TODO: or are packages different from modules..?
+    ; NOTE: doesn't affect when run in terminal
+    ; alias for writeroom-mode?
+    ; just increases font size..?? :/
+    ; spc-t-z/Z
+
+  
+
+  ;; testing centaur-tabs
+  ;;   - TODO: i don't think any of this is working.. :/
+  (after! 'centaur-tabs
+    (setq
+     centaur-tabs-height 11 ;; default 22 maybe the smallest.. the font seems to be a factor too..
+     centaur-tabs-bar-height 15 ;; default 30 maybe the smallest
+     centaur-tabs-set-bar "under" ;; vs over FIXME
+    
+    ;; centaur-tabs-cycle-scope "groups" ;; ohh groups, not projects.. nvm
+    ;; - tabs
+    ;;     Navigate through visible tabs only.
+    ;; - groups
+    ;;     Navigate through tab groups only.
+    ;; - default
+    ;;     Navigate through visible tabs, then through tab groups.
+
+    ))
+
 
 
 
@@ -411,19 +446,6 @@
 
 
 
-  ;; TODO: see meow-var.el
-  ;; this lists all of the key-board macros, which if you change, will fuck things up..
-  ;; it assumes you don't alter the original emacs key-bindings..
-
-  ;; if you do change something here, you must instead update this var:
-  ;;meow--kbd-[function-name]
-  ;;meow--kbd-yank-pop
-
-
-  ;; this is what happens when you fuck with emacs config.. :/
-  ;; and i thought nvim was terrible..!!
-
-
 )
 
 
@@ -433,6 +455,20 @@
 
   ;; NOTE: don't go crazy! still learning, the defaults actually have more wisdom than i do.. all hail the emacs wizards!!
 
+
+  ;; NOTE: meow assumes you don't alter the original emacs key-bindings..
+  ;; if you do change and original binding, you must instead update this var:
+  ;;meow--kbd-[function-name]
+  ;;meow--kbd-yank-pop
+  ;; see meow-var.el
+  ;;   - this lists all of the key-board macros
+
+
+  ;; this is what happens when you fuck with emacs config.. :/
+  ;; and i thought nvim was terrible..!!
+
+
+  
 
   ;; see notes in [emacs.org]
   ;; TODO: ALMOST DONE..: slowly compare 'n merge my helix bindings
@@ -492,11 +528,6 @@
   ;; first un-bind some shit..?
 
   ;; KEYS TO UN-BIND GO HERE!!
-
-  ;; TODO: try it
-  ;; (undefine-key! ; couldn't find a function in meow, so using this alias of general-unbind
-  ;;
-  ;; )
 
 
 
@@ -660,10 +691,8 @@
    
    ;;; a few things first..
 
-   '("C-<tab>" . "C-x b" ) ;; NECESSARY
-
-
-
+   '("C-<tab>" . "C-x b" ) ;; NECESSARY,  +[search-engine]/switch-workspace-buffer
+   ;;   - this works really well, organizing/restraning buffers by workspaces
 
 
    
@@ -1045,18 +1074,24 @@
    ;;  - NOTE: this binding is god-send.. even just for next/previous buffer
    ;;  - lol, i really like this binding.. a pair of keys work really well here.. and what a strange little pair i have here..
    ;;  - i actually like that it's away from the main keys... by the time i need to change buffers, i need a break!
-   ;; '("<XF86forward>" . next-buffer ) ;; default
+   ;; '("<XF86forward>" . next-buffer ) ;; default, uses the buffer jump-list
    ;; '("<XF86Back>" . previous-buffer ) ;; default
    ;;   - NOTE: next/previous-buffer can jump projects
    ;;     - this an interesting experience to visually see if you have centaur-tabs enabled..
    ;;   - alts: projectile-next/previous-project-buffer
-   '("C-<XF86Forward>" . projectile-next-project-buffer ) ;; FIXME: NOTE: doesn't seem to always switch within the project.. ahhh i see, if it's not under a project, under the grab-all "default" project, it'll behave differently.. :/
-   '("C-<XF86Back>" . projectile-previous-project-buffer )
+   ;; '("C-<XF86Forward>" . projectile-next-project-buffer ) ;; FIXME: NOTE: doesn't seem to always switch within the project.. ahhh i see, if it's not under a project, under the grab-all "default" project, it'll behave differently.. :/
+   ;; '("C-<XF86Back>" . projectile-previous-project-buffer )
+   ;;   - these are restricted to the project
+   ;; '("C-<XF86Forward>" . tab-next ) ;; native impl, does it work for both tab-bar-mode and tab-line-mode..??
+   ;; '("C-<XF86Back>" . tab-previous ) ;; TODO: doesn't work with centaur tabs..??
+   '("C-<XF86Forward>" . centaur-tabs-forward )
+   '("C-<XF86Back>" . centaur-tabs-backward )
+   ;;   - a more visual, interactive way of switching buffers..
+   ;;   - by default, these go through visible tabs, and then at the end, jumps projects
+   ;;     - can change behavior with centaur-tabs-cycle-scope
    ;; '("C-<XF86Forward>" . next-window-any-frame )
    ;; '("C-<XF86Back>" . previous-window-any-frame )
-   ;; '("M-<XF86Forward>" . tab-next ) ;; native impl, does it work for both tab-bar-mode and tab-line-mode..??
-   ;; '("M-<XF86Back>" . tab-previous )
-   '("M-<XF86Forward>" . +workspace/switch-right )
+   '("M-<XF86Forward>" . +workspace/switch-right ) ;; perfect!
    '("M-<XF86Back>" . +workspace/switch-left )
    '("C-M-<XF86Forward>" . next-window-any-frame ) ;; just here for completion (frame), i hope i don't have to open another emacs program..!!
    '("C-M-<XF86Back>" . previous-window-any-frame )
@@ -1767,8 +1802,7 @@
 ;; and make it interactive
 ;;   - actually quite cool, to make a function interactive / edit a region..!
 (defun ra/convert-markdown-headers-to-org (start end)
-  "Converts Markdown headers within the region START to END to Org-mode headers.
-   Markdown headers like '# Header' become '* Header', '## Subheader' becomes '** Subheader', etc."
+  "Converts Markdown headers within the region START to END to Org-mode headers. '# Header' -> '* Header'
   (interactive "r") ; Makes the function interactive, operating on the region
   (save-excursion
     (goto-char start)
@@ -1787,7 +1821,7 @@
 ;;       - but my lisp-fu is def getting better!
 ;;     (if
 ;;         (and
-;;          (equal '(f-dir? 'from-dir) t) ;; TODO: is t a special lisp object? like nil? keep them un-evaluated, as this checks lisp objects
+;;          (equal '(f-dir? 'from-dir) t) ;; try = TODO: is t a special lisp object? like nil? keep them un-evaluated, as this checks lisp objects
 ;;          (equal '(f-empty? 'from-dir) nil));; then
 ;;         (copy-directory 'from-dir 'doom-user-dir))) ;; or f-copy
 ;; ;;        - FIXME: (wrong-type-argument stringp doom-user-dir
