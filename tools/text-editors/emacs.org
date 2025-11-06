@@ -8,6 +8,7 @@ one million glorious lines of text-based power~~!!!
 
 
 BEWARE: WATCH OUT FOR THE WORMHOLE THAT IS EMACS
+
 USE FOCUS EDITOR INSTEAD
 
 
@@ -1100,36 +1101,60 @@ c-c ! to trigger the menu
 TODO: mark, diff??
   - *hooollyyy shiiiiit*
 
-*** language specific dev
+*** dev (coding, inserting text)
+
+completions are triggered by pressing tab
+  - it can be in thie middle of word
+  - it can also be triggered without any chars
+  - by default doom seems to auto-triggers it when there are any completions
+
+snippets are triggered by pressing tab when the cursor/point is at the end of a keyword
+  - if there are args, you can press tab again to cycle/write args
+
+NOTE: with auto-triggered completion, these can conflict, as there may be completions after typing a word. you must escape the completion picker then press tab
+
+
+*** language-specific
 
 **** dynamic langs
 
 i'm guessing these functions work with several languages with dynamic runtimes
   - lisp
-    - all
-  - *including ruby!!*
+  - *ruby!!*
     - yup, via robe plugin
+    - (TODO: mruby, dragonruby?)
   - *TODO: elixir??*
     - it'll be sick to jump from ruby to elixir dev, in emacs!!
   - python??
   - lua?
 
-***** introspection related
+***** introspection-related
 
-explore dynamic programs (including emacs) interactively via emacs
+explore dynamic programs (including emacs!) *interactively* via emacs
+
+by integrating with emacs' search mini-buffer, you get a simple way to search through all functions and vars (all langs), modules and classes (ruby)
 
 c-c c / spc-l
   - language-dependent key-map
   - *bindings for language-related plugins will pop up here*
+    - i think this is thanks to doom/henrik
     
 c-c c g / spc-l g (meow)
   - *interactively search through all libs, functions, vars*
   - goto key-map
   - find-function
   - find-var
+    - emacs itself uses similar functions to explore itself
+      - see helpful-[commands] (spc h x/f/v)
   - note: if it's a buffer of emacs code, it will search through emacs, similar to the helpful- functions
 
-***** eval related 
+***** eval-related
+
+emacs's provides an interface to eval bits of code: either run eval on an expression (with the point at the end of the expression; could be any amount of nested lisp expressions..), a region, buffer(s?), files(s?)
+
+if the eval code is meant to return a value, that value is displayed (right there, next to the code!)
+
+
 spc-e
   - *note: if it's emacs-lisp, you can simply feed code into emacs*, no need for a seperate repl process!
   
@@ -1219,7 +1244,6 @@ c-c k
     - TODO: fix this..??
     - may have to try zed after all..
     - or maybe a lsp module for ruby??
-
 ** meow's inherent god-like-mode
 
 NOTE: it's wayyyy more comfortable to press space-bar over any of the bottom-left key-chords (c-x, c-c). Even (spc x spc) is better, though it adds two more key-presses. The right alt key is the size of a normal key, and still hard to reach with my thumb, making (m-x) particularly difficult.. :/. I tried using emacs' original key-chords while playing with vanilla, but it felt like i was using a space cadet keyboard.. my hands never on the home row..
