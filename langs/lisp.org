@@ -128,9 +128,54 @@ while
 will quote the 1st arg, the x, for you automatically.
 
 
-
 * install lisp
+
+emacs-lisp
+  - included within emacs!
+
+
+** sbcl
+
 scoop install sbcl
+sudo apt-get install sbcl
+
+(exit) to exit sbcl, lol
+
+
+*** install quicklisp
+
+#+begin_src sh
+sbcl
+curl -O https://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp
+#+end_src
+
+#+begin_src common-lisp
+(quicklisp-quickstart:install)
+
+;; FIXME: debugger invoked on a QUICKLISP-CLIENT:SYSTEM-NOT-FOUND in thread
+;;   #<THREAD "main thread" RUNNING {10048D01B3}>:
+;; *features*
+;;  - shows quicklisp installed.. hmm
+
+
+
+;;(ql:add-to-init-file)
+;; it's installed, but still throws an error :/
+;; FIXME: (SB-C:COMPILER-ERROR SB-C::INPUT-ERROR-IN-LOAD :CONDITION #<SB-INT:SIMPLE-READER-PACKAGE-ERROR "Package ~A does not exist." {10013619C3}> :STREAM #<SB-SYS:FD-STREAM for "file /home/ra/.sbclrc" {1001360543}>)
+
+
+;; just trying crap..
+;; Load #P"/home/ra/quicklisp/setup.lisp"
+
+
+;; System "lem" not found
+
+
+;; TODO: urgh, try roswell?? lol
+#+end_src
+
+
 
 * install a lispy editor
 
