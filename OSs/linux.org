@@ -1,13 +1,43 @@
 
 
+* WTF: WARNING: BEWARE OF SUDO APT REMOVE
+
+less /var/log/apt/history.log
+  - check the damage
+
+
+  - *ruby-dev*
+    - TODO: what's the difference between dev and a standard install?
+
+  meh, ruby is all i need, i can let it re-install the rest when needed:      
+  - jre-headless, opendjdk-17-jre-headless
+  - python-pip
+    - lol, i can survive without this..
+  - perl just won't die..
+  - java-common
+
+
+
+
+
+* some random notes
+
+to install an app manually:
+copy the binary to /usr/bin/ for most distros
+then you should be able to run the binary via command line
+  - scoop handles this crap for you
+  
+
+* original file
+
 
 CONCLUSION: forget linux, stick to windows for personal computers, and just get by with emacs on linux servers
+  - also, *scoop is the best package manager i've used! portable apps all the way, and it handles setting up symlinks, start-up env vars, etc. for you!!*
 
 
-i don't even see a reason to org this, as i won't be using it..
+  
 
-
-
+* why linux (sucks)
 
 https://www.reddit.com/r/pop_os/comments/xuq2pm/can_someone_explain_to_me_like_im_five_why_linux/
 macOS and Windows has a single platform vendor, Apple and Microsoft.
@@ -26,114 +56,121 @@ However, note majority of users download their apps from the package manager; ap
 
 
 
+* distros (distributions)
+
 conclusion:
 
-openSUSE
-  - Tumbleweed or Leap
+0. TODO: research 'n try debian unstable
+   - TODO: does WSL use debian by default?
+   - chromeos uses debian for it's linux container by default
 
-(def not nixOS, nor archlinux)
+1. openSUSE leap for slower releases
+
+e. openSUSE tumbleweed vs archlinux for latest releases
+   - i def don't need these, as i'll be using windows for my personal computer..
+    
+def not NixOS
+  - if i really wanted to torture myself and try it, just start with the user-created package manager: home manager (nixOS just goes further by using nix, the declarative langauge, to set the OS)
 
 
 
-to install an app manually:
-copy the binary to /usr/bin/ for most distros
-then you should be able to run the binary via command line
 
-# distros
+** list (of distros)
+
 https://www.reddit.com/r/openSUSE/comments/x7ge7j/thinking_about_moving_from_arch_based_to_opensuse/
+
 https://www.reddit.com/r/NixOS/comments/zwqaxz/arch_user_convince_me_to_hop_to_nix/
 
 
-**arch linux**
-  - newer, community-made (and not the narrow FOSS community behind debian)
+*** arch linux
+  - newer, community-made (and not the more slower, older, enterprise-feeling FOSS community behind debian)
   - "for people that want to install linux from nothing (or the most minimal amount of software)"
     - though, there is an install script (archinstall) to help/guide newer users
     - "Arch is very barebones once installed, you end up with a functioning terminal and only essential packages installed. For example, you won't even have sudo unless you install it. So if you want an ultra refined, customised setup where you're responsible for installing and configuring everything on your system, Arch. If you want to install your system with a DE and get to using it right away, Endeavour."
     - have distros to ease this:
       - **endevourOS**
-        - just adds installers, install scripts, etc. making life easier for installs, especially drivers
+        - just adds installers, install scripts, etc. *making life easier for installs, especially drivers*
       - manjaro
         - less arch, some weird mish-mash of beginner-friendliness and arch
-  - rolling release system-packages + user-maintained user-packages, continuously / no release
+  - rolling release system-packages + user-maintained user-packages, *continuously / no release*
     - meaning, you must update the entire system every time you want to get package that uses another package (dependency) that has a release newer than your system
       - aka **you must update your entire system nearly every-time you want to get a package!!**
     - tested by a volunteer testing team
-  - great wiki: documentation on everything, great way to learn linux
-  - need to install your own backup software (BtrFs, etc.)
-  - "Arch recommends you check the wiki before every update to see if the update is going to break something. Tumbleweed just works"
-  - in general, to install or config apps, you read the wiki and manually config it yourself
+  - *great wiki: documentation on everything, great way to learn linux*
+  - *"Arch recommends you check the wiki before every update to see if the update is going to break something. Tumbleweed just works"*
+  - *in general, to install or config apps, you read the wiki and manually config it yourself*
   - **if it crashes, you're screwed, so you def need to setup a backup system and backup frequently**
+    - *need to install your own backup software (BtrFs, etc.)*
 
-**openSUSE**
+*** openSUSE
   - an old staple made by an enterprise server company
-  - for people that just want a hassle-free working system that doesn't want to waste time tinkering and building everything from scratch
-  - provides options to customize making a great out-of-the-box experience
-    - OBS, OpenQA, snapper, BtrFs by default, YasT
-      - **YaST**, an all-in-one system config tool
-      - "snapper saves your @$$"
-      - AUR (arch's user repo) > OBS
-      - BtrFs
-        - a file-system that allows quick 'n small snapshots, among many other contemporary disk-related features
+  - *for people that just want a hassle-free working system that doesn't want to waste time tinkering and building everything from scratch*
+      - yep, that's me..!
+  - *provides options to customize making a great out-of-the-box experience*
+    - YaST, an all-in-one system config tool
+    - "*snapper saves your @$$*"
+    - AUR (arch's user repo) > OBS
+    - BtrFs
+      - a file-system that allows *quick 'n small snapshots*, among many other contemporary disk-related features
     
   - Tumbleweed
-    - rolling release, 1 snapshot max per day, so more like release nearly every-day
+    - *rolling release, 1 snapshot max per day, so more like release nearly every-day*
       - tested by a company
-    - "Tumbleweed feels like Fedora, works like arch and installs like Debian. The best of all."
+    - "*Tumbleweed feels like Fedora, works like arch and installs like Debian. The best of all.*"
 
   - Leap
     - intervalled release
+      - TODO: or is the other way around..?? i mean tumbleweed rolls, but it's slow, not leaping..
 
-fedora
+*** fedora
   - by red hat enterprise
     - (though not sure if RHEL exists anymore..)
   - competed with debian for a long long time as most popular distro
-  - releases every 6 months
-  - dnf > apt
+  - *releases every 6 months*
+  - *dnf > apt*
     - dnf history list
     - dnf history undo
-  - encourages using flatpaks (cross-platform, portable packages) over third-party repos
+  - *encourages using flatpaks (cross-platform, portable packages) over third-party repos*
 
-debian
-  - releases every 2 years!!
-    - meaning your software will nearly always be out-dated!
+*** debian
+  - *releases every 2 years!!*
+    - meaning *your software will nearly always be out-dated!*
     - the debian security team only works on the current release, so you must update it (except for LTS versions, which have security updates for 5 years)
-  - can use unstable and testing/"sid" branches of the repo for latest, untested software
-  - the free and open-source (FOSS) standard
+  - *can use unstable and testing/"sid" branches of the repo for latest, untested software*
+    - TODO: wouldn't this be better than arch/leap?
+  - the free and open-source (FOSS) standard distro
   - the main community-based distro
-    - (as opposed to company-owned)
-  - to use more recent packages, just download them using snap, flatpak, etc.
-    - benefits from being safe too
+    - (as opposed to company-owned ubuntu, red hat, etc.)
+  - to use more recent packages, can download them using snap, flatpak, etc.
+    - benefits from being safe/sandboxed too
 
-
-
-
-## special
-NixOS
-  - **reproducible env** via declarative configs
+*** special
+**** NixOS
+  - **reproducible env via declarative configs**
   - https://www.felixsanz.dev/articles/nixos-made-me-go-back-to-windows
     - a soid personal blog post of a person who went from using linux as a child, mostly arch linux, for 20 years, then trying nixOS, then running to Windows
     - "Without a doubt this is the feature of NixOS that I liked the most. Nix is, besides a package manager, a pure, functional, lazy, declarative and reproducible programming language to express (in .nix files) the state of your system. In other words, you will not have to execute commands that you will later forget nor will you have to modify files scattered around the system. You will perform all the configuration of your system through files that you can save in Git or wherever you want."
   - In these files you can specify the packages that must be installed, the hardware configuration (kernel, partitions, encryption, ...), the system users, the Google Chrome extensions that will be installed automatically, the GTK theme... practically everything. Altering the system configuration will be as simple as modifying these files and changing the system to the new state. Furthermore, you will be able to modularize the configuration as you like thanks to the import function. Wonderful.
-  - modify state of machine temporarily (like sandboxing the entire OS)
+  - modify state of machine temporarily (like *sandboxing the entire OS*)
     - "The Nix shell is a powerful tool that allows you to temporarily modify the state of the machine. For example, you will be able to run an application without having it installed. You create a shell with that package/configuration and when you close it, it will leave no trace."
   - **steep learning curve**
     - uses a purely-functional lang (also named nix)
-  - uses a lot of time
+  - *WARNING: uses (wastes) a lot of time*
     - "all the time you spend generating this configuration, looking for the options, dealing with their inconsistencies, etc."
-      - options, the .toml-like key-value settings, are created by the folks that package the nix package? Otherwise, you'd have to manually configure it elsewhere
-  - maintaining packages is complicated, and the crux of the whole idea of nix
-    - if the nix store doesn't have the package you want, you will waste days making one, let alone maintaining it
-  - **no documentation**
-    - people just look at source code of packages, or rely on the very helpful community on discord
-  - just one version of most software is available (so no installing old versions, before their dev turned the wrong way)
-    - this conflicts with scripting languages which often want certain versions of dependent modules
-      - also the packages, and thus modules/libs must be compiled! yikes..
+      - options, the *.toml-like key-value settings*, are created by the folks that package the nix package? Otherwise, you'd have to manually configure it elsewhere
+  - *maintaining packages is complicated, and the crux of the whole idea of nix*
+    - *WARNING: if the nix store doesn't have the package you want, you will waste days making one, let alone maintaining it*
+  - **WARNING: no documentation**
+    - *people just look at source code of packages, or rely on the very helpful community on discord*
+  - *WFF: WARNING: just one version of most software is available (so no installing old versions, before their dev turned the wrong way)*
+    - this conflicts with scripting languages which often want certain versions of dependent modules(??)
+      - also the packages, and thus modules/libs must be compiled! yikes..(??)
   - it's built on linux
-    - yet, given the amount of more things you must do, on top of a broken linux ecosystem, it's just asking for self-torture. All of linux's hardware problems: especially GPU-related, will still haunt you, but from another level of abstraction away
-  - NOTE: should use flakes
-  - no games??
-  - can start with Home Manager
-    - "NixOS manages system configuration but not user-related configuration. Home Manager, a project created by third parties, takes care of that."
+    - *WARNING: yet, given the amount of more things you must do, on top of a broken linux ecosystem, it's just asking for self-torture. All of linux's hardware problems: especially GPU-related, will still haunt you, but from another level of abstraction away*
+  - *TODO: no games??*
+  - NOTE: suggested to use (nix-)flakes
+  - can start with home manager
+    - "*NixOS manages system configuration but not user-related configuration. Home Manager, a project created by third parties, takes care of that.*"
 
 
 
