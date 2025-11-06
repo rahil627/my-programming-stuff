@@ -23,7 +23,56 @@ ai
       - might as well do this yourself.. and make it maintainable, readable..
       - it's just generated scripts and a task-scheduler, with some common "actions".. maybe some way that flow together..
 
-        
+
+* install ruby
+
+this is why portable programs are just wayyyy better.. arrrrgh..
+  - TODO: surely there must be a way to atleast just pack the ruby parser with the program..??
+
+** install mise (yet another language/run-time package manager)
+
+https://mise.jdx.dev/getting-started.html
+
+#+begin_src sh
+sudo apt update -y && sudo apt install -y gpg sudo wget curl
+sudo install -dm 755 /etc/apt/keyrings
+wget -qO - https://mise.jdx.dev/gpg-key.pub | gpg --dearmor | sudo tee /etc/apt/keyrings/mise-archive-keyring.gpg 1> /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=amd64] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
+sudo apt update
+sudo apt install -y mise
+#+end_src
+
+
+
+** install ruby using mise
+
+mise ls-remote [language/run-time]
+  - check all versions available
+
+mise install ruby
+  - this will download the latest released version
+    - (and not some old bullshit that linux restricts you to)
+    - (by default it won't select preview/dev versions)
+  - it runs make.. oh fuck..
+    - SERIOUSLY, WTF
+      - TODO: WHY NO BINARIES?
+        - why delegate the task to make EVERY user crunch their computer, when they could provide binaries for the most popular OSs??
+
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+  - load upon start of shell (to handle env bullshit for you)
+
+ruby -v
+  - test it out!
+
+mise use --global ruby[@version]
+  - to switch the version
+  - this adds it to '~/.config/mise/config.toml'
+
+mise exec ruby[@version] -- ruby [command goes here]
+  - to run commands from specific versions
+
+
+* everything else 
 language-related
   - prism parser
   - syntax-tree
