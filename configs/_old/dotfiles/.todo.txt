@@ -1,24 +1,20 @@
 
 
-GET BACKUP SOFTWARE FOR ARCH!!<--
+lol.. linux is so fucked up.. thank gawd for emax
 
-replace server distro with openSUSE (leap) and try using nix package manager for most packages
-  - then change to nixOS
+
+
+see https://github.com/clo4/dotfiles  
+
+replace server distro with openSUSE tumbleweed
 
 update personal distro arch -> openSUSE leap
-  - start with nix the package manager first via 'determinate nix installer'
+  - can try nix's package manager first via 'determinate nix installer'
 
 how to fzf hidden files? is there a way within fzf, or is it a command flag?
   - update c+f and c+a+f bindings to show hidden files
 
 create a ~/bin folder and link (soft or hard?) it to my scripts 'n cli apps
-
-install luxe
-
-setup heaps and imgui
-
-try imgui with ruby!
-  - https://github.com/vaiorabbit/ruby-imgui
 
 port old vim configs to NVChad/lua
 
@@ -50,12 +46,10 @@ figure out what's wrong with the long prompt path
 
 
 try DOOMemacs
+  - NOTE: FROM FUTURE ME: lol.. surprisingly, this replaced linux cli!
   - compare to nvim
   - find a sane nvim config like doomemacs
     - NVChad!
-
-try godot
-  - run draw with code example
 
 alacritty has a alacritty.fish script
 copy the official alacritty.yml config file, which has all the defaults commented out?
