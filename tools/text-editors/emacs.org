@@ -50,6 +50,7 @@ see [config.el] for notes on config
 
 current setup:
 treemacs
+  - TODO: this only shows file-trees, not code trees..??
 centaur-tabs
   - testing.. quite nice thus far..
     - works well with windows and projects, reducing the tabs related to the project (if not, cwd?) of the current buffer, and to that window

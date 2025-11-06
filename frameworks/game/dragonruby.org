@@ -15,7 +15,8 @@ TODO: merge to [ruby]
 
 emacs
   - ruby-mode started by matz himself!
-
+  - might not even need the lsp..!! <3
+    
 zed
   - even better
 
@@ -45,6 +46,8 @@ make sure you have ruby installed with the dev tools:
     
 
 * TODO prep offline stuck-on-an-island dev
+
+see [ruby]
 
 TODO: offline provided docs stuck on loading..?
 

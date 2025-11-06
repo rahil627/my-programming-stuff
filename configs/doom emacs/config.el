@@ -70,7 +70,7 @@
 
 
 
-;;; some TODO from emacs.org
+;;; TODO: list
 
 ;; change file associations to focus editor
 
@@ -1178,6 +1178,8 @@
    ;; this can't be right..
    ;;   - FOUND IT!!
    ;;     - M-;
+   ;;       - of course, the blessed emacs-lisp syntax
+   ;;       - good key placement though.. it's just the problem of left-meta
    ;; c-x c-; = comment-line
    ;; TODO: bind to c-x ; (currently only in c-x c-;) in keypad
    ;;   - comment-set-column??
@@ -1708,7 +1710,8 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/my-stuff/repos/my-programming-stuff")
-
+;;  - it's just internal files.. leave it
+;;  - TODO: set this back to it's default!!
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.

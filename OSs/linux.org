@@ -6,6 +6,7 @@ less /var/log/apt/history.log
   - check the damage
 
 
+ these were the notable packages removed:
   - *ruby-dev*
     - TODO: what's the difference between dev and a standard install?
 
