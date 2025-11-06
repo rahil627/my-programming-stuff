@@ -319,7 +319,7 @@ eshell >> bash and powershell
 ruby >>> python (>>>> shell langs) (>>>> go)
   - (alt for games/media)
     - dragonruby
-      - *for interactive game dev!!*
+      - *for interactive and beautiful game dev!!*
   - (alt for shell language)
     - possibly easier/more convenient to install on all systems than bash 'n powershell
       - often auto-installs on linux, when a program uses it..
@@ -462,12 +462,11 @@ in the world of web-browser-as-gui, these langs excel in having the best web fra
   
 C
 - core
-  - high-performance bits for ruby (C-extensions)
+  - high-performance bits for ruby (C-extensions or host C program)
     - *game-engine*, *SDL*
   - core program for mruby
 dragonruby (an mruby fork)
-  - *game*
-    - notably, interactive game making
+  - *game (interactive dev)*
 ruby
   - *web* (tiny to large projects), *scripting*, *shell magic*
 elixir
@@ -476,7 +475,7 @@ lisp (common lisp, scheme, emacs lisp)
   - text editor extension (*emacs*, *helix*, *lem*)
     - emacs is a dynamic run-time machine!!
   - *high performance alt to C* with native-compilation (sbcl)
-mruby, "mruby/C"?, picoruby (and C)
+mruby, mruby/C, picoruby (with C)
   - *embedded scripting/extension*
     - rust is tough to beat for embedded devices..
     - but in the case of apps that simply want to make use of existing C libs, and build a little core program using them, these langs can provide simple scripting and still get all the benefits of ruby (dynamic run-time / interactive dev, beautiful language..)
@@ -2302,11 +2301,11 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
       - planned for helix
     - still slower than luaJIT..
 **** YES mruby
-  - PERSONAL: **magical. simple. concise. beautiful. powerful.** contains nearly all of the the magic of ruby, probably just discarding the terribly inefficient bits. **possibly the most fun way to make games..**
+  - PERSONAL: **magical. simple. concise. beautiful. powerful.** contains nearly all of the the magic of ruby, probably just discarding the terribly inefficient bits (and the bits that are hard to parse..). **possibly the most fun way to make games..**
     - *i mean, if it's not meant for a tiny embedded device, why not..? why not have everything you'd ever want??*
   - a light-weight interpreter for ruby intended to be embedded into C/C++
-  - *also has a light-weight _register-based_ VM/byte-code interpreter to run byte-code: RiteVM, to run the code without compiling to C*
-  - **can be used to compile ruby (CRuby) code**
+  - light-weight *_register-based_ VM*/byte-code interpreter: RiteVM
+  - can be used to compile ruby (CRuby) code
     - though, the process is long..
   - **consistent development and releases alongside ruby**
     - https://github.com/mruby/mruby/blob/master/doc/mruby3.3.md
@@ -2327,20 +2326,23 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
       - some interesting bits by Matz on how the garbage collector works
     - *fibers*
       - *not sure what the point of wren is then..* i guess to be simple, maintainable..
+    - <400KB memory
     - *"an order of magnitude slower than luaJIT"* - amir
     - *led by Matz!!*
 ****** dragonruby
-- mruby fork that uses SDL, and LLVM, made for the dragonruby game engine
+- mruby fork that uses SDL, and LLVM, made for the dragonruby game toolkit (engine)
   - dynamic magicks: hot-reload, inspection of a running program (runtime), dynamic aleration of anything (objects: vars, functions), dynamic addition of aynthing
     - this is why it had to be done in ruby (or a lisp)..
-  - *dragonruby/lightstorm, "a minimalistic AOT ruby compiler" (2024)*
-    - uses AST/MLIR/bytecode (EmitC dialect) -> C
-      - seems similar to haxe's hashlink/c solution
+- tries to keep up with mruby versions, though it may slightly differ in features as needed
+- *dragonruby/lightstorm, "a minimalistic AOT ruby compiler" (2024)*
+  - uses AST/MLIR/bytecode (EmitC dialect) -> C
+  - seems similar to haxe's hashlink/c solution
+  - pricing shows ~"pre-compile bytecode", or something like that..
 ****** mruby/C
-- NOTE: not sure if own lang or a branch of mruby
+- an even smaller branch of mruby..?
 - target: one-chip micro-processors
 - <40KB memory size
-****** picroruby
+****** picoruby
 - 256KB ROM, 128KB RAM, 32-bit
 - only depends on glibc/newlib/newlib-nano
 - raspberry pi pico as reference micro-controller board
