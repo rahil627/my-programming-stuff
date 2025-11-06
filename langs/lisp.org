@@ -1,5 +1,18 @@
 
 
+* common errors
+
+invalid-read-syntax ")"
+  - surely the most common error..
+  - if you get this doing eval in emacs, try to run eval at different points in the code.. supposed to be at the end of the expression.. but it often behaves differently..
+    - FIXME: maybe also a cursor bar style problem..?
+      - try eval a few extra chars to the end of the expression..
+
+FIXME: NOTE: cursor bar on left side of parens triggers hint, yet it highlights matching parens when on the right side, maybe a problem of curosor style..
+  - shit, some syntax actually is a blessing, at least in the case of ruby, where there are no delimited chars, save whitspace
+
+
+
 * notes
 
 see emacs.org/dynamic langs
@@ -7,11 +20,10 @@ see emacs.org/dynamic langs
 TODO: merge from vanilla emacs notes
 
 
+
 it seems you can define a function (defun) within a function, and then call it..
 
 i'm having trouble passing in a list of &rest args for some reason.. maybe just set a temp var to pass in..??
-
-
 
 
 --
