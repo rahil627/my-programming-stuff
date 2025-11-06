@@ -1,5 +1,11 @@
 
-* some notes
+* some random notes
+
+** TODO a diary entry by matz in 20040807
+
+textbringer system clipboard woes :/
+
+
 ** j blow on mookash podcast about jai
   - *C macros straight up replaced a string, making it powerful, as you could just replace half-identifiers, half-expressions, or anything. It doesn't have to be compilable code. But that's also what made it completely un-debuggable. Non-hygenic: global variables in the namespace are used, and must be careful.*
     - hygenic macros, have it's own name-space

@@ -146,6 +146,15 @@ make textbringer more accessible, ideally to the level of focus editor, but limi
   - focus editor has a ton of little design ideas to copy, as a great zen starting base
 
 
+(just installed wl-clipboard for textbringer, yay!!)
+  - FIXME: "No suitable type of content copied"
+    - hmmm, damn
+      - FIXME: and a bug if you do it twice, LOL, gotta love it. 
+        - it's interesting that it inserts text into the terminal like that though..
+          - TODO: hmm, if c-/ is undo, what's redo..? not c-s-/ nor m-/ ..
+            - at least need a reminder of bindings after using m-x..!
+
+              
 * a quick overview
 
 TODO: should use these categories, and merge most of this down..
