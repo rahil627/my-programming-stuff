@@ -3,6 +3,19 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+;; my config vars
+;;
+;; used to copy config files (from elsewhere to local install)
+;; NOTE: trying to edit from a repo, so that it shows up in version control
+;; this is at the cost of having to run a copy function every-time you change the config
+;; it could also used to sync upon (re-)start!
+;;   - which is i what must do when i change the config anyway..
+;;   - this is significant, considering emacs replaces linux for me, the equivalent of a dotfiles folder
+(set 'ra-my-config-dir-path "~/my-stuff/repos/my-programming-stuff/configs/doom emacs/")
+;;  - TODO: vs (defvar var value "hello")
+
+;; (ra/copy-config-to-local-install 'ra-my-config-dir-path)
+;;   - TODO: not sure where or how to run this while this file is being executed..
 
 ;;; some helpful bindings..
 ;; doom/reload to reload private config
@@ -62,6 +75,10 @@
 
 ;; change file associations to focus editor
 
+;; ra/ vs ra- for functions and vars? then re-factor
+;;   - i think vanilla emacs auto-added '-' for ou when you inserted a space during m-x
+
+;; found this tidbit elsewhere.. just check it..
 ;; https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
 ;;   - an emacs user switches to helix and mentions some good plugins
 
@@ -1750,3 +1767,16 @@
              (org-stars (make-string num-hashes ?*)))
         (delete-region match-start match-end)
         (insert org-stars " ")))))
+
+
+;; (defun ra/copy-config-to-local-install from-dir
+;; ;;  - TODO: INCOMPLETE
+;; ;;  - TODO: ask ai to generate this, and check against my bullshit lol
+;;       - but my lisp-fu is def getting better!
+;;     (if
+;;         (and
+;;          (equal '(f-dir? 'from-dir) t) ;; TODO: is t a special lisp object? like nil? keep them un-evaluated, as this checks lisp objects
+;;          (equal '(f-empty? 'from-dir) nil));; then
+;;         (copy-directory 'from-dir 'doom-user-dir))) ;; or f-copy
+;; ;;        - FIXME: (wrong-type-argument stringp doom-user-dir
+;; ;;          - it's set by defvar.. trid quote and unquoted..
