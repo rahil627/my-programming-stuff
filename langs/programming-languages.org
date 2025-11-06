@@ -835,11 +835,25 @@ owner
 
 ** dynamic langs aka scripting langs (dynamic run-time, dynamically-typed, automatic memory-management)
 
-languages that have a dynamic run-time (meaning: *you can alter the program at run-time; usually meaning: eval, run/execute code while the program/process is running*), often dynamic typing (meaning: the type is unknown until run-time--since new code can be inserted/eval'd at any-time, and thus the object/data can be of any type once it reaches execution), thus enabling the languages to have various program-altering features: *meta-programming* (meaning: *to alter the program in various ways while it's running*; which is beyond introspection, which doesn't alter anything, and beyond macros, which are executed at compile-time), and thus enabling them to *provide a more interactive dev experience*
+languages that have a dynamic run-time (meaning: *you can alter the program at run-time*; usually meaning: *eval, run/execute code while the program/process is running*), often dynamic typing (meaning: the type is unknown until run-time--since new code can be inserted/eval'd at any-time, there is no way to know the type until reaches execution), thus enabling the languages to have various program-altering features: *meta-programming* (meaning: *to alter the program in various ways, but particularly while it's running* (at run-time); which is beyond introspection, which doesn't alter anything, and beyond macros, which are executed at compile-time), and thus enabling them to *provide a more interactive dev experience*
 
-other languages, such as haxe (hashlink vm), and i'm guessing C# and java too, all at compile code to bytecode (haxe, clr?, jvm bytecode) first before feeding it into the vm (i'm guessing for optimization purposes..). Since the code has already been transformed into bytecode before execution, usually a pre-compiled file, there would be no way for newly inserted/evaluated code to interact with it (TODO: unless you make a way for bytecode to interact with it, or other bytecode..?).
+other languages, such as haxe (hashlink vm), and i'm guessing C# and java too, all at compile code to bytecode (haxe, clr-ir?, jvm bytecode) first before feeding it into the vm (i'm guessing for optimization purposes..). Since the code has already been transformed into bytecode before execution, usually a pre-compiled file, there would be no way for newly inserted/evaluated code to interact with it (TODO: unless you make a way for bytecode to interact with it, or other bytecode..?).
 
-thus, in order to compile code at run-time, you'd need a whole 'nother compilation process (hscript), which'll likely take longer to execute/run, as it's starting from a high-level language, not bytecode (likely, because who knows what optimizations may come up during run-time..).
+thus, in order to compile code at run-time, you'd need a whole 'nother compilation process (hscript), which'll likely take longer to execute/run, as it's starting from a high-level language, not bytecode (likely, because who knows what optimizations may come up during run-time..! :) ).
+
+
+
+TODO: to merge:
+*eval(uation) are dynamic langs killer feature: it makes dev experience MUCH easier, and MUCH more interactive.* With this power, you can easily see what every region of code (expression, function, etc.) returns, making writing code / dev a FAR more tolerable experience.
+  - NOTE: how does this differ from static lang dev?
+    - breakpoint, introspect? that's not bad either.. but then you'd have to get the program to execute to that point..
+      - goto?
+    - hmm, maybe you can eval regions of code in the big VM langs (C#, java) too..??
+
+furthermore, languages like ruby, provide ways to alter existing objects (monkey-patching?), not just altering data nor running existing functions, but adding methods/functions to existing objects, and more! (TODO: more!) 
+
+*languages that are desinged to include the concept of "everthing (expression) returns a value", can doubly benefit here, as then you literally evaluate everything!* 
+
 
 
 
