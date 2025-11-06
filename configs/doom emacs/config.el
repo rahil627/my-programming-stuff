@@ -12,7 +12,6 @@
 ;;   - which is i what must do when i change the config anyway..
 ;;   - this is significant, considering emacs replaces linux for me, the equivalent of a dotfiles folder
 (set 'ra-my-config-dir-path "~/my-stuff/repos/my-programming-stuff/configs/doom emacs/")
-;;  - TODO: vs (defvar var value "hello")
 
 ;; (ra/copy-config-to-local-install 'ra-my-config-dir-path)
 ;;   - TODO: not sure where or how to run this while this file is being executed..
@@ -1559,28 +1558,38 @@
 
 
 ;; TODO: downlaod and set Monofoki
+;;   - (if it exists)
 ;;(setq doom-font "Monofoki")
 
 ;; exploring shit on a chromebook
-;; (setq doom-font "Cousine")
-;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
-;;   - there's notably no vertical line width, making it quite compact..
-(setq doom-font "DejaVu Sans Mono")
-;;  - not bad!.. kinda cute... far more spacey.. actually quite close to Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
-;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
-;;     - need about 14 or 15
+(cond
+ (doom--system-linux-p ;; (featurep :system 'linux) ;; ooooh yeahhh!! i'm lisp'in' baby!!
+  ;; (setq doom-font "Cousine")
+  ;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
+  ;;   - there's notably no vertical line width, making it quite compact..
+  (setq doom-font "DejaVu Sans Mono"
+        ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close to Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
+        ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
+        ;;     - need about 14 or 15
 
-;;(setq doom-font "Roboto") ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
-;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
-;;  - TODO - create a function to switch from reuglar and mono-spaced font
-;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
-;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
-;;
-;;
+        doom-variable-pitch-font "Roboto" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
+        ;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
+        ;;  - TODO: - create a function to switch from reuglar and mono-spaced font
+        ;;  - TODO: why doesn't org-mode use this..?? >:O
+        doom-big-font "Roboto"
+        ;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
+        ;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
+        doom-serif-font "DejaVu Serif" ;; vs Noto Serif
+        )
+  )
+ ;; (doom--system-windows-p
+ ;;  ())
+ ;; (doom--system-macos-p
+ ;;  ())
+ )
 
-
-;;(doom/increase-font-size) ;; FIXME: wrong args? :/
-;;(doom/increase-font-size) ;; twice to skip a missing size..?
+;;(doom/increase-font-size)
+;;(doom/increase-font-size) ;; twice to skip a missing size..
 
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
