@@ -1,23 +1,31 @@
 
 
+* ruby internals
+
 see [play/ruby-limits.rb]
   - for an inquiry into how ruby data is stored
     - might as well just read the C code though..
 
-dark magicks
+TODO: should check out "ruby under a microscope" book
+  - sounds like an "how it's made" episode.. with a bunch of diagrams 'n all..
+  
+
+* TODO dark magicks (to explore..)
   - see starred repos under the category "dark magicks"
     - drb
-      - dRuby is a distributed object system for Ruby. It allows an object in one Ruby process to invoke methods on an object in another Ruby process on the same or a different machine.
+      - *dRuby is a distributed object system for Ruby. It allows an object in one Ruby process to invoke methods on an object in another Ruby process on the same or a different machine.*
     - tombenner/ru
       - "Ruby in your shell!"
-    - (adamwiggins/s-mage)/rush
+    - [adamwiggins/s-mage]/rush
       - "Ruby replacement for bash"
     - pry
       - "A runtime developer console and IRB alternative with powerful introspection capabilities."
+        - TODO: i wonder why this hasn't made it into ruby yet.. or did irb catch up?
 
-ai
+** TODO ai?
   - ruby-openai/mistral-ai
-    - likely officially use python..
+    - only needed if you pay for it..
+    - (likely officially use python..)
   - huginn
     - "Create agents that monitor and act on your behalf. Your agents are standing by!"
       - might as well do this yourself.. and make it maintainable, readable..
@@ -72,8 +80,8 @@ mise exec ruby[@version] -- ruby [command goes here]
   - to run commands from specific versions
 
 
-* everything else 
-language-related
+
+* language-related
   - prism parser
   - syntax-tree
     - "Syntax Tree is a suite of tools built on top of the internal CRuby parser. It provides the ability to generate a syntax tree from source, as well as the tools necessary to inspect and manipulate that syntax tree. It can be used to build formatters, linters, language servers, and more."
@@ -83,7 +91,7 @@ language-related
   - yjit
 
 
-
+* the emacs bindings.. they never end!! :/
 TODO: test using emacs with offline docs, to dev without the internet:
 
 spc-k-k
@@ -109,7 +117,8 @@ spc-c[ode]-d[ocs]
   - module/method
   - seems to use ri as it's source..
 
-ri --no-gems (shell command)
+
+* ri --no-gems (shell command)
   - interactive ruby docs
   - for core + std-lib stuff: still 208 gems!
     - 250 with it, might include rails though..
@@ -133,16 +142,12 @@ type keyword, then press tab (in select mode)
 
 
 
-windows:
+* windows:
+
+
 Linking ~\scoop\apps\ruby\current => ~\scoop\apps\ruby\3.3.4-1
 Adding ~\scoop\apps\ruby\current\bin to your path.
 Adding ~\scoop\apps\ruby\current\gems\bin to your path.
-
-
-
-https://github.com/defunkt/choice
-  - example of writing a simple dsl to parse cli options
-
   
 
 ruby on windows not the best experience, but damn good:
@@ -161,7 +166,12 @@ https://www.reddit.com/r/ruby/comments/12z4j3g/is_ruby_still_a_hassle_to_work_wi
 
 
 
-language specific:
+
+    
+
+    
+* resources 
+
 https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/to-ruby-from-python/
   - succintly lists differences with python
   - i def prefer ruby in just about every decision!
@@ -182,15 +192,19 @@ https://learnbyexample.github.io/books/
     - https://learnbyexample.github.io/learn_ruby_oneliners/one-liner-introduction.html
   - ruby regex
 
+https://github.com/defunkt/choice
+  - example of writing a simple dsl to parse cli options
 
 
 
-irb:
+* irb:
 https://news.ycombinator.com/item?id=24637797
 > Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use.
 
 
-cli & pipes:
+* ruby in your shells (cli & pipes)
+
+
 https://www.honeybadger.io/blog/ruby-unix-command-line/
 
 # not so useful...
@@ -219,41 +233,44 @@ ls | ruby -n -e 'puts $_.split(".").last'
 
 
 
-some notes:
+* lang notes
 method!
   - '!' denotes the object is altered/mutated
 
-
-
-
-useful gems:
+    
+* useful gems:
 
 sequel
   - database toolkit
 
-gui
-  - https://www.reddit.com/r/ruby/comments/10rugw3/2023_best_ruby_gui_library/
-    - in general, ruby, like haxe, just doesn't have enough support for gui, it would have to just bind Qt, GTK, or another cross-platform gui framework written in C/C++
-  - https://github.com/AndyObtiva/glimmer
-    - DSL wrapper for many (retained) gui back-ends
-    - similar to haxe-ui
-  - https://github.com/vaiorabbit/ruby-imgui
-    - imgui wrapper
-
 ffi
   - https://www.rubyguides.com/2019/05/ruby-ffi/
     - grabs a function from C's std lib libc
-    - use VLC media player's lib (written in C)
+    - uses VLC media player's lib (written in C)
+
+opal
+  - ruby to js transpiler
 
 rubyinline
   - https://github.com/seattlerb/rubyinline
   - run ffi code inline (in a ruby code file)!
 
-opal
-  - ruby to js transpiler
 
 
 
+maybe not so useful..:
+
+gui
+  - TODO: i wonder if there's one that generates a simple web app, like that one python lib..
+  - https://www.reddit.com/r/ruby/comments/10rugw3/2023_best_ruby_gui_library/
+    - in general, ruby, like haxe, just doesn't have enough support for gui, as it would have to just bind Qt, GTK, or another cross-platform gui framework written in C/C++
+      - TODO: or just C?
+  - https://github.com/AndyObtiva/glimmer
+    - DSL wrapper for many (retained) gui back-ends
+    - similar to haxe-ui
+  - https://github.com/vaiorabbit/ruby-imgui
+    - imgui wrapper
+    - the only useful one nowadays..
 
 
 
@@ -326,22 +343,34 @@ yard docs
 
 
 
-# formatters
+* formatters and linters
+
+conclusion: stick to rubocop, as it ships with ruby
+
 all of the formatters (rubocop, rubyfmt, prettier, etc.) are options in the main ruby vscode extension's settings
+  - the crux of open-source.. :/
+  - before the prism parser, they all used different parsers too! :/
+    
+rubocop does more than formatting, it's a deep *linter* that'll fix 'n optimize your code
+  - !!
 
-rubocop does more than formatting, it's a deep linter that'll fix 'n optimize your code
-
+formatters:
 rubocop
   - the first main one
   - **comes pre-installed with ruby**
-prettier
-  - came after rubocop, based on javascript's prettier linter
-standard
-  - a standard immutable config (because people can't agree), using rubocop
-rufo
-  - like standard but with a different taste/opinion
+    - welp, that's that!
 rubyfmt
   - written in rust and very fast
+prettier
+  - based on javascript's prettier linter
+    - urgh, and probably requires npm too!
+
+formatting standards:
+standard
+  - a standard immutable config (because people can't agree), using rubocop
+    - TODO: could try this out..
+rufo
+  - like standard but with a different taste/opinion
 
 
 
