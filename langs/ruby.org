@@ -1,15 +1,5 @@
 
 
-* ruby internals
-
-see [play/ruby-limits.rb]
-  - for an inquiry into how ruby data is stored
-    - might as well just read the C code though..
-
-TODO: should check out "ruby under a microscope" book
-  - sounds like an "how it's made" episode.. with a bunch of diagrams 'n all..
-  
-
 * TODO dark magicks (to explore..)
   - see starred repos under the category "dark magicks"
     - drb
@@ -30,6 +20,30 @@ TODO: should check out "ruby under a microscope" book
     - "Create agents that monitor and act on your behalf. Your agents are standing by!"
       - might as well do this yourself.. and make it maintainable, readable..
       - it's just generated scripts and a task-scheduler, with some common "actions".. maybe some way that flow together..
+
+
+* ruby internals
+
+see [play/ruby-limits.rb]
+  - for an inquiry into how ruby data is stored
+    - might as well just read the C code though..
+
+TODO: should check out "ruby under a microscope" book
+  - sounds like an "how it's made" episode.. with a bunch of diagrams 'n all..
+
+these three are made by the same person:
+  - prism parser
+    - see [compilers notes]
+  - syntax-tree
+    - "Syntax Tree is a suite of tools built on top of the internal CRuby parser. It provides the ability to generate a syntax tree from source, as well as the tools necessary to inspect and manipulate that syntax tree. It can be used to build formatters, linters, language servers, and more."
+  - yarv
+     "A Ruby object layer on top of the YARV virtual machine"
+
+- yjit
+- CRuby
+
+- JRuby
+- TruffleRuby
 
 
 * install ruby
@@ -81,18 +95,7 @@ mise exec ruby[@version] -- ruby [command goes here]
 
 
 
-* language-related
-  - prism parser
-  - syntax-tree
-    - "Syntax Tree is a suite of tools built on top of the internal CRuby parser. It provides the ability to generate a syntax tree from source, as well as the tools necessary to inspect and manipulate that syntax tree. It can be used to build formatters, linters, language servers, and more."
-  - yarv
-     "A Ruby object layer on top of the YARV virtual machine"
-    - the above three by the same prson
-  - yjit
-
-
-* the emacs bindings.. they never end!! :/
-TODO: test using emacs with offline docs, to dev without the internet:
+* emacs bindings (..they never end!! :/)
 
 spc-k-k
   - +lookup/documentation
@@ -118,31 +121,72 @@ spc-c[ode]-d[ocs]
   - seems to use ri as it's source..
 
 
-* ri --no-gems (shell command)
+* tool kit (in the std lib)
+
+rubocop
+  - formatter
+
+
+** ri
+
+ri --no-gems
+  - CONCLUSION: *a good IDE (with jump to definition, class hierarchy panel, etc.) + AI are severely needed..*
+    - *you cannot guess what the lib does by it's name.. :/*
+      - open-source woes, though can be fun to name things..
   - interactive ruby docs
+    - "ruby interactive?/introspection?"
+    - *i'm guessing it's meant to be used as a lib to provide docs to other programs, namely, editors..*, moreso than being used on it's own..
   - for core + std-lib stuff: still 208 gems!
-    - 250 with it, might include rails though..
-    - important gems such as nokogiri aren't considered ruby/std
+    - 250 with it
+    - a few important gems such as nokogiri aren't in the ruby/std
   - module[tab, tab] to see classes
   - module::class[tab, tab] to see methods
     - class methods aren't organized by super classes :/
- - CONCLUSION: AI + IDE (with jump to definition, class hierarchy panel, etc.) really is needed..
    - TODO: OR: maybe can just make a local copy of the ruby repo.. then try the emacs spc-k commands
 type keyword, then press tab (in select mode)
   - not so good with modal text editing..
 
 
 
+** irb:
+https://news.ycombinator.com/item?id=24637797
+  - "Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use."
 
 
 
 
+* ruby in your shells (cli & pipes)
+
+
+https://www.honeybadger.io/blog/ruby-unix-command-line/
+
+# not so useful...
+echo "puts 2+2" | ruby
+
+# useful!
+ruby -e "puts 'code goes here'" arg1 arg2 argN
+ruby -e 'puts ARGV.inspect' apples bananas pears oranges
+  - ["apples", "bananas", "pears", "oranges"]
+
+# check web-page for a reg-ex using only ruby
+ruby -e "require 'open-uri'; puts open(ARGV.first).read.scan(/starr/i).count" [some-url]
+
+# piping 101
+cat moby-dick.txt | ruby -e "puts STDIN.read"
+(outputs entire text)
+
+# combining with another unix tool for fetching
+curl [some-url] | ruby -e "puts STDIN.read.scan(/starr/i).size"
+
+# loop through lines and do something (print file extensions)
+ls | ruby -e 'STDIN.each_line { |l| puts l.split(".").last }'
+# same thing using -n to loop each line, and $_ meaning the current line
+ls | ruby -n -e 'puts $_.split(".").last'
 
 
 
 
-
-* windows:
+* windows
 
 
 Linking ~\scoop\apps\ruby\current => ~\scoop\apps\ruby\3.3.4-1
@@ -170,75 +214,15 @@ https://www.reddit.com/r/ruby/comments/12z4j3g/is_ruby_still_a_hassle_to_work_wi
     
 
     
-* resources 
-
-https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/to-ruby-from-python/
-  - succintly lists differences with python
-  - i def prefer ruby in just about every decision!
-
-https://github.com/martinmurciego/good-books/
-  - a few ruby books, along with a few others
-
-
-
-
-practice:
-https://try.ruby-lang.org/
-  - simple little interactive lang tutorial
-
-https://learnbyexample.github.io/books/
- - practice examples 'n exercises for common cli stuff using ruby! :D  - ruby -e 'command' can be used to replace grep/sed/awk, and more
-  - ruby one-liners cookbook
-    - https://learnbyexample.github.io/learn_ruby_oneliners/one-liner-introduction.html
-  - ruby regex
-
-https://github.com/defunkt/choice
-  - example of writing a simple dsl to parse cli options
-
-
-
-* irb:
-https://news.ycombinator.com/item?id=24637797
-> Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use.
-
-
-* ruby in your shells (cli & pipes)
-
-
-https://www.honeybadger.io/blog/ruby-unix-command-line/
-
-# not so useful...
-echo "puts 2+2" | ruby
-
-# useful!
-ruby -e "puts 'code goes here'" arg1 arg2 argN
-ruby -e 'puts ARGV.inspect' apples bananas pears oranges
-["apples", "bananas", "pears", "oranges"]
-
-# check web-page for a reg-ex using only ruby
-ruby -e "require 'open-uri'; puts open(ARGV.first).read.scan(/starr/i).count" <url here>
-
-# piping 101
-cat moby-dick.txt | ruby -e "puts STDIN.read"
-(outputs entire text)
-
-# combining with another unix tool for fetching
-curl <MY URL> | ruby -e "puts STDIN.read.scan(/starr/i).size"
-
-# loop through lines and do something (print file extensions)
-ls | ruby -e 'STDIN.each_line { |l| puts l.split(".").last }'
-# same thing using -n to loop each line, and $_ meaning the current line
-ls | ruby -n -e 'puts $_.split(".").last'
-
-
-
-
 * lang notes
+
+TODO: must be elsewhere..
+
 method!
   - '!' denotes the object is altered/mutated
 
     
-* useful gems:
+* some useful gems
 
 sequel
   - database toolkit
@@ -343,7 +327,7 @@ yard docs
 
 
 
-* formatters and linters
+** formatters and linters
 
 conclusion: stick to rubocop, as it ships with ruby
 
@@ -680,6 +664,38 @@ puts 'Hello World'
 $ chmod +x hello_world.rb
 $ ./hello_world.rb
 Hello World
+
+
+
+* resources 
+
+
+meh.. just make stuff!
+
+
+
+https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/to-ruby-from-python/
+  - succintly lists differences with python
+  - i def prefer ruby in just about every decision!
+
+https://github.com/martinmurciego/good-books/
+  - a few ruby books, along with a few others
+
+
+
+
+practice:
+https://try.ruby-lang.org/
+  - simple little interactive lang tutorial
+
+https://learnbyexample.github.io/books/
+ - practice examples 'n exercises for common cli stuff using ruby! :D  - ruby -e 'command' can be used to replace grep/sed/awk, and more
+  - ruby one-liners cookbook
+    - https://learnbyexample.github.io/learn_ruby_oneliners/one-liner-introduction.html
+  - ruby regex
+
+https://github.com/defunkt/choice
+  - example of writing a simple dsl to parse cli options
 
 
 
