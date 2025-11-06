@@ -2449,6 +2449,37 @@ also, *it's easier to install ruby on all desktops oses* than to install a linux
 however, *running a basic series of commands does indeed work fine and quick with dash*.. no need for a big scripting language interpreter.. *especially if it's being run a billion times..*
 
 
+TODO merge:
+https://stackoverflow.com/questions/2342894/why-and-when-to-use-the-shell-instead-of-ruby
+
+The shell's programming language is awful for all but one thing.
+
+Pipelines.
+
+The shell's programming language for pipelines totally rocks.
+
+The |, & and ; operators, plus () and ``` form a tidy little language for describing pipelines.
+
+a & b is concurrent
+
+a ; b is sequential
+
+a | b is a pipeline where a feeds b
+
+That part of shell programming rocks.
+
+Think of ( a & b & c ) | tee capture | analysis as the kind of thing that's hard to express in Python (or Ruby). You can do much of this with iterpipes, but not quite all of it.
+
+Much of the rest you can live without, and use Python (or Ruby) and you'll be happier and more productive.
+
+The biggest thing to watch out for is anything involving expr at the shell level. As soon as you start trying to do "calculations", you've crossed out of the shell's sweet spot and you should stop programming in the shell and rethink what you're doing.
+
+Share
+Improve this answer
+Follow
+edited Feb 26, 2010 at 16:
+
+
 **** IDEA ruby interpolation within a shell
 
 also see [[streem]]
