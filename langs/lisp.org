@@ -21,6 +21,28 @@ TODO: merge from vanilla emacs notes
 
 
 
+#+begin_src elisp
+(if (condition)
+    (then-only-runs-one-expression)
+    (else)
+;; thus functions that handle multiple cdr(?) are useful
+;;   - TODO: surely there's another way though..
+;;     - i tried a list of exps: ((exp) (exp2) ..), but that didnt work..
+(if (condition)
+    (setq sym "something"
+          sym-2 "something else"))
+
+(cond (case
+       (do-stuff))
+      (case-2
+       (do-stuff)))
+;;  - switch?
+
+
+#+end_src
+
+
+
 it seems you can define a function (defun) within a function, and then call it..
 
 i'm having trouble passing in a list of &rest args for some reason.. maybe just set a temp var to pass in..??
