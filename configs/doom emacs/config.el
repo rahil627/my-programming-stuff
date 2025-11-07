@@ -765,6 +765,7 @@
    ;;'("C-f" . sp-forward-symbol ) ;; TODO: only in normal-mode..
    ;;'("C-b" . sp-backward-symbol ) ;; FIXME: breaks c-f/b meow key-board macro for forward/backward char
    ;;  - TODO: NOTE: it was a very interesting making this the default movement.. it actually works quite well for code, as often, you are moving by expression.. plus, if you make a spelling mistake, it's often better to just kill the whole word then to go back to the correct char position, and made even worse by modal bindings, enter 'n exit insert-mode
+   ;;    - i think i'll put it on c-s-h/l for now..
    ;; '("M-f" . forward-word )
    ;; '("M-b" . backward-word )
    '("M-f" . sp-forward-symbol )
@@ -902,12 +903,19 @@
    '("C-S-j" . "C-v")
    ;;  - NOTE: c-j is kinda open for re-binding too, but c-k isn't..
    '("C-S-k" . "M-v")
-   ;;  - i think i use page down/up most often, especially for org-mode, as i tend to take notes with lists
-   ;;  - besides, there's enough bindings for forward/backward paragraphy!! (m-n/p, c-down/up)
-   '("C-S-h" . backward-paragraph ) ; meow-back-symbol vs C-a vs M-a vs C-M-a
-   '("C-S-l" . forward-paragraph ) ; meow-next-symbol vs C-e vs M-e vs C-M-e
-   ;;  - could try something else here..
-   ;;  -> c-l works well with this..
+   ;;  - i think i use page movement most often, especially for org-mode, as i tend to take notes with lists (and where paragraph movement doesn't work well with list items..)
+   ;;  - besides, there's enough bindings for paragraph movement!!
+   ;;    - (m-n/p, c-down/up)
+   ;;  - page movement is also nice as it'll return back to the same point, when you go back
+   ;;    - somehow, this still doesn't replace c-l, which actually moves the cursor, so that you have the rest of the window to view..
+   ;; '("C-S-h" . backward-paragraph) ; C-a vs M-a vs C-M-a
+   ;; '("C-S-l" . forward-paragraph) ;  C-e vs M-e vs C-M-e
+   ;;   - this one feels funny..
+   '("C-S-h" . sp-backward-symbol) ;; symbol movement is GREAT. it's like expression movement, but for normal text/prose
+   '("C-S-l" . sp-forward-symbol)
+   ;; TODO: until i figoure out how to bind c-f/b to this in normal-mode only..
+   ;;   - could try something else here..
+   ;;   -> c-l works well with this..
 
    ;; '("C-S-j" . "C-v")
    ;; '("C-S-k" . "M-v")
