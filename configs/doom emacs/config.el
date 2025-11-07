@@ -760,12 +760,16 @@
    ;; word/paragraph movement
    ;; c-[arrow keys] = m-npfb (no hjkl) + m/a-e
    ;; fb seems bound correctly (char, c-word, m-symbol, c-m-exp)
-   ;; NOTE: flipped word for symbol, to kill shit quicker by default
-   ;; 
-   '("M-f" . sp-forward-symbol )
-   '("M-b" . sp-backward-symbol )
+   ;; NOTE: flipped word with symbol, to move and kill shit quicker by default
+   ;;  - it also matches the functionality in the mini-buffer (c- moves by symbol)
+   '("C-f" . sp-forward-symbol )
+   '("C-b" . sp-backward-symbol )
+   '("M-f" . forward-word )
+   '("M-b" . backward-word )
    ;;   - FIXME: these require +smartparens module
-   ;;   
+   ;;   - it seems meow doesn't use these for any key-board macros..
+   ;;     - BEWARE: don't confuse with meow-next-word/symbol (e/E), which are unique to meow
+   ;;    
    ;; m-n/p were unbound by default..
    '("M-n" . forward-paragraph ) ;; vs page-down, forward-sentence (m-e), sp-next-sexp
    '("M-p" . backward-paragraph ) ;; vs page-up, backward-sentence (m-a), sp-previous-sexp
@@ -778,7 +782,6 @@
    '("C-<left>" . sp-backward-symbol )
    ;;   - FIXME: these require +smartparens module
    ;;   - TODO: there's a forward-symbol, but no backward-symbol..?? 
-   ;;   - meow-next/back-symbol/word seem to highlight be default.. :/
    ;;   - also back instead of previous is terrible, even if it's bound to b..
    ;;   
    ;;
