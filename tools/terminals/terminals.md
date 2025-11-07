@@ -3,6 +3,12 @@ all OSs / terminal emulators:
   - generally: a *ton* of features over an actual basic terminal: GPU rendering (OpenGL)
 
 
+# CONCLUSION:
+
+
+WEZZZZZZterrrrrrmmmmmm
+
+
 
 # terminal multiplexers:
 wezterm
@@ -83,14 +89,14 @@ x/fig
       At the same time, knowing how to use Tmux and having your own Tmux configuration helps a lot when you have to use SSH or other devices for development."
     - https://www.reddit.com/r/neovim/comments/16kjpxn/comment/k0xtyju/
       - “Suckless“ philosophy (do one thing well and compose with other things to add features) doesn’t work well with the architectures of any terminals out there.  
-  - rust
   - **and works perfectly on windows!!**
+  - rust
   - wez is a cool name!
     - also, he's a cool person :)
 
 windows terminal
-  - actually legit, just works
-    - includes pane-splitting (local), window transparency, and great font rendering!
+  - actually **legit, just works**
+    - **includes pane-splitting (local), window transparency, and great font rendering!**
   - config file sucks
     - it's auto-generated and it keeps moving things in the config file around! best not to alter the settings through the app, just edit the config file
     - shit way to set themes
@@ -103,13 +109,14 @@ windows terminal
   - "By integrating with other applications, rather than reimplementing their functionality..."
     - meant to combine your own terminal multiplexor (tmux, zellij), and other apps
       - considered great in combination with zellij
-  - GPU-rendering via OpenGL
+  - **GPU-rendering via OpenGL**
   - "vi mode"
-    - fish's vi-mode only covers the prompt, this one's covers the entire buffer!
+    - fish's vi-mode only covers the prompt-line, this one's covers the entire buffer!
   - made with Rust
   - https://github.com/alacritty/alacritty
 
 kitty
+  - PERSONAL NOTE: **overall sounds like a whole 'nother layer of customization and complexity**, which i'm just not ready for. I need simple sane defaults, not more customization!
   - overview
     - https://sw.kovidgoyal.net/kitty/overview/#sessions
     - philosophies: keyboard power-user oriented, simple / modular / extensible / hackable, simple configs
@@ -135,10 +142,9 @@ kitty
        - "broadcast"
          - broadcast input from one terminal to multiple other terminals
            - amazing for dev-ops, saving one from writing scripts
-  - written in C
   - super scriptable: api to control it; open tab/window/etc.
   - super extensible: "kittens", written in python
-  - **overall feels like a whole 'nother layer of customization and complexity**, which i'm just not ready for. I need simple sane defaults, not more customization!
+  - written in C
   - developer is a crudgemuffin, lol
 
 
