@@ -1449,6 +1449,67 @@
 
 
 
+  
+
+
+  ;;; TEMP: TODO: trying some shit.. delete this later, and note lisp magicks
+  ;;    - best to just ask ai.. lol
+  ;;    - see why &rest deosn't accept lists..
+  ;;    - and how else to do this..
+  ;;
+  ;; (defmacro macro-test (fun, state, binding) ;; TODO: &rest?
+  ;;   (list fun state binding) ;; don't quote args..?
+  ;;   ;; (list 'fun state '(list bindings)
+  ;;   )
+
+  ;; (macro-test meow-define-keys insert ("<XF86Reload>" . kill-buffer )) ;; TODO: quote here??
+
+  ;; (setq ra-test-var '("<XF86Reload>" . writeroom-mode )) ;; NOTE: not required to define a var (defvar)
+  ;; (setq ra-test-var-list '( ;; TODO: it's still a list, not a top-level list of args..
+  ;;                           ;; TODO: or do you need to call 'list'..??
+  ;;    '("M-n" . writeroom-mode )
+  ;;    '("M-p" . writeroom-mode )))
+
+ 
+  ;; (meow-define-keys
+  ;;  'insert ; if you use 'meow-define-keys
+
+  ;;  ;; ra-test-var ;; okay! a single binding works fine..
+  ;;  ra-test-var-list ;; TODO: &rest doesn't seem accept lists as an input..?? ..but it's not something you evaluate either.. there must be some way to pass the inside of the list as args..
+  ;;
+  ;;  ;; '("<XF86Reload>" . writeroom-mode )
+
+  ;;  ;;'ra-common-key-bindings
+  ;;  ;; (macroexpand (ra/bind-common-key-bindings))
+  ;;  ;; (ra/bind-common-key-bindings) ;; a function does not pass the group of expressions, it just runs it, which is meaningless
+  ;;  ;; (eval (ra/bind-common-key-bindings)) ;; only returns the last expression
+  ;;  ;; (eval-defun)) ;; just runs the top-level defun around this point.. :/ no args needed
+  ;;  ;;   - this is probably how m-x works..
+  ;; )
+  
+  ;; (meow-define-keys
+  ;;  'normal ; if you use 'meow-define-keys
+  ;;  ;; 'insert ; TODO: this doesn't work..
+  ;;  ;;  - FIXME: these only get bound for normal-mode, not insert-mode..
+
+  ;;  ;;(eval-defun 'define-normal-and-insert-keys) ;; quote or not??
+  ;;  ;;(eval 'define-normal-and-insert-keys)
+  ;;  ;;  - TODO: can't just eval some code..??
+  ;;  ;;(defun define-normal-and-insert-keys ()
+
+  ;;  (ra/bind-common-key-bindings)
+  ;; )
+
+
+
+
+
+
+
+
+  
+  
+
   (meow-define-keys
    'normal
 
