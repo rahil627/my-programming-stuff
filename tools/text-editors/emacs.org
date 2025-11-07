@@ -49,22 +49,32 @@ see [config.el] for notes on config
 * TODO (g)ui design
 
 current setup:
-treemacs
-  - TODO: this only shows file-trees, not code trees..??
-centaur-tabs vs gobal-tab-line-mode
+
+projects vs workspaces vs persp(ective)
+  - projects are vc-repo-oriented
+    - doom has an ibuffer module that updates it to categorize buffers by projects
+  - workspaces are a collection of buffers
+    - then can use +[search-engine]-switch-workspace-buffer to restrict switching to the workspace
+  - TODO: perspective..?
+      
+TODO: centaur-tabs vs native  and tab-line-mode
+
+  
+centaur-tabs vs gobal-tab-line-mode vs tab-bar-mode
   - testing.. quite nice thus far..
-    - the visual tabs (buffer) tend to help me minimize the amount of buffers per workspace, creating new workspaces as needed
-    - [search-engine]/switch-workspace-buffer also  works really well, searching buffers by workspaces
-    - works well with windows and projects, reducing the tabs related to the project (if not, cwd?) of the current buffer, and to that window
-    - TODO: i might prefer tab-line-mode's default of showing all buffers/tabs more, instead of grouping by project.. as i don't care which project the file comes from.. though, it is nice to distinguish by projects too..
-    - tab-line-mode takes even lesss space, just one line, whereas centaur-tabs takes two or three
+  - the visual tabs (buffer) tend to help me minimize the amount of buffers per workspace, creating new workspaces as needed
+  - [search-engine]/switch-workspace-buffer also  works really well, searching buffers by workspaces
+  - works well with windows and projects, reducing the tabs related to the project (if not, cwd?) of the current buffer, and to that window
+  - TODO: i might prefer tab-line-mode's default of showing all buffers/tabs more, instead of grouping by project.. as i don't care which project the file comes from.. though, it is nice to distinguish by projects too..
+  - tab-line-mode takes even lesss space, just one line (same size as the echo area and mode-line), whereas centaur-tabs takes two
   - maybe have to wean myself off of this over time..
 
 
     - for example:
-    - emacs, notes, todo, [project] ... [project n]
-
+    - emacs, notes, todo, [project]...[project n]
+      - TODO: bind +workspace/swap-right/left to (spc w right/left and/or b/f)
   
+
     
 dired vs tree plugin
 ibuffer vs tree plugin
@@ -72,6 +82,9 @@ ibuffer vs tree plugin
   - dired and ibuffer both take up a whole page-sized buffer, and has their own esoteric bindings..
   - ibuffer, with doom's "ibuffer" plugin enabled, does however display all buffers together, categorized by project..
 
+treemacs
+  - TODO: this only shows file-trees, not code trees..??
+  
 minimap (de-map)
   - felt useless..
     - maybe okay if you have spare screen space..
@@ -82,9 +95,6 @@ if working quickly, just do quicksave/quickload (on doom's splash screen)
   - at times, may need to save workspace session to a file (spc q s) 
 
   
-TODO: projects vs workspaces vs persp(ective)
-
-TODO: centaur-tabs vs native tab-bar-mode and tab-line-mode
 
 
 * bindings
