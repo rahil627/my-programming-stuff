@@ -6,6 +6,11 @@
 
 # just append useful commands here
 
+# env var handling
+export -p # see all env vars and functions
+export BIG_WORDS=1 # NOTE: no spaces
+# may be able to do this via 'set' too..
+
 # append file to file2
 file >> file2 # TODO: NOTE: '>' operator overwrites!?
 

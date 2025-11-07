@@ -1,0 +1,9 @@
+testing via zed
+
+on a poor man's N4000 processor
+
+via a chromeos vm/lxc with linux/debian
+
+though, connected to the host's display (via sommelier, a wayland compositer)
+
+though beaituful, even on linux, it's unusable,  eating up all the CPU

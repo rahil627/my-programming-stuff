@@ -505,7 +505,7 @@ also note: these are very different text editors..
     - truly a force of reckoning those people
 
 *** zed
-  - *NOTE: ruby actually worked without any configuriation/customizatoin*.. which is something no editor i've encountered has done..
+  - *NOTE: ruby actually worked immediately, without any configuriation/customization*.. which is something no editor has ever done..
     - (makes sense, given it's makers..)
   - *batteries-included, just works*
     - it's actually incredible..
@@ -514,20 +514,30 @@ also note: these are very different text editors..
     - https://github.com/TakumiBC/zed-windows/releases
       - this repo uses github actions to build it for you
     - **seems to priortize mac os > linux > window**
-      - probably for money reasons, as it's a vc-startup
-  - vs-code-like features (terminal, file explorer, version control, etc.)
+      - i'm not sure about the reasoning for this..
+  - vs-code-like all-in-one ide features (terminal, file explorer, version control, etc.)
   - **ai-focused**
+    - this is how it makes money, which is a model of funding i'm totally okay with!
   - **multi-player**
   - gui/gpu-rendered
+    - NOTE: this restricts computer hardware to those with a decent gpu
+      - though, any integrated gpu of a proper laptop from the past 10 years should be fine..
+        - just not on my N4000 processor chromebook (netbook), lmao
+          - (even after enabling gpu support in crostini)
+          - in vulkaninfo and the prompt, it shows my gpu as 'llvm-pipe', which is a gpu emulation using cpu, and it absolutely destroys the cpu usage
+          - i also tried setting env var 'ZED_ALLOW_EMULATED_GPU=1' (and  0) to no avail (as the prompt mentioned)
     - somehow **looks even more beautiful than sublime and even vs-code by default..!**
       - and has aura theme extension(!!) (had to manually install for sublime)
+        - and it looks great..!
   - rust
     - **extensions must be written in a WASI language**.. i think..
       - *given that vs-code already has a ton of plugins, i don't know how many people are willing to re-write everything in assembly-script..* or the other systems langs..
       - https://zed.dev/docs/extensions/developing-extensions
       - https://zed.dev/extensions
-      - *this def makes it harder to write extensions, but at least it'll be of higher quality, as the language itself will filter out programmers, and, it won't suffer from memory problems*
+      - *this def makes it harder to write extensions, but at least it'll be of higher quality, as the language itself will filter out programmers, plus, it won't suffer from memory problems*, which is what usually happened when you install too many plugins..
   - from the makers of atom (and tree-sitter) at github
+  - free for personal use "forever"
+    - ai costs extra
 
 
 
@@ -535,8 +545,7 @@ also note: these are very different text editors..
 
 
 
-
-** current standards:
+** current standards
 
 *** (emacs)
   - gets better with time.. and it's been 60+ years..?
