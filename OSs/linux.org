@@ -8,7 +8,7 @@ less /var/log/apt/history.log
 
  these were the notable packages removed:
   - *ruby-dev*
-    - TODO: what's the difference between dev and a standard install?
+    - no problem, re-installed using mise, which handle this..
 
   meh, ruby is all i need, i can let it re-install the rest when needed:      
   - jre-headless, opendjdk-17-jre-headless
@@ -22,6 +22,22 @@ less /var/log/apt/history.log
 
 
 * some random notes
+
+TODO: surely i have more elsewhere..
+
+du -ha --max-depth=1 /path/to/directory
+  - -a for all / hidden files
+
+update system:
+NOTE: this doesn't update major versions--once every two years
+sudo apt update
+  - update package info
+sudo apt upgrade
+  - update all packages
+
+update major version:
+WARNING: there's probably extra steps to this..
+sudo apt full-upgrade
 
 to install an app manually:
 copy the binary to /usr/bin/ for most distros
