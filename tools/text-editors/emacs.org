@@ -1707,6 +1707,20 @@ spc-x-;
 
 * install
 
+ c/fix emacs gui for chromebook
+   - wayland display error :/
+     - NOTE: i think it worked after running it via user instead of using sudo!!??
+
+ set-up git
+   - i think `gh auth setup-git` doesn't work with magit.. though, there is a gh cli package: consult-gh
+     - TODO: setup git
+       - not sure if i ended up doing this manually..
+         - (creating a .gitconfig..)
+   - sync repo
+     - TEMPFIX: installed github desktop, so i just don't have to worry about version control
+       - can slowly transition to magit
+
+
 ** linux (debian)
 go to about chromeos
 install linux environment
