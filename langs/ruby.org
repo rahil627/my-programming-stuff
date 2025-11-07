@@ -24,6 +24,12 @@
 
 * ruby internals
 
+see my notes on/in [compilers]
+
+https://ruby-compilers.com/
+  - this is a great little web-site for all your compiler needs..
+
+  
 see [play/ruby-limits.rb]
   - for an inquiry into how ruby data is stored
     - might as well just read the C code though..

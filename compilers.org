@@ -41,7 +41,14 @@ a parser is the part of the programming langauge that reads source code and conv
 TODO: just finish and note that paragraph under background, i've read the rest..
 
 
-* re-writing the ruby parser
+* ruby
+
+because it's possibly the most complex language
+
+https://ruby-compilers.com/
+  - this is a great little web-site, full of gems!
+
+** re-writing the ruby parser
 
 TODO: link goes here..
   - dunno how to paste from system clipboard..
@@ -67,6 +74,31 @@ it can parse 50k files from shopify in 5.5 seconds with 11mb max memory!
 
 in order to support libs that use other parsers, and thus programs that use those libs, they began experimenting generating the syntax trees that other parsers create, which results in better performance
  
+** rubinius
+
+https://ruby-compilers.com/rubinius/
+
+  - this compiler and the history of it is wild
+    - seemed to start as a generate C
+      - "the start of a process to translate Ruby ASTs to C code. The inline gem may have being used to experiment with generated C and supporting runtime routines."
+    - then a meta-circular (use same langauge) approach: "The initial idea was to have this VM just as part of a bootstrap process, and in time it would be re-implemented in a restricted dialect of Ruby amenable to type inference and which could be statically translated to C.", similar to pypy (and rpython)
+    - then had a *[[https://github.com/ruby-compiler-survey/rubinius/commit/855846c8850bc22ac1b90e1c5bfbdb5c517efda][native assembler library]]*
+      - "This is similar to what for example HotSpot or V8 does, and we believe it’s the only time a Ruby JIT has been attempted without any separate supporting compiler framework."
+      - "This attempt didn’t go beyond these initial prototype commits."
+      - "One other approach was also explored in early 2011. Phoenix began to write code for a custom IR for Ruby, implemented in Ruby. This would have run to apply high-level global optimisation passes before LLVM IR was generated. This example phase removes redundant loads of local variables that have already been read into a register and have not been later modified, and the register is still live, by copying the original register instead of issuing a new load."
+      - "The IR did not go beyond this prototype.
+
+        Phoenix handed over leadership of Rubinius to Shirai in 2012, making his last commit at the end of that year."
+      - "The Rubinius JIT never really achieved the potential it had in its earlier years. Their initial approach used ideas which had been already been proven historically by Smalltalk and Self, and were being reproven at the time by PyPy, with their RPython translator and later their JIT. The walking back from the idea of using Ruby for everything meant that the VM and large number of runtime primitives needed to support the Ruby core library became a substantial C++ codebase that was not visible to the JIT for optimisation and so the ideas they were building on did not apply in the same way.
+
+        The Ruby IR idea from 2011 was in retrospect probably the missing piece of the Rubinius JIT. It has been shown many times that it’s not realistic to emit LLVM directly from a language AST or bytecode and expect it to apply the optimisations needed to remove abstraction, except in the case of low-level language like C or C++. A custom IR is needed before LLVM IR is emitted in order to express language-specific semantics which LLVM is not aware of. For example, Rust uses MIR, and FTL only emits LLVM after their own CPS and SSA phases and representations. Rubinius needed the Ruby IR.
+
+        Why was the Rubinius JIT never written in Ruby? Over four different efforts, and starting from an initial goal of Ruby in Ruby, they always chose C++ over Ruby for this component."
+
+** TODO jruby
+
+https://ruby-compilers.com/jruby/
+
 
 * C And C++ Interops
 Linking/Including C++ libs into a C host program is possible but not advisable due to *the non-standardization of name-mangling*, however you can "spend a few days writing a C-style wrapper for the C++ library."
