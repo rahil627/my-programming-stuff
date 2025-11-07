@@ -1,4 +1,25 @@
 
+
+grammars alone take up ~200mb space:
+
+(the program is small, ~15mb)
+
+https://github.com/helix-editor/helix/issues/6187
+  - they're tree-sitter parsers ("compiled libraries") which are used for a lot more things than just syntax highlighting
+
+https://docs.helix-editor.com/master/languages.html#choosing-grammars
+
+You may use a top-level use-grammars key to control which grammars are fetched and built when using hx --grammar fetch and hx --grammar build.
+
+# Note: this key must come **before** the [[language]] and [[grammar]] sections
+use-grammars = { only = [ "rust", "c", "cpp" ] }
+# or
+use-grammars = { except = [ "yaml", "json" ] }
+
+When omitted, all grammars are fetched and built.
+
+
+
 features being developed/to help develop:
 https://github.com/helix-editor/helix/pull/9838
   - zen mode
