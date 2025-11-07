@@ -108,11 +108,34 @@ mise use --global ruby[@version]
   - to switch the version
   - this adds it to '~/.config/mise/config.toml'
 
+mise use ruby[@version]
+  - to use it in a directory
+  - (this also adds it to '~/.config/mise/config.toml')
+  
 mise exec ruby[@version] -- ruby [command goes here]
   - to run commands from specific versions
+*** if it fails to install
 
+NOTE: i gave up.. this is def ruby's greatest problem
 
+mise cache clean
 
+try again
+  - (mise install [lang])
+
+    
+other problems:
+    
+if it fails to build psych
+  - sudo apt install libyaml-dev
+
+  
+* deployment
+
+this is why portable programs are just wayyyy better.. arrrrgh..
+  - surely there must be a way to atleast just pack the ruby parser with the program..??
+    - see traveling ruby
+  
 * emacs bindings (..they never end!! :/)
 
 spc-k-k
