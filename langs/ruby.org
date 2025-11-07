@@ -54,10 +54,20 @@ these three are made by the same person:
 
 * install ruby
 
-this is why portable programs are just wayyyy better.. arrrrgh..
-  - TODO: surely there must be a way to atleast just pack the ruby parser with the program..??
+"NOTE: While system Ruby installations exist (e.g., on macOS), it is generally recommended to use a version manager like RVM or rbenv for development to avoid altering the system Ruby and ensure compatibility with specific project requirements."
+  - thanks ai..
 
-** install mise (yet another language/run-time package manager)
+
+** windows
+
+rubyinstaller
+  - windows is so much better..
+    
+** linux
+
+it sounds like RVM uses pre-compiled binaries..
+  
+*** install mise (yet another language/run-time package manager)
 
 https://mise.jdx.dev/getting-started.html
 
@@ -70,9 +80,11 @@ sudo apt update
 sudo apt install -y mise
 #+end_src
 
+NOTE: this handles installing ruby-dev/el package, which is needed to build C extensions
 
+*** install ruby using mise
 
-** install ruby using mise
+https://mise.jdx.dev/lang/ruby.html
 
 mise ls-remote [language/run-time]
   - check all versions available
