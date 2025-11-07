@@ -762,10 +762,13 @@
    ;; fb seems bound correctly (char, c-word, m-symbol, c-m-exp)
    ;; NOTE: flipped word with symbol, to move and kill shit quicker by default
    ;;  - it also matches the functionality in the mini-buffer (c- moves by symbol)
-   '("C-f" . sp-forward-symbol )
-   '("C-b" . sp-backward-symbol )
-   '("M-f" . forward-word )
-   '("M-b" . backward-word )
+   ;;'("C-f" . sp-forward-symbol ) ;; TODO: only in normal-mode..
+   ;;'("C-b" . sp-backward-symbol ) ;; FIXME: breaks c-f/b meow key-board macro for forward/backward char
+   ;;  - TODO: NOTE: it was a very interesting making this the default movement.. it actually works quite well for code, as often, you are moving by expression.. plus, if you make a spelling mistake, it's often better to just kill the whole word then to go back to the correct char position, and made even worse by modal bindings, enter 'n exit insert-mode
+   ;; '("M-f" . forward-word )
+   ;; '("M-b" . backward-word )
+   '("M-f" . sp-forward-symbol )
+   '("M-b" . sp-backward-symbol )
    ;;   - FIXME: these require +smartparens module
    ;;   - it seems meow doesn't use these for any key-board macros..
    ;;     - BEWARE: don't confuse with meow-next-word/symbol (e/E), which are unique to meow
