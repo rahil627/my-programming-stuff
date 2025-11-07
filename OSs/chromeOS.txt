@@ -1,6 +1,27 @@
 
 https://www.reddit.com/r/chromeos/
 
+enable gpu support:
+  - error: it prompts me to restart the linux container whenever i try to run an app from a shortcut (.desktop) via chromeos
+    - hmmm, seems to have fixed itself..
+open chrome://flags
+search for 'crostini gpu support'
+enable it
+  - the value 'default' = 'disabled'
+sudo apt update
+sudo apt upgrade
+test it
+  - sudo apt install mesa-utils vulkan-tools
+  - glxinfo -B
+  - vulkaninfo
+
+or you could start it manually
+vmc start --enable-gpu
+
+as of 2025, it uses virgl drivers with virtio-gpu (for sommelier, the wayland compositor that chromeos uses)
+
+
+
 open terminal with root access:
 c+a+t
   - open crosh terminal
