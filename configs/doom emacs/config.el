@@ -1819,7 +1819,7 @@
 ;; and make it interactive
 ;;   - actually quite cool, to make a function interactive / edit a region..!
 (defun ra/convert-markdown-headers-to-org (start end)
-  "Converts Markdown headers within the region START to END to Org-mode headers. '# Header' -> '* Header'
+  "'## header' -> '** header' within the region START to END"
   (interactive "r") ; Makes the function interactive, operating on the region
   (save-excursion
     (goto-char start)
