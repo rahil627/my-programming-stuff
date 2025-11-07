@@ -865,9 +865,9 @@
 
 
    ;; an extra set of movement keys added by me
-   ;;   - c-s- is often more comfortable than reaching for the meta key on many laptops, but unfortunately, it's used by shift to select in combination with the movement bindings (c-npfb and arrow keys), thus only hjkl is open for hacking, as c-hjkl aren't movement commands (and thus there's nothing to select..)
+   ;;   - c-s- is often more comfortable than reaching for the meta key on many laptops, but unfortunately, it's used by shift to select in combination with the movement bindings (c/m/c-m-npfb and c/m/c-m-arrow keys), thus only hjkl is open for hacking, as c-hjkl aren't movement commands (and thus there's nothing to select..)
    ;;   - these are open to be re-bound Later down this config file..
-   ;;     - NOTE: c-s- sometimes doesn't work.. :/
+   ;;     - NOTE: c-s- sometimes doesn't work..? :/
    ;;
    ;; NOTE: put your favorite movement bindings here!!
    ;;  - these match my oft used custom helix bindings for c-hjkl
@@ -1083,8 +1083,8 @@
    ;; '("C-<XF86Back>" . projectile-previous-project-buffer )
    ;;   - these are restricted to the project
    ;; '("C-<XF86Forward>" . tab-next ) ;; native impl, does it work for both tab-bar-mode and tab-line-mode..??
-   ;; '("C-<XF86Back>" . tab-previous ) ;; TODO: doesn't work with centaur tabs..??
-   '("C-<XF86Forward>" . centaur-tabs-forward )
+   ;; '("C-<XF86Back>" . tab-previous ) ;; NOTE: doesn't work for centaur-tabs.. :( though, it makes sense as centaur-tabs and a bunch of other tab plugins exited much before it.. emacs added it in v27.1 / 2020!
+   '("C-<XF86Forward>" . centaur-tabs-forward ) ;; nice!
    '("C-<XF86Back>" . centaur-tabs-backward )
    ;;   - a more visual, interactive way of switching buffers..
    ;;   - by default, these go through visible tabs, and then at the end, jumps projects
