@@ -3,30 +3,55 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-;; my config vars
+;; Whenever you reconfigure a package, make sure to wrap your config in an
+;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
-;; used to copy config files (from elsewhere to local install)
-;; NOTE: trying to edit from a repo, so that it shows up in version control
-;; this is at the cost of having to run a copy function every-time you change the config
-;; it could also used to sync upon (re-)start!
-;;   - which is i what must do when i change the config anyway..
-;;   - this is significant, considering emacs replaces linux for me, the equivalent of a dotfiles folder
-(set 'ra-my-config-dir-path "~/my-stuff/repos/my-programming-stuff/configs/doom emacs/")
+;;   (after! PACKAGE
+;;     (setq x y))
+;;
+;; The exceptions to this rule:
+;;
+;;   - Setting file/directory variables (like `org-directory')
+;;   - Setting variables which explicitly tell you to set them before their
+;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
+;;   - Setting doom variables (which start with 'doom-' or '+').
+;;
+;; Here are some additional functions/macros that will help you configure Doom.
+;;
+;; - `load!' for loading external *.el files relative to this one
+;;   - NOTE: TODO: maybe for my own functions...
+;; - `use-package!' for configuring packages
+;; - `after!' for running code after a package has loaded
+;; - `add-load-path!' for adding directories to the `load-path', relative to
+;;   this file. Emacs searches the `load-path' when you load packages with
+;;   `require' or `use-package'.
+;;   - NOTE: TODO: can try loading from a config folder in my repo
+;; - `map!' for binding new keys
+;;   - NOTE: TODO: try binding keys here!!
+;;
+;; To get information about any of these functions/macros, move the cursor over
+;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
+;; This will open documentation for it, including demos of how they are used.
+;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
+;; etc).
+;;
+;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
+;; they are implemented.
+;;   - spc-k-k/d in meow
 
-;; (ra/copy-config-to-local-install 'ra-my-config-dir-path)
-;;   - TODO: not sure where or how to run this while this file is being executed..
 
 ;;; some helpful bindings..
 ;; doom/reload to reload private config
-;; c-h r r / spc q r (my alt binding)
+;; c-h r r / spc q R (my alt binding)
 
-;; doom/restart-and-restore spc q r (R in my config)
+;; doom/restart-and-restore
+;;   - spc q r
 ;;   - not sure of another way to reset to the original run-time state..
 
 ;; backup doom config files
 ;;   - c-c f C
 ;;     - doom/copy-this-file
-
+;;     - TODO: until i create a function for this..
 
 
 ;;; NOTE: this file serves as a play-ground for lisp~~!!
@@ -72,7 +97,7 @@
 
 ;;; TODO: list
 
-;; change file associations to focus editor
+;; change file associations to focus editor or textbringer
 
 ;; ra/ vs ra- for functions and vars? then re-factor
 ;;   - i think vanilla emacs auto-added '-' for ou when you inserted a space during m-x
@@ -81,32 +106,16 @@
 ;; https://www.reddit.com/r/HelixEditor/comments/1b9gpz9/three_things_that_helped_me_make_the_switch_to/
 ;;   - an emacs user switches to helix and mentions some good plugins
 
-
-
-
 ;; FIXME: kill-line kills visually, it misses word wrap.. and i like my word wrap!!
 
 ;; is '+package-name/function' standard naming convention in emacs..??
 
-;; TODO: should merge/move doom bindings up to my config... i'll just have to deal with updates..
 
 ;; TODO: figure out a neat way to combine insert-mode and normal-mode bindings, without having to resort to a top-level defun
 ;;   - defun in defun works..
-
+;;   - my lisp-fu failed me.. need to understand &rest...
 
 ;; TODO: install monofoki font (on chromebook)!!
-
-;; c/fix emacs gui for chromebook
-;;   - wayland display error :/
-;;     - NOTE: i think it worked after running it via user instead of using sudo!!??
-
-;; set-up git
-;;   - i think `gh auth setup-git` doesn't work with magit.. though, there is a gh cli package: consult-gh
-;;     - TODO: setup git
-;;   - sync repo
-;;     - TEMPFIX: installed github desktop, so i just don't have to worry about version control
-;;       - can slowly transition to magit
-
 
 ;; load org repo on start
 ;;   - TODO: merge my-programming-stuff into main notes?
@@ -136,6 +145,10 @@
 
 
 ;; update org tags: TODO, OKAY, YES, etc.
+;;   - delete most of them
+;;   - add: TEMPFIX, HALP, BEWARE
+;;   - allows optional ':' in front of it
+
 
 
 
@@ -153,7 +166,10 @@
 ;;   - NOTE: do after setting up/trying meow bindings
 ;;     - still prefer a lot of evil bindings, especially for things like dired, navigation in the mini-buffer, etc.
 ;;     - really miss the / and : vi bindings
-;;       - m-x and m-c-s are terrible
+;;       - m-x is terrible
+;;       - v, (spc s s/d), c-s/r and c-m-s/r is ridiculous.. though indeed all different.. lol
+;;         - maybe just need to master regex..
+;;         - focus editor's search is great: toggles for match case and two other things..
 ;; edit the welcome screen
 ;;   - add spc-f-f
 ;;   - add spc-g
@@ -247,7 +263,7 @@
 
   ;; NOTE: the following errors all fixed themselves after breaking my build via doom rebuild failing, then fixing it by running doom sync
 
-  ;; TODO: i accidentally renamed the git remote uri "y" for the dirvish (code-folding) package
+  ;; FIXME: TODO: i accidentally renamed the git remote uri "y" for the dirvish (code-folding) package
 
   ;; ~doom first hook error git-commit
   ;; user-error: Error in a Doom startup hook: doom-after-init-hook, doom-run-first-hooks-if-files-open-h, (doom-hook-error doom-first-file-hook global-git-commit-mode (file-missing "Cannot open load file" "No such file or directory" "cond-let"))
@@ -275,7 +291,7 @@
 
 
 
-; NOTE: added by me!
+;;; NOTE: added by me!
 (defun ra/load-config ()
   ; called after doom's defaults
   (ra/init-config)
@@ -301,6 +317,22 @@
 
 
 
+  ;; my config vars
+  ;;
+  ;; used to copy config files (from elsewhere to local install)
+  ;; NOTE: trying to edit from a repo, so that it shows up in version control
+  ;; this is at the cost of having to run a copy function every-time you change the config
+  ;; it could also used to sync upon (re-)start!
+  ;;   - which is i what must do when i change the config anyway..
+  ;;   - this is significant, considering emacs replaces linux for me, the equivalent of a dotfiles folder
+  (set 'ra-my-config-dir-path "~/my-stuff/repos/my-programming-stuff/configs/doom emacs/")
+
+  ;; (ra/copy-config-to-local-install 'ra-my-config-dir-path)
+  ;;   - TODO: not sure where or how to run this while this file is being executed..
+
+
+  
+
   ; some basic, core editor stuff
 
   ; can add shortcuts to spc-t key-map
@@ -308,60 +340,38 @@
 
   (setq default-directory "/home/ra/my-stuff/repos/")
     ; NOTE: running doom with sudo would make ~/ == /.root/
+    ;   - i'm guessing this was to fix that..
+    ;   - but i don't see much reason for this, as the dir changes automatically to wherever the current buffer is located..
+    ;   - maybe from the splash screen..?
 
 
-  ;; meow
-  ;; see other vars listed in CUSTOMIZATIONS.org
-  ;; meow-expand-hint-remove-delay ;; i think the number hint..
-  ;; meow-use-clipboard ;; use system clipboard
+  ;; (auto-save-default t) ; d: nil?
 
-  ; try to remove all pop-up delays
-  (setq meow-keypad-describe-delay 0)
-    ; makes it feel wayyyy more snappy!! :D
-    ; TODO: still a funky delay when i change buffer using the keypad as opposed to direct key-binding..
-
-  (setq which-key-idle-delay 0.1)
-    ; used by doom for key-binding pop-ups
-  
-  ;; TODO: show all keys
-  ;;   - i found this function, but no clue, as emacs is currently broken, and so i can't use c h v properly.. :/
-  ;;     - though, i did discover this when emacs was broken.. so..
-  ;;(setq which-key-show-remaining-keys 1.0)
-
-
-  (+global-word-wrap-mode) ; vs toggle? or run global-word-wrap-mode after done loading all buffers..??
-    ; spc-t-w
-
-  ;; (doom/increase-font-size)
-  ;; TODO: doesn't work here, though it works if i run it when the program has started..
-    ; children/elderly mode
-      ; spc-t-b - big font mode
-    ; maybe can help with focus..? or maybe too big..
-
-  ;; (toggle-frame-fullscreen)
-    ; ahhhh, peace and emacs.. :3
-    ; also nice to have space for the pop-up bindings menu
-    ;   - nahhh, prefer my windows, full-screen is too much.. feel confined.. within a window, it feels like notepad! and not a massive IDE!! :D
-    ;   - prefer a pasge-like window in the middle of the screen
-
-
-  ;; (auto-save-default t) ;; d: t
-  
-  ;; (desktop-save-mode 1)
+  ;; (after! desktop
+  ;; (desktop-save-mode 1))
   ;; TODO: try this when autosave and manual save are fucking up
+  ;; TODO: add more autosaves
+  ;; savehist-autosave-interval 300 ; d: 300
+  ;; doom--shut-up-autosave-a  ;; lol, classic henrik
+
+  
+  (setq display-line-numbers-type nil) ; t, nil, relative
+
+  ;; (toggle-frame-fullscreen) ; ahhhh, peace and emacs.. :3
+                                        ; also nice to have space for the pop-up bindings menu
+                                        ;   - nahhh, prefer my windows, full-screen is too much.. feel confined.. within a window, it feels like notepad! and not a massive IDE!! :D
+                                        ;   - prefer a pasge-like window in the middle of the screen
+
 
   
   ;;(scroll-bar-mode)
   ;;   - TODO: would be nice, but looks hideous!! :/
   ;; (setq x-toolkit-scroll-bars nil) ;; nope, didn't work..
   ;;   - i think chromeos's "gtk" is the problem
-  
 
   ; workspaces seem fine too, and already bound by doom..
   ; TODO: it's just lacking a persistent display..
-  (setq doom-modeline-workspace-name t) ;; FIXME: hmm not working..??
-  ;; (setq doom-modeline-project-name t) ;; no need, as the file-name expands
-
+  ;   - i tried to display workspace in the modeline further below to no avail..
   
 
   ;; (global-tab-line-mode)
@@ -397,15 +407,64 @@
 
 
 
-  
-  
-  
-    ; these require a module
-    ; make sure it's not commented out in init.el
 
   
-  ;; (+zen/toggle-fullscreen) ;; i don't see a zen package.. though there is a writeroom one.. TODO: or are packages different from modules..?
+
+    ;; these require a package/module
+    ;; make sure it's not commented out in init.el
+    ;; use describe-package to check if there's a package for it
+    ;;   - c-h p
+
+  ;; NOTE: (after! package ... ) package uses the symbol-name (un-quoted)
+  (after! org
+  (setq org-directory "~/my-stuff/repos/my-programming-stuff")) ; It must be set before org loads!
+                                        ; 
+
+
+  
+  ;; meow
+  ;; see other vars listed in CUSTOMIZATIONS.org
+  ;; meow-expand-hint-remove-delay ;; i think the number hint..
+  ;; meow-use-clipboard ;; use system clipboard
+
+  ; try to remove all pop-up delays
+  (after! meow
+  (setq meow-keypad-describe-delay 0))
+    ; makes it feel wayyyy more snappy!! :D
+    ; TODO: still a funky delay when i change buffer using the keypad as opposed to direct key-binding..
+
+  (after! which-key
+    (setq which-key-idle-delay 0.1) ; used by doom for key-binding pop-ups
+    
+    ;; TODO: show all keys (instead of pages)
+    (setq which-key-show-remaining-keys t) ; FIXME: nope, not doing what i want..
+    )
+
+  (after! word-wrap-mode
+  (+global-word-wrap-mode)) ; vs toggle? or run global-word-wrap-mode after done loading all buffers..??
+    ; spc-t-w
+
+
+
+
+
+  
+  
+  
+
+  (after! doom-modeline  
+  (setq doom-modeline-workspace-name t) ;; FIXME: hmm not working..??
+  ;; (setq doom-modeline-project-name t) ;; no need, as the file-name expands
+  ;; (setq doom-modeline-hud nil) ;; not sure..
+  ;; (setq doom-modeline-icon nil) ;; a more classic feel.. or maybe just get rid of nerd icons..
+  (display-time-mode t)
+  (setq doom-modeline-time t) ;; FIXME: though time isn't important..
+  )
+  
+  ;; (after! writeroom-mode
+  ;; (+zen/toggle-fullscreen))
     ; NOTE: doesn't affect when run in terminal
+    ;   - doesn't do much in gui either..
     ; alias for writeroom-mode?
     ; just increases font size..?? :/
     ; spc-t-z/Z
@@ -413,12 +472,12 @@
   
 
   ;; testing centaur-tabs
-  ;;   - TODO: i don't think any of this is working.. :/
-  (after! 'centaur-tabs
+  (after! centaur-tabs
     (setq
-     centaur-tabs-height 11 ;; default 22 maybe the smallest.. the font seems to be a factor too..
-     centaur-tabs-bar-height 15 ;; default 30 maybe the smallest
-     centaur-tabs-set-bar "under" ;; vs over FIXME
+     centaur-tabs-height 11
+     centaur-tabs-bar-height 15 ; default 30 maybe the smallest
+    ; one of these worked! now they're tiny, like emacs's native tab plugin!
+     centaur-tabs-set-bar "under" ; vs over FIXME
     
     ;; centaur-tabs-cycle-scope "groups" ;; ohh groups, not projects.. nvm
     ;; - tabs
@@ -446,7 +505,200 @@
 
 
 
-)
+
+
+
+  
+
+;; TODO: move themes and fonts up, before package-related settings
+;;   - could create a function if they're too big, unweildy..
+
+;;; themes
+;; There are two ways to load a theme. Both assume the theme is installed and
+;; available. You can either set `doom-theme' or manually load a theme with the
+;; `load-theme' function. This is the default:
+
+;; NOTE: use consult-theme to try them all out on-the-fly
+
+
+;; bright: light
+;; dim: outrun
+;; late night: solarized-dark
+
+;; light:
+;; (setq doom-theme 'doom-earl-grey) ; light
+;; (setq doom-theme 'doom-flatwhite) ; light, highlighter
+
+
+;; purple:
+(setq doom-theme 'doom-outrun-electric) ; high-contrast, hard white text
+                                        ; this one is amazing, similar to aura, especially with night-mode / warm colors!!
+;; (setq doom-theme 'feather-dark) ; low-contrast, slightly-visible comments, purple tinge, that lovable ugly one from helix: boo-berry! lol
+;; (setq doom-theme 'doom-shades-of-purple) ; childish, very bright back-light
+;; (setq doom-theme 'doom-laserwave)
+
+
+;; unique:
+;; (setq doom-theme 'doom-manegarm) ; zelda, dark forest vibes, quite unique
+;;  -  TODO: need to provide alt with dim comments, though the whole theme is quite dim already..
+;; (setq doom-theme 'doom-solarized-dark) ; very low-contrast, for the late night
+;; (setq doom-theme 'doom-solarized-dark-high-contrast) ; brighter italicized comments, notably changes pink functions to blue
+
+;; oldies with cool (blue'ish) colors:
+;; (setq doom-theme 'monokai-ristretto) ; a nice variant and revival of a classic
+;; (setq doom-theme 'tokyo-night) ; a classic alt between one and outrun-electric
+;; (setq doom-theme 'doom-one) ; doom's default, too grey
+;;   - doom-vibrant, a higher-contrast variant
+;; ayu-dark seems fine too..
+
+
+
+;; solaire-mode?
+;; just removes background color tinge
+;; adding to (spc t s)
+
+;; NOTE: can use consult-theme to try out all the themes
+;; the ones prefixed with doom- are probably a bit more vetted
+
+;; TODO: get aura, noctis, and jellyfish!
+
+;; - TODO: port aurara
+;;   - FINALLY, a text editor that will last the ages, and never have to port again!
+;; - just use whatever's there..
+
+;; a few light themes first:
+;; doom-shades-of-purple
+;;   - bright enough to see during the day!!
+;;   - makes great use of transparency too..
+;; doom-flatwhite
+;;   - unique highlighter style, dim
+;; doom-earl-grey
+;;   - slightly modified doom-one-light which makes it cozier
+;;   - italic comments, dimmer text? or less contrast?
+;; doom-one-light
+
+;; NOTE: all of these can be dimmed by "night-mode" on laptops, which make the colors "warmer", making more themes more tolerable, or even more comfortable..!
+
+;; manegarm, dark forest green, zelda vibes!!
+;; this one's actually legit.. someone put some love into this one!!
+
+;; doom-outrun-electric, my favorite included theme, very high-contrast, hard, neon vibes
+;;   - diff doesn't look good..
+
+;; laserwave, neon pink, unfortunately plain text too bright
+;; maybe not too difficult to edit it..
+
+;;doom-solarized-dark, great! very low contrast, now with hot pink 'n purple!!
+;; variants: *dark-high-contrast*, light, oksolar variants)
+;;   - looks good here, very dim plain text, very comfy
+;;   - dark-high-contrast version only subtley dims the background color (very good)
+;;     - good on my shitty chromebook
+;;   - light version is the only readable light theme i've seen.. yellow background, reminds me of a nvim theme that i liked..
+;;   - also quite unique, the rest look like atom-material variants
+
+;; feather-dark, fun, just comments are hard to see..
+;; quite simiolar to helix's default theme.. not bad..!
+;; suffers from different header text size in org-mode
+
+;; doom-tokyo-night, my classic fall-back
+;; between solarized-dark and outrun-electric
+;; doom-moonlight, lighter background, lighter comments, a more glowy/jellyfish feeling
+;; doom-palenight, bright background for lower contrast, too bright
+;; doom-city-lights, ??
+
+;; doom-shades-of-purple, a bit of an overload by the bright background and bright purple comments.. otherwise, quite fun 'n funky
+;; text in txt/org files are still white :/
+;; similar to adventure time
+;; ephemerel, background may be too bright, lots of use of bold is interesting.. noctis vibes
+
+;; doom-one, doom's default, based on atom/github theme
+;; too gray, too boring
+;; doom-vibrant, a blue-hue variant of doom-one
+;; doom-tomorrow-night, a solid upgrade from gruvbox
+
+;; horizon, a good monokai vaiant, except red vars and bright background
+
+;; - snazzy
+;;   - this one was rather unique on helix, plain text too bright
+
+
+
+
+
+
+
+
+
+
+  ;;; fonts
+  ;; Doom exposes five (optional) variables for controlling fonts in Doom:
+  ;;
+  ;; - `doom-font'
+  ;;   -- NOTE: this makes a big big difference, as emacs can display alot more in the mini-buffer for auto-complete
+  ;;   -- NOTE: terminals have their own appearance settings
+  ;;   -- TODO: fail, the primary font to use
+  ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
+  ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
+  ;;   presentations or streaming.
+  ;; - `doom-symbol-font' -- for symbols
+  ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
+  ;;
+  ;; See 'C-h v doom-font' for documentation and more examples of what they
+  ;; accept. For example:
+  ;;
+  ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
+  ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+  ;;      
+  ;;(setq doom-font "Fira Code") ; this works too
+  ;;(setq doom-font "Fira Code-14")
+  ;;
+  ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
+  ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
+  ;; refresh your font settings. If Emacs still can't find your font, it likely
+  ;; wasn't installed correctly. Font issues are rarely Doom issues!
+  ;;   - then search for 'mono', though not all monospaced fonts have 'mono' in it..
+  ;;
+  ;;
+  ;; TODO: downlaod and set Monofoki
+  ;;   - (if it exists)
+  ;;(setq doom-font "Monofoki")
+  ;;
+  ;; exploring shit on a chromebook
+  (cond
+   (doom--system-linux-p ;; (featurep :system 'linux) ;; ooooh yeahhh!! i'm lisp'in' baby!!
+    ;; (setq doom-font "Cousine")
+    ;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
+    ;;   - there's notably no vertical line width, making it quite compact..
+    (setq doom-font "DejaVu Sans Mono"
+          ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close to Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
+          ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
+          ;;     - need about 14 or 15
+          ;;     
+          doom-variable-pitch-font "Roboto" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
+          ;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
+          doom-big-font "Roboto"
+          ;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
+          ;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
+          doom-serif-font "DejaVu Serif" ;; vs Noto Serif
+          )
+    )
+   ;; (doom--system-windows-p
+   ;;  ())
+   ;; (doom--system-macos-p
+   ;;  ())
+   )
+  ;;
+  ;;(doom/increase-font-size)
+  ;;(doom/increase-font-size) ;; twice to skip a missing size..
+  ;;  - TODO: try again..
+  ;;  -  FIXME: doesn't work here, though it works if i run it when the program has started..
+  ;;  - children/elderly mode
+  ;;  - spc-t-b - big font mode
+  ;;  - maybe can help with focus..? or maybe too big..
+
+  
+
+) ; init
 
 
 
@@ -1214,12 +1466,14 @@
    ;; wtf is with the redo binding
    ;; don't touch the original emacs binding on C-/
    ;; '("u" . undo-fu-only-undo ) ;; default is meow-undo NOTE: may be a problem with undo-fu-only-undo
-   '("U" . undo-redo )  ;; TODO: re-bind default U = meow-undo-in-selection
+   '("U" . undo-redo)  ;; TODO: re-bind default U = meow-undo-in-selection
    ;;   - TODO: check/add to embark-act menus instead, especially act on region
-   ;; '("U" . "C-S-/" ) ;; hmm, binding to another key didn't work either..
-   ;; '("U" . "C-?" )
+   ;; '("U" . "C-S-/") ;; hmm, binding to another key didn't work either..
+   ;; '("U" . "C-?")
 
-   
+   ;; flip select symbol/word
+   '("w" . meow-mark-symbol)
+   '("W" . meow-mark-word)
    ;; C-u = command-universal-argument
    ;; C-c u = meow-universal-argument
 
@@ -1440,17 +1694,20 @@
 
     
     ;;; spc o
-    ;; (:when (modulep! :term eshell) ;; FIXME: didn't work.. and need it!!
 
-      '("o s" . +eshell/toggle)
-      ;;'("o t" . +eshell/toggle)
-      ;; - s for shell, or t for terminal
-      ;; though, doom likely chose e to support having multiple shell app bindings..
-      ;; TODO: '-' for dired-jump seems like a strange binding..?? move to f?
-      ;;   - spc-o-f and spc-q-f are used for frames..
+    ;; TODO: '-' for dired-jump seems like a strange binding..?? move to f?
+    ;;   - spc-o-f and spc-q-f are used for frames..
 
-    ;; )
+    (when (modulep! :term eshell)
+      '("o s" . +eshell/toggle) ; s for shell
+                                        ; though, doom likely chose e to support having multiple shell app bindings..
 
+      '("o t" . +eshell/toggle) ;t for terminal
+      )
+    
+    ;; (when (modulep! :term solaire-mode) ;; TODO: not a module..
+    '("o -" . solaire-global-mode) ;; "toggle" arg?
+  
 
 
       ;; new key-maps
@@ -1578,231 +1835,20 @@
 
 
 
-;; NOTE: added by DOOM
+;;; NOTE: added by DOOM
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "John Doe"
 ;;       user-mail-address "john@doe.com")
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom:
-;;
-;; - `doom-font'
-;;   -- NOTE: this makes a big big difference, as emacs can display alot more in the mini-buffer for auto-complete
-;;   -- NOTE: terminals have their own appearance settings
-;;   -- TODO: fail, the primary font to use
-;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
-;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
-;;   presentations or streaming.
-;; - `doom-symbol-font' -- for symbols
-;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
-;;
-;; See 'C-h v doom-font' for documentation and more examples of what they
-;; accept. For example:
-;;
-;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-;;(setq doom-font "Fira Code-14")
-;;
-;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
-;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
-;; refresh your font settings. If Emacs still can't find your font, it likely
-;; wasn't installed correctly. Font issues are rarely Doom issues!
-;;   - then search for 'mono', though not all monospaced fonts have 'mono' in it..
-
-
-;; TODO: downlaod and set Monofoki
-;;   - (if it exists)
-;;(setq doom-font "Monofoki")
-
-;; exploring shit on a chromebook
-(cond
- (doom--system-linux-p ;; (featurep :system 'linux) ;; ooooh yeahhh!! i'm lisp'in' baby!!
-  ;; (setq doom-font "Cousine")
-  ;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
-  ;;   - there's notably no vertical line width, making it quite compact..
-  (setq doom-font "DejaVu Sans Mono"
-        ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close to Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
-        ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
-        ;;     - need about 14 or 15
-
-        doom-variable-pitch-font "Roboto" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
-        ;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
-        ;;  - TODO: - create a function to switch from reuglar and mono-spaced font
-        ;;  - TODO: why doesn't org-mode use this..?? >:O
-        doom-big-font "Roboto"
-        ;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
-        ;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
-        doom-serif-font "DejaVu Serif" ;; vs Noto Serif
-        )
-  )
- ;; (doom--system-windows-p
- ;;  ())
- ;; (doom--system-macos-p
- ;;  ())
- )
-
-;;(doom/increase-font-size)
-;;(doom/increase-font-size) ;; twice to skip a missing size..
-
-
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-
-;; NOTE: use consult-theme to try them all out on-the-fly
-
-
-;; bright: light
-;; dim: outrun
-;; late night: solarized-dark
-
-;; light:
-;; (setq doom-theme 'doom-earl-grey) ; light
-;; (setq doom-theme 'doom-flatwhite) ; light, highlighter
-
-
-;; purple:
-(setq doom-theme 'doom-outrun-electric) ; high-contrast, hard white text
-                                        ; this one is amazing, similar to aura, especially with night-mode / warm colors!!
-;; (setq doom-theme 'feather-dark) ; low-contrast, slightly-visible comments, purple tinge, that lovable ugly one from helix: boo-berry! lol
-;; (setq doom-theme 'doom-shades-of-purple) ; childish, very bright back-light
-;; (setq doom-theme 'doom-laserwave)
-
-
-;; unique:
-;; (setq doom-theme 'doom-manegarm) ; zelda, dark forest vibes, quite unique
-;;  -  TODO: need to provide alt with dim comments, though the whole theme is quite dim already..
-;; (setq doom-theme 'doom-solarized-dark) ; very low-contrast, for the late night
-;; (setq doom-theme 'doom-solarized-dark-high-contrast) ; brighter italicized comments, notably changes pink functions to blue
-
-;; oldies with cool (blue'ish) colors:
-;; (setq doom-theme 'monokai-ristretto) ; a nice variant and revival of a classic
-;; (setq doom-theme 'tokyo-night) ; a classic alt between one and outrun-electric
-;; (setq doom-theme 'doom-one) ; doom's default, too grey
-;;   - doom-vibrant, a higher-contrast variant
-;; ayu-dark seems fine too..
 
 
 
-  ; solaire-mode?
-  ; just removes background color tinge
-
-
-  ; NOTE: can use consult-theme to try out all the themes
-  ; the ones prefixed with doom- are probably a bit more vetted
-
-  ; TODO: get aura, noctis, and jellyfish!
-
-  ;; - TODO: port aurara
-  ;;   - FINALLY, a text editor that will last the ages, and never have to port again!
-  ;; - just use whatever's there..
-
-  ;; a few light themes first:
-  ;; doom-shades-of-purple
-  ;;   - bright enough to see during the day!!
-  ;;   - makes great use of transparency too..
-  ;; doom-flatwhite
-  ;;   - unique highlighter style, dim
-  ;; doom-earl-grey
-  ;;   - slightly modified doom-one-light which makes it cozier
-  ;;   - italic comments, dimmer text? or less contrast?
-  ;; doom-one-light
-
-  ;; NOTE: all of these can be dimmed by "night-mode" on laptops, which make the colors "warmer", making more themes more tolerable, or even more comfortable..!
-
-  ;; manegarm, dark forest green, zelda vibes!!
-  ;; this one's actually legit.. someone put some love into this one!!
-
-  ; doom-outrun-electric, my favorite included theme, very high-contrast, hard, neon vibes
-  ;   - diff doesn't look good..
-
-  ;; laserwave, neon pink, unfortunately plain text too bright
-  ;; maybe not too difficult to edit it..
-
-  ;;doom-solarized-dark, great! very low contrast, now with hot pink 'n purple!!
-  ;; variants: *dark-high-contrast*, light, oksolar variants)
-  ;;   - looks good here, very dim plain text, very comfy
-  ;;   - dark-high-contrast version only subtley dims the background color (very good)
-  ;;     - good on my shitty chromebook
-  ;;   - light version is the only readable light theme i've seen.. yellow background, reminds me of a nvim theme that i liked..
-  ;;   - also quite unique, the rest look like atom-material variants
-
-  ; feather-dark, fun, just comments are hard to see..
-    ; quite simiolar to helix's default theme.. not bad..!
-    ; suffers from different header text size in org-mode
-
-  ; doom-tokyo-night, my classic fall-back
-    ; between solarized-dark and outrun-electric
-    ; doom-moonlight, lighter background, lighter comments, a more glowy/jellyfish feeling
-    ; doom-palenight, bright background for lower contrast, too bright
-    ; doom-city-lights, ??
-
-  ; doom-shades-of-purple, a bit of an overload by the bright background and bright purple comments.. otherwise, quite fun 'n funky
-    ; text in txt/org files are still white :/
-    ; similar to adventure time
-  ; ephemerel, background may be too bright, lots of use of bold is interesting.. noctis vibes
-
-  ; doom-one, doom's default, based on atom/github theme
-    ; too gray, too boring
-    ; doom-vibrant, a blue-hue variant of doom-one
-  ; doom-tomorrow-night, a solid upgrade from gruvbox
-
-  ; horizon, a good monokai vaiant, except red vars and bright background
-
-  ;; - snazzy
-  ;;   - this one was rather unique on helix, plain text too bright
 
 
 
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type 'nil) ; default was t (no quotes)
-
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/my-stuff/repos/my-programming-stuff")
-;;  - it's just internal files.. leave it
-;;  - TODO: set this back to it's default!!
-
-;; Whenever you reconfigure a package, make sure to wrap your config in an
-;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
-;;
-;;   (after! PACKAGE
-;;     (setq x y))
-;;
-;; The exceptions to this rule:
-;;
-;;   - Setting file/directory variables (like `org-directory')
-;;   - Setting variables which explicitly tell you to set them before their
-;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
-;;   - Setting doom variables (which start with 'doom-' or '+').
-;;
-;; Here are some additional functions/macros that will help you configure Doom.
-;;
-;; - `load!' for loading external *.el files relative to this one
-;;   - NOTE: TODO: maybe for my own functions...
-;; - `use-package!' for configuring packages
-;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
-;;   - NOTE: TODO: can try loading from a config folder in my repo
-;; - `map!' for binding new keys
-;;   - NOTE: TODO: try binding keys here!!
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
-;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
-;; etc).
-;;
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
-;;   - spc-k-k/d in meow
-
-
-;; NOTE: added by me!
+;;; NOTE: added by me!
 (ra/load-config)
 
 
@@ -1813,6 +1859,14 @@
 ;;   - just this simple capability really does make quite a difference..
 ;;     - though, i guess in lesser editors you could just put it in a script and run it on a region
 ;;       the problem with that is the execution is done async via seperate sub-process, and so if anything happens during that time, maybe problems could occur..?
+
+;; TODO: functions to make
+
+;; (after discovering Roboto font is a HUGE upgrade..)
+;;  TODO: create a function to toggle between regular and mono-spaced font
+;;  why doesn't org-mode use this..?? >:O
+;;    - TODO: use regular font for txt and org files by default
+
 
 ;; because pandoc requires 173mb...
 ;; the headers may be all i need
