@@ -18,18 +18,31 @@ shiiiit, i've got my work cut out for me..
 
 
 * personal tools/tech/productivity
-game engine
+
+just open pull requests 'n start discussions/issues as needed
+
+game/media/io engines
   - let others handle this..
-  - i only need to make the core skeletons of these.. basically, contribute to dragonruby's sample apps
+  - though, i can def help with documentation, as dragonruby and heaps severely need it!!
     
   - dragonruby
   - heaps
   - jon blow's engine
 
-text editor
+langs
+  - these languages are so far developed, so complex, i don't think i could contribute.. :/
+
+  - haxe
+  - ruby
+    - (and embedded variants)
+  - jai
+  
+text editors
   - textbringer
     - create basic bindings (next/previous word)
       - download wezterm, may just be a terminal problem..
+        - computer fail.
+          - TODO: alacritty? foot! lol
     - make it generally more usable
   - emacs
     - port aurara
@@ -41,7 +54,8 @@ text editor
   - focus
     - port aurara
   - zed
-    - TODO: download and use it again!!
+    - download and use it again!!
+      - nope.. need a real computer, lmao
     - can focus on making shit!!
 
 
