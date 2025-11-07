@@ -972,12 +972,15 @@
    ;;'("M-d" . meow-backward-kill-word ) ;; symbol?, default: kill-word
    ;; meow-beacon-kill-delete ;; delete all selections.. not sure how it would differ from s..
    ;; 
-   '("C-S-d" . meow-backward-delete ) ;; to match D, alts: backward-delete-char, backward-delete-char-untabify
-   ;;   - TODO: -untabify..?
-   ;;   - or kill-whole-line? to match c-s-<bakspace>
+   '("C-S-d" . meow-backward-kill-symbol) ;; to match D
+   ;;   - or kill-whole-line? to match c-s-<backspace>
    ;;     - nahh, keep this, i use this quite a lot now in normal-mode.. though i still need the backspace key in insert-mode..
-   ;;   - NOTE: can be re-bound further down this config.
-
+   ;;   - NOTE: anyway, can re-bind further down this config..
+   '("M-S-d" . meow-backward-kill-word) ;; FIXME: runs M-D -> M-d -> kill-word
+   '("M-D" . meow-backward-kill-word) ;; makes no difference..
+   ;;   - hmmmm, maybe M-S is no good..?
+   ;;     - but works fine with m-s-n/p..
+   ;; c-m-d/u = sp-down/up-sexp!
 
    ;; backspace
    ;;   - NOTE: seems to map to <DEL> (use "DEL" when binding here..?), as it may be used in various ways.. and behave differently
@@ -987,15 +990,15 @@
    ;;   
    ;; backspace = backward-delete-char-untabify ;; default
    ;; C-backspace = backward-kill-word ;; default
-   ;; '("C-DEL" . meow-backward-kill-word ) ;; default: backward-kill word (affects kill-ring?), alts: doom/delete-backward-word
-   ;; '("M-DEL" . meow-backward-kill-symbol ) ;; default: backward-kill-word
-   ;; '("M-<backspace>" . meow-backward-kill-symbol ) ;; default: backward-kill-word
+   ;; '("C-DEL" . meow-backward-kill-word) ;; default: backward-kill word (affects kill-ring?), alts: doom/delete-backward-word
+   ;; '("M-DEL" . meow-backward-kill-symbol) ;; default: backward-kill-word
+   ;; '("M-<backspace>" . meow-backward-kill-symbol) ;; default: backward-kill-word
    ;; NOTE: i flipped these to kill shit quicker by default..
    ;;       i think the default behavior is retained in the mini-buffer anyway, where you wouldn't want to delete entire file-paths
-   '("C-DEL" . meow-backward-kill-symbol )
-   '("C-<backspace>" . meow-backward-kill-symbol )
-   '("M-DEL" . meow-backward-kill-word )
-   '("M-<backspace>" . meow-backward-kill-word )
+   '("C-DEL" . meow-backward-kill-symbol)
+   '("C-<backspace>" . meow-backward-kill-symbol)
+   '("M-DEL" . meow-backward-kill-word)
+   '("M-<backspace>" . meow-backward-kill-word)
    ;;   - just in case this changes on another os..
    ;;   - TODO: shouldn't use meow key-board macros..
    ;;     - yet, i can't find any other kill-symbol functions..??
