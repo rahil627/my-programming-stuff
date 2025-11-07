@@ -1703,9 +1703,25 @@ install linux environment
   - installs debian with wayland
     - no need for xwayland, should just work
 
-download a snapshot of emacs
+NOTE: i used the pre-built snapshot/binary method, pre-compiled binaries are always the way to go!
+  
+normally just:
+sudo apt install emacs
+  - v28.1 added native compilation, debian bookworm (since 6/10/2023) has 28.2
+https://www.reddit.com/r/debian/comments/1i1u9hr/how_do_i_install_emacs_294_on_debian_12/
+  - if you want a newer version, could move to testing branch of debian..
+
+https://www.reddit.com/r/debian/comments/w2lx9z/how_stable_is_debian_testing/
+By definition testing is not stable. If you want stable, use the stable release. That's the point of Debian.
+
+If you want a bleeding edge rolling release or if the idea of a version of Gnome that debuted in late 2020 seems "old" to you for some reason, you're probably better off with a real rolling distro like Arch or Tumbleweed
+  
+could try snap/flatpak etc.
+
+*add a snapshot of emacs to apt sources*:
   - https://emacs.secretsauce.net/
   - i had trouble getting the package to work, seemed to require different versions of several libs
+  - "The default emacs-snapshot... packages use the new native compilation support. This results in natively-compiled (i.e. much faster lisp), but will result in a slowdown and warnings when emacs comes up the first time, as everything is compiled. This is also very new and somewhat experimental. For this reason, the a classic byte-compiled flavor of emacs-snapshot is available also: the packages are called emacs-snapshot-no-native-comp.... The two flavors conflict with each other, and only one may be installed at a time."
 
 build emacs
   - https://harryrschwartz.com/2022/12/08/how-i-build-emacs-from-source-on-debian
