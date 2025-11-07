@@ -1,6 +1,53 @@
 
-all OSs / terminal emulators:
-  - generally: a *ton* of features over an actual basic terminal: GPU rendering (OpenGL)
+
+
+# bindings
+
+also see [shells]
+
+a few common bindings:
+
+in chroemos's default terminal app:
+
+generally, the arrow keys and backspace work as expected
+  - c/m-arrows for movement
+  - down/up cycles commands
+  - c/m-backspace works well too
+
+c-r
+  - **reverse i-search**
+    - THIS IS WHAT YOU'RE LOOKING FOR
+    - c-r, type a few chars, c-r again to cycle through matches
+
+c-c
+  - kill signal
+    - stop shit with this..
+
+c-z
+  - suspend a process
+    - put it in the background
+      - (emacs seems to have borrowed this too..)
+
+c-l
+  - clear output
+    - (usually just scrolls down to the end, with the cursor on top)
+    - (i think emacs got the c-l idea from this..)
+
+c-fb
+  - bash/emacs movement
+
+c-n/p (and down/up arrow)
+  - cycle commands
+  
+  
+  
+c-s-[keys] are usually open for terminals to (ab)use too
+
+at least, that's where i put all my terminal shortcuts (pane-splitting, window movement, etc.) when i was using alacritty/wezterm.. i think..
+
+c-s-r
+  - restarts the shell
+
 
 
 # CONCLUSION:
