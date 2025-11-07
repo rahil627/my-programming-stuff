@@ -112,7 +112,7 @@ text editor
 
 
 
-* *technology to see history*
+* technology to see history
 
 ** history image AR app
   - scrape photos related to your location
