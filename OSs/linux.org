@@ -36,14 +36,14 @@ sudo apt upgrade
   - update all packages
 
 update major version:
-WARNING: there's probably extra steps to this..
-sudo apt full-upgrade
+see notes for each distro ([[debian]], etc.)
 
 to install an app manually:
 copy the binary to /usr/bin/ for most distros
 then you should be able to run the binary via command line
   - scoop handles this crap for you
-  
+
+
 
 * original file
 
