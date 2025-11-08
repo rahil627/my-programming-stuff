@@ -473,6 +473,18 @@
 
   
 
+
+  (use-package! good-scroll ; for a far smoother experience..
+    :init
+    (setq good-scroll-duration 0.15 ; the further you step, the quicker you'll want this
+          good-scroll-step 200) ; d: 80 = ~3 lines, 200 = ~12 lines
+                                ; these values are for my shitty chromebook's touchpad
+    :config
+    (good-scroll-mode))
+
+
+
+  
   ;; testing centaur-tabs
   (after! centaur-tabs
     (setq
