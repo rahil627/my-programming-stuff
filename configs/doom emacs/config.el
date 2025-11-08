@@ -115,8 +115,6 @@
 ;;   - defun in defun works..
 ;;   - my lisp-fu failed me.. need to understand &rest...
 
-;; TODO: install monofoki font (on chromebook)!!
-
 ;; load org repo on start
 ;;   - TODO: merge my-programming-stuff into main notes?
 ;;     - TODO: currently using my-programming-stuff as my temp org folder
@@ -486,6 +484,9 @@
 
   
   ;; testing centaur-tabs
+  ;;  - i customized it, and now it looks like native tabs! lol
+  ;;  - TODO: the icons are kinda distracting.. as with the mode-line icons..
+  
   (after! centaur-tabs
     (setq
      centaur-tabs-height 11
@@ -650,7 +651,7 @@
   ;; - `doom-font'
   ;;   -- NOTE: this makes a big big difference, as emacs can display alot more in the mini-buffer for auto-complete
   ;;   -- NOTE: terminals have their own appearance settings
-  ;;   -- TODO: fail, the primary font to use
+  ;;   -- the primary font to use
   ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
   ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
   ;;   presentations or streaming.
@@ -681,7 +682,7 @@
     ;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
     ;;   - there's notably no vertical line width, making it quite compact..
     (setq ;;doom-font "DejaVu Sans Mono" ;; TODO: turn off?
-          ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close to Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
+          ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close o Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
           ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
           ;;     - need about 14 or 15
           ;;     
@@ -705,6 +706,7 @@
   ;; custom fonts
   (setq doom-font "monofoki-12") ; incredible 12/13/16
                               ; also great when scaled in writeroom-mode
+                              ; ADVENTURE TIME!!
   ;; (setq doom-font "monofoki-13")
   ;;
   ;; TODO: try these again with various sizes
@@ -1965,6 +1967,7 @@
 ;;   - just this simple capability really does make quite a difference..
 ;;     - though, i guess in lesser editors you could just put it in a script and run it on a region
 ;;       the problem with that is the execution is done async via seperate sub-process, and so if anything happens during that time, maybe problems could occur..?
+
 
 ;; TODO: functions to make
 
