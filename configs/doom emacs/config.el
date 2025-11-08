@@ -673,17 +673,14 @@
   ;;   - then search for 'mono', though not all monospaced fonts have 'mono' in it..
   ;;
   ;;
-  ;; TODO: downlaod and set Monofoki
-  ;;   - (if it exists)
-  ;;(setq doom-font "Monofoki")
   ;;
   ;; exploring shit on a chromebook
-  (cond
+  (cond ;; os defaults
    (doom--system-linux-p ;; (featurep :system 'linux) ;; ooooh yeahhh!! i'm lisp'in' baby!!
     ;; (setq doom-font "Cousine")
     ;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
     ;;   - there's notably no vertical line width, making it quite compact..
-    (setq doom-font "DejaVu Sans Mono"
+    (setq ;;doom-font "DejaVu Sans Mono" ;; TODO: turn off?
           ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close to Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
           ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
           ;;     - need about 14 or 15
@@ -693,7 +690,7 @@
           doom-big-font "Roboto"
           ;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
           ;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
-          doom-serif-font "DejaVu Serif" ;; vs Noto Serif
+          doom-serif-font "DejaVu Serif" ;; vs Noto Serif, Caladea, Carlito
           )
     )
    ;; (doom--system-windows-p
@@ -701,11 +698,41 @@
    ;; (doom--system-macos-p
    ;;  ())
    )
+
+  ;; (setq doom-font "Cousine") ; i think it falls-back to this.. especially if you're missing a font-size and use increase/decrease-font-size
+  ;; (setq doom-font "DejaVu Sans Mono") ; cute!, but a bit strainful at the default size.. the font size works incredibly well in mode-line/tab-line etc.
+
+  ;; custom fonts
+  (setq doom-font "monofoki-12") ; incredible 12/13/16
+                              ; also great when scaled in writeroom-mode
+  ;; (setq doom-font "monofoki-13")
   ;;
+  ;; TODO: try these again with various sizes
+  ;;   - not doom's size functions
+  ;; (setq doom-font "mononoki") ; less line height.. maybe too scrunched up.. def something wrong about it..
+  ;; (setq doom-font "Source Code Pro") ; zen-mode, like focus editor! though, 12/16 are too small/big
+  ;;   - too wide at default size, great when big though..
+  ;;     - TODO: great for zen/writeroom-mode
+  ;;   - i could use the focus for now..
+  ;; (setq doom-font "OfficeCodePro") ; adds a few seriphs
+
+  
+  ;; TODO: try text-scale-mode since zen scales text really well..
+
+  
+  ;; eval testing area (<3 emacs)
+  ;; (describe-fontset)
+  ;; (setq doom-font "DejaVu Sans Mono")
+  ;; (doom/reload-font)
+  ;; (doom/increase-font-size 1)
+  ;; (doom/decrease-font-size 1)
+  ;; (doom/reset-font-size)
+  ;; NOTE: can use zen (spc t z) to toggle between a larger font size
+
+  
   ;;(doom/increase-font-size)
   ;;(doom/increase-font-size) ;; twice to skip a missing size..
-  ;;  - TODO: try again..
-  ;;  -  FIXME: doesn't work here, though it works if i run it when the program has started..
+  ;;  - NOTE: doesn't work here, though it works if i run it when the program has started..
   ;;  - children/elderly mode
   ;;  - spc-t-b - big font mode
   ;;  - maybe can help with focus..? or maybe too big..
