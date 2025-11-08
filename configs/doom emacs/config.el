@@ -456,9 +456,11 @@
   (setq doom-modeline-workspace-name t) ;; FIXME: hmm not working..??
   ;; (setq doom-modeline-project-name t) ;; no need, as the file-name expands
   ;; (setq doom-modeline-hud nil) ;; not sure..
-  ;; (setq doom-modeline-icon nil) ;; a more classic feel.. or maybe just get rid of nerd icons..
-  (display-time-mode t)
-  (setq doom-modeline-time t) ;; FIXME: though time isn't important..
+  ;; (setq doom-modeline-icon nil) ;; TODO: a more classic ascii feel.. or maybe just get rid of nerd icons..
+  ;; 
+  ;; (display-time-mode t)
+  ;; (setq doom-modeline-time t) ;; FIXME: though time isn't important..
+  ;; Error during redisplay: (eval (doom-modeline-segment--time)) signaled (error "Invalid image type ‘svg’")
   )
   
   ;; (after! writeroom-mode
