@@ -722,10 +722,17 @@ overview:
   - **multi-player**
   - gui/gpu-rendered
     - NOTE: this restricts computer hardware to those with a decent gpu
-      - though, any integrated gpu of a proper laptop from the past 10 years should be fine..
+      - though, as it uses and requires vulkan, though, any integrated gpu of a proper laptop from the past 10 years should be fine..
         - just not on my N4000 processor chromebook (netbook), lmao
           - (even after enabling gpu support in crostini)
-          - in vulkaninfo and the prompt, it shows my gpu as 'llvm-pipe', which is a gpu emulation using cpu, and it absolutely destroys the cpu usage
+          - in vulkaninfo and the prompt, it shows my gpu as 'llvm-pipe', which is a gpu emulation
+            using cpu, and it absolutely destroys the cpu usage
+            - yet, debian shows mesa-vulkan-drivers installed.. hmmm
+            - TODO: gpu drivers missing..?? or maybe it uses chromeos to display, so it doesn't show correctly in the linux container..??
+              - yep chromeos/crostini problem, it takes a bit more effort:
+                - https://www.reddit.com/r/Crostini/comments/rsseb9/comment/hqqkw10/
+                - https://gist.github.com/Usulyre/bb33f77b225b8d9336c1f9e744114fba
+              - anyway, maybe time to update a major version of debian..
           - i also tried setting env var 'ZED_ALLOW_EMULATED_GPU=1' (and  0) to no avail (as the prompt mentioned)
     - somehow **looks even more beautiful than sublime and even vs-code by default..!**
       - and has aura theme extension(!!) (had to manually install for sublime)
