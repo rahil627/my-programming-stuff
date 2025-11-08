@@ -7,17 +7,24 @@ https://wezfurlong.org/wezterm/config/appearance.html
 terminal.sexy (website)
   - a web-based 16-color theme maker
 
+# text editors
+## micro
+simple
+  - just how it should be!
+    - uses terminal background color
 
-# emacs
+[theme-name]-tc
+  - i think these also rely on the terminal's theme (16 color scheme)
+
+
+## emacs
   - see [config.el]
 
 
-# windows:
-
-helix:
+## helix:
   - see config for more info
 **aurara**
-  - my custom theme
+  - **my custom theme**
 **aura**
   - still great, can compare with my own version
 default
@@ -38,7 +45,7 @@ everforest-dark
 
 
 
-# vs-code
+## vs-code
   - see vs-code-extensions.txt
   - https://vscodethemes.com/
     - i made it to page 7 and noted a bunch to try below
@@ -101,6 +108,7 @@ huacat
 
 
 
+
 # terminal:
 ## wezterm
   - neon night (goph)
@@ -112,28 +120,56 @@ huacat
 https://windowsterminalthemes.dev/
   - cyberpunk 2077
 
+## linux terminals:
+
+chromeos native 'terminal' app
+
+  - NOTE: i think this shows the fonts installed in the linux container, so that you can quickly test them!
+
+  - these kinda suck..
+    - but good to play with the old school standard 16 color scheme..
+    - these affect text editor themes too
+      - works well with micro
+    - there's colors for folders, hidden, normal files..
+    
+    - NOTE: **dim the font, and saturate the background colors**
+      - ~50% font, and slide the color picker to the right
+
+  - dark (default)
+    - maybe the clearest
+  - solarized light
+    - perfect for day-time use
+  - **dusk** > haze/forest
+    - all about the same, just have to dim font / darken background..
+    - dusk also matches the default chromeos theme
+    - uses purple and night-vision green for folders/files
+
+
+  fonts
+   1. **ubuntu mono**
+     - this one is perfect for terminals
+       - it reminds of the default mac ones
+     - really great at scrunching up a bunch of terminal output
+   2. cutive mono
+     - very readable, yet still dense
+     - also somehow darkens the font?
+   2. inconsolata
 
 
 
-
-
-
-# from vim (via ipad mini?)
-
-# my top 3
+# these were the themes i liked, from when i used linux/nvim from an ipad mini 2
+## my top 4
 Plug 'sonph/onehalf', { 'rtp': 'vim' } “like gruvbox but with slightly lighter contrast
   - onehalflight and onehalfdark
 Plug 'junegunn/seoul256.vim' “even less contrast than onehalfdark
 Plug 'NLKNguyen/papercolor-theme' “more contrast than gruvbox!
-
 Plug ‘sainnhe/everforest
+
 Plug ‘romainl/flattened
 Plug 'morhetz/gruvbox’ “#1 for a reason
 
 
-# these were the themes i liked, from when i used linux/nvim from an ipad mini 2
-
-# base16 shell themes
+## base16 shell themes
 base16-gruvbox-dark-pale.sh
 base16-gruvbox-light-soft.sh
 base16-monokai.sh

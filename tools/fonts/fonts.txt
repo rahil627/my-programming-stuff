@@ -1,0 +1,14 @@
+
+hmmm, surely there's a note on fonts somewhere..
+
+
+install fonts on linux (including chromeos)
+
+NOTE: for chromeos, it will only be available to linux apps, not chromeos/android apps
+
+mkdir -p ~/.local/share/fonts
+  - and save them here
+
+fc-cache -fv
+  - load and see all font dirs
+  
