@@ -1,19 +1,46 @@
 
 
 
-software for your version control software
+version control software for your version control software:
+
+TODO: to try
+
+gitkraken 
+  - get crackin'!
+  - yet another electron app.. :/
+
+sourcetree
+  - actually C# for windows and obj-c for Mac...
+    - great, but what a nightmare to maintain..!! :|
+
+sublime merge
+  - TODO: try this first!
+    - god.. fuck linux.. have to learn editing the repo source list
+      - https://www.sublimemerge.com/docs/linux_repositories
+  - sounds low-key great, like sublime text itself
+
+lazygit
+  - a great case for tui apps!
+  - though, since i use emacs.. i must magit
+
+
+
+
 
 
 magit
   - will take time to learn..
-  - c-c c-c is a terrible joke to hide the git commit finalize binding..
+  - FIXME: c-c c-c is a terrible joke to hide the git commit finalize binding..
 
 github desktop
   - git made stupid simple
   - keep it open, and it will track changes and auto check-mark what has been changed since, once you click on it again
   - sometimes git renames fail (or it might be me renaming without git..)
   - diffs aren't very smart..
-  - maybe electron :/
+  - uses electron :/
+    - though it makes sense, for them to provide a web-version of it..
+
+
 
 
 
@@ -28,7 +55,7 @@ https://www.reddit.com/r/gamedev/comments/1bsptek/what_should_i_use_for_source_c
     When I used Unity I stuck to Git since the scene files are in YAML, but Unreal uses binary files for blueprints and levels so it makes more sense to use a tool designed for binary file support."
   
   - the old svn seems to hold (jon blow still uses it)
-    - supported by git?
+
 
 fossil (scm)
   - written in C by the guy who wrote sqllite ("the most used database in the world")
