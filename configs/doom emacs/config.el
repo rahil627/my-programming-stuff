@@ -1574,8 +1574,12 @@
    ;; '("U" . "C-?")
 
    ;; flip select symbol/word
-   '("w" . meow-mark-symbol)
+   '("w" . meow-mark-symbol) ;; FIXME: can't mix-n-match?? W e/b doesn't work..
+   '("e" . meow-next-symbol)
+   '("b" . meow-back-symbol)
    '("W" . meow-mark-word)
+   '("E" . meow-next-word)
+   '("B" . meow-back-word)
    ;; C-u = command-universal-argument
    ;; C-c u = meow-universal-argument
 
