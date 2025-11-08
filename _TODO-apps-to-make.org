@@ -17,7 +17,7 @@ shiiiit, i've got my work cut out for me..
   - without all teh crap, bare-bones, craigslist style
 
 
-* personal tools/tech/productivity
+* personal tools/tech/anti-productivity
 
 just open pull requests 'n start discussions/issues as needed
 
@@ -26,19 +26,28 @@ game/media/io engines
   - though, i can def help with documentation, as dragonruby and heaps severely need it!!
     
   - dragonruby
+    - make games fuck the rest.
+      - web and ai are boring are fuck.
+        - stick to reality: cooking food, making tea, gardening, that's life!!
   - heaps
+    - download heaps web-site
+    - download haxe web-site / manual
+  - (sorry luxe!)
   - jon blow's engine
 
 langs
-  - these languages are so far developed, so complex, i don't think i could contribute.. :/
+  - these languages are so far developed, so complex, i don't think i could every help.. :/
 
   - haxe
   - ruby
-    - (and embedded variants)
+    - (especially its embedded variants)
+  - elixir
   - jai
+
   
 text editors
   - textbringer
+    - ruby!
     - create basic bindings (next/previous word)
       - download wezterm, may just be a terminal problem..
         - computer fail.
@@ -47,10 +56,26 @@ text editors
   - emacs
     - port aurara
     - makes emacs more gamey, with more visual effects!
-    - TODO: setup for offline dev
-      - ruby (+dragonruby), elixir, haxe, jai
     - TODO: setup ai / code-assistance?
-      - nah, with so many ai programs (web and desktop apps), just copy/pasta
+      - github co-pilot?
+    - TODO: setup for offline dev
+      1. dragonruby
+        - etags
+          - TODO: FIXME: seems like shit
+          - TODO: is it combining completion info from ruby-mode..??
+        - lsp?
+          - seems over-kill..
+            - but it was sorta working with solargraph last time..
+        - TODO: emacs integration?
+          - or is there something limiting it to the repl file?
+      2. ruby
+        - ruby-mode
+      - haxe
+        - TODO: does it have an LSP plugin?
+          - write myself..
+        - TODO: see supported editors..
+      - elixir
+        - yep, +lsp?
   - focus
     - port aurara
   - zed
@@ -58,6 +83,22 @@ text editors
       - nope.. need a real computer, lmao
     - can focus on making shit!!
 
+
+
+editors:
+  - emacs
+
+
+  
+merged from elsewhere:
+setup heaps and imgui
+try imgui with ruby!
+  - https://github.com/vaiorabbit/ruby-imgui
+
+
+
+
+  
 
 * scraper
   - jobs

@@ -1,38 +1,6 @@
 
 
 
-TODO: set-up:
-  1. dragonruby
-    - make games fuck the rest.
-      - web and ai are boring are fuck.
-        - stick to reality: cooking food, making tea, gardening, that's life!!
-  2. haxe
-
-  3. ruby
-  4. elixir
-
-  - textbringer
-    - ruby?
-  - emacs
-    - dragonruby
-      - etags
-        - TODO: FIXME: seems like shit
-      - lsp?
-        - seems over-kill..
-    - ruby
-      - ruby-mode
-    - haxe?
-      - shit.. :/
-      - TODO: see supported editors..
-        - TODO: write myself..
-          - emacs + textbringer LSP support
-    - elixir
-      - yep, +lsp?
-    
-merged from elsewhere:
-setup heaps and imgui
-try imgui with ruby!
-  - https://github.com/vaiorabbit/ruby-imgui
   
 
 devdocs.io
