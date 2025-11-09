@@ -18,7 +18,6 @@ mkdir -p ~/.local/share/fonts
 fc-cache -fv
   - load and see all font dirs
   
-
 *** arch-linux
 for arch, just use package managers to install them
 see https://wiki.archlinux.org/title/fonts
@@ -38,11 +37,15 @@ the way to install without using package manager, for other distros:
 
 
 
-* contemporary lists of fonts
+* places to find and play with fonts
 https://www.programmingfonts.org/
   - perfect editor view
   - contains most popular contemporary fonts
+  - pin function to make it easy to compare
+  - various language and themes selections too
   - links to place to download it (usually github)
+  - public / on github
+    - likely easy to add more fonts, languages, etc.
 
 fonts.google.com
   - use this site to check out contemporary pop fonts
@@ -73,7 +76,7 @@ https://kinsta.com/blog/best-programming-fonts/
 also see powerline fonts
 
 
-* fonts to try:
+* fonts to try
 gamey fonts
 bigblue terminal
   - arcade font
@@ -158,12 +161,27 @@ terminal
     - without anti-aliasing it look clearer, but fonts with curves struggle
 
 ** shitty chromebook
-  - using default terminal app
-    - ubuntu mono 14
-      - this one seems to work really well, similar to monofoki (especially the m character), whereas many others suffer from various problems, from being unreadable because the screen sucks, or just squashing line height upon font size, or just plain too wide.
+
+emacs
+  - quite picky about font sizes
+    - TODO: try text-scale mode
+      - maybe can test with +zen-text-scale
+  - monofoki
+  - dejavu sans mono
+    - quite nice, and comes with chromeos..??
+      - used to be the terminal/crosh default on chromeos!
+
+using default terminal app
+  - ubuntu mono 14
+    - this one seems to work really well, similar to monofoki (especially the m character), whereas many others suffer from various problems, from being unreadable because the screen sucks, or just squashing line height upon font size, or just plain too wide.
   - by default comes with many popular programming fonts
     - note: it come with some open-source/free versions of fonts that may not look so great: inconsolata (consolas)
 
+the linux container come with the 'croscore' fonts package
+  - arimo (sans-serif)
+  - tinos (serif)
+  - cousine (monospace)
+  
 chrome (browser/OS?) defaults (for reference):
 font size: 18
 standard: carlito
@@ -174,19 +192,19 @@ fixed-width: roboto
 
 
 
-* current favorites:
+* current favorites
 
 TODO: need to try consolas in a lighter weight
 TODO try source code pro with a more narrow width
 
-**office code pro < hasklig (light) ~= source code pro**
+**office code pro <- hasklig (light) ~= source code pro**
   - terminal: size 10-11, weight: regular/normal
   - vscode: size 11-12, weight: light
   - best/most comfy for my eyes long-term
   
-**monofoki < mononoki**
+**monofoki <- mononoki**
   - 12, same size as consolas
-  - slightly more wider and less seriphy than consolas, and therefore more comfy, but less readable
+  - slightly wider and less seriphy than consolas, and therefore more comfy, but less readable
   - a little more funky
   - only one font weight
   - using in terminal
@@ -202,6 +220,10 @@ TODO try source code pro with a more narrow width
   - shipped with vs-studio and thus strongly associated with c#
 
 
+  
+**ubunto mono**
+  - comes with chromeos's terminal app
+    - 14 (default)
 
 
 
@@ -239,14 +261,110 @@ jetbrains (sans) mono <- dejavu sans mono
 
 
 * main list
-maple mono
-  - nice 'n thick TODO: try the "light" version
-  - has a cute jrpg feel to it, funny little 'a'
 
+** some newer ones foudn on programmingfonts.org
+
+reddit sans mono
+  - nice!!
+  - even narrower!
+  - reminds me of proggy fonts..
+
+commit mono
+  - nice!
+  - highly-readable, wide, round, open, zen'ish
+  - more narrow than paper mono
+    
+paper mono
+  - maybe too wide..
+
+fun ones
+serious shanns
+  - *cute* and *narrow*!
+    - as narrow as reddit sans mono
+
+** main main list
+
+*** hand-written, with a feather-pen
+
+lotion
+
+*** cute
+
+smaller, narrower, *fun*, *cuter*, with some personality!
+
+annotation mono
+  - "A lovingly crafted handwriting-style monospace font."
+
+serious shans <- comic mono & comic shanns
+  
 agave
   - very simple, very cute, maybe too cute..
   - even more funky than mononoki
   - even smaller than mononoki!
+
+maple mono
+  - nice 'n thick TODO: try the "light" version
+  - has a cute jrpg feel to it, funny little 'a'
+  
+**monofoki**
+  - more sans-seriphy
+  - a lot of small changes, usually for the better
+    - not sure how i feel about this 'm' though..
+  - branches from mononoki, 50 commits behind, 200+ ahead
+  
+**mononoki**
+  - NOTE: may have to adjust line height to 1
+  - a *cute*, unique, small font
+  - a more open-feeling consolas
+  - the bold is great, very sans-serif
+  - slightly wider and less seriphy than consolas, making it feel more comfortable
+  - designed for code review, as "every character is designed to be clearly distinguishable
+  - 2013
+    - quite an early cute one..
+
+ 
+*** good for terminals
+
+generally small-height fonts that still look good with little vertical space in-between
+
+cutive mono
+  - seems nice for terminal use
+  - very readable, yet still dense (height)
+  - though too wide..
+  - TODO: also somehow darkens the font?
+  
+*ubuntu mono*
+  - *dense* yet cute
+     - really great at scrunching up a bunch of terminal output
+  - *perfect for terminals*
+    - it reminds of the default one on macos's terminal app
+
+*** narrow (but not cute)
+
+(inconsolata)
+
+*** the rest
+
+**** bitmap fonts
+
+i think only looks good in one size, no scaling 
+
+cozette <-?- proggy fonts
+  - proggy clean 16
+    - tiny, pixel-font-like, indeed very clean!
+
+
+**** recent finds on programmingfonts.org to try
+
+consolamono
+
+code new roman
+
+adwaita mono
+  - gnome 2025
+
+**** the rest
+
 
 cascadia mono/code
   - has a light version
@@ -295,19 +413,7 @@ hasklig
     - https://github.com/ryanoasis/nerd-fonts/tree/master/src/unpatched-fonts/Hasklig
       - somewhere in-between source code pro regular and light
 
-**monofoki**
-  - more sans-seriphy
-  - a lot of small changes, usually for the better
-    - not sure how i feel about this 'm' though..
-  - branches from mononoki, 50 commits behind, 200+ ahead
-
-**mononoki**
-  - a cute, unique, small font
-  - a more open-feeling consolas
-  - the bold is great, very sans-serif
-  - slightly wider and less seriphy than consolas, making it feel more comfortable
-  - designed for code review, as "every character is designed to be clearly distinguishable
-
+ 
 iosevka
   - slender: thin 'n tall, reminds me of monaco on a mac
   - ...i don't like it at all! feels scrunched by width
@@ -322,6 +428,7 @@ fira code =? jetbrains mono
   - adds space width, adds some serif-ness, probably has code-related glyphs
   - i prefer mono
 
+  
 JetBrains (sans) mono
   - a cute robotic version of dejavu, with long characters shortened nicely
 
@@ -356,7 +463,8 @@ Cantarell
 Cousine
   - squashes the f and l, i prefer it longer
   - too wide
-
+  - Google's mono-spaced font for chromeos
+    
 Anonymous Pro
   - a bit serify, gothic, very round
 
@@ -403,7 +511,7 @@ lilex
   - eh.. has some seriphy robotiness to it
 
 
-
+** the rest
 
 vintage terminal style fonts:
 Dina
@@ -437,9 +545,7 @@ font
 
 
 
-notes:
-
-otf vs ttf:
+* otf vs ttf:
 
 basically: mac os doesn't care for ttf, all look the same. windows will render ttf. ttf is capable of better hinting code but requires more effort on part of the font designers 
 
