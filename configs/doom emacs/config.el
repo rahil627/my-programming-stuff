@@ -755,10 +755,12 @@
           ;;     
           doom-variable-pitch-font "Roboto" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
           ;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
-          doom-big-font "Roboto"
+          ;;  - TODO: try coding with it, def worth the beauty! also, it makes code very narrow!
+          doom-big-font "Roboto" ;; FIXME: "could not resize 'doom-serif-font' for some reason"
           ;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
           ;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
           doom-serif-font "DejaVu Serif" ;; vs Noto Serif, Caladea, Carlito
+          ;; NOTE: also an intereting experience... back when code was printed in fancy serif..
           )
     )
    ;; (doom--system-windows-p
@@ -773,24 +775,36 @@
   
   ;; custom fonts
 
-  ;; TODO: try bront's modded dejavu sans mono and ubunto mono
-  
   ;; battle of the cute
+
+  ;; (setq doom-font "Agave") ; d:10 nice! very cute. though maybe too cute to read.. lol
+  ;; (setq doom-font "Agave-11") ; also nice! big. funky!
+  ;;   - can be rough reading plain text, otherwise got an earthbound feeling!
+
+  ;; (setq doom-font "SeriousShanns") ; BUG: showing italics version.. though nice!
+
+  ;; (setq doom-font "UbuntuMono-Bront-10") ; d: 10, too small (in height), though readable!
+  (setq doom-font "UbuntuMono-Bront-11") ; NEW CLASSIC, GREAT! FAR less noisy than agave!
+  ;; (setq doom-font "UbuntuMono-Bront-12") ; a bit wider..
+  ;; (setq doom-font "UbuntuMono-Bront-13") ; still great!
+  ;;   - TODO: download the orginal one, to get styles
+  
+  ;; (setq doom-font "DejaVu Sans Mono-9") ; d: 9, GREAT! kinda cute too! very readable, VERY narrow, excellent for long code
+  ;; (setq doom-font "DejaVu Sans Mono-10") ; feels too wide here..
+  ;; (setq doom-font "DejaVu Sans Mono-11") ; big-mode, quite wide here, but still nice 'n comfy..
+  ;; (setq doom-font "DejaVu Sans Mono-Bront-9") ; NOTE: lacks styles: bold/italics will be fuzzy
+  ;; (setq doom-font "DejaVu Sans Mono-Bront-10")
+
   ;; (setq doom-font "monofoki-9") ; great terminal font too!
-  ;; (setq doom-font "monofoki-10") ; PERSONAL CLASSIC; line-height fixed, taller, also a great terminal font!
+  ;; (setq doom-font "monofoki-10") ; PERSONAL CLASSIC, line-height fixed, taller, also a great terminal font!
   ;; (setq doom-font "monofoki-11")
   ;; (setq doom-font "monofoki-12") ; incredible 12/13/16
                               ; also great when scaled in writeroom-mode
                               ; ADVENTURE TIME!!
                               ; removes a few seriphs, makes m cuter
   ;; (setq doom-font "mononoki") ; BUG: less line height.. maybe too scrunched up.. def something wrong about it..
-  ;; (setq doom-font "Agave") ; d:10 nice! very cute. though a little funky to read tho.. 
-  ;; (setq doom-font "Agave-11")
-  ;; (setq doom-font "SeriousShanns") ; BUG: showing italics version.. though nice!
-  ;; (setq doom-font "UbuntuMono-Bront-10") ; d: 10, too small (in height), though readable!
-  ;; (setq doom-font "UbuntuMono-Bront-11") ; GREAT!
-  ;; (setq doom-font "UbuntuMono-Bront-12") ; a bit wider..
-  ;; (setq doom-font "UbuntuMono-Bront-13") ; still great!
+
+  (setq doom-font "OfficeCodePro-10") ; d: 11?, PERSONAL CLASSIC, kinda cute(?) yet COMFY adds a few cute seriphs to source code pro
 
   
   ;; bitmap
@@ -799,19 +813,8 @@
   ;;                                     ; INCREDIBLE at tiny sizes
 
   ;; classics
-  (setq doom-font "DejaVu Sans Mono-9") ; GREAT! very readable
-  ;; (setq doom-font "DejaVu Sans Mono") ; d: 10; cute! too wide, yet still good at small sizes
-  ;; (setq doom-font "DejaVu Sans Mono-11") ; big-mode, quite wide here, but still nice 'n comfy..
-  ;; (setq doom-font "DejaVu Sans Mono-Bront-9") ; bold might be messed up.. for tags/todos
-  ;; (setq doom-font "DejaVu Sans Mono-Bront-10")
-  ;; (setq doom-font "Source Code Pro") ; d: 9 zen-mode, like focus editor! though, 12/16 are too small/big
-  ;;   - wayyy too wide
+  ;; (setq doom-font "Source Code Pro-10") ; d: 9, wayyy too wide and scrunched up!
   ;; (setq doom-font "Inconsolata") ; d: 10 CLASSIC, comforable, even at default small size
-
-  ;; TODO: try these again with various sizes
-  ;;   - not doom's size functions
-  ;;   - i could use the focus for now..
-  ;; (setq doom-font "OfficeCodePro") ; adds a few seriphs
 
   ;; newer ones to try
   ;; (setq doom-font "CommitMono-10") ; great! round, seems like a cousin to inconsolata and source code pro.. with less line height
@@ -821,7 +824,7 @@
   
   ;; eval testing area (<3 emacs)
   ;; (describe-fontset)
-  ;; (setq doom-font "DejaVu Sans Mono")
+  ;; (setq doom-font "DejaVu Serif")
   ;; (doom/reload-font)
   ;; (doom/increase-font-size 1) ; these suck :/ set font size directly with font
   ;; (doom/decrease-font-size 1)
