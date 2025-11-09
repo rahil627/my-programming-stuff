@@ -858,7 +858,7 @@
   ;; (setq doom-font "SeriousShanns") ; BUG: showing italics version.. though nice!
 
   ;; (setq doom-font "UbuntuMono-Bront-10") ; d: 10, too small (in height), though readable!
-  (setq doom-font "UbuntuMono-Bront-11") ; NEW CLASSIC, GREAT! FAR less noisy than agave!
+  (setq doom-font "UbuntuMono-Bront-11") ; NEW CLASSIC?, GREAT! FAR less noisy than agave!
   ;; (setq doom-font "UbuntuMono-Bront-12") ; a bit wider..
   ;; (setq doom-font "UbuntuMono-Bront-13") ; still great!
   ;;   - TODO: download the orginal one, to get styles
@@ -878,7 +878,9 @@
                               ; removes a few seriphs, makes m cuter
   ;; (setq doom-font "mononoki") ; BUG: less line height.. maybe too scrunched up.. def something wrong about it..
 
-  (setq doom-font "OfficeCodePro-10") ; d: 11?, PERSONAL CLASSIC, kinda cute(?) yet COMFY adds a few cute seriphs to source code pro
+  ;; (setq doom-font "OfficeCodePro-10")
+  ;; (setq doom-font "OfficeCodePro-11") ; d: 11?, PERSONAL CLASSIC, kinda cute(?) yet COMFY adds a few cute seriphs to source code pro
+
 
   
   ;; bitmap
