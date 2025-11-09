@@ -21,7 +21,7 @@ simple
   - see [config.el]
 
 
-## helix:
+## helix
   - see config for more info
 **aurara**
   - **my custom theme**
@@ -52,7 +52,7 @@ everforest-dark
 
 **aura**
   - the best i've seen so far..
-  - dark (soft text)
+  - dark (soft text) variant
 
 decent:
 noctis
@@ -109,20 +109,19 @@ huacat
 
 
 
-# terminal:
+# terminal
 ## wezterm
   - neon night (goph)
     -  using this, but miss the old neon pink of cyberpunk
   - aura (goph)
   - adventure time
  
-## windows terminal:
+## windows terminal
 https://windowsterminalthemes.dev/
   - cyberpunk 2077
 
-## linux terminals:
-
-chromeos native 'terminal' app
+## linux terminals
+### chromeos native 'terminal' app
 
   - NOTE: this app strangely comes with it's own set of fonts
     - TODO: where is it stored..??
@@ -158,9 +157,15 @@ chromeos native 'terminal' app
 
 
 
-# these were the themes i liked, from when i used linux/nvim from an ipad mini 2
+
+
+
+
+
+# nvim 
+these were the themes i liked, from when i used linux/nvim from an ipad mini 2
 ## my top 4
-Plug 'sonph/onehalf', { 'rtp': 'vim' } “like gruvbox but with slightly lighter contrast
+Plug 'sonph/onehalf', { 'rtp': 'vim' } like gruvbox but with slightly lighter contrast
   - onehalflight and onehalfdark
 Plug 'junegunn/seoul256.vim' “even less contrast than onehalfdark
 Plug 'NLKNguyen/papercolor-theme' “more contrast than gruvbox!
@@ -180,9 +185,12 @@ base16-tomorrow-night-eighties.sh
 base16-tomorrow-night.sh
 
 
+
 # from some really, really old file
 textmate - monokai - sexiest theme ever
 notepad++ - bespin, monokai
 vim - wombat
+  - though, i def didn't use vim back then..?
+  - maybe it was just in the title of the theme.. and i didn't know what vim was.. lol
 visual studio - ragnarok gray by tomas restrepo
 komodo - gray
