@@ -516,6 +516,72 @@
 
 
 
+;;; hl-todo
+  (after! hl-todo 
+    ;; tags
+    ;; https://orgmode.org/manual/Setting-Tags.html
+    ;; C-c C-c (org-set-tags-command)
+    ;;   - when at head-line
+    ;; C-c C-q (org-set-tags-command)
+    ;; TODO: is this different from todo-items..??
+    ;;  - org-tag-alist is empty..
+    ;; NOTE: <-- i think this is a tag, head-line tags, which represent sequential states
+    ;;  - no..?? WTF is this??
+    ;;    - hl-todo
+    ;;
+    ;; i think have to update hl-todo--keywords
+    ;; TODO: INCOMPLETE: set colors
+    ;; FAIL: quotes trouble... :/
+    ;;     (setq 
+    ;;      hl-todo--keywords (append 'hl-todo--keywords '(
+    ;;    ("IDEA"   . "#d0bf8f")
+    ;;    ("WARN"   . "#d0bf8f")
+    ;;    ("WARNING"   . "#d0bf8f")
+    ;;    ("BEWARE"   . "#d0bf8f")
+    ;;    ("INCOMPLETE"   . "#d0bf8f")
+    ;;    ("TEMPFIX"   . "#d0bf8f")
+    ;; ;;   '(("HACK"   . "#d0bf8f")
+    ;;    ("ERROR"   . "#d0bf8f")
+    ;;    ("FAIL"   . "#d0bf8f")
+    ;;    ("HALP"   . "#d0bf8f")
+    ;;    ("WTF"   . "#d0bf8f")
+    ;;    ("TEMP"   . "#d0bf8f")
+
+    ;;     ;; IDEA
+    ;;     ;; WARN/ING/BEWARE
+    ;;     ;; FIXME TEMPFIX/HACK
+    ;;     ;; ERROR/FAIL HALP WTF
+    ;;     ;; TEMP
+    ;;     )))
+
+
+    ;; from hl-todo.el
+    ;;   - seems like doom moved a lot to org-mode..
+    ;;   - makes sense as they are common words..
+    ;; (defcustom hl-todo-keyword-faces
+    ;;   '(("HOLD"   . "#d0bf8f")
+    ;;     ("TODO"   . "#cc9393")
+    ;;     ("NEXT"   . "#dca3a3")
+    ;;     ("THEM"   . "#dc8cc3")
+    ;;     ("PROG"   . "#7cb8bb")
+    ;;     ("OKAY"   . "#7cb8bb")
+    ;;     ("DONT"   . "#5f7f5f")
+    ;;     ("FAIL"   . "#8c5353")
+    ;;     ("DONE"   . "#afd8af")
+    ;;     ("NOTE"   . "#d0bf8f")
+    ;;     ("MAYBE"  . "#d0bf8f")
+    ;;     ("KLUDGE" . "#d0bf8f")
+    ;;     ("HACK"   . "#d0bf8f")
+    ;;     ("TEMP"   . "#d0bf8f")
+    ;;     ("FIXME"  . "#cc9393")
+    ;;     ("XXXX*"  . "#cc9393"))
+    ;;   "An alist mapping keywords to colors/faces used to display them.
+
+    ) ; hl-todo
+
+
+
+;;; org-mode
   (after! org
 
 
@@ -524,18 +590,6 @@
 ;;   - add: TEMPFIX, HALP, BEWARE
 ;;   - allows optional ':' in front of it
 
-
-    ;; tags
-    ;; https://orgmode.org/manual/Setting-Tags.html
-    ;; C-c C-c (org-set-tags-command)
-    ;;   - when at head-line
-    ;; C-c C-q (org-set-tags-command)
-    ;; TODO: is this different from todo-items..??
-    ;;
-    ;; NOTE: <-- i think this is a tag, head-line tags, which represent sequential states
-    ;; 
-    ;; BEWARE, IDEA, HALP(?), 
-    
     ;; https://orgmode.org/manual/TODO-Basics.html
 
 
