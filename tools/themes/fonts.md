@@ -6,7 +6,20 @@ double-click .ttf file -> install button
 open the font-name-variable.wght file and click install
   - it will install all of the fonts (found in the 'static' folder) automatically
 
-## arch-linux
+## linux
+### debian
+(including chromeos's debian container)
+
+NOTE: for chromeos, it will only be available to linux apps, not to chromeos/android apps
+
+mkdir -p ~/.local/share/fonts
+  - and save them here
+
+fc-cache -fv
+  - load and see all font dirs
+  
+
+### arch-linux
 for arch, just use package managers to install them
 see https://wiki.archlinux.org/title/fonts
 
