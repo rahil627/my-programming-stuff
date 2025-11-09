@@ -515,9 +515,8 @@
   ;; then bind centaur-tabs-forward/backward
 
 
-
 ;;; hl-todo
-  (after! hl-todo 
+   (after! hl-todo 
     ;; tags
     ;; https://orgmode.org/manual/Setting-Tags.html
     ;; C-c C-c (org-set-tags-command)
@@ -575,7 +574,7 @@
     ;;     ("TEMP"   . "#d0bf8f")
     ;;     ("FIXME"  . "#cc9393")
     ;;     ("XXXX*"  . "#cc9393"))
-    ;;   "An alist mapping keywords to colors/faces used to display them.
+    ;;   An alist mapping keywords to colors/faces used to display them.
 
     ) ; hl-todo
 
@@ -585,10 +584,10 @@
   (after! org
 
 
-    ;; update org tags: TODO, OKAY, YES, etc.
-;;   - delete most of them
-;;   - add: TEMPFIX, HALP, BEWARE
-;;   - allows optional ':' in front of it
+    ;; TODO: update org tags: TODO, OKAY, YES, etc.
+    ;;  - delete most of them
+    ;;  - add: TEMPFIX, HALP, BEWARE
+    ;;  - allows optional ':' in front of it
 
     ;; https://orgmode.org/manual/TODO-Basics.html
 
@@ -596,15 +595,15 @@
     ;; https://orgmode.org/manual/Workflow-states.html
     ;;  C-c C-t cycles an entry from ‘TODO’ to ... and finally to ‘DONE’ and ‘CANCELED'
     ;;  NOTE: shift
-    ;;  BUG: maybe '((sequence ...)) with two parens?
-    (setq org-todo-keywords
-          ;; '((sequence "TODO" "FIXME" "ERROR" "WARNING" "HALP" "|" "DONE" "NVM")
+    ;;  BUG: hmmmm??
+    (setq org-todo-keywords '(
+          ;; (sequence "TODO" "FIXME" "ERROR" "WARNING" "HALP" "|" "DONE" "NVM")
           ;;   - TODO: this sequence doesn't make sense.. move to hl-todo
 
-          ;; '((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+          ;; (sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
           ;;   - doom's original sequence actually makes more sense..
 
-            (sequence "TODO" )
+            (sequence "TODO")
           ;;   - TEMP: keep it simple for now
 
           
