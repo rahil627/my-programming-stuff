@@ -768,42 +768,70 @@
    )
 
   ;; (setq doom-font "Cousine") ; i think it falls-back to this.. especially if you're missing a font-size and use increase/decrease-font-size
-  ;; (setq doom-font "DejaVu Sans Mono") ; cute!, but a bit strainful at the default size.. the font size works incredibly well in mode-line/tab-line etc.
-
+  ;; (setq doom-font "DejaVu Sans Mono") ; d: 10; cute!, very wide at 11
+  ;; does chromeos come with ubuntu mono?
+  
   ;; custom fonts
-  (setq doom-font "monofoki-12") ; incredible 12/13/16
+
+  ;; TODO: try bront's modded dejavu sans mono and ubunto mono
+  
+  ;; battle of the cute
+  ;; (setq doom-font "monofoki-9") ; great terminal font too!
+  ;; (setq doom-font "monofoki-10") ; PERSONAL CLASSIC; line-height fixed, taller, also a great terminal font!
+  ;; (setq doom-font "monofoki-11")
+  ;; (setq doom-font "monofoki-12") ; incredible 12/13/16
                               ; also great when scaled in writeroom-mode
                               ; ADVENTURE TIME!!
-  ;; (setq doom-font "monofoki-13")
-  ;;
+                              ; removes a few seriphs, makes m cuter
+  ;; (setq doom-font "mononoki") ; BUG: less line height.. maybe too scrunched up.. def something wrong about it..
+  ;; (setq doom-font "Agave") ; d:10 nice! very cute. though a little funky to read tho.. 
+  ;; (setq doom-font "Agave-11")
+  ;; (setq doom-font "SeriousShanns") ; BUG: showing italics version.. though nice!
+  ;; (setq doom-font "UbuntuMono-Bront-10") ; d: 10, too small (in height), though readable!
+  ;; (setq doom-font "UbuntuMono-Bront-11") ; GREAT!
+  ;; (setq doom-font "UbuntuMono-Bront-12") ; a bit wider..
+  ;; (setq doom-font "UbuntuMono-Bront-13") ; still great!
+
+  
+  ;; bitmap
+  ;; NOTE: this honestly may be the way to go.. wow.. it's crisp on a shitty old chromebook!
+  ;; (setq doom-font "CozetteVector-10") ; NOTE: bitmap font: limited to size 10, no styling (bold, italic)
+  ;;                                     ; INCREDIBLE at tiny sizes
+
+  ;; classics
+  (setq doom-font "DejaVu Sans Mono-9") ; GREAT! very readable
+  ;; (setq doom-font "DejaVu Sans Mono") ; d: 10; cute! too wide, yet still good at small sizes
+  ;; (setq doom-font "DejaVu Sans Mono-11") ; big-mode, quite wide here, but still nice 'n comfy..
+  ;; (setq doom-font "DejaVu Sans Mono-Bront-9") ; bold might be messed up.. for tags/todos
+  ;; (setq doom-font "DejaVu Sans Mono-Bront-10")
+  ;; (setq doom-font "Source Code Pro") ; d: 9 zen-mode, like focus editor! though, 12/16 are too small/big
+  ;;   - wayyy too wide
+  ;; (setq doom-font "Inconsolata") ; d: 10 CLASSIC, comforable, even at default small size
+
   ;; TODO: try these again with various sizes
   ;;   - not doom's size functions
-  ;; (setq doom-font "mononoki") ; less line height.. maybe too scrunched up.. def something wrong about it..
-  ;; (setq doom-font "Source Code Pro") ; zen-mode, like focus editor! though, 12/16 are too small/big
-  ;;   - too wide at default size, great when big though..
-  ;;     - TODO: great for zen/writeroom-mode
   ;;   - i could use the focus for now..
   ;; (setq doom-font "OfficeCodePro") ; adds a few seriphs
 
-  
-  ;; TODO: try text-scale-mode since zen scales text really well..
+  ;; newer ones to try
+  ;; (setq doom-font "CommitMono-10") ; great! round, seems like a cousin to inconsolata and source code pro.. with less line height
+  ;; (setq doom-font "RedditMono-10") ; quite nice, though a bit wide, and roboty
 
+  ;; TODO: try text-scale-mode since zen scales text really well..
   
   ;; eval testing area (<3 emacs)
   ;; (describe-fontset)
   ;; (setq doom-font "DejaVu Sans Mono")
   ;; (doom/reload-font)
-  ;; (doom/increase-font-size 1)
+  ;; (doom/increase-font-size 1) ; these suck :/ set font size directly with font
   ;; (doom/decrease-font-size 1)
   ;; (doom/reset-font-size)
   ;; NOTE: can use zen (spc t z) to toggle between a larger font size
 
   
-  ;;(doom/increase-font-size)
-  ;;(doom/increase-font-size) ;; twice to skip a missing size..
-  ;;  - NOTE: doesn't work here, though it works if i run it when the program has started..
   ;;  - children/elderly mode
   ;;  - spc-t-b - big font mode
+  ;;    - TODO: customize it! 
   ;;  - maybe can help with focus..? or maybe too big..
 
   
