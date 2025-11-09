@@ -95,7 +95,6 @@ bedstead
 main programming:
 0xproto
   - closer to cascadia code
-anonymous pro
 aurlent mono
 comingocode
   - looks very eye-pleasing
@@ -457,6 +456,9 @@ source code pro
   - git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
   - fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 
+anonymous pro
+  - seriphy, round, just feels off
+  
 Cantarell
   - used by Manjaro for ui elements
 
