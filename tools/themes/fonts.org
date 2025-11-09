@@ -1,13 +1,13 @@
-# install
-## windows
+* install
+** windows
 double-click .ttf file -> install button
   - usually four files: regular, bold, italic, bolditalic
 
 open the font-name-variable.wght file and click install
   - it will install all of the fonts (found in the 'static' folder) automatically
 
-## linux
-### debian
+** linux
+*** debian
 (including chromeos's debian container)
 
 NOTE: for chromeos, it will only be available to linux apps, not to chromeos/android apps
@@ -19,7 +19,7 @@ fc-cache -fv
   - load and see all font dirs
   
 
-### arch-linux
+*** arch-linux
 for arch, just use package managers to install them
 see https://wiki.archlinux.org/title/fonts
 
@@ -38,7 +38,7 @@ the way to install without using package manager, for other distros:
 
 
 
-# contemporary lists of fonts
+* contemporary lists of fonts
 https://www.programmingfonts.org/
   - perfect editor view
   - contains most popular contemporary fonts
@@ -73,7 +73,7 @@ https://kinsta.com/blog/best-programming-fonts/
 also see powerline fonts
 
 
-# fonts to try:
+* fonts to try:
 gamey fonts
 bigblue terminal
   - arcade font
@@ -136,11 +136,11 @@ https://fonts.adobe.com/search?query=code
 
 
 
-# current settings
+* current settings
 
 NOTE: the color theme of the editor effects the text's color contrast which can feel like the font-weight! (try Aura Dark (soft text) color theme in vs-code)
 
-## windows, OLED laptop
+** windows, OLED laptop
 vs-code
   - office code pro 11
   - consolas 12
@@ -157,7 +157,7 @@ terminal
     - powershell -> advanced -> text antialiasing
     - without anti-aliasing it look clearer, but fonts with curves struggle
 
-## shitty chromebook
+** shitty chromebook
   - using default terminal app
     - ubuntu mono 14
       - this one seems to work really well, similar to monofoki (especially the m character), whereas many others suffer from various problems, from being unreadable because the screen sucks, or just squashing line height upon font size, or just plain too wide.
@@ -174,7 +174,7 @@ fixed-width: roboto
 
 
 
-# current favorites:
+* current favorites:
 
 TODO: need to try consolas in a lighter weight
 TODO try source code pro with a more narrow width
@@ -238,7 +238,7 @@ jetbrains (sans) mono <- dejavu sans mono
 
 
 
-# main list
+* main list
 maple mono
   - nice 'n thick TODO: try the "light" version
   - has a cute jrpg feel to it, funny little 'a'
