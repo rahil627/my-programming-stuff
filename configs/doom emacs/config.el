@@ -142,10 +142,6 @@
 ;;   - etc.
 
 
-;; update org tags: TODO, OKAY, YES, etc.
-;;   - delete most of them
-;;   - add: TEMPFIX, HALP, BEWARE
-;;   - allows optional ':' in front of it
 
 
 
@@ -520,6 +516,77 @@
 
 
 
+  (after! org
+
+
+    ;; update org tags: TODO, OKAY, YES, etc.
+;;   - delete most of them
+;;   - add: TEMPFIX, HALP, BEWARE
+;;   - allows optional ':' in front of it
+
+
+    ;; tags
+    ;; https://orgmode.org/manual/Setting-Tags.html
+    ;; C-c C-c (org-set-tags-command)
+    ;;   - when at head-line
+    ;; C-c C-q (org-set-tags-command)
+    ;; TODO: is this different from todo-items..??
+    ;;
+    ;; NOTE: <-- i think this is a tag, head-line tags, which represent sequential states
+    ;; 
+    ;; BEWARE, IDEA, HALP(?), 
+    
+    ;; https://orgmode.org/manual/TODO-Basics.html
+
+
+    ;; https://orgmode.org/manual/Workflow-states.html
+    ;;  C-c C-t cycles an entry from ‘TODO’ to ... and finally to ‘DONE’ and ‘CANCELED'
+    ;;  NOTE: shift
+    ;;  BUG: maybe '((sequence ...)) with two parens?
+    ;; (setq org-todo-keywords
+          ;; '((sequence "TODO" "FIXME" "ERROR" "WARNING" "HALP" "|" "DONE" "NVM"))
+          ;;  this sequence doesn't make sense..
+          ;;  - FIXME vs BUG
+
+          ;; ;; '(sequence "YES" "NO" "OKAY" "MAYBE" "|" "FINISHED")
+          ;; ;;  - these came with doom emacs.. i might prefer check and x marks
+          ;; ;;  - more mneunomic, if you use shortcuts..?
+
+          ;; ;; '(sequence "[\x2714]" "x") ;; TODO: vs c, bar at beginning?
+          ;; ;;   - these also came with doom emacs
+          ;; ;;  - flip check-mark symbol (unicode) for check, not X
+          ;; ;;    - also finally understood that X meant check..
+          ;; ;;  - BUG: not sure if you can search for this in the search engine thing..
+          ;; )
+
+    ;; inspect org-todo-keywords
+    ;; 
+    ;; Original Value
+    ;; ((sequence "TODO" "DONE"))
+    ;;   - nice 'n simple!
+    ;;     - good job vanilla :)
+    ;;     
+    ;; Value
+    ;; ((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+    ;;  (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
+    ;;  (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
+
+    ;; Original Value
+    ;; ((sequence "TODO" "DONE"))Value
+    ;; ((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+    ;;  (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
+    ;;  (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
+
+    
+    (setq org-todo-keyword-faces
+          '(("ERROR" . (:foreground "red" :weight bold))
+            ("WARNING" . (:foreground "orange" :weight bold))
+            ("FIXME" . "red")))
+
+    ;; https://orgmode.org/manual/Global-TODO-list.html
+    
+    
+    )
 
 
 
