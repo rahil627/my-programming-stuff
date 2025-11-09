@@ -603,8 +603,13 @@
 ;; NOTE: use consult-theme to try them all out on-the-fly
 
 
+
+;; NOTE use solaire-mode to remove background color tinge
+;; adding to (spc t s)
+;;   - TODO: create functions to dim/adjust the text used for plain text, comments, and all text
+
 ;; bright: light
-;; dim: outrun
+;; dim: outrun <-- MAIN THEME
 ;; late night: solarized-dark
 
 ;; light:
@@ -614,30 +619,31 @@
 
 ;; purple:
 (setq doom-theme 'doom-outrun-electric) ; high-contrast, hard white text
-                                        ; this one is amazing, similar to aura, especially with night-mode / warm colors!!
+                                        ; PERFECT, similar to aura, especially with night-mode / warm colors!!
+                                        ; BY FAR THE BEST THEME
+                                        ;   - (of the ones provided by doom)
+
+;; (setq doom-theme 'doom-shades-of-purple) ; childishly hideious, very bright back-light
 ;; (setq doom-theme 'feather-dark) ; low-contrast, slightly-visible comments, purple tinge, that lovable ugly one from helix: boo-berry! lol
-;; (setq doom-theme 'doom-shades-of-purple) ; childish, very bright back-light
-;; (setq doom-theme 'doom-laserwave)
+                                  ; for when you want purple-tinged plain text back (from the helix days)
+;; (setq doom-theme 'doom-laserwave) ; monokai with some pink in it
 
 
 ;; unique:
-;; (setq doom-theme 'doom-manegarm) ; zelda, dark forest vibes, quite unique
+;; (setq doom-theme 'doom-manegarm) ; zelda, dark forest vibes
 ;;  -  TODO: need to provide alt with dim comments, though the whole theme is quite dim already..
 ;; (setq doom-theme 'doom-solarized-dark) ; very low-contrast, for the late night
-;; (setq doom-theme 'doom-solarized-dark-high-contrast) ; brighter italicized comments, notably changes pink functions to blue
+;; (setq doom-theme 'doom-solarized-dark-high-contrast) ; brighter italicized comments, darker background, notably changes pink functions to blue
 
 ;; oldies with cool (blue'ish) colors:
-;; (setq doom-theme 'monokai-ristretto) ; a nice variant and revival of a classic
-;; (setq doom-theme 'tokyo-night) ; a classic alt between one and outrun-electric
+;; (setq doom-theme 'doom-monokai-ristretto) ; a nice variant and revival of a classic
+;; (setq doom-theme 'doom-tokyo-night) ; a classic
+;; (setq doom-theme 'doom-moonlight) ; brighter comments and background
+;;   - NOTE: great moonlight color for comments
 ;; (setq doom-theme 'doom-one) ; doom's default, too grey
-;;   - doom-vibrant, a higher-contrast variant
-;; ayu-dark seems fine too..
+;;   - doom-vibrant, just changes pink functions to teal..?
 
 
-
-;; solaire-mode?
-;; just removes background color tinge
-;; adding to (spc t s)
 
 ;; NOTE: can use consult-theme to try out all the themes
 ;; the ones prefixed with doom- are probably a bit more vetted
@@ -662,13 +668,13 @@
 ;; NOTE: all of these can be dimmed by "night-mode" on laptops, which make the colors "warmer", making more themes more tolerable, or even more comfortable..!
 
 ;; manegarm, dark forest green, zelda vibes!!
-;; this one's actually legit.. someone put some love into this one!!
+;;   - this one's actually legit.. someone put some love into this one!!
 
 ;; doom-outrun-electric, my favorite included theme, very high-contrast, hard, neon vibes
 ;;   - diff doesn't look good..
 
 ;; laserwave, neon pink, unfortunately plain text too bright
-;; maybe not too difficult to edit it..
+;;   - maybe not too difficult to edit it..
 
 ;;doom-solarized-dark, great! very low contrast, now with hot pink 'n purple!!
 ;; variants: *dark-high-contrast*, light, oksolar variants)
@@ -679,29 +685,29 @@
 ;;   - also quite unique, the rest look like atom-material variants
 
 ;; feather-dark, fun, just comments are hard to see..
-;; quite simiolar to helix's default theme.. not bad..!
-;; suffers from different header text size in org-mode
+;;   - quite simiolar to helix's default theme.. not bad..!
+;;   - suffers from different header text size in org-mode
+
+;; snazzy, a variant of darcula?
+;;  - this one was rather unique on helix, plain text too bright
 
 ;; doom-tokyo-night, my classic fall-back
-;; between solarized-dark and outrun-electric
+;;   - between solarized-dark and outrun-electric
 ;; doom-moonlight, lighter background, lighter comments, a more glowy/jellyfish feeling
 ;; doom-palenight, bright background for lower contrast, too bright
-;; doom-city-lights, ??
+;; doom-city-lights, a variant of tokyo night?
 
 ;; doom-shades-of-purple, a bit of an overload by the bright background and bright purple comments.. otherwise, quite fun 'n funky
-;; text in txt/org files are still white :/
-;; similar to adventure time
+;;   - text in txt/org files are still white :/
+;;   - similar to adventure time
 ;; ephemerel, background may be too bright, lots of use of bold is interesting.. noctis vibes
 
-;; doom-one, doom's default, based on atom/github theme
-;; too gray, too boring
+;; doom-one, doom's default, based on atom/github theme, too gray, too boring
 ;; doom-vibrant, a blue-hue variant of doom-one
 ;; doom-tomorrow-night, a solid upgrade from gruvbox
 
 ;; horizon, a good monokai vaiant, except red vars and bright background
 
-;; - snazzy
-;;   - this one was rather unique on helix, plain text too bright
 
 
 
