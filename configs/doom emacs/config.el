@@ -1411,7 +1411,6 @@
    
 
    ;; chromebook reload key (f3)
-   ;; or could use for doom/reload and restart doom/restart-and-restore..
    ;; TODO: could use for switch-buffer/project/workspace/frame/window(?)..
    '("<XF86Reload>" . "C-x k" ) ;; kill-buffer NOTE: thankfully triggers mini-buffer search
    '("C-<XF86Reload>" . +workspace/close-window-or-workspace ) ;; close/quit windows, not kill (as you're not actually killing anything..)
@@ -1796,10 +1795,10 @@
     '("q Q" . nil)
     '("q K" . nil) ;; could bind to just kill-emacs (no save)
     
-    '("q r" . doom/restart-and-restore) ;; was doom/restart
-    '("q R" . doom/reload) ;; or c for config
-    ;;  - TODO: seems to run 'doom sync -B -e', which requires the internet.. :/
-
+    ;; '("q r" . doom/restart-and-restore) ;; was doom/restart
+    ;; '("q R" . doom/reload) ;; or c for config
+    ;;  - seems to run 'doom sync -B -e', which requires the internet.. :/
+    ;;  - TODO: maybe can just add the whole c-h r key-map here..
     
     ;;; spc o
 
