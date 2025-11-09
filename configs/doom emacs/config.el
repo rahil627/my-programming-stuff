@@ -543,23 +543,33 @@
     ;;  C-c C-t cycles an entry from ‘TODO’ to ... and finally to ‘DONE’ and ‘CANCELED'
     ;;  NOTE: shift
     ;;  BUG: maybe '((sequence ...)) with two parens?
-    ;; (setq org-todo-keywords
-          ;; '((sequence "TODO" "FIXME" "ERROR" "WARNING" "HALP" "|" "DONE" "NVM"))
-          ;;  this sequence doesn't make sense..
-          ;;  - FIXME vs BUG
+    (setq org-todo-keywords
+          ;; '((sequence "TODO" "FIXME" "ERROR" "WARNING" "HALP" "|" "DONE" "NVM")
+          ;;   - TODO: this sequence doesn't make sense.. move to hl-todo
 
-          ;; ;; '(sequence "YES" "NO" "OKAY" "MAYBE" "|" "FINISHED")
-          ;; ;;  - these came with doom emacs.. i might prefer check and x marks
-          ;; ;;  - more mneunomic, if you use shortcuts..?
+          ;; '((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+          ;;   - doom's original sequence actually makes more sense..
 
-          ;; ;; '(sequence "[\x2714]" "x") ;; TODO: vs c, bar at beginning?
-          ;; ;;   - these also came with doom emacs
-          ;; ;;  - flip check-mark symbol (unicode) for check, not X
-          ;; ;;    - also finally understood that X meant check..
-          ;; ;;  - BUG: not sure if you can search for this in the search engine thing..
-          ;; )
+            (sequence "TODO" )
+          ;;   - TEMP: keep it simple for now
 
-    ;; inspect org-todo-keywords
+          
+            (sequence "|" "YES" "NO" "OK" "MAYBE" "IUNNO" "KILL")
+          ;;   - these came with doom emacs..
+          ;;     - it's a bit wordy, and in all caps.. but i believe in emacs..
+          ;;     - it's also more mneunomic, in case you use shortcuts..
+          ;;   - i might prefer check (or c) and x marks over YES and NO
+          ;;     - "[\x2714]" "x"
+          ;;     - "c" "x"
+
+          ;;   i trashed the [ ]/[-]/[x] thing
+          ;;   - these also came with doom emacs
+          ;;   - flip check-mark symbol (unicode) for check, not X
+          ;;     - also finally understood that X meant check..
+          ;;   - BUG: not sure if you can search for this in the search engine thing..
+          ))
+
+    ;; from inspecting org-todo-keywords
     ;; 
     ;; Original Value
     ;; ((sequence "TODO" "DONE"))
@@ -568,13 +578,17 @@
     ;;     
     ;; Value
     ;; ((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+    ;;   - i was using KILL the wrong way..
     ;;  (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
     ;;  (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
 
     ;; Original Value
     ;; ((sequence "TODO" "DONE"))Value
+
     ;; ((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+    ;;   - loop? something you must keep doing? lol
     ;;  (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
+    ;;    - W for what?.. lol
     ;;  (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
 
     
@@ -586,7 +600,7 @@
     ;; https://orgmode.org/manual/Global-TODO-list.html
     
     
-    )
+    ) ; org-mode
 
 
 
