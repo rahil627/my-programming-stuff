@@ -471,7 +471,7 @@
   (use-package! good-scroll ; for a far smoother experience..
     :init
     (setq good-scroll-duration 0.15 ; the further you step, the quicker you'll want this
-          good-scroll-step 200) ; d: 80 = ~3 lines, 200 = ~12 lines
+          good-scroll-step 200) ; d: 80 = ~3 lines, 200 = ~12 lines / EXACTLY 200 lines on my tiny touch-pad, from top to bottom!!
                                 ; these values are for my shitty chromebook's touchpad
     :config
     (good-scroll-mode))

@@ -124,7 +124,8 @@ https://windowsterminalthemes.dev/
 
 chromeos native 'terminal' app
 
-  - NOTE: i think this shows the fonts installed in the linux container, so that you can quickly test them!
+  - NOTE: this app strangely comes with it's own set of fonts
+    - TODO: where is it stored..??
 
   - these kinda suck..
     - but good to play with the old school standard 16 color scheme..
