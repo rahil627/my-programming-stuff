@@ -29,10 +29,19 @@ USE FOCUS EDITOR INSTEAD
 
 * personal note
 
+1.
 using emacs, i feel like i've learned quite a bit of the power of dynamic run-times, at least: introspection and eval, and how they can provide another program (a code editor) info and add bits of code to a running program (emacs itself or a seperate repl/process)
 
 next up, i think, will be more dynamic magicks via ruby (dragonruby). Adding bits of code is cool, but altering objects in a game while it's running..?? that'll be next level!!
 
+2.
+it's kind of incredible to think of how many people have helped make emacs during its 55-year life-span. *It's a text editor/program that everyone shares, that everyone is able to make their own.* I can't say that for most text editors.. nor game engines.. nor programming languages.. nor tools, nor products.
+
+in fact it seems over time there has been a bunch of things made, and a bunch of things made obsolete too. A TON of text editors, game engines, languages, tools, products, have come and gone. Very few have remained, and emacs is one those rare exceptions. One that has evolved with time. And in many ways, not evolved!
+
+the corner-stones of its longevity are: a *plugin-system* (and eco-system) and a *small core program* (though, vanilla was considered big..), thus making it *modular*; use of a dynamic language (the simpler, the better; and also, completely dynamic is ace), *enabling people to easily customize their program/product* (without constantly building/compiling C/C++), *in addition to easily share some of those customizations via plugins; a *vm* for *portable execution* (emacs on your random android tablet!); (TODO:) and surely more..
+
+i think these concepts could apply to many programs and products, increasing their chances of survival, though, 55 years is tough to beat..
 
 * config
 
