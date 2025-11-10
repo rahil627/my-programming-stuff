@@ -821,7 +821,7 @@
     ;; (setq doom-font "Cousine")
     ;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
     ;;   - there's notably no vertical line width, making it quite compact..
-    (setq ;;doom-font "DejaVu Sans Mono" ;; TODO: turn off?
+    (setq doom-font "DejaVu Sans Mono" ;; fall-back
           ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close o Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
           ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
           ;;     - need about 14 or 15
@@ -850,17 +850,20 @@
 
   ;; battle of the cute
 
+  ;; (setq doom-font "AnnotationMono-11") ; d: 10, eh, something's off..
+  
   ;; (setq doom-font "Agave") ; d:10 nice! very cute. though maybe too cute to read.. lol
-  ;; (setq doom-font "Agave-11") ; also nice! big. funky!
-  ;;   - can be rough reading plain text, otherwise got an earthbound feeling!
+  ;; (setq doom-font "Agave-11") ; also nice! big. funky! bolds look great!
+  ;;   - can be rough reading plain text, makes me cross-eyed, otherwise got an earthbound feeling!
 
   ;; (setq doom-font "SeriousShanns") ; BUG: showing italics version.. though nice!
 
   ;; (setq doom-font "UbuntuMono-Bront-10") ; d: 10, too small (in height), though readable!
-  (setq doom-font "UbuntuMono-Bront-11") ; NEW CLASSIC?, GREAT! FAR less noisy than agave!
+  (setq doom-font "UbuntuMono-Bront-11") ; NEW CLASSIC, GREAT! FAR less noisy than agave!
   ;; (setq doom-font "UbuntuMono-Bront-12") ; a bit wider..
-  ;; (setq doom-font "UbuntuMono-Bront-13") ; still great!
+  ;; (setq doom-font "UbuntuMono-Bront-13") ; GREAT here too, though big (shows as 15?).. like mononoki: tall yet cute!
   ;;   - TODO: download the orginal one, to get styles
+  ;;   - also has a great big X icon use by centaur-cons for close tab..!
   
   ;; (setq doom-font "DejaVu Sans Mono-9") ; d: 9, GREAT! kinda cute too! very readable, VERY narrow, excellent for long code
   ;; (setq doom-font "DejaVu Sans Mono-10") ; feels too wide here..
@@ -877,8 +880,9 @@
                               ; removes a few seriphs, makes m cuter
   ;; (setq doom-font "mononoki") ; BUG: less line height.. maybe too scrunched up.. def something wrong about it..
 
-  ;; (setq doom-font "OfficeCodePro-10")
-  ;; (setq doom-font "OfficeCodePro-11") ; d: 11?, PERSONAL CLASSIC, kinda cute(?) yet COMFY adds a few cute seriphs to source code pro
+  ;; (setq doom-font "OfficeCodePro") ; d: 10, PERSONAL CLASSIC, kinda cute(?) yet COMFY adds a few cute seriphs to source code pro
+  ;;   - could get rid of the seriph on 'i'..
+  ;; (setq doom-font "OfficeCodePro-11") ; this is GREAT too
 
 
   
@@ -898,6 +902,8 @@
   ;; TODO: try text-scale-mode since zen scales text really well..
   
   ;; eval testing area (<3 emacs)
+  ;;   - just use set-frame-font
+  ;;     - TODO: bind this
   ;; (describe-fontset)
   ;; (setq doom-font "DejaVu Serif")
   ;; (doom/reload-font)
@@ -906,7 +912,30 @@
   ;; (doom/reset-font-size)
   ;; NOTE: can use zen (spc t z) to toggle between a larger font size
 
-  
+
+  ;; google:
+  ;; arimo
+  ;;   - very round, a bit distracting..
+  ;; tinos
+  ;;   - chromeos default
+  ;; noto serif
+  ;;   - quite good!
+  ;;   - make org-mode a bible!
+  ;;   
+  ;; caladea
+  ;;   - also quite good
+  ;;   - slightly serif
+  ;; carlito
+  ;;   - maybe the best one..!
+  ;;   - sans
+  ;;   - default size has little vertical height, make it good for fitting a bunch of text
+  ;;   
+  ;; (setq doom-font "Roboto")
+  ;; (setq doom-font "Noto Sans-12")  d: 11? this one is quite good, in caes roboto is too inconsistent..
+  ;;   - i actually remember using this somwhere.. i think for writing on my ipad mini, using voice dream writer!
+  ;;  - TODO: non-monospace mode
+  ;;    - TODO: make this the default for org-mode
+
   ;;  - children/elderly mode
   ;;  - spc-t-b - big font mode
   ;;    - TODO: customize it! 
