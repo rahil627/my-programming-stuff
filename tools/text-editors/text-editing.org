@@ -95,7 +95,9 @@ https://www.reddit.com/r/emacs/comments/1brnmds/why_use_emacs/
 
 * key-mappings / key-binding
 
-TODO: see or possibly merge my key-mappings notes in my meow-doom-emacs [config]
+TODO: main mappings are in [emacs]
+
+TODO: see or possibly merge my key-mappings notes in [my meow-doom-emacs config]
 
 TODO: see or possibly merge my key-mappings notes in [helix]
 

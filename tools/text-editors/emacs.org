@@ -106,7 +106,7 @@ if working quickly, just do quicksave/quickload (on doom's splash screen)
   
 
 
-* bindings
+* key-bindings
 ** a few quick ways to learn, interactively via run-time introspection:
 
 learn x in y minutes / emacs
@@ -152,7 +152,7 @@ emacs/meow philosophy
     - no built-in function..? maybe emacs prefers moving forward only..?
   - helix used shift as a reverse modifier, i don't think emacs uses that idea..
 
-** key bindings (actual keyboard keys)
+** list
 
 TODO: PENDING: merge from my [helix] and [wezterm bindings]
   - see [config.el]
@@ -198,81 +198,127 @@ spc-h-b
 
 
 # notes from helix config to merge..
-# some possible keys:
-# **esc**
-#  - should be free TODO: don't use OS to bind it
-#  - could save for a list of shell commands/scripts
-# `/~
-# **arrow keys for four more modes!!**
+some possible keys:
+**esc**
+  - should be free TODO: don't use OS to bind it(..?)
+    - though, not for chromeos..
+  - could save for a list of shell commands/scripts
+`/~
+  - i bound it to repl (dev console) and shell, used for popup/menu by default
+**arrow keys for four more modes!!**
+  - lol.. i'm genius.. but unfortunately, emacs/org-mode uses this..
 
 NOTE: chromeos binds some modified keys by default:
   - a-down/up to page down/up
   - a-right/left to end/home
   - a-backspace to delete
-    - you can re-bind them all to use search (caps lock) instead (which itself my be re-mapped/swapped with escape)
+    - (these defaults are actually quite good, for when you need these keys on a basic laptop keyboard..)
+    - TODO: you can re-bind them all to use search (caps lock) instead (which itself my be re-mapped/swapped with escape)
   - f11/f12 are disabled by default
     - and their alt mappings are difficult to rememeber anyway..
       - search-c/m-backspace
 
         
+  
+**** small un-bound keys
 
-small un-bound keys:
+
+these may have been un-bound by meow.. to keep it simple
+
+i also prefer not binding any random symbols, espcially all of the legacy crap (bash: $@&; regex: %^; etc.)
+  - even tho ruby has inherited much of it.. <3
+
 
 back-quote (`)
-  - ~ was used by games to toggle the dev console
+  - ~ (or was it `?) was used by games to toggle the dev console
   - used for lowercase/uppercase in helix
     - these key-chords were really annoying in emacs.. to the point of disabling them by default..!!
 slash (/)
   - / was used by vim to signify search
-    - maybe because file-paths have a lot of them..
+    - maybe because file-paths have a lot of them..?
+      - oh no! because vim's use of regex (s/this/that/g)
+    - quite satisfying to press
+    - meow uses v for visit, and doom has a whole leader key-map for spc-s
+  - c-/
+    - i maybe have mapped this to comments in past editors..
+      - TODO: also satisfying to press
+  - c-/ and c-s-/
+    - undo and redo
+      - absolutely needed somewhere.. but why /?
+        - TODO: why not c-u/c-s-u?
+          - universal-argument
+  - m-/ and m-s-/
+    - dabbrev-expand
+    - dabbrev-completion
+      - TODO: some context-aware completion..?
+        - seems to grep the project directory using the word from the current point (cursor) to the beginning of the word
+
 back-slash (\)
   - can be big on certain keyboards..
+    - and in a good position!
   - in helix, runs a shell command (:sh ...)
-    - TODO: see quickrun
-    - though, less needed, as you'd likely just write (or generate with ai!) the functions with elisp..
+    - see quickrun[-command]
+      - seems to be when it runs another program quickly (in a pop-up buffer?)
+    - TODO: vs m-! in emacs
+      - alt is good, ! for bash execute(..??)
+    - more likely, you'd likely just write (or generate with ai!) the functions you need with elisp..
   - i think | was used by helix for piping a program on a selection..??
     - it was a really interesting advanced function..
     - c-c a |
       - shell-command-on-region
+      - emacs' bindings are actually legit..
+  - c-\
+    - toggle-input-method
+  - m-\
+    - delete-horizontal-space
+      - NOTE: this is quite good..
 
-
-other big keys:
+**** big keys
 
 escape
   - (swapped with caps-lock at os level)
   - <escape>/ESC
-  - meow-escape
+  - NOTE: there's quite a lot of different escape functions going on..
+    - q (for mini-buffers, pop-ups, docs-buffers, prompts), c-g, escape
+    - TODO: PROBLEM: unify this crap..? run all of the escape commands??
+    - TODO: PROBLEM: this prevents me from using caps-lock for alt
+  - meow-escape (esc in normal-mode), meow-insert-exit (esc in insert-mode)
+    - meow-escape-or-normal-modal (unused..)
   - keyboard-escape-quit
-    
+  - c-g = doom-escape
+  
 caps-lock (search on chrome os)
   - swapped with escape at os level
+    - comes from the extraneous need to constantly escape insert-mode in modal editors
     - NOTE: TODO: on chrome os, you need to re-bind search to something else, as it's an important modifier os key, like the super key on other oses. otherwise, you are short one key compared to keyboards with both caps-lock and super.
-      - NOTE:on chrome os, maybe need to add a binding for task manager, which was search-escape: search-`
-  - can re-map to alt instead, to avoid reaching the bottom-left corner key
-    - this assumes left-control and left-alt are swapped
-    - TODO: worth trying to provide an alternate for left-alt
-      - would need another key for escape..
-        - do i still need escape key? or is g enough..??
-          - yeah, still need escape, g only works in normal-mode in the regular buffers, still need escape to quit pop-ups, completions, etc.
-            - otherwise, you would have to bind g to escape on every little keypad/keymap binding pop-up
+      - NOTE: on chrome os, maybe need to add a binding for task manager, which was search-escape: search-`
+  - TODO: can re-map to alt instead, to avoid reaching the bottom-left corner key
+    - (this assumes left-control and left-alt are swapped)
+      - PROBLEM: would need another key for escape, especially for modal editing..
+        - see [escape]
 
 tab
-  - NOTE: c/m-tab are often used by programs and window managers, possibly all major oses
+  - NOTE: m-tab are often used by window managers, possibly all major oses
   - cycle menus, words, completions, and certain major-mode stuff (org-cycle)
   - org uses it heavily
-    - including s-tab
+    - especially s-tab
   - spc-x(/-spc) tab is really good too
 
-backspace might be open to being re-mapped
-  - maps to <DEL> by default
+backspace
+  - this may be open to being re-mapped..
+    - but it's fun to press to kill shit
+    - it's also consistent with nearly every other program..
+      - yeah.. leave this alone..
+  - <backspace> maps to DEL by default
+    - not even a chromeos thing.. maybe a legacy keyboard thing..
+    - however, you can still bind (c/m-)<backspace> all just fine..
   - thanks to D (backward-delete), may not need
     - d, c-d, m-d all feel better than pressing backspace..
-  - c-<DEL> and m-<DEL>
   - though, it's also nice to have a big ol' delete key too..
     - at least while transitioning..
 
 return
-  - TODO: overlaps with c-j??
+  - TODO: overlaps with c-j? and c-o??
   - org-mode makes a ton of use out of this one..
     - new line, new list item, new header, etc. (org-return)
   - i re-mapped this in helix for normal-mode only
@@ -281,6 +327,7 @@ return
         - it contained much of c-c q
           - (quit, save, restart, open/reload config, etc.)
         - sometimes i'd put bindings in it temporarily, until i figure out a place for them, or more likely, figure out i don't need them: i just have to learn more about the editor's functionalities
+  - however, i much prefer being able to use it (along with backspace!) in normal-mode too, unlike helix's strictly modal model of bindings (normal-mode cannot insert aynthing)
 
 
 
@@ -301,19 +348,18 @@ arrow-keys work as expected in emacs (thankfully!!):
   
 keys on bigger keyboards:
   - i stick to the laptop keys only
-    
-delete
-  - <DEL>/DEL
-    - backspace is mapped to this
+
 page down/up
   - <next>, <prior>
+home/end
+delete
+  - <DEL>/DEL
+    - backspace maps to this
 insert
 
 
 
-
-
-modifiers:
+**** modifier keys
 
 control and alt keys' (both sides) mappings are swapped on windows and chrome os at os level
   - NOTE: on an ancient chromebook, the left modifiers keys are huge, but the one in the corner is difficult to press. Whereas, the right modifier keys are smaller, and slightly more accessble to reach the right corner button, though still painful to reach the home-row j key..

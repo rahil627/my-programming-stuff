@@ -1820,7 +1820,15 @@
 
 
 
-
+   ;;; MOVEMENT
+   ;;  - NOTE: this can be quite confusing, as it's inconsistent with insert-mode
+   ;;    - however, it does match my arrow key-bindings.. so maybe not..??
+   ;;    - and if i use hjkl, this elimates redundant bindings
+   ;;  - PROBLEM: nah, instead, just re-bind the fucking alt key, that's that problem!
+   ;; ("C-n" . forward-paragraph)
+   ;; ("C-p" . backward-paragraph)
+   ;; ("C-f" . sp-forward-symbol)
+   ;; ("C-b" . sp-backward-sybol)
 
 
    ;;; SELECTION
