@@ -244,13 +244,7 @@ usually spear-headed by one person, in a more niche language, thus making it har
 *** open-source momentum
 has the momentum of bigger language-based-dev-communities
 
-**** micro
-  - go(lang)
-    - i'm already not interested.. lol. i much prefer products by the rust folks..
-      - these go programs often have a similar fate as google products: they are made just as quickly as they are abandoned
-      - though, go does have the terminal/text-editing libs..
-
-
+(empty)
 
 
 
@@ -288,8 +282,19 @@ is this even an editor..? or just some way to make use of small-talk??
 ** stupid simple, fast editors
 
 the future is simple
+the future is stupid
+less features
+less learning
+more writing
 
-can use these anytime, and for anything, even simple text files (replaces notepad)
+can learn EVERYTHING very quickly
+  - ~5 minutes for micro, ~30 for focus
+
+can use these anytime, and for anything, including simple text files
+
+also great for just writing shit down (what else are text editors for..??), without distraction, without fighting with your editor
+
+basically notepad (and nano) replacements
 
 overview:
 0. **focus (editor)**
@@ -298,7 +303,9 @@ overview:
   - finally. a god damn text editor that doesn't slow down the marvel of contemporary machinery!! gamers make the best shit.
   - great little design nuances
   - themes suck
-
+s. micro
+   - the perfect replacement for nano
+     - finally, something for writing *git commit logs*
 
 *** focus (editor)
   - *the best text editor experience i've had in quite some time*.. made me try sublime text
@@ -330,6 +337,21 @@ overview:
         - great movement on c-down/up
       - great little view mode (c+a+arrow keys)
   - **made with jai**
+
+*** micro
+  - go(lang)
+    - i'm already not interested.. lol. i much prefer products by the rust folks..
+      - go programs often have a similar fate as google products: they are made just as quickly as they are abandoned
+      - though, go does have the terminal/text-editing libs..
+  - UPDATE: I TAKE THAT BACK, THIS IS CUTE
+  - actually a direct replacement of nano, that is: *TINY in SCOPE*
+    - (terminal-only)
+  - you can learn all of the key-bindings in 5 minutes
+  - it's actually quite feature-ful: buffers (as tabs), pane-splitting, commands (about 20, lol.. <3), even plugins!
+  - no word-wrap
+    - probably a plugin, lmao
+  - *just works as you'd expect/want a terminal text editor to work*
+      - (this entry was written using micro)
 
 
 ** semi-hackable
