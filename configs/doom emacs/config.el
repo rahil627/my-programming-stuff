@@ -468,11 +468,13 @@
   
 
 
-  (use-package! good-scroll ; for a far smoother experience..
+  (use-package! good-scroll ; actually god-send, a HUGE difference in feeling, welcome to the 1990s, emacs!
     :init
     (setq good-scroll-duration 0.15 ; the further you step, the quicker you'll want this
-          good-scroll-step 200) ; d: 80 = ~3 lines, 200 = ~12 lines / EXACTLY 200 lines on my tiny touch-pad, from top to bottom!!
-                                ; these values are for my shitty chromebook's touchpad
+          good-scroll-step 200) ; d: 80 = ~3 lines, 200 = 12 lines
+                                ; 
+                                ; 0.15 * 200 = EXACTLY 200 lines on my tiny touch-pad, from top to bottom!!
+                                ; (note: these values are for my shitty chromebook's touchpad)
     :config
     (good-scroll-mode))
 
