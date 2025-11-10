@@ -24,7 +24,7 @@ USE FOCUS EDITOR INSTEAD
       - started ruby
         - from emacs, it uses integers as pointers, mark and sweep gc, similar object model, then a smalltalk-like oo system on top. For syntax, i wanted a algol/ada/eiffel-like one.
         - but as an emacs-addict, i needed a langauge mode... *if i couldn't make ruby-mode to work, the syntax of ruby would've changed*
-          - *TODO: did matz write ruby-mode??*
+          - matz wrote ruby-mode..!?!?
 
 
 * personal note

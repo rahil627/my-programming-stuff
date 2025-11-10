@@ -132,7 +132,7 @@ that is all.
 
 
 
-* PROJ textbringer dev
+* textbringer dev
 
 
 only 200kb?? i guess because it doesn't include the ruby compiler, nor the std libs... yeah, i recall using 'gem install' so it's all in the libs
@@ -505,7 +505,7 @@ x. nvim
 
 
 *** textbringer
-  - UPDATE: it's terminal-only, quite bare, like vanilla emacs, seems like a one-man hobby project by a japanese kid-now-adult, but surprisingly complete..!!
+  - UPDATE: it's terminal-only, quite bare, a clone of vanilla emacs, seems like a one-man hobby project by a japanese kid-now-adult, but surprisingly complete..!!
     - https://github.com/shugo/textbringer/issues/153
       - i messaged the maintainer here.. asking about limits
     - NOTE: uses emacs key-bindings by default, and there's no pop-up display (which-key), so you had better completed your super-saiyan emacs training!!
@@ -592,8 +592,8 @@ nvim:
 **** emacs
   - UPDATE: surprisingly efficient.. i've never seen my shitty old chromebook display 20 hours of battery life.. wtf??
   - much more than a text editor, it's often lovingly called an OS! based around the concept of text buffers
-    - **this has the great benefit that everything is written in the same language, morever, the most dynamic language of all time (lisp). Otherwise, you'd have to use an entire set of tools, wherein each tool can be writtern in a different langauge, have different onpinions, and just not work as seamlessly together: terminal, terminal multi-plexer, text editor, git tui, file-manager tui, knowledge-base tui, and so on.**
-      - **at the moment, for me, all of the tools i use are now written in rust, which is infinitely harder than lisp to edit, let alone develop.** The language itself is complex, along with it's memory-management mode, plus, you have to compile it.. It's all a pain. Whereas with emacs, you just need to know one language, no memory-management
+    - **this has the great benefit that everything is written in the same language, morever, the most dynamic language of all time (lisp). Otherwise, you'd have to use an entire set of tools, wherein each tool can be writtern in a different langauge, have different opinions, and just not work as seamlessly together: terminal, terminal multi-plexer, text editor, git tui, file-manager tui, knowledge-base tui, and so on.**
+      - **at the moment, for me, all of the tools i use are now written in rust, which is infinitely harder to edit than lisp, let alone develop.** The language itself is complex, along with it's memory-management mode, plus, you have to compile it.. It's all a pain. Whereas with emacs, you just need to know one language, no memory-management
       - a fzf like search-engine integrates with many other features and plugins seamlessly:
         - find file
         - search (grep) text
@@ -673,7 +673,7 @@ nvim:
     - *UPDATE: OMG, muuuuuuch better after getting gui to work, and quicker too! <3 <3*
       - yeah, *fuck terminals!!*
     - *use emacs on servers!!*
-      - emacs bindings are used across shell editors (nano, pico, etc.) and most text editors (vs-code)
+      - emacs bindings are used across shells (bash), terminal text editors (nano, pico?, micro, etc.) and even most contemporary text editors (vs-code)
   - every person that i've personally met that uses emacs is a great great programmer/problem-solver/doer
   - emacs itself is a deep pot of speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
     - 1.7 million lines of code
@@ -899,14 +899,12 @@ NOTE: i missed out on the era of atom and sublime.. by the time i got back to th
     - unlike vs-code
     - TODO: looks into this..
   - ...people don't seem to have liked this one.. probably for the same reasons they don't like vs-code.. (electron/browser)
-    - sublime text, it's direct competitor during it's time, was favored due performance of C++/native
+    - sublime text, it's direct competitor during it's time, was favored due to the performance of C++/native (and just good programming 'n design skills)
   - though historically important, basically replaced by vs-code, since microsoft had acquired github..
     - **github ended maintenance on it at the end of 2022**
   - **made by github!!**
 
 *** a few little basic gui classics
-
-
 komodo-edit
   - my fav from college ~2007
     - i found this trying to find something for python..
@@ -915,11 +913,13 @@ notepad++
   - a windows classic, same as ever, still cute and functional for an old 90s thing
 
 notepad2
-  - a personal classic windows notepad replacement
+  - a personal classic
+    - a replacement for windows notepad
   - TODO: try notepad4
 
 kate
   - a linux classic?
+    - no, this is newer KDE stuff..
 
 textmate
   - a mac classic?
