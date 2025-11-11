@@ -186,7 +186,8 @@ base16-tomorrow-night.sh
 
 
 
-# from some really, really old file
+# old
+## from some really, really old file
 textmate - monokai - sexiest theme ever
 notepad++ - bespin, monokai
 vim - wombat
@@ -194,3 +195,31 @@ vim - wombat
   - maybe it was just in the title of the theme.. and i didn't know what vim was.. lol
 visual studio - ragnarok gray by tomas restrepo
 komodo - gray
+
+## from themes-old.txt
+themes:
+Classic Modified.tmTheme
+Clouds Midnight.tmTheme
+Clouds.tmTheme
+IR_Black.tmTheme
+Made of Code.tmTheme
+Merbivore Soft.tmTheme
+Merbivore.tmTheme
+Monokai.tmTheme
+PlasticCodeWrap.tmTheme
+RubyRobot.tmTheme
+Sunburst.tmTheme
+Text Ex Machina.tmTheme
+eclips3.media (ECLM).tmTheme
+rubyblue-ported.xml
+twilight-error.tmTheme
+
+notepad++ themes:
+Port_VibrantInk.zip
+Port_of_Ruby_Blue.zip
+
+more themes:
+LB Chalkboard.ksf
+VibrantInk-for-KomodoIDE.zip
+charcoal rainbow.ksf
+zenburn-scheme.vssettings
