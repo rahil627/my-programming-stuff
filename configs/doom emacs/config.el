@@ -520,7 +520,7 @@
 
 
 ;;; hl-todo
-   (after! hl-todo 
+  (after! hl-todo 
     ;; tags
     ;; https://orgmode.org/manual/Setting-Tags.html
     ;; C-c C-c (org-set-tags-command)
@@ -535,50 +535,52 @@
     ;; i think have to update hl-todo--keywords
     ;; TODO: INCOMPLETE: set colors
     ;; FAIL: quotes trouble... :/
-    ;;     (setq 
-    ;;      hl-todo--keywords (append 'hl-todo--keywords '(
-    ;;    ("IDEA"   . "#d0bf8f")
-    ;;    ("WARN"   . "#d0bf8f")
-    ;;    ("WARNING"   . "#d0bf8f")
-    ;;    ("BEWARE"   . "#d0bf8f")
-    ;;    ("INCOMPLETE"   . "#d0bf8f")
-    ;;    ("TEMPFIX"   . "#d0bf8f")
-    ;; ;;   '(("HACK"   . "#d0bf8f")
-    ;;    ("ERROR"   . "#d0bf8f")
-    ;;    ("FAIL"   . "#d0bf8f")
-    ;;    ("HALP"   . "#d0bf8f")
-    ;;    ("WTF"   . "#d0bf8f")
-    ;;    ("TEMP"   . "#d0bf8f")
+    ;; (setq ; q? for a list?
+    ;;  hl-todo--keywords (append 'hl-todo--keywords '(
 
-    ;;     ;; IDEA
-    ;;     ;; WARN/ING/BEWARE
-    ;;     ;; FIXME TEMPFIX/HACK
-    ;;     ;; ERROR/FAIL HALP WTF
-    ;;     ;; TEMP
-    ;;     )))
+    ;; from doom's defaults: (appended)
+    ;; ("TODO" warning bold)
+    ;; ("FIXME" error bold)
+    ;; ("REVIEW" font-lock-keyword-face bold)
+    ;; ("HACK" font-lock-constant-face bold)
+    ;; ("DEPRECATED" font-lock-doc-face bold)
+    ;; ("NOTE" success bold)
+    ;; ("BUG" error bold)
+    ;; ("XXX" font-lock-constant-face bold))
 
+    ;; ("TODO" font-lock-keyword-face bold) ; TODO: don't think this'll replace it..
 
-    ;; from hl-todo.el
-    ;;   - seems like doom moved a lot to org-mode..
-    ;;   - makes sense as they are common words..
-    ;; (defcustom hl-todo-keyword-faces
-    ;;   '(("HOLD"   . "#d0bf8f")
-    ;;     ("TODO"   . "#cc9393")
-    ;;     ("NEXT"   . "#dca3a3")
-    ;;     ("THEM"   . "#dc8cc3")
-    ;;     ("PROG"   . "#7cb8bb")
-    ;;     ("OKAY"   . "#7cb8bb")
-    ;;     ("DONT"   . "#5f7f5f")
-    ;;     ("FAIL"   . "#8c5353")
-    ;;     ("DONE"   . "#afd8af")
-    ;;     ("NOTE"   . "#d0bf8f")
-    ;;     ("MAYBE"  . "#d0bf8f")
-    ;;     ("KLUDGE" . "#d0bf8f")
-    ;;     ("HACK"   . "#d0bf8f")
-    ;;     ("TEMP"   . "#d0bf8f")
-    ;;     ("FIXME"  . "#cc9393")
-    ;;     ("XXXX*"  . "#cc9393"))
-    ;;   An alist mapping keywords to colors/faces used to display them.
+    ;; a few more scraped from hl-todo's defaults:
+    ;;   - seems like doom sensibly moved a lot of them to org-mode's todo's..
+    ;; ("FAIL"   . "#8c5353")
+    ;; ("TEMP"   . "#d0bf8f")
+
+    ;; introspect vars starting with 'font-lock' to get some colors
+    ;; personal additions:
+    ;;    ("IDEA" success bold)
+    ;;    ("INCOMPLETE" font-lock-keyword-face)
+    ;;    ("TEMPFIX" font-lock-keyword-face) ; = HACK
+    ;;    ("HALP" font-lock-keyword-face)
+    ;;    ("TEMP" font-lock-constant-face)
+    ;;    ("WTF" font-lock-constant-face)
+    ;;    ("WARNING" warning bold)
+    ;;    ("BEWARE" warning bold)
+    ;;    ("ERROR" error bold)
+    ;;    ("PROBLEM" error bold)
+    ;;    ("FAIL" error bold)
+    ;;
+    ;;    experimental:
+    ;;    ("KILL" error bold) ; ..?, lol. 4 emacs
+    ;;    ("LOVE" font-lock-keyword-face) ; can always use more love
+    ;;    ("CUTE" font-lock-keyword-face)
+    ;;    
+    ;;    ("PROGRAM" font-lock-keyword-face)
+    ;;    ("PROJECT" font-lock-keyword-face)
+    ;;    ("FEATURE" font-lock-keyword-face)
+    ;;    ("PULL REQUEST" font-lock-keyword-face)
+
+    ;; nil
+    ;; )) ; append, setq
 
     ) ; hl-todo
 
