@@ -917,29 +917,48 @@
   ;; NOTE: can use zen (spc t z) to toggle between a larger font size
 
 
-  ;; google:
+
+  ;; variable-pitch fonts (non-monospace)
+  ;;  - variable-pitch-mode..!!!
+  ;;    - (doom?) emacs has everything..
+  ;;    - just ensure doom-variable-pitch-font is set
+  ;;    - added to toggle key-map
+  ;;  - TODO: make one of these default for org-mode
+
+  ;;
+  ;; google's croscore fonts:
+  ;;   - meant to be open-source alts to monotype corporation's fonts:  arial, new times roman, courier new
   ;; arimo
+  ;;   - sans-serif
   ;;   - very round, a bit distracting..
   ;; tinos
-  ;;   - chromeos default
+  ;;   - serif
+  ;; cousine
+  ;;   - monospace
+  ;;
+  ;; google sans
+  ;;   - the new chromeos default
+  ;;     - (replacing arimo/tinos/cousine?)
+  ;;
   ;; noto serif
   ;;   - quite good!
   ;;   - make org-mode a bible!
   ;;   
-  ;; caladea
-  ;;   - also quite good
-  ;;   - slightly serif
-  ;; carlito
-  ;;   - maybe the best one..!
+  ;; carlito <- calibri
+  ;;   - NOTE: maybe the best one..!
   ;;   - sans
   ;;   - default size has little vertical height, make it good for fitting a bunch of text
+  ;; caladea <- cambria
+  ;;   - also quite good
+  ;;   - slightly serif
   ;;   
-  ;; (setq doom-font "Roboto")
+  ;; (setq doom-font "Roboto") ; NOTE: spacious, immediately comfy and pleasing! very sans
   ;; (setq doom-font "Noto Sans-12")  d: 11? this one is quite good, in caes roboto is too inconsistent..
   ;;   - i actually remember using this somwhere.. i think for writing on my ipad mini, using voice dream writer!
-  ;;  - TODO: non-monospace mode
-  ;;    - TODO: make this the default for org-mode
+  ;; (setq doom-font "Google Sans-11") d: 11, 16 for google chrome (on chromeos)..!?
 
+
+  
   ;;  - children/elderly mode
   ;;  - spc-t-b - big font mode
   ;;    - TODO: customize it! 
@@ -2025,11 +2044,13 @@
 
       '("o t" . +eshell/toggle) ;t for terminal
       )
-    
-    ;; (when (modulep! :term solaire-mode) ;; TODO: not a module..
-    '("o -" . solaire-global-mode) ;; "toggle" arg?
-  
 
+    ;;; spc-t
+    ;; (when (modulep! :term solaire-mode) ;; TODO: not a module..
+    '("t -" . solaire-global-mode) ;; "toggle" arg?
+    
+    '("t p" . variable-pitch-mode) ;; variable-width font/typeface aka proportional
+    ;;   - v is for visible-mode (??), f for fly-check, F for full-screen
 
       ;; new key-maps
       
