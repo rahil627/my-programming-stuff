@@ -12,6 +12,8 @@ open the font-name-variable.wght file and click install
 
 NOTE: for chromeos, it will only be available to linux apps, not to chromeos/android apps
 
+check for packages on apt first, for easy maintenance
+
 mkdir -p ~/.local/share/fonts
   - and save them here
 
@@ -48,11 +50,17 @@ https://www.programmingfonts.org/
     - likely easy to add more fonts, languages, etc.
 
 fonts.google.com
+  - you can download most free fonts from here
   - use this site to check out contemporary pop fonts
-  - although you can download them here, for linux, should use package managers
-  - in order to use with crostini apps, might have to put them into the linux folders (see archwiki)
   - https://fonts.google.com/?preview.size=12&category=Monospace
     - compare fonts here
+
+powerline (bundle)
+  - bundle of fonts from the popular PowerLevel10k zsh bundle
+  - https://github.com/powerline/fonts
+  - NOTE: source code pro for powerline uses a more bold font (medium?) and adds:
+    - bad: bottom serif to 'i', lowers the '_',
+    - good: otherwise does many good things like: a better 'g', bigger symbols, aligned symbols, etc.
 
 x/www.nerdfonts.com/font-downloads
   - long single page web page contains all fonts to download
@@ -77,6 +85,12 @@ also see powerline fonts
 
 
 * fonts to try
+https://betterwebtype.com/5-free-monospaced-fonts-with-coding-ligatures/#:~:text=Hasklig,and%20to%20correct%20problematic%20spacing.
+
+vintage terminal style fonts:
+Dina
+  - https://github.com/zshoals/Dina-Font-TTF-Remastered
+
 gamey fonts
 bigblue terminal
   - arcade font
@@ -86,10 +100,8 @@ effects eighty
   - futurey from the 80s
 
 pixelly bitmap:
-cozette # TODO: in my-programming-stuff repo, try it, delete or keep?
 envy code b
 
-proggy / good in small sizes
 bedstead
 
 main programming:
@@ -101,9 +113,6 @@ comingocode
 code new roman
 comic mono
   - surprisingly good, like monaco
-commit mono
-  - looks perfect!
-  - maybe upgraded from cousine
 fantasque
 fragment mono
 geist
@@ -196,6 +205,8 @@ fixed-width: roboto
 TODO: need to try consolas in a lighter weight
 TODO try source code pro with a more narrow width
 
+see [emacs config]
+
 **office code pro <- hasklig (light) ~= source code pro**
   - terminal: size 10-11, weight: regular/normal
   - vscode: size 11-12, weight: light
@@ -217,8 +228,6 @@ TODO try source code pro with a more narrow width
   - 1-2 font sizes smaller than others (marketing?)
   - **comes with only one weight: regular, no light?**
   - shipped with vs-studio and thus strongly associated with c#
-
-
   
 **ubunto mono**
   - comes with chromeos's terminal app
@@ -231,7 +240,7 @@ hack
   - taller than source code pro, dejavu-like
   - only one font weight
 
-meslo (LG S) / NF
+meslo (LG S)
   - terminal: size 10, 10.5, 11
   - also really good
   - tall like dejavu
@@ -260,8 +269,7 @@ jetbrains (sans) mono <- dejavu sans mono
 
 
 * main list
-
-** some newer ones foudn on programmingfonts.org
+** some newer ones found on programmingfonts.org
 
 reddit sans mono
   - nice!!
@@ -270,6 +278,7 @@ reddit sans mono
 
 commit mono
   - nice!
+  - maybe upgraded from cousine
   - highly-readable, wide, round, open, zen'ish
   - more narrow than paper mono
     
@@ -281,13 +290,16 @@ serious shanns
   - *cute* and *narrow*!
     - as narrow as reddit sans mono
 
-** main main list
+**** some more to  try
 
-*** hand-written, with a feather-pen
+consolamono
 
-lotion
+code new roman
 
-*** cute
+adwaita mono
+  - gnome 2025
+
+** cute
 
 smaller, narrower, *fun*, *cuter*, with some personality!
 
@@ -321,8 +333,7 @@ maple mono
   - 2013
     - quite an early cute one..
 
- 
-*** good for terminals
+** good for terminals
 
 generally small-height fonts that still look good with little vertical space in-between
 
@@ -338,13 +349,7 @@ cutive mono
   - *perfect for terminals*
     - it reminds of the default one on macos's terminal app
 
-*** narrow (but not cute)
-
-(inconsolata)
-
-*** the rest
-
-**** bitmap fonts
+** bitmap fonts
 
 i think only looks good in one size, no scaling 
 
@@ -352,18 +357,11 @@ cozette <-?- proggy fonts
   - proggy clean 16
     - tiny, pixel-font-like, indeed very clean!
 
+** hand-written, with a feather-pen
 
-**** recent finds on programmingfonts.org to try
+lotion
 
-consolamono
-
-code new roman
-
-adwaita mono
-  - gnome 2025
-
-**** the rest
-
+** the standards
 
 cascadia mono/code
   - has a light version
@@ -395,13 +393,11 @@ hack
   - very close to consolas, similar small size font with space between lines
   - same as hasklig with more seriphy i,t,f,etc.
 
-
 Meslo LG S NF
   - NF = nerd font
   - just fixes symbol positions from dejavu sans mono
   - The recommended font is the product of many individuals. Its origin is Bitstream Vera Sans Mono, which has given birth to Menlo, which in turn has spawned Meslo. Finally, extra glyphs have been added to Meslo with scripts forked from Nerd Fonts. The final font is released under the terms of Apache License.
-  
-  
+ 
 **office code pro**
   - forked from source code pro, combines a lot of good things from other fonts
   - possibly my current favorite
@@ -411,7 +407,6 @@ hasklig
   - other weights:
     - https://github.com/ryanoasis/nerd-fonts/tree/master/src/unpatched-fonts/Hasklig
       - somewhere in-between source code pro regular and light
-
  
 iosevka
   - slender: thin 'n tall, reminds me of monaco on a mac
@@ -426,25 +421,14 @@ cascadia code
 fira code =? jetbrains mono
   - adds space width, adds some serif-ness, probably has code-related glyphs
   - i prefer mono
-
   
 JetBrains (sans) mono
   - a cute robotic version of dejavu, with long characters shortened nicely
-
 
 dejavu sans mono == noto sans mono? ~= roboto mono
   - tall'ish
   - more line space on odd numbers, compare size 12 and 13
   - size 14 is nice 'n big, i dig it
-
-PowerLine (bundle)
-  - bundle of fonts from the popular PowerLevel10k zsh bundle
-  - https://github.com/powerline/fonts
-  - contains all of the fonts here!
-  - TODO: try some of these, then uninstall this, keeping only what you need
-  - source code pro for powerline uses a more bold font (medium?) and adds:
-    - bad: bottom serif to 'i', lowers the '_',
-    - good: otherwise does many good things like: a better 'g', bigger symbols, aligned symbols, etc.
 
 source code pro
   - a classic
@@ -498,53 +482,28 @@ lucida console
   - ships with windows os
   - 10 in notepad/notepad2, 11 in notepad++
 
+** non-mono-spaced
 
-non-mono-spaceed:
 tahoma*****
   - windows default, very quick to read in studies, non-monospaced
 calibri
   - shipped with and the default font for microsoft word
 
+** others
 
-others:
 hermit
   - future gui feel, but really nice! unique
 lilex
   - eh.. has some seriphy robotiness to it
 
 
-** the rest
+* TODO merge, from an old file
 
-vintage terminal style fonts:
-Dina
-  - https://github.com/zshoals/Dina-Font-TTF-Remastered
-
-proggy fonts
-  - old school
-
-
-
-
-https://betterwebtype.com/5-free-monospaced-fonts-with-coding-ligatures/#:~:text=Hasklig,and%20to%20correct%20problematic%20spacing.
-
-
-
-
-
-
-
-TODO: merge
-from an old file:
-
-font
-	andale mono
-	kooteney*** - small tabs, yet consolas look, not monospaced
-	open symbol - unique, has different symbols
-	ocr a std - too console-ish
-	proggysquare - looks nice!
-	droid sans mono**** - like consolas, but a bit longer vertically, tough competition with consolas
-
-
+kooteney*** - small tabs, yet consolas look, not monospaced
+open symbol - unique, has different symbols
+ocr a std - too console-ish
+proggysquare - looks nice!
+droid sans mono**** - like consolas, but a bit longer vertically, tough competition with consolas
 
 
 * otf vs ttf:
