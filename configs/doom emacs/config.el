@@ -490,8 +490,10 @@
      centaur-tabs-height 11
      centaur-tabs-bar-height 15 ; default 30 maybe the smallest
     ; one of these worked! now they're tiny, like emacs's native tab plugin!
-     centaur-tabs-set-bar "under" ; vs over FIXME
-    
+     centaur-tabs-set-bar "under" ; FIXME: "under" doesn't work, and "left"/"right" may require a minimum tab-bar-height..
+    ;; TODO: add FEATURE: move most recently selected tab to the front
+    ;;  -  i couldn't find this in this option in the code..
+     
     ;; centaur-tabs-cycle-scope "groups" ;; ohh groups, not projects.. nvm
     ;; - tabs
     ;;     Navigate through visible tabs only.
