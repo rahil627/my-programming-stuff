@@ -823,18 +823,18 @@
     ;; (setq doom-font "Cousine")
     ;;   - chromeos's default (google) cousine 13 is quite good.. 17 not so much..
     ;;   - there's notably no vertical line width, making it quite compact..
-    (setq doom-font "DejaVu Sans Mono" ;; fall-back
+    (setq doom-font "DejaVu Sans Mono-9" ;; fall-back
           ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close o Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
           ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
           ;;     - need about 14 or 15
           ;;     
-          doom-variable-pitch-font "Roboto" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
+          doom-variable-pitch-font "Roboto-11" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
           ;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
           ;;  - TODO: try coding with it, def worth the beauty! also, it makes code very narrow!
           doom-big-font "Roboto" ;; FIXME: "could not resize 'doom-serif-font' for some reason"
           ;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
           ;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
-          doom-serif-font "DejaVu Serif" ;; vs Noto Serif, Caladea, Carlito
+          doom-serif-font "Tinos" ;; from least to most seriph: Tinos / Noto Serif < Caladea < DejaVu Serif
           ;; NOTE: also an intereting experience... back when code was printed in fancy serif..
           )
     )
@@ -852,7 +852,7 @@
 
   ;; battle of the cute
 
-  ;; (setq doom-font "AnnotationMono-11") ; d: 10, eh, something's off..
+  ;; (setq doom-font "AnnotationMono-11") ; d: 10, eh, something's off.. feels a bit squashed (low height, long width).. though very fun! simpsons vibes
   
   ;; (setq doom-font "Agave") ; d:10 nice! very cute. though maybe too cute to read.. lol
   ;; (setq doom-font "Agave-11") ; also nice! big. funky! bolds look great!
@@ -939,24 +939,28 @@
   ;; google sans
   ;;   - the new chromeos default
   ;;     - (replacing arimo/tinos/cousine?)
+  ;;   - default for google chrome on chromeos
+  ;;   
+  ;; dejavu serif
+  ;;   - make org-mode a bible!
   ;;
   ;; noto serif
-  ;;   - quite good!
-  ;;   - make org-mode a bible!
+  ;;   - quite good! only slightly serif, and like noto sans, it's very spacious, with hefty horizontal space
   ;;   
   ;; carlito <- calibri
   ;;   - NOTE: maybe the best one..!
   ;;   - sans
   ;;   - default size has little vertical height, make it good for fitting a bunch of text
   ;; caladea <- cambria
-  ;;   - also quite good
-  ;;   - slightly serif
+  ;;   - serif
+  ;;
   ;;   
-  ;; (setq doom-font "Roboto") ; NOTE: spacious, immediately comfy and pleasing! very sans
-  ;; (setq doom-font "Noto Sans-12")  d: 11? this one is quite good, in caes roboto is too inconsistent..
+  ;; (setq doom-font "Google Sans-11") ; d: 11, quite wide (for a variable-width font), spacey
+  ;;   - 16 on google chrome..!?
+  ;; (setq doom-font "Roboto-11") ; d: 12,  NOTE: in my eyes, this is the best one, spacious yet not widely-spaced, very sans
+  ;; (setq doom-font "Carlito-12") ; d: 10, very good, got that ms word 2008(?) feel
+  ;; (setq doom-font "Noto Sans-12")  ; d: 11? eye-pleasing! this one is quite good, in case roboto is too variable or narrow in width
   ;;   - i actually remember using this somwhere.. i think for writing on my ipad mini, using voice dream writer!
-  ;; (setq doom-font "Google Sans-11") d: 11, 16 for google chrome (on chromeos)..!?
-
 
   
   ;;  - children/elderly mode
