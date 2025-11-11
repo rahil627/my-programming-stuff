@@ -6,23 +6,12 @@ this was a very messy paste-bin..
 
 It seems that from simply wandering around YouTube, starting with Jonathan Blow, moving on to videos from HandMadeCon, I’ve learned quite a lot about the theories of computers: a history of technology, it’s problems—which are current problems—, programming concepts and ideologies, how it relates to hardware, programming languages, compilers, and so on.
 
-Similarly, it seems that from simply wandering around GitHub, I’ve learned quite a lot about how to make stuff: how to parse text, which leads to creating a mark-up language, which itself leads to creating a programming language that trans-piles down to another high-level language; common game engine paradigms, what good programming is—just fucking doing it: just doing what needs to be done, then, later, refactoring it down to sensible chunks: “data-driven”; pop game and i/o libraries (SDL, SFML, Haxe frameworks (Kha, Heaps, Flash implementations), MonoGame...); how to use Haxe for everything: generate a web-site (can transpile to JavaScript) with node.js, use C/C++ libraries via ‘extern’, wrap other libraries: thus doing everything—generate front-end web code, serve the internet via back-end web code, make games with game engines (heaps) or multi-media libraries (kha, nme, openFL...) or “foundational” libraries (lime), make cross-platform (native desktop, native mobile, web) applications with
+Similarly, it seems that from simply wandering around GitHub, I’ve learned quite a lot about how to make stuff: how to parse text, which leads to creating a mark-up language, which itself leads to creating a programming language that trans-piles down to another high-level language; common game engine paradigms, what *good programming is—just fucking doing it: just doing what needs to be done, then, later, refactoring it down to sensible chunks*: “data-driven”; pop game and i/o libraries (SDL, SFML, Haxe frameworks (Kha, Heaps, Flash implementations), MonoGame...); how to use Haxe for everything: generate a web-site (can transpile to JavaScript) with node.js, use C/C++ libraries via ‘extern’, wrap other libraries: thus doing everything—generate front-end web code, serve the internet via back-end web code, make games with game engines (heaps) or multi-media libraries (kha, nme, openFL...) or “foundational” libraries (lime), make cross-platform (native desktop, native mobile, web) applications with
 
 
 * some basic overviews
 
 from notes from another file
-
-high level -> Assembly -> Machine
-wages = 5; -> load wages; store 5; -> 100100 100010
-compiler -> assembler
-
-source code -> object program
-linker - combines libraries with the object program
-
-editor -> compile -> link -> load -> execute
-
-build/make - link object code with resources to create an executable
 
 structured programming - divide into subproblems
 object oriented programming - identify objects, determine how they interact, specify members and methods
@@ -320,8 +309,6 @@ https://www.youtube.com/watch?v=7xsX2JP-Xxo
   - quantum computing
     - there are applications to encryption, but what about runtimes?
 	  
-
-
 * seems to be looking into game specific abstractions
   
 object pool

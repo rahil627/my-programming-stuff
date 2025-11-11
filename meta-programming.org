@@ -55,8 +55,6 @@ type inference
 variable memory allocation (-> dynamic typing)
   - Static programming languages (possibly indirectly) require developers to define the size of utilized memory before compilation (unless working around with pointer logic). Consistent with object runtime alteration, dynamic languages implicitly need to (re-)allocate memory based on program individual operations.
 
-
-
 ** during read-time
 
 (empty)
@@ -73,7 +71,6 @@ Assembly, C, C++, early Java, and Fortran do not generally fit into this categor
 reflection
   - TODO: different from run-time introspection?
   - ...common in many dynamic languages, and typically involves analysis of the types and metadata of generic or polymorphic data. (to macros?: It can, however, also include full evaluation and modification of a program's code as data, such as the features that Lisp provides in analyzing S-expressions.)
-
 
 ** during run-time
 

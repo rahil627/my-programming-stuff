@@ -2,6 +2,9 @@
 
 may overlap with [programming-languages], [programming-concepts], and possibly more..
 
+
+isn't the compiler the language itself?
+
 * process
 
 systems langs (C, C++, rust, go, zig, etc.) -> target platform assembly
@@ -15,7 +18,31 @@ high-level lang (optional: -> LLVM for optimizing) -> generated C (to link to co
     - this project revived it https://github.com/JuliaComputingOSS/llvm-cbe
     - however, this sounds impossible for any non-trivial program
 
+high-level lang -> byte-code -> VM (-> machine code?)
+  - TODO: how do VMs translate to machine code??
+  - byte-code may be pre-compiled
+  - java, c#, haxe/hashlink, elixir, etc.
+  - embedded langs
 
+high-level lang -> interpreter  
+      
+** TODO merge from another note
+
+high level -> Assembly -> Machine
+wages = 5; -> load wages; store 5; -> 100100 100010
+
+compiler -> assembler
+
+source code -> object program
+linker - combines libraries with the object program
+
+editor -> compile -> link -> load -> execute
+
+build/make - link object code with resources to create an executable
+
+  
+
+  
 * platform-specific
 
 WARNING: for iOS and many consoles (except switch?), "cannot execute writeable regions", thus cannot use JIT compilation
@@ -36,14 +63,14 @@ consoles:
 
 from the end of the [[re-writing the ruby parser]] article
 
-a parser is the part of the programming langauge that reads source code and converts it into a format that can be understood by the runtime. At the high level, this involves creating a tree structure that represents the flow of the program. When looking at source code, you can often see this tree structure in the indentation of code.
+a *parser* is the part of the programming langauge that reads source code and converts it into a format that can be understood by the runtime. At the high level, this involves creating a tree structure that represents the flow of the program. When looking at source code, you can often see this tree structure in the indentation of code.
 
 TODO: just finish and note that paragraph under background, i've read the rest..
 
 
 * ruby
 
-because it's possibly the most complex language
+because it's possibly the most complex language (to parse)
 
 https://ruby-compilers.com/
   - this is a great little web-site, full of gems!
@@ -101,6 +128,7 @@ https://ruby-compilers.com/jruby/
 
 
 * C And C++ Interops
+
 Linking/Including C++ libs into a C host program is possible but not advisable due to *the non-standardization of name-mangling*, however you can "spend a few days writing a C-style wrapper for the C++ library."
   - the other way around, i think works fine though(??)
 

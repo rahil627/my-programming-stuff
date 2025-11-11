@@ -101,7 +101,7 @@ function type
 dynamic
 abstract
 monomorph
-
+  - ??
 
 ** expressions
 tell what a program should do
@@ -229,6 +229,7 @@ p call_proc(my_proc)
 see [haxe]
 
 *** compiler metadata
+
 i think the metadata is sent to the compiler to to either conditionally do different stuff or run a macro...
 
 haxe's list of compiler metadata, for example, is exhausting, mostly due to it's multi-target nature
@@ -236,18 +237,20 @@ haxe's list of compiler metadata, for example, is exhausting, mostly due to it's
 
 
 ** compiler options
+
 "The Haxe Compiler is typically invoked from command line with several arguments which have to answer two questions:
 What should be compiled?
 What should the output be?"
 
-generally the answers are a Main class for input, and
-a target platform: this could be source code, bytecode, machine code
+generally the answers are a Main class for input, and a target platform: this could be source code, bytecode, machine code
 
 *** compiler flags
+
 haxe's options for compiling, for example, are exhausting, mostly due to it's multi-target nature
   - https://haxe.org/manual/compiler-usage-flags.html
 
-*** a build file
+*** build file
+
 usually a standard build file is provided to store the compiler options, for convenience
 
 
@@ -255,7 +258,10 @@ usually a standard build file is provided to store the compiler options, for con
 although not part of the actual programming language, it's bundled along with most general programming languages (embedded languages are an exception)
 
 *** standard library structure
+
 std lib structure from haxe's docs, expanded a few categories:
+  - this is pretty much the same in most languages (as haxe transpiles to so many, it is quite generalized)
+    
 Standard Library
 String
 Data Structures
