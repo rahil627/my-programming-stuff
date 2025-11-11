@@ -674,12 +674,15 @@
 
 
 ;; NOTE use solaire-mode to remove background color tinge
-;; adding to (spc t s)
+;; adding to (spc t) key-map
+;;   - NOTE: this may help with trouble seeing text..
 ;;   - TODO: create functions to dim/adjust the text used for plain text, comments, and all text
 
-;; bright: light
-;; dim: outrun <-- MAIN THEME
-;; late night: solarized-dark
+
+;; MY CURRENT (DEFAULT) THEME-SET:
+;; main: outrun-electric
+;; late night/comfort/plain-text: solarized-dark
+;; in bright light: shades-of-purple
 
 ;; light:
 ;; (setq doom-theme 'doom-earl-grey) ; light
@@ -691,8 +694,18 @@
                                         ; PERFECT, similar to aura, especially with night-mode / warm colors!!
                                         ; BY FAR THE BEST THEME
                                         ;   - (of the ones provided by doom)
+                                        ; FIXME: plain text in outrun-electric is unclear, perhaps from being dim / un-saturated..
+;; (solaire-global-mode) ; TEMP: trying to fix dim font..
+                      ; nope, not the problem..
+;; maybe doom-theme--colors
+;;   - (fg "#f2f3f7" "#f2f3f7" "brightwhite")
+;; ..unfortunately my lisp-fu isn't worthy..
+;; cheat with a (cl-loop ...)..?
+;; (alist-get) ; this one looks good.. can set it using it too..
+;; (doom-darken '#f2f3f7' .25) ; and this too
 
-;; (setq doom-theme 'doom-shades-of-purple) ; childishly hideious, very bright back-light
+
+;; (setq doom-theme 'doom-shades-of-purple) ; childishly hideious, very bright back-light (which works during the day!!)
 ;; (setq doom-theme 'feather-dark) ; low-contrast, slightly-visible comments, purple tinge, that lovable ugly one from helix: boo-berry! lol
                                   ; for when you want purple-tinged plain text back (from the helix days)
 ;; (setq doom-theme 'doom-laserwave) ; monokai with some pink in it
