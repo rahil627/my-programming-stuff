@@ -1,6 +1,32 @@
 
 * some random notes
 
+** TODO casey muratori's performance-aware programming [video] series
+
+to make me hate ruby, and stick to haxe, without most features, lmao
+
+https://www.computerenhance.com/p/table-of-contents
+
+"This series is designed for programmers who know how to write programs, but don’t know how hardware runs those programs. It’s designed to bring you up to speed on how modern CPUs work, how to estimate the expected speed of performance-critical code, and the basic optimization techniques every programmer should know."
+
+this is a huge series, but here' a few enticingly-titled ones:
+
+https://www.computerenhance.com/p/waste
+  - TODO: watch the video
+
+https://www.computerenhance.com/p/clean-code-horrible-performance
+  - TODO: watch the video
+    - as a recap, and fun
+  - this one's transcript is much longer
+  - replacing an extremely simple use of polymorphism (class inheritance + virtual methods) with structs and a switch statement led to a 2x increase, and using a table (a const array) led to 15x increase, and with optimization via AVX (SIMD stuff), 22x
+    - note: this is just a very very simple example program run 1000x
+    - *THIS IS KINDA INSANE..*
+  - moreover, writing in a more data-function way, it's easier to see patterns, and so at one point he was able see and combine the math, which otherwise would've been two tables, or two switch (or worse: two class virtual methods)
+
+*classes are "indirection", because they are allocated on the heap, requiring a pointer to goto it*
+
+*virtual/inherited methods are an "indirection", because every-time they are called, they must look up (on a table?) which function to call (dynamic dispatch)*
+
 ** TODO a diary entry by matz in 20040807
 
 textbringer system clipboard woes :/
