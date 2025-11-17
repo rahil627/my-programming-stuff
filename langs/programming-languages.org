@@ -1675,10 +1675,37 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
   - see [[nim]]
   - have option to choose to use a garbage collector to handle memory
 
-*** [?] Nelua
-  - NOTE: i see no reason to use it over haxe, save that it's simpler, more composable..
+*** YES Nelua
+  - PERSONAL NOTE: this is probably the most interesting alternative to haxe.. very very close to C
   - lua-like in many ways: syntax, minimal design / few features that can be used to create more features via meta-programming
     - "Nelua tries to be more minimal and generate more readable and compact C code.", when comparing it to nim
+  - meta-programming galore (static)
+    - https://nelua.io/overview/#meta-programming
+    - *great C pre-precessors*
+      - single and multi-line ("clode blocks")
+      - defaults to global pre-processor namespace, but can declare a local pre-processor namespace!
+      - *require a module into the pre-processor namespace*
+        - really neat!
+      - use pre-processor functions to create polymorphic functions
+      - *"pre-processing on the fly"*
+        - "While the compiler is processing you can view what the compiler already knows to generate arbitrary code:"
+        - "You can even manipulate what has already been processed:"
+        - "The compiler is implemented and runs using Lua, and the preprocessor is actually a Lua function that the compiler is running, so it is even possible to modify or inject code into the compiler itself on the fly"
+    - *great macros*
+      - looks simlar to haxe
+      - both of these are made quite simple
+        - C replacements and C replacement macros for expression, identifiers, statements, etc.
+      - *Blocks of code can be passed to macros by surrounding them inside a function*
+      - use macro to create generics
+        - looks annoying.. but then again, you'd learn/better understand how to make macros!
+        - generalize macro to replicate C++ generics
+    - *concepts*
+      - a pre-processor on functions that allows you to do something based on the type of args (including polymorphism), at compile-time
+      - TODO: STOPPPED HERE
+        - there's quite a lot here..
+    - *a ton of excellent C interops*
+    - *compiler annotations at var/function level*
+      - including inline
   - garbage collector is optional (on by default)
   - compiles (generates/transpiles) to C
   - *compiler written in lua, and thus completely modifiable!*
