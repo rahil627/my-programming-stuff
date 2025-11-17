@@ -307,14 +307,20 @@ be designed to be cross-platform, or at least have that in mind
     - *because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, especially consoles, it must rely on it's ability to transpile to C*
 
 answer:
-1. haxe, jai
+1. haxe, jai, beef
    - i don't know if jai will allow a garbage collector..
    - beef requires memory management, with a focus on custom allocators
-2. ocaml, nim, nelua, scheme(s).. lots!
-3. clr/C#
-   - now aot
-4. jvm
+2. nelua
+   - nelua is new but seems quite ideal for game programming, especially when compared to more non-gamer langs ocaml and nim
+3. ocaml, nim, lots of static here!
+   - ocaml's native comp makes cross-platform tough
+4. clr/C#
+   - new aot compiler
+     - in addition to unity's il2cpp
+5. jvm
    - ??
+6. schemes (that generate C)
+   - too far from C, inefficient
 
 alt: dragonruby and ruby (and C)
   - to try a more interactive dev experience.. especially with emacs!!
@@ -368,7 +374,7 @@ ruby >>> python (>>>> shell langs) (>>>> go)
     - github ci?, actions?, gitlab ci?
   - data-munging
   - and other things that require dynamic run-time magics
-haxe (>? nim =? nelua)
+haxe (>? nelua >? nim)
   - high-performance apps yet still uses a garbage collector
     - games, media
       - unfortunately suffers from not having a popular, easy-to-learn media/game framework
@@ -394,7 +400,7 @@ haxe (>? nim =? nelua)
 C
   - mostly to interop with C libs
   - or when things get hairy..
-jai (=? beef >? nim)
+jai = beef (>? nim)
   - very-high-performance apps with manual-memory-management options and tools
     - games, media
       - jon blow's engine
@@ -1545,12 +1551,12 @@ there's quite a bit of competition in this category..
 but none are nearly as cool as haxe!!
   
 *** YES (lisp)
-- common lisp/scbl
-  - PERSONAL NOTE: i'd personally give this a shot, as it's infinitely more interesting than go.. yet perfectly fine for it's same domain too (high performance, concurrency)
-  - great native compilation
-- scheme/stalin?
-- invented the garbage collector!
-- see [[lisp]]
+  - NOTE: not static, just wayy faster than other dynamic langs
+  - common lisp/scbl
+    - PERSONAL NOTE: i'd personally give this a shot, as it's infinitely more interesting than go.. yet perfectly fine for it's same domain too (high performance, concurrency)
+    - great native compilation
+  - scheme/stalin?
+  - see [[lisp]]
 
 *** OK (OCaml)
   - see [[OCaml]]
@@ -1671,9 +1677,12 @@ trace( interp.execute(program) );
   
 in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a combination of the maker’s favorite languages mixed together. None are really innovative. Only only a few will catch on, become popular, have libraries, and live on... but that doesn’t mean they shouldn’t be used. Use whatever makes you happy! :) Anyway, it can be really cool making your own little world in your favorite language... As long as it works with C/C++, the worst case is you have to write some “interop” or otherwise “wrapper” code. 
 
-*** OKAY (Nim)
+*** OK (Nim)
   - see [[nim]]
   - have option to choose to use a garbage collector to handle memory
+    - https://nim-lang.org/docs/mm.html
+    - however, default has seemed to move to ARC then ORC (reference counting)
+        - see https://nim-lang.org/blog/2020/10/15/introduction-to-arc-orc-in-nim.html
 
 *** YES Nelua
   - PERSONAL NOTE: this is probably the most interesting alternative to haxe.. very very close to C
@@ -1836,7 +1845,6 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
   - see [[meh, not interested]]
   - Unity
   - XNA/FNA
-  - top 5 most advanced vm (after jvm, v8, beam..?)
 
 
 ** systems langs (manual memory-management, native compilation, statically-typed)
@@ -1866,8 +1874,9 @@ at first i thought games really needed it, but as all dynamic languages interfac
 **** YES Jai
   - see listing under [#C and its replacements]()
   
-**** [?] Beef
+**** YES Beef
   - STATUS: up-to-date as of 2024. very consistent development. currently native desktop OSs, mobile is in early alpha
+    - UPDATE 2025: Penny's Big Breakaway, by the people that made Sonic Mania, used Beef with a C++ core engine
   - loads of memory management-related features, thus *suitable for high-performance games and game-making*
     - **"Beef allows for safely mixing different optimization levels on a per-type or per-method level, allowing for performance-critical code to be executed at maximum speed without affecting debuggability of the rest of the application."**
       - a pretty killer feature
@@ -1878,7 +1887,7 @@ at first i thought games really needed it, but as all dynamic languages interfac
     - co-founder of popcap games
   - Maddy (of Celeste) made an engine in it, but seems to have abandoned it..
 
-**** YES Nim
+**** OK Nim
   - PERSONAL NOTE: among the most practical, general-use among newer langs.. but i don't see much reason over haxe, save manual memory management, which in case i'd rather just write C for..
   - **"aims for efficiency, then expressiveness, then elegance, has metaprogramming too, in that order"**
     - this is a good way to categorize languages..
@@ -1898,6 +1907,7 @@ at first i thought games really needed it, but as all dynamic languages interfac
       - "No. *macros only have access to their corresponding subtree of the AST.*"
     - https://nim-by-example.github.io/macros/
       - **i wouldn't call these macros _elagant_ by any means... nor even the language**
+        - this is indeed hideous..
     - **many features in the language are implemented using macros, therefore keeping the core quite small**
     - https://community.haxe.org/t/macros-when-and-why-is-if-macro-if-macro-required/2530/6
       - "All that aside, Nim and Rust macros don’t quite compare with Haxe’s, where it’s not uncommon to use 3rd party libs, networking, file system, databases, the operating system (invoking other CLI tools) and what not. It’s also common to call into the compiler to perform typing and what not (which as far as Google tells me is not possible in Nim or Rust). Properly separating code is therefore vital in the long run."
@@ -2021,7 +2031,7 @@ at first i thought games really needed it, but as all dynamic languages interfac
  - OpenFrameworks also has Raylib's beauty (not sure if it was C or C++ tho..)
  - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, *dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow and optimized*
 
-**** OKAY Zig
+**** OK Zig
   - *had a rough dev history full of rehauls*
   - not the best tool-chain, though some parts better than odin, and better cross-platform support
   - a C replacement
@@ -2179,20 +2189,23 @@ OCaml
   - purescript
     - subset of haskell that transpiles to js
 
-*** OK OCaml
+*** YES OCaml
   - *conclusion: overall a solid garbage-collected langauge, just very slow in development. it's only con really isn't the langauge itself, it's that it's community is really small, mostly academics*, and as haxe attracted all the game devs, there just isn't a need for it for me if i use haxe already..*
     - https://www.reddit.com/r/ocaml/comments/1iw4v7z/why_is_ocaml_not_popular/
       - TODO: a TON of reasons why not here..
       - tooling incredibly slow to develop
         - no IDE support until lsp (save emacs)
+          - https://discuss.ocaml.org/t/a-next-generation-ide-for-ocaml/15350/10
+            - TODO: super intersitnf!
         - no build system until 2018
         - no concurrency / GIL
           - notably, elixir solved this by re-using BEAM
         - lackluster performance
+    - NOTE: *native compilation means no iOS/Android/consoles :/*
   - UPDATE: generational garbage collector
     - "The OCaml 5.0.0 release in 2022 is a complete rewrite of the language runtime, **removing the global GC lock and adding effect handlers via delimited continuations. These changes enable support for shared-memory parallelism and color-blind concurrency**, respectively."
       - https://discuss.ocaml.org/t/multicore-ocaml-vs-thread/5838/12
-   - *"OCaml unifies functional, imperative, and object-oriented programming under an ML-like type system."*
+  - *"OCaml unifies functional, imperative, and object-oriented programming under an ML-like type system."*
     - making it among the most practical functional langs
     - in the functional to object-oriented/procedural sprectrum, OCaml is closer to functional, whereas Haxe is closer to object-oriented/procedural, giving it a very good profile and balance, making it far more practical than more functional languages
     - the "O" stands for object-oriented
