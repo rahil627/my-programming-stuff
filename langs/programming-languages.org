@@ -1718,6 +1718,9 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - PROBLEM: currently suffers from runtime struggles (memory usage, compile time (no incremental compilation))
     - PROBLEM: *windows os support sucks, it took 10 years to get it: 2014-2023+*
     - PROBLEM: LSP wasn't great last time i checked
+      - https://www.reddit.com/r/crystal_programming/comments/1n909ui/outofthebox_ide/
+        - https://forum.crystal-lang.org/t/why-isnt-there-an-lsp-for-crystal/7687/
+          - apparently, it ain't easy due to the language! maybe some comprimises must be made..
     - PROBLEM: docs suck
     - PROBLEM: no great frameworks
   - conclusion: although it has all of the things i want--Ruby syntax, good C api, concurrency (but no parallelism :/), macros, garbage collection (wish it were optional though..)--*including nice macro syntax too!*, performance (static-typing and compiled via llvm), etc.--Haxe is *far* more developed and has been in production use for a long time now, including a top-tier JS/web target, a fast-compiling and performant VM target, and tons more stuff, in addition to solid cross-platform app and game frameworks, LSP, etc.
@@ -1736,6 +1739,8 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
   - **syntax and style very very similar to ruby, like 75% similar**, **just as scripty-feeling as ruby too!!: no main function needed**, not forcefully object-oriented like haxe
   - yet deeply **object-oriented** in it's impementation just as ruby was too
   - macros and ASTs like Haxe
+    - simpler to write, though not by much..
+    - haxe's macros still more powerful.. (complete AST manipulation)
   - **concurrency like Go**
   - uses ruby's (or jekyll's?) simple yaml config (build?) file to fetch dependencies, making it very simple get dependencies from git/github
     - fixes ruby's main problem here..
