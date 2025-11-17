@@ -11,6 +11,9 @@ conclusion:
 
 make web apps instead, see [web-frameworks]
 
+only after enough profit, would it make sense to deal with making native apps, and even then, i still (as of 2025) wouldn't use any existing cross-platform app frameworks. It's simpler and unlimited in potential to build two native apps (iOS and Android) directly, then to deal with yet another abstraction. Or, possibly, using haxe (or really any language with good C interops) as a single-code-base, only using the ffi for the functions you need.
+
+
 tl;dr:
 write the front-end using web-tech (html/css/js or haxe/ruby/purescript/typescript->js) and then use electron/tauri to target desktop. if you need a server: see [web-frameworks]: phoenix/elixir for servers > roda/ruby/erb for simple server stuff (and <3 ruby). **having the front-end written using web tech (html/css/js) makes it future-proof, more portable (to web and mobile web), and even more flexible than native app gui components (you can make your own components).**
 
