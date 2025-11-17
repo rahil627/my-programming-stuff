@@ -281,30 +281,34 @@ see [game-engines], [web-frameworks], [app-frameworks], etc.
       - python
     - web
       - pop web langs and javascript
-
+  - thankfully, i'm not interested in either of these things.. and don't even consider web as programming
         
 in general:
 **have the option to provide a garbage-collector**
 **feature-ful**
   - so, not google's langs (go, python, dart?) nor other restricted langs
-compile to machine code (either natively or via transpile to C)
+compiles to machine code, preferably *a focus on generating optimized C*
+  - thus compiling to most platforms (cross-platform): desktop OSs, iOS (+ iPadOS), consoles, embedded devices, etc.
   - it should provide a binary
     - even better if portable
-  - for most platforms: desktop OSs, iOS (+ iPadOS), consoles, embedded devices, etc.
+*simple/easy interops with C*
+  - bonus if C++!!
 it should be pretty fast
   - not python slow
 provide a quick-compilation option so that you only need to build/compile to native code for the final product
-provide an interpreter, so that you can quickly run little scripts
-  - not so important.. a VM is enough
+  - compilation cache or VM
+provide an interpreter (or VM), so that you can quickly run pieces of code (and scripts)
+  - not so important..
 *aimed for games/interactive media* :D
   - (and other "creative" applications that use various input/output hardwares)
-provide an option of memory management
-  - for fine-tuning intense memory changes (textures going in 'n out, etc.)
-  - write "unmanaged code"
-  - make it very easy to interop with C (bonus if C++!!)
+*provide an option of memory management*
+  - for hanlding intense memory changes (textures going in 'n out, etc.)
+  - write "unmanaged code" (C#)
 be designed to be cross-platform, or at least have that in mind
-  - maintain a set of libraries for target platforms: android > iOS > desktop OSs > consoles > everything else, in that order
-    - *because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, especially consoles, it must rely on it's ability to transpile to C*
+  - maintain a set of libraries for target platforms: *web > android > iOS* > desktop OSs > consoles > everything else, in that order
+    - because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, especially consoles, *it must rely on it's ability to transpile to C*
+    - *transpiles to javascript*
+      - *and the media framework/engine must transpile to canvas*
 
 answer:
 1. haxe, jai, beef
