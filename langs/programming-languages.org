@@ -1552,7 +1552,7 @@ but none are nearly as cool as haxe!!
 - invented the garbage collector!
 - see [[lisp]]
 
-*** YES (OCaml)
+*** OK (OCaml)
   - see [[OCaml]]
     - it's not purely functional, is garbage-collected, and very much belongs here
       - i think like rust, it's functional by default (uses the same keyword too: let)
@@ -2147,8 +2147,16 @@ OCaml
   - purescript
     - subset of haskell that transpiles to js
 
-*** YES OCaml
-  - *conclusion: overall a great garbage-collected langauge, slow and solid in development. it's only con really isn't the langauge itself, it's that it's community is really small, mostly academics, as haxe attracted all the game devs. there just isn't a need for it if i use haxe already (also garbage collected).. and though a functional paradigm attractive, it's just not the right paradigm for games. beyond games, however, it surely has it's uses (such as parsing/compiling)*
+*** OK OCaml
+  - *conclusion: overall a solid garbage-collected langauge, just very slow in development. it's only con really isn't the langauge itself, it's that it's community is really small, mostly academics*, and as haxe attracted all the game devs, there just isn't a need for it for me if i use haxe already..*
+    - https://www.reddit.com/r/ocaml/comments/1iw4v7z/why_is_ocaml_not_popular/
+      - TODO: a TON of reasons why not here..
+      - tooling incredibly slow to develop
+        - no IDE support until lsp (save emacs)
+        - no build system until 2018
+        - no concurrency / GIL
+          - notably, elixir solved this by re-using BEAM
+        - lackluster performance
   - UPDATE: generational garbage collector
     - "The OCaml 5.0.0 release in 2022 is a complete rewrite of the language runtime, **removing the global GC lock and adding effect handlers via delimited continuations. These changes enable support for shared-memory parallelism and color-blind concurrency**, respectively."
       - https://discuss.ocaml.org/t/multicore-ocaml-vs-thread/5838/12
@@ -2176,6 +2184,24 @@ OCaml
       ...
       compared to writing it in another language like Java or CPP, there's much less boilerplate, no need to deal with things like visitor pattern, copying nodes around and worrying about mutation, etc.
     - What hasn't been said in other comments is its rich type system. If you want to represent an AST of your language in a type-safe way, that is, in such a way to write the eval function without resorting to errors or exceptions, you have the right tool for that in OCaml: Generalized Algebraic Data Types (GADTs). Haskell also has official support for GADTs via a compiler extension. (...By the way, if the object language is more expressive than the metalanguage, this beautiful trick stops working. One example is dependent types, which are irrepresentable as an OCaml data type.)
+  - SML's (standard ML) module system, with some differences
+    - signatures
+      - interfaces for modules
+    - "first-class" modules > functors
+      - SML's modules that take modules as arguments
+      - OCaml's modules can be treated as values, returned, and stored in data structures!
+    - hierarchal
+      - can nest modules
+    - more sophisticated module type system with more control over abstract types and existential types
+    - equality types not guaranteed to preven run-time errors, unlike SML
+    - modules can be compiled seperately
+  - object system
+    - this seperates it from other MLs
+      - and even then, it's not often used, given its module system
+    - object...end, to quickly create an object without defining it (anonymous)
+    - structural typing (and sub-typing)
+      - there are no declarations of types of objects, the structure of the objects (vars, functions) make them distinct
+      - an object is a sub-type of another object if it siply provides all the methods and fields
   - haxe took it's game dev potential
     - https://www.reddit.com/r/ocaml/comments/nqq2om/what_should_i_learn/
   - quoted from Nicholas, who wrote haxe's compiler in OCaml:
