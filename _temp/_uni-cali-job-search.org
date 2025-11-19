@@ -12,7 +12,7 @@ the (sub)urban development sucks too: two metro-burbs, only one walkable city, a
 
 
 * notes (read before getting lost)
-** goals:
+** goals
 what's the game plan? *work during school year, go to parent's home or Taiwan during the summers/winters?*
   - *as long as i can make it back to Taiwan once/year, i think i can survive.. maybe.. i'm dying.. ;(*
 
@@ -24,12 +24,45 @@ whats the goal money? 5 years = 100k * 5 * 70%? = 70k * 5 = 350k
   - test income/time for that
   - can try in different towns/cities/campuses in America
 
-*try different jobs*
+try different jobs
+  - *CONCLUSION: nahhh, in too deep to taking care of a chill space and/or computer-programming-related work*
   - *electrician*: hvac
     - 4 year apprenticeship ;(
       - though, you do get paid while doing it.. so it's a job + training
         - TODO: how much while an apprentice?
-  - *emt* -> firefighter / para-medic
+    - safety officer?
+      - sounds like it combines EMT and just cares about the construction workers
+      - https://www.reddit.com/r/Construction/comments/10uia8o/becoming_a_safety_guy/
+        - "just sit down and watch others work"
+        - a much hated on job
+        - lots of paper-work
+        - not better pay than an apprentice
+    - https://www.reddit.com/r/IBEW/comments/15mvcn9/considering_firefighting_or_electrician/
+        - "We don't get to slide down poles and nobody thanks us for shit. We usually don't get to wear cool PPE. They make better chili and we don't have a sexy electrician calander.
+
+          But We rarely deal with fires and if we do we aren't expected to put them out. Our skill set is very useful at home and translates well to other careers if we decide to switch it up. We make way better money. We don't have to deal with the public very much. We can, on average, out drink any city employees. *If you like meeting a wide range of characters we got you covered*. I've worked with far right conspiracy theorists, former NFL players, punk communists, military veterans, felons, former strippers, immigrants from several different countries, just every kind of person who has a good story to tell really. *We don't have to walk in to the same building every day for years on end. The job is always changing. New locations and new areas. We get to see some cool shit.* Inside of nukes and power houses. Interesting factories and plants. You can cuss out your superiors and you might not get fired for it. Honestly I can't see myself being able to work any other kind of job again. Keeps interesting. Always new problems and tasks. *And if you don't mind traveling the whole country is open to you.*"
+        - "Pros and cons to both and they’re very different so it’s hard to compare.
+
+          Fire has long shifts and arguably more dangerous working conditions, but consistent pay and lots of time off. Seen as much more of a ‘prestige’ job than construction worker if that matters to you, although day-to-day tasks are closer to a labourer lol. Early retirement if you start young, but it’s very physically demanding and you’re basically living with a bunch of roommates for half your life which isn’t for everyone. Usually tied to one location your entire career.
+
+          Electrical trade is absolutely huge (and growing) so it’s possible to keep learning new things your entire career, or simply find a niche that interests you and stick with that. Can be very physically and/or mentally demanding (or not) depending on the work you’re doing. Opportunities to travel the country and even the world if you find the right niche. Union pay & benefits is comparable to fire, but construction is inherently cyclical so there may be times when work is slow. Can even start your own business and the sky’s the limit.
+
+          A lot of firefighters around here actually have a trades background & it’s seen as desirable when they recruit (always good to know how buildings are put together when you’re stumbling through them in the smoke)."
+  - x/emt -> para-medic
+    - https://www.reddit.com/r/electricians/comments/15ig035/you_cant_make_this_shit_up/
+      - "*As a first responder, do not leave this trade for a first responder career. It pays like ass and is not as rewarding as you would think.*"
+        - "Yeah lol I came here FROM first responder. This is much less stressful and pays better on average"
+        - "same here. medic for 13 years and hit a ceiling with pay. you either go back to school for nursing or a PA or remain a lifer because you love the stress of bleeding ulcers and wondering if your gonna pull up on a wrecked car full of kids. mad props to those who do it day in and day out. after making the switch now i'm just in awe of how relaxing this trade is for me. therapeutic even."
+  - x/firefighter
+    - only 3-6 month training!
+      - https://www.reddit.com/r/SantaBarbara/comments/1ehoa12/how_to_become_a_firefighter_in_santa_barbara/
+    - but, it seems, both wildlands and structure fire-fighting, *will wreck the body: knee/hip/back/shoulder/arm pain, smoke/cancers, etc.*
+      - https://www.reddit.com/r/Wildfire/comments/1lgftje/how_has_wildland_firefighting_changed_your_life/
+        - people share their experiences in a single comment
+        - "First it gave, then it took, so I left"
+          - most people seem to do it to make some money, only to move on to a better job
+        - bad gov support, no disabilities / benefits
+        - *in general, just seems like a shit-show, being governed/run by idiots, military idiots, without being careful nor caring, just like any other government instutition: it just cannot compare to people taking care of themselves*
   - *i'm afriad both of these jobs don't provide enough freedom for me..* better to go the indie food 'n drink vending route.. combined with tech (startup, remote, self-maker)
 
 *at the same time, find a home in America*
