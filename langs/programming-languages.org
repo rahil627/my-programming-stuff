@@ -3195,9 +3195,10 @@ note: benchmarks are usually impractical, only exacerbating very specific differ
     - though, Rust's memory-management implementation does have it's trade-offs..
 
 **C** (clang > gcc)
-(**Jai?**)
-(Zig, V, Odin?, etc.)
-Chapel (??)
+Zig/V/Odin/etc.
+**Jai**
+
+(Chapel) (llvm or C, parallel)
 (Fortran)
 
 C++ (clang++ > g++)
@@ -3217,14 +3218,15 @@ Go
 
 *** tier 2:
   - garbage-collected
-  - native compilation
+  - native compilation or generate C
   - fully-featured / general-use langs
 
-**Julia** (AOT??) - crazy fast for a complex dynamic lang..??
-  
-Crystal (llvm) - PROBLEM: extremely slow compile times (default, no flags) even for the most trivial hello world code
-Nim (clang) - clang speeds! TODO: ..but c/llvm compilation must suck..
-**Haxe** (via transpiled/generated c/llvm or c++)
+**Julia** (llvm-ir?) - crazy fast for a complex dynamic lang..
+Crystal (llvm-ir) - PROBLEM: extremely slow compile times (default, no flags) even for the most trivial hello world code
+
+**Haxe** (c or c++, with clang/llvm optional)
+**Nelua** (c)
+Nim (c/clang/llvm)
 
 C# (aot/native?)
 D?
