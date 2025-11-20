@@ -519,7 +519,7 @@ elixir
 lisp (common lisp, scheme, emacs lisp)
   - text editor extension (*emacs*, *helix*, *lem*)
     - emacs is a dynamic run-time machine!!
-  - *high performance alt to C* with native-compilation (sbcl)
+  - *high performance alt to C* with native-compilation (sbcl, chez)
 mruby, mruby/C, picoruby (with C)
   - *embedded scripting/extension*
     - rust is tough to beat for embedded devices..
@@ -1122,10 +1122,14 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
 
 ****** implementations:
     - the main ones:
-      - chez
-        - best performance
+      - **chez**
+        - best performance via native compilation
           - "a few times slower than LuaJIT"
-        - propietary??
+          - *all targets including ARM 64-bit for mobile devices!*
+        - "Well, I'm using SDL2, and a compiled library for audio, and ~10-20,000 LOC. I can load those in csi, but the interpreter is so slow nothing really works. And a clean compile takes 30 seconds or so. The binary runs OK, not as fast as Chez, but acceptable. But I can't do interactive dev in it.
+
+          Chez is compiled when a module loads, and as you work in the REPL, so it's always fast. I can just load up my libraries and work interactively, or run the script and it has no noticeable compile time...In Chez I can literally just rewrite a function at REPL and it runs at full speed."
+          - https://www.reddit.com/r/scheme/comments/vskb55/which_implementation_of_scheme_do_you_use_and_why/
       - guile scheme
         - uses GNU's run-time GUILE, in which guile scheme is the main language
           - TODO: maybe a product of Richard Stallman..??
@@ -1150,16 +1154,19 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
 
 
     
-    - others:
+    - C-generating lisps:
     - **chicken**
-      - generates C, but also easy to embed it
-      - **best community*, great documentation
+      - has both an interpreter (for interactive programming) and a compiler to generate C, yet also easy to embed it
+        - but unlike chez, emacs-lisp, common-lisp, *it won't compile modules, so your interactive dev may churn at big modules..*
+      - **best community, great documentation**
       - has a library system (eggs)
         - https://wiki.call-cc.org/chicken-projects/egg-index.html
           - a nice single page site
+      - slow interpreter
     - gambit
       - generates C, **js**
       - https://try.gambitscheme.org/
+      - slow compiler
     - bigloo
       - generates C, JVM, .NET bytecode
         - lookin' like haxe..
@@ -3197,13 +3204,13 @@ Swift (llvm, reference-counting or borrow-checker)
 
 *** tier 1.5:
   - adds a garbage collector
-  - yet simple enough to be very fast
+  - very fast
   - native compilation
   - note: go's portable binary is much bigger
 
 Go
-**common lisp (sbcl)** - great alternative to Go, perhaps even the original go!
-*scheme (stalin)* - TODO: $$?
+**scheme (chez)** - great alternative to Go, perhaps even the original go!
+**common lisp (sbcl)** - crazy optimization for how powerful this language is..
 
 
 *** tier 2:
