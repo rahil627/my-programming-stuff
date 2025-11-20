@@ -1305,6 +1305,9 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
 
   - https://github.com/heyx3/Bplus.jl/blob/master/docs/!why.md
     - why julia for games
+      - by a person who wrote his own modular game engine in julia
+        - https://github.com/heyx3/Bplus.jl?tab=readme-ov-file
+          - looks similar to heaps! just a bunch of wrappers 'n the basic utility functions
     - "Scientists are not expert software engineers, yet they need high performance, so they end up splitting their time and attention between one language for performant libraries (usually C/C++) and another for high-level simplicity and usability (often Python). This isn't ideal.
 
       If you're familiar at all with gamedev, you already know that we have the same issue! "

@@ -1001,6 +1001,14 @@ probably could also be used like a “creative” framework to make just about a
   - LibGDX, Java, Java’s answer to SFML?, and just as old and solid too, this one is *much loved*, sorta has a cult fan community like OpenFrameworks, perhaps with a similar new media artist users
   
  - Beef’s corelib folder, just a wrapper over SDL?
+ 
+ - julia
+   - B+
+     - https://github.com/heyx3/Bplus.jl
+     - https://github.com/heyx3/BpExamples/blob/main/src/Pong.jl
+       - pong example
+     - seems similar to heaps, with wrappers around opengl, imgui, glfw, and a few game utility modules (ecs, scene graph)
+     - must do handle rendering (gl/glfw) yourself
 
   - haxe:
     - this needs it’s own section because this part of the Haxe world, unfortunately, is hella confusing and probably the main cause of deflecting people away from Haxe
