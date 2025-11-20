@@ -11,11 +11,31 @@ https://www.computerenhance.com/p/table-of-contents
 
 this is a huge series, but here' a few enticingly-titled ones:
 
+often said:
+*there's only two things that will improve the performance of a program: you can reduce the total number of instructions you're asking the CPU to do, or you can alter those instructions to move more efficiently through the CPU. That's really all you can do: reduce the number, or increase the speed.*
+
+https://www.computerenhance.com/p/welcome-to-the-performance-aware
+  - intro
+  - "I needed a term to distinguish what we’ll be doing in this course from what we used to call “optimization”.
+    - "It (optimization) refers to taking a particular program - often on a particular piece of hardware - and trying to maximize the performance. Typically this involved a lot of special-purpose knowledge about that hardware. It often meant getting really creative with how you manipulated parts of the hardware to get extra performance"
+    - "But nowadays we have entered an era of software where there's a different problem... Nowadays, due to common programming practices, tool chains, methodologies - whatever you want to call the overall way in which we program - the average program tends to be extremely slow... Modern software is more like 1000 times slower than it should be."
+    - "What's missing is a general performance awareness so that the software we produce can be more reasonably performant... just not be horribly inefficient."
+    - "I would argue there is always a business case for performance-aware programming - learning how performance works and then making smart, reasonable decisions based on that. It pays tremendous dividends, either in terms of user experience or in terms of lower server farm bills, or a host of other things like that."
+    - "It’s designed to give you all of the information you need to understand why software is either fast or slow, and to understand how the decisions you make affect the gradient of software performance. It’s an effort to try to get everyone back onto the same page where we're no longer writing software that's 1000x times slower than it should be, or 10,000x times slower than it should be."
+
+
 https://www.computerenhance.com/p/waste
   - TODO: watch the video
+  - *5 multipliers*
+    - #1. waste
+      - waste instructions
+
+https://www.computerenhance.com/p/instructions-per-clock
+  - "How many instructions is the CPU executing in a single clock cycle?"
+  - "if you get rid of all the instructions you really don’t need, and you're left with just instructions you do need, there's still a great deal of variability in how fast the CPU can actually do those instructions."
 
 https://www.computerenhance.com/p/clean-code-horrible-performance
-  - TODO: watch the video
+  - TODO: watch the video (i read the transcript)
     - as a recap, and fun
   - this one's transcript is much longer
   - replacing an extremely simple use of polymorphism (class inheritance + virtual methods) with structs and a switch statement led to a 2x increase, and using a table (a const array) led to 15x increase, and with optimization via AVX (SIMD stuff), 22x
@@ -25,7 +45,16 @@ https://www.computerenhance.com/p/clean-code-horrible-performance
 
 *classes are "indirection", because they are allocated on the heap, requiring a pointer to goto it*
 
-*virtual/inherited methods are an "indirection", because every-time they are called, they must look up (on a table?) which function to call (dynamic dispatch)*
+*virtual/inherited methods are an "indirection", because every-time they are called, they must look up (at run-time) which function to call*
+  - from wiki
+    - "Whenever a class defines a virtual function (or method), most compilers add a hidden member variable to the class that points to an array of pointers to (virtual) functions called the virtual method table. These pointers are used at runtime to invoke the appropriate function implementations, because at compile time it may not yet be known if the base function is to be called or a derived one implemented by a class that inherits from the base class."
+    - virtual method table = vtable
+  - from wiki on multiple dispatch:
+    - "In more conventional, i.e., single-dispatch object-oriented programming languages, when invoking a method (sending a message in Smalltalk, calling a member function in C++), one of its arguments is treated specially and used to determine which of the (potentially many) classes of methods of that name is to be applied. In many languages, the special argument is indicated syntactically; for example, a number of programming languages put the special argument before a dot in making a method call: special.method(other, arguments, here), so that lion.sound() would produce a roar, whereas sparrow.sound() would produce a chirp."
+      - "the vtable method uses the function name and not the argument type as its lookup key, and does not scale to the multiple dispatch case."
+      - dynamic dispatch seems kinda rare: most notably CLOS of common lisp and julia
+
+TODO: it might just be better to read various lang compilers to see how bad this all is..
 
 ** TODO a diary entry by matz in 20040807
 
