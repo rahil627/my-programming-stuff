@@ -1128,13 +1128,48 @@ m-ret
 c-m-ret
   - insert new heading (highest-level), no matter what?
 
-**** org-babel
+**** org-babel (literate programming)
 
-this is awesome for dynamics langs, as it allows you to mix human language writing with source code blocks, which you could execute at run-time
+this is awesome for dynamics langs, as it allows you to mix human language writing with source code blocks, in which you execute at run-time, while the program is running
   - i'm guessing jupyter notebooks derive from this concept.. where research writing that involves programming (as proof?) can have writing mix with code in the same document
 
-otherwise, it's similar to markdown's tags for code-blocks, which indicates to the editor/display program that this is code, and if the program has functionality, it may display it with some syntax highlighting
+similar to a mark-up lang's signifying delimiters for code-blocks, which indicate to the editor/display program that this is code, it highlights syntax, but it goes further in emacs, by starting a prog lang major mode when editing within the block, making editing prose/org and code seamless
 
+***** literate programming (web)
+
+https://en.wikipedia.org/wiki/Literate_programming
+  - a programming paradigm introduced in 1984 by Donald Knuth in which a computer program is given as an explanation of how it works in a natural language, such as English, interspersed (embedded) with snippets of macros and traditional source code, from which compilable source code can be generated.
+  - The literate programming paradigm, as conceived by Donald Knuth, represents a move away from writing computer programs in the manner and order imposed by the compiler, and instead gives programmers macros to develop programs in the order demanded by the logic and flow of their thoughts.[4] Literate programs are written as an exposition of logic in more natural language in which macros are used to hide abstractions and traditional source code, more like the text of an essay.
+  - Literate programming tools are used to obtain two representations from a source file: one understandable by a compiler or interpreter, the "tangled" code, and another for viewing as formatted documentation, which is said to be "woven" from the literate source.
+
+  - one could create software as works of literature, by embedding source code in descriptive text, rather than the reverse. Unlike standard programming practice which relegates documentation to comments, the WEB approach is to write an article to document the making of the source code, and to include all the source code in that article, so as to be compilable therefrom.
+https://www.reddit.com/r/emacs/comments/13wuk38/what_is_literate_programming_used_for/
+  - "In the data science world, I’ve seen it used not only for presenting code but as a means of tooling; *it allows scientists to inspect and manipulate a running process and the data within* in the same way you interact with a running lisp image while using emacs, *but with an added speciality on visualizing data*.
+
+  https://github.com/drewc/smug/blob/master/doc/tutorial.org
+  "One of my favorite uses for literate programming outside of that was in a common lisp library I used a long time ago.
+
+  The author wrote a literate org doc that described the architecture and design of the library. Each subcomponent was defined in code, explained in text, and given small inputs to demonstrate usage.
+
+  So you would work through the document and slowly build the library piece by piece, understanding its design intent and experimenting along the way. It was really fun to work through and I wish more software was documented this way."
+
+  - The early implementations were complex because *a key feature was the ability to decouple the documentation aspect from any ordering constraints on the code*. It was considered really important that you could write the document in whatever structure made for the best prose/documentation, and the tool needed to handle putting declarations before uses, etc. to be able to produce compilable artifacts.
+    
+  - This observation is the essential distinction between Original Literate Programming -- with "tangling" -- and today's prevalent Code-In-Documentation style. *"Tangling" supports "narrative order," or top-down order, in which an author may explain and illustrate design rationale, use-cases, examples, proofs, for functions, APIs, types, etc. before defining such things fully.* Compilers and other tools normally require bottom-up order, wherein such things must be fully defined before they're used. I've been confronted with thousand-page notebooks with hundreds of definitions long before any hint of why they exist; why they're designed the way they are; why other, more obvious designs were silently discarded; on-and-on; all kind of info one would need to understang a big software project. My approach? Read such notebooks backwards. That pretty much gets me the Literate-Programming Experience in the face of non-existent tangling tooling :)
+
+    
+https://www.reddit.com/r/emacs/comments/1ef4pyw/has_someone_used_literate_programming_in_a_large/
+  - Jupyter is great for rich comments, but it's not LP. Not even close. LP is more than rich comments: it's "inversion of presentation," i.e., you can describe your system in any order that suits you. Projects are perforce laid out in source directories for the convenience of the compiler and build system, and acquiring a mental model of a big system by wading through millions of lines in thousands of files can take a very long time. However, reading a well-written book that cannot get out of synch with the source can be a much shorter road to understanding. I worked on a spacecraft-navigation project whose source was extracted from a single, large troff file that printed out as a 2,000-page model of the physics of the solar system. This was literate programming in practice years before TeX.
+    
+    In the project I refer to, "the book" was maintained over years by a large team of physicists and programmers. I didn't know them all and don't know how many there were altother. I worked on my small part of it (clock synchronization). Every contribution was reviewed thoroughly in meetings that lasted many hours, including executing the code "on paper." We didn't have interactive debuggers. It was a laborious process. The programming languages were Fortran (mostly) and a little assembly language. I personally designed and vetted my own Fortran code in Lisp or Mathematica before committing it to "the book." Having those languages being the final languages would not have changed much. "The book" contained all the mathematics, design, and engineering of the project in careful prose, and the code was derived from it. Contrast typical process today where the comments are just comments, at best, and usually stale and worthless, and the code implicitly expresses the mathematics, design, and engineering. Every reader of the code must "reverse engineer" the mathematics and design and often the engineering choices, e.g., why a heap instead of a multiset?
+
+    
+    I must make another remark. Sometimes, the gap between code and ideas is necessarily large, i.e., the need for documentation is not necessarily a failure to express ideas in code. For an example, consider discrete lagrangian dynamics, a-la Marsden and West. The code, by itself, could not possibly give a hint about the extensive mathematics necessary for understanding. I would be really tempted to try an LP project for something like that.
+
+  - i did a reasonably big project in org-babel. I impressed myself, but no one else :) I concluded that without IDE and debugger integration, it'll never hit the mainstream. Jupyter is not even close because it misses the whole point of LP--that you can refer to things before you define them. Can't do that in Jupyter. The world is a sad place.
+    
+  
+***** bindings
 c-c c-v / spc c v
   - demarcate block
     - TODO: change to c? (check-source-block checks header arguments..??)
