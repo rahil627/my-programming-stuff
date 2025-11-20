@@ -1093,6 +1093,21 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
     - a totally awesome way to make websites in pure lisp!! (via websockets)
   - emacs itself has some cl-like things
     - cl-lib, EIEIO (a CLOS-like framework)
+
+
+  
+  - vs chez scheme
+   - https://elmord.org/blog/?entry=20191114-sbcl-chez
+   - *a better dev experience than chez scheme*
+      - https://elmord.org/blog/?entry=20191114-sbcl-chez
+        - *stack tracing, type annotations, uses less memory(!) at the cost of binary size(?)*
+   - "This one is a matter of personal taste, but I just like Scheme better than Common Lisp. I like having a single namespace for functions and variables (which is funny considering I was a big fan of Common Lisp's two namespaces back in the day), and not having to say funcall to call a function stored in a variable. I like false being distinct from the empty list, and for cdr of the empty list to be an error rather than nil. I like Scheme's binding-based modules better than Common Lisp's symbol-based packages (although Chez modules are annoying to use, as I mentioned before; Guile is better in this regard). Common Lisp's case insensitivity by default plus all standard symbols being internally uppercase is a bit annoying too. Scheme has generally more consistent names for things as well. I used to dislike hygienic macros back in the day, but nowadays, having syntax-case available to break hygiene when necessary, I prefer hygienic macros as well.
+
+     And yet… Common Lisp and Scheme aren't that different. Most of those things don't have a huge impact in the way I code. (Well, macros are very different, but anyway.) One things that does have an impact is using named let and recursion in Scheme vs. loops in Common Lisp: named let (similar to Clojure's loop/recur) is one of my favorite Scheme features, and I use it all the time. However, it is not difficult to implement named let as a macro in Common Lisp, and if you only care about tail-recursive named let (i.e., Clojure's loop/recur), it's not difficult to implement an efficient version of it in Common Lisp as a macro. Another big difference is call/cc (first class continuations) in Scheme, but I pretty much never use call/cc in my code, except possibly as escape continuations (which are equivalent to Common Lisp's return).
+
+     On the flip side, Common Lisp has CLOS (the Common Lisp Object System) in all its glory, with generic functions and class redefinition powers and much more. Guile has GOOPS, which provides many of the same features, but I'm not aware of a good equivalent for Chez."
+
+  
 ****** implementations
     - **SBCL**
       - the standard
