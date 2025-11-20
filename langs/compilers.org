@@ -68,6 +68,33 @@ a *parser* is the part of the programming langauge that reads source code and co
 TODO: just finish and note that paragraph under background, i've read the rest..
 
 
+
+* AOT vs JIT
+
+"It is not as simple as only being about dynamic typed either. I think *for the most cases when Julia or other languages comes very close or even surpass C in performance it is because of just in time compilation*. Synthetic tests are great and teach you a lot about CS. However they usually fail to translate into the real world.
+
+*Speed all comes down to efficient machine code. GCC or Clang are great compilers but they can only make optimization assumptions at compile time. Llvm with JIT can optimize at runtime.*
+
+A practical but naive example, if you have a large program that can do many things but you will just call one of the program's function that perform some work 1 milion times in a for loop. Somewhat simplified Julia will only compile and optimize that specific function. In the C case GCC or Clang can't know that you will only use one of the functions at compile time and will be forced to create a much larger binary that is also optimized over the whole program and not the single function.
+
+When you run the program Julia will incur some cost in the beginning since it is not pre-compiled but llvm will probably have done a better job at writing your function in less instructions. Those less instructions per call will sum up and you end up with a "quicker" result.
+
+This does not make Julia or JIT superior though. The above use pattern isn't that common. *You are paying the JIT compilation time so there needs to be enough iterations to pay it off. Profile guided optimization would probably have told GCC to create just an as efficient machine code for the C case too*.
+
+In reality if you have a use case to do some relatively small task over and over again people will usually use C/C++ anyways and write good code that ends up in efficient assembly code (just look at the output and update the C/C++ code till the assembly looks good). E.g. the Linux kernel. Otherwise GPUs and FPGAs are quickly improving now and becoming much cheaper to use to offer even more speed up for some tasks.
+  - https://www.reddit.com/r/Julia/comments/77shs6/eli5_how_is_julia_so_fast/
+  - basically, *a JIT can help greatly with bad code, but AOT requires that you write code well, profile/optimize yourself*
+
+** the problem of dynamic typing
+
+"Computers are fast when you tell them exactly what to do. With C, you tell your computer exactly "here are two integers, add them using the integer addition". Since the CPU has built-in hardware for adding integers, it knows exactly what to do, and does it very quickly.
+
+In an interpreted language like Python, you tell the computer "here are two variables, add them". But the CPU has no concept of variables, so before the CPU can add anything, Python first has to figure out what these variables contain. If they are integers, perform integer addition, if they are floats, perform floating point addition, if they are int and float, convert the int to a float, then perform a floating point addition. Etc. Python has to do this for every single operation and every single variable. This is why Python is slower than C.
+
+Julia is kind of in the middle between Python and C. Julia can't really know whether a variable is a float or an int either (unless you tell it explicitly), but: it cleverly plans ahead whenever you call a function. When you call a function with some arguments, all the function arguments are known. Julia then goes ahead and looks at every operation inside the function and figures out the exact CPU instructions necessary for these particular arguments! Once the exact instructions are known, they can be executed quickly. That's why a function takes longer the first time you call it: on the first call, Julia figures out all the types of all the variables and compiles it all into fast, exact CPU instructions. The second and third time, (if the argument types didn't change), it will cleverly reuse that code, and is blazing fast."
+  - https://www.reddit.com/r/Julia/comments/77shs6/eli5_how_is_julia_so_fast/
+
+
 * ruby
 
 because it's possibly the most complex language (to parse)
