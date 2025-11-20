@@ -1,4 +1,6 @@
 
+also see [compilers]
+
 * some random notes
 
 ** TODO casey muratori's performance-aware programming [video] series
@@ -363,12 +365,12 @@ surprisingly, i chose the right langauge all along..!!
 <3 haxe
 
 
-* conclusion:
+* conclusion
 languages sorted by their use cases
 
 ** personal tool(-kit) waterfall:
 
-ordered from simplest to most difficult (manual-memory management):
+ordered from lowest to highest performance:
 
 *** my general-use langs:
 eshell >> bash and powershell
@@ -387,7 +389,7 @@ eshell >> bash and powershell
        - mix elisp with shell commands!
      - also, since it's a vm, it'll work anywhere..
   - NOTE: use bash/powershell over non-posix alt shells like zsh/fish/kitten for portability
-ruby >>> python (>>>> shell langs) (>>>> go)
+ruby >>> python (>>>> shell langs)
   - (alt for games/media)
     - dragonruby
       - *for interactive and beautiful game dev!!*
@@ -431,6 +433,7 @@ haxe (>? nelua >? nim)
   - transpile to js
   - glue lang / transpilers for all major libs: C, C++, jvm, js
 C
+  - the hand-made way
   - mostly to interop with C libs
   - or when things get hairy..
 jai = beef (>? nim)
@@ -1196,6 +1199,7 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
       - generates C, **js**
       - https://try.gambitscheme.org/
       - slow compiler
+        - stopped dev for a bit but came back
     - bigloo
       - generates C, JVM, .NET bytecode
         - lookin' like haxe..
@@ -1665,6 +1669,7 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
   - Wordpress and Facebook have kept this alive for a long long time
   - hack (language)
     - a typed dialect of php by facebook
+
 
 ** static langs (statically-typed, automatic memory-management)
 
