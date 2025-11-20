@@ -1168,28 +1168,34 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
     There's no wrong answer, though, both are lovely languages in their own way.)"
 
 ****** implementations:
+    - all use geiser package for emacs, though racket comes with it's own IDE
     - the main ones:
-      - **chez**
-        - best performance via native compilation
+      - *chez*
+        - *best performance via native compilation*
           - "a few times slower than LuaJIT"
           - *all targets including ARM 64-bit for mobile devices!*
+        - *solid C ffi*
         - "Well, I'm using SDL2, and a compiled library for audio, and ~10-20,000 LOC. I can load those in csi, but the interpreter is so slow nothing really works. And a clean compile takes 30 seconds or so. The binary runs OK, not as fast as Chez, but acceptable. But I can't do interactive dev in it.
 
           Chez is compiled when a module loads, and as you work in the REPL, so it's always fast. I can just load up my libraries and work interactively, or run the script and it has no noticeable compile time...In Chez I can literally just rewrite a function at REPL and it runs at full speed."
           - https://www.reddit.com/r/scheme/comments/vskb55/which_implementation_of_scheme_do_you_use_and_why/
-      - guile scheme
+      - *guile*
         - uses GNU's run-time GUILE, in which guile scheme is the main language
           - TODO: maybe a product of Richard Stallman..??
-        - meant to be used as an extension language for C programs, embedded into C
+        - people seem to say that the *implementation is much simple, easier to understand, whereas racket's code-base is complex*
+        - *meant to be used as an extension language for C programs, embedded into C*
         - had a big project of replacing the lisp engine/VM? in emacs with this run-time, which is more.. abstracted, enabling other languages to interact with it, among many other pros
           - *UPDATE: restarted work on this recently*
         - slow on numerical code: "magnitudes slower than LuaJIT"
-    - **racket**
+    - racket
+        - *uses a fork of chez*
         - all-in-one tool-kit, thus the easiest to jump into and make stuff! great for practice, but also one of the best implementations in general
         - "The language platform provides a self-hosted IDE named DrRacket, a continuation-based web server, a graphical user interface, and other tools. As a viable scripting tool with libraries like common scripting languages, it can be used for scripting the Unix shell. It can parse command line arguments and execute external tools."
         - *fully-featured: parallel threads, native compilation, has pretty much everything*
         - *"batteries included"*
           - IDE program included, so no need for the emacs barrier
+            - though.. i happen to love emacs.. so..
+            - people say that it doesn't feel as interactive as chez 'n guile
         - great documentation
         - **gui programming!**
         - has a standard scheme mode to code in pure scheme
@@ -1227,6 +1233,7 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
       - slow compiler
         - stopped dev for a bit but came back
     - bigloo
+      - ??
       - generates C, JVM, .NET bytecode
         - lookin' like haxe..
       - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
