@@ -128,6 +128,132 @@ textbringer system clipboard woes :/
 
 
 
+** TODO notes to merge
+
+## Jon Blow's opinion
+https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
+  - Jon Blow's rant on rust
+  - **the main problem of programming languages, especially for games**:
+    - most langauges that aim for being memory safe use a garbage collector that doesn't allow you to manually alter memory.. (and you want memory safety for when a reference/pointer is pointing to a memory that was de-allocated or re-used, or worse: the page of memory was removed by the OS causing a page fault and thus crashing the app)
+        - crashes are actually better than not-crashing and being silent about having the wrong data in memory
+      - smart pointer (reference counting? ew.) doesn't solve it, as you wouldn't want to authorize the class holding the reference to keep that referenced thing alive
+      - weak pointer doesn't solve it either, as the systems to nullify it would get complex and add cost, and adding checking for null adds more chances for errors, until you add some sort of pointer system, which ends up costing the same as looking up an ID
+      - example: object a is following object b, thus needs a reference to it
+      - one common solution: a container of entities is stored, then looked up (hashmap or array). this guarantees memory safety at the cost of an object a looking for object b (within the container) every frame(!!)
+      - a more complicated solution: in an ECS, dynamic arrays ("vec") of components are stored, this guarantees memory safety at the cost of an object looking for a component of object b every frame (in some generated index of a dynamic array)
+      - the main point of the video: rust's borrow checker didn't save the programmer from memory problems, rather, the programmer simply refactored the code in a way that the borrow checker won't check (pointers were changed to indicies of a dynamic array): the borrow checker is confused and doesn't know that the programmer is allocated memory theirself (via dynamic arrays). (or does the programmer simply turn off the borrow checker?? lmao!)
+      - **in the Witness, it's literally just an array of indexes (or array index?)**
+      - **in the sokobon game, the id uses 32-bits, the top bits for user id and the bottom bits for the entity id, and use a hashmap for it, because that would be a really big array, because the high-bits are set**
+
+https://www.youtube.com/watch?v=y2Wmz15aXk0
+  - **the idea of using a scripting language in a game was a failed experiment**
+  - scripting languages are "slow, bug-proned, impossibile to debug"
+  
+  
+## some thoughts
+see [app-frameworks], [game-engines]
+
+**writing the core in C/C++ is perhaps the best option, as you get the best of both worlds: manual memory management for the core, and a light-weight scripting langauge on top (Lua, Wren, mRuby?), or, people can create high-level bindings in their favorite langauge of choice**
+
+as long as the language can transpile to C/C++, then it should, in theory, work with just about any device (desktop, mobile, embedded, whatever). The problem is that it'll have to link to the libraries that each platform uses, which is likely C/C++/obj-C (exception: Android must go through java jni). If the application doesnt need to use the platform's libraries at all, however, i guess a binary is enough (apps/games for web assembly, desktop).
+
+
+## libraries matter
+libraries, including frameworks, engines, matter. a lot. Although you could use just about any language to solve just any solution, certain languages are better suited for certain *areas* in programming. This occurs naturally: someone wants to make something, solve something, they *hopefully* try to choose the right tool for the right job: the right language. Thus, the **language is just a tool** to do a job.
+
+Over time, people who use the language will create libraries, *hopefully* many of which are open-source, thus buidling up a huge collection libraries specific to that language. **That resulting library, the contents of the library, is really an effect of the language itself, along with the community behind it, it's pop frameworks, etc.** If the language was created for intense math, then intense math libraries will likely be the result. The langauge in itself, has some influence, but not as much as the frameworks and libraries that already exist. It's hard to justify re-making those too. Rust is the only exception, and it took 30 years after C++.
+
+Languages often have their own package managers: haxelib for Haxe, RubyGems for Ruby, NuGet for C#. Just by looking at the package manger, you can get a pretty good idea of what that language is mostly used for, and the power of the big frameworks in it. So, in RubyGems, the Rails web framework is a huge force, and much of Ruby is indeed used for web dev, along with general scripting / cli. In Haxelib, game 'n app frameworks such as OpenFL and NME are by far the biggest forces, with game frameworks and game-related libraries following after). **I think checking what libraries are in the package manager (or awesome github repo), is a good way to compare languages, instead of comparing the features of the language itself**, as it's the people that make the languages, not vice versa.
+
+
+# important changes in dev tech
+## WebGL is dead. Long live native dev.
+with WebAssembly/WebGPU? now, can just skip the whole HTML5/WebGL crap and basically run native apps (machine code?) in the web-browser :o :O luckily, i've never cared about web-targets, but now it's finally really dead! :) No Flash. No HTML5/CSS/WebGl. *Long live native dev*.. maybe
+
+## Microsoft "<3" games, linux, open-source
+.NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, and so the guy that started the linux GNOME project, created Mono, an open-source cross-platform runtime for the .NET world. Eventually, Microsoft about it, likely for hundreds of millions of dollars. Later, Microsoft made it official, stuffing it in the new .NET Core. *The C#/.NET stock is rising...* Thus, app frameworks like Avalonia and Uno can compete with Google's Flutter, and the game frameworks like Unity and MonoGame (based on Microsoft's own XNA) are still very popular game engines. Microsoft is doing well. All of that, alongside **open-sourcing VS Code (including spec'ing the LSP)**, **buying github**, and **allowing one to install linux within windows (WSL)**, and just the fact that Windows always had a monopoly on games. Microsoft has always been closer to games than both Google and Apple have ever have ever been, and now it's really showing.
+
+## move from dynamically-typed to static-typed
+"imo, not having static typing is a real pain for anything bigger than a small script, as it introduces a lot of potential bugs" - CRobes, from the haxe discord
+
+**i don't know the reason why this exists, save a very minor convenience of not physically typing the type keyword, which is mostly avoided by *type inference* anyway...**
+
+i'm just guessing in the special case of server-side: where perhaps it makes more sense for a server to run easily-editable-scripts as opposed to a single executable, which must be compiled every-time you want to update it
+  - but then again, is it that hard to compile..??
+
+AS2 -> AS3/haxe (a whole new language and compiler)
+js -> ts (transpiles to js)
+php -> hack (type checker bundle?)
+python -> mypy and others (type checker)
+ruby /w sorbet (type checker)
+
+
+
+TODO: merge to another file
+### dynamic vs static typing
+
+#### dynamic checking vs static checking
+https://stackoverflow.com/questions/9154388/does-untyped-also-mean-dynamically-typed-in-the-academic-cs-world/9166519#9166519
+  - "dynamic typing" is just a bad term, it should be dynamic checking (or perhaps lazy checking?)
+  
+https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages
+Statically typed programming languages do type checking at compile-time.
+Dynamically typed programming languages do type checking at run-time.
+
+#### strong vs weak type systems
+a strong static system is good at catching type errors at compile-time (and prevents them from happening run-time)
+
+TODO: however, it sounds like a dynamic type systems leads to more run-time checking... somehow??
+
+thus, it doesn't really matter if it's static-typed or dynamic-typed, the implementation of the type system dictates how good it raelly is
+  - https://erik-engheim.medium.com/why-use-a-dynamic-language-over-a-statically-typed-one-fb434994e2b6
+    - "However all statically typed languages are not created equal. Some like e.g. C has a weak type system, and numerous type related bugs are not caught at compile time. This has significantly worse consequences than in dynamic languages: you get undefined behavior, which it is hard to trace down the root cause of. Dynamic languages tend to fail more cleanly giving you a clear stack backtrace of where something went wrong with a descriptive error message."
+    - **"The beauty of dynamic languages is that objects carry with them a lot of information about themselves which is lost in a statically typed language. That means you can introspect the system at runtime with great accuracy."**
+      - C# reflector..? can't you do that with C++ when debugging..?
+    - **"that is why levels in computer games and character behavior is almost exclusively written in dynamic languages.".."Designing the gameplay however is a highly iterative and experimental process. Doing this in a statically typed language, where every change requires a recompile would be an immensely frustrating and slow experience."** ... "Data science and scientific computing in general is dominated by dynamic languages such as Julia, Python, R and Matlab. This is for much the same reason as dynamic languages dominating game development (gameplay part). You are often doing a lot of exploratory coding, experimenting with data." ... In computer games **you have lots of data in the forms of levels you don’t want to reload each time you need to make a change. Hence a language that lets you keep running in a known state while doing code changes is immensely valuable. The same challenge applies to data science. You have huge datasets you are working on which takes time to load into memory.**
+
+
+#### benefits of each?
+
+
+https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing
+  - dynamic typing 
+    - is arguably **more suitable for interactive, REPL-like programming for rapid prototyping, real-time debugging of running program instances or even live coding**
+      - *this is where the real magic happens..*
+    - Better polymorphism - dynamic languages are potentially more likely to encourage the creation of polymorphic functions and abstractions, which can boost productivity and code re-use. Clojure for example makes great use of dynamic polymorphism in its many abstractions.
+    - Easier to "hack" techniques such as duck typing and monkey patching can get you results very quickly (although might confuse you later on...)
+    - Prototypes - prototype based data / object models are in my view more powerful and flexible than statically typed inheritance heirarchies. Dynamic languages are more likely to allow or encourage a prototype-based approach, Javascript being a great example.
+    - **It's more concise - A lot of extraneous boilerplate code can be removed if everything is dynamically typed - type declarations, typecasting logic etc.**
+    
+  - static typing
+    - Auto-completion - **static typing can also give more information to the IDE so that auto-completion of code or documentation lookup is more effective.**
+      - hmmmmmm... this is big..
+    - Better compile time checking - static typing can enable more errors to be caught at compile time. This is a huge advantage, and is arguably the best thing about statically typed languages overall.
+    - Encourages Better design - being forced to think about the types of values in your software up front can push you towards cleaner, more logical solutions. (I say can - it's still possible to design really bad code...)
+    - Discourages hacks - you have to keep type discipline in your code, which is likely to be an advantage for long term maintainability.
+    - **Type inference - in some languages (e.g. Scala) this can get you many of the conciseness benefits of dynamic languages while still maintaining type discipline.**
+
+
+
+
+# a little info
+see meta-programming.txt
+
+https://en.m.wikipedia.org/wiki/Dynamic_programming_language :
+In computer science, a dynamic programming language is a class of high-level programming languages, which at runtime execute many common programming behaviours that static programming languages perform during compilation. These behaviors could include an extension of the program, by adding new code, by extending objects and definitions, or by modifying the type system. Although similar behaviors can be emulated in nearly any language, with varying degrees of difficulty, complexity and performance costs, dynamic languages provide direct tools to make use of them. Many of these features were first implemented as native features in the Lisp programming language.
+
+Most dynamic languages are also dynamically typed, but not all are. **Dynamic languages are frequently (but not always) referred to as scripting languages**, although that term in its narrowest sense refers to languages specific to a given run-time environment.
+
+
+
+
+
+
+
+
+
+
+  
 ** a few thoughts to remember
 *** all machines speak in C (and now llvm ir)
 
@@ -769,132 +895,6 @@ lisp
 
 smalltalk
   - *a gui to see the dynamic machine at work!*
-
-
-
-
-
-*** notes
-
-
-## Jon Blow's opinion
-https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
-  - Jon Blow's rant on rust
-  - **the main problem of programming languages, especially for games**:
-    - most langauges that aim for being memory safe use a garbage collector that doesn't allow you to manually alter memory.. (and you want memory safety for when a reference/pointer is pointing to a memory that was de-allocated or re-used, or worse: the page of memory was removed by the OS causing a page fault and thus crashing the app)
-        - crashes are actually better than not-crashing and being silent about having the wrong data in memory
-      - smart pointer (reference counting? ew.) doesn't solve it, as you wouldn't want to authorize the class holding the reference to keep that referenced thing alive
-      - weak pointer doesn't solve it either, as the systems to nullify it would get complex and add cost, and adding checking for null adds more chances for errors, until you add some sort of pointer system, which ends up costing the same as looking up an ID
-      - example: object a is following object b, thus needs a reference to it
-      - one common solution: a container of entities is stored, then looked up (hashmap or array). this guarantees memory safety at the cost of an object a looking for object b (within the container) every frame(!!)
-      - a more complicated solution: in an ECS, dynamic arrays ("vec") of components are stored, this guarantees memory safety at the cost of an object looking for a component of object b every frame (in some generated index of a dynamic array)
-      - the main point of the video: rust's borrow checker didn't save the programmer from memory problems, rather, the programmer simply refactored the code in a way that the borrow checker won't check (pointers were changed to indicies of a dynamic array): the borrow checker is confused and doesn't know that the programmer is allocated memory theirself (via dynamic arrays). (or does the programmer simply turn off the borrow checker?? lmao!)
-      - **in the Witness, it's literally just an array of indexes (or array index?)**
-      - **in the sokobon game, the id uses 32-bits, the top bits for user id and the bottom bits for the entity id, and use a hashmap for it, because that would be a really big array, because the high-bits are set**
-
-https://www.youtube.com/watch?v=y2Wmz15aXk0
-  - **the idea of using a scripting language in a game was a failed experiment**
-  - scripting languages are "slow, bug-proned, impossibile to debug"
-  
-  
-## some thoughts
-see [app-frameworks], [game-engines]
-
-**writing the core in C/C++ is perhaps the best option, as you get the best of both worlds: manual memory management for the core, and a light-weight scripting langauge on top (Lua, Wren, mRuby?), or, people can create high-level bindings in their favorite langauge of choice**
-
-as long as the language can transpile to C/C++, then it should, in theory, work with just about any device (desktop, mobile, embedded, whatever). The problem is that it'll have to link to the libraries that each platform uses, which is likely C/C++/obj-C (exception: Android must go through java jni). If the application doesnt need to use the platform's libraries at all, however, i guess a binary is enough (apps/games for web assembly, desktop).
-
-
-## libraries matter
-libraries, including frameworks, engines, matter. a lot. Although you could use just about any language to solve just any solution, certain languages are better suited for certain *areas* in programming. This occurs naturally: someone wants to make something, solve something, they *hopefully* try to choose the right tool for the right job: the right language. Thus, the **language is just a tool** to do a job.
-
-Over time, people who use the language will create libraries, *hopefully* many of which are open-source, thus buidling up a huge collection libraries specific to that language. **That resulting library, the contents of the library, is really an effect of the language itself, along with the community behind it, it's pop frameworks, etc.** If the language was created for intense math, then intense math libraries will likely be the result. The langauge in itself, has some influence, but not as much as the frameworks and libraries that already exist. It's hard to justify re-making those too. Rust is the only exception, and it took 30 years after C++.
-
-Languages often have their own package managers: haxelib for Haxe, RubyGems for Ruby, NuGet for C#. Just by looking at the package manger, you can get a pretty good idea of what that language is mostly used for, and the power of the big frameworks in it. So, in RubyGems, the Rails web framework is a huge force, and much of Ruby is indeed used for web dev, along with general scripting / cli. In Haxelib, game 'n app frameworks such as OpenFL and NME are by far the biggest forces, with game frameworks and game-related libraries following after). **I think checking what libraries are in the package manager (or awesome github repo), is a good way to compare languages, instead of comparing the features of the language itself**, as it's the people that make the languages, not vice versa.
-
-
-# important changes in dev tech
-## WebGL is dead. Long live native dev.
-with WebAssembly/WebGPU? now, can just skip the whole HTML5/WebGL crap and basically run native apps (machine code?) in the web-browser :o :O luckily, i've never cared about web-targets, but now it's finally really dead! :) No Flash. No HTML5/CSS/WebGl. *Long live native dev*.. maybe
-
-## Microsoft "<3" games, linux, open-source
-.NET *Core* is like a whole new revamped open-source cross-platform beast. In the past, Microsoft/.NET was tied to Windows, and so the guy that started the linux GNOME project, created Mono, an open-source cross-platform runtime for the .NET world. Eventually, Microsoft about it, likely for hundreds of millions of dollars. Later, Microsoft made it official, stuffing it in the new .NET Core. *The C#/.NET stock is rising...* Thus, app frameworks like Avalonia and Uno can compete with Google's Flutter, and the game frameworks like Unity and MonoGame (based on Microsoft's own XNA) are still very popular game engines. Microsoft is doing well. All of that, alongside **open-sourcing VS Code (including spec'ing the LSP)**, **buying github**, and **allowing one to install linux within windows (WSL)**, and just the fact that Windows always had a monopoly on games. Microsoft has always been closer to games than both Google and Apple have ever have ever been, and now it's really showing.
-
-## move from dynamically-typed to static-typed
-"imo, not having static typing is a real pain for anything bigger than a small script, as it introduces a lot of potential bugs" - CRobes, from the haxe discord
-
-**i don't know the reason why this exists, save a very minor convenience of not physically typing the type keyword, which is mostly avoided by *type inference* anyway...**
-
-i'm just guessing in the special case of server-side: where perhaps it makes more sense for a server to run easily-editable-scripts as opposed to a single executable, which must be compiled every-time you want to update it
-  - but then again, is it that hard to compile..??
-
-AS2 -> AS3/haxe (a whole new language and compiler)
-js -> ts (transpiles to js)
-php -> hack (type checker bundle?)
-python -> mypy and others (type checker)
-ruby /w sorbet (type checker)
-
-
-
-TODO: merge to another file
-### dynamic vs static typing
-
-#### dynamic checking vs static checking
-https://stackoverflow.com/questions/9154388/does-untyped-also-mean-dynamically-typed-in-the-academic-cs-world/9166519#9166519
-  - "dynamic typing" is just a bad term, it should be dynamic checking (or perhaps lazy checking?)
-  
-https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages
-Statically typed programming languages do type checking at compile-time.
-Dynamically typed programming languages do type checking at run-time.
-
-#### strong vs weak type systems
-a strong static system is good at catching type errors at compile-time (and prevents them from happening run-time)
-
-TODO: however, it sounds like a dynamic type systems leads to more run-time checking... somehow??
-
-thus, it doesn't really matter if it's static-typed or dynamic-typed, the implementation of the type system dictates how good it raelly is
-  - https://erik-engheim.medium.com/why-use-a-dynamic-language-over-a-statically-typed-one-fb434994e2b6
-    - "However all statically typed languages are not created equal. Some like e.g. C has a weak type system, and numerous type related bugs are not caught at compile time. This has significantly worse consequences than in dynamic languages: you get undefined behavior, which it is hard to trace down the root cause of. Dynamic languages tend to fail more cleanly giving you a clear stack backtrace of where something went wrong with a descriptive error message."
-    - **"The beauty of dynamic languages is that objects carry with them a lot of information about themselves which is lost in a statically typed language. That means you can introspect the system at runtime with great accuracy."**
-      - C# reflector..? can't you do that with C++ when debugging..?
-    - **"that is why levels in computer games and character behavior is almost exclusively written in dynamic languages.".."Designing the gameplay however is a highly iterative and experimental process. Doing this in a statically typed language, where every change requires a recompile would be an immensely frustrating and slow experience."** ... "Data science and scientific computing in general is dominated by dynamic languages such as Julia, Python, R and Matlab. This is for much the same reason as dynamic languages dominating game development (gameplay part). You are often doing a lot of exploratory coding, experimenting with data." ... In computer games **you have lots of data in the forms of levels you don’t want to reload each time you need to make a change. Hence a language that lets you keep running in a known state while doing code changes is immensely valuable. The same challenge applies to data science. You have huge datasets you are working on which takes time to load into memory.**
-
-
-#### benefits of each?
-
-
-https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing
-  - dynamic typing 
-    - is arguably **more suitable for interactive, REPL-like programming for rapid prototyping, real-time debugging of running program instances or even live coding**
-      - *this is where the real magic happens..*
-    - Better polymorphism - dynamic languages are potentially more likely to encourage the creation of polymorphic functions and abstractions, which can boost productivity and code re-use. Clojure for example makes great use of dynamic polymorphism in its many abstractions.
-    - Easier to "hack" techniques such as duck typing and monkey patching can get you results very quickly (although might confuse you later on...)
-    - Prototypes - prototype based data / object models are in my view more powerful and flexible than statically typed inheritance heirarchies. Dynamic languages are more likely to allow or encourage a prototype-based approach, Javascript being a great example.
-    - **It's more concise - A lot of extraneous boilerplate code can be removed if everything is dynamically typed - type declarations, typecasting logic etc.**
-    
-  - static typing
-    - Auto-completion - **static typing can also give more information to the IDE so that auto-completion of code or documentation lookup is more effective.**
-      - hmmmmmm... this is big..
-    - Better compile time checking - static typing can enable more errors to be caught at compile time. This is a huge advantage, and is arguably the best thing about statically typed languages overall.
-    - Encourages Better design - being forced to think about the types of values in your software up front can push you towards cleaner, more logical solutions. (I say can - it's still possible to design really bad code...)
-    - Discourages hacks - you have to keep type discipline in your code, which is likely to be an advantage for long term maintainability.
-    - **Type inference - in some languages (e.g. Scala) this can get you many of the conciseness benefits of dynamic languages while still maintaining type discipline.**
-
-
-
-
-# a little info
-see meta-programming.txt
-
-https://en.m.wikipedia.org/wiki/Dynamic_programming_language :
-In computer science, a dynamic programming language is a class of high-level programming languages, which at runtime execute many common programming behaviours that static programming languages perform during compilation. These behaviors could include an extension of the program, by adding new code, by extending objects and definitions, or by modifying the type system. Although similar behaviors can be emulated in nearly any language, with varying degrees of difficulty, complexity and performance costs, dynamic languages provide direct tools to make use of them. Many of these features were first implemented as native features in the Lisp programming language.
-
-Most dynamic languages are also dynamically typed, but not all are. **Dynamic languages are frequently (but not always) referred to as scripting languages**, although that term in its narrowest sense refers to languages specific to a given run-time environment.
-
-
-
-
-
 
 
 
