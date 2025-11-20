@@ -1216,7 +1216,9 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
         - lookin' like haxe..
       - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
         - TODO: doesn't CL already do that..??
-
+    - (stalin)
+      - stopped dev in 2006
+      - "Stalin was a highly aggressive optimizing, batch-mode compiler designed to produce extremely fast, stand-alone executable images from Scheme source code, often outperforming C in benchmarks at the time. It achieved this by performing substantial global compile-time analysis, but in return sacrificed common development conveniences like an interactive read-eval-print loop (REPL) or the ability to load code dynamically at runtime."
 
     
     - java:
@@ -2268,7 +2270,7 @@ there's a few languages that would fit here as a good C replacement, yet still w
     - it might be more modular.. like adding CLOS..
   - see [[common lisp]]
 ***** (scheme)
-  - stalin?
+  - chez
   - the various ones that generate C
   - see [[scheme]]
 ***** (nelua)
