@@ -1282,10 +1282,12 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
 
 
 
-*** MAYBE Julia
+*** YES Julia
   - it's made specifically for academic data-science uses, so *it suffers from high RAM usage, startup time, and just a heavy run-time in general*, as it has some fancy stuff in there... *so not really useful for any of my use cases: web, scripting/cli-apps, embedded, shareable systems libs.* Also, though it uses the llvm, it's dynamic/JIT-compiled, so *no compilation path (currently) for mobile/consoles..*
-    - https://github.com/brenhinkeller/StaticTools.jl
-      - native compilation is restricts julia to using very careful programming, including manual memory management: not simple
+    - UPDATE: + AOT in 2022, then auto-compilation of packages in 2023!
+      - https://docs.julialang.org/en/v1/devdocs/aot/
+        - seems to support x86 thus far..
+          - *julia actually may be better than ruby..*
     - https://docs.sciml.ai/Symbolics/stable/tutorials/converting_to_C/
       - C generation is basic, via some random math lib
   - "Julia is a high performance scripting language used by academics, big data research, and some niche data science fields that require the performance (eg linear programming). As people said, it feels really well put together and has some nice syntactic sugar that’s missing in Python."
