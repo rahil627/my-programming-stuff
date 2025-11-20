@@ -5,26 +5,31 @@ may overlap with [programming-languages], [programming-concepts], and possibly m
 
 isn't the compiler the language itself?
 
-* process
 
-systems langs (C, C++, rust, go, zig, etc.) -> target platform assembly
-  - gcc, msvc, go build, etc.
+* processes
+
+systems langs () -> target platform assembly
+  - C, C++, rust, zig, go, etc.
+    - gcc, msvc, cargo/zig/go build, etc.
 
 high-level lang -> llvm ir -> target platform assembly
-  - via llvm
+  - (each lang provides it's own build cli tools/abstraction over llvm)
 
-high-level lang (optional: -> LLVM for optimizing) -> generated C (to link to consoles, mobile) -> target platform assembly
+high-level lang -> generated C (to link to consoles, mobile) (-> LLVM for optimizing) -> target platform assembly
   - LLVM dropped C backend in v3.1  
     - this project revived it https://github.com/JuliaComputingOSS/llvm-cbe
     - however, this sounds impossible for any non-trivial program
 
-high-level lang -> byte-code -> VM (-> machine code?)
-  - TODO: how do VMs translate to machine code??
-  - byte-code may be pre-compiled
-  - java, c#, haxe/hashlink, elixir, etc.
+high-level lang -> intermediate representation (ir, byte-code) -> VM (-> machine code?)
+  - can vary from a simple line-by-line interpreter or JIT with cached optimizations
+  - byte-code (and all ir?) may be pre-compiled
+  - byte-code is a specific type of ir
+  - java (1995), c# (2002), haxe (2005 neko, 2017 hashlink), ruby (2007 yarv, 2018 yjit), python (2024?), elixir, julia, etc.
   - embedded langs
 
-high-level lang -> interpreter  
+high-level lang -> interpreter
+  - direct from high-level to machine code..?
+    - ai said nahhhh son
       
 ** TODO merge from another note
 
@@ -45,7 +50,7 @@ build/make - link object code with resources to create an executable
   
 * platform-specific
 
-WARNING: for iOS and many consoles (except switch?), "cannot execute writeable regions", thus cannot use JIT compilation
+WARNING: for iOS and all game consoles, "cannot execute writeable regions", thus cannot run a system-level VM (like JVM), though, it can run embeddable non-JIT VMs (lua, without JIT)
 
 mobile
   - iOS uses C(/objective-C)
@@ -56,7 +61,7 @@ mobile
 
 consoles:
   - all consoles are targeted via C/C++ compilers
-    - as a direct path from high-level language to console hardware architecture is crazy..\
+    - as a direct path from high-level language to console hardware architecture is crazy..
 
 
 * some basics
