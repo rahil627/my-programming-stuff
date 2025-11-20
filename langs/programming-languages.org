@@ -496,50 +496,21 @@ languages sorted by their use cases
 
 ** personal tool(-kit) waterfall:
 
-ordered from lowest to highest performance:
+*ordered from most useful to me to least useful to me:*
 
-*** my general-use langs:
-eshell >> bash and powershell
-  - NOTE: ruby is excellent as a scripting lang, so there's no need to use shell scripting langs, save for:
-  - batch commands
-  - starting/running other programs (spawning processes)
-    - aync / concurrently or sequentially
-    - especially if done frequently
-  - piping (output of one program | input of next program | ...)
-  - eshell
-    - you could write scripts (functions) in emacs-lisp, using all of the existing functions of emacs and emacs-lisp..
-    - but then you'd need emacs running.. though it would still be more portable than re-creating linux in a vm..
-   - https://www.youtube.com/watch?v=9xLeqwl_7n0
-     - eshell is actually kinda sick..
-       - great integration with emacs
-       - mix elisp with shell commands!
-     - also, since it's a vm, it'll work anywhere..
-  - NOTE: use bash/powershell over non-posix alt shells like zsh/fish/kitten for portability
-ruby >>> python (>>>> shell langs)
-  - (alt for games/media)
-    - dragonruby
-      - *for interactive and beautiful game dev!!*
-  - (alt for shell language)
-    - possibly easier/more convenient to install on all systems than bash 'n powershell
-      - often auto-installs on linux, when a program uses it..
-    - just restrict self to use the std libs
-    - file utils lib with shell-like aliases
-      - mv, cp, etc.
-  - web apps (back-end) that don't need concurrency
-    - ruby on rails for quickly making a complete web app
-    - roda for simple, modular dynamic sites
-    - jekyll (github pages) for static sites
-  - scripting (console apps, cli apps, shell scripts), automation (used by task schedulers), devops, hacking
-    - (TODO: semi-portable: as long as the machine has it installed, it will attempt to bundle it..??)
-    - metasploit for hacking
-    - github ci?, actions?, gitlab ci?
-  - data-munging
-  - and other things that require dynamic run-time magics
-haxe (>? nelua >? nim)
-  - high-performance apps yet still uses a garbage collector
-    - games, media
+*** my general-use langs
+
+C
+  - *the hand-made way*
+  - mostly to interop with C libs
+  - or when things get hairy..
+  - *knowing this is indeed most useful, as it's closest to how hardware (cpu) work*
+    
+haxe (>? nelua >? nim =? julia)
+  - high-performance static lang yet still uses a garbage collector
+    - games, media, *anything really*
       - unfortunately suffers from not having a popular, easy-to-learn media/game framework
-        - can always try heaps again.. :/
+        - can always try heaps again (and again).. :/
         - ceramic
           - only 2d?
   - a very simple std lib (especially compared to ruby's "modular" libs)
@@ -556,41 +527,83 @@ haxe (>? nelua >? nim)
             - does the first one require chmod +x?
               - at this point, might as well build a binary..
       - Sys.runCommand("ls") vs `ls'` isn't that bad..
-  - transpile to js
-  - glue lang / transpilers for all major libs: C, C++, jvm, js
-C
-  - the hand-made way
-  - mostly to interop with C libs
-  - or when things get hairy..
+  - *glue lang* / transpilers for all major libs: C, C++, jvm, js
+    
 jai = beef (>? nim)
-  - very-high-performance apps with manual-memory-management options and tools
+  - *very-high-performance apps or components that require manual-memory-management options and tools*
     - games, media
-      - jon blow's engine
+      - *jon blow's engine*
     - embedded
   - build system for binaries for all major platforms?
     - or also transpile to/generate C?
+ 
+ruby >>> python (>>>> shell langs)
+  - *to experience a beautiful language*
+  - *to experience dynamic run-time magicks*
+  - (alt for games/media)
+    - *dragonruby*
+      - *for interactive and beautiful game dev!!*
+  - *scripting (console apps, cli apps, shell scripts)*, automation (used by task schedulers), devops, hacking
+    - (TODO: semi-portable: as long as the machine has it installed, it will attempt to bundle it..??)
+    - (alt for shell language/scripts)
+      - possibly easier/more convenient to install on all systems than bash 'n powershell
+        - often auto-installs on linux, when a program uses it..
+      - just restrict self to use the std libs
+      - file utils lib with shell-like aliases
+        - mv, cp, etc.
+    - github ci?, actions?, gitlab ci?
+  - *web apps (back-end) that don't have massive throughput*
+    - ruby on rails for quickly making a complete web app
+    - roda for simple, modular dynamic sites
+    - jekyll (github pages) for static sites
+  - *interactive data-munging*
+  - and other things that would benefit from dynamic run-time magics
 
-*** special use cases:
+  
+*** special use cases
+
 elixir
-  - web apps (back-end), especially if it has high-traffic
+  - *web apps (back-end), especially if it has high-traffic*
     - messaging apps, etc.
-  - any functional stuff
+  - *any functional stuff*
     - data-munging
   - anything else that requires concurrency (actor model) AND fits within a functional paradigm
+    
 rust
-  - embedded devices
-  - anytime memory-safety is crucial
+  - *embedded devices*
+  - *anytime memory-safety is crucial*
 
-*** no choice:
-javascript
-  - web browser (front-end)
-  - (io-heavy? web apps (back-end))
-python
-  - data-science: big data, ml/ai, math, stats, biotech, etc.
+eshell >> bash and powershell
+  - NOTE: ruby is excellent as a scripting lang, especially now with ai, so there's no need to use shell scripting langs, save for:
+  - *batch commands*
+  - *starting/running other programs (spawning processes)*
+    - aync / concurrently or sequentially
+    - especially if done frequently
+  - *piping cli stream-i/o (unix) programs together*
+  - eshell
+    - you could write scripts (functions) in emacs-lisp, using all of the existing functions of emacs and emacs-lisp..
+    - but then you'd need emacs running.. though it would still be more portable than re-creating linux in a vm..
+   - https://www.youtube.com/watch?v=9xLeqwl_7n0
+     - eshell is actually kinda sick..
+       - great integration with emacs
+       - mix elisp with shell commands!
+     - also, since it's a vm, it'll work anywhere..
+  - NOTE: use bash/powershell over non-posix alt shells like zsh/fish/kitten for portability
+
+
+*** no choice
+
 lisp
-  - scripting lang for emacs (emacs-lisp), helix (scheme/steel), and lem (common-lisp) text editors
+  - *embedded scripting lang for text-editors*: emacs (emacs-lisp), helix (scheme/steel), and lem (common-lisp) text editors
     - unless i build upon textbringer (ruby!)..!!
 
+javascript
+  - *web browser (front-end)*
+  - (io-heavy? web apps (back-end))
+    
+python
+  - *data-science*: big data, ml/ai, math, stats, biotech, etc.
+    
 
 ** haxe the swiss-army-knife, and jai
 
