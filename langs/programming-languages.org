@@ -507,6 +507,9 @@ C
   - high-performance bits for ruby (C-extensions or host C program)
     - *game-engine*, *SDL*
   - core program for mruby
+(x/julia =/= crystal)
+  - high-performance
+  - see [[the lost dream]]
 dragonruby (an mruby fork)
   - *game (interactive dev)*
 ruby
@@ -974,6 +977,7 @@ TODO: merge with above
 *web is today's main gui..! So, in turn, ruby is actually more practical than all of those natively-compiled langs! Wild how that works.. <3*
 
 
+
 *** YES Lisp
   - UPDATE: a little rough to read, but wayyy better than learning the syntax of yet another language!! Actually, i may prefer it over most languages.. especially when used as a scripting extension lang. The core of the program however, may be nice to have something more C-like..
   - second-oldest language, after fortran
@@ -1270,6 +1274,88 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
 
 
 
+
+*** MAYBE Julia
+  - it's made specifically for academic data-science uses, so *it suffers from high RAM usage, startup time, and just a heavy run-time in general*, as it has some fancy stuff in there... *so not really useful for any of my use cases: web, scripting/cli-apps, embedded, shareable systems libs.* Also, though it uses the llvm, it's dynamic/JIT-compiled, so *no compilation path (currently) for mobile/consoles..*
+    - https://github.com/brenhinkeller/StaticTools.jl
+      - native compilation is restricts julia to using very careful programming, including manual memory management: not simple
+    - https://docs.sciml.ai/Symbolics/stable/tutorials/converting_to_C/
+      - C generation is basic, via some random math lib
+  - "Julia is a high performance scripting language used by academics, big data research, and some niche data science fields that require the performance (eg linear programming). As people said, it feels really well put together and has some nice syntactic sugar that’s missing in Python."
+    - also macroeconomics/banks
+  - slow progress
+    - https://www.reddit.com/r/Julia/comments/1jsp1pr/are_the_developers_of_julia_content_with_the/
+      - https://www.reddit.com/r/Julia/comments/1jsp1pr/comment/mlovgj4/
+        - "Time to first x is a major issue. Pytest spins up in a couple of seconds for a couple of ~500 test codebases I work on. The Julia tests module takes waaay longer, and that’s for just a handful (<50)."
+
+        - "Tooling sucks. LSP is borderline unusable, there are virtually no linting, formatting tools, etc. I’m used to writing python, rust and typescript nowadays - all of which have first class tooling. Julia’s lack thereof is a major pain."
+
+        - "Documentation is horrendous. Even the official language docs are pretty half baked. Trying to work out how to do what I want is a nightmare."
+
+        - "Development is just painful. Why does Julia need to precompile ~50 dependencies just to install a package? It takes ten minutes to add a dependency. Similarly, testing anything is hideously slow, because every time I run my tests, everything has to recompile (as I understand it), so presumably the language is generating a bunch of LLVM IR and then compiling that before it even thinks about running my tests. That is a bunch of overhead I could really do without, and it could surely be optimised away."
+
+  - https://github.com/heyx3/Bplus.jl/blob/master/docs/!why.md
+    - why julia for games
+    - "Scientists are not expert software engineers, yet they need high performance, so they end up splitting their time and attention between one language for performant libraries (usually C/C++) and another for high-level simplicity and usability (often Python). This isn't ideal.
+
+      If you're familiar at all with gamedev, you already know that we have the same issue! "
+    - "Thanks to an extremely clever JIT engine, combined with aggressive Whole-Code-Optimization using inlining, constant-folding, and type inference, you can write complex abstractions which easily become zero-cost."
+  - **MAYBE THE BEST SYNTAX(!!!), combining the best of all other scripting langs**
+  - *llvm fast? yet dynamic runtime..?*
+    - similar to elixir, though it has a slow startup time, it's very fast once it's running!
+    - seems to have a unique multiple-dispatch / run-time function overloading impl, resulting in static type functions
+      - "*Nearly every Julia function gets re-compiled for each combination of specific parameter types. When calling a function with arguments of unknown type, you do pay the cost of dynamic dispatch, but the function you dispatch to knows the types of these parameters at compile-time. In other words, parameters are always strongly-typed unless you explicitly mark them otherwise.*
+
+        Therefore, *the only time you run into dynamically-typed data is when you create it within your own function, or if you call a function that returns it. Both of these cases can be caught with code introspection tools built into Julia, and easily mitigated. In fact, from what I've heard there is some new VSCode integration that highlights dynamically-typed variables for you, making it trivial.*"
+        - this is a great language feature / way to beat the cost of dynamic typing..
+     - "*downsides: Julia language devs will always prioritize scientific computing, so there are some things that it won't do much (or at all) that gamedev cares about*
+
+       the biggest issue is mobile. Nobody is running climate simulations on their Android phone, so *it's very unlikely that Julia ever gets support for running on mobile*. It's also based entirely around dynamic code compilation, which could be an outright deal-breaker on AOT platforms like iOS...
+       
+       Another issue is that *compilation into a static executable was an after-thought...the binary is massive* because you still need some dynamic compilation during play and therefore you need the entire Julia runtime, which includes things like LLVM and Clang."
+       - *~150mb binary AND memory consumption minimum*, as the whole runtime is loaded and running, along with more stuff, like BLAS buffers (for math/computation)
+       - maybe will compile to static binaries in the future..? but then wouldn't be able to use dynamic magicks..
+       - https://viralinstruction.com/posts/badjulia/
+         - a lot more problems with julia
+  - Julia has foreign function interfaces for Fortran and C, the rest are "community"-maintained:
+    - the ultimate glue-code language!??
+      - i doubt it.. there must be so many memory-related problems specific to each FFI..
+      - R, MATLAB, C-like langs, Java.. **basically a glue-lang for all the old languages used in scientific academia**
+    - https://docs.julialang.org/en/v1/manual/calling-c-and-fortran-code/
+    - https://github.com/JuliaInterop
+    - "*Julia can wrap .ll or llvm ir which is 1 step from cpu execution meaning julia can call anything that compiles to ir meaning rust, c++, c, python, all jot compilers are just frontends to llvm and julia can bind them like a universal language, people miss the point with julia. Data science blah blah, Im not a scientist but I use julia for direct integration with llvm. Look at RepliBuild.jl for more on llvm, julia and wrapping libraries and generating binds for julia automatically without writing the code your binding. Plus everything can be executed in parallel so yeah.*"
+    - this is wild... but perfect for academic-use!
+      - **a dynamic runtime enables the program and user to alter the data at run-time**, which is what data-science folks really need
+      - this indeed is a very good reason to create a new language..
+  - has a portable run-time? for deploying scripts..?? where?
+    - https://github.com/JuliaLang/PackageCompiler.jl#static-julia-compiler
+      - a community-made bundler solution..
+  - "Julia has a *non-moving, partially concurrent, parallel, generational and mostly precise mark-sweep collector* (an interface for conservative stack scanning is provided as an option for users who wish to call Julia from C)"
+    - wow.. sounds impressive..
+  - *meta-programming*
+    - https://docs.julialang.org/en/v1/manual/metaprogramming/
+      - it walks you through the process of expr, s-expr, macros
+    - parse-time execution
+      - if type hints are not used, can be tough to debug
+    - **lisp-style macros**
+      - The parsing of Julia code, including the expansion of macros, is handled by an internal parser written in Scheme/Lisp. This parser utilizes a modified version of Femtolisp and processes files like julia-parser.scm and julia-syntax.scm.
+
+        Therefore, *while you write Julia code in Julia syntax, the underlying mechanism that parses and expands macros during the compilation process leverages a Lisp-based parser. This allows for sophisticated code generation and transformation at parse time, a hallmark of Lisp-style metaprogramming.*
+        - actually uses a tiny lisp interpreter for macros
+          - https://github.com/JuliaLang/julia/tree/master/src/flisp
+  - **designed for parallel computing**
+  - https://www.reddit.com/r/Julia/comments/10p33sf/is_julia_suitable_today_as_a_scripting_language/
+    - https://github.com/brenhinkeller/StaticTools.jl
+    - https://julialang.github.io/PackageCompiler.jl/stable/apps.html
+    - interpreter less important than compiler (*just-in-time compiler based on LLVM ORCJITv2 is used to generate native machine code*)
+  - due to it's very specific domain use of science, it likely doesn't have libs for the things i'm interested in: web, games, etc.
+  - an indian was one of the four to make it! :)
+  - Jeremy Kepner at MIT Lincoln Laboratory was the founding sponsor of the Julia project in its early days. In addition, funds from the Gordon and Betty Moore Foundation, the Alfred P. Sloan Foundation, Intel, and agencies such as NSF, DARPA, NIH, NASA, and FAA have been essential to the development of Julia. Mozilla grant...
+  
+
+
+
+
 *** YES Ruby
   - a scripting language that people seem to really *love*
     - **my fav scripting language, and possibly my favorite language overall :o**
@@ -1504,6 +1590,7 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
     - alt standalone runtimes/VMs
     - deno is the succesor of node.js, made from the same guy, admitting his faults
   - Google's v8 engine is a JIT marvel, much like java's VM, but massive, unweildy
+
 
 *** KILL other more specialized scripting langs
 **** Perl
@@ -2814,44 +2901,6 @@ https://github.com/flipacholas/Architecture-of-consoles/
   - *oldest language, and still in use!!*
   - used for number crunching (especially in academia research)
     - can see it used in numpy!
-
-**** julia
-  - it's made specifically for academic data-science uses, so *it suffers from high RAM usage, startup time, and just a heavy run-time in general*, as it has some fancy stuff in there... *so not really useful for any of my use cases: games, web, scripting/cli-apps*
-  - "Julia is a high performance scripting language used by academics, big data research, and some niche data science fields that require the performance (eg linear programming). As people said, it feels really well put together and has some nice syntactic sugar that’s missing in Python."
-    - also macroeconomics/banks
-  - **MAYBE THE BEST SYNTAX(!!!), combining the best of all other scripting langs**
-  - *llvm fast? yet dynamic runtime..?*
-    - similar to elixir, though it has a slow startup time, it's very fast once it's running!
-  - **Julia has foreign function interfaces for C, Fortran, C++, Python?, R, Java (and therefore JVM langs), Mathematica, Matlab, and many other languages**
-    - the ultimate glue-code language!??
-      - seems to compete with Raku here..
-      - i doubt it.. there must be so many memory-related problems specific to each FFI..
-      - i think it just compiles into a shared library, which then can used by other languages (python, ruby)
-    - standard FFI for C and Fortran only, the rest are "community"-maintained:
-      - https://github.com/JuliaInterop
-      - R, MATLAB, C-like langs, Java
-        - **basically a glue-lang for all the old languages used in scientific academia**
-    - this is wild... but perfect for academic-use!
-      - **a dynamic runtime enables the program and user to alter the data at run-time**, which is what data-science folks really need
-      - this indeed is a very good reason to create a new language..
-  - has a portable run-time? for deploying scripts..?? where?
-    - https://github.com/JuliaLang/PackageCompiler.jl#static-julia-compiler
-      - a community-made bundler solution..
-  - "Julia has a *non-moving, partially concurrent, parallel, generational and mostly precise mark-sweep collector* (an interface for conservative stack scanning is provided as an option for users who wish to call Julia from C)"
-    - wow.. sounds impressive..
-  - **lisp-level macros**
-    - also *feels lispy in general*, making it very appealing to me :)
-  - extensible, as everything is an object
-  - **designed for parallel computing**
-  - https://www.reddit.com/r/Julia/comments/10p33sf/is_julia_suitable_today_as_a_scripting_language/
-    - https://github.com/brenhinkeller/StaticTools.jl
-    - https://julialang.github.io/PackageCompiler.jl/stable/apps.html
-    - interpreter less important than compiler (*just-in-time compiler based on LLVM ORCJITv2 is used to generate native machine code*)
-  - due to it's very specific domain use of science, it likely doesn't have libs for the things i'm interested in: web, games, etc.
-  - an indian was one of the four to make it! :)
-  - Jeremy Kepner at MIT Lincoln Laboratory was the founding sponsor of the Julia project in its early days. In addition, funds from the Gordon and Betty Moore Foundation, the Alfred P. Sloan Foundation, Intel, and agencies such as NSF, DARPA, NIH, NASA, and FAA have been essential to the development of Julia. Mozilla grant...
-  
-
 
 
 *** languages created by and for their own corporate products (Sun/Java): or products of their own corporate greed (Apple and Microsoft):
