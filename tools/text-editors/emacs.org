@@ -92,6 +92,8 @@ ibuffer vs tree plugin
   - ibuffer, with doom's "ibuffer" plugin enabled, does however display all buffers together, categorized by project..
 
 treemacs
+  - NOTE: this is opened on a per-workspace basis
+    - which is quite cool! 
   - TODO: this only shows file-trees, not code trees..??
   
 minimap (de-map)
@@ -1090,6 +1092,7 @@ org-goto
 
 c-c l h
   - org-toggle-heading
+    - *this is a great way to search 'n navigate org-files..*
   
 org-insert-link
   - spc l l l
