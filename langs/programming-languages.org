@@ -1187,7 +1187,18 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
 
     
     - C-generating lisps:
-    - **chicken**
+    - *gerbil*
+      - v0.18 as of 11/2025
+      - *built on gambit*
+        - thus generates c and has a c-ffi
+      - batteries-included
+        - web/http libs, module system, macro system
+        - *actor system concurrency!*
+      - seems aimed at embedded!
+      - great performance
+        - https://www.reddit.com/r/scheme/comments/176cg7m/gerbil_benchmarks/
+          - *beats racket (and therefore chez..??)*
+    - *chicken*
       - has both an interpreter (for interactive programming) and a compiler to generate C, yet also easy to embed it
         - but unlike chez, emacs-lisp, common-lisp, *it won't compile modules, so your interactive dev may churn at big modules..*
       - **best community, great documentation**
