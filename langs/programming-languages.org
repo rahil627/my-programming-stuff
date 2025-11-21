@@ -517,9 +517,9 @@ surprisingly, i chose the right langauge all along..!!
 * conclusion
 languages sorted by their use cases
 
-** personal tool(-kit) waterfall:
+** personal tool(-kit) waterfall
 
-*ordered from most useful to me to least useful to me:*
+*ordered from most useful to me to least useful to me*
 
 *** my general-use langs
 
@@ -529,9 +529,9 @@ C
   - or when things get hairy..
   - *knowing this is indeed most useful, as it's closest to how hardware (cpu) work*
     
-haxe (>? nelua >? nim =? julia)
-  - high-performance static lang yet still uses a garbage collector
-    - games, media, *anything really*
+haxe (>? nelua >? nim > julia >> crystal > gen-C schemes)
+  - high-performance static lang with a garbage collector that can transpile to/generate optimized C (to target cross-platform)
+    - games, media.. *can make anything really*
       - unfortunately suffers from not having a popular, easy-to-learn media/game framework
         - can always try heaps again (and again).. :/
         - ceramic
@@ -539,20 +539,13 @@ haxe (>? nelua >? nim =? julia)
   - a very simple std lib (especially compared to ruby's "modular" libs)
   - complete compiler options: interpreter, VM/bytecode, binary (via transpile to C/C++)
     - scripting?
-      - has both vm and interpreter!
+      - has both vm and interpreter (..for macros..?)!
+      - (also has hscript!)
       - TODO: test vs ruby
-        - is it too verbose?
-        - does the file-module association force you to have more files?
-        - surely such a simple build file (hxml) can't be that bad..
-        - surely a main class isn't that bad either..
-        - missing the #/dev/env/haxe thing too.. hmm..
-          - haxe run hxml-file-name(?) vs .filename
-            - does the first one require chmod +x?
-              - at this point, might as well build a binary..
-      - Sys.runCommand("ls") vs `ls'` isn't that bad..
+        - only comprimises verbosity for explicity clarity, which is not a bad deal..
   - *glue lang* / transpilers for all major libs: C, C++, jvm, js
     
-jai = beef (>? nim)
+jai > beef (>? nim)
   - *very-high-performance apps or components that require manual-memory-management options and tools*
     - games, media
       - *jon blow's engine*
@@ -560,18 +553,20 @@ jai = beef (>? nim)
   - build system for binaries for all major platforms?
     - or also transpile to/generate C?
  
-ruby >>> python (>>>> shell langs)
+m/ruby >>> python (>>>> shell langs)
   - *to experience a beautiful language*
   - *to experience dynamic run-time magicks*
-  - (alt for games/media)
-    - *dragonruby*
-      - *for interactive and beautiful game dev!!*
+  - (alt for 2d games/media)
+    - dragonruby
+      - for *interactive and beautiful game dev / proto-typing!!*
+  - (alt for lua/embedded scripting)
+    - mruby variants
+      - *adding beautiful dynamic scripting to core C programs*
   - *scripting (console apps, cli apps, shell scripts)*, automation (used by task schedulers), devops, hacking
-    - (TODO: semi-portable: as long as the machine has it installed, it will attempt to bundle it..??)
     - (alt for shell language/scripts)
       - possibly easier/more convenient to install on all systems than bash 'n powershell
         - often auto-installs on linux, when a program uses it..
-      - just restrict self to use the std libs
+      - just restrict to use the std libs
       - file utils lib with shell-like aliases
         - mv, cp, etc.
     - github ci?, actions?, gitlab ci?
@@ -582,7 +577,6 @@ ruby >>> python (>>>> shell langs)
   - *interactive data-munging*
   - and other things that would benefit from dynamic run-time magics
 
-  
 *** special use cases
 
 elixir
@@ -596,14 +590,37 @@ rust
   - *embedded devices*
   - *anytime memory-safety is crucial*
 
-eshell >> bash and powershell
-  - NOTE: ruby is excellent as a scripting lang, especially now with ai, so there's no need to use shell scripting langs, save for:
+*** no choice
+
+sometimes, you just don't have a choice..
+
+lisp
+  - *embedded scripting lang for text-editors*: emacs (emacs-lisp), helix (scheme/steel), lem (common-lisp) text editors
+    - unless i build upon textbringer (ruby!)..!!
+
+javascript
+  - *web browser (front-end)*
+  - (io-heavy? web apps (back-end))
+    
+python
+  - *data-science*: big data, ml/ai, math, stats, biotech, etc.
+
+*** trash
+    
+  eshell >>? bash and powershell
+  - CONCLUSION: *ruby is particularly excellent as a scripting lang, possibly the most ideal shell scripting lang(..!), especially now with ai*, so there's *no need to use shell scripting langs, save for quickly starting processes*
+    - https://news.ycombinator.com/item?id=40763640
+      - "Ruby: A great language for shell scripts"
+      - some discussion on this problem..
+    - *ruby is even more portable*, as bash/powershell are OS-based, especially running bash on windows
   - *batch commands*
+  - *file-manipulation*
+    - much simpler than general-use langs
   - *starting/running other programs (spawning processes)*
     - aync / concurrently or sequentially
     - especially if done frequently
-  - *piping cli stream-i/o (unix) programs together*
-  - eshell
+  - *simply piping cli stream-i/o (unix) programs together*
+  - eshell?? lol
     - you could write scripts (functions) in emacs-lisp, using all of the existing functions of emacs and emacs-lisp..
     - but then you'd need emacs running.. though it would still be more portable than re-creating linux in a vm..
    - https://www.youtube.com/watch?v=9xLeqwl_7n0
@@ -613,21 +630,7 @@ eshell >> bash and powershell
      - also, since it's a vm, it'll work anywhere..
   - NOTE: use bash/powershell over non-posix alt shells like zsh/fish/kitten for portability
 
-
-*** no choice
-
-lisp
-  - *embedded scripting lang for text-editors*: emacs (emacs-lisp), helix (scheme/steel), and lem (common-lisp) text editors
-    - unless i build upon textbringer (ruby!)..!!
-
-javascript
-  - *web browser (front-end)*
-  - (io-heavy? web apps (back-end))
     
-python
-  - *data-science*: big data, ml/ai, math, stats, biotech, etc.
-    
-
 ** haxe the swiss-army-knife, and jai
 
 haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow, and still yet fully-featured (macros, ADTs, pattern matching), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is straight-forward, simple programming.
@@ -1899,7 +1902,15 @@ but none are nearly as cool as haxe!!
   - maybe the first major language with **cross-platform** in mind? (2005 vs 2011 Dart)
     - has **a standard cross-platform library** that all newer languages try to copy
   - has all of the features of ruby (container filters, anonymous functions, etc.) plus more, but comes with a *much much* faster compiler, making Ruby feel rather obsolete, and just surviving off of it's libraries and community
-    - **recently added module-level vars and functions, getting rid of the need of a main class to run it, making it feel more like a scripting langauge**
+  - **recently added module-level vars and functions, getting rid of the need of a main class to run it, making it feel more like a scripting langauge**
+    - https://haxe.org/blog/module-level-fields/
+    - missing the #/dev/env/haxe thing too.. hmm..
+      - 'haxe run file.hx/ml' vs .filename
+        - no need for 'chmod +x'..! it actually might be simpler..
+  - module name, the "main" type of the module, file name, and package name are all tied together
+    - pack1.pack2.packN.ModuleName.TypeName
+    - kinda restrictive, but such enforcement def makes reading others' code/libs easier, and just makes one less thing to worry about
+      - a module can still have several sub-types
   - **_incredible_ compilation options: compile to nearly any other language (including C and C++, to use C and C++ libraries, or to build in C for iOS/consoles/embedded devices, and javascript, to be run in a browser or to use pop javascript libraries or to compile to Node.js, and to bytecode which is then run by a VM (HashLink), itself with two options: HL/JIT and HL/C**, one for faster compilation speed and one for optimized run-time speed *whoa...*
     - NOTE: HL/C isn't readable C, it's bytecode turned into C :/
       - some drama on why they didn't maintain the existing C/C++ transpilers..
