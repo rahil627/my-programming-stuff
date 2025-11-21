@@ -865,7 +865,7 @@ don't have much of a choice for these..
 
 
 shell scripting langs
-(ruby) >>> **powershell (v7+)** >>> fish > bash/zsh
+(*ruby*) >>> **powershell (v7+)** >>> fish > bash/zsh
   - *ruby makes such a great shell scripting language, it even derives a lot of terse syntax from it..*
     - ruby/python might be more portable than shell langs, since bash requires installing mingw/cygwin/wsl on windows and powershell requires being installed on linux/mac
   - see [cli-shells]
@@ -881,7 +881,7 @@ shell scripting langs
     - not text-stream based
 
 
-various custom scripting laguages (wren, gdscript, etc.) and embedded scripting langs (lua, **scheme**, **mruby**, *mruby/C*, *picoruby*, *micropython*) usually on top of C++
+various custom scripting laguages (gdscript, etc.) and embedded scripting langs (lua, wren, **scheme**, **mruby**, *mruby/C*, *picoruby*, *micropython*) usually on top of C++
   - **mruby has the most beautiful syntax and powerful features**
     - dragonruby
     - *..but surely at a great cost..*
@@ -901,7 +901,7 @@ various custom scripting laguages (wren, gdscript, etc.) and embedded scripting 
 
 
   
-*** special use-cases:
+*** special use-cases
 
 manual-memory-management but simple / C-like / **embedded** / game engines:
   - with jai, i have no reason to use these, unless i need to do something embedded, and even then, maybe jai will work..
@@ -946,8 +946,7 @@ smalltalk
 
 
 
-* the list
-## a few contemporary languages, old and new
+* list
 
 order of notes:
 simple summary
@@ -1972,7 +1971,7 @@ trace( interp.execute(program) );
   
 in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a combination of the maker’s favorite languages mixed together. None are really innovative. Only only a few will catch on, become popular, have libraries, and live on... but that doesn’t mean they shouldn’t be used. Use whatever makes you happy! :) Anyway, it can be really cool making your own little world in your favorite language... As long as it works with C/C++, the worst case is you have to write some “interop” or otherwise “wrapper” code. 
 
-*** OK (Nim)
+*** YES (Nim)
   - see [[nim]]
   - have option to choose to use a garbage collector to handle memory
     - https://nim-lang.org/docs/mm.html
