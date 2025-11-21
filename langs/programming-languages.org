@@ -1325,6 +1325,18 @@ considered one of the best, now rotting
       - stopped dev in 2006
       - "Stalin was a highly aggressive optimizing, batch-mode compiler designed to produce extremely fast, stand-alone executable images from Scheme source code, often outperforming C in benchmarks at the time. It achieved this by performing substantial global compile-time analysis, but in return sacrificed common development conveniences like an interactive read-eval-print loop (REPL) or the ability to load code dynamically at runtime."
 ******* special cases
+******** DAMN cakelisp
+
+https://cakelisp.handmade.network/
+  - Metaprogrammable, hot-reloadable, *no-GC* language *for high perf programs (especially games)*, with seamless C/C++ interop
+  - What's the status of Cakelisp?
+
+    I use it every day. It is great for me. I've programmed my watch, my phone, my handmade mechanical keyboard, my current paid contract gig project, and more using Cakelisp.
+
+    *I wouldn't recommend others use it because they can likely get similar success from creating their own C compile-time code generation/metaprogramming and custom build systems*, similar to what Ryan Fleury did with RADDebugger. *Taking ownership of your toolset and customizing it to your use case is the lesson to be learned here, not using someone else's exact tools. Different problems require different solutions.*
+
+    I'm extremely glad I invested in building Cakelisp and continue to reap benefits from it.
+    
 ******** gauche
 
 for interpreter/scripting..??
