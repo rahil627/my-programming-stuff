@@ -3119,8 +3119,20 @@ https://github.com/flipacholas/Architecture-of-consoles/
   - *"Microsoft's Java": Java EE = ASP.NET, Java VM (JVM) = .NET CLR, etc. As vomit-inducing that may sound, it feels much better than the java world* (partly due to eclipse ide sucking)
   - mighty mighty C#... along with it's .NET framework and Visual Studio, is really tough to beat for general-use, but boring, and limited by it's java-like bytecode\VM\GC implementation
     - **all of it's garbage collector implementations cause game to stutter when it sweeps up memory**
-  - solid game frameworks: *Unity, MonoGame*
+  - PROBLEM: no open-source way for cross-platform compilation
+    - UPDATE: not until 2023 did FNA utilize NativeAOT to compile to consoles
+    - unity's il2cpp
+     - not open-source
+       - though people have de-compiled this..
+    - new aot compiler (2022)
+     - clr -> platform (as of 2025: iOS experimental, no android, no consoles--maybe switch..)
+       - https://fna-xna.github.io/docs/appendix/Appendix-B%3A-FNA-on-Consoles/
+         - seems possible, hmm..
+           - https://mastodon.social/@noelfb/109615790903279510
+             - Noel of Celeste tweets in january 2023
+  - solid game frameworks: *Unity, MonoGame/FNA*
   - solid web frameworks/tech: entity, razor, blazor (asp.net before it)
+    - all of these feel like clunky hacks.. not elegant at all, fighting against the vm/language, and all very microsofty
   - frameworks for cross-platform apps have sucked for it since the beginning. They were limited to windows (winforms, wpf, etc.), and so newer open-source cross-platform frameworks came out (Avalonia, Uno, ASP.core). ASP.NET, the main web-app framework sucked for a long time allowing others to gain popularity until ASP.core came out, and even now, Blazor may be better
     - https://elixirforum.com/t/phoenix-vs-asp-net-core-performance/3599/8
       - describes the many reasons why even ASP.core is not the best for web
