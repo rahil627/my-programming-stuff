@@ -1059,7 +1059,7 @@ TODO: merge with above
 *** YES Lisp
   - UPDATE: a little rough to read, but wayyy better than learning the syntax of yet another language!! Actually, i may prefer it over most languages.. especially when used as a scripting extension lang. The core of the program however, may be nice to have something more C-like..
   - second-oldest language, after fortran
-  - **at the same the the simplest syntax yet the most powerful language, still!**
+  - **at the same the the simplest syntax yet the most powerful language (and fastest dynamic lang!) still!**
     - **a history of programming languages reveal that they are only *just* now catching up to Lisp, and still, they've only caught up to it's features, but not it's implementation which allow the real wild stuff (see below), in addition to creating a lot more complex syntax**
     - macro heaven
       - "Thus, **Lisp functions can be manipulated, altered or even created within a Lisp program without lower-level manipulations.** This is generally considered one of the main advantages of the language with regard to its expressive power, and makes the language suitable for syntactic macros and metacircular evaluation."
@@ -1072,6 +1072,11 @@ TODO: merge with above
     - you're basically programming from within the program..
     - **"interactive debugging"**
       - aren't these common to all dynamic/run-time langs?
+  - can be *very fast*
+    - "Compiling to machine code was important in the history of Lisp. Not so for Python, Perl, Tcl, and Ruby."
+
+      "...when it came time to standardize Common Lisp, the process included participants who were involved in delivering Lisp applications on "stock hardware"; CL is a language that was designed from the beginning to allow compilation to native code"
+      - https://www.reddit.com/r/programming/comments/63vmh/ask_programmingreddit_why_is_lisp_faster_than/
   - *perfect for use as a scripting extension language*
     - text editors, games, big systems programs, etc.
   - can be used for everything??:
@@ -1171,7 +1176,7 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
     - CLASP
       - newer, llvm, c/*c++ interop*
 ***** Scheme
-  - this sounds more in tune with the spirit of Lisp, whereas other newer dialects just add more syntax/keywords/features, when the point is to be simple
+  - this sounds *more in tune with the spirit of Lisp*, whereas other newer dialects just add more syntax/keywords/features, when *the point is to be simple, composable*
   - a minimal dialect
     - the core seems to be rigorously thought out and is now a standard used as a base for newer dialects
     - beyond the core, there are similarly rigoriously thought out extensions to the lang
@@ -1851,9 +1856,9 @@ but none are nearly as cool as haxe!!
   - **made for games!**
     - **though, with a garbage collector, instead of worrying about managing memory at a fine level, you worry about the garbage collector, which is a trade-off i'd very easily take..!**
       - https://www.youtube.com/watch?v=pZcKyqLcjzc
-        - **a dev of Dune using heaps notes the main problem being memory allocation, not cpu, and sneaking in garbage collection times
-        - though, i think, it's worth not worrying most of the time, then just checking allocations via a memory profiler when there is a problem, or once in a while, as opposed to the insane development cycle of rust/c++, where you worry about everything all the time..**
-  - frameworks include: NME, Heaps, OpenFL (now feels like it's stuck with too much Flash baggage..), HaxeFlixel, HaxePunk, Heaps, Kha; all of them are basically an i/o base **to create basically *anything*, cross-platform**. In addition, there's HaxeUI and bindings for React and React Native for cross-platform UI, and bindings for electron for web-style ui, and bindings for raylib, unreal, and maybe even target unity
+        - a dev of Dune using heaps notes *the main problem being memory allocation, not cpu, and sneaking in garbage collection times*
+        - *it's absolutely worth not worrying most of the time, then just checking allocations via a memory profiler when there is a problem, or once in a while, as opposed to the insane development cycle of rust/c++, where you worry about everything all the time..*
+  - frameworks include: NME, Heaps, OpenFL (now feels like it's stuck with too much Flash baggage..), HaxeFlixel, HaxePunk, Heaps, Kha; all of them are basically an i/o base **to create basically /anything/, cross-platform**. In addition, there's HaxeUI and bindings for React and React Native for cross-platform UI, and bindings for electron for web-style ui, and bindings for raylib, unreal, and maybe even target unity
     - shiro tech stack
       - https://www.youtube.com/watch?v=gazZSJFGnck
     - *hashlink*
