@@ -633,39 +633,39 @@ python
     
 ** haxe the swiss-army-knife, and jai
 
-haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow, and still yet fully-featured (macros, ADTs, pattern matching), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is straight-forward, simple programming.
+haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow, and still yet fully-featured (*an all-powerful macro system*, ADTs, pattern matching, everything-returns-something/function-chaining), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is *straight-forward, simple programming*.
 
-the VM already provides introspection, yet there's also hscript, a scripting language (interpreter, run-time eval), which shares the same syntax (thus little to no porting, to nor from the scripting lang, is necessary), in case you need to eval some code at run-time.
+the VM already provides *introspection*, yet there's also *hscript*, a scripting language (interpreter, run-time eval), which *shares the same syntax* (thus little to no porting, to nor from the scripting lang, is necessary), in case you need to eval some code at run-time.
 
-as much as i love ruby's syntax and expressiveness, it's really tough to beat this, which just feels far more simpler, straight-forward.. and with a sane std lib. to me, it's go(lang) done right, before it ever existed.
+as much as i love ruby's syntax and expressiveness, it's really tough to beat this, which just feels far more simpler, straight-forward.. and with a *sane std lib*. to me, it's C# done right
 
 the vs-code haxe extension likely already has good integration, with common lsp features (completion..), debugging (compile-time checking and run-time errors and breakpoints within vm that make use of introspection), and profiling (or is this a seperate app?)
-  - TODO: just gotta make an emacs plugin!
+  - TODO: just gotta make an emacs plugin for my fav lang!
 
 C
-  - libs, high-performance parts, optimization
+  - libs, very high-performance parts, optimization
 haxe
   - very general-use, garbage-collected, VM + transpile to C + interpreter!!, hscript, compiler options.. options galore!
-    - game
+    - *games* and other *high-performance* apps
       - made by a pro game maker, so the language is designed to handle games
         - especially the hashlink vm and hashlink to C generation
         - though, i think the language was intially designed to be extremely general: cross-platform and cross-language.. i think it's finally honing in / cutting off crap on v5
-    - high-performance
-      - NOTE: the maker's studios' games run fine in just the VM, so until the product is ready for release to a non-desktop-os, there's no reason to ever even compile to C
-    - scripting (via --interp flag)
-      - though a bit clunky experience compared to ruby..
+        - NOTE: *the maker's studios' games run fine in just the VM*, so until the product is ready for release to a non-desktop-os, there's no reason to ever even compile to C
+        - *C data structure macros*
     - can build a single bytecode file or a native binary (via C)
-      - update: and a hxb: pre-compiled haxe binary file..??
-      - C data structure macros
-    - when you need libs or must integrate with existing code: C, C++, jvm, js (php?, c# soon again) (via transpilers)
+      - UPDATE: and a hxb: a pre-compiled haxe binary file..??
+    - *scripting* (via 'haxe --run <module> [args...]')
+      - though a bit clunky feeling compared to ruby..
+    - *when you need libs or must integrate with existing code*: C, C++, jvm, js (php?, c# soon again) (via transpilers)
       - the ultimate glue langauge
 jai
-  - *manual memory management*, *near C-level performance*, yet with high-level features
-    - games (..and other high-performance areas)
+  - *manual memory management*, *C-level performance*, yet with high-level features
+    - games (..and other very high-performance areas)
       - made for games by a pro game maker, so the language is designed for it
 
-*** suffers from lack of popularity/libs:
-  - makes up for via transpilers
+*** suffers from lack of popularity/libs
+  - *though, you probably don't want to use most popular libs.. just write everything yourself!, especially onw with ai..*
+  - *makes up for it via transpilers*
   - web
     - why not?
       - haxe has great js transpiler!
@@ -673,11 +673,12 @@ jai
       - probably doesn't have a simple concurrency pattern (fibers, beam)
         - though, i have no idea how the hashlink VM works..
         - ..but neither does ruby..
+          - (it just has server libs that use concurrency libs)
       - tink/http -> haxe.http?
   - ai/ml
     - haxe seems to be weaning off the python transpiler..
     - just not worth fighting it..
-      - you'd have to basically interface directly with the "C extensions" of python libs anyway, since that's where all the work is happening... in which case, a scripting language is a fine solution
+      - you'd have to basically interface directly with the "C extensions" of python libs anyway, since that's where all the work is happening
 
 
 ** the lispy ruby dream: magical dynamic run-time machines
