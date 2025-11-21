@@ -1180,48 +1180,84 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
 
     There's no wrong answer, though, both are lovely languages in their own way.)"
 
-****** implementations:
-    - all use geiser package for emacs, though racket comes with it's own IDE
-    - the main ones:
-      - *chez*
-        - *best performance via native compilation*
-          - "a few times slower than LuaJIT"
-          - *all targets including ARM 64-bit for mobile devices!*
-        - *solid C ffi*
-        - "Well, I'm using SDL2, and a compiled library for audio, and ~10-20,000 LOC. I can load those in csi, but the interpreter is so slow nothing really works. And a clean compile takes 30 seconds or so. The binary runs OK, not as fast as Chez, but acceptable. But I can't do interactive dev in it.
+****** implementations
+  - all use geiser package for emacs, though racket comes with it's own IDE
+******* natively-compiled
+******** chez
+- *best performance via native compilation*
+  - "a few times slower than LuaJIT"
+  - *all targets including ARM 64-bit for mobile devices..??*
+- *solid C ffi*
+- *lacks eco-system and tooling*
+- "Well, I'm using SDL2, and a compiled library for audio, and ~10-20,000 LOC. I can load those in csi, but the interpreter is so slow nothing really works. And a clean compile takes 30 seconds or so. The binary runs OK, not as fast as Chez, but acceptable. But I can't do interactive dev in it.
 
-          Chez is compiled when a module loads, and as you work in the REPL, so it's always fast. I can just load up my libraries and work interactively, or run the script and it has no noticeable compile time...In Chez I can literally just rewrite a function at REPL and it runs at full speed."
-          - https://www.reddit.com/r/scheme/comments/vskb55/which_implementation_of_scheme_do_you_use_and_why/
-      - *guile*
-        - uses GNU's run-time GUILE, in which guile scheme is the main language
-          - TODO: maybe a product of Richard Stallman..??
-        - people seem to say that the *implementation is much simple, easier to understand, whereas racket's code-base is complex*
-        - *meant to be used as an extension language for C programs, embedded into C*
-        - had a big project of replacing the lisp engine/VM? in emacs with this run-time, which is more.. abstracted, enabling other languages to interact with it, among many other pros
-          - *UPDATE: restarted work on this recently*
-        - slow on numerical code: "magnitudes slower than LuaJIT"
-    - racket
-        - *uses a fork of chez*
-        - all-in-one tool-kit, thus the easiest to jump into and make stuff! great for practice, but also one of the best implementations in general
-        - "The language platform provides a self-hosted IDE named DrRacket, a continuation-based web server, a graphical user interface, and other tools. As a viable scripting tool with libraries like common scripting languages, it can be used for scripting the Unix shell. It can parse command line arguments and execute external tools."
-        - *fully-featured: parallel threads, native compilation, has pretty much everything*
-        - *"batteries included"*
-          - IDE program included, so no need for the emacs barrier
-            - though.. i happen to love emacs.. so..
-            - people say that it doesn't feel as interactive as chez 'n guile
-        - great documentation
-        - **gui programming!**
-        - has a standard scheme mode to code in pure scheme
-        - used in more recent Naughty Dog games!
-    - steel
-      - an embeddable scheme (standard) interpreter written in rust
-      - *planned to be used by helix text editor for it's plug-in system*
-        - which still would divide the code (compiled/binary + dynamic run-time), making it at best similar to vs-code, not quite emacs
+  Chez is compiled when a module loads, and as you work in the REPL, so it's always fast. I can just load up my libraries and work interactively, or run the script and it has no noticeable compile time...In Chez I can literally just rewrite a function at REPL and it runs at full speed."
+  - https://www.reddit.com/r/scheme/comments/vskb55/which_implementation_of_scheme_do_you_use_and_why/
+******** guile
+- uses GNU's run-time GUILE, in which guile scheme is the main language
+  - TODO: maybe a product of Richard Stallman..??
+  - *GNU provides a healthy community/eco-system*
+- people seem to say that the *implementation is much simple, easier to understand, whereas racket's code-base is complex*
+- *meant to be used as an extension language for C programs, embedded into C*
+- JIT/byte-code, with pre-compiled byte-code
+- had a big project of replacing the lisp engine/VM? in emacs with this run-time, which is more.. abstracted, enabling other languages to interact with it, among many other pros
+  - *UPDATE: restarted work on this recently*
+- slow on numerical code: "magnitudes slower than LuaJIT"
+******** racket
+- aka PLT scheme
+  - Naughty Dog's GOAL lisp was based on this
+- *uses a fork of chez*
+- all-in-one tool-kit, thus the easiest to jump into and make stuff! great for practice, but also one of the best implementations in general
+- "The language platform provides a self-hosted IDE named DrRacket, a continuation-based web server, a graphical user interface, and other tools. As a viable scripting tool with libraries like common scripting languages, it can be used for scripting the Unix shell. It can parse command line arguments and execute external tools."
+- *fully-featured: parallel threads, native compilation, has pretty much everything*
+- *"batteries included"*
+  - IDE program included, so no need for the emacs barrier
+    - though.. i happen to love emacs.. so..
+    - people say that it doesn't feel as interactive as chez 'n guile
+- great documentation
+- **gui programming!**
+- has a standard scheme mode to code in pure scheme
+- used in more recent Naughty Dog games!
+******** RIP MIT scheme
+
+considered one of the best, now rotting
 
 
-    
-    - C-generating lisps:
-    - *gerbil*
+******* C-generating
+******** YES gambit
+      - "*the portable scheme*"
+        - *since 1988*, gambit-C in 1994
+      - "The Gambit Scheme system is a complete, portable, *efficient and reliable* implementation of the Scheme programming language."
+        - *best performance, after chez*
+      - generates C
+        - *seamless C AND C++ ffi / inlined*
+      - generates js
+        - js transpiler no good, ships the whole std lib!
+      - https://try.gambitscheme.org/
+      - slow compiler (but fast binary)
+        - stopped dev for a bit but came back
+      - installs well on all OSs
+      - *seems to adhere strictly to the scheme standards*
+        - *offers various versions too (R4/5/6?/7)*
+        - thus, *doesn't have as much built-in, making it more modular, as scheme is meant to be*
+        - "It's *basically R5RS with extensions*, with a compiler that produces very fast code that integrates easily with C code. *It is not a development environment; it is a compiler and an interpreter.*"
+          - *lacks eco-system (though black hole is coming up..) and tooling*
+      - native cross-platform framework..??
+        - https://github.com/part-cw/lambdanative
+      - "We "freeze the entire world and traverse the whole fucking heap" every frame on QuantZ (written in Gambit-C) and it doesn't matter much.
+
+        Gambit-C doesn't have a real-time or incremental GC, but GC pauses are pretty predictable in length and are short enough that it doesn't matter. Just be somewhat careful with the memory allocations and where you leave resources, and you'll be fine."
+        ...
+        "We just run the GC every couple of frames, and it takes a few ms but nothing too significant. We're somewhat careful about minimizing live data though, and long-lived static data gets allocated someplace where it won't be moved around by the GC all the time."
+        ...
+        - https://www.reddit.com/r/programming/comments/9ad60/comment/c0c073b/
+          - *17 years old!*
+            - added generational gc in 2007
+        - maker of Quantz on reddit as Yome
+        - https://store.steampowered.com/app/37800/Quantz/
+        - direct3d for windows, opengl for mac/linux
+
+******** YES gerbil
       - v0.18 as of 11/2025
       - *built on gambit*
         - thus generates c and has a c-ffi
@@ -1232,32 +1268,45 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
       - great performance
         - https://www.reddit.com/r/scheme/comments/176cg7m/gerbil_benchmarks/
           - *beats racket (and therefore chez..??)*
-    - *chicken*
+******** OK bigloo
+      - "a practical scheme compiler", 1995
+      - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
+      - *generates C, JVM, .NET bytecode*
+        - lookin' like haxe..
+          - i'd rather it just aim for C, and therefore gambit, but this makes it a great *glue lang*
+      - has many language extensions: modules, pattern-mathcing, oo/classes, multi-threading, posix programming (pipes!), event loops, *multi-media libs* etc.
+      - *best ffi and easiest to embed* of these three
+      - great potential performance due to strict typing (optional?)
+      - *just 9 contributors..*
+******** chicken
+      - *PROBLEM: windows support shady*
+      - "a practical and portable scheme compiler" since 2000
+        - lol..
       - has both an interpreter (for interactive programming) and a compiler to generate C, yet also easy to embed it
         - but unlike chez, emacs-lisp, common-lisp, *it won't compile modules, so your interactive dev may churn at big modules..*
-      - **best community, great documentation**
-      - has a library system (eggs)
+      - **best community, great documentation, great lib eco-system** (eggs)
         - https://wiki.call-cc.org/chicken-projects/egg-index.html
           - a nice single page site
-      - slow interpreter
-    - gambit
-      - generates C, **js**
-      - https://try.gambitscheme.org/
-      - slow compiler
-        - stopped dev for a bit but came back
-    - bigloo
-      - ??
-      - generates C, JVM, .NET bytecode
-        - lookin' like haxe..
-      - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
-        - TODO: doesn't CL already do that..??
-    - (stalin)
+      - very interesting implementation strategy that is educational for language implenentors
+******** RIP stalin
       - stopped dev in 2006
       - "Stalin was a highly aggressive optimizing, batch-mode compiler designed to produce extremely fast, stand-alone executable images from Scheme source code, often outperforming C in benchmarks at the time. It achieved this by performing substantial global compile-time analysis, but in return sacrificed common development conveniences like an interactive read-eval-print loop (REPL) or the ability to load code dynamically at runtime."
+******* special cases
+******** gauche
 
-    
+for interpreter/scripting..??
+
+******** steel
+      - an embeddable scheme (standard) interpreter written in rust, meant to be embedded into rust
+      - https://mattwparas.github.io/steel/book/about/features.html
+        - "*Has a sophisticated FFI layer, where Rust is a first class citizen.* Unlike most languages where C is the choice for FFI, Steel wraps Rust using a stable abi layer and prefers Rust."
+          - "native rust structs and functions can be easily passed to the interpreter to use. This means you can expose a set of functions to script your application, and steel can use them efficiently"
+        - "Almost all of the built in data structures are immutable by default, including lists, vectors, hashmaps, and hashsets."
+      - *planned to be used by helix text editor for it's plug-in system*
+        - which still would divide the code (compiled/binary + dynamic run-time), making it at best similar to vs-code, not quite emacs
+
+******** clojure
     - java:
-    - clojure
       - game note: i think you could use libgdx with it, but it wouldn't work well, as it's functional, with many features hindering performance greatly, when compared to using java..
       - solves a major problem in the JVM world: the need a of good language, that is simple and quick, yet functional annd makes great use of JVM's excellent multi-threading
       - *"It’s a glue language for assembling components, most of which are written in Java."*
