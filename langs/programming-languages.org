@@ -689,12 +689,10 @@ these languages are lispy, in that they provide a good amount of run-time featur
   - pry at a point, introspect (anything and everything), add some shit (into the program up to that point), pry again?
     - TODO: though ideal for big constantly running apps like games, i'm not really sure if this is a better debugging experience than a normal systems dev lang.. how does it differ from breakpoints?
 
-
-this group of languages notably *hinder performance*, as there's apparently quite a bit of *overhead*. in ruby, understandably, there's overhead from the everything-is-an-object model (unlike lua?), which creates extra method calls, but there also must be overhead calling functions from C, and lastly from dynamic typing (type checking at run-time). in contrast, haxe, i think, only suffers from calling from C when using the VM option, and even that is mitigated when using the C transpiler/generation option. *of these, only common lisp excels*.. but then you're stuck writing lisp.. though, by the time you run into performance problems, you probably have learned quite a bit about programming!
+notably, ruby *hinders performance*, as there's apparently quite a bit of *overhead* from: the everything-is-an-object model (unlike lua?), which creates extra method calls, calling functions from C, and dynamic typing (type checking at run-time). In addition, the language itself is notoriously difficult to parse, hindering progress. in contrast, haxe, i think, only suffers from calling from C when using the VM option, and even that is mitigated when using the C transpiler/generation option. *of these, only common lisp and scheme (chez and C-generating schemes) excel*.. but then you're stuck writing lisp.. though, by the time you run into performance problems, you probably have learned quite a bit about programming!
   - TODO: what other overhead is there?
 
-
-notably, ruby and elixir are considered among the most beautiful languages, in syntax and expressiveness, nudging devs to use the languages' vast features to build neatly solved programs as opposed to straight-forward procedural programs. This is exemplified by their libs. They also often tend to aim to be more verbose/readable, functional. Where static langs find their rougher beauty in C++-style enums, generics, pattern matching, macros, these languages opt for composable modules/mix-ins, simple functions and function-chains, and possibly even more magical dynamic object creation and dynamic function creation. It can get pretty wild..
+conversely notable, ruby and elixir are considered among *the most beautiful languages*, in syntax and expressiveness, nudging devs to use the languages' powerful features to build neatly solved, highly-maintainable programs as opposed to straight-forward procedural programs. This is exemplified by their libs. They also often tend to aim to be more readable, succint, clean, functional. Where static langs find their rougher beauty in C++-style enums/adts, generics, pattern matching, pre-processors, macros (lots), these languages opt for composable modules/mix-ins, composable functions and function-chains, composable blocks and closures, and possibly even more magical dynamic object creation and dynamic function creation. It can get pretty wild..
     
 in the world of web-browser-as-gui, these langs excel in having the best web frameworks: phoenix, rails, roda. These are worth practicing if you plan to work on or with web products.
 
@@ -702,39 +700,47 @@ in the world of web-browser-as-gui, these langs excel in having the best web fra
   
 C
 - core
-  - high-performance bits for ruby (C-extensions or host C program)
+  - high-performance bits for m/ruby (C-extensions or host C program)
     - *game-engine*, *SDL*
-  - core program for mruby
-(x/julia =/= crystal)
-  - high-performance
+(crystal)
   - see [[the lost dream]]
+(julia)
+  - high-performance jit-llvm
+    - until it adds good C generation, it doesn't seem to have a path to deploy to mobile/console/embedded.. and that's not it's goal..
+  - data-science.. :/
 dragonruby (an mruby fork)
-  - *game (interactive dev)*
+  - *game/media (interactive dev)*
 ruby
   - *web* (tiny to large projects), *scripting*, *shell magic*
 elixir
   - *web (high-traffic/throughput)*, *parallelism*, *functional-paradigm*
 lisp (common lisp, scheme, emacs lisp)
-  - text editor extension (*emacs*, *helix*, *lem*)
+  - text editor extension (*emacs*, *helix*, *lem*, *textbringer*)
     - emacs is a dynamic run-time machine!!
-  - *high performance alt to C* with native-compilation (sbcl, chez)
+  - very-high-performance with native-compilation (*sbcl*, *chez*)
+    - both have C-ffi too
+  - actor model concurrency (*gerbil*)
+  - *high-performance alt to C via generate C and great C-ffi* (gerbil, *gambit*, bigloo, chicken, etc.)
+    - *embedded devices*
+    - *highest potential for games/media*
+  - simpler, concurrent alt to java (clojure)
 mruby, mruby/C, picoruby (with C)
   - *embedded scripting/extension*
     - rust is tough to beat for embedded devices..
-    - but in the case of apps that simply want to make use of existing C libs, and build a little core program using them, these langs can provide simple scripting and still get all the benefits of ruby (dynamic run-time / interactive dev, beautiful language..)
+    - but in the case of apps that simply want to make use of existing C libs, and build a little core program using them, these langs can provide simple scripting and still get all the benefits of ruby (dynamic run-time / interactive dev, beautiful language, modules..)
 
 
-actually.. elixir/sbcl(/ruby) would be a wild web combo..
+actually.. elixir/lisp/ruby would be a wild web combo..
   - elixir for web back-end
-  - scbl for high-performance, less-functional areas
-  - (ruby for the rest)
+  - lisps for high-performance, less-functional areas
+  - ruby for the rest
 
 *** the lost dream (rip crystal)
-although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they wouldn't share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Beyond syntax, they aren't very much alike. Crystal is closer to Haxe, a garbage-collected static lang relying on macros for meta-programming. Elixir is more functional, with some dynamic magic of Ruby to it, but stuck with a big VM. Only Ruby (and mRuby) seems to have it's own unique style of built-in meta-programming features. Thus, it's better to just stick to Haxe 'n Ruby for most cases, and keep Elixir for web, as a special-case.
+although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they wouldn't share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Beyond syntax, they aren't very much alike. Crystal is closer to Haxe, a garbage-collected static lang relying on macros for meta-programming. Elixir is more functional, with some dynamic magic of Ruby to it, but stuck with a big specialized VM. Only Ruby (and mRuby) seems to have it's own unique style of built-in meta-programming features. Thus, it's better to just stick to Haxe 'n Ruby for most cases, and keep Elixir for web, as a special-case.
 
+in addition, compared to ruby, lisps are entirely different things, in structure, key-words/functions, libs, and meta-programming. The only thing they share is the idea of a dynamic run-time and thus a more interactive dev experience
 
-
-
+unless you're okay with making games using a lisp (gambit: limited libs/engines), all you've got is mruby/dragonruby (limited performance) and julia (limited to desktop platforms), and none seem really good for memory-optimization (allocating contiguous memory, cache hits)
 
 
 ** selected langs list
