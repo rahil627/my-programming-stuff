@@ -467,24 +467,47 @@ be designed to be cross-platform, or at least have that in mind
     - *transpiles to javascript*
       - *and the media framework/engine must transpile to canvas*
 
-answer:
-1. haxe, jai, beef
-   - i don't know if jai will allow a garbage collector..
-   - beef requires memory management, with a focus on custom allocators
-2. nelua
-   - nelua is new but seems quite ideal for game programming, especially when compared to more non-gamer langs ocaml and nim
-3. ocaml, nim, lots of static here!
-   - ocaml's native comp makes cross-platform tough
-4. clr/C#
-   - new aot compiler
-     - in addition to unity's il2cpp
-5. jvm
-   - ??
-6. schemes (that generate C)
-   - too far from C, inefficient
 
-alt: dragonruby and ruby (and C)
-  - to try a more interactive dev experience.. especially with emacs!!
+* answer
+
+*gamers know best*, and eventually make their own shit
+ - they're also just much better programmers than most, with a focused niche that requires high-performance, cross-platform, and ability to do low-level stuff
+ - these are surprisingly and refreshingly simple languages too (save macros), no fancy stuffs
+
+0. jai
+   - requires memory management
+   - beauty in simplicty
+1. haxe
+   - <3 haxe
+m. beef
+   - similar to C# in syntax, but with a focus on manual memory management, including tools to help (IDE, profilers, etc.)
+2. nelua
+   - new but seems quite ideal for game programming, especially when compared to non-game-dev langs below
+s. dragonruby
+  - to try a more interactive AND elegant dev experience.. especially with emacs!!
+
+
+non-game-dev, general-use langs, either gen C or llvm-ir:
+
+3. nim, x/crystal, etc. static langs GC'd langs that gen C
+   - nim won the war in this area, developing quite nicely.. though python-esque..
+4. C-gen scheme lisps (gambit, etc.)
+   - seems further away from more procedural C, but who knows.. def much simpler to improve the C generator/transpiler than other langs (C#/clr..)!
+
+no path / not made for cross-platform:
+
+x. ocaml, julia
+   - ocaml's focus on native comp and vm makes it seem cross-platform is not important
+   - julia's focus on dynamic/run-time features (and vm) would make cross-platform require quite a bit of change from it's original intentions
+x. clr/C#
+   - i honestly don't understand how a clr-ir/l to C transpiler doesn't exist yet.. what a fucking mess for all those lovely kids that made games entirely in C# (via xna/fna).. :/
+     - UPDATE: on jan 2023, FNA adds console support via NativeAOT
+       - (Celeste released in 2018, Castle Crashes in 2008)
+         - however, many game devs went through a ton of pain to port their games before this.. with no help from micro$oft, building mono, fna, .net core, nativeaot?.. /ugh!/
+     - ai says clr isn't designed to transpile to another high-level lang..
+x. jvm
+   - standalone vm means no mobile/consoles
+
 
 surprisingly, i chose the right langauge all along..!!
 
