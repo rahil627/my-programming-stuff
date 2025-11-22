@@ -765,6 +765,10 @@ unless you're okay with making games using a lisp (gambit: limited libs/engines)
 
 
 ** selected langs list
+
+NOTE: i sorta abandoned this bit.. just stick to [[my personal tool-kit waterfall]]..
+  - TODO: maybe can merge most of this crap to there
+
 *** general langs
 
 general-use / static-checked, generally compiled / automatic-memory-management :
@@ -837,7 +841,7 @@ yep. ruby is the one. i finally found it.
 
   
 manual-memory-management with advanced features:
-**jai** > nim (== D > swift) ? rust > C++ (along with scripting langs)
+**jai** > nim (== D > swift) != rust > C++
   - NOTE: **for the case of games, i'd just wait for jai**, as it doesn't have the complexity of neither rust nor C++, nor the baggage of C++, yet still has some powerful meta-programming features
     - **by design, it's just simple in a beautiful and intutive way**, much like his games
     - until then though, stuck with C++ and rust
@@ -855,7 +859,7 @@ manual-memory-management with advanced features:
 
 functional / concurrent (actor model):
   - and therefore perfect for web (server-side)
-(haskell >) **elixir** >= OCaml? > **ruby** <? javascript/nodejs
+(haskell >) **elixir** > gerbil scheme > OCaml > **ruby** <? javascript/nodejs
   - **proof that the framework/practical use case means a lot more than the language itself..**
   - **phoenix, the current best and most beautiful scalable and easily-maintainable web framework**
     - suitable for both small web apps (roda) and massive web apps (rails)
@@ -902,14 +906,14 @@ shell scripting langs
     - not text-stream based
 
 
-various custom scripting laguages (gdscript, etc.) and embedded scripting langs (lua, wren, **scheme**, **mruby**, *mruby/C*, *picoruby*, *micropython*) usually on top of C++
+various custom scripting laguages (gdscript, etc.) and embedded scripting langs (*lua*, wren, **scheme**, *mruby, mruby/C, picoruby*, micropython) usually on top of C++
   - **mruby has the most beautiful syntax and powerful features**
     - dragonruby
     - *..but surely at a great cost..*
       - can't be worth it for high-performance apps..
   - scheme for the only thing more powerful than ruby: lisp macros
     - helix
-  - lua is exceptional for being the simplest and having the best implementation/runtime
+  - *lua is exceptional for being the simplest and having the best implementation (luaJIT)*
     - love2d, defold
   - wren is simple 'n pretty, but rather mundane, but does have concurrency/fibers
     - luxe
