@@ -714,58 +714,68 @@ these languages are lispy, in that they provide a good amount of run-time featur
   - pry at a point, introspect (anything and everything), add some shit (into the program up to that point), pry again?
     - TODO: though ideal for big constantly running apps like games, i'm not really sure if this is a better debugging experience than a normal systems dev lang.. how does it differ from breakpoints?
 
-notably, ruby *hinders performance*, as there's apparently quite a bit of *overhead* from: the everything-is-an-object model (unlike lua?), which creates extra method calls, calling functions from C, and dynamic typing (type checking at run-time). In addition, the language itself is notoriously difficult to parse, hindering progress. in contrast, haxe, i think, only suffers from calling from C when using the VM option, and even that is mitigated when using the C transpiler/generation option. *of these, only common lisp and scheme (chez and C-generating schemes) excel*.. but then you're stuck writing lisp.. though, by the time you run into performance problems, you probably have learned quite a bit about programming!
+notably, ruby *hinders performance*, as there's apparently quite a bit of *overhead* from: the everything-is-an-object model (unlike lua?), which creates extra method calls, calling functions from C, and dynamic typing (type checking at run-time). In addition, the language itself is notoriously difficult to parse, hindering progress. in contrast, haxe, i think, only suffers from calling from C when using the VM option, and even that is mitigated when using the C transpiler/generation option. *of these, only common lisp (sbcl) and scheme (chez and C-generating schemes) excel*.. but then you're stuck writing lisp.. though, by the time you run into performance problems, you probably have learned quite a bit about programming!
   - TODO: what other overhead is there?
 
-conversely notable, ruby and elixir are considered among *the most beautiful languages*, in syntax and expressiveness, nudging devs to use the languages' powerful features to build neatly solved, highly-maintainable programs as opposed to straight-forward procedural programs. This is exemplified by their libs. They also often tend to aim to be more readable, succint, clean, functional. Where static langs find their rougher beauty in C++-style enums/adts, generics, pattern matching, pre-processors, macros (lots), these languages opt for composable modules/mix-ins, composable functions and function-chains, composable blocks and closures, and possibly even more magical dynamic object creation and dynamic function creation. It can get pretty wild..
+conversely notable, ruby and elixir are considered among *the most beautiful languages, in syntax and expressiveness*, nudging devs to use the languages' powerful features to *build neatly solved, highly-maintainable programs* as opposed to straight-forward procedural programs. This is exemplified by their libs. They also often tend to aim to be more readable, succint, clean, functional. Where static langs find their rougher beauty in C++-style enums/adts, generics, pattern matching, pre-processors, macros (lots), these languages opt for *composable modules/mix-ins, composable functions and function-chains, composable blocks and closures, and possibly even more magical dynamic object/function alteration and addition. It can get pretty wild..*
     
-in the world of web-browser-as-gui, these langs excel in having the best web frameworks: phoenix, rails, roda. These are worth practicing if you plan to work on or with web products.
+in the world of web-browser-as-gui, these langs excel in *having the best web frameworks*: phoenix, rails, roda. These are worth practicing if you plan to work on or with web products.
 
 
   
 C
-- core
-  - high-performance bits for m/ruby (C-extensions or host C program)
-    - *game-engine*, *SDL*
+  - core programs (if using and embededed lang)
+    - *game-engine*
+  - high-performance bits for ruby (C-extensions)
+  - classic C libs
+    - *SDL*, stb
 (crystal)
+  - NOTE: not dynamic at all!
+    - just happens to use ruby's syntax.. heavily
   - see [[the lost dream]]
 (julia)
   - high-performance jit-llvm
-    - until it adds good C generation, it doesn't seem to have a path to deploy to mobile/console/embedded.. and that's not it's goal..
+    - UPDATE: aot compiler on the way.. maybe can do it, as long as you don't use any dynamic run-time features..??
   - data-science.. :/
-dragonruby (an mruby fork)
-  - *game/media (interactive dev)*
-ruby
-  - *web* (tiny to large projects), *scripting*, *shell magic*
-elixir
-  - *web (high-traffic/throughput)*, *parallelism*, *functional-paradigm*
-lisp (common lisp, scheme, emacs lisp)
-  - text editor extension (*emacs*, *helix*, *lem*, *textbringer*)
-    - emacs is a dynamic run-time machine!!
-  - very-high-performance with native-compilation (*sbcl*, *chez*)
-    - both have C-ffi too
-  - actor model concurrency (*gerbil*)
-  - *high-performance alt to C via generate C and great C-ffi* (gerbil, *gambit*, bigloo, chicken, etc.)
-    - *embedded devices*
-    - *highest potential for games/media*
-  - simpler, concurrent alt to java (clojure)
 mruby, mruby/C, picoruby (with C)
-  - *embedded scripting/extension*
+  - *embedded scripting/extension (interactive and beautiful)*
     - rust is tough to beat for embedded devices..
-    - but in the case of apps that simply want to make use of existing C libs, and build a little core program using them, these langs can provide simple scripting and still get all the benefits of ruby (dynamic run-time / interactive dev, beautiful language, modules..)
+    - but in the case of apps that simply want to make use of existing C libs, and build a little core program using them, these langs can provide simple scripting and still reap all the benefits of ruby (dynamic run-time / interactive dev, beautiful language, modules, blocks..)
+  - dragonruby (an mruby fork)
+    - *game/media (interactive game dev)*
+ruby
+  - *web* (tiny to large projects), *scripting*, shell magic
+elixir
+  - *web (high-traffic/throughput)*, *actor model concurrency* (and parallelism?), functional-paradigm
+lisp (common lisp, scheme, emacs lisp)
+  - NOTE: possibly *the most versatile lang.. it may have solved all problems*. though fragmented into distinct "dialects", they still retain the same simple syntax. *one lang to rule them all*
+  - *embedded scripting/extension (interactive yet simple and powerful)*
+    - used by all great text-editors: *emacs*, *helix*, *lem*, *textbringer*
+      - emacs is a dynamic run-time machine!!
+  - *high-performance alt to C, with great C-ffi via generating C* (gerbil, *gambit*, bigloo, chicken, etc.)
+    - *highest potential for games/media*
+    - *embedded devices*
+  - *very-high-performance programs* via native-compilation, without sacrificing language features (*sbcl*, *chez*)
+    - both have C-ffi too
+    - (sbcl may be the quickest yet powerful lang..)
+  - *concurrency to C/native* (gerbil, gambit)
+    - i think most lisps offer concurrency, since it's so functional in structure..
+    - gerbil offers *actor model* on top of gambit's *light-weight os threads/processes*, both of which transpile to C
+  - *a simpler, far more terse alt to java and erlang with easy concurrency* (clojure, lfe)
 
 
-actually.. elixir/lisp/ruby would be a wild web combo..
-  - elixir for web back-end
-  - lisps for high-performance, less-functional areas
-  - ruby for the rest
-
+  
 *** the lost dream (rip crystal)
-although having Ruby for scripting, Crystal for native, Elixir for server-side sounds like kick-ass dream combo as they all share similar syntax across--all Ruby influenced--, unfortunately, they wouldn't share a single library :(. There is seemimgly zero interoprability between them (Elixir can work with Erlang, Crystal has good C api and can thus be called by Ruby (via Anyolite lib) but cannot use Ruby libs. Beyond syntax, they aren't very much alike. Crystal is closer to Haxe, a garbage-collected static lang relying on macros for meta-programming. Elixir is more functional, with some dynamic magic of Ruby to it, but stuck with a big specialized VM. Only Ruby (and mRuby) seems to have it's own unique style of built-in meta-programming features. Thus, it's better to just stick to Haxe 'n Ruby for most cases, and keep Elixir for web, as a special-case.
 
-in addition, compared to ruby, lisps are entirely different things, in structure, key-words/functions, libs, and meta-programming. The only thing they share is the idea of a dynamic run-time and thus a more interactive dev experience
+although having ruby for scripting, crystal for native, and elixir for server-side sounds like kick-ass dream combo, as they all share similar syntax across--all ruby influenced--, unfortunately, they wouldn't share a single library :( (std lib and user libs). There is seemimgly zero interoprability between them (elixir can call erlang functions, crystal has good c api and can thus be called by ruby (via anyolite lib) but cannot use ruby libs). Beyond syntax, they aren't very much alike. Crystal is closer to haxe, a static lang relying on compile-time macros for meta-programming. Elixir is more functional, with some dynamic magic, but stuck with a big specialized VM. Only ruby (and mRuby) seems to have it's own unique style of built-in features, including meta-programming features. Thus, it's better to just stick to haxe 'n ruby (or lisp??) for most cases, and keep elixir for web, as a special-case.
 
-unless you're okay with making games using a lisp (gambit: limited libs/engines), all you've got is mruby/dragonruby (limited performance) and julia (limited to desktop platforms), and none seem really good for memory-optimization (allocating contiguous memory, cache hits)
+in addition, compared to ruby, lisp is an entirely different language: in structure, key-words/functions, libs, and meta-programming. The only thing they share is the idea of a dynamic run-time, and thus able to provide a more interactive dev experience
+
+with *the exception of lisp (gambit: limited libs/engines) to make games/media*, all you've got is mruby/dragonruby (limited performance, difficult debugging, seperated langs), julia (limited to desktop platforms--as of 2025), crystal (bad tooling, slow compiler, no interactive dev), and none seem really good for memory-optimization (allocating contiguous memory, cache hits).. yeah, *these langauges really just strayed too far from the hardware/C.. and they pay the cost of that*
+  - also lisp takes time to get used to..
+    - https://github.com/part-cw/lambdanative/blob/master/apps/uSquish/main.scm
+    - example game using gambit with lambdanative (some cross-platform framework..)
+
 
 
 ** selected langs list
