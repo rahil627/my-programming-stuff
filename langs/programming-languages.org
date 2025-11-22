@@ -1482,14 +1482,30 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
 
 
 
-*** YES Julia
-  - it's made specifically for academic data-science uses, so *it suffers from high RAM usage, startup time, and just a heavy run-time in general*, as it has some fancy stuff in there... *so not really useful for any of my use cases: web, scripting/cli-apps, embedded, shareable systems libs.* Also, though it uses the llvm, it's dynamic/JIT-compiled, so *no compilation path (currently) for mobile/consoles..*
-    - UPDATE: + AOT in 2022, then auto-compilation of packages in 2023!
+
+*** MAYBE Julia
+  - UPDATES:
+    - https://news.ycombinator.com/item?id=26519251
+      - in 2021, what it takes to simply render a basic image
+        - *9.694037 seconds (18.29 M allocations: 1.164 GiB, 4.17% gc time, 0.40% compilation time)*
+          - *THIS GOES AGAINST THE HAND-MADE WAY*
+            - this an crystal fucked up... *imo, it's better to generate C than to go the llvm route..*
+    - seems to be developing/progressing quite well.. and in a good position to replace ruby/python for big programs (unlike crystal and nim), mostly thanks to llvm, but it doesn't seem to look good on the scripting/interpreter side.. so it can't replace them entirely.. and though it is *very interesting for games, as they share the same problem: heavy computation*, the massive binary would suck for mobile devices.. thus it's kinda stuck to it's specialized domain: data-science, where, apparently, *computation, memory, and storage are completely dis-regarded..* :/
+    - 2025: propietary aot..??
+      - https://github.com/Suzhou-Tongyuan/SyslabCC-JuliaAOT
+      - https://github.com/Suzhou-Tongyuan/syslab-deploy
+        - julia ir -> c-like ir -> targets
+        - "Out-of-the-box support for Windows, macOS, Linux and Android (iOS not tested)"
+    - + AOT in 2022, then auto-compilation of packages in 2023!
       - https://docs.julialang.org/en/v1/devdocs/aot/
         - seems to support x86 thus far..
           - *julia actually may be better than ruby..*
     - https://docs.sciml.ai/Symbolics/stable/tutorials/converting_to_C/
       - C generation is basic, via some random math lib
+    - i don't think it'll add an interpreter (or interpreter style jit, like luajit)
+      - https://github.com/JuliaDebug/JuliaInterpreter.jl
+        - community effort, failing
+  - it's made specifically for academic data-science uses, so *it suffers from high RAM usage, startup time, and just a heavy run-time in general*, as it has some fancy stuff in there... *so not really useful for any of my use cases: web, scripting/cli-apps, embedded, shareable systems libs--though, llvm-AOT would make it really interesting for game dev..* Also, though it uses the llvm, it's dynamic/JIT-compiled, so *no compilation path (currently) for mobile/consoles..*
   - "Julia is a high performance scripting language used by academics, big data research, and some niche data science fields that require the performance (eg linear programming). As people said, it feels really well put together and has some nice syntactic sugar that’s missing in Python."
     - also macroeconomics/banks
   - slow progress
@@ -1527,7 +1543,7 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
 
        the biggest issue is mobile. Nobody is running climate simulations on their Android phone, so *it's very unlikely that Julia ever gets support for running on mobile*. It's also based entirely around dynamic code compilation, which could be an outright deal-breaker on AOT platforms like iOS...
        
-       Another issue is that *compilation into a static executable was an after-thought...the binary is massive* because you still need some dynamic compilation during play and therefore you need the entire Julia runtime, which includes things like LLVM and Clang."
+       Another issue is that *compilation into a static executable was an after-thought...the binary is massive because you still need some dynamic compilation during play and therefore you need the entire Julia runtime, which includes things like LLVM and Clang.*"
        - *~150mb binary AND memory consumption minimum*, as the whole runtime is loaded and running, along with more stuff, like BLAS buffers (for math/computation)
        - maybe will compile to static binaries in the future..? but then wouldn't be able to use dynamic magicks..
        - https://viralinstruction.com/posts/badjulia/
