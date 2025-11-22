@@ -351,55 +351,15 @@ classics:
   - **glamorous tool-kit**
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TODO!: move to prog langs notes
+* TODO clean up
 
 todo:
 clojure-like repl:
 https://github.com/clojure-emacs/cider/discussions/3422
 https://www.reddit.com/r/Clojure/comments/sm80ed/why_is_clojures_repl_better_than_other_dynamic/
 
-
-
-
-
 https://www.reddit.com/r/AskProgramming/comments/16njl3f/are_people_still_scripting_in_2023_decision/
   - i asked in /r/AskProgramming
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ref:
@@ -408,23 +368,6 @@ https://github.com/dwyl/learn-elixir/issues/102
 https://www.reddit.com/r/elixir/comments/zd9o07/comparing_phoenix_to_rails_in_december_2022/
 https://www.quora.com/Is-learning-the-Phoenix-web-framework-easier-for-experienced-Ruby-on-Rails-developers
   - a great answer about thinking in the way of Elixir is *simpler*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
