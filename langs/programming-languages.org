@@ -58,6 +58,7 @@ https://www.computerenhance.com/p/clean-code-horrible-performance
 
 TODO: it might just be better to read various lang compilers to see how bad this all is..
 
+
 ** TODO a diary entry by matz in 20040807
 
 textbringer system clipboard woes :/
@@ -128,7 +129,7 @@ textbringer system clipboard woes :/
 
 
 
-** TODO notes to merge
+** TODO MERGE: other notes
 
 ## Jon Blow's opinion
 https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
@@ -416,10 +417,8 @@ be designed to be cross-platform, or at least have that in mind
 *be conscious of memory*
   - shouldn't be so abstract that the memory usage becomes unconscious
   - should allow ways to allocate contiguous memory (value-types: C-structs, arrays, primitive data types, bits, etc.)
-*provide a quick-compilation option* so that you only need to build/compile to native code for the final product
-  - compilation cache or VM
-provide an interpreter or VM, so that you can quickly run pieces of code (and scripts)
-  - not so important..
+*provide a quick-compilation option* so that you only need to build/compile to optimized native code for the final product
+  - VM or native compilation for x86-64 with compilation cache
 provide an option for manual memory management
   - for handling intense memory changes (textures going in 'n out, etc.)
   - otherwise, *good C interops*
@@ -601,7 +600,7 @@ python
     
 ** haxe the swiss-army-knife, and jai
 
-haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow, and still yet fully-featured (*an all-powerful macro system*, ADTs, pattern matching, everything-returns-something/function-chaining), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is *straight-forward, simple programming*.
+haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow (go), and still yet fully-featured (*an all-powerful macro system*, ADTs, pattern matching, everything-returns-something/function-chaining), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is *straight-forward, simple programming*.
 
 the VM already provides *introspection*, yet there's also *hscript*, a scripting language (interpreter, run-time eval), which *shares the same syntax* (thus little to no porting, to nor from the scripting lang, is necessary), in case you need to eval some code at run-time.
 
@@ -631,9 +630,12 @@ jai
     - games (..and other very high-performance areas)
       - made for games by a pro game maker, so the language is designed for it
 
+
 *** suffers from lack of popularity/libs
-  - *though, you probably don't want to use most popular libs.. just write everything yourself!, especially onw with ai..*
+
+*..though, you probably don't want to use most popular libs.. just write everything yourself!, especially now with ai..*
   - *makes up for it via transpilers*
+
   - web
     - why not?
       - haxe has great js transpiler!
@@ -1034,6 +1036,7 @@ also, since browsers have a javascript run-time, browsers themselves are dynamic
 
 TODO: merge with above
 *web is today's main gui..! So, in turn, ruby is actually more practical than all of those natively-compiled langs! Wild how that works.. <3*
+
 
 
 
@@ -1540,7 +1543,7 @@ https://all-things-andy-gavin.com/2011/10/25/lispings-ala-john-mccarthy/
     - https://github.com/brenhinkeller/StaticTools.jl
     - https://julialang.github.io/PackageCompiler.jl/stable/apps.html
     - interpreter less important than compiler (*just-in-time compiler based on LLVM ORCJITv2 is used to generate native machine code*)
-  - due to it's very specific domain use of science, it likely doesn't have libs for the things i'm interested in: web, games, etc.
+  - due to it's very specific domain use of science, it likely doesn't have libs for the things i'm interested in: web, games, etc., and in the case of web, elixir is just a specifically better solution..
   - an indian was one of the four to make it! :)
   - Jeremy Kepner at MIT Lincoln Laboratory was the founding sponsor of the Julia project in its early days. In addition, funds from the Gordon and Betty Moore Foundation, the Alfred P. Sloan Foundation, Intel, and agencies such as NSF, DARPA, NIH, NASA, and FAA have been essential to the development of Julia. Mozilla grant...
   
