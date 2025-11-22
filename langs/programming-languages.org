@@ -484,40 +484,47 @@ provide an option for manual memory management
 
 * answer
 
-*gamers know best*, and eventually make their own shit
- - they're also just much better programmers than most, with a focused niche that requires high-performance, cross-platform, and ability to do low-level stuff
- - these are surprisingly and refreshingly simple languages too (save macros), no fancy stuffs
+*game-devs know best, and have made some of the best langs*
+ - they're also just much better programmers than most, similar to systems-devs, and have specific requirements: high-performance, cross-platform, and ability to do low-level stuff (memory management, inline, etc.)
+ - these are surprisingly and refreshingly straight-forward languages too (save macros), not too much fancy stuff, explicit
+
 
 0. jai
    - requires memory management
-   - beauty in simplicty
+     - NOTE: i haven't looked at other langs with manual memory management
+       - zig, odin, vlang, etc.
+   - beauty in simplicity
 1. haxe
    - <3 haxe
+   - beauty in explicit-ness, and infinite macro/ast power
 m. beef
    - similar to C# in syntax, but with a focus on manual memory management, including tools to help (IDE, profilers, etc.)
 2. nelua
-   - new but seems quite ideal for game programming, especially when compared to non-game-dev langs below
-s. dragonruby
-  - to try a more interactive AND elegant dev experience.. especially with emacs!!
+   - new but seems quite ideal for game programming, especially when compared to non-game-dev langs
+s. dragonruby/mruby
+  - to try/add a more interactive AND elegant dev experience--especially with emacs!!--, yet still be portable/cross-platform (host C program)
 
+    
+non-game-dev, general-use langs, either gen C or llvm-ir, with a gc:
 
-non-game-dev, general-use langs, either gen C or llvm-ir:
-
-3. nim, x/crystal, etc. static langs GC'd langs that gen C
-   - nim won the war in this area, developing quite nicely.. though python-esque..
-4. C-gen scheme lisps (gambit, etc.)
-   - seems further away from more procedural C, but who knows.. def much simpler to improve the C generator/transpiler than other langs (C#/clr..)!
+3. C-gen scheme lisps (gambit, etc.)
+   - actually quite a cool simple yet very-high-level/dynamic and powerful option..
+   - seems further away from more procedural C, but who knows.. def seems much simpler to improve the C generator/transpiler than other langs!!
+4. nim(?), x/julia, x/crystal
+   - nim won the war in its generation, developing quite nicely.. though python-esque..
+   - julia provides a more dynamic alt, with lisp macros, though ideal, at the cost of a huge, inefficient llvm-jit
+   - crystal, as of 2025, is stuck in development hell (bad lsp support, slow compiler, no other compiler options??, etc.)
 
 no path / not made for cross-platform:
 
 x. ocaml, julia
    - ocaml's focus on native comp and vm makes it seem cross-platform is not important
-   - julia's focus on dynamic/run-time features (and vm) would make cross-platform require quite a bit of change from it's original intentions
+   - julia's focus on dynamic/run-time features (and vm) would make cross-platform require quite a bit of change or restrictions from it's original intentions
 x. clr/C#
    - i honestly don't understand how a clr-ir/l to C transpiler doesn't exist yet.. what a fucking mess for all those lovely kids that made games entirely in C# (via xna/fna).. :/
      - UPDATE: on jan 2023, FNA adds console support via NativeAOT
-       - (Celeste released in 2018, Castle Crashes in 2008)
-         - however, many game devs went through a ton of pain to port their games before this.. with no help from micro$oft, building mono, fna, .net core, nativeaot?.. /ugh!/
+       - however, many game devs went through a ton of pain to port their games before this.. often paying some company.. and with no help from micro$oft, re-building mono/.net core, fna, nativeaot(?).. /ugh!/
+         - (Celeste released in 2018, Castle Crashes in 2008)
      - ai says clr isn't designed to transpile to another high-level lang..
 x. jvm
    - standalone vm means no mobile/consoles
