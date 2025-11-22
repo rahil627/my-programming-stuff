@@ -538,20 +538,20 @@ surprisingly, i chose the right langauge all along..!!
 * conclusion
 languages sorted by their use cases
 
-** personal tool(-kit) waterfall
+** my personal tool-kit waterfall
 
-*ordered from most useful to me to least useful to me*
+ordered from most useful to me to least useful
 
 *** my general-use langs
 
 C
   - *the hand-made way*
-  - mostly to interop with C libs
-  - or when things get hairy..
-  - *knowing this is indeed most useful, as it's closest to how hardware (cpu) work*
+  - *mostly to interop with C libs*
+  - or *when things get hairy..*
+  - knowing this is indeed most useful, as it's closest to how hardware (cpu) work
     
-haxe (>? nelua >? nim > julia >> crystal > gen-C schemes)
-  - high-performance static lang with a garbage collector that can transpile to/generate optimized C (to target cross-platform)
+haxe (> nelua =? nim >> julia >> crystal != gen-C schemes)
+  - *high-performance static lang with a garbage collector that can transpile to/generate optimized C (to target cross-platform)*
     - games, media.. *can make anything really*
       - unfortunately suffers from not having a popular, easy-to-learn media/game framework
         - can always try heaps again (and again).. :/
@@ -566,50 +566,54 @@ haxe (>? nelua >? nim > julia >> crystal > gen-C schemes)
         - only comprimises verbosity for explicity clarity, which is not a bad deal..
   - *glue lang* / transpilers for all major libs: C, C++, jvm, js
     
-jai > beef (>? nim)
-  - *very-high-performance apps or components that require manual-memory-management options and tools*
+jai (> beef >? nim)
+  - *very-high-performance lang that allows precise manual-memory-management / low-level access*, along with options and tools
+  - *very-high-performance apps or components*
     - games, media
       - *jon blow's engine*
-    - embedded
-  - build system for binaries for all major platforms?
-    - or also transpile to/generate C?
+    - embedded devices
  
-m/ruby >>> python (>>>> shell langs)
+lisp >> (julia >>) m/ruby (>>> m/python >>>> shell langs)
+  - *dynamic lang with a garbage collector*
+  - NOTE: julia may takeover here for big programs thanks to llvm-jit, but not being designed for cross-platform (jit, dynamic run-time, big binaries) and neither for scripting (designed for compilation) limits its use cases
+  - NOTE: *lisp seems like a superior, more practical alt to ruby*: simple, powerful, interactive/dynamic, naturally small enough to embed and interpret, full of modular features (concurrency, clos, etc.), and can transpile to C! it's just very different in syntax and features.. and their libs suck
+    - notably, *it's the only dynamic lang that also has a C transpiler / is portable. Otherwise, one of the mrubies may be the only other option here..*
   - *to experience a beautiful language*
   - *to experience dynamic run-time magicks*
-  - (alt for 2d games/media)
-    - dragonruby
-      - for *interactive and beautiful game dev / proto-typing!!*
-  - (alt for lua/embedded scripting)
-    - mruby variants
-      - *adding beautiful dynamic scripting to core C programs*
-  - *scripting (console apps, cli apps, shell scripts)*, automation (used by task schedulers), devops, hacking
-    - (alt for shell language/scripts)
+  - *anything that would benefit from dynamic run-time magicks*
+    - *interactive data-munging* (data-science)
+    - *to add beautiful dynamic scripting to C libs* (ai, anything)
+  - *embedded scripting* alt for lua, *to add beautiful dynamic scripting to core C programs for quick prototyping/playing*
+    - has several mruby variants made for different sized chips
+      - dragonruby
+        - *for interactive and easily-malleable 2d game dev / proto-typing!!*
+  - *scripting* (basic gui-less programs, cli apps, shell scripts), automation (used by task schedulers), devops, hacking
+    - *superior alt for shell languages*
       - possibly easier/more convenient to install on all systems than bash 'n powershell
         - often auto-installs on linux, when a program uses it..
       - just restrict to use the std libs
       - file utils lib with shell-like aliases
         - mv, cp, etc.
     - github ci?, actions?, gitlab ci?
+      - TODO: ??
   - *web apps (back-end) that don't have massive throughput*
     - ruby on rails for quickly making a complete web app
     - roda for simple, modular dynamic sites
     - jekyll (github pages) for static sites
-  - *interactive data-munging*
-  - and other things that would benefit from dynamic run-time magics
 
-*** special use cases
+*** special-use cases
 
 elixir
   - *web apps (back-end), especially if it has high-traffic*
     - messaging apps, etc.
-  - *any functional stuff*
+  - *anything that fits within a functional paradigm*
+    - even better if it also requires *concurrency (actor model)*
     - data-munging
-  - anything else that requires concurrency (actor model) AND fits within a functional paradigm
     
 rust
   - *embedded devices*
   - *anytime memory-safety is crucial*
+  - *a sane alt to C++*
 
 *** no choice
 
@@ -626,7 +630,7 @@ javascript
 python
   - *data-science*: big data, ml/ai, math, stats, biotech, etc.
 
-*** trash
+*** TODO trash
     
   eshell >>? bash and powershell
   - CONCLUSION: *ruby is particularly excellent as a scripting lang, possibly the most ideal shell scripting lang(..!), especially now with ai*, so there's *no need to use shell scripting langs, save for quickly starting processes*
