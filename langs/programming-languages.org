@@ -440,32 +440,46 @@ see [game-engines], [web-frameworks], [app-frameworks], etc.
       - pop web langs and javascript
   - thankfully, i'm not interested in either of these things.. and don't even consider web as programming
         
-in general:
-**have the option to provide a garbage-collector**
-**feature-ful**
-  - so, not google's langs (go, python, dart?) nor other restricted langs
-compiles to machine code, preferably *a focus on generating optimized C*
-  - thus compiling to most platforms (cross-platform): desktop OSs, iOS (+ iPadOS), consoles, embedded devices, etc.
-  - it should provide a binary
-    - even better if portable
-*simple/easy interops with C*
-  - bonus if C++!!
-it should be pretty fast
-  - not python slow
-provide a quick-compilation option so that you only need to build/compile to native code for the final product
-  - compilation cache or VM
-provide an interpreter (or VM), so that you can quickly run pieces of code (and scripts)
-  - not so important..
+
+
 *aimed for games/interactive media* :D
   - (and other "creative" applications that use various input/output hardwares)
-*provide an option of memory management*
-  - for hanlding intense memory changes (textures going in 'n out, etc.)
-  - write "unmanaged code" (C#)
+  - and thus likely has these traits:
+
+    
+**have the option to add a provided garbage-collector**
+**cross-platform**
+  - web, android, iOS (+ iPadOS), desktop OSs, consoles, embedded devices
+    - in that order
+  - likely either *generating optimized C or llvm-ir*
+  - (and therefore eventually compiles to machine code and creates a binary file)
+    
+TODO: merge with above
 be designed to be cross-platform, or at least have that in mind
   - maintain a set of libraries for target platforms: *web > android > iOS* > desktop OSs > consoles > everything else, in that order
     - because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, especially consoles, *it must rely on it's ability to transpile to C*
     - *transpiles to javascript*
       - *and the media framework/engine must transpile to canvas*
+        
+**feature-ful**
+  - so, not google's langs (go, python, dart?)
+  - *cost-free abstractions*
+    - so i don't have to worry about not using certain features
+    - *macros*
+*simple/easy interops with C*
+  - bonus if C++!!
+*it should be pretty fast*
+  - not python slow
+*be conscious of memory*
+  - shouldn't be so abstract that the memory usage becomes unconscious
+  - should allow ways to allocate contiguous memory (value-types: C-structs, arrays, primitive data types, bits, etc.)
+*provide a quick-compilation option* so that you only need to build/compile to native code for the final product
+  - compilation cache or VM
+provide an interpreter or VM, so that you can quickly run pieces of code (and scripts)
+  - not so important..
+provide an option for manual memory management
+  - for handling intense memory changes (textures going in 'n out, etc.)
+  - otherwise, *good C interops*
 
 
 * answer
