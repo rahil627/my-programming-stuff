@@ -254,7 +254,23 @@ Most dynamic languages are also dynamically typed, but not all are. **Dynamic la
 
 
 
-  
+
+** my reddit post about jai vs ai
+
+https://www.reddit.com/r/Jai/comments/1gw9odi/is_it_not_too_late/
+
+i'm late on this but.. it'll never be too late to replace the mess that is C++, and every other language that is poorly designed but happened to became popular, langs that abstract with a high cost (see how inefficient julia's run-time is, or try compiling crystal). Servers cost money, and more importantly, environmental minerals. Think of it as a much better designed chisel, a chisel that humans and robots can both benefit from using. AI isn't on the same plane as programming languages, so it's strange to compare the two. We can now have ai generate C, but it's still C. The hardware's language hasn't changed much, seemingly gotten simpler too (risc)..! When a problem arises, you the human still have to deal with all of its problems. I think the hope is the trend will go from ruby/python/lua/java/C#/C++/C all to jai (or if gc, haxe, maybe nim?). C for humans, and ai too! And once ai gets some feelings, it'll be thankful for jai too. ;)
+
+but i too had a inner hunch/feeling similar to you.. Jon can at times seem like an extremely hard-working and disciplined but narrow-minded caveman chiseling away somewhere on the side of a mountain in china an ever-changing tech land-scape. I view him as the more ascetic shaolin monk, a really great one, capable to go alone exploring 'n discovering and be successful wherever his mind goes. Imo most of this ai stuff is bull-crap investment bubbles, like the web before it, lmao.. but i can't deny its progress either. Designing a great programming language is great progress too tho, and will save everyone countless hours of grokking, debugging, compiling, thinking in abstractions, being lost, 'n so on, and more importantly, get us back to the good ol' days of programming, with a single-page cheat-sheet and a game console.
+
+one example of how bad it is: how long and how many work-hours did it take for C# to get AOT compilation, since the release of Castle Crashers (i'm guessing Jon made Braid with C++, not C#..)? To re-create XNA (FNA and MonoGame)? For FNA to be able to compile to consoles? To re-create .net (mono/.net core)? How many compilers were made for it? How many compilers were attempted? (How many for ruby?) How much money was spent by indie game makers, many just kids with great passion, to pay someone to port their art projects to other devices? How much time was spent fighting the garbage collector's implementation, or the VM implementation as a whole? To me it's all wasted time and human effort. And the problem is at the language level. It was done by design. It was designed for windows. It was designed for a VM. A VM designed to be language agnostic that in the end only has 2 languages max, if you count F#. "The people" retro-fitted it to become cross-platform. The people are lost in the sauce. Jon is not. He can design it right from the bottom up, because he has made it to the bottom, and knows it well. It's not too late. It's never too late. In Jon i trust. :)
+
+all that, and i haven't even got to the problem of the game engine. How much time has been spent fighting with Unity? That seems exponentially higher than the amount of time wasted fighting the language.. lol.
+
+nowadays, ai does the wasted work, of re-creating yet another terrible web/gui/ai/language abstraction thingy, or yet another linux/package manager/terminal/emacs... but i guess that's a human problem.. xD
+
+and until jai releases, i will continue to be thankful for haxe. Heck, i still will be thankful, as it has a garbage collector!
+
 ** a few thoughts to remember
 *** all machines speak in C (and now llvm ir)
 
