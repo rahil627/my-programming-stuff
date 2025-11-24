@@ -2448,21 +2448,6 @@ it seems the person added an incomplete implementation of note on var declaratio
   - word on the street: better than both odin and zig
   - compiles jon's giant sokobon game in 1.7 seconds on a laptop!
 
-**** YES C
- - **a very simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
- - *closest to how hardware works*
- - frameworks: RayLib, not really the best for making frameworks, as it's lacking a lot of features; it'll more or less end up like RayLib: a ton of functions included in the top-level namespace, as there is no concept of namespace!
- - manual memory management via "raw" pointers and the const key-word
- - "Many people would tell you that the biggest burden when programming in C is *worrying about buffer overflows and accidentally dereferencing null pointers*. However, I think that what can make programming in C tedious on a day-to-day basis is that the **C language doesn’t provide many tools to manage complexity. There are no modules or namespaces**, so you have to prefix identifiers to avoid name collisions. *You have to worry about the order of your declarations and adding prototypes in the right places. A lot of information is duplicated in various header files. Constants and macros use the C preprocessor, which can lead to strange bugs. There are no classes or interface types to cleanly encapsulate functionality, and there are no standard container types. We implemented our own dynamic array type, which we had to manipulate through awkward preprocessor macros with no type checking."*
- - **_not_ object-oriented**
-   - and interestingly, it forces you to write in a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, you are able to do what is needed without thinking about how to do it. There's a whole philosophy about this vocalized by Casey Muratori and his hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
- - no string class!, "C-strings" are just arrays of chars
- - has header files, which is annoying
-     - TODO: but it seems nowadays people just write everything in the header file..!?
- - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
- - OpenFrameworks also has Raylib's beauty (not sure if it was C or C++ tho..)
- - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, *dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow and optimized*
-
 **** OK Zig
   - *had a rough dev history full of rehauls*
   - not the best tool-chain, though some parts better than odin, and better cross-platform support
@@ -2529,6 +2514,21 @@ it seems the person added an incomplete implementation of note on var declaratio
 **** [?] V(lang)
   - C-like
   - gc optional
+
+**** C
+ - **a very simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
+ - *closest to how hardware works*
+ - frameworks: RayLib, not really the best for making frameworks, as it's lacking a lot of features; it'll more or less end up like RayLib: a ton of functions included in the top-level namespace, as there is no concept of namespace!
+ - manual memory management via "raw" pointers and the const key-word
+ - "Many people would tell you that the biggest burden when programming in C is *worrying about buffer overflows and accidentally dereferencing null pointers*. However, I think that what can make programming in C tedious on a day-to-day basis is that the **C language doesn’t provide many tools to manage complexity. There are no modules or namespaces**, so you have to prefix identifiers to avoid name collisions. *You have to worry about the order of your declarations and adding prototypes in the right places. A lot of information is duplicated in various header files. Constants and macros use the C preprocessor, which can lead to strange bugs. There are no classes or interface types to cleanly encapsulate functionality, and there are no standard container types. We implemented our own dynamic array type, which we had to manipulate through awkward preprocessor macros with no type checking."*
+ - **_not_ object-oriented**
+   - and interestingly, it forces you to write in a simple, top-to-bottom way, making programs, even if it's just a giant single file, rather easy to read, as opposed to being forced to create a ton of "objects", most of which don't make sense. With less freedom and more constraint, you are able to do what is needed without thinking about how to do it. There's a whole philosophy about this vocalized by Casey Muratori and his hand-made network. And indeed, it makes C libraries much easier to follow along than C++ libraries:
+ - no string class!, "C-strings" are just arrays of chars
+ - has header files, which is annoying
+     - TODO: but it seems nowadays people just write everything in the header file..!?
+ - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
+ - OpenFrameworks also has Raylib's beauty (not sure if it was C or C++ tho..)
+ - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, *dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow and optimized*
 
 
 **** garbage-collected, but C-like or simple, performance-oriented
@@ -2690,11 +2690,6 @@ OCaml
 
 
 *** BEAM VM / OTP langs
-**** Erlang
-  - not the prettiest syntax..
-  - no use for me, as i can just use elixir to call it's libs
-  - many messaging apps use it (What's App), along with messaging brokers (rabbitMQ)
-
 **** Gleam
   - a simple, statically-typed (type inference) lang for the BEAM VM
   - people seem to like this one..
@@ -2737,6 +2732,11 @@ OCaml
 
 
 
+
+**** Erlang
+  - not the prettiest syntax..
+  - no use for me, as i can just use elixir to call it's libs
+  - many messaging apps use it (What's App), along with messaging brokers (rabbitMQ)
 
 
 ** embedded scripting langs
