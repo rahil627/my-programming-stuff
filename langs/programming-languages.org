@@ -2369,11 +2369,15 @@ it seems the person added an incomplete implementation of note on var declaratio
   - **incredible memory management: garbage collector but also C-style manual memory management (malloc and free)!!** or custom allocator schemes (i.e. on stack with fallback, RAII style allocation, reference counting, shared reference counting), also some fine control of the garbage collector (add/exclude memory ranges!!)
     - this is the best soultion i've seen..!
 
-**** Rust
+**** NO Rust
   - PROBLEM: requires a very deliberate mindset to write in, high cognitive load, lots of features, most of which are actually used frequently
     - Jon Blow's take:
       - https://www.youtube.com/watch?v=4t1K66dMhWk&t=3635s
       - on the ownership model: **"compile-time enforced permissions model that determines what you can and can't do with various pieces of memory", and thus by nature is overly restrictive. There are somethings that you could do that are correct that it won't let you do, because it can't prove they're correct... you have to fight the borrow checker, and it's very frustrating, but it's good because it pushes you into patterns that are better anyway**
+      - https://github.com/Jai-Community/Jai-Community-Library/wiki/Overview
+        - "Rust is a "big idea" language that uses static compile-time formal verification where the borrow checker attempts to prevent all memory-related bugs. While this can be useful in some fields of software, the borrow checker seriously conflicts with Jai arena allocation, context-based allocation and temporary storage schemes. Arena allocation, as done in many games, is terrible for the borrow checker. Jai does not have a built in borrow checker, however, the metaprogramming features allow one to create arbitrary code inspection and analysis tools appropriate for whatever problem one will personally face."
+        - "In order to read and write to global variables, Rust requires you to wrap that code in an unsafe block. Video games often use truckloads of global variables in gameplay code, and regularly access global state in higher levels of the program. Because there is tons of video game gameplay code that regularly accesses global state, if a video game was programmed in Rust, it will end up with everything wrapped in an unsafe block. This essentially throws out all of the nice borrow checking safety features of Rust, and therefore makes Rust inappropriate for game development."
+
   - *perfect for embedded devices, where memory-safety (not crashing) is most valuable*
     - think: medical devices, military, cars, planes, etc.
   - "Rust is a kitchen-sink language that can do anything well if you're willing to put in the time to learn how to control it."
