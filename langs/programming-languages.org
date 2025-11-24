@@ -271,6 +271,7 @@ nowadays, ai does the wasted work, of re-creating yet another terrible web/gui/a
 
 and until jai releases, i will continue to be thankful for haxe. Heck, i still will be thankful, as it has a garbage collector!
 
+
 ** a few thoughts to remember
 *** all machines speak in C (and now llvm ir)
 
@@ -1219,7 +1220,11 @@ While you can compare Scheme to Clojure and Clojure to Racket, Common Lisp embod
     There's no wrong answer, though, both are lovely languages in their own way.)"
 
 ****** implementations
+
   - all use geiser package for emacs, though racket comes with it's own IDE
+    https://wingolog.org/archives/2013/01/07/an-opinionated-guide-to-scheme-implementations
+      - TODO: looks good.. 
+    
 ******* natively-compiled
 ******** chez
 - *best performance via native compilation*
@@ -1295,17 +1300,17 @@ considered one of the best, now rotting
         - https://store.steampowered.com/app/37800/Quantz/
         - direct3d for windows, opengl for mac/linux
 
-******** YES gerbil
-      - v0.18 as of 11/2025
-      - *built on gambit*
-        - thus generates c and has a c-ffi
-      - batteries-included
-        - web/http libs, module system, macro system
-        - *actor system concurrency!*
-      - seems aimed at embedded!
-      - great performance
-        - https://www.reddit.com/r/scheme/comments/176cg7m/gerbil_benchmarks/
-          - *beats racket (and therefore chez..??)*
+******** MAYBE gerbil
+- v0.18 as of 11/2025
+- *built on gambit*
+  - thus generates c and has a c-ffi
+- batteries-included
+  - web/http libs, module system, macro system
+  - *actor system concurrency!*
+- seems aimed at embedded!
+- great performance
+  - https://www.reddit.com/r/scheme/comments/176cg7m/gerbil_benchmarks/
+    - *beats racket (and therefore chez..??)*
 ******** OK bigloo
       - "a practical scheme compiler", 1995
       - "devoted to one goal: enabling Scheme based programming style where C(++) is usually required"
@@ -1352,13 +1357,13 @@ https://cakelisp.handmade.network/
 for interpreter/scripting..??
 
 ******** steel
-      - an embeddable scheme (standard) interpreter written in rust, meant to be embedded into rust
-      - https://mattwparas.github.io/steel/book/about/features.html
-        - "*Has a sophisticated FFI layer, where Rust is a first class citizen.* Unlike most languages where C is the choice for FFI, Steel wraps Rust using a stable abi layer and prefers Rust."
-          - "native rust structs and functions can be easily passed to the interpreter to use. This means you can expose a set of functions to script your application, and steel can use them efficiently"
-        - "Almost all of the built in data structures are immutable by default, including lists, vectors, hashmaps, and hashsets."
-      - *planned to be used by helix text editor for it's plug-in system*
-        - which still would divide the code (compiled/binary + dynamic run-time), making it at best similar to vs-code, not quite emacs
+- an embeddable scheme (standard) interpreter written in rust, meant to be embedded into rust
+- https://mattwparas.github.io/steel/book/about/features.html
+  - "*Has a sophisticated FFI layer, where Rust is a first class citizen.* Unlike most languages where C is the choice for FFI, Steel wraps Rust using a stable abi layer and prefers Rust."
+    - "native rust structs and functions can be easily passed to the interpreter to use. This means you can expose a set of functions to script your application, and steel can use them efficiently"
+  - "Almost all of the built in data structures are immutable by default, including lists, vectors, hashmaps, and hashsets."
+- *planned to be used by helix text editor for it's plug-in system*
+  - which still would divide the code (compiled/binary + dynamic run-time), making it at best similar to vs-code, not quite emacs
 
 ******** clojure
     - java:
@@ -2319,7 +2324,7 @@ it seems the person added an incomplete implementation of note on var declaratio
     - co-founder of popcap games
   - Maddy (of Celeste) made an engine in it, but seems to have abandoned it..
 
-**** OK Nim
+**** MAYBE Nim
   - PERSONAL NOTE: among the most practical, general-use among newer langs.. but i don't see much reason over haxe, save manual memory management, which in case i'd rather just write C for..
   - **"aims for efficiency, then expressiveness, then elegance, has metaprogramming too, in that order"**
     - this is a good way to categorize languages..
@@ -2357,7 +2362,7 @@ it seems the person added an incomplete implementation of note on var declaratio
     - *nim's macros are better implemented than haxe*
   - **syntax is actually expressive**, though it seems like tab-delimited unexpressive python on the surface, it has many ways to do one thing, possibly even more so that Crystal
     
-**** [?] D
+**** IUNNO D
   - *TODO: seems really cool, not sure why it didn't catch on..??*
   - multi-paradigm
   - parallelism!
@@ -2413,6 +2418,8 @@ it seems the person added an incomplete implementation of note on var declaratio
         - also had type inference far before C#/java ~2011 vs ~2017/2018! return type inference too!
       - variadic template
       - decided on a memory model leading to standard multi-threading and concurrency
+    - C++17
+      - jon blow uses this one..
     - C++20
       - modules!!!
         - no more #include!!
@@ -2441,14 +2448,10 @@ it seems the person added an incomplete implementation of note on var declaratio
 
 *** C and its replacements / manual memory-management / native compilation
   - more of a data-oriented procedural paradigm, usually simpler in feature-set (though zig is quite complex now..)
-
 **** YES (Jai)
   - see [[jai]]
-  - the only solution
-  - word on the street: better than both odin and zig
-  - compiles jon's giant sokobon game in 1.7 seconds on a laptop!
 
-**** OK Zig
+**** Zig
   - *had a rough dev history full of rehauls*
   - not the best tool-chain, though some parts better than odin, and better cross-platform support
   - a C replacement
@@ -2498,7 +2501,7 @@ it seems the person added an incomplete implementation of note on var declaratio
     - // build with `zig build-exe cimport.zig -lc -lraylib`
     - const ray = @cImport({ @cInclude("raylib.h"); });
 
-**** [?] Odin
+**** Odin
   - *more stable dev history than zig*
   - not the best tool-chain, especially debugger and auto-complete
   - from the hand-made network
@@ -2511,7 +2514,7 @@ it seems the person added an incomplete implementation of note on var declaratio
     - **but doesn't come with a package manager**, again, very opinionated..
   - influenced by Go
 
-**** [?] V(lang)
+**** V
   - C-like
   - gc optional
 
@@ -2882,11 +2885,11 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
 - only depends on glibc/newlib/newlib-nano
 - raspberry pi pico as reference micro-controller board
 
-**** [?] ring
+**** IUNNO ring
   - TODO: need to look into more..
   - seems like a pretty awesome *flexible* language: **keywords can be changed**, **doesn’t enforce a coding style on you** (doesn’t use neither tab nor braces!), something like Lua and Wren (20k loc interpreter ‘n VM), all containers are a “list”, already has bindings for RayLib, SDL, etc.
 
-**** [X] wren
+**** NO wren
   - PERSONAL NOTE: compared to the dynamic-ness of lua and mruby, this is less powerful, less expressive, less magical. *it feels like writing in a boring statically-typed lang, but without any of it's advanced features.* I personally would rather choose either a more powerful embedded scripting lang (mruby), the fastest embedded scripting lang (lua), or a more powerful statically-typed language (jai, haxe) instead. It's just.. *boring*.
   - “Think Smalltalk in a Lua-sized package with a dash of Erlang and wrapped up in a familiar, modern syntax.” is it's slogan, looks like a really cute alternative to Lua, in case Lua is too meta-level / minimal for you and you feel safer hiding behind classes ‘n object-oriented paradigms
     - no, nothing like smalltalk, not sure about erlang either (certainly no BEAM..)
