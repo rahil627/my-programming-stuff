@@ -2002,22 +2002,8 @@ trace( interp.execute(program) );
   
 in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a combination of the maker’s favorite languages mixed together. None are really innovative. Only only a few will catch on, become popular, have libraries, and live on... but that doesn’t mean they shouldn’t be used. Use whatever makes you happy! :) Anyway, it can be really cool making your own little world in your favorite language... As long as it works with C/C++, the worst case is you have to write some “interop” or otherwise “wrapper” code. 
 
-*** OK (OCaml)
-  - see [[OCaml]]
-    - it's not purely functional, is garbage-collected, and very much also belongs here
-      - i think like rust, it's functional by default (uses the same keyword too: let)
-  - the oldest of these listed entries (after lisp), yet, still great, even has parallelism, and a great recent generational garbage-collector... i personally don't know of it's faults, beyond it suffering from a small community..
-    - just no path to cross-platform.. instead opting for native compilation..
-
-*** MAYBE (Nim)
-  - see [[nim]]
-  - have option to choose to use a garbage collector to handle memory
-    - https://nim-lang.org/docs/mm.html
-    - however, default has seemed to move to ARC then ORC (reference counting)
-        - see https://nim-lang.org/blog/2020/10/15/introduction-to-arc-orc-in-nim.html
-
-*** MAYBE Nelua
-  - PERSONAL NOTE: this is probably the most interesting alternative to haxe.. very very close to C
+*** YES Nelua
+  - PERSONAL NOTE: this is probably the most interesting alternative to haxe and jai.. very very close to C
   - lua-like in many ways: syntax, minimal design / few features that can be used to create more features via meta-programming
     - "Nelua tries to be more minimal and generate more readable and compact C code.", when comparing it to nim
   - meta-programming galore (static)
@@ -2054,6 +2040,14 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
   - transpiles to C, no native compilation
     - in this case, i see no reason not to use haxe instead..
   - TODO: can it make use of lua's libs??
+
+*** (Nim)
+  - see [[nim]]
+  - have option to choose to use a garbage collector to handle memory
+    - https://nim-lang.org/docs/mm.html
+    - however, default has seemed to move to ARC then ORC (reference counting)
+        - see https://nim-lang.org/blog/2020/10/15/introduction-to-arc-orc-in-nim.html
+
 *** NO Crystal
   - *PROBLEM: slow dev*
     - PROBLEM: currently suffers from runtime struggles (memory usage, compile time (no incremental compilation))
@@ -2132,6 +2126,18 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
   - https://www.reddit.com/r/dartlang/comments/1bbbexg/comment/ku8ct38/
     - "Dart is also a hard sell because, no matter the task, there's other languages with super interesting advantages. If you want a performant CLI, just use Go tbh. If you want a driver, just use Rust tbh. If you want a highly performant and concurrent back-end, just use Elixir tbh. If you want to tap on an existing ecosystem with lots of manpower to make your back-end, .NET Core is very popular, unfortunately. If you want to make videogames, you probably don't want to make an entirely new framework and game engine, so you'd end up with C++ or C#. GUI apps are like the only place where Dart truly shines via Flutter, and even that isn't totally figured out. Dart doesn't abuse FFI enough for its platform-dependent code to be entirely in Dart, which would be fucking amazing tbh."
  
+
+  
+*** native-compilation langs
+
+although fast, native compilation comes at the cost of making it very difficult to achive cross-platform, requiring a compiler for every device. OCaml should just add a llvm-ir or C transpiler..
+
+**** OK (OCaml)
+  - see [[OCaml]]
+    - it's not purely functional, is garbage-collected, and very much also belongs here
+      - i think like rust, it's functional by default (uses the same keyword too: let)
+  - the oldest of these listed entries (after lisp), yet, still great, even has parallelism, and a great recent generational garbage-collector... i personally don't know of it's faults, beyond it suffering from a small community..
+    - just no path to cross-platform.. instead opting for native compilation..
 
 **** KILL Go (golang)
   - PERSONAL NOTE: i think it's only defining feature is the "portable" binary build system (and minimal std lib..), which is something that requires quite a bit of man-hours.. (now that other langs have simply added its concurrency implementation--fibers/co-routines..)
