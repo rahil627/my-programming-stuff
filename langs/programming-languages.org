@@ -3537,7 +3537,7 @@ note: benchmarks are usually impractical, only exacerbating very specific differ
 
 **C** (clang > gcc)
 Zig/V/Odin/etc.
-**Jai**
+**Jai** (native, llvm)
 
 (Chapel) (llvm or C, parallel)
 (Fortran)
@@ -3546,28 +3546,24 @@ C++ (clang++ > g++)
 **Rust**
 Swift (llvm, reference-counting or borrow-checker)
 
-*** tier 1.5:
-  - adds a garbage collector
-  - very fast
-  - native compilation
-  - note: go's portable binary is much bigger
-
-Go
-**scheme (chez)** - great alternative to Go, perhaps even the original go!
-**common lisp (sbcl)** - crazy optimization for how powerful this language is..
-
 
 *** tier 2:
   - garbage-collected
   - native compilation or generate C
   - fully-featured / general-use langs
 
+Go (native)
+**common lisp (sbcl/native)** - crazy optimization for how powerful this language is..
+**scheme (chez/native)**
+  
 **Julia** (llvm-ir?) - crazy fast for a complex dynamic lang..
 Crystal (llvm-ir) - PROBLEM: extremely slow compile times (default, no flags) even for the most trivial hello world code
 
 **Haxe** (c or c++, with clang/llvm optional)
 **Nelua** (c)
 Nim (c/clang/llvm)
+
+lisp (gambit/c)
 
 C# (aot/native?)
 D?
@@ -3583,29 +3579,32 @@ Mojo
 
 Java (JVM) - *fastest vm*
   - Scala, Kotlin, Clojure, etc. JVM langs
+  - truffleruby
+  - jRuby
 C# (CLR)
   - F#.. are there any other CLR langs..??
-
-jRuby - ?? TODO: surely the fastest implementation of ruby..??
 
 *** tier 3:
   - very complex, contemporary bytecode/vm JIT implementations written by gods
   - **NOTE: many consoles and iOS don't allow JIT compilers**
 
 **Julia** (JIT, but can AOT) - how the eff... as fast as JS?? NOTE: very slow startup times, and specific to simple, repetitive computations (number operations, etc.), which is what most benchmarks usually are..
+
 JS (bun, node) - surely the *most complex vm* in terms of optimization..??
+
 *Lua (LuaJIT -j) - the JIT that set the standard*
-Scheme (gambit) - TODO: generated C?
-**Haxe (hashlink, JIT?)** - probably below dart, but fuck dart, and google too!
+
+**Haxe (hashlink, JIT)** - probably below dart, but fuck dart, and google too!
 Dart (JIT, also has AOT) - surprisingly fast, or maybe not.. since it's google
 (python/pypy and ruby/truffleruby would go here but are impractical)
 
+(adds dynamic run-time / checking)
 *dragonruby* - ?? further optimizations..?? "an order of magnitude slower than LuaJIT"
 *mRuby* - ?? it should be faster than ruby, as it discards certain features, and uses bytecode..
 
-**Elixir** (BEAM) - particularly bad for simple CPU tasks used in benchmarks (slow startup time?) but note: the magical concurrency that occurs in BEAM puts it on top of most dynamic languages, especially when it come to real applications, without having to hand-write concurrency structures
+**Elixir** (BEAM) - TODO: particularly bad for simple CPU tasks used in benchmarks (slow startup time?) but note: the magical concurrency that occurs in BEAM puts it on top of most dynamic languages, especially when it come to real applications, without having to hand-write concurrency structures
 
-*Ruby (YJIT, 3.3)* - a practical/complete alt run-time, now standard
+*Ruby (YJIT, 3.3)*
 PHP - opcode/vm-like runtime, surprisingly slow.. probably ranked higher..
 (Pascal?)
 
