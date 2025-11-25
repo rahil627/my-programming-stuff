@@ -533,17 +533,21 @@ haxe (> nelua =? nim >> julia >> crystal != gen-C schemes)
   - *glue lang* / transpilers for all major libs: C, C++, jvm, js
     
 jai (> beef >? nim)
-  - *very-high-performance lang that allows precise manual-memory-management / low-level access*, along with options and tools
-  - *very-high-performance apps or components*
-    - games, media
-      - *jon blow's engine*
-    - embedded devices
+  - *very-high-performance lang that allows un-restricted manual-memory-management and compiler access*, along with a simple macro system
+  - *very-high-performance apps and/or components*
+    - *anywhere that C and C++ are used*
+      - performant, re-usable, maintainable libs
+      - games, media
+        - *jon blow's engine*
+      - embedded devices
  
-lisp >> (julia >>) m/ruby (>>> m/python >>>> shell langs)
+lisp != (julia >?) m/ruby (>>> m/python >>>> shell langs)
   - *dynamic lang with a garbage collector*
+  - *PERSONAL NOTE: other than to try for the experience of dynamic/interactive dev iteration and ruby for its syntax/features/expressiveness, these are quite useless.. haxe and jai are just better languages, without comprimises: simpler yet more performant*
+    - i think the one comprimise for ruby is mruby, embedded ruby, particularly dragonruby
   - NOTE: julia may takeover here for big programs thanks to llvm-jit, but not being designed for cross-platform (jit, dynamic run-time, big binaries) and neither for scripting (designed for compilation) limits its use cases
   - NOTE: *lisp seems like a superior, more practical alt to ruby*: simple, powerful, interactive/dynamic, naturally small enough to embed and interpret, full of modular features (concurrency, clos, etc.), and can transpile to C! it's just very different in syntax and features.. and their libs suck
-    - notably, *it's the only dynamic lang that also has a C transpiler / is portable. Otherwise, one of the mrubies may be the only other option here..*
+    - notably, *it's the only dynamic lang that also has a C transpiler / is portable. Otherwise, one of the mrubies may be the only other option here for cross-platform compilation, with dragonruby at the front..*
   - *to experience a beautiful language*
   - *to experience dynamic run-time magicks*
   - *anything that would benefit from dynamic run-time magicks*
@@ -555,6 +559,7 @@ lisp >> (julia >>) m/ruby (>>> m/python >>>> shell langs)
         - *for interactive and easily-malleable 2d game dev / proto-typing!!*
   - *scripting* (basic gui-less programs, cli apps, shell scripts), automation (used by task schedulers), devops, hacking
     - *superior alt for shell languages*
+      - TODO: move this out..
       - possibly easier/more convenient to install on all systems than bash 'n powershell
         - often auto-installs on linux, when a program uses it..
       - just restrict to use the std libs
@@ -579,7 +584,8 @@ elixir
 rust
   - *embedded devices*
   - *anytime memory-safety is crucial*
-  - *a sane alt to C++*
+  - *a sane alt to C++ for systems dev*
+  - however, restricted to a single way of memory management.. unless you put everything in 'unsafe' blocks
 
 *** no choice
 
@@ -596,7 +602,7 @@ javascript
 python
   - *data-science*: big data, ml/ai, math, stats, biotech, etc.
 
-*** TODO trash
+*** TODO old
     
   eshell >>? bash and powershell
   - CONCLUSION: *ruby is particularly excellent as a scripting lang, possibly the most ideal shell scripting lang(..!), especially now with ai*, so there's *no need to use shell scripting langs, save for quickly starting processes*
