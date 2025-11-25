@@ -479,14 +479,6 @@ no path / not made for cross-platform:
 x. ocaml, julia
    - ocaml's focus on native comp and vm makes it seem cross-platform is not important
    - julia's focus on dynamic/run-time features (and vm) would make cross-platform require quite a bit of change or restrictions from it's original intentions
-x. clr/C#
-   - i honestly don't understand how a clr-ir/l to C transpiler doesn't exist yet.. what a fucking mess for all those lovely kids that made games entirely in C# (via xna/fna).. :/
-     - UPDATE: on jan 2023, FNA adds console support via NativeAOT
-       - however, many game devs went through a ton of pain to port their games before this.. often paying some company.. and with no help from micro$oft, re-building mono/.net core, fna, nativeaot(?).. /ugh!/
-         - (Celeste released in 2018, Castle Crashes in 2008)
-     - ai says clr isn't designed to transpile to another high-level lang..
-x. jvm
-   - standalone vm means no mobile/consoles
 
 
 surprisingly, i chose the right langauge all along..!!
@@ -2166,6 +2158,26 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - *"As making the right choice for yourself, unless GC matters, personally, I'd start with Go, just because it's going to be incredibly easy to pick up for a Python dev, and immediately brings a lot to the table. Once you write some Go and start bumping up against the dark corners (every language has these), you'll develop an appreciation for why you might want Rust and have a better sense of if and when the learning investment is worth it for you."*
       - *the perfect starter compiled programming language*
 
+ 
+*** VM-based langs
+
+i have no interest in these languages because they are restricted by their vm implementation, mainly, they aren't cross-platform. In order for these langs to support a device, they must create a native compiler for the platform or a C transpiler. In addition, *iOS and most consoles don't allow run-time execution*.
+  - minecraft is a good example of a game that was made in java/jvm, then ported to C/C++/lua
+
+in addition, they are corporate, and they bring about a corporate, clunky, old, verbose feeling, of being over-organized, rather than scripty, hacky
+
+x. clr/C#
+   - i honestly don't understand how a clr-ir/l to C transpiler doesn't exist yet.. what a fucking mess for all those lovely kids that made games entirely in C# (via xna/fna).. :/
+     - UPDATE: on jan 2023, FNA adds console support via NativeAOT
+       - however, many game devs went through a ton of pain to port their games before this.. often paying some company.. and with no help from micro$oft, re-building mono/.net core, fna, nativeaot(?).. /ugh!/
+         - (Celeste released in 2018, Castle Crashes in 2008)
+     - ai says clr isn't designed to transpile to another high-level lang..
+x. jvm
+   - standalone vm means no mobile/consoles
+
+**** NO (Julia)
+- though not static, it's optimized to do math quickly, which is precisely what games need
+- see [[julia]]
 
 *** KILL JVM
   - see [[meh, not interested]]
