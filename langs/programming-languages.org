@@ -607,17 +607,23 @@ python
   - NOTE: use bash/powershell over non-posix alt shells like zsh/fish/kitten for portability
 
     
-** haxe the swiss-army-knife, and jai
+** haxe and jai (and nelua?): the swiss-army-knives
 
-haxe is possibly the most versatile language out there.. with several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow (go), and still yet fully-featured (*an all-powerful macro system*, ADTs, pattern matching, everything-returns-something/function-chaining), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is *straight-forward, simple programming*.
+UPDATE: jai is how a programming language should be: *minimal and modular*, with *complete power over the compiler* (and not just macros!), allowing you to edit how to the compiler works, with plenty of built-in compiler directives to start with. It's *just really well designed*: no bullshit, no agenda/ideologies, no magic (everything is explicit), no expensive abstractions/features, no extra features that can be created yourself (given access to the compiler and macros), and yet no restrictions either. Despite it being made by a game dev, it's *the most general-use language out there, all the way down to first-principles: the compiler*. *It's of no surprise that since the beginning, it's taken a game maker to design a good language.. Honestly, programmer-only-personality-types just suck at design.* It requires a person that is a great designer and programmer, with a great ability to execute.
+
+UPDATE: nelua, like jai, seems to provide a ton of compiler power, but through lua, as that's what the compiler is written in. "The preprocessor allows you to write Lua code that runs during the compilation process. This means you can interact with the Nelua compiler, analyze code, generate new code, and modify the compilation flow based on custom logic." 
+
+haxe is possibly *the most versatile language* out there.. with *several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it*.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow, and still yet fully-featured (*an all-powerful macro system*, ADTs, pattern matching, everything-returns-something/function-chaining), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is *straight-forward, simple programming*.
 
 the VM already provides *introspection*, yet there's also *hscript*, a scripting language (interpreter, run-time eval), which *shares the same syntax* (thus little to no porting, to nor from the scripting lang, is necessary), in case you need to eval some code at run-time.
 
 as much as i love ruby's syntax and expressiveness, it's really tough to beat this, which just feels far more simpler, straight-forward.. and with a *sane std lib*. to me, it's C# done right
 
-the vs-code haxe extension likely already has good integration, with common lsp features (completion..), debugging (compile-time checking and run-time errors and breakpoints within vm that make use of introspection), and profiling (or is this a seperate app?)
+the vs-code haxe extension likely already has good integration, with common lsp features (completion..), debugging (compile-time checking and run-time errors and breakpoints within vm that make use of introspection), and profiling (hashlink vm)
   - TODO: just gotta make an emacs plugin for my fav lang!
 
+
+  
 C
   - libs, very high-performance parts, optimization
 haxe
@@ -635,16 +641,20 @@ haxe
     - *when you need libs or must integrate with existing code*: C, C++, jvm, js (php?, c# soon again) (via transpilers)
       - the ultimate glue langauge
 jai
-  - *manual memory management*, *C-level performance*, yet with high-level features
-    - games (..and other very high-performance areas)
-      - made for games by a pro game maker, so the language is designed for it
+  - *manual memory management*, *C-level performance*, *simple* yet *gives the programmer all the power*
+    - *the future*
+    - *anywhere C or C++ are used*
+      - games
+        - made for games by a pro game maker, so the language is designed for it
 
 
 *** suffers from lack of popularity/libs
 
 *..though, you probably don't want to use most popular libs.. just write everything yourself!, especially now with ai..*
-  - *makes up for it via transpilers*
-
+  - *haxe makes up for it via transpilers*
+  - *jai doesn't even want a package manager!*
+    - now that may be a restriction to the hand-made ideology!
+    
   - web
     - why not?
       - haxe has great js transpiler!
@@ -657,7 +667,7 @@ jai
   - ai/ml
     - haxe seems to be weaning off the python transpiler..
     - just not worth fighting it..
-      - you'd have to basically interface directly with the "C extensions" of python libs anyway, since that's where all the work is happening
+      - you'd have to interface directly with the "C extensions" of python libs anyway, since that's where all the work is happening..
 
 
 ** the lispy ruby dream: magical dynamic run-time machines
