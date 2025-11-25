@@ -272,6 +272,21 @@ nowadays, ai does the wasted work, of re-creating yet another terrible web/gui/a
 and until jai releases, i will continue to be thankful for haxe. Heck, i still will be thankful, as it has a garbage collector!
 
 
+** my reddit post on explaining j blow
+
+it might just be a generational thing. I personally don't get why Carmack was revered. Doom was trash, lmao. Quake was voxely vomit. From what i get, he pushed the hardware at a time hardware sucked. How it differs from the restrictions and hacks to make games on game consoles before that, i don't know. SNES def had far better designed and far more beautiful games.
+
+Jon's just happens to have all the right traits to design and execute/make great software, down to first principles, down to every detail. At first, his games exemplify that, especially The Witness, and later, you will see his language does too, and if you've seen a video of him talk, his mind is just like that: a massive complex program that takes into consideration of everyting down to every minute detail. In addition, he does not give a F about what anyone thinks because he knows the facts of computers. He's put in the 100,000 hours of practice. Scientists get away with this sort of know-it-all personality, without the hate, even as they forget the entire human factor! Jon gladly still has the human element. Yet Jon gets more hate. Whether it's a game, game engine, or programming language, he's the one, one of the few. And most importantly, he's still doing it, damn near every-day. I personally see no contender in language (nelua..? lol) nor game engine (some minimal, modular C++ framework..?) and def not sokobon game, lmao. He can talk because he's putting in the work. When people got a problem, they call him.
+
+as for his games, that's just his niche: he likes puzzle games. Some people were into Myst. I never got my hands on it as a kid, but why hate on that? But it wasn't just his games.
+
+he was there at the right time. He ran Experimental Gameplay Project for some time, a leader for those more into game design concepts/ideas/new directions, helped early indie game devs, funded some (the indie fund), probably helped them port games (from their terrible languages/engines) to make it on the indie humble bundle.. basically, he was the uncle when indie games hit. There's a lot of great artsy kids that want to make games, but very few that understand programming/hardware like he does. Braid was the shining star of xbox live, showing what you can make, what you can get on a console, as a single individual artist. He's the grumpy, opinionated farmer, but until you've farmed for 10,000 hours, in a conscious way (not just for stupid work), it leaves very few to say anything at all.
+
+all programming languages suck (except haxe, and maybe zig?), nearly all game engine suck (many, because it's based on a sucky or plain wrong programming language), and most games suck. For him to be successful at all three is unprecedented. People revere him for his programming skill, i revere him for his deep, un-restricted first-principles design, from game to game engine to prog lang.
+
+verse, unity, C++, C, the ideas of embedded scripting langs, dynamic run-times, pre-processors, object-oriented paradigm, the idea of creating yet another language based solely off a single specific idea/ideology (rust, elixir, go, haskell..), and much more, are all flawed by design. We need someone to start all over from scratch, discarding all that inherited crap, and building anew from the ground up (hence his affiliation to hand-made hero / casey). For that specific task, he's the perfect choice. Thankfully for us, he took this gargantuan task on own accord, possibly more-so for himself, so that he can suffer less while making games, lmao. But it's something we will all reap the benefits from. And thankfully for us again, he's kind enough to share. :)
+
+
 ** a few thoughts to remember
 *** all machines speak in C (and now llvm ir)
 
