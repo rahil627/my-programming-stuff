@@ -2558,12 +2558,19 @@ assembly languages
 or at least funcitonal-paradigm-focused
   - for example: immutable values by default
 
+*for games, it's useless*. The *functional paradigm incurs huge performance costs for the benefit of abstraction/easy-maintanence for the programmer*.In addition, *none are cross-platform, as none transpile to C nor llvm-ir, as most rely on a VM to handle concurrency*
+  - it almost seems as if these languages, or paradigm, goes against the way machines think..
+
+*it seems to me that the functional paradigm's biggest reason for existence is to solve the concurrency/parallelism problem.* Games can require concurrency, but it should'nt be solved/handled at the language level, nor forced upon you. You must choose an implementation/lib and do the work for the component that you want to make concurrent.
+
+
+
+Elixir is a special use case, as it's perfect for concurrency for web.
+  - https://www.reddit.com/r/gamedev/comments/7adg21/comment/dp9fv44/
+  
 "Elixir is a functional language; its data structures are immutable. *This is great for reasoning about code and supporting the massive concurrency you enjoy when you write Elixir. The double-edged sword of immutable data structures is that mutations are modeled by taking an existing data structure and an operation and creating a brand new data structure that is the result of applying that operation to the existing data structure."*
     - this problem applies to all purely functional languages
     
-however, for games, it's useless. functional paradigm incurs huge performance costs for the benefit of abstraction/easy-maintanence for the programmer. Elixir is a special use case, as it's perfect for concurrency for web.
-  - https://www.reddit.com/r/gamedev/comments/7adg21/comment/dp9fv44/
-
 
 the current state of things:
 https://www.reddit.com/r/ocaml/comments/m634t8/thoughts_onexperiences_with_f/
@@ -2571,8 +2578,10 @@ https://www.reddit.com/r/ocaml/comments/m634t8/thoughts_onexperiences_with_f/
 
 *** specialized use cases
 note: the following languages have very different *specialized use cases* due to their special features, which affect their communities:
+
 Haskell
   - purely functional
+    - and thus the most restrictive
   - math, language (nlp?)
 Elixir
   - server-side parallelism
@@ -2582,7 +2591,7 @@ F#
 OCaml
   - compilers/AST work, academics, general-use
 
-*** YES Haskell
+*** Haskell
   - *the* functional lang
   - *magical feeling to write*
     - many people really like/admire this one
@@ -2674,6 +2683,9 @@ OCaml
   - **robustness from maturity and industrial use**, similar to erlang
   - reason and bucklescript transpile to javascript
 
+*** (F#)
+  - actually a much praised language..
+  - see [[F#]]
 
 *** BEAM VM / OTP langs
 **** Gleam
@@ -2714,7 +2726,6 @@ OCaml
     - elixer vs ruby?
     - "The one use case where Ruby still wins for me, though, is a little one-off script. Last time I had occasion to do that, I found you couldn't use any Elixir hex packages without generating a whole mix application. In ruby you could just globally install the gem and require it right into your script."
     - "I do not particularly like the usual global package installation model, though, because it means that you can only have a single version of a package available for your scripts to require. The best package management model for standalone scripts that I have seen is Groovy's: a script can include a special directive that downloads a specific version of a package just for that script. Any versions can be stored in the global (per-user) package cache so that you don't have to redownload them every time a script runs, but your import statements always give you strictly the version you asked for. This is the model I'd adopt for Elixir."
-
 
 
 
