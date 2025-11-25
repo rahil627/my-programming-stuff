@@ -1621,7 +1621,7 @@ embeds into a lua program..?
       - ruby is not dead
     - **"made for humans"**
   - **DRAGONRUBY**
-    - though, technically a fork of mruby.. see entry under [mruby]
+    - though, technically a fork of mruby.. see [[mruby]]
     - *may get an AOT compiler soon!*
   - shares syntax with *crystal* and *picoruby, mruby/C*
   - *has a much better leader than Google, not breaking the language as python did, but continously, slowly, developing over time*
@@ -1832,6 +1832,8 @@ embeds into a lua program..?
   - through Node.js, Express.js (sinatra-inspired micro-framework), etc. 'middle-ware" frameworks, it can then be used server-side
     - **neither javascript nor Node.js really have a standard library, hence the development of a chaos of terrible libraries**
       - yikes!!
+  - **by far the worst libraries and least skilled programmers**
+    - i'm told it's much much better than it used to be..
   - retarded manual type checking (===, NaN, etc.)
   - has a few, limited meta-programming features
     - (likely for compiler efficiency reasons)
@@ -1850,8 +1852,8 @@ embeds into a lua program..?
   - Google's v8 engine is a JIT marvel, much like java's VM, but massive, unweildy
 
 
-*** KILL other more specialized scripting langs
-**** Perl
+*** other more specialized scripting langs
+**** KILL Perl
   - note: dev branched at Perl 5, with Perl 6 becoming Raku [see past langs]
   - "It makes sense that Perl started out as a text processing language.."
   - $a $little $cryptic, but not as bad as i thought!
@@ -1862,7 +1864,7 @@ embeds into a lua program..?
   - seems to have the reputation that only old veteran bearded linux hackers have ever mastered it
   - embeds/interops with C++?
 
-**** PHP
+**** KILL PHP
   - though it can be used as a general-use language, it's main feature is being able to be embedded into html.. making it rather specialized for web dev..
     - other langs have templating systems seperate from the language, creating a bit more abstraction, and less powerful, whereas embedded php can do anything
   - NOTE: still very much in use, with the most popular web frameworks: from wordpress to drupal to laravel to craftcms
@@ -2653,7 +2655,7 @@ F#
 OCaml
   - compilers/AST work, academics, general-use
 
-*** Haskell
+*** TODO Haskell
   - *the* functional lang
   - *magical feeling to write*
     - many people really like/admire this one
@@ -2698,6 +2700,8 @@ OCaml
     - making it among the most practical functional langs
     - in the functional to object-oriented/procedural sprectrum, OCaml is closer to functional, whereas Haxe is closer to object-oriented/procedural, giving it a very good profile and balance, making it far more practical than more functional languages
     - the "O" stands for object-oriented
+  - ..i just personally really liked the feeling of it, seeing it in haxe's compiler
+    - shares quite a bit of similarities to both haxe and rust, particularly, in syntax and features (pattern-matching, ADT)
   - some benefits of it's functional side:
     - *immutable vars/data-structures by default (final keyword in other langs), good compiler warnings against mutable things*
     - *pattern matching feature ensures all control paths are complete via compiler warnings*, and *a great type system (strong yet inferred) that also helps with compiler warnings*
@@ -2791,7 +2795,6 @@ OCaml
 
 
 
-
 **** Erlang
   - not the prettiest syntax..
   - no use for me, as i can just use elixir to call it's libs
@@ -2799,7 +2802,8 @@ OCaml
 
 
 ** embedded scripting langs
-  - NOTE: for actual embedded devices, you'd likely use rust for the core (for safety), and then *maybe* scripting lang
+  - NOTE: for actual embedded devices, you'd likely use rust for the core (for safety), and then /maybe/ a scripting lang
+  - NOTE: because the host program is C, *it seems fine to run on iOS and consoles..*
   - embeds in to C or rust
     - usually just a VM/byte-code interpreter, possibly JIT (luaJIT)
   - *these seem quite perfect for the use case of interactive programs, where you expect the user to alter the program, interactively*
@@ -2807,17 +2811,14 @@ OCaml
   - maybe not worth the trade-off in games (hence why unreal engine stopped using it?), as mentioned by jon blow
     - *the main reason is to have a dynamic run-time to play/experiment/iterate with*
       - *but it sounds like you can do a lot of that in systems langs..*
-        - incremental compilation?
         - some way to feed newly compiled code?
           - how does hot reload work in C++?
-    - but unreal is developing another scripting language..??: verse
-      - https://www.reddit.com/r/unrealengine/comments/1bzfnhb/verse_update_gdc_2024/
-        - *concurrent garbage collection tied to objects*
-          - okay, well... now that's special..
   - **why unreal engine dropped unrealscript**:
-    - One of the key moments in Unreal Engine 4's development was, we had a series of debates about UnrealScript – the scripting language I'd built that we'd carried through three generations. And what we needed to do to make it competitive in the future. And we kept going through bigger and bigger feature lists of what we needed to do to upgrade it, and who could possibly do the work, and it was getting really, really unwieldy. And there was this massive meeting to try and sort it out, and try to cut things and decide what to keep, and plan and... **there was this point where I looked at that and said 'you know, everything you're proposing to add to UnrealScript is already in C++. Why don't we just kill UnrealScript and move to pure C++? You know, maximum performance and maximum debuggability. It gives us all these advantages.'**
-  - apple doesn't support code execution
-    - but then again, fuck apple
+    - "One of the key moments in Unreal Engine 4's development was, we had a series of debates about UnrealScript – the scripting language I'd built that we'd carried through three generations. And what we needed to do to make it competitive in the future. And we kept going through bigger and bigger feature lists of what we needed to do to upgrade it, and who could possibly do the work, and it was getting really, really unwieldy. And there was this massive meeting to try and sort it out, and try to cut things and decide what to keep, and plan and... **there was this point where I looked at that and said 'you know, everything you're proposing to add to UnrealScript is already in C++. Why don't we just kill UnrealScript and move to pure C++? You know, maximum performance and maximum debuggability. It gives us all these advantages.'**"
+      - but unreal is developing another scripting language..??: verse
+        - https://www.reddit.com/r/unrealengine/comments/1bzfnhb/verse_update_gdc_2024/
+          - *concurrent garbage collection tied to objects*
+            - okay, well... now that's special..
 
 **** YES lua
   - PERSONAL NOTE: i think i first used this for Corona SDK for mobile (iOS, Android) game dev, and it was.. interesting.. *bare*, to the point you had to create your own language constructs useing meta-tables..
@@ -2886,14 +2887,6 @@ Lua combines simple procedural syntax with powerful data description constructs 
 Lua is implemented as a library, written in clean C, the common subset of Standard C and C++. The Lua distribution includes a host program called lua, which uses the Lua library to offer a complete, standalone Lua interpreter, for interactive or batch use. Lua is intended to be used both as a powerful, lightweight, embeddable scripting language for any program that needs one, and as a powerful but lightweight and efficient stand-alone language.
 
 As an extension language, Lua has no notion of a "main" program: it works embedded in a host client, called the embedding program or simply the host. (Frequently, this host is the stand-alone lua program.) The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and can register C functions to be called by Lua code. Through the use of C functions, Lua can be augmented to cope with a wide range of different domains, thus creating customized programming languages sharing a syntactical framework."
-**** YES (lisp, scheme)
-  - see [[lisp]]
-  - scheme ("small" versions)
-    - *seems like the perfect embedded scripting language..*
-    - many choices for C
-      - alternatively, can use a lisp that generates C and has great C ffi
-    - steel (rust)
-    - still slower than luaJIT..
 **** YES mruby
   - PERSONAL: **magical. simple. concise. beautiful. powerful.** contains nearly all of the the magic of ruby, probably just discarding the terribly inefficient bits (and the bits that are hard to parse..). **possibly the most fun way to make games..**
     - *i mean, if it's not meant for a tiny embedded device, why not..? why not have everything you'd ever want??*
@@ -2940,6 +2933,15 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
 - 256KB ROM, 128KB RAM, 32-bit
 - only depends on glibc/newlib/newlib-nano
 - raspberry pi pico as reference micro-controller board
+
+**** YES (lisp, scheme)
+  - see [[lisp]]
+  - scheme ("small" versions)
+    - *seems like the perfect embedded scripting language..*
+    - many choices for C
+      - alternatively, can use a lisp that generates C and has great C ffi
+    - steel (rust)
+    - still slower than luaJIT..
 
 **** IUNNO ring
   - TODO: need to look into more..
@@ -3404,7 +3406,7 @@ C#
   
 ***** Kotlin
 - "a better, slicker, java(script)" - doom-emacs config file
-- *TODO: why not use Scala? too functional?*
+  - *TODO: why not use Scala? too functional?*
 - originally developed by JetBrains (the IDE maker), but the language eventually was chosen by Google to be the main language for Android app devs
   - hence it's better designed than google's other languages
   
@@ -3586,10 +3588,13 @@ OCaml
 
 
 
-** language execution speed tier list (guestimates)
+** language execution speed tier list
+
 just a very very very broad gut feeling, lol
 
 note: benchmarks are usually impractical, only exacerbating very specific differences
+  - TODO: look for game benchmarks
+
 
 *** tier 1:
   - manual memory management
@@ -3605,9 +3610,10 @@ Zig/V/Odin/etc.
 (Fortran)
 
 C++ (clang++ > g++)
-**Rust**
-Swift (llvm, reference-counting or borrow-checker)
 
+**Rust**
+
+Swift (llvm, reference-counting or borrow-checker)
 
 *** tier 2:
   - garbage-collected
@@ -3616,7 +3622,7 @@ Swift (llvm, reference-counting or borrow-checker)
 
 Go (native)
 **common lisp (sbcl/native)** - crazy optimization for how powerful this language is..
-**scheme (chez/native)**
+**scheme lisp (chez/native)**
   
 **Julia** (llvm-ir?) - crazy fast for a complex dynamic lang..
 Crystal (llvm-ir) - PROBLEM: extremely slow compile times (default, no flags) even for the most trivial hello world code
@@ -3625,13 +3631,15 @@ Crystal (llvm-ir) - PROBLEM: extremely slow compile times (default, no flags) ev
 **Nelua** (c)
 Nim (c/clang/llvm)
 
-lisp (gambit/c)
+**scheme lisp (gambit/c)** - ??
 
-C# (aot/native?)
+Dart (dart2native) - under-rated
+C# (aot/native)
 D?
-(Haskell?) - functional, and fast??
-**OCaml** - suprising for a (impure) functional lang! updated to a great generational garbage collector
-Dart (dart2native) - under-rated, without the corporate bloat
+
+Haskell (native) - functional, and fast??
+**OCaml** (native) - suprising for a (impure) functional lang! updated to a great generational garbage collector
+
 Mojo
 
 *** tier 2.5:
@@ -3641,8 +3649,6 @@ Mojo
 
 Java (JVM) - *fastest vm*
   - Scala, Kotlin, Clojure, etc. JVM langs
-  - truffleruby
-  - jRuby
 C# (CLR)
   - F#.. are there any other CLR langs..??
 
@@ -3656,9 +3662,11 @@ JS (bun, node) - surely the *most complex vm* in terms of optimization..??
 
 *Lua (LuaJIT -j) - the JIT that set the standard*
 
-**Haxe (hashlink, JIT)** - probably below dart, but fuck dart, and google too!
+**Haxe (hashlink, JIT)**
 Dart (JIT, also has AOT) - surprisingly fast, or maybe not.. since it's google
 (python/pypy and ruby/truffleruby would go here but are impractical)
+
+jruby?
 
 (adds dynamic run-time / checking)
 *dragonruby* - ?? further optimizations..?? "an order of magnitude slower than LuaJIT"
@@ -3670,15 +3678,12 @@ Dart (JIT, also has AOT) - surprisingly fast, or maybe not.. since it's google
 PHP - opcode/vm-like runtime, surprisingly slow.. probably ranked higher..
 (Pascal?)
 
-Scheme (Chez) - still as slow as ruby JIT?? something must be wrong here..
-
 *** tier 4:
   - standard interpreted bytecode/vm impementations for dynamic langs
     - it gets hazy where it's interpreted and where it uses a vm
   - the differences here can be much bigger in this tier, but by 2024, they are all about the same, with python about 2x slower than the others
 
 **Lua (LuaJIT -joff) - still the fastest interpreter too!**
-Racket
 
 **Wren** - intentionally written simply, and still performs really well too
 Clojure (Babashka interpreter)
@@ -3689,8 +3694,11 @@ Python3 (CPython/standard impl) - slow, TODO: but i don't understand why..
 
 *** tier 5+:
   - quite a gap between tier 4
+
 Tcl
 Perl - slowww
+
+*** benchmark links
 
 https://github.com/jabbalaci/SpeedTests?tab=readme-ov-file
 
@@ -3746,7 +3754,7 @@ C is good
 Haxe is very good
 Rust is great
 
-** good reads
+** TODO good reads
 https://www.reddit.com/r/Zig/comments/1c7s0pm/odin_vs_zig_for_a_hobby_project_crossplatform/
   - good info on zig and odin
 
@@ -3770,7 +3778,7 @@ https://www.reddit.com/r/ruby/comments/5c1prl/ruby_vs_python/
   - always good to gather some real thought from real people
   
 https://blog.discord.com/using-rust-to-scale-elixir-for-11-million-concurrent-users-c6f19fc029d3
-** other crap
+** TODO other crap
 
 https://www.reddit.com/r/ProgrammingLanguages/comments/10hu5md/why_is_zig_so_much_more_successful_than_crystal/
       - many great comments on the state of languages
