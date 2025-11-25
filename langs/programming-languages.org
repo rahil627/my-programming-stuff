@@ -2119,22 +2119,24 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - "Dart is also a hard sell because, no matter the task, there's other languages with super interesting advantages. If you want a performant CLI, just use Go tbh. If you want a driver, just use Rust tbh. If you want a highly performant and concurrent back-end, just use Elixir tbh. If you want to tap on an existing ecosystem with lots of manpower to make your back-end, .NET Core is very popular, unfortunately. If you want to make videogames, you probably don't want to make an entirely new framework and game engine, so you'd end up with C++ or C#. GUI apps are like the only place where Dart truly shines via Flutter, and even that isn't totally figured out. Dart doesn't abuse FFI enough for its platform-dependent code to be entirely in Dart, which would be fucking amazing tbh."
  
 
-*** KILL Go (golang)
+**** KILL Go (golang)
   - PERSONAL NOTE: i think it's only defining feature is the "portable" binary build system (and minimal std lib..), which is something that requires quite a bit of man-hours.. (now that other langs have simply added its concurrency implementation--fibers/co-routines..)
-    - as jon blow says, it's def another "big idea lang", which only exists due to a few big ideas, like rust
+    - as jon blow says, it's def another "big idea lang", which only exists due to a few big ideas
+    - it's possible to create a better, more general-use language, and yet still be fast
+      - in fact, they exist: common lisp, ocaml, haxe, and all of the [[C repleacements]]
     - each binary supports one platform at a time, it's just easier to "cross-compile", meaning build from any platform for all platform
     - but then again, doesn't rust, zig, etc. all have this..?
       - rust seems to require a bit more effort to set-up, and zig probably requires a bit more digging into the docs or trial 'n error.. whereas with go, it sounds like one command "go build" and changing the architecture var
       - in haxe, you'd have to generate C, then compile for each platform (via gcc, llvm, etc.). otherwise, just ship the bytecode and vm, which may be even simpler and more portable.., at least for x86-64
     - any other lang can adopt the fibers concurrency model
   - *"Go is easy, it doesn't teach you a lot. It doesn't try to. It wants to make you productive quickly for a narrow, focused set of use cases."*
-  - *compiled python, or a high-level C, intended to replace python in high-performance areas*
+  - *compiled python, or a high-level C, intended to replace python in high-performance and/or concurrent areas*
     - **it's boring, limited use cases dictates it's community: very very boring**
   - very good choice for performant, easy-to-read/maintain small programs: **particularly concurrent web back-end "micro-services" and cli**
     - **mainly known for adding easy concurrency and it's great build system**
     - *a lot of libs in these domains were re-written in go*, particularly terminal-related libs
-  - specialized for *procedural programming*
-    - simple, zen systems-programming with the ease of past scripting languages, straight-forward, procedural style (like C), but pretty spartan and feature-less (also like C), making it **a bad choice for big applications (which often benefit from advanced features for architecting frameworks),** especially games
+  - specialized for *C-style procedural programming*
+    - simple, zen systems-programming with the ease of past scripting languages, straight-forward, procedural style (like C), but pretty spartan and feature-less and therefore restrictive (also like C), making it **a bad choice for big applications (which often benefit from advanced features for architecting frameworks),** especially games
     - **a great way to get back into programming, and getting shit done, without being overwhelmed by features (haxe, ruby, 'n especially rust all suffer from this in their own way)**
   - feels very scripty (in syntax)! no static/explicit declarations?
     - not as zen as ruby though, as you've got *a bunch of redundant snippets of code for error handling / nil-checking..*
@@ -2540,33 +2542,6 @@ it seems the person added an incomplete implementation of note on var declaratio
  - Raylib is quite beautiful: simple, straight-forward, because there's really no other way to do it
  - OpenFrameworks also has Raylib's beauty (not sure if it was C or C++ tho..)
  - now, i'm not sure if i'd want to write a game in that style, *i loved FlashPunk!, i love my objects! ;(*, but i sorta see why straight up simple C results in very good code, *dividing data from functions, ending up to be more modular, more re-usable, and most importantly, easy to follow and optimized*
-
-
-**** garbage-collected, but C-like or simple, performance-oriented
-
-there's a few languages that would fit here as a good C replacement, yet still with the aid of a garbage collector.. either via native compilation or generating C
-
-***** (go)
-- see [[Go]]
-  - though no manual memory management..:
-- *intended as an alt to C in places you need high-performance and/or concurrency*
-  - *great libs in these specific domains too*
-- certainly has a C-style procedural paradigm too
-  - this is what makes it so restrictive
-- great native compilation / build system
-
-***** (common lisp)
-  - maybe not as simple, but just as fast!
-    - it might be more modular.. like adding CLOS..
-  - see [[common lisp]]
-***** (scheme)
-  - chez
-  - the various ones that generate C
-  - see [[scheme]]
-***** (nelua)
-  - this one is interesting..
-  - see [[nelua]]
-
 
 
 ** assemblies
