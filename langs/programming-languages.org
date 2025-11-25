@@ -612,8 +612,8 @@ Ocaml
 sometimes, you just don't have a choice..
 
 lisp
-  - *embedded scripting lang for text-editors*: emacs (emacs-lisp), helix (scheme/steel), lem (common-lisp) text editors
-    - unless i build upon textbringer (ruby!)..!!
+- *dynamic lang for text-editors*: emacs (emacs-lisp), helix (scheme/steel), lem (common-lisp)
+  - unless i build upon textbringer (ruby!)..!!
 
 javascript
   - *web browser (front-end)*
@@ -623,6 +623,27 @@ javascript
   
 python
   - *data-science*: big data, ml/ai, math, stats, biotech, etc.
+
+general embedded scripting langs (*lua*, wren, *scheme*, *mruby, mruby/C, picoruby*, micropython)
+  - *games, game modding system, app plugin system, embedded devices*
+  - mruby
+    - *dragonruby (engine and language)*
+    - for adding the most beautiful syntax and powerful composable features
+  - lua
+    - *love2d, defold*, nvim
+    - the simplest and having the best implementation (luaJIT)
+  - wren
+    - *luxe*
+    - simple 'n pretty, but rather mundane, but does have concurrency/fibers
+  - scheme/steel
+    - *helix*
+    - kinda wild that such a powerful lang can be embedded..
+  - https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference
+    - a good view of desires in a game scripting lang
+
+
+custom scripting langs (gdscript, verse, etc.)
+  - big game engines seem to enjoy creating their own scripting langs..
     
 *** to experience
 
@@ -661,7 +682,28 @@ smalltalk
      - also, since it's a vm, it'll work anywhere..
   - NOTE: use bash/powershell over non-posix alt shells like zsh/fish/kitten for portability
 
-    
+
+**** TODO merge
+don't have much of a choice for these..
+
+shell scripting langs
+(*ruby*) >>> **powershell (v7+)** >>> fish > bash/zsh
+  - *ruby makes such a great shell scripting language, it even derives a lot of terse syntax from it..*
+    - ruby/python might be more portable than shell langs, since bash requires installing mingw/cygwin/wsl on windows and powershell requires being installed on linux/mac
+  - see [cli-shells]
+    - shell language, more like gluing, with the exception of powershell, these languages *suck*, feel old--no, *are* old, full of '$'s and even weird syntax for the most simplest if statement, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but it might just be easier to use a scripting language in most cases, even for simple batch scripts, as it's more popular and readable than all of the shell scripting langauges)
+  - batch commands, extremely simple scripts
+  - x/personal basic shell functions/"modules"/"cmdlets" (powershell > fish)
+  - automation, especially for windows
+  - powershell is now cross-platform (since v7?)
+  - but powershell is really nice!
+    - https://www.quora.com/Why-should-one-use-PowerShell-instead-of-Bash-on-Linux-or-other-scripting-languages-like-Python-or-Ruby-What-are-its-advantages-over-them
+      - i agree with all of this.. powershell is really good for it's use, just think of it as a DSL for common shell stuff
+  - *powershell is data-oriented*
+    - not text-stream based
+
+
+  
 ** haxe and jai (and nelua?): the swiss-army-knives
 
 UPDATE: jai is how a programming language should be: *minimal and modular*, with *complete power over the compiler* (and not just macros!), allowing you to edit how to the compiler works, with plenty of built-in compiler directives to start with. It's *just really well designed*: no bullshit, no agenda/ideologies, no magic (everything is explicit), no expensive abstractions/features, no extra features that can be created yourself (given access to the compiler and macros), and yet no restrictions either. Despite it being made by a game dev, it's *the most general-use language out there, all the way down to first-principles: the compiler*. *It's of no surprise that since the beginning, it's taken a game maker to design a good language.. Honestly, programmer-only-personality-types just suck at design.* It requires a person that is a great designer and programmer, with a great ability to execute.
@@ -900,7 +942,22 @@ manual-memory-management with advanced features:
     - D and nim especially, for allowing the option of using a garbage collector
     - but D and nim have tiny eco-systems, and swift is.. Apple
     
-    
+
+
+manual-memory-management but simple / C-like / **embedded** / game engines:
+(**jai** >) zig > odin > **C**
+  - with jai, i see no reason to use anything else here..
+  - **perfect for game engines**, particularly with raylib (since it's written in a C style)
+  - **all machines and languages talk in C, so it's the most practical and most important one to know..! don't let the other languages sway you!!** one cannot keep running away from it ;) anyway, it's no worse than older C++! it's actually much much simpler..
+    - especially hardware-level stuff: the OS for consoles, mobile devices, and embedded devices, and has libs for all of those devices
+  - **knowing how C works is the key to optimization**
+  - odin seems like it's made for games..!
+    - suffers from bad tooling
+  - **zig actually isn't simple, it has meta-programming!!**
+    - suffers from constant changes in development
+  - **word on the street says jai is better than both, with even better meta-programming!!!**
+
+  
 
 functional / concurrent (actor model):
   - and therefore perfect for web (server-side)
@@ -921,62 +978,6 @@ functional / concurrent (actor model):
     - but then you'd be using javascript and it's libs..
   - *haskell is kinda god-tier here..*
 
-
-
-*** specialized langs
-don't have much of a choice for these..
-
-shell scripting langs
-(*ruby*) >>> **powershell (v7+)** >>> fish > bash/zsh
-  - *ruby makes such a great shell scripting language, it even derives a lot of terse syntax from it..*
-    - ruby/python might be more portable than shell langs, since bash requires installing mingw/cygwin/wsl on windows and powershell requires being installed on linux/mac
-  - see [cli-shells]
-    - shell language, more like gluing, with the exception of powershell, these languages *suck*, feel old--no, *are* old, full of '$'s and even weird syntax for the most simplest if statement, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but it might just be easier to use a scripting language in most cases, even for simple batch scripts, as it's more popular and readable than all of the shell scripting langauges)
-  - batch commands, extremely simple scripts
-  - x/personal basic shell functions/"modules"/"cmdlets" (powershell > fish)
-  - automation, especially for windows
-  - powershell is now cross-platform (since v7?)
-  - but powershell is really nice!
-    - https://www.quora.com/Why-should-one-use-PowerShell-instead-of-Bash-on-Linux-or-other-scripting-languages-like-Python-or-Ruby-What-are-its-advantages-over-them
-      - i agree with all of this.. powershell is really good for it's use, just think of it as a DSL for common shell stuff
-  - *powershell is data-oriented*
-    - not text-stream based
-
-
-various custom scripting laguages (gdscript, etc.) and embedded scripting langs (*lua*, wren, **scheme**, *mruby, mruby/C, picoruby*, micropython) usually on top of C++
-  - **mruby has the most beautiful syntax and powerful features**
-    - dragonruby
-    - *..but surely at a great cost..*
-      - can't be worth it for high-performance apps..
-  - scheme for the only thing more powerful than ruby: lisp macros
-    - helix
-  - *lua is exceptional for being the simplest and having the best implementation (luaJIT)*
-    - love2d, defold
-  - wren is simple 'n pretty, but rather mundane, but does have concurrency/fibers
-    - luxe
-  - elisp (emacs-lisp)
-    - *doom emacs*
-  - games, big apps, embedded devices
-  - https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference
-    - a good view of desires in a game scripting lang
-          
-
-
-  
-*** special use-cases
-
-manual-memory-management but simple / C-like / **embedded** / game engines:
-(**jai** >) zig > odin > **C**
-  - with jai, i see no reason to use anything else here..
-  - **perfect for game engines**, particularly with raylib (since it's written in a C style)
-  - **all machines and languages talk in C, so it's the most practical and most important one to know..! don't let the other languages sway you!!** one cannot keep running away from it ;) anyway, it's no worse than older C++! it's actually much much simpler..
-    - especially hardware-level stuff: the OS for consoles, mobile devices, and embedded devices, and has libs for all of those devices
-  - **knowing how C works is the key to optimization**
-  - odin seems like it's made for games..!
-    - suffers from bad tooling
-  - **zig actually isn't simple, it has meta-programming!!**
-    - suffers from constant changes in development
-  - **word on the street says jai is better than both, with even better meta-programming!!!**
 
 
 
