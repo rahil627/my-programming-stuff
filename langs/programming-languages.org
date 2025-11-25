@@ -307,7 +307,7 @@ https://ziglang.org/download/0.15.1/release-notes.html#Target-Support
 *** hardware is optimized for C
 
 only languages that are close to C/C++ can be optimized
-  - a kind of myth, but it sure is much easie to reason about what's actually happenning
+  - a kind of myth, but it sure is much easier to reason about what's actually happenning (in the high-level langauge code)
     - though nowadays, with such advanced hardware.. who knows..
   - JIT/VM can be faster, as it can provide more info the compiler and enable them to optimize for real-world patterns. Instead, the efforts of optimization are shifted toward the compiler, as opposed to the human.
     - i def prefer this approach..
@@ -336,18 +336,21 @@ TODO: get from notebook
 
 
 * TODO to try
-https://tekkie.wordpress.com/2007/07/19/squeak-is-like-an-operating-system/
-  - great read on smalltalk, which is, just a vm/runtime
 
 *jai*
   - try to get beta
-  - **the most practical one in this list**
+  - **by far the most practical, general-use lang on this list**
 
+*nelua*
+  - in case i can't wait for jai, lol
+  
 experiments:
 lively kernal
   - TODO: try it!!
   - build web gui within the browser..??
 red
+  - UPDATE 2025: seems stalled
+    - https://news.ycombinator.com/item?id=45080051
   - **this is the greatest things ever**
   - my dream lang
   - insane ambition on the language itself, but also a gui system
@@ -356,15 +359,14 @@ red
 classics:
 *haskell*
   - *to experience the magic of functional paradigm*
-  - *native compilation and garbage-collected!!*
+  - native compilation and garbage-collected!
 *lisp (common lisp sbcl via lem or emacs-lisp via emacs)*
-  - TODO: then can compare with ruby
   - *continue using doom emacs (and therefore elisp)*
-  - try CLOG
-    - like red (lang) but for web
   - try helix again with the scheme plugin system (maybe there's a git branch..??)
   - try lem again (scbl)
-  - *try sbcl*
+  - try CLOG
+    - like red (lang) but for web
+  - *try sbcl or gambit (scheme)*
     - *try it for instances when i'd reach for a native-compiled lang*
     - a very interesting alternative to C and Go, with similar performance but infinitely more expressive power
   - **true zen programming**
@@ -385,6 +387,9 @@ classics:
 
 
 * TODO clean up
+
+https://tekkie.wordpress.com/2007/07/19/squeak-is-like-an-operating-system/
+  - great read on smalltalk, which is, just a vm/runtime
 
 todo:
 clojure-like repl:
@@ -515,6 +520,7 @@ C
   - *mostly to interop with C libs*
   - or *when things get hairy..*
   - knowing this is indeed most useful, as it's closest to how hardware (cpu) work
+    - except SIMD optimizations
     
 haxe (> nelua =? nim >> julia >> crystal != gen-C schemes)
   - *high-performance static lang with a garbage collector that can transpile to/generate optimized C (to target cross-platform)*
@@ -2112,9 +2118,9 @@ in general, beyond haxe/ocaml/erlang/etc., most of these languages are just a co
     - a cli example in the main tutorial
 
 
-*** MAYBE (lisp)
+*** (lisp)
   - NOTE: not static, just wayy faster than other dynamic langs
-  - PERSONAL NOTE: i'd personally give these a shot, as it's infinitely more interesting than go.. yet perfectly fine for it's same domain too (high performance, concurrency, cross-platform?)
+  - PERSONAL NOTE: i'd personally give these a shot, as it's infinitely more interesting than go.. yet perfectly fine for it's same domain too (high performance, concurrency, even cross-platform..??)
   - common lisp/scbl
     - great native compilation
   - C-generating schemes (gambit)
@@ -2228,17 +2234,17 @@ x. jvm
 - though not static, it's optimized to do math quickly, which is precisely what games need
 - see [[julia]]
 
-*** KILL JVM
+**** KILL JVM
   - see [[meh, not interested]]
   - libGDX
   - the most advanced vm
-*** KILL CLR
+**** KILL CLR
   - see [[meh, not interested]]
   - Unity
   - XNA/FNA
 
 
-** systems langs (manual memory-management, native compilation, statically-typed)
+** systems langs (manual memory-management, cross-platform compilation, statically-typed)
 
 systems langs often have these traits:
   - compiles ahead-of-time (AOT) to a native (to the machine's architecture) binary executable
@@ -2377,7 +2383,6 @@ or can use -meta flag to use it..?
 
 it seems the person added an incomplete implementation of note on var declarations: 'var i := 0 @notes', which seems to work like compiler directives, wherein, based on the name of the note, it'll run a differe meta-program on it..??
 
-
 **** MAYBE Beef
   - STATUS: up-to-date as of 2024. very consistent development. currently native desktop OSs, mobile is in early alpha
     - UPDATE 2025: Penny's Big Breakaway, by the people that made Sonic Mania, used Beef with a C++ core engine
@@ -2390,6 +2395,7 @@ it seems the person added an incomplete implementation of note on var declaratio
   - just one maker, extremely tiny game community, if any
     - co-founder of popcap games
   - Maddy (of Celeste) made an engine in it, but seems to have abandoned it..
+
 
 **** MAYBE Nim
   - PERSONAL NOTE: among the most practical, general-use among newer langs.. but i don't see much reason over haxe, save manual memory management, which in case i'd rather just write C for..
@@ -2436,6 +2442,7 @@ it seems the person added an incomplete implementation of note on var declaratio
   - **incredible memory management: garbage collector but also C-style manual memory management (malloc and free)!!** or custom allocator schemes (i.e. on stack with fallback, RAII style allocation, reference counting, shared reference counting), also some fine control of the garbage collector (add/exclude memory ranges!!)
     - this is the best soultion i've seen..!
 
+
 **** NO Rust
   - PROBLEM: requires a very deliberate mindset to write in, high cognitive load, lots of features, most of which are actually used frequently
     - Jon Blow's take:
@@ -2478,6 +2485,7 @@ it seems the person added an incomplete implementation of note on var declaratio
   - terrible class::function syntax
   - Mozilla, and like all mozilla software, open-source (making it wayyy better than Swift)
 
+
 **** C++
   - despite disliking it long ago, now it *seems to have added many features over time*, making a sort of hodge-podge frankenstein of a langauge. would just have to compare handling memory in this vs rust
   - **30 years old by the time rust v1.0 came out!!**
@@ -2518,9 +2526,9 @@ it seems the person added an incomplete implementation of note on var declaratio
 
 
 *** C and its replacements / manual memory-management / native compilation
-  - more of a data-oriented procedural paradigm, usually simpler in feature-set (though zig is quite complex now..)
 **** YES (Jai)
   - see [[jai]]
+
 
 **** Zig
   - *had a rough dev history full of rehauls*
@@ -2588,6 +2596,7 @@ it seems the person added an incomplete implementation of note on var declaratio
 **** V
   - C-like
   - gc optional
+
 
 **** C
  - **a very simple "low-level" language used by most electronic devices**, "Currently it is pragmatically true that C is the most versatile and portable language. Any language that does not have the ability to interact with C code risks obscurity."
@@ -2887,11 +2896,11 @@ Lua is implemented as a library, written in clean C, the common subset of Standa
 As an extension language, Lua has no notion of a "main" program: it works embedded in a host client, called the embedding program or simply the host. (Frequently, this host is the stand-alone lua program.) The host program can invoke functions to execute a piece of Lua code, can write and read Lua variables, and can register C functions to be called by Lua code. Through the use of C functions, Lua can be augmented to cope with a wide range of different domains, thus creating customized programming languages sharing a syntactical framework."
 **** YES (lisp, scheme)
   - see [[lisp]]
-  - scheme (small versions)
+  - scheme ("small" versions)
     - *seems like the perfect embedded scripting language..*
     - many choices for C
+      - alternatively, can use a lisp that generates C and has great C ffi
     - steel (rust)
-      - planned for helix
     - still slower than luaJIT..
 **** YES mruby
   - PERSONAL: **magical. simple. concise. beautiful. powerful.** contains nearly all of the the magic of ruby, probably just discarding the terribly inefficient bits (and the bits that are hard to parse..). **possibly the most fun way to make games..**
@@ -2922,7 +2931,7 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
     - <400KB memory
     - *"an order of magnitude slower than luaJIT"* - amir
     - *led by Matz!!*
-****** dragonruby
+****** YES dragonruby
 - mruby fork that uses SDL, and LLVM, made for the dragonruby game toolkit (engine)
   - dynamic magicks: hot-reload, inspection of a running program (runtime), dynamic aleration of anything (objects: vars, functions), dynamic addition of aynthing
     - this is why it had to be done in ruby (or a lisp)..
@@ -2965,7 +2974,6 @@ As an extension language, Lua has no notion of a "main" program: it works embedd
   
 **** NO squirrel
   - was used long ago by a few game companies as a general scripting lang for games that even ran on consoles
-
   
   
 ** cool ideas!
@@ -3302,7 +3310,7 @@ https://github.com/flipacholas/Architecture-of-consoles/
     - can see it used in numpy!
 
 
-*** languages created by and for their own corporate products (Sun/Java): or products of their own corporate greed (Apple and Microsoft):
+*** languages created by and for their own corporate products and/or products of their own corporate greed
   - **avoid these** unless you must make products on their devices
     - and even then, you can usually get by, by generating C code
 
@@ -3390,8 +3398,8 @@ C#
   - **VM however limits the entire eco-system** though, *it is the most performant VM ever* (along with javascript and BEAM)
     - monstrous VM, must be millions LOC!
     - surely has great JVM interpreters though..
-    - *Clojure is a special exception, as it's just a lisp piggy-backing on the VM's tech, and Clojurescript to avoid/transpile javascript*
-      - see [lisp] for entry on closure
+    - *Clojure is a special exception, as it's just a lisp piggy-backing on the VM's tech*, and Clojurescript to avoid/transpile javascript
+      - see [[clojure]]
       - still, seems like a ugly hack. Better to go the pure common lisp route!
 ***** (Clojure)
 - see [[lisp]]
@@ -3446,6 +3454,7 @@ C#
   - the worst corporation when it comes to software
     - also the worst dev experience (tools, processes, policies, etc.)
     - *i'll stop using their products because of this..*
+    - it's so bad, it's not even worth mentioning these!
 
 ***** Swift
   - NOTE: just never picked-up, no enterprise stability, and shitty tooling
