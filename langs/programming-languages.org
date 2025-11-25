@@ -538,7 +538,7 @@ haxe (> nelua =? nim >> julia >> crystal != gen-C schemes)
         - only comprimises verbosity for explicity clarity, which is not a bad deal..
   - *glue lang* / transpilers for all major libs: C, C++, jvm, js
     
-jai (> beef >? nim)
+jai (> beef >? zig >? odin >? nim)
   - *very-high-performance lang that allows un-restricted manual-memory-management and compiler access*, along with a simple macro system
   - *very-high-performance apps and/or components*
     - *anywhere that C and C++ are used*
@@ -580,6 +580,14 @@ lisp != (julia >?) m/ruby (>>> m/python >>>> shell langs)
 
 *** special-use cases
 
+haxe
+  - *transpile and interface to several other languages*
+    - https://haxe.org/documentation/introduction/compiler-targets.html
+      - tier 1: **js**, hashlink (**bytecode**/**c**), eval (**interpreter**), *jvm* (bytecode), php
+      - tier 2: **c++**, lua
+        - **that's basically all the output options you'd ever need**
+      - tier 3: c#, *python*
+
 elixir
   - *web apps (back-end), especially if it has high-traffic*
     - messaging apps, etc.
@@ -593,6 +601,12 @@ rust
   - *a sane alt to C++ for systems dev*
   - however, restricted to a single way of memory management.. unless you put everything in 'unsafe' blocks
 
+Ocaml
+  - *parsing/compilers*
+    - (initially used by haxe, rust, etc.)
+  - and other problem/solutions that requires heavy pattern-matching, GADT, and benefit from warnings for cases not handled, warnings for mutable data too, strong typing
+  - or other times you need functional (but not restricted), concurrent, native compilation..
+
 *** no choice
 
 sometimes, you just don't have a choice..
@@ -603,10 +617,24 @@ lisp
 
 javascript
   - *web browser (front-end)*
+    - can't seem to run from it, though i can keep trying!
+      - haxe transpiles to js :)
   - (io-heavy? web apps (back-end))
-    
+  
 python
   - *data-science*: big data, ml/ai, math, stats, biotech, etc.
+    
+*** to experience
+
+haskell
+  - *pure functional programming magicks*
+
+lisp
+  - *simple yet powerful macro magicks*, within a dynamic run-time
+
+smalltalk
+  - *a gui to see the dynamic machine at work!*
+
 
 *** TODO old
     
@@ -697,7 +725,7 @@ jai
       - you'd have to interface directly with the "C extensions" of python libs anyway, since that's where all the work is happening..
 
 
-** ruby and lisp: the magical dynamic run-time machine dream
+** FAIL ruby and lisp: the magical dynamic run-time machine dream
 
 why not aim for *the most interactive dev experience and the most expressive semantics*?
 
@@ -781,7 +809,7 @@ lisp (common lisp, scheme, emacs lisp)
 
 
   
-** selected langs list
+** TODO selected langs list
 
 NOTE: i sorta abandoned this bit.. just stick to [[my personal tool-kit waterfall]]..
   - TODO: maybe can merge most of this crap to there
@@ -898,14 +926,6 @@ functional / concurrent (actor model):
 *** specialized langs
 don't have much of a choice for these..
 
-**javascript/typescript**
-  - the standard browser language
-    - can't seem to run from it, though i can keep trying!
-      - haxe transpiles to js :)
-  - **by far the worst libraries and least skilled programmers**
-  - i'm told it's much much better than it used to be..
-
-
 shell scripting langs
 (*ruby*) >>> **powershell (v7+)** >>> fish > bash/zsh
   - *ruby makes such a great shell scripting language, it even derives a lot of terse syntax from it..*
@@ -946,45 +966,17 @@ various custom scripting laguages (gdscript, etc.) and embedded scripting langs 
 *** special use-cases
 
 manual-memory-management but simple / C-like / **embedded** / game engines:
-  - with jai, i have no reason to use these, unless i need to do something embedded, and even then, maybe jai will work..
 (**jai** >) zig > odin > **C**
+  - with jai, i see no reason to use anything else here..
   - **perfect for game engines**, particularly with raylib (since it's written in a C style)
   - **all machines and languages talk in C, so it's the most practical and most important one to know..! don't let the other languages sway you!!** one cannot keep running away from it ;) anyway, it's no worse than older C++! it's actually much much simpler..
     - especially hardware-level stuff: the OS for consoles, mobile devices, and embedded devices, and has libs for all of those devices
-  - some languages transpile to C (haxe, nim), but these seem to go directly to assembly??
-    - langauges that call C functions via FFI suffer a little bit in performance (in games)??
   - **knowing how C works is the key to optimization**
   - odin seems like it's made for games..!
     - suffers from bad tooling
   - **zig actually isn't simple, it has meta-programming!!**
     - suffers from constant changes in development
   - **word on the street says jai is better than both, with even better meta-programming!!!**
-
-haxe
-  - transpile and interface to several other languages:
-    - https://haxe.org/documentation/introduction/compiler-targets.html
-      - tier 1: **js**, hashlink (**bytecode**/**c**), eval (**interpreter**), *jvm* (bytecode), php
-        - **that's basically all the output options you'd ever need**
-      - tier 2: **c++**, lua
-      - tier 3: c#, python
-  - suffers from lack of community/libraries, though it is amongst the longest living of contemporary languages and constantly updated and improving, with a very very solid std lib
-  
-Ocaml
-  - perfect for parsing/compilers (initially used by haxe, rust, etc.), and other problem/solutions that requires heavy pattern-matching, GADT, and benefit from warnings for cases not handled, warnings for mutable data too, strong typing
-  - resulting programs are quite pretty thanks to it's functional paradigm side and concise syntax
-  - ..i just personally really liked the feeling of it, seeing it in haxe's compiler
-  - shares quite a bit of similarities to both haxe and rust, particularly, in syntax and features (pattern-matching, ADT)
-
-haskell
-  - *pure functional programming magicks*
-
-lisp
-  - *simple yet powerful macro magicks*, within a dynamic run-time
-
-smalltalk
-  - *a gui to see the dynamic machine at work!*
-
-
 
 
 
