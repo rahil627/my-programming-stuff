@@ -419,43 +419,43 @@ see [game-engines], [web-frameworks], [app-frameworks], etc.
       - python
     - web
       - pop web langs and javascript
-  - thankfully, i'm not interested in either of these things.. and don't even consider web as programming
+  - thankfully, i'm not interested in either of these things.. and don't even consider them as programming
         
+
+  
+**have the option to add a provided garbage-collector**
+  - though.. i'd be willing to give jai a good try! i'm down for C pointers..!
 
 
 *aimed for games/interactive media* :D
   - (and other "creative" applications that use various input/output hardwares)
   - and thus likely has these traits:
 
-    
-**have the option to add a provided garbage-collector**
 **cross-platform**
   - web, android, iOS (+ iPadOS), desktop OSs, consoles, embedded devices
     - in that order
   - likely either *generating optimized C or llvm-ir*
-  - (and therefore eventually compiles to machine code and creates a binary file)
-    
-TODO: merge with above
-be designed to be cross-platform, or at least have that in mind
+    - (and therefore eventually compiles to machine code and creates a binary file)
+    - because there's not enough man-power to build assemblies for so many platforms (save arm64: android, ios, switch), and especially consoles, *it must rely on it's ability to transpile to C*
+  - *transpiles to javascript*
+    - *and the media framework/engine must be able to transpile to canvas*
+      - maybe *wasm* provides another path..
   - maintain a set of libraries for target platforms: *web > android > iOS* > desktop OSs > consoles > everything else, in that order
-    - because there's not enough man-power to build assemblies for so many platforms, particularly non-desktop platforms, especially consoles, *it must rely on it's ability to transpile to C*
-    - *transpiles to javascript*
-      - *and the media framework/engine must transpile to canvas*
-        
+  
 **feature-ful**
-  - so, not google's langs (go, python, dart?)
+  - (so, not google's langs: go, python, dart..)
   - *cost-free abstractions*
-    - so i don't have to worry about not using certain features
+    - so i don't have to worry about what features not to use
     - *macros*
 *simple/easy interops with C*
-  - bonus if C++!!
+  - *bonus if C++ too!!*
 *it should be pretty fast*
-  - not python slow
+  - certainly not python slow!
 *be conscious of memory*
   - shouldn't be so abstract that the memory usage becomes unconscious
   - should allow ways to allocate contiguous memory (value-types: C-structs, arrays, primitive data types, bits, etc.)
 *provide a quick-compilation option* so that you only need to build/compile to optimized native code for the final product
-  - VM or native compilation for x86-64 with compilation cache
+  - VM or native compilation for x86-64
 provide an option for manual memory management
   - for handling intense memory changes (textures going in 'n out, etc.)
   - otherwise, *good C interops*
@@ -463,8 +463,8 @@ provide an option for manual memory management
 
 * answer
 
-*game-devs know best, and have made some of the best langs*
- - they're also just much better programmers than most, similar to systems-devs, and have specific requirements: high-performance, cross-platform, and ability to do low-level stuff (memory management, inline, etc.)
+*game-devs know best, and have made the best langs:*
+ - they're also just much better programmers than most, similar to systems-devs, yet far better designers too, and have specific requirements: high-performance, cross-platform, and ability to do low-level stuff (memory management, inline, etc.)
  - these are surprisingly and refreshingly straight-forward languages too (save macros), not too much fancy stuff, explicit
 
 
@@ -480,18 +480,21 @@ m. beef
    - similar to C# in syntax, but with a focus on manual memory management, including tools to help (IDE, profilers, etc.)
 2. nelua
    - new but seems quite ideal for game programming, especially when compared to non-game-dev langs
+   - the maker of this lang seems capable, having created a lua compiler in C on par with the main implementation..
 s. dragonruby/mruby
-  - to try/add a more interactive AND elegant dev experience--especially with emacs!!--, yet still be portable/cross-platform (host C program)
+  - to try/add a more interactive AND elegant dev experience, yet still be portable/cross-platform (host C program)
 
     
 non-game-dev, general-use langs, either gen C or llvm-ir, with a gc:
 
-3. C-gen scheme lisps (gambit, etc.)
+s. C-gen scheme lisps (gambit, etc.)
    - actually quite a cool simple yet very-high-level/dynamic and powerful option..
    - seems further away from more procedural C, but who knows.. def seems much simpler to improve the C generator/transpiler than other langs!!
-4. nim(?), x/julia, x/crystal
-   - nim won the war in its generation, developing quite nicely.. though python-esque..
-   - julia provides a more dynamic alt, with lisp macros, though ideal, at the cost of a huge, inefficient llvm-jit
+3. nim
+   - nim won the war in its generation, developing quite steadily.. though python-esque..
+x. julia
+   - julia provides a more dynamic alt, with lisp macros (actually lisp), though ideal, at the cost of a huge, inefficient llvm-jit
+x. crystal
    - crystal, as of 2025, is stuck in development hell (bad lsp support, slow compiler, no other compiler options??, etc.)
 
 no path / not made for cross-platform:
@@ -547,9 +550,9 @@ jai (> beef >? zig >? odin >? nim)
         - *jon blow's engine*
       - embedded devices
  
-lisp != (julia >?) m/ruby (>>> m/python >>>> shell langs)
+(lisp != julia >?) m/ruby (>>> m/python >>>> shell langs)
   - *dynamic lang with a garbage collector*
-  - *PERSONAL NOTE: other than to try for the experience of dynamic/interactive dev iteration and ruby for its syntax/features/expressiveness, these are quite useless.. haxe and jai are just better languages, without comprimises: simpler yet more performant*
+  - *PERSONAL NOTE: other than to try for the experience of dynamic/interactive dev iteration and ruby for its syntax/features/expressiveness, these are quite useless.. haxe and jai are just better languages, without comprimises nor limits: simpler yet more performant*
     - i think the one comprimise for ruby is mruby, embedded ruby, particularly dragonruby
   - NOTE: julia may takeover here for big programs thanks to llvm-jit, but not being designed for cross-platform (jit, dynamic run-time, big binaries) and neither for scripting (designed for compilation) limits its use cases
   - NOTE: *lisp seems like a superior, more practical alt to ruby*: simple, powerful, interactive/dynamic, naturally small enough to embed and interpret, full of modular features (concurrency, clos, etc.), and can transpile to C! it's just very different in syntax and features.. and their libs suck
@@ -565,7 +568,6 @@ lisp != (julia >?) m/ruby (>>> m/python >>>> shell langs)
         - *for interactive and easily-malleable 2d game dev / proto-typing!!*
   - *scripting* (basic gui-less programs, cli apps, shell scripts), automation (used by task schedulers), devops, hacking
     - *superior alt for shell languages*
-      - TODO: move this out..
       - possibly easier/more convenient to install on all systems than bash 'n powershell
         - often auto-installs on linux, when a program uses it..
       - just restrict to use the std libs
@@ -648,23 +650,25 @@ custom scripting langs (gdscript, verse, etc.)
 *** to experience
 
 haskell
-  - *pure functional programming magicks*
+  - *to experience pure functional programming magicks*
 
 lisp
-  - *simple yet powerful macro magicks*, within a dynamic run-time
+  - *to experience simple yet powerful macro magicks*, within a dynamic run-time
 
 smalltalk
-  - *a gui to see the dynamic machine at work!*
+  - *to experience a gui integrated with a dynamic machine!*
 
 
 *** TODO old
     
-  eshell >>? bash and powershell
+  (eshell >>?) ruby > (powershell >>> bash/zsh  > fish/etc. non-OS langs)
   - CONCLUSION: *ruby is particularly excellent as a scripting lang, possibly the most ideal shell scripting lang(..!), especially now with ai*, so there's *no need to use shell scripting langs, save for quickly starting processes*
     - https://news.ycombinator.com/item?id=40763640
       - "Ruby: A great language for shell scripts"
       - some discussion on this problem..
     - *ruby is even more portable*, as bash/powershell are OS-based, especially running bash on windows
+  - see [cli-shells]
+    - shell language, more like gluing, with the exception of powershell, these languages *suck*, feel old--no, *are* old, full of '$'s and even weird syntax for the most simplest if statement, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but it might just be easier to use a scripting language in most cases, even for simple batch scripts, as it's more popular and readable than all of the shell scripting langauges)
   - *batch commands*
   - *file-manipulation*
     - much simpler than general-use langs
@@ -672,6 +676,10 @@ smalltalk
     - aync / concurrently or sequentially
     - especially if done frequently
   - *simply piping cli stream-i/o (unix) programs together*
+  - *powershell is data-oriented*
+    - not text-stream based
+    - it's also cross-platform now (v7)..
+    - not worth adding a whole nother shell language full of functions..
   - eshell?? lol
     - you could write scripts (functions) in emacs-lisp, using all of the existing functions of emacs and emacs-lisp..
     - but then you'd need emacs running.. though it would still be more portable than re-creating linux in a vm..
@@ -684,23 +692,9 @@ smalltalk
 
 
 **** TODO merge
-don't have much of a choice for these..
-
-shell scripting langs
-(*ruby*) >>> **powershell (v7+)** >>> fish > bash/zsh
-  - *ruby makes such a great shell scripting language, it even derives a lot of terse syntax from it..*
-    - ruby/python might be more portable than shell langs, since bash requires installing mingw/cygwin/wsl on windows and powershell requires being installed on linux/mac
-  - see [cli-shells]
-    - shell language, more like gluing, with the exception of powershell, these languages *suck*, feel old--no, *are* old, full of '$'s and even weird syntax for the most simplest if statement, so, only use them if you need a basic batch file (run a bunch of commands), or for shell piping (but it might just be easier to use a scripting language in most cases, even for simple batch scripts, as it's more popular and readable than all of the shell scripting langauges)
-  - batch commands, extremely simple scripts
-  - x/personal basic shell functions/"modules"/"cmdlets" (powershell > fish)
-  - automation, especially for windows
-  - powershell is now cross-platform (since v7?)
   - but powershell is really nice!
     - https://www.quora.com/Why-should-one-use-PowerShell-instead-of-Bash-on-Linux-or-other-scripting-languages-like-Python-or-Ruby-What-are-its-advantages-over-them
       - i agree with all of this.. powershell is really good for it's use, just think of it as a DSL for common shell stuff
-  - *powershell is data-oriented*
-    - not text-stream based
 
 
   
@@ -708,7 +702,8 @@ shell scripting langs
 
 UPDATE: jai is how a programming language should be: *minimal and modular*, with *complete power over the compiler* (and not just macros!), allowing you to edit how to the compiler works, with plenty of built-in compiler directives to start with. It's *just really well designed*: no bullshit, no agenda/ideologies, no magic (everything is explicit), no expensive abstractions/features, no extra features that can be created yourself (given access to the compiler and macros), and yet no restrictions either. Despite it being made by a game dev, it's *the most general-use language out there, all the way down to first-principles: the compiler*. *It's of no surprise that since the beginning, it's taken a game maker to design a good language.. Honestly, programmer-only-personality-types just suck at design.* It requires a person that is a great designer and programmer, with a great ability to execute.
 
-UPDATE: nelua, like jai, seems to provide a ton of compiler power, but through lua, as that's what the compiler is written in. "The preprocessor allows you to write Lua code that runs during the compilation process. This means you can interact with the Nelua compiler, analyze code, generate new code, and modify the compilation flow based on custom logic." 
+UPDATE: nelua, like jai, seems to provide a ton of compiler power, but through lua, as that's what the compiler is written in. "The preprocessor allows you to write Lua code that runs during the compilation process. This means you can interact with the Nelua compiler, analyze code, generate new code, and modify the compilation flow based on custom logic."
+  - note "preprocessor" here is nothing like C/C++'s, it uses lua
 
 haxe is possibly *the most versatile language* out there.. with *several compiler options and transpilers for every major language, it seems there's no limit to what can be made with it*.. it's the ultimate glue language, with the feel of a scripting language (actionscript), yet with a great simple standard library that gives it a more zen-like procedural systems dev flow, and still yet fully-featured (*an all-powerful macro system*, ADTs, pattern matching, everything-returns-something/function-chaining), and full of optimizations too (both the jit/bytecode-vm and via C/llvm).. all of that with a rad little game-dev community around it, and pro game-maker saint nicholas as its leader! this to me is *straight-forward, simple programming*.
 
@@ -750,7 +745,8 @@ jai
 *..though, you probably don't want to use most popular libs.. just write everything yourself!, especially now with ai..*
   - *haxe makes up for it via transpilers*
   - *jai doesn't even want a package manager!*
-    - now that may be a restriction to the hand-made ideology!
+    - ..and i kinda agree, as you've got all of the C libs you'd ever want..
+      - i mean, if you want to make a re-usable lib, it would be in C, so that any lang can use it..
     
   - web
     - why not?
@@ -793,7 +789,7 @@ although having ruby for scripting, crystal for native, and elixir for server-si
 
 in addition, compared to ruby, lisp is an entirely different language: in structure, key-words/functions ("special"), libs, and meta-programming (macros). The only thing they share is the idea of a dynamic run-time (run-time manipulation 'n execution), and thus able to provide a more interactive dev experience 
 
-*to make games/media, all you've got is lisp (gambit: limited libs/engines) and mruby/dragonruby (limited performance, difficult debugging, seperated langs)*, julia (limited to desktop platforms--as of 2025), crystal (bad tooling, slow compiler, no interactive dev), and *with the exception of dragonruby, none seem really good for memory-allocation and optimization (allocating contiguous memory, cache hits).. yeah, these langauges really just strayed too far from the hardware/C.. and they pay the cost of that*
+*to make games/media, all you've got is lisp (gambit: limited libs/engines) and mruby/dragonruby (limited performance, difficult debugging, seperated langs)*; the rest have problems:: julia (limited to desktop platforms--as of 2025), crystal (bad tooling, slow compiler, no interactive dev); and *with the exception of dragonruby, none seem really good for memory-allocation and optimization (allocating contiguous memory, cache hits).. yeah, these langauges really just strayed too far from the hardware/C.. and they pay the cost of that*
 
 also lisp just takes time to get used to..
   - https://github.com/part-cw/lambdanative/blob/master/apps/uSquish/main.scm
@@ -824,7 +820,7 @@ C
 mruby, mruby/C, picoruby (with C)
   - *embedded scripting/extension (interactive and beautiful)*
     - make use of existing C libs, and build a little core program using them, these langs can *add simple scripting and still reap all the benefits of ruby* (dynamic run-time / interactive dev, beautiful language, modules, blocks, etc.)
-      - *the best comprimise and use case for me (cross-platform, performant)*
+      - *the best comprimise for my use case (games: cross-platform, performant)*
     - dragonruby (an mruby fork)
       - *game/media (interactive game dev)*
     - rust is tough to beat for actual embedded devices..
@@ -1000,11 +996,8 @@ thus, in order to compile code at run-time, you'd need a whole 'nother compilati
 
 
 TODO: to merge:
-*eval(uation) are dynamic langs killer feature: it makes dev experience MUCH easier, and MUCH more interactive.* With this power, you can easily see what every region of code (expression, function, etc.) returns, making writing code / dev a FAR more tolerable experience.
-  - NOTE: how does this differ from static lang dev?
-    - breakpoint, introspect? that's not bad either.. but then you'd have to get the program to execute to that point..
-      - goto?
-    - hmm, maybe you can eval regions of code in the big VM langs (C#, java) too..??
+eval(uation) are dynamic langs killer feature: it makes dev experience MUCH easier, and MUCH more interactive. With this power, you can easily see what every region of code (expression, function, etc.) returns, making writing code / dev a FAR more tolerable experience.
+  - but any language can add an interpreter..
 
 furthermore, languages like ruby, provide ways to alter existing objects (monkey-patching?), not just altering data nor running existing functions, but adding methods/functions to existing objects, and more! (TODO: more!) 
 
@@ -2682,6 +2675,7 @@ OCaml
     - subset of haskell that transpiles to js
 
 *** YES OCaml
+  - NOTE: this and F# are the only general-use langs, not restricted by paradigm or vm
   - *conclusion: overall a solid garbage-collected langauge, just very slow in development. it's only con really isn't the langauge itself, it's that it's community is really small, mostly academics*, and as haxe attracted all the game devs, there just isn't a need for it for me if i use haxe already..*
     - https://www.reddit.com/r/ocaml/comments/1iw4v7z/why_is_ocaml_not_popular/
       - TODO: a TON of reasons why not here..
@@ -2751,6 +2745,8 @@ OCaml
   - reason and bucklescript transpile to javascript
 
 *** (F#)
+  - NOTE: this and OCaml are the only general-use langs, not restricted by paradigm or vm (now with CLR's nativeaot)
+    - i think..
   - actually a much praised language..
   - see [[F#]]
 
