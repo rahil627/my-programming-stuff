@@ -2303,14 +2303,14 @@ at first i thought games really needed it, but as all dynamic languages interfac
       - as they are un-debuggable text subsitutions
     - no co-routines
       - probably considered a "big idea" lang, lol..
-     - function currying at compile-time
-     - *arrays as main data type*
-       - unlike lisp's focus on linked lists..
-         - *doh! this seems like the core problem of lisp..!!*
-     - linked lists are structs
-       - NVM: interesting..??
-         - hmm, looks like the one i implemented in school.. just a normal struct with data and a pointer to the next one..
-     - *unlimited compiler control*
+    - function currying at compile-time
+      - *arrays as main data type*
+        - unlike lisp's focus on linked lists..
+          - *doh! this seems like the core problem of lisp..!!*
+      - linked lists are structs
+        - NVM: interesting..??
+          - hmm, looks like the one i implemented in school.. just a normal struct with data and a pointer to the next one..
+      - *unlimited compiler control*
      
 ***** compiler directives
 
