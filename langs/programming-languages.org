@@ -2278,6 +2278,8 @@ at first i thought games really needed it, but as all dynamic languages interfac
   - the only solution
   - word on the street: better than both odin and zig
   - compiles jon's giant sokobon game in 1.7 seconds on a laptop!
+  - https://smarimccarthy.is/posts/2024-12-02-four-years-of-jai/
+    - a good read
   - https://github.com/Jai-Community/Jai-Community-Library/wiki/Overview
     - a ton of info on the lang..
     - no package manager
@@ -2713,6 +2715,8 @@ OCaml
     - making it among the most practical functional langs
     - in the functional to object-oriented/procedural sprectrum, OCaml is closer to functional, whereas Haxe is closer to object-oriented/procedural, giving it a very good profile and balance, making it far more practical than more functional languages
     - the "O" stands for object-oriented
+  - https://ocaml.org/docs/compiler-backend
+    - bytecode/vm, embed to C, native
   - ..i just personally really liked the feeling of it, seeing it in haxe's compiler
     - shares quite a bit of similarities to both haxe and rust, particularly, in syntax and features (pattern-matching, ADT)
   - some benefits of it's functional side:
