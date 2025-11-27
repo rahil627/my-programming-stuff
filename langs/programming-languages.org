@@ -484,6 +484,8 @@ m. beef
 s. dragonruby/mruby
   - to try/add a more interactive AND elegant dev experience, yet still be portable/cross-platform (host C program)
 
+s. game-oriented lisps (cakelisp)
+   - maybe just have to e-mail the guy to get the password..
     
 non-game-dev, general-use langs, either gen C or llvm-ir, with a gc:
 
@@ -1298,7 +1300,10 @@ https://www.reddit.com/r/lisp/comments/kie74g/cakelisp_a_programming_language_fo
   - lisp for gamedev?
     - and the problems of lisp for gamedev
 
-******** DAMN cakelisp
+******** TODO DAMN cakelisp
+
+https://macoy.me/blog/programming/CakelispIntro
+  - maybe can just e-mail them..
 
 https://cakelisp.handmade.network/
   - Metaprogrammable, hot-reloadable, *no-GC* language *for high perf programs (especially games)*, with seamless C/C++ interop
