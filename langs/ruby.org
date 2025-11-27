@@ -136,6 +136,7 @@ this is why portable programs are just wayyyy better.. arrrrgh..
   - surely there must be a way to atleast just pack the ruby parser with the program..??
     - see traveling ruby
   
+
 * emacs bindings (..they never end!! :/)
 
 spc-k-k
@@ -189,7 +190,7 @@ type keyword, then press tab (in select mode)
 
 
 
-** irb:
+** irb
 https://news.ycombinator.com/item?id=24637797
   - "Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use."
 
@@ -257,7 +258,7 @@ https://www.reddit.com/r/ruby/comments/12z4j3g/is_ruby_still_a_hassle_to_work_wi
     
 * lang notes
 
-TODO: must be elsewhere..
+NOTE: mostly from dragonruby (compatible with mruby)
 
 method!
   - '!' denotes the object is altered/mutated
