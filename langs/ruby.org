@@ -68,6 +68,7 @@ args.state.in.move_vector = (get_move_vector)
 
 # NOTE: merged from another file..
 # NOTE: only merge what's practical to gamedev..
+# TODO: convert markdown headers (## or more) to org headers?
 
 # TODO: see ruby crash course in repl.rb
 
@@ -614,6 +615,8 @@ end
   # 0-3
 
 #+end_src
+
+
 ** TODO MERGE meta-programming
 
 #+begin_src ruby
@@ -828,6 +831,8 @@ obj.my_method
 
 
 #+end_src
+
+
 
 
 * tool kit (in the std lib)
