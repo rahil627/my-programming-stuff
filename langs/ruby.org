@@ -55,6 +55,13 @@ NOTE: mostly from dragonruby (compatible with mruby)
 method!
   - '!' denotes the object is altered/mutated
 
+#+begin_src ruby
+
+args.state.lasers << (laser a) # execute (this) first??, or to make it more clear that this is a function..? is there an order of precedence?
+args.state.in.move_vector = (get_move_vector)
+
+#+end_src
+
 ** TODO MERGE from dragonruby
 
 #+begin_src ruby
