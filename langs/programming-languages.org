@@ -467,7 +467,6 @@ provide an option for manual memory management
  - they're also just much better programmers than most, similar to systems-devs, yet far better designers too, and have specific requirements: high-performance, cross-platform, and ability to do low-level stuff (memory management, inline, etc.)
  - these are surprisingly and refreshingly straight-forward languages too (save macros), not too much fancy stuff, explicit
 
-
 0. jai
    - requires memory management
      - NOTE: i haven't looked at other langs with manual memory management
@@ -480,14 +479,18 @@ m. beef
    - similar to C# in syntax, but with a focus on manual memory management, including tools to help (IDE, profilers, etc.)
 2. nelua
    - new but seems quite ideal for game programming, especially when compared to non-game-dev langs
-   - the maker of this lang seems capable, having created a lua compiler in C on par with the main implementation..
+   - the maker of this lang seems capable, having created a lua compiler in a single C file on par with the main implementation..
 s. dragonruby/mruby
   - to try/add a more interactive AND elegant dev experience, yet still be portable/cross-platform (host C program)
-
+  - also just a beautiful way to learn programming, or get back into it: starting from scratch, and organizing your program however you like, with the cleanest of syntaxes! <3
 s. game-oriented lisps (cakelisp)
    - maybe just have to e-mail the guy to get the password..
     
 non-game-dev, general-use langs, either gen C or llvm-ir, with a gc:
+
+compared to the langs made by game devs, these kinda blow..
+  - they just lack the sense of systems dev mentality: good memory allocation, simple language, small binary, cross-platform, etc.
+  - nim/crystal/julia are among the recent bigger ones that are performance-oriented (llvm), and among them only nim holds up, and even then, nim is nowhere near close to as well thought out as jai..
 
 s. C-gen scheme lisps (gambit, etc.)
    - actually quite a cool simple yet very-high-level/dynamic and powerful option..
