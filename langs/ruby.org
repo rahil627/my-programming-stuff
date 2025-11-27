@@ -22,121 +22,6 @@
       - it's just generated scripts and a task-scheduler, with some common "actions".. maybe some way that flow together..
 
 
-* ruby internals
-
-see my notes on/in [compilers]
-
-https://ruby-compilers.com/
-  - this is a great little web-site for all your compiler needs..
-
-  
-see [play/ruby-limits.rb]
-  - for an inquiry into how ruby data is stored
-    - might as well just read the C code though..
-
-TODO: should check out "ruby under a microscope" book
-  - sounds like an "how it's made" episode.. with a bunch of diagrams 'n all..
-
-these three are made by the same person:
-  - prism parser
-    - see [compilers notes]
-  - syntax-tree
-    - "Syntax Tree is a suite of tools built on top of the internal CRuby parser. It provides the ability to generate a syntax tree from source, as well as the tools necessary to inspect and manipulate that syntax tree. It can be used to build formatters, linters, language servers, and more."
-  - yarv
-     "A Ruby object layer on top of the YARV virtual machine"
-
-- yjit
-- CRuby
-
-- JRuby
-- TruffleRuby
-
-
-* install ruby
-
-"NOTE: While system Ruby installations exist (e.g., on macOS), it is generally recommended to use a version manager like RVM or rbenv for development to avoid altering the system Ruby and ensure compatibility with specific project requirements."
-  - thanks ai..
-
-
-** windows
-
-rubyinstaller
-  - windows is so much better..
-    
-** linux
-
-it sounds like RVM uses pre-compiled binaries..
-  
-*** install mise (yet another language/run-time package manager)
-
-https://mise.jdx.dev/getting-started.html
-
-#+begin_src sh
-sudo apt update -y && sudo apt install -y gpg sudo wget curl
-sudo install -dm 755 /etc/apt/keyrings
-wget -qO - https://mise.jdx.dev/gpg-key.pub | gpg --dearmor | sudo tee /etc/apt/keyrings/mise-archive-keyring.gpg 1> /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=amd64] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
-sudo apt update
-sudo apt install -y mise
-#+end_src
-
-NOTE: this handles installing ruby-dev/el package, which is needed to build C extensions
-
-*** install ruby using mise
-
-https://mise.jdx.dev/lang/ruby.html
-
-mise ls-remote [language/run-time]
-  - check all versions available
-
-mise install ruby
-  - this will download the latest released version
-    - (and not some old bullshit that linux restricts you to)
-    - (by default it won't select preview/dev versions)
-  - it runs make.. oh fuck..
-    - SERIOUSLY, WTF
-      - TODO: WHY NO BINARIES?
-        - why delegate the task to make EVERY user crunch their computer, when they could provide binaries for the most popular OSs??
-
-echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
-  - load upon start of shell (to handle env bullshit for you)
-
-ruby -v
-  - test it out!
-
-mise use --global ruby[@version]
-  - to switch the version
-  - this adds it to '~/.config/mise/config.toml'
-
-mise use ruby[@version]
-  - to use it in a directory
-  - (this also adds it to '~/.config/mise/config.toml')
-  
-mise exec ruby[@version] -- ruby [command goes here]
-  - to run commands from specific versions
-*** if it fails to install
-
-NOTE: i gave up.. this is def ruby's greatest problem
-
-mise cache clean
-
-try again
-  - (mise install [lang])
-
-    
-other problems:
-    
-if it fails to build psych
-  - sudo apt install libyaml-dev
-
-  
-* deployment
-
-this is why portable programs are just wayyyy better.. arrrrgh..
-  - surely there must be a way to atleast just pack the ruby parser with the program..??
-    - see traveling ruby
-  
-
 * emacs bindings (..they never end!! :/)
 
 spc-k-k
@@ -163,99 +48,6 @@ spc-c[ode]-d[ocs]
   - seems to use ri as it's source..
 
 
-* tool kit (in the std lib)
-
-rubocop
-  - formatter
-
-
-** ri
-
-ri --no-gems
-  - CONCLUSION: *a good IDE (with jump to definition, class hierarchy panel, etc.) + AI are severely needed..*
-    - *you cannot guess what the lib does by it's name.. :/*
-      - open-source woes, though can be fun to name things..
-  - interactive ruby docs
-    - "ruby interactive?/introspection?"
-    - *i'm guessing it's meant to be used as a lib to provide docs to other programs, namely, editors..*, moreso than being used on it's own..
-  - for core + std-lib stuff: still 208 gems!
-    - 250 with it
-    - a few important gems such as nokogiri aren't in the ruby/std
-  - module[tab, tab] to see classes
-  - module::class[tab, tab] to see methods
-    - class methods aren't organized by super classes :/
-   - TODO: OR: maybe can just make a local copy of the ruby repo.. then try the emacs spc-k commands
-type keyword, then press tab (in select mode)
-  - not so good with modal text editing..
-
-
-
-** irb
-https://news.ycombinator.com/item?id=24637797
-  - "Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use."
-
-
-
-
-* ruby in your shells (cli & pipes)
-
-
-https://www.honeybadger.io/blog/ruby-unix-command-line/
-
-# not so useful...
-echo "puts 2+2" | ruby
-
-# useful!
-ruby -e "puts 'code goes here'" arg1 arg2 argN
-ruby -e 'puts ARGV.inspect' apples bananas pears oranges
-  - ["apples", "bananas", "pears", "oranges"]
-
-# check web-page for a reg-ex using only ruby
-ruby -e "require 'open-uri'; puts open(ARGV.first).read.scan(/starr/i).count" [some-url]
-
-# piping 101
-cat moby-dick.txt | ruby -e "puts STDIN.read"
-(outputs entire text)
-
-# combining with another unix tool for fetching
-curl [some-url] | ruby -e "puts STDIN.read.scan(/starr/i).size"
-
-# loop through lines and do something (print file extensions)
-ls | ruby -e 'STDIN.each_line { |l| puts l.split(".").last }'
-# same thing using -n to loop each line, and $_ meaning the current line
-ls | ruby -n -e 'puts $_.split(".").last'
-
-
-
-
-* windows
-
-
-Linking ~\scoop\apps\ruby\current => ~\scoop\apps\ruby\3.3.4-1
-Adding ~\scoop\apps\ruby\current\bin to your path.
-Adding ~\scoop\apps\ruby\current\gems\bin to your path.
-  
-
-ruby on windows not the best experience, but damn good:
-
-https://www.reddit.com/r/ruby/comments/12z4j3g/is_ruby_still_a_hassle_to_work_with_on_windows/
-  - "Here's the deal: WSL2 is 100% compatible and has great performance.
-
-  It's still not as good as just using a Ubuntu desktop which is what you should do unless you are forced to use Windows, but the biggest pain is that the only editors that really work seamlessly are VSCode and Vim.
-
-  I'm sorry, but for Ruby VSCode is just a text editor without many features besides syntax highlighting. Most of the plugins feel like they just barely work, and there is really nothing to help with ERB. The debugging is unbelievably hard to get working. Solargraph is impressive, but is more like a little spice that occasionally shines through than something you can really truly rely on. None of the other language servers are even close. If all you want is a fast text editor, then you may as well use Vim.
-
-  So if you want RubyMine you have to use JetBrains' remote features, which suck, or Linux native RubyMine in WSLg, which also sucks for many obvious reasons including that it feels slow and has many window manager glitches. (Yet I have been told many times on reddit that WSLg is just fine by apparent masochists.)"
-
-
-    - Indeed, I would also argue that VSCode's JavaScript, TypeScript, and React features are on par with JetBrains' plugins in many ways, offering better help and feedback and perfectly usable refactoring. It feels very smooth and reliable. That's why people love VSCode.
-
-
-
-
-    
-
-    
 * lang notes
 
 NOTE: mostly from dragonruby (compatible with mruby)
@@ -1031,6 +823,215 @@ obj.my_method
 #+end_src
 
 
+* tool kit (in the std lib)
+
+rubocop
+  - formatter
+
+
+** ri
+
+ri --no-gems
+  - CONCLUSION: *a good IDE (with jump to definition, class hierarchy panel, etc.) + AI are severely needed..*
+    - *you cannot guess what the lib does by it's name.. :/*
+      - open-source woes, though can be fun to name things..
+  - interactive ruby docs
+    - "ruby interactive?/introspection?"
+    - *i'm guessing it's meant to be used as a lib to provide docs to other programs, namely, editors..*, moreso than being used on it's own..
+  - for core + std-lib stuff: still 208 gems!
+    - 250 with it
+    - a few important gems such as nokogiri aren't in the ruby/std
+  - module[tab, tab] to see classes
+  - module::class[tab, tab] to see methods
+    - class methods aren't organized by super classes :/
+   - TODO: OR: maybe can just make a local copy of the ruby repo.. then try the emacs spc-k commands
+type keyword, then press tab (in select mode)
+  - not so good with modal text editing..
+
+
+
+** irb
+https://news.ycombinator.com/item?id=24637797
+  - "Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use."
+
+
+
+
+* ruby internals
+
+see my notes on/in [compilers]
+
+https://ruby-compilers.com/
+  - this is a great little web-site for all your compiler needs..
+
+  
+see [play/ruby-limits.rb]
+  - for an inquiry into how ruby data is stored
+    - might as well just read the C code though..
+
+TODO: should check out "ruby under a microscope" book
+  - sounds like an "how it's made" episode.. with a bunch of diagrams 'n all..
+
+these three are made by the same person:
+  - prism parser
+    - see [compilers notes]
+  - syntax-tree
+    - "Syntax Tree is a suite of tools built on top of the internal CRuby parser. It provides the ability to generate a syntax tree from source, as well as the tools necessary to inspect and manipulate that syntax tree. It can be used to build formatters, linters, language servers, and more."
+  - yarv
+     "A Ruby object layer on top of the YARV virtual machine"
+
+- yjit
+- CRuby
+
+- JRuby
+- TruffleRuby
+
+
+* install ruby
+
+"NOTE: While system Ruby installations exist (e.g., on macOS), it is generally recommended to use a version manager like RVM or rbenv for development to avoid altering the system Ruby and ensure compatibility with specific project requirements."
+  - thanks ai..
+
+
+** windows
+
+rubyinstaller
+  - windows is so much better..
+
+or scoop!
+
+Linking ~\scoop\apps\ruby\current => ~\scoop\apps\ruby\3.3.4-1
+Adding ~\scoop\apps\ruby\current\bin to your path.
+Adding ~\scoop\apps\ruby\current\gems\bin to your path.
+
+*** maybe not the best dev experience
+
+ruby on windows not the best experience, but damn good:
+
+https://www.reddit.com/r/ruby/comments/12z4j3g/is_ruby_still_a_hassle_to_work_with_on_windows/
+  - "Here's the deal: WSL2 is 100% compatible and has great performance.
+
+  It's still not as good as just using a Ubuntu desktop which is what you should do unless you are forced to use Windows, but the biggest pain is that the only editors that really work seamlessly are VSCode and Vim.
+
+  I'm sorry, but for Ruby VSCode is just a text editor without many features besides syntax highlighting. Most of the plugins feel like they just barely work, and there is really nothing to help with ERB. The debugging is unbelievably hard to get working. Solargraph is impressive, but is more like a little spice that occasionally shines through than something you can really truly rely on. None of the other language servers are even close. If all you want is a fast text editor, then you may as well use Vim.
+
+  So if you want RubyMine you have to use JetBrains' remote features, which suck, or Linux native RubyMine in WSLg, which also sucks for many obvious reasons including that it feels slow and has many window manager glitches. (Yet I have been told many times on reddit that WSLg is just fine by apparent masochists.)"
+
+
+    - Indeed, I would also argue that VSCode's JavaScript, TypeScript, and React features are on par with JetBrains' plugins in many ways, offering better help and feedback and perfectly usable refactoring. It feels very smooth and reliable. That's why people love VSCode.
+
+
+
+
+    
+
+
+  
+** linux
+
+it sounds like RVM uses pre-compiled binaries..
+  
+*** install mise (yet another language/run-time package manager)
+
+https://mise.jdx.dev/getting-started.html
+
+#+begin_src sh
+sudo apt update -y && sudo apt install -y gpg sudo wget curl
+sudo install -dm 755 /etc/apt/keyrings
+wget -qO - https://mise.jdx.dev/gpg-key.pub | gpg --dearmor | sudo tee /etc/apt/keyrings/mise-archive-keyring.gpg 1> /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=amd64] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
+sudo apt update
+sudo apt install -y mise
+#+end_src
+
+NOTE: this handles installing ruby-dev/el package, which is needed to build C extensions
+
+*** install ruby using mise
+
+https://mise.jdx.dev/lang/ruby.html
+
+mise ls-remote [language/run-time]
+  - check all versions available
+
+mise install ruby
+  - this will download the latest released version
+    - (and not some old bullshit that linux restricts you to)
+    - (by default it won't select preview/dev versions)
+  - it runs make.. oh fuck..
+    - SERIOUSLY, WTF
+      - TODO: WHY NO BINARIES?
+        - why delegate the task to make EVERY user crunch their computer, when they could provide binaries for the most popular OSs??
+
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+  - load upon start of shell (to handle env bullshit for you)
+
+ruby -v
+  - test it out!
+
+mise use --global ruby[@version]
+  - to switch the version
+  - this adds it to '~/.config/mise/config.toml'
+
+mise use ruby[@version]
+  - to use it in a directory
+  - (this also adds it to '~/.config/mise/config.toml')
+  
+mise exec ruby[@version] -- ruby [command goes here]
+  - to run commands from specific versions
+*** if it fails to install
+
+NOTE: i gave up.. this is def ruby's greatest problem
+
+mise cache clean
+
+try again
+  - (mise install [lang])
+
+    
+other problems:
+    
+if it fails to build psych
+  - sudo apt install libyaml-dev
+
+  
+* deployment
+
+this is why portable programs are just wayyyy better.. arrrrgh..
+  - surely there must be a way to atleast just pack the ruby parser with the program..??
+    - see traveling ruby
+  
+
+* ruby in your shells (cli & pipes)
+
+
+https://www.honeybadger.io/blog/ruby-unix-command-line/
+
+# not so useful...
+echo "puts 2+2" | ruby
+
+# useful!
+ruby -e "puts 'code goes here'" arg1 arg2 argN
+ruby -e 'puts ARGV.inspect' apples bananas pears oranges
+  - ["apples", "bananas", "pears", "oranges"]
+
+# check web-page for a reg-ex using only ruby
+ruby -e "require 'open-uri'; puts open(ARGV.first).read.scan(/starr/i).count" [some-url]
+
+# piping 101
+cat moby-dick.txt | ruby -e "puts STDIN.read"
+(outputs entire text)
+
+# combining with another unix tool for fetching
+curl [some-url] | ruby -e "puts STDIN.read.scan(/starr/i).size"
+
+# loop through lines and do something (print file extensions)
+ls | ruby -e 'STDIN.each_line { |l| puts l.split(".").last }'
+# same thing using -n to loop each line, and $_ meaning the current line
+ls | ruby -n -e 'puts $_.split(".").last'
+
+
+
+    
 * some useful gems
 
 sequel
