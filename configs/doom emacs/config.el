@@ -460,7 +460,6 @@
   ;; (after! writeroom-mode
   ;; (+zen/toggle-fullscreen))
     ; NOTE: doesn't affect when run in terminal
-    ;   - doesn't do much in gui either..
     ; alias for writeroom-mode?
     ; just increases font size..?? :/
     ; spc-t-z/Z
