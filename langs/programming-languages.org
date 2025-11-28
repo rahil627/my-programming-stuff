@@ -3,6 +3,116 @@ also see [compilers]
 
 * some random notes
 
+** j blow on prog lang design
+
+https://youtu.be/e6crOMC9WCE?si=GNB8_owTw3uwoGVz
+
+(ugh fucking videos putting a snippet of content in the front..)
+--
+
+TODO: see his talk at lambdacon
+
+how do you decide what's done at compile-time and what's not?
+
+cost-benefit analysis.. but also dngaf about security, and a lot of shit most people care about..
+
+*a compiler is bounded by the complexity of a prog lang*
+
+*the very concept of a prog lang / what makes a prog lang powerful is that features cooperate / work together*
+
+*what happens is that in the code, those features don't come together so naturally, and you the user have to do some work to make it all work*
+
+we are bounded by how hard it is to make the code work correctly, in all these cases
+  - and also: what features have you spent time/money on.. etc.
+
+*you've gotta decide the general attitude / what philosophy you're making this language*
+
+*he was taught in school that a language is good if maximally orthogonal*
+  - he thinks: good to a degree
+  - i take that ortthagonality principle but temper it heavily by just convenience to the programmer
+
+*the more code that you have, that's worse, always*
+  - simple, lol
+
+*what is the actual clean way to make these ideas work?*
+
+*i've used langs that are more structured, and i've uses langs that are less structured*
+  - while pondering his college / youth days using the "infamous" scheme course, standard ml (of new jersey), even proglog
+
+*and so when things are less structured, scheme for example, where it's trying to be relatively simple in terms of langauge semantics.. that means, your program is a big bag of code and your run-time memory is just like a bunch of cons pairs all over the place*, whatever! I think newer schemes have actual contiguous data structures.. (interviewer: i think for elegance reasons, you're supposed to use cons pairs) yeah, *it's slow and it's hard to debug*, because you don't know what anything is.. *those are simpler langauge semantics, but they create a situatiohn that is much harder to deal with day-to-say as a programmer*
+
+(back to the question) so he demo'd that you can write a game running at compile-time exection, a little galaga game.. just to show *you can do anything at compile-time*, but at the same time, he *knows it's going to be very hard to understand in the same way as like*, why are my cons pairs malformed 17 functions down in some random thing that made the data struture.. *what i iterated on for a while after that was, okay, how do we create a structured enough environment that the compile-time exeuction is usable but also tractable* / not a huge mess... the way the lang treats *compile-time execution as a feature* was solidified
+
+(back to the question) so why did i want a static if in the first place?.. because for games specifically, you will have platform-specific code that requires statically-evaluated (at compile-time, as oppposed to a run-time if) ifs (and to avoid the mess of C++'s make system, which may be a whole 'nother language itself)
+
+*trying to build hygiene around compile time execution*: if there's code at compile-time, how do you handle it without polluting the rest of the program
+
+(part two of the question) constant expression evaluation.. i guess what you're saying is: you have a normal run-time function, but it evaluates to a constant under all conditions, and you would automatically pre-evaluate that: you know that it's constant... there is an element of magic in there... because operating systems.. have to compile..
+
+*orthoganlity means that features are very general, but the more general something is, the less the compiler knows what you might have been trying to do when something goes wrong, and that means the error messages are worse, and error messages are the user interface of the compiler*
+  - SUPER IMPORTANT!!
+
+(interviewer talks / break)
+
+*i have a rich source of emotion that drives the decisions on these features*, after commenting being depressed doing C++ day-to-day for a long long time
+
+on cross-platform:
+
+(interview asks about the limits of what can be done at compile-time: can you call libc to do something? and how would that work, given that they will do different things on different platforms..)
+
+*determinism is important* not just for compiling, but also making games.. it makes it harder to debug, and even in design is it something the user will enjoy?... there's already problems (gives hash table with pointers as value giving different results every run, on the same platform, same day).. an aesthetic choice as a language desinger is like to what degree am i going to insulate against these things? tradeoff in functionality.. it's sort of your job to not break determinism if you value it.. another simpler, in the future where there's more and more cores, parallelism, is going to return things in a different order every-time.. unless you sort it afterwards.. *im made the decision on in the direction of the most powerful thing* in order to collect data to find of what to do, *this is a science  experiment. let's see what we can do, and if there's a problem, we'll come back*
+
+(interviewer succintly summarizes: the philosophy of the langauge is for experts, though wants to try to be deterministic where possible, also wants to give the most unrestricted power and capabilities to the users)
+
+*we are engineers, and our job is to solve problems. If one restricts to non-determinism, the opportunity to explore functionality is lost, and in the future, people then will be prevented of structuring some new solution to that problem*... (he then goes on to relate how langs try to solve memory safety, which leads to restriction) and that's one end of the spectrum (automatic memory-management), but me over in gameland, i'm like, look, *trashing memory is really bad*.. *we value our ability to access memory directly*, so we need a different approach
+
+(interviewer mentions a time jon commented on someone making a game in rust, that their entity-component-system doesn't gain anything from the borrow-checker/compile-time safety, as it's bounds safety, and it was a large chunk of code.. he then mentions a time talking to casey, saying that, as long as you don't make a "pointer jungle", it's alright, things seems to work just fine..)
+
+in general, for the past 20-25 years, systems programming actually has been imrpoving, by the people at the edge of their fields.. in the 90s, wrote in C in a way he wouldn't anymore.. *was told there's "the stack" and "the heap", and that anything dynamically done / in the run-time gets allocated on the heap, and you get this pointer jungle by default from that approach*.. not only are there disadvantages to having to think about life-times, and write code to de-allocate/destory stuff in some data structure.. which *is something C++ tries to do, but always requires osme degree of manual intervention*, and on top of that, *it's actually slow to have all these things on the heap*
+
+one of the reasons porg langs didn't reach nirvana.. (begins a history bit:) *the evolution of computers has led to tremendously faster CPUs, but not so much faster memory, and instead, larger memory, and so the ideal prog lang will match that*. People back then thought that eventually memory wouldn't matter, and though there have been some improvements to garbabe collectors, it just hasn't happened.
+
+(the interview mentions casey's first perfromance-aware programming video, where he optimizes a simple for loop that sums a million integers, and that *the problems are at language level: you've gotta box all your integers on the heap, and make them objects, which are like a hashmap of string with string keys, in case you wanna do run-time meta-programming*)
+  - this is truly *THE CORE PROBLEM OF DYNAMIC LANGS*
+
+*that was the idea in the 90s, that nobody's going to care if you're going to be running an interpreted or compiled thing or whatever because it's just going to be so fast.. and that has turned out to just not be true*.. and i will get hate if i post this on twitter or something.. but actually, most software i use day-to-day is slow.. it matters because of speed, but *it also matters because of live dependencies in an interpreted thing, so your environment is changing all the time and so your program breaks when you change something random on your machine that you thought wouldn't affect anything*.. we've seen this trend and *it doen't appear to be changing any-time soon as there've been so many decades down the trail of refining CPUs*.. we kinda know what CPUs are now.. unless some big random CPU evolution happens, but it's not clear what that could be (mentions quantum computing).. and so i don't see things changing in the forseeable future..
+  - *ANOTHER PROBLEM OF DYNAMIC LANGS*
+
+(interview: it seems that *hardware is getting faster via parallelism, and software is getting slower in a way that parallelism doesn't help.. but also there's more and more layers over the hardware*. the interviewr mentions that he works at zed, which is written in rust, and there's this write the shaders directly to the gpu, game-programmer-like mentality. He then mentions *electron as an example, which is likely using a react framework, on top of react, on javascript which is running in a virtual machine, on top of chrome, and even then not taking into account the operating system*.. the number of layers seems like it's continuing to expand.)
+
+yeah, and it's non-linear too in the bad direction as well.. there's layer, one linear factor, and each layer itself gets more for loop iterations or whatever, so it's kinda quadratic, or the exponent is at least greater than one
+
+now there's a kind of renassiance, which wasn't there 10 years ago, when jon and casey were saything these things.. and even then, even fewer that are competent to actualize those ideas.. now it seems a bunch of people are doing stuff.. (mentions casey writing a terminal much quicker than windows terminal in a few weekends. then mentions file pilot being fundamentally better than windows explorer. the interviewer mentions ghosty.)
+  - TODO: try file pilot, and ghosty
+
+(interviewer mentions jon and casey criticizing and getting flack, but also walks the talk, as casey did the terminal and jon does the game and lang)
+  
+it's weird, because whenever you see one of these things that have been around forever, like, a book on how to program.. the reason why you're supposed to follow the methodology is because outcomes are good.. then any remotely scientific or engineering discipline would actually be measuring whether that outcome is good or not, and in software, we just don't.. and i get it: it's because software takes a long time and is hard to do.. and so it's hard to evaluate in the objective sense.. *we have the opposite of that, perhaps not surprusing because we are human beings, which is this religious out othering and outcasting people who disagree with the thing,* when in fact one has actualy objective results that disagree or can even go further and create better results.. and then they'll find excuse along a non-measureable axis, like, the code is less-maintainable.. we as an industry *should be more concerned with looking at how good is the thing we made*.. often it gets poopoo'd into this is merely performance, but there are other dimensions to this.. *does the software actually work well?*.. (mentions windows explorer again, and how we're just stopped being aware of their problems, and stopped criticizing them)
+
+(interviewer says that quality means a lot more, like does it work, how good is the interface / design, etc... then gets into a question about dependency implementation for his own language)
+
+... *web people maybe not even understand that you should be able to compile a program at a later without updating anything*, because if you interface with someone's web api, and they've changed it 17 times since the last time you ran this thing, then you just have to change your program, and there's no way around it, and i think that's true, but i also think that it's a toxicity that's affecting software broadly speaking.. and because it's counter to the culture that i come from.. (he then mentions the witness, a game he made in 2016, will still compile, and so the software has not decayed).. one of ideas, driven by emotion for making his lang is that, *he wants his software to compile 10 years from now, on an island, where i have no internet*
+
+(the interviewer reasons, he wants the url approach for versioning)
+
+in the systems world, you can link something that becomes a private symbol that you're not exporting(??).. so for example, you may have 7 versions of z-lib, a compression libarary, and in the end, the code will be small, and it won't matter, is it's much smaller than a bitmap drawn to a screen now... so i dunno..
+
+(back to answer the question..) "vendor" is the way we do things, *if there's going to be external libs, it should be in a folder in which you check into version control, with the rest of your source* (*earlier he noted how putting them in a folder where you won't see it discourages looking at it*, which is how most langs' dependency-handling lib managers handle it).. (he mentions his lang doesn't have it, but it can be made in userland, that runs in compile-time execution-- he doesn't see it as his job.. but he's hoping that it would be in line with this culture of having dependencies explicitly in source, and that it would just be layered onto that and put things there visibly, and not some invisible cache)
+
+(the interviewer agrees with jon's/the games and systems world's way: it brings visibility, the size of things: it makes it obvious that it's not just 80 lines of dependeicies in the dependencies list, but a ton of lines of code: there's an incentive difference)
+
+(jon mentions that things can happen, for example the payment processors taking down games because someone somewhere has an agenda.. and also imagines, that encryption, including blockchain, and especially ai, can also have takedowns in a different legal environment.. and so *you can envision a takedown of these dependencies*, becauase someone in the world doesn't like them and is willing to enforce this.. and though that may be hyopthetical, i've seen it happen enough where i'm not comfortable with assumming it won't happen.. obviously, if something happens, you can just re-write that part of our program..)
+
+(the interviewer imagines something that can certainly cause problems: *a /whole lot/ of dependencies are specifically hosted on github, owned by microsoft*, and more specifically by people that aren't paying anything for that.. if for some reason microsoft has financial problems, and start charging money to host projets, then suddenly, people take their stuff down)
+
+(jon mentions another example, if the government prevents code to be downloaded that has been checked in by chinese nationals..) that specifically won't happen because that's all software, lol, but you know, you can imagine someone just getting picky about particular things.. *i just think we've been relaxed, cushy about how things on the internet have been..*
+
+(interviewer asks what jon feels about garbage collection)
+
+(jon agrees it has it's place: examples of non-professional programmers just needing to do something, scientist doing data science, etc.).. *on that end of person, and /probably/ garbage-collected langs is the more appropriate thing for these contexts*.. and now *on my end, i really don't want garbage collection*
+
+TODO: STOPPED HERE, DEF SHOULD FINISH, GARBAGE-COLLECTION OR NOT
+
 ** TODO casey muratori's performance-aware programming [video] series
 
 to make me hate ruby, and stick to haxe, without most features, lmao
