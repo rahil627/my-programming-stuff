@@ -43,6 +43,7 @@ the corner-stones of its longevity are: a *plugin-system* (and eco-system) and a
 
 i think these concepts could apply to many programs and products, increasing their chances of survival, though, 55 years is tough to beat..
 
+
 * config
 
 *NOTE: DON'T YOU EVER USE IT AS ADMIN/SUDO!*
@@ -91,10 +92,19 @@ ibuffer vs tree plugin
   - dired and ibuffer both take up a whole page-sized buffer, and has their own esoteric bindings..
   - ibuffer, with doom's "ibuffer" plugin enabled, does however display all buffers together, categorized by project..
 
+imenu
+  - built-in emacs way to find functions or section headers (for prose)
+  - https://www.gnu.org/software/emacs/manual/html_node/emacs/Imenu.html
+    - "The Imenu facility offers a way to find the major definitions in a file by name."
+  - spc-s-i
+    - the emacs way to see functions
+      - (as opposed to file/object tree panel)
+    
 treemacs
-  - NOTE: this is opened on a per-workspace basis
+  - this is opened on a per-workspace basis
     - which is quite cool! 
-  - TODO: this only shows file-trees, not code trees..??
+  - this shows the current project's file-tree
+    - NOTE: hidden functionality!: if you press tab, you can see code trees (objects, functions, etc.), which uses imenu as its source
   
 minimap (de-map)
   - felt useless..
@@ -1727,6 +1737,9 @@ spc (meow)
 
 TODO: merge with above..
 
+spc-s-i
+  - imenu (counsel-imenu)
+    - search functions/sections (headers)
 
 the last notes from emacs-key-mappings.txt:
   - kinda incomprensible..
