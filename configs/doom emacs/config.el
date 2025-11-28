@@ -617,11 +617,10 @@
 ;;; org-mode
   (after! org
 
-
-    ;; TODO: update org tags: TODO, OKAY, YES, etc.
-    ;;  - delete most of them
-    ;;  - add: TEMPFIX, HALP, BEWARE
-    ;;  - allows optional ':' in front of it
+    ;; TODO: list
+    ;;   - allow optional ':' in front of it
+    ;;     - hl-todo already allows this..
+    ;;   - add shortcuts: YES(y)
 
     ;; https://orgmode.org/manual/TODO-Basics.html
 
@@ -631,15 +630,14 @@
     ;;  NOTE: shift
     ;;  BUG: hmmmm??
     (setq org-todo-keywords '(
-          ;; (sequence "TODO" "FIXME" "ERROR" "WARNING" "HALP" "|" "DONE" "NVM")
-          ;;   - TODO: this sequence doesn't make sense.. move to hl-todo
-
+                              
           ;; (sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
           ;;   - doom's original sequence actually makes more sense..
 
-            (sequence "TODO")
+            (sequence "TODO") ; "PENDING" "IDEA" "DREAM" "|" "DONE" "NVM")
           ;;   - TEMP: keep it simple for now
-
+          ;;   - no need for DONE, just toggle to empty
+          ;;   - i use these in hl-todo, not org-mode..
           
             (sequence "|" "YES" "NO" "OK" "MAYBE" "IUNNO" "KILL")
           ;;   - these came with doom emacs..
@@ -647,6 +645,7 @@
           ;;     - it's also more mneunomic, in case you use shortcuts..
           ;;   - i might prefer check (or c) and x marks over YES and NO
           ;;     - "[\x2714]" "x"
+          ;;       - not easy to search..
           ;;     - "c" "x"
 
           ;;   i trashed the [ ]/[-]/[x] thing
@@ -876,6 +875,7 @@
           doom-variable-pitch-font "Roboto-11" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
           ;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
           ;;  - TODO: try coding with it, def worth the beauty! also, it makes code very narrow!
+          ;;  - FIXME: font size doesn't seem to change..
           doom-big-font "Roboto" ;; FIXME: "could not resize 'doom-serif-font' for some reason"
           ;;(setq doom-font "Noto Sans Mono") ;; hmmm, seems quite space out in width.. and tall..
           ;;(setq doom-font "Nimbus Mono PS") ;; yikes.. serif mono.. nope
