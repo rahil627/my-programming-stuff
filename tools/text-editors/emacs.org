@@ -1658,7 +1658,10 @@ spc (meow)
       - pro-tip: spc-f-f creates a file if it doesn't exist!
     - m(ove)
       - much better than jumping to terminal..
-  - go
+  - goto
+    - NOTE: there's also an original m-g goto key-map that's quite sparse..
+      - i don't think there's much use compared to spc-g, only imenu is notable, which is better under spc-s-i
+      - ..but i do love its simplicity!
     - an alt for c-m-[key] bindings
       - *TODO: i need a key-map for c- and m- too*.. for more intuitive learning..
         - otherwise have to search through the keymaps :/
