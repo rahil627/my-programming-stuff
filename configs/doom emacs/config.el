@@ -532,11 +532,7 @@
     ;;  - no..?? WTF is this??
     ;;    - hl-todo
     ;;
-    ;; i think have to update hl-todo--keywords
-    ;; TODO: INCOMPLETE: set colors
-    ;; FAIL: quotes trouble... :/
-    ;; (setq ; q? for a list?
-    ;;  hl-todo--keywords (append 'hl-todo--keywords '(
+    (setq hl-todo-keyword-faces (append hl-todo-keyword-faces '(
 
     ;; from doom's defaults: (appended)
     ;; ("TODO" warning bold)
@@ -555,32 +551,64 @@
     ;; ("FAIL"   . "#8c5353")
     ;; ("TEMP"   . "#d0bf8f")
 
-    ;; introspect vars starting with 'font-lock' to get some colors
     ;; personal additions:
-    ;;    ("IDEA" success bold)
-    ;;    ("INCOMPLETE" font-lock-keyword-face)
-    ;;    ("TEMPFIX" font-lock-keyword-face) ; = HACK
-    ;;    ("HALP" font-lock-keyword-face)
-    ;;    ("TEMP" font-lock-constant-face)
-    ;;    ("WTF" font-lock-constant-face)
-    ;;    ("WARNING" warning bold)
-    ;;    ("BEWARE" warning bold)
-    ;;    ("ERROR" error bold)
-    ;;    ("PROBLEM" error bold)
-    ;;    ("FAIL" error bold)
-    ;;
-    ;;    experimental:
-    ;;    ("KILL" error bold) ; ..?, lol. 4 emacs
-    ;;    ("LOVE" font-lock-keyword-face) ; can always use more love
-    ;;    ("CUTE" font-lock-keyword-face)
-    ;;    
-    ;;    ("PROGRAM" font-lock-keyword-face)
-    ;;    ("PROJECT" font-lock-keyword-face)
-    ;;    ("FEATURE" font-lock-keyword-face)
-    ;;    ("PULL REQUEST" font-lock-keyword-face)
+    ;; introspect vars starting with 'font-lock' to get some colors
+     
+       ;; todo sequence
+       ;; TODO
+       ("PENDING" font-lock-keyword-face bold)
+       ("DOING" font-lock-keyword-face bold) ; makes more sense..
+       ("INCOMPLETE" font-lock-keyword-face bold) ; or warning?
+       ("TEMPFIX" font-lock-keyword-face bold) ; = HACK
+       ("DONE" font-lock-doc-face bold) ; likely don't need done/nvm, just delete the text
+       ("NVM" font-lock-doc-face bold)
+       ("FAIL" error bold)
+    
+       ;; various todos
+       ("DECIDE" font-lock-keyword-face bold)
+       ("MERGE" font-lock-keyword-face bold) ; merge notes, not git
+       ("TEST" font-lock-keyword-face bold) ; TRY?
+    
+       ("WARNING" warning bold)
+       ("BEWARE" warning bold)
+       
+       ;; FIXME
+       ("ERROR" error bold)
+       ("PROBLEM" error bold)
+    
+       ("TEMP" font-lock-constant-face bold) ; ~= HACK
+       ("WTF" font-lock-constant-face bold)
+       ("HALP" font-lock-constant-face bold)
+    
+       ;; various notes
+       ;; NOTE
+       ;; ("PERSONAL NOTE" success bold) ; added to factual research notes
+                                         ; TODO: TEST: overlap?
+       ("CONCLUSION" success bold) ; my conclusion after researching
+    
+    
+       ;; experimental / testing:
+       ("KILL" error bold) ; ..?, lol. 4 emacs
+       ("LOVE" font-lock-constant-face bold) ; can always use more love
+       ("CUTE" font-lock-constant-face bold)
+       
+       ;; some todos are to add something, it may help to clarify what..
+       ("FEATURE" font-lock-keyword-face bold)
+       ("IDEA" success bold)
+       ("DREAM" success bold)
+       
+       ("PROGRAM" success bold)
+       ("PROJECT" success bold)
+       
+       ("PULL REQUEST" font-lock-keyword-face bold)
+       ("PR" font-lock-keyword-face bold)
+       
+       ("WATCHOUT" warning bold)
+       ("CAREFUL" warning bold)
+    
 
-    ;; nil
-    ;; )) ; append, setq
+    nil
+    ))) ; append
 
     ) ; hl-todo
 
