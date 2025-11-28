@@ -1000,12 +1000,18 @@
   ;;   - serif
   ;;
   ;;   
-  ;; (setq doom-font "Google Sans-11") ; d: 11, quite wide (for a variable-width font), spacey
-  ;;   - 16 on google chrome..!?
-  ;; (setq doom-font "Roboto-11") ; d: 12,  NOTE: in my eyes, this is the best one, spacious yet not widely-spaced, very sans
-  ;; (setq doom-font "Carlito-12") ; d: 10, very good, got that ms word 2008(?) feel
-  ;; (setq doom-font "Noto Sans-12")  ; d: 11? eye-pleasing! this one is quite good, in case roboto is too variable or narrow in width
-  ;;   - i actually remember using this somwhere.. i think for writing on my ipad mini, using voice dream writer!
+  ;; (setq doom-variable-pitch-font "Google Sans-10") ; d: 11, quite wide (for a variable-width font), spacey
+                                        ; 16, on google chrome..!?
+                                        ; 10, line height feels squashed
+  ;; (setq doom-variable-pitch-font "Roboto-11") ; d: 12,  NOTE: in my eyes, this is the best one, spacious yet not widely-spaced, very sans
+                                        ; 10 too small, 11 too large..?
+                                        ; 10, actually being too small is great for tiny laptops, i feel like i can finally see the big picture..!!
+  ;; (setq doom-variable-pitch-font "Carlito-11") ; d: 10, very good, got that ms word 2008(?) feel
+                                        ; 11, feels a bit squashed.. bold is much larger than normal, maybe even extending the line hieght..?
+  ;; (setq doom-variable-pitch-font "Noto Sans-10")  ; d: 11? eye-pleasing! this one is quite good, in case roboto is too variable or narrow in width
+                                        ; maybe too wide.. i feel like a robot reading it..
+                                        ; bold is distractingly larger than normal font here too
+                                        ; i actually remember using this somwhere.. i think for writing on my ipad mini, using voice dream writer!
 
   
   ;;  - children/elderly mode
