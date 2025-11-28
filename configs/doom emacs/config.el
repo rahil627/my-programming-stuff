@@ -1229,7 +1229,7 @@
    ;;     (motion . ,meow-motion-state-keymap)
    ;;     (beacon . ,meow-beacon-state-keymap)
    ;;     (leader . ,mode-specific-map))
-   ;;   "Alist of symbols of state names to keymaps.")
+   ;;   Alist of symbols of state names to keymaps.) ; removed quotes due to warning
 
 
 
