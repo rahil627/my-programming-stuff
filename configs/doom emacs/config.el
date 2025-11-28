@@ -906,11 +906,11 @@
   ;; (setq doom-font "SeriousShanns") ; BUG: showing italics version.. though nice!
 
 
-  (setq doom-font "Ubuntu Mono-11") ; d: 10
-  ;; (setq doom-font "UbuntuMono-Bront-10") ; d: 10, too small (in height), though readable!
-  ;; (setq doom-font "UbuntuMono-Bront-11") ; NEW CLASSIC, GREAT! FAR less noisy than agave!
-  ;; (setq doom-font "UbuntuMono-Bront-12") ; a bit wider..
-  ;; (setq doom-font "UbuntuMono-Bront-13") ; GREAT here too, though big (shows as 15?).. like mononoki: tall yet cute!
+  ;; (setq doom-font "Ubuntu Mono-10") ; d: 10, too small (in height), though readable!
+  (setq doom-font "Ubuntu Mono-11") ; NEW CLASSIC, GREAT! FAR less noisy than agave!
+  ;; (setq doom-font "Ubuntu Mono-12") ; a bit wider..
+  ;; (setq doom-font "Ubuntu Mono-13") ; GREAT here too, though big (shows as 15?).. like mononoki: tall yet cute!
+  ;; (setq doom-font "UbuntuMono-Bront-11")
   ;;   - TODO: to use bront version, would need to combine bront for regular font, and the original for styles
   ;;   - also has a great big X icon use by centaur-cons for close tab..!
   
