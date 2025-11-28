@@ -475,6 +475,8 @@
                                 ; 
                                 ; 0.15 * 200 = EXACTLY 200 lines on my tiny touch-pad, from top to bottom!!
                                 ; (note: these values are for my shitty chromebook's touchpad)
+                                ; BUG: WARNING: Error in post-command-hook (good-scroll--post-command): (args-out-of-range 247745 1 2103)
+
     :config
     (good-scroll-mode))
 
@@ -1611,16 +1613,15 @@
    ;;      - not SPC . C-x
    ;;      - not SPC-SPC . C-x
    ;;
-   ;; NOTE: C-SPC may have been used for completion before (doom +evil?)..
    (cons "C-SPC" ctl-x-map)
-   ;;  - TODO: NOTE: this skips the key-pad and goes straight to emacs' orginal key-chord sequence input handler..
-   ;;  - in meow, spc-spc dispatches c-spc
-   ;;    - NOTE: but it doesn't work with this cons method of binding a key-map.. :/
-   ;;  - TODO: re-bind the default set-mark-command
-   ;;    - seems to have an alt binding C-@.. really obscure..
-   ;;
-   '("C-S-SPC" . set-mark-command) ;; or cycle-spacing
+   ;;  - NOTE: this skips the key-pad and goes straight to emacs' orginal key-chord sequence input handler..
+   ;;  - TODO: NOTE: C-SPC may have been used for completion before (doom +evil?)..
+   ;;  - FIXME: TODO: still haben't figured out how to bind spc-x/h to the c-c x/h key-maps..
+   ;;  - TODO: could try SPC-SPC as another alt..
+   ;;    - must set this in meow keypad
+   '("C-S-SPC" . set-mark-command) ;; d: cycle-spacing
    ;;  - a temporary re-binding..
+   ;;  - seems to have an alt binding C-@.. really obscure.. maybe a bash thing..??
    
 
 
