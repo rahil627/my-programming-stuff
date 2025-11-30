@@ -473,7 +473,7 @@
           good-scroll-step 200) ; d: 80 = ~3 lines, 200 = 12 lines
                                 ; 
                                 ; 0.15 * 200 = EXACTLY 200 lines on my tiny touch-pad, from top to bottom!!
-                                ; (note: these values are for my shitty chromebook's touchpad)
+                                ; NOTE: these values are for my shitty chromebook's touchpad
                                 ; BUG: WARNING: Error in post-command-hook (good-scroll--post-command): (args-out-of-range 247745 1 2103)
 
     :config
@@ -694,6 +694,11 @@
 
 
 
+
+
+
+
+  
 ;;; non-core emacs stuff (not gui, org, etc.)
 
 
@@ -705,6 +710,15 @@
   ;; )
 
   
+
+
+
+
+
+
+
+  
+
   
 
 ;; TODO: move themes and fonts up, before package-related settings
