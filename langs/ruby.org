@@ -950,6 +950,8 @@ it sounds like RVM uses pre-compiled binaries..
 get install script from here:
   - https://github.com/spinel-coop/rv/releases
 
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/spinel-coop/rv/releases/download/v0.2.0/rv-installer.sh | sh
+  
 rv ruby install 3.4.7
   - see https://www.ruby-lang.org/en/downloads/releases/ for version number
 
