@@ -837,10 +837,6 @@ obj.my_method
 
 * tool kit (in the std lib)
 
-rubocop
-  - formatter
-
-
 ** ri
 
 ri --no-gems
@@ -861,11 +857,9 @@ type keyword, then press tab (in select mode)
   - not so good with modal text editing..
 
 
-
 ** irb
 https://news.ycombinator.com/item?id=24637797
   - "Very similar to this idea, simply using ‘irb’ for one-off data munging and simple automations is very handy. That’s one of my go to tools when I am not sure exactly what I want to do with the data, and being able to poke at the intermediate steps as I transform it is handy. If I then come up with a pipeline that is useful, it only takes a minute to copy paste what I figured out in IRB to a file and save it as an executable script for future use."
-
 
 
 
@@ -1067,6 +1061,7 @@ ls | ruby -n -e 'puts $_.split(".").last'
     
 * some useful gems
 
+** TODO everything else
 sequel
   - database toolkit
 
@@ -1168,76 +1163,6 @@ yard docs
 
 
 
-
-
-** formatters and linters
-
-conclusion: stick to rubocop, as it ships with ruby
-
-all of the formatters (rubocop, rubyfmt, prettier, etc.) are options in the main ruby vscode extension's settings
-  - the crux of open-source.. :/
-  - before the prism parser, they all used different parsers too! :/
-    
-rubocop does more than formatting, it's a deep *linter* that'll fix 'n optimize your code
-  - !!
-
-formatters:
-rubocop
-  - the first main one
-  - **comes pre-installed with ruby**
-    - welp, that's that!
-rubyfmt
-  - written in rust and very fast
-prettier
-  - based on javascript's prettier linter
-    - urgh, and probably requires npm too!
-
-formatting standards:
-standard
-  - a standard immutable config (because people can't agree), using rubocop
-    - TODO: could try this out..
-rufo
-  - like standard but with a different taste/opinion
-
-
-
-
-
-
-
-
-
-
-
-
-
-solargraph:
-another lsp that's more featureful, but takes more effort to work: must use the yard gem to generate docs (as opposed to the standard rdoc, which the main ruby lsp uses)
-
-https://www.reddit.com/r/ruby/comments/ml3zs2/which_one_is_a_better_vs_code_language_server_for/
-  -  "Solargraph has more features. It can inference types and preview docs. But it requires building yard docs for all your gems, which can take a lot of time and be a big hassle."
-  - The vscode-solargraph extension is designed to work well alongside vscode-ruby. I frequently use both, typically with `"ruby.useLanguageServer": false` so code intelligence features like autocompletion come from Solargraph.
-
-    If you use vscode-ruby primarily for the debugger, vscode-ruby-debug is also an option.
-
-# add this to the Gemfile
-gem 'solargraph', group: :development
-
-# install yard cli
-# TODO: conflicts with 'gem install yard'??
-sudo pacman -S ruby-yard
-
-# generate docs for all ruby gems
-# yard gems
-
-
-
-
-
-
-
-
-
 can use binding.pry in code to break it and inspect everything up to that point
 pry replaces irb (comes bundled with ruby)? or use both?
 `cat filename`.capitalize
@@ -1294,11 +1219,7 @@ https://marketplace.visualstudio.com/items?itemName=KoichiSasada.vscode-rdbg
 
 
 
-
-
-
-
-# just do it & ref
+** just do it & ref
 
 https://github.com/planetjekyll/awesome-jekyll-plugins
 https://github.com/benbalter/
@@ -1507,6 +1428,70 @@ puts 'Hello World'
 $ chmod +x hello_world.rb
 $ ./hello_world.rb
 Hello World
+
+
+
+
+** solargraph (lsp)
+
+another lsp that's more featureful, but takes more effort to work: must use the yard gem to generate docs (as opposed to the standard rdoc, which the main ruby lsp uses)
+
+https://www.reddit.com/r/ruby/comments/ml3zs2/which_one_is_a_better_vs_code_language_server_for/
+  -  "Solargraph has more features. It can inference types and preview docs. But it requires building yard docs for all your gems, which can take a lot of time and be a big hassle."
+  - The vscode-solargraph extension is designed to work well alongside vscode-ruby. I frequently use both, typically with `"ruby.useLanguageServer": false` so code intelligence features like autocompletion come from Solargraph.
+
+    If you use vscode-ruby primarily for the debugger, vscode-ruby-debug is also an option.
+
+# add this to the Gemfile
+gem 'solargraph', group: :development
+
+# install yard cli
+# TODO: conflicts with 'gem install yard'??
+sudo pacman -S ruby-yard
+
+# generate docs for all ruby gems
+# yard gems
+
+
+NOTE: if emacs, the lsp(-mode) may ask within a pop-up for the root of the project (in case you open a buffer that isn't part of the project's root). You must set that in order to auto-start the lsp.
+
+
+
+
+
+
+** formatters and linters
+
+conclusion: stick to rubocop, as it ships with ruby
+
+all of the formatters (rubocop, rubyfmt, prettier, etc.) are options in the main ruby vscode extension's settings
+  - the crux of open-source.. :/
+  - before the prism parser, they all used different parsers too! :/
+    
+rubocop does more than formatting, it's a deep *linter* that'll fix 'n optimize your code
+  - !!
+
+formatters:
+rubocop
+  - the first main one
+  - dependency for solargraph gem.. :/
+rubyfmt
+  - written in rust and very fast
+prettier
+  - based on javascript's prettier linter
+    - urgh, and probably requires npm too!
+
+formatting standards:
+standard
+  - a standard immutable config (because people can't agree), using rubocop
+    - TODO: could try this out..
+rufo
+  - like standard but with a different taste/opinion
+
+
+
+
+
 
 
 
