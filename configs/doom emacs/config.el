@@ -691,6 +691,20 @@
 
 
 
+
+
+
+;;; non-core emacs stuff (not gui, org, etc.)
+
+
+
+;;; dragonruby
+  ;; (after! ruby-mode
+  ;;   (remove-hook 'ruby-mode-hook #'rubocop-mode) ; turn off rubocop
+  ;;   ;;  - https://discourse.doomemacs.org/t/how-to-disable-rubocop/2529
+  ;; )
+
+  
   
 
 ;; TODO: move themes and fonts up, before package-related settings
