@@ -901,6 +901,8 @@ these three are made by the same person:
 
 * install ruby
 
+*scripting langauges (general) and linux fucking blow*
+
 "NOTE: While system Ruby installations exist (e.g., on macOS), it is generally recommended to use a version manager like RVM or rbenv for development to avoid altering the system Ruby and ensure compatibility with specific project requirements."
   - thanks ai..
 
@@ -942,8 +944,25 @@ https://www.reddit.com/r/ruby/comments/12z4j3g/is_ruby_still_a_hassle_to_work_wi
 ** linux
 
 it sounds like RVM uses pre-compiled binaries..
-  
-*** install mise (yet another language/run-time package manager)
+
+*** install using rv
+
+get install script from here:
+  - https://github.com/spinel-coop/rv/releases
+
+rv ruby install 3.4.7
+  - see https://www.ruby-lang.org/en/downloads/releases/ for version number
+
+echo 'eval "$(rv shell init bash)"' >> ~/.bashrc
+echo 'eval "$(rv shell completions bash)"' >> ~/.bashrc
+
+done!
+
+*** NO install using mise (formerly rtx)
+
+i had problems with this.. it used ruby-build to try to build it, and in the process it would also build openssl first, then fail to `make -j 2` ruby.. and *i don't want to fucking make such a popular language.. wtf*
+
+**** install mise (yet another language/run-time package manager)
 
 https://mise.jdx.dev/getting-started.html
 
@@ -958,7 +977,7 @@ sudo apt install -y mise
 
 NOTE: this handles installing ruby-dev/el package, which is needed to build C extensions
 
-*** install ruby using mise
+**** install ruby using mise
 
 https://mise.jdx.dev/lang/ruby.html
 
@@ -990,7 +1009,7 @@ mise use ruby[@version]
   
 mise exec ruby[@version] -- ruby [command goes here]
   - to run commands from specific versions
-*** if it fails to install
+**** if it fails to install
 
 NOTE: i gave up.. this is def ruby's greatest problem
 
