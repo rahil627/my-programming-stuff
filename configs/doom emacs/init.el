@@ -139,6 +139,10 @@
        ;;(go +lsp)         ; the hipster dialect
        ;;(graphql +lsp)    ; Give queries a REST
        ;;(haskell +lsp)    ; a language that's lazier than I am
+       ;;(haxe +lsp)       ; PROJECT: lsp integration requires work as it seems it was specially built for vs-code..
+                           ;  - would have to first make a modular core (which could be compiled!), then an emacs component
+                           ;  - see https://www.reddit.com/r/emacs/comments/1oc9pua/haxe_lsp_setup/
+                           ;  - also see older pre lsp direct from compiler plugin: https://github.com/AlonTzarafi/battle-haxe
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
        ;;json              ; At least it ain't XML
