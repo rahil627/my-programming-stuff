@@ -1901,19 +1901,28 @@ this is how i should've done it.. instead i went straight to doom-meow, only bri
 vanilla emacs (tutorial) -> doom (not evil) -> doom-meow (emacs-bindings) -> prelude -> personal config
 
   1. learn original emacs bindings
+     - re-bind main modifiers (left-meta), escape/caps-lock, etc.
   2. learn doom
      - space leader key
      - config (init/config/package)
      - cli
      - (master emacs editing bindings)
-  3. add meow modal keyboard
-     - can begin re-binding some keys
-       - meow-mode (normal) keys
-       - space key-maps
-       - alt to main key-chord bindings
-         - including modifier/special keys
-  4. go back down to prelude
-  5. build up your own personal config from prelude
+  3. add meow modal keyboard (doom-meow)
+     - master meow-mode
+  4. begin re-binding some keys
+     - main key-chord bindings
+       - TODO: change meow keypad
+     - navigation
+       - text
+       - buffer/work-space
+     - a few nit-picks
+     - make things more consistent
+     - add/complete bindings for most common keys
+     - space key-maps
+  5. set-up gui
+     - tabs, treemacs, repl, terminal, etc.
+  6. go back down to prelude
+  7. build up your own personal config from prelude
 
 
 
