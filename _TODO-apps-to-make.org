@@ -56,26 +56,8 @@ text editors
   - emacs
     - port aurara
     - makes emacs more gamey, with more visual effects!
-    - TODO: setup ai / code-assistance?
-      - github co-pilot?
-    - TODO: setup for offline dev
-      1. dragonruby
-        - etags
-          - TODO: FIXME: seems like shit
-          - TODO: is it combining completion info from ruby-mode..??
-        - lsp?
-          - seems over-kill..
-            - but it was sorta working with solargraph last time..
-        - TODO: emacs integration?
-          - or is there something limiting it to the repl file?
-      2. ruby
-        - ruby-mode
-      - haxe
-        - TODO: does it have an LSP plugin?
-          - write myself..
-        - TODO: see supported editors..
-      - elixir
-        - yep, +lsp?
+    - haxe lsp integration
+      - requires re-organizing the current vs-code-oriented lsp to be modular
   - focus
     - port aurara
   - zed
