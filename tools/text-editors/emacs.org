@@ -1384,6 +1384,13 @@ c-c k
     - TODO: fix this..??
     - may have to try zed after all..
     - or maybe a lsp module for ruby??
+
+formatters
+  - standardrb
+    - "The :editor module contains format, which uses format-all package. This package was recently updated to support formatting using standardrb and also rubocop."
+  - https://github.com/doomemacs/doomemacs/issues/3507
+
+    
 ** meow's inherent god-like-mode
 
 NOTE: it's wayyyy more comfortable to press space-bar over any of the bottom-left key-chords (c-x, c-c). Even (spc x spc) is better, though it adds two more key-presses. The right alt key is the size of a normal key, and still hard to reach with my thumb, making (m-x) particularly difficult.. :/. I tried using emacs' original key-chords while playing with vanilla, but it felt like i was using a space cadet keyboard.. my hands never on the home row..
