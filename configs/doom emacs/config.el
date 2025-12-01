@@ -2323,3 +2323,16 @@
 ;;         (copy-directory 'from-dir 'doom-user-dir))) ;; or f-copy
 ;; ;;        - FIXME: (wrong-type-argument stringp doom-user-dir
 ;; ;;          - it's set by defvar.. trid quote and unquoted..
+
+
+(defun doom/ediff-init-and-example ()
+  ;; from: https://github.com/doomemacs/doomemacs/issues/581
+  "ediff the current `init.el' with the example in doom-emacs-dir"
+  (interactive)
+  (ediff-files (concat doom-user-dir "init.el")
+               (concat doom-emacs-dir "static/init.example.el")))
+
+(define-key! help-map
+  "di"   #'doom/ediff-init-and-example
+  )
+
