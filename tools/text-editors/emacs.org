@@ -1894,14 +1894,14 @@ https://github.com/emacs-tw/awesome-emacs#starter-kit
   - what i'm currently learning/discovering emacs on..
 
 *DOOM*
-  - PERSONAL NOTE: i had a great initial experience using this, felt wayyyy easier and wayyyy more intuitive and wayyyy smarter (built-in functions do what you except) than using helix!
+  - PERSONAL NOTE: i had a great initial experience using this, *felt wayyyy easier and wayyyy more intuitive and wayyyy smarter (built-in functions do what you except) than using helix!*
     - helix seems to have taken much of it's space-key-chord shortcuts from doom, making it an easy jump
-  - "Doom is a configuration framework for [[https://www.gnu.org/software/emacs/][GNU Emacs 26.3+]] tailored for Emacs bankruptcy veterans who want less framework in their frameworks and the performance of a hand rolled config (or better). It can be a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite OS.
+  - "Doom is a configuration framework for [[https://www.gnu.org/software/emacs/][GNU Emacs 26.3+]] *tailored for Emacs bankruptcy veterans who want less framework in their frameworks and the performance of a hand rolled config (or better)*. It can be *a foundation for your own config or a resource for Emacs enthusiasts to learn more about our favorite OS*.
 
-    Doom is an opinionated collection of reasonable (and optional) defaults with a focus on performance (both runtime and startup) and on abstraction-light, readable code design, so that there is less between you and Emacs.""
-  - "fast, closer to metal, opinionated, no forced plug-ins, nix/guix"
+    Doom is an opinionated collection of reasonable (and optional) defaults with *a focus on performance (both runtime and startup) and on abstraction-light, readable code design, so that there is less between you and Emacs*.""
+  - "*fast, closer to metal, opinionated, no forced plug-ins, nix/guix*"
   - 150 modules! ..and that's just what's on by default!
-  - "If you want something closer to what you know, and less involved to customize (less barebones basically), doom is what you want."
+  - "If you want something closer to what you know (less barebones basically), and less involved to customize, doom is what you want."
   - "I have tried them both and vanilla as well. I like doom the best - it has better shortcuts out the box, less buggy, uses traditional elisp for configuration as opposed to spacemacs which uses a proprietary thing you have to learn."
   - recommended by that one emacs guy from noisebridge
   - the maintainer treats it like a full-time job
@@ -1910,18 +1910,27 @@ https://github.com/emacs-tw/awesome-emacs#starter-kit
 x/spacemacs
   - "a community-drive emacs distro"
     - sounds like 'oh my zsh', which is *not good*
-
+  - adds an abstraction over config..?
+    
 prelude
   - TODO: worth trying, now that you can try emacs with different configs via a flag
     - i much prefer going backwards: having all the tools ready, slowly discovering thing over time. Thus doom is the way to go for me. And so far, i see little reason to try anything else.. i can always un-bind crap.
       - also, there's just no way to beat the maintainer of doom, he puts an incredible amount of work into it that is a full-time job, a job that i don't want to do
   - way more stripped down, much closer to vanilla emacs
-  - Prelude is basically a very light starter kit, whereas doom is a whole garage full of tools. (This does not mean doom has more utility, it just comes with more going on out of the box)
+  - Prelude is basically *a very light starter kit*, whereas doom is a whole garage full of tools. (This does not mean doom has more utility, it just comes with more going on out of the box)
+    - *with this, you can begin to create your own config/emacs*
   - recommended by that one emacs guy from noisebridge
 
 
+spartan/grokemacs
+  - https://www.reddit.com/r/emacs/comments/1kvcze5/spartan_emacs_a_more_minimal_doom_or_spacemacs/
+  - this guy starts by creating spartan emacs, which includes nano emacs (256), but then ends up creating his own thing: grok emacs
+    - you can see how *it quickly becomes a project of it's own to maintain your own emacs config*, instead, i think *prelude is the lowest i'd go*
 
-
+nano emacs
+  - https://gist.github.com/rougier/8d5a712aa43e3cc69e7b0e325c84eab4
+    - the 256 line version
+  
 
 * doom
 ** maintain doom (+ post-install notes)
