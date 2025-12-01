@@ -1924,43 +1924,6 @@ prelude
 
 
 * doom
-** install doom
-follow the directions on the github
-fish_add_path ~/.config/emacs/bin
-
-windows:
-scoop install emacs
-
-set $env:home = "$home" in powershell profile
-append $home/.emacs.d/bin to path
-
-make folder in $home/.emacs.d
-copy a clone of the doom repo there
-
-doom sync
-  - doom sync --aot
-    - compiles natively
-      - TODO: test if worth or not... maybe not worth it if updating frequently..
-doom doctor
-  - check for problems
-doom run
-
-NOTE: at the moment, must use bash to run it:
-."C:\program files\Git\bin\sh.exe
-  - run git bash
-    - i think exists under msys2 (installed via scoop) too
-doom run
-
-add a shortcut
-  - "C:\program files\git\bin\sh.exe" -c "/c/Users/ra/.emacs.d/bin/doom run"
-
-..YAY! :D
-
-
-
-https://gist.github.com/rahil627/e9d150adc8dcc36846f5f6d0a4465665
-  - my gist on installing doom for chromeos, including building emacs 29
-
 ** notes on how to maintain doom (+ post-install notes)
 
 
@@ -2016,9 +1979,45 @@ emacs -Q
   - or --quick
     - even leaner..
 
+** install doom
+follow the directions on the github
+fish_add_path ~/.config/emacs/bin
+
+windows:
+scoop install emacs
+
+set $env:home = "$home" in powershell profile
+append $home/.emacs.d/bin to path
+
+make folder in $home/.emacs.d
+copy a clone of the doom repo there
+
+doom sync
+  - doom sync --aot
+    - compiles natively
+      - TODO: test if worth or not... maybe not worth it if updating frequently..
+doom doctor
+  - check for problems
+doom run
+
+NOTE: at the moment, must use bash to run it:
+."C:\program files\Git\bin\sh.exe
+  - run git bash
+    - i think exists under msys2 (installed via scoop) too
+doom run
+
+add a shortcut
+  - "C:\program files\git\bin\sh.exe" -c "/c/Users/ra/.emacs.d/bin/doom run"
+
+..YAY! :D
+
+
+
+https://gist.github.com/rahil627/e9d150adc8dcc36846f5f6d0a4465665
+  - my gist on installing doom for chromeos, including building emacs 29
+
 ** install icons
-run nerd-icons-install-fonts function within emacs
-  - TODO: not working..
+m-x nerd-icons-install-fonts function
 
 ** install doom-meow
 doom-meow
