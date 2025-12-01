@@ -21,31 +21,34 @@ shiiiit, i've got my work cut out for me..
 
 just open pull requests 'n start discussions/issues as needed
 
-game/media/io engines
+** game/media/io engines
   - let others handle this..
-  - though, i can def help with documentation, as dragonruby and heaps severely need it!!
+  - though, i can def help with documentation/tutorials/book, as dragonruby and heaps severely need it!!
     
-  - dragonruby
-    - make games fuck the rest.
-      - web and ai are boring are fuck.
-        - stick to reality: cooking food, making tea, gardening, that's life!!
-  - heaps
-    - download heaps web-site
-    - download haxe web-site / manual
-  - (sorry luxe!)
-  - jon blow's engine
+  1. dragonruby
+     - *MAKE GAMES FUCK THE REST.*
+       - *web and ai are boring are fuck.*
+         - *STICK TO REALITY: COOKING FOOD, MAKING TEA, GARDENING, THAT'S LIFE!!*
+  2. heaps
+     - download heaps web-site
+     - download haxe web-site / manual
+  x. (sorry luxe!)
+     - though, maybe could try again without using the ECS/game editor..: love2d/dragonruby style!
+  3. jon blow's engine
 
-langs
-  - these languages are so far developed, so complex, i don't think i could every help.. :/
+** langs
+  - these languages are so far developed, so complex, i don't think i could ever help.. :/
 
-  - haxe
-  - ruby
-    - (especially its embedded variants)
-  - elixir
-  - jai
-
+  1. haxe
+  s. (ruby)
+    - (particularly its performance-oriented embedded variants)
+      - (mruby?)
+        2. dragonruby
+  3. jai
+  x. elixir
+    - not a general lang, solely for servers (web)
   
-text editors
+** text editors
   - textbringer
     - ruby!
     - create basic bindings (next/previous word)
@@ -66,12 +69,6 @@ text editors
     - can focus on making shit!!
 
 
-
-editors:
-  - emacs
-
-
-  
 merged from elsewhere:
 setup heaps and imgui
 try imgui with ruby!
