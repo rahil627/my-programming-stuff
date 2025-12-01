@@ -1924,11 +1924,11 @@ vanilla emacs (tutorial) -> doom (not evil) -> doom-meow (emacs-bindings) -> pre
   6. go back down to prelude
   7. build up your own personal config from prelude
 
-
-
+** list 
   
 https://github.com/emacs-tw/awesome-emacs#starter-kit
-  
+
+
 *doom-meow*
   - what i'm currently learning/discovering emacs on..
 
