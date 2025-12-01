@@ -1,7 +1,6 @@
 
 
-
-  
+NOTE: *should aim to put everything you need into source repo*
 
 devdocs.io
   - click on or enable the languages you need
@@ -9,25 +8,32 @@ devdocs.io
   - download them to use offline
     - devdocs.io/offline
 
+download learn x in y minutes for each lang?
+
+TODO: surely there's some cheat-sheet web-site..
+  - zenspider.com/ruby/quickref.html
+    - TODO: download this!
+    - nice!
+
 ai
-  - no offline ai :(
+  - no offline ai..
     - LLM would require too much compute power
-    - though, it would provide privacy..! and not participate in giving data to the ai
+    - though, it would provide privacy..! and not participate in giving data to the ai..
 
 
 
+* haxe
+
+ just download the docs
+ std lib is really good, simple enough to immediately use!
+ 
 * ruby
 
-TODO:
-  - add gems repo to emacs dirs
-    - create a ruby workspace?
 
 still seems best to just use ai to auto-generate some boiler-plate code, and work from there..
-  - *TODO may have to try github co-pilot, or whatever that works with emacs..*, and create a good ai workflow with that..
-  - *TODO: try generating phoenix and roda apps side-by-side*
 
 ri
-  - i think ruby comes with it..
+  - ruby comes with it..
   - maybe have to run it once..?
   - seems to grep docs straight from the code..
     - can search objects, functions, possibly vars
@@ -35,21 +41,22 @@ ri
   - f/b to move down/up
   - q to quit
 
-zenspider.com/ruby/quickref.html
-  - nice!
-
+pry
+  - how does this differ from ri?
+  
 github.com/khusnetdinov/rub.fundamental
   - patterns, principles, structures, threads
 
 
 
-** install some gems:
+** install some gems
 
 gems come with docs, and sometimes even provide examples
 
 dragonruby
-  - incredible examples..
+  - *incredible samples*..
     - simple, no modules, classes, or anything fancy
+    - *nothing beats learning via game-dev!*
 
 rails
   - gem install rails
@@ -61,5 +68,3 @@ roda
   - gitlab.com/fiachetti/mastering-roda
     - *NOTE: an incredible example of a single, giant .org file*
 
-* haxe
- ...
