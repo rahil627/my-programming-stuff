@@ -1181,7 +1181,6 @@ https://www.reddit.com/r/emacs/comments/1ef4pyw/has_someone_used_literate_progra
 
   - i did a reasonably big project in org-babel. I impressed myself, but no one else :) I concluded that without IDE and debugger integration, it'll never hit the mainstream. Jupyter is not even close because it misses the whole point of LP--that you can refer to things before you define them. Can't do that in Jupyter. The world is a sad place.
     
-  
 ***** bindings
 c-c c-v / spc c v
   - demarcate block
@@ -1219,9 +1218,9 @@ P push
     - main/origin?
   - u upstream?
     - main/origin?
-      
-*** dired
-mark files 'n folders, then take action
+*** dired and ibuffer
+
+mark files 'n folders or buffers, then take action
   - and remember, can use favorite emacs commands to search text in the buffer!
 
 m(ark)
@@ -1232,7 +1231,10 @@ capital keys for actions, for safety reasons
     - R is mv, use it for rename, move, cut/paste
 
 *** flycheck (syntax checker)
-just use the gui, mode-line, click on the little error/warning/info icons on the botttom right
+
+this also includes formatters and linters
+
+just use the gui on the mode-line: click on the little error/warning/info icons on the botttom right
 
 c-c ! to trigger the menu
   - this is a strange binding..
@@ -1258,9 +1260,9 @@ snippets are triggered by pressing tab when the cursor/point is at the end of a 
 NOTE: with auto-triggered completion, these can conflict, as there may be completions after typing a word. you must escape the completion picker then press tab
 
 
-*** language-specific
+**** language-specific
 
-**** dynamic langs
+***** dynamic langs
 
 i'm guessing these functions work with several languages with dynamic runtimes
   - lisp
@@ -1272,7 +1274,7 @@ i'm guessing these functions work with several languages with dynamic runtimes
   - python??
   - lua?
 
-***** introspection-related
+****** introspection-related
 
 explore dynamic programs (including emacs!) *interactively* via emacs
 
@@ -1292,7 +1294,7 @@ c-c c g / spc-l g (meow)
       - see helpful-[commands] (spc h x/f/v)
   - note: if it's a buffer of emacs code, it will search through emacs, similar to the helpful- functions
 
-***** eval-related
+****** eval-related
 
 emacs's provides an interface to eval bits of code: either run eval on an expression (with the point at the end of the expression; could be any amount of nested lisp expressions..), a region, buffer(s?), files(s?)
 
@@ -1324,7 +1326,7 @@ send regions of code to a repl
     - +eval/send-region-to-repl
   - spc-c-??
 
-**** lisp
+***** lisp
 
 see [lisp.org]
 
@@ -1353,7 +1355,7 @@ c-( / c-s-9
 m-( / c-s-0
   - move to next expression(?) and auto-indent
 
-**** ruby
+***** ruby
 
 the localleader map (c-c l) is really neat 'n simple
 
