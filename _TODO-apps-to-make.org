@@ -16,7 +16,12 @@ shiiiit, i've got my work cut out for me..
 *basically, i'm creating my own view of the world, what i want to see, digitally*
   - without all teh crap, bare-bones, craigslist style
 
+*MAKE GAMES FUCK THE REST.*
+  - *web and ai are boring are fuck.*
+  - *STICK TO REALITY: COOKING FOOD, MAKING TEA, GARDENING, THAT'S LIFE!!*
 
+
+  
 * personal tools/tech/anti-productivity
 
 just open pull requests 'n start discussions/issues as needed
@@ -26,12 +31,7 @@ just open pull requests 'n start discussions/issues as needed
   - though, i can def help with documentation/tutorials/book, as dragonruby and heaps severely need it!!
     
   1. dragonruby
-     - *MAKE GAMES FUCK THE REST.*
-       - *web and ai are boring are fuck.*
-         - *STICK TO REALITY: COOKING FOOD, MAKING TEA, GARDENING, THAT'S LIFE!!*
   2. heaps
-     - download heaps web-site
-     - download haxe web-site / manual
   x. (sorry luxe!)
      - though, maybe could try again without using the ECS/game editor..: love2d/dragonruby style!
   3. jon blow's engine

@@ -24,8 +24,9 @@ ai
 
 * haxe
 
- just download the docs
- std lib is really good, simple enough to immediately use!
+just download the docs / web-site / manual / cookbook
+download heaps web-site
+std lib is really good, simple enough to immediately use!
  
 * ruby
 
