@@ -1924,18 +1924,27 @@ prelude
 
 
 * doom
-** notes on how to maintain doom (+ post-install notes)
-
-
+** maintain doom (+ post-install notes)
 
 my notes:
 see more notes in config
 
 
+update init.el:
+NOTE: the init file does not auto-update/merge, you must do it yourself after every upgrade
+
+/.doom.d/static/init-example.el
+  - should contain the newest provided init.el
+
+doom/ediff-init-and-example
+  - i added this function from a github issue on this..
+    
 
 from github repo page:
 doom sync
   - to synchronize your private config with Doom by installing missing packages, removing orphaned packages, and regenerating caches. Run this whenever you modify your private init.el or packages.el, or install/remove an Emacs package through your OS package manager (e.g. mu4e or agda).
+doom upgrade --packages
+  - to update all installed packages.
 doom upgrade
   - to update Doom to the latest release & all installed packages.
 doom doctor
