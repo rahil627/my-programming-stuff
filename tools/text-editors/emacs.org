@@ -1188,6 +1188,10 @@ c-c c-v / spc c v
     - TODO: change to c? (check-source-block checks header arguments..??)
       - maybe flip with '!'?
 
+*** TODO ediff
+
+doh!, should've known.. emacs has this.. maybe should learn this before magit..
+
 *** TODO magit
 
 TODO: i really should try to use this more.. besides github desktop seems to be an electron app!! :/
