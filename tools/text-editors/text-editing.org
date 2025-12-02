@@ -8,7 +8,11 @@ can quickly gather ideas by simply watching pros at work
 
 i'm sure he's got some wild tricks..
 
-** j blow
+** TODO j blow
+
+TODO: move out to game dev notes
+
+TODO: watch some more..
 
 conclusion:
 actually [his development method is] dead simple. nothing fancy. he has a mental model of the program--because he wrote it--somewhat recently. he has a mental model of the game, game engine, and programming language! he simply can't be bothered with dealing with stupid things like text editors, or config'ing emacs. hence, **he needs things that don't require any thinking, that's more intuitive, more physical**: a mouse, probably a touch-pad too
@@ -64,6 +68,8 @@ https://www.twitch.tv/videos/2249653469
 
 
 * key-mappings / key-binding
+
+see [text-editors#key-binding concepts and comparison]
 
 TODO: main mappings are in [emacs]
 
@@ -125,7 +131,7 @@ view
   - sticky-mode
   - haven't used yet...
 
-
+  
 ** micro defaults
 
 very cute 'n simple
