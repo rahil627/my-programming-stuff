@@ -43,6 +43,11 @@ file >> file2 # TODO: NOTE: '>' operator overwrites!?
 # order entire file-system by disk size, navigate, delete
 ncdu /
 
+# size of everything under the current dir, recursively
+du -ha --max-depth=1 /path/to/directory
+  - -a for all / hidden files
+
+
 # use this to find the file, then use | to chain the command
 # i think it searches recursively by default..
 find . -name *.ext

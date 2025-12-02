@@ -10,8 +10,6 @@ less /var/log/apt/history.log
 
 TODO: surely i have more elsewhere..
 
-du -ha --max-depth=1 /path/to/directory
-  - -a for all / hidden files
 
 update system:
 NOTE: this doesn't update major versions--once every two years
