@@ -1,12 +1,45 @@
 
 
-# main use
+### main use
 
 # use these to see differences and discard them
 git diff HEAD
 git diff file-name
 
 git restore file-name
+
+
+# basic add changes
+git add -A
+git commit -a -m "(> '.')>"
+git push
+
+
+
+
+
+### some specific stuff / pastebin
+
+# undo last commit
+git reset --soft HEAD~1
+#  - undo the commit but keep the changes for a new commit
+git reset --hard HEAD~1
+#  - undo and discard changes
+
+# undo git pull
+git reset --keep HEAD@{1}
+
+# diff works for two folders (if they are the same repo, but different version)
+git diff repo-old repo-new
+
+# save diff log
+git diff --output output.txt
+
+
+
+
+
+
 
 
 # from github, after you create a new repo
@@ -35,34 +68,34 @@ git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
 
 
 
-# git submodules
+### submodules
+
+# update submodules
+git pull
+git pull --recurse-submodules
+#git submodule foreach git pull
+# when you update your main project to also update the submodules. Also, you can always use
+#git submodule update --init
+
 
 # add a git submodule
 git submodule add https://bitbucket.org/jaredw/awesomelibrary
-# it should add .gitmodules and a folder for it
+#   - it should add .gitmodules and a folder for it
 
-# remove a git submodule
-# Remove the submodule entry from .git/config
-git submodule deinit -f path/to/submodule
+# remove a git submodule script
+# path/to/submodule
+path="$@"
+
+# remove the submodule entry from .git/config
+git submodule deinit -f $path
 
 # Remove the submodule directory from the superproject's .git/modules directory
-rm -rf .git/modules/path/to/submodule
+rm -rf ".git/modules/$path"
 
 # Remove the entry in .gitmodules and remove the submodule directory located at path/to/submodule
-git rm -f path/to/submodule
+git rm -f $path
 
 
-
-# specific stuff
-
-# undo git pull
-git reset --keep HEAD@{1}
-
-# diff works for two folders (if they are the same repo, but different version)
-git diff repo-old repo-new
-
-# save diff log
-git diff --output output.txt
 
 
 
