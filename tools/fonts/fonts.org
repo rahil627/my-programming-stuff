@@ -165,7 +165,7 @@ vs-code
 
 terminal
   - see terminal config for more info
-  - **monofoki**
+  - *monofoki*
     - NOTE: for this particular font, must override line-height: 1 to match mononoki
     - font-size: 8-9
   - TODO: can play with turning off anti-aliasing
@@ -212,29 +212,29 @@ see [emacs config]
 TODO: need to try consolas in a lighter weight
 TODO try source code pro with a more narrow width
 
-**office code pro <- hasklig (light) ~= source code pro**
+*office code pro <- hasklig (light) ~= source code pro*
   - terminal: size 10-11, weight: regular/normal
   - vscode: size 11-12, weight: light
   - best/most comfy for my eyes long-term
   
-**monofoki <- mononoki**
+*monofoki <- mononoki*
   - 12, same size as consolas
   - slightly wider and less seriphy than consolas, and therefore more comfy, but less readable
   - a little more funky
   - only one font weight
   - using in terminal
   
-**consolas**
+*consolas*
   - 12
   - a classic on Windows
-  - **still looks the best on windows**, especially vs-code, where it is the default
+  - *still looks the best on windows*, especially vs-code, where it is the default
   - damn near impossible to beat
   - small horizontal space between characters
   - 1-2 font sizes smaller than others (marketing?)
-  - **comes with only one weight: regular, no light?**
+  - *comes with only one weight: regular, no light?*
   - shipped with vs-studio and thus strongly associated with c#
   
-**ubunto mono**
+*ubunto mono*
   - comes with chromeos's terminal app
     - 14 (default)
 
@@ -292,7 +292,7 @@ paper mono
 
 fun ones
 serious shanns
-  - *cute* and *narrow*!
+  - /cute/ and /narrow/!
     - as narrow as reddit sans mono
 
 **** some more to  try
@@ -306,7 +306,7 @@ adwaita mono
 
 ** cute
 
-smaller, narrower, *fun*, *cuter*, with some personality!
+smaller, narrower, /fun/, /cuter/, with some personality!
 
 annotation mono
   - "A lovingly crafted handwriting-style monospace font."
@@ -322,15 +322,15 @@ maple mono
   - nice 'n thick TODO: try the "light" version
   - has a cute jrpg feel to it, funny little 'a'
   
-**monofoki**
+*monofoki*
   - more sans-seriphy
   - a lot of small changes, usually for the better
     - not sure how i feel about this 'm' though..
   - branches from mononoki, 50 commits behind, 200+ ahead
   
-**mononoki**
+*mononoki*
   - NOTE: may have to adjust line height to 1
-  - a *cute*, unique, small font
+  - a /cute/, unique, small font
   - a more open-feeling consolas
   - the bold is great, very sans-serif
   - slightly wider and less seriphy than consolas, making it feel more comfortable
@@ -349,7 +349,7 @@ cutive mono
   - TODO: also somehow darkens the font?
   
 *ubuntu mono*
-  - *dense* yet cute
+  - /dense/ yet cute
      - really great at scrunching up a bunch of terminal output
   - *perfect for terminals*
     - it reminds of the default one on macos's terminal app
@@ -372,11 +372,11 @@ cascadia mono/code
   - has a light version
   - feels more roman and seriphy than source code pro
   - but it does have better/narrower character width
-  - **great in windows terminal**, showing **really thick strokes**
+  - *great in windows terminal*, showing *really thick strokes*
 
 monaspace
   - a collection by github
-  - **neon**
+  - *neon*
     - a bigger source code pro with some more seriphy-ness
     - very good, roundy
     - good character height, not abnormally tall like dejavu-derived ones
@@ -403,7 +403,7 @@ Meslo LG S NF
   - just fixes symbol positions from dejavu sans mono
   - The recommended font is the product of many individuals. Its origin is Bitstream Vera Sans Mono, which has given birth to Menlo, which in turn has spawned Meslo. Finally, extra glyphs have been added to Meslo with scripts forked from Nerd Fonts. The final font is released under the terms of Apache License.
  
-**office code pro**
+*office code pro*
   - forked from source code pro, combines a lot of good things from other fonts
   - possibly my current favorite
 
