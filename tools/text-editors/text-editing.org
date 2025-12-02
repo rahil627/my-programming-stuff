@@ -63,36 +63,6 @@ https://www.twitch.tv/videos/2249653469
       - very, very few cases for performance/memory
 
 
-* is emacs still the one, in 2024? or: how did we end up here? what was the story of your journey? - a reddit post by me!
-
-https://www.reddit.com/r/emacs/comments/1fh999a/is_emacs_still_the_one_in_2024_or_how_did_we_end/
-
-is emacs still the one, in 2024? or: how did we end up here? what was the story of your journey?
-i just got a (like-)new laptop(!!), after happily living off an ipad mini 2 for a long long time, and, for the previous few months, an old chromebook. With the chromebook, i was using--and learning--linux, and the ways of linux (via chromeos's-lxd-vm-"crostini"-container-thing). It felt like being a programmer in the 1970s. Terminals? Unix? Bash?? Looks like Perl! Fish--now we're in the 80s, baby! Dotfiles? Nvim!? Nvim configs? *barf*. Now that i've got a proper windows laptop from the lovely Taiwan, i am immediately delighted to toss out unix (*nix?) for powershell. This may be the one time i'd happily conform to Microsoft's strict 'n consistent naming conventions (im-a-bit-unconventional).
-
-after surveying the lands of programming after not doing any for a decade, i've fallen on helix. It is written in rust, and hopefully it will have scheme scripting soon(!!), which'll make a fun entry into the world of lisp, for me, and hopefully for others too. Unfortunately, it's under heavy dev, and doesn't even have a file tree yet :/ . In addition, i replaced windows terminal---which actually just worked; it just suffered from a bad generated json config file :shrug: --with wezterm (zellij has some cargo without windows, and besides, wez seems cool), which came with defaults i didn't like (i had to change it all to use the alt-modifier-key, and remove a bunch of duplicated mappings), but at least i could easily config it, as it uses lua for scripting.
-
-then the problem came. I had to edit something in the program, helix, the text editor. In order to make that edit, i had to set up and build for rust on windows (thank goodness for scoop install rust/up-msvc and the vs-studio installer helper). Not bad, but ugh. I guess it'd be the same if it were written in sbcl?.. Then a deeper problem came. I wanted to do something beyond the functions that the program provided. In helix, there is a config file, .ini-like in syntax (if that's still a thing..), that enables you to map a sequence of functions to a key, for example: X = ["goto_first_nonwhitespace", "select_mode", "goto_line_end", "normal_mode"] # TODO: make it extend to next line, like x does But what about custom functions ("commands")? (perhaps it's expected i write a separate program that pipes to/from a shell?.. but for every little function..??)
-
-as more languages are used, as more programs are made (--or re-made!), more and more, i feel the force that is leading me towards lisp (smalltalk too!) and emacs. Just one language and one program to rule them all!, providing infinite extensibility and seamlessly communicating between them all, without a foreign-function-interface. No need to separate the terminal, terminal-multiplexer, text editor; nor the knowledge-base, version control, grep; nor even the browser, e-mail-app, music-app, chat-app; nor even the os... But emacs in 2024? Sounds like a lot of.. cruft, unwanted baggage. It sounds just like my very recent experience with unix! It's a rabbit hole that i've been avoiding.. though, contradictorily, me trying doom emacs, loving the immediate intuitiveness of the pop-up dialogs and showing what function is being used, is kinda how i ended up with helix to begin with?.. :thinking:
-
-i was recently looking into an editor for common lisp, to just try a lisp, and though there's portacle, a config for emacs, i ran into a lispy editor called lem. I presume *because* it's written in lisp, one can easily write functions ("commands")--real functions with arguments 'n all!--,in addition to hooks, and even an entire "extension"/"major mode". All of this, in one simple language. *muah*
-
-i feel with lem that i am at the edge of the rabbit hole; and i'm... still avoiding it.
-
-I'd kinda have to start fresh with the basic emacs key-mappings, or, just go all in with doom emacs, and maybe can use the meow-mode as training wheels.
-
-...anyway, i just wonder, is this the general feeling that lisp and/or emacs users have towards the rest of the languages (save smalltalk) and dev-tools? Was my journey similar to your journey to lisp/emacs? Like, why bother with all the crap when you can just have one thing that just works? Forever. In one simple language. A powerful language that maybe i could even make games with, and web-sites too? Am i crazy to start using lisp 'n emacs in 2024?
-
-i want to hear your journeys. Or anyone's journey!
-
-(recently, i had to choose some frameworks to help me make stuff i've been wanting to make for a long long time: keep jekyll/ruby for my stupid simple personal static site, currently trying luxe/wren for games (used to use haxe--not simple!)--at least until untitled-j-blow-engine/jai comes out--, and phoenix/elixir for web... top all that off with some powershell 'n ruby scripts, and, well, i think you'd understand why i'm feeling the need for simplicity! :cry:)
-
-related / currently reading:
-https://www.reddit.com/r/emacs/comments/1brnmds/why_use_emacs/
-
-
-
 * key-mappings / key-binding
 
 TODO: main mappings are in [emacs]
