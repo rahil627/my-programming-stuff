@@ -2415,3 +2415,74 @@
   "di"   #'doom/ediff-init-and-example
   )
 
+
+;; there's not much need for a terminal in emacs.. just use the os-provided one
+(defun ra/open-os-terminal () ; ai gen'd
+  "Open the external OS terminal in the current directory."
+  (interactive)
+  (let* ((current-dir (if (buffer-file-name)
+                          (file-name-directory (buffer-file-name))
+                        default-directory))
+         (dir-quoted (shell-quote-argument current-dir))
+         (command
+          (cond
+           ;; macOS
+           ((eq system-type 'darwin)
+            (format "open -a Terminal %s" dir-quoted))
+
+           ;; Windows
+           ((eq system-type 'windows)
+            (if (executable-find "wt.exe")
+                (format "wt.exe -d %s" dir-quoted)
+              (format "cmd.exe /c start cmd.exe /K cd /D %s" dir-quoted)))
+
+           ;; GNU/Linux & ChromeOS (Crostini) - if 'is-chromeos' check above returned FALSE
+           ((eq system-type 'gnu/linux)
+            ;; Fallback for generic Debian/Ubuntu/Fedora installs
+            (if (executable-find "gnome-terminal")
+                (format "gnome-terminal --working-directory=%s &" dir-quoted)
+              ;; Nested check for x-terminal-emulator, then xterm
+              (if (executable-find "x-terminal-emulator") ; chromeos from crostini
+                  (format 
+"x-terminal-emulator --working-directory=%s &" dir-quoted)
+                (if (executable-find "xterm")
+                    (format "xterm -e \"cd %s; bash\" &" dir-quoted)
+                  (error "No suitable terminal emulator found (gnome-terminal, x-terminal-emulator, or xterm).")))))
+
+           ;; Fallback
+           (t (error "Unsupported operating system for opening external terminal")))))
+
+    
+    ;; Use async-shell-command to run the command without blocking Emacs
+    ;; (async-shell-command command)
+
+    
+    ;; close the *async buffer* that is created
+    ;; source: https://stackoverflow.com/questions/6915314/emacs-automatically-close-async-output-buffers-on-command-completion
+    ;;   - ai failed me.. maybe needed to wait
+    (save-window-excursion
+      (let ((buf (generate-new-buffer "async")))
+        (async-shell-command command buf)
+        (run-with-timer 10 nil (lambda (buf) (kill-buffer buf)) buf)))
+
+;; ;; Append output redirection to suppress the *Async Shell Command* buffer popup
+    ;; (let ((silent-command (concat command " > /dev/null 2>&1")))
+    ;;   (async-shell-command silent-command))
+
+    ;;   ;; Hides the buffer if it was created immediately after command submission
+    ;;   (if (get-buffer output-buffer-name)
+    ;;       (progn
+    ;;         (kill-buffer output-buffer-name)
+    ;;     (message "Opening external terminal in %s" current-dir))
+    ;;     (message "Command sent (no buffer created).")))
+
+))
+  
+(after! meow
+  (meow-define-keys
+      'leader
+      '("o t" . ra/open-os-terminal) ;t for terminal, or s for shell
+
+))
+
+
