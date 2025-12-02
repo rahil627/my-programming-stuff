@@ -118,8 +118,6 @@ z. focus, *the new notepad.exe*, to just simply write/express, *zen*, *extremely
 d. zed (if not, vs-code), for a quick beautiful sane defaults complete ide, to focus on the work, and for ai workflows, and for multi-player
 
 
-
-    
 upcoming (buggy):
  lem, if you want to help re-make emacs in common lisp, or just *to try cl*
   - *has great potential.. with a good amount of contributers..*
@@ -129,96 +127,6 @@ upcoming (buggy):
 
 
 that is all.
-
-
-
-* textbringer dev
-
-
-only 200kb?? i guess because it doesn't include the ruby compiler, nor the std libs... yeah, i recall using 'gem install' so it's all in the libs
-  - try packing it with traveling ruby!
-
-make a minimalist org-mode
-  - def a great beginner parser project!! :D
-    - and in ruby!
-  - could start with markdown first..
-    - START HERE
-
-make textbringer more accessible, ideally to the level of focus editor and helix, but limited to terminal, and *focused on ruby magicks :D*
-  - start by offering a very simple alternative to the notoriously hideous emacs key-chord bindings
-    - x/make the config simple too, like focus, also hot-reloadable
-      - vs hackable.. as the whole thing is a ruby program.. introspect and search for the right vars 'n functions..?? i mean, that's what i do in emacs.. peer m-x completions and describe-vars..
-        - just provide a little guide in the config file to where useful settings in the program may be... which objects, or naming patterns for various settings
-        - *this is actually a great project to really learn how ruby works..*
-    - are arrow keys not bound by default or is it a terminal problem??
-      - TODO: download 'n try on wezterm
-      - START HERE
-  - even with emacs bindings i'm having troubles..
-    - TODO: add escape key as alternative to c-g to escape the mini-buffer (key sequence input, m-x, find file, etc.)
-      - again, might be a terminal problem..
-  - at least add which-key?
-    - TODO: maybe instead just show bindings after pressing tab.. to keep it minimal, less distracting pop-ups
-      - START HERE
-  - focus editor has a ton of little design ideas to copy, as a great zen starting base
-
-
-(just installed wl-clipboard for textbringer, yay!!)
-  - FIXME: "No suitable type of content copied"
-    - hmmm, damn
-      - FIXME: and a bug if you do it twice, LOL, gotta love it. 
-        - it's interesting that it inserts text into the terminal like that though..
-          - TODO: hmm, if c-/ is undo, what's redo..? not c-s-/ nor m-/ ..
-            - at least need a reminder of bindings after using m-x..!
-
-              
-* key-binding concepts
-
-main editing key-bindings
-
-emacs
-  - everything uses these (since bash 'til nowaday's vs-code 'n zed!)
-
-
-  
-modal key-bindings
-
-meow > my custom helix bindings (even more kakoune-like) > helix >> nvim
-  - NOTE: emacs is special, as it's focus is on insert-mode, as it doesn't add another (distractful) layer of key-bindings on top of that..
-  - text editing only
-  - *NOTE: hjkl is not keyboard layout agnostic!!*, thus it's actually better to stick to emacs' mneumonic key-bindings, even if it's a bit unweildy..
-
-
-
-leader-keys / key-chords
-  - general leader-key-bindings for functions
-
-
-meow-doom > doom's evil bindings > helix > emacs > nvim(?)
-  - meow provides a minimal start, made to provide space for personal customization, including doom's sane default emacs bindings (c-c / spc) and emacs' original key-bindings (c-x, c-c c-, c-h)
-    - this way, you can learn the way of emacs, and have the space (literally and space-key) to create your own set(s) of key-mappings
-    - NOTE: modules can have whatever bindings they choose, making emacs feels rather inconsistent, difficult to grasp
-      - though, at least they should be based around emacs' original key-bindings, hopefully lessening the cognitive-load..
-  - doom's evil-bindings provides a complete package based around vim bindings, of everything you'd ever need, altering emacs original key-chords and creating more maps and key-bindings on the space-leader-key
-    - it can feel a bit cluttered, with too many bindings, not enough room!
-    - it also provides optional alt-bindings for nearly everything else in emacs (beyond the main buffer), making the bindings consistent across everything in emacs (especially the hjkl keys for movement):
-      - completion via the mini-buffer (c-j/k to move down/up)
-      - frequently-used modules like dired
-      - info?
-
-
-** TODO some readings
-  - note: typed the words since copy/paste in terminal isn't working.. :/
-  - phaazon kakoune philosophy
-    - the person builds a lot of pop text editor functions for kakoune, using unix cli tools
-  - phaazon more hindsight vim helix kakoune
-    - interestingly went to kakoune after helix, but ultimately uses both
-  - esrh.me switching to meow
-    - just details the improvements over vim, and even doom
-  - rrajath ditching evil for meow
-    - not much writing, but def has a solid emacs config!
-      - moved to minimal-emacs.el
-
-
 
 
 
@@ -466,7 +374,7 @@ NOTE: all of these are terminal editors first, with an optional modular front-en
   - which i think is indeed the way to go, to start the project simple, and master the core of the program
 
 
-  
+
 overview:
 0. **emacs (doom)**
   - OMG. FUCK TERMINALS. THIS IS ALL YOU'D EVER NEED!!
@@ -806,14 +714,14 @@ generally adds these features: **integrated interactive debugger, profiler**, ad
   - though, nowadays, with LSP an DAP protocols gaining popularity, only the most advanced features make IDEs stand out
 
 
-overview:  
+overview:
   - vs-studio
     - for advanced debugging / monitoring features
   - jetbrains IDEs
     - language-based
      - $$
 
-       
+
 *** language-specific IDEs by JetBrains
   - seems to fill the gap vs-studio has left with other languages
   - widely considered the best IDE for nearly every major language except javacript and C#
@@ -944,7 +852,95 @@ textmate
 
 
 
-    
+
+* PROJECT textbringer dev
+
+
+only 200kb?? i guess because it doesn't include the ruby compiler, nor the std libs... yeah, i recall using 'gem install' so it's all in the libs
+  - try packing it with traveling ruby!
+
+make a minimalist org-mode
+  - def a great beginner parser project!! :D
+    - and in ruby!
+  - could start with markdown first..
+    - START HERE
+
+make textbringer more accessible, ideally to the level of focus editor and helix, but limited to terminal, and *focused on ruby magicks :D*
+  - start by offering a very simple alternative to the notoriously hideous emacs key-chord bindings
+    - x/make the config simple too, like focus, also hot-reloadable
+      - vs hackable.. as the whole thing is a ruby program.. introspect and search for the right vars 'n functions..?? i mean, that's what i do in emacs.. peer m-x completions and describe-vars..
+        - just provide a little guide in the config file to where useful settings in the program may be... which objects, or naming patterns for various settings
+        - *this is actually a great project to really learn how ruby works..*
+    - are arrow keys not bound by default or is it a terminal problem??
+      - TODO: download 'n try on wezterm
+      - START HERE
+  - even with emacs bindings i'm having troubles..
+    - TODO: add escape key as alternative to c-g to escape the mini-buffer (key sequence input, m-x, find file, etc.)
+      - again, might be a terminal problem..
+  - at least add which-key?
+    - TODO: maybe instead just show bindings after pressing tab.. to keep it minimal, less distracting pop-ups
+      - START HERE
+  - focus editor has a ton of little design ideas to copy, as a great zen starting base
+
+
+(just installed wl-clipboard for textbringer, yay!!)
+  - FIXME: "No suitable type of content copied"
+    - hmmm, damn
+      - FIXME: and a bug if you do it twice, LOL, gotta love it.
+        - it's interesting that it inserts text into the terminal like that though..
+          - TODO: hmm, if c-/ is undo, what's redo..? not c-s-/ nor m-/ ..
+            - at least need a reminder of bindings after using m-x..!
+
+
+* key-binding concepts and comparison
+
+main editing key-bindings
+
+emacs
+  - everything uses these (since bash 'til nowaday's vs-code 'n zed!)
+
+
+
+modal key-bindings
+
+meow > my custom helix bindings (even more kakoune-like) > helix >> nvim
+  - NOTE: emacs is special, as it's focus is on insert-mode, as it doesn't add another (distractful) layer of key-bindings on top of that..
+  - text editing only
+  - *NOTE: hjkl is not keyboard layout agnostic!!*, thus it's actually better to stick to emacs' mneumonic key-bindings, even if it's a bit unweildy..
+
+
+
+leader-keys / key-chords
+  - general leader-key-bindings for functions
+
+
+meow-doom > doom's evil bindings > helix > emacs > nvim(?)
+  - meow provides a minimal start, made to provide space for personal customization, including doom's sane default emacs bindings (c-c / spc) and emacs' original key-bindings (c-x, c-c c-, c-h)
+    - this way, you can learn the way of emacs, and have the space (literally and space-key) to create your own set(s) of key-mappings
+    - NOTE: modules can have whatever bindings they choose, making emacs feels rather inconsistent, difficult to grasp
+      - though, at least they should be based around emacs' original key-bindings, hopefully lessening the cognitive-load..
+  - doom's evil-bindings provides a complete package based around vim bindings, of everything you'd ever need, altering emacs original key-chords and creating more maps and key-bindings on the space-leader-key
+    - it can feel a bit cluttered, with too many bindings, not enough room!
+    - it also provides optional alt-bindings for nearly everything else in emacs (beyond the main buffer), making the bindings consistent across everything in emacs (especially the hjkl keys for movement):
+      - completion via the mini-buffer (c-j/k to move down/up)
+      - frequently-used modules like dired
+      - info?
+
+
+** TODO some readings
+  - note: typed the words since copy/paste in terminal isn't working.. :/
+  - phaazon kakoune philosophy
+    - the person builds a lot of pop text editor functions for kakoune, using unix cli tools
+  - phaazon more hindsight vim helix kakoune
+    - interestingly went to kakoune after helix, but ultimately uses both
+  - esrh.me switching to meow
+    - just details the improvements over vim, and even doom
+  - rrajath ditching evil for meow
+    - not much writing, but def has a solid emacs config!
+      - moved to minimal-emacs.el
+
+
+
 
 
 * is emacs still the one, in 2024? or: how did we end up here? what was the story of your journey? - a reddit post by me!
