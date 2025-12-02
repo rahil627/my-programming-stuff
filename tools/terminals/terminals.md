@@ -99,6 +99,15 @@ tmux
 
 ## terminals
 ### contemporary incarnations of classic terminals:
+
+ghostty
+  - TODO: try it out
+    - i just can't imagine anything i'd want more than wezterm though..
+  - "Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration."
+  - zig
+  - mentioned on a video with j blow and the zed dev, maybe by that zed dev
+  
+
 **wezterm**
   - **terminal with tmux features**, similar to windows terminal
     - reduces having one more config file
