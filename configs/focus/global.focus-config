@@ -95,7 +95,7 @@ projects_sorting_order:                          most_recent_first  #options: mo
 # This is an example configuration for build commands
 
 # [[build commands]]
-# build_working_dir:      <build working dir for all commands>
+# build_working_dir:      <build working dir for all commands>  # <- paths relative to the workspace working dir (the first one in the list) are allowed
 # open_panel_on_build:    true  #  <- any settings specified here will apply to all commands unless overridden
 # close_panel_on_success: false
 # clear_build_output_before_running: false
@@ -121,18 +121,21 @@ projects_sorting_order:                          most_recent_first  #options: mo
 
 
 # Example error regexes:
-# For jai:  ^(?P<file>.*):(?P<line>\d+),(?P<col>\d+): (?P<type>Error|Warning|Info|...):* (?P<msg>.*)|^(?P<msg1>.*error LNK.*)
-# For msvc: ^(?P<file>.*)\((?P<line>\d+),(?P<col>\d+)\): (?P<type>error|warning) (?P<msg>.*)$
+# For jai:    ^(?P<file>.*):(?P<line>\d+),(?P<col>\d+): (?P<type>Error|Warning|Info|...):* (?P<msg>.*)|^(?P<msg1>.*error LNK.*)
+# For msvc:   ^(?P<file>.*)\((?P<line>\d+),?(?P<col>\d+)?\)[ ]?: (?P<type>error|warning) (?P<msg>.*)$
+# For golang: ^(?P<file>.*):(?P<line>\d+):(?P<col>\d+): (?P<msg>.*)$
+# For gcc:    ^(?P<file>.*):(?P<line>\d+):(?P<col>\d+): (?P<type>error|warning): (?P<msg>.*) (\[(?P<msg1>.*)\])?$
 # ... let us know what regex works for you and we'll add it here
 
 # NOTE:
-# You can use the following variables in build_command or run_command:
+# You can use the following variables in build commands:
 # %FILE%      - full path to currenly active file
 # %FILE_DIR%  - the directory of the currently active file
 # %FILE_NAME% - current file name, with extension
 # %FILE_NAME_NO_EXTENSION% - current file name, without extension
-# %BUILD_WORKING_DIR% - working dir of the build command
-# %RUN_WORKING_DIR%   - working dir of the run command
+# %BUILD_WORKING_DIR%  - working dir of the build command
+# %RUN_WORKING_DIR%    - working dir of the run command
+# %PROJECT_CONFIG_DIR% - the dir containing the active project config file
 
 
 [[keymap]]
@@ -332,6 +335,7 @@ F11                         toggle_fullscreen
 {Shift}-End                 jump_to_line_end
 {Shift}-Ctrl-Home           jump_to_file_start
 {Shift}-Ctrl-End            jump_to_file_end
+{Shift}-Ctrl-M              jump_to_matching_bracket
 
 {Shift}-Backspace           delete_left_char
 {Shift}-Delete              delete_right_char
@@ -349,9 +353,6 @@ F8                          go_to_next_build_error
 Ctrl-F8                     go_to_next_build_error_on_the_side
 Shift-F8                    go_to_previous_build_error
 Shift-Ctrl-F8               go_to_previous_build_error_on_the_side
-
-# Added after migration to version [6]
-{Shift}-Ctrl-M              jump_to_matching_bracket
 
 
 [[style]]
@@ -415,43 +416,50 @@ ui_error:                               772222FF
 ui_error_bright:                        FF0000FF
 ui_success:                             227722FF
 
-code_default:                           BFC9DBFF
-code_comment:                           87919DFF
-code_type:                              82AAA3FF
-code_function:                          D0C5A9FF
-code_punctuation:                       BFC9DBFF
-code_operation:                         E0AD82FF
-code_string_literal:                    D4BC7DFF
-code_value:                             D699B5FF
-code_highlight:                         D89B75FF
-code_error:                             FF0000FF
-code_warning:                           E4D97DFF
-code_keyword:                           E67D74FF
-
 build_panel_background:                 1A2831FF
 build_panel_scrollbar:                  33CCCC19
 build_panel_scrollbar_hover:            33CCCC4C
 build_panel_scrollbar_background:       10191F4C
 build_panel_title_bar:                  1C303AFF
 
-# Added after migration to version [6]
+code_default:                           BFC9DBFF
 code_invalid:                           FF0000FF
+
+code_string_literal:                    D4BC7DFF
 code_multiline_string:                  D4BC7DFF
 code_raw_string:                        D4BC7DFF
 code_char_literal:                      D4BC7DFF
+
 code_identifier:                        BFC9DBFF
 code_note:                              E0AD82FF
 code_number:                            D699B5FF
+
+code_error:                             FF0000FF
+code_warning:                           E4D97DFF
+code_highlight:                         E4D97DFF
+
+code_comment:                           87919DFF
 code_multiline_comment:                 87919DFF
+
+code_operation:                         E0AD82FF
+code_punctuation:                       BFC9DBFF
+
+code_keyword:                           E67D74FF
+code_type:                              82AAA3FF
+code_value:                             D699B5FF
 code_modifier:                          E67D74FF
 code_attribute:                         E67D74FF
 code_enum_variant:                      BFC9DBFF
 code_macro:                             E0AD82FF
+code_function:                          D0C5A9FF
+
 code_builtin_variable:                  D699B5FF
 code_builtin_function:                  E0AD82FF
 code_builtin_exception:                 E0AD82FF
+
 code_directive:                         E67D74FF
 code_directive_modifier:                E67D74FF
+
 code_header:                            E67D74FF
 code_header2:                           E0AD82FF
 code_header3:                           E0AD82FF
