@@ -1,7 +1,7 @@
 
 
 
-UPDATE: i have no use for shell scripts. see [programming-languages.org], the writing below, and my conclusion in [cli-shells]. just about any general-use programming langauge, especially ruby, is just superior in every way, save, possibly for running batches of commands quickly. Otherwise, it's emacs functions, ruby scripts, haxe programs.
+UPDATE: i have no use for shell scripts (using shell scripting langs)--though, cli/console programs are still fine!.. see [programming-languages.org], the writing below, and my conclusion in [cli-shells]. just about any general-use programming langauge, especially ruby, is just superior in every way, save, possibly for running batches of commands/processes quickly. And even then, any lang that can actually compile to a binary is just way more portable. Otherwise, it's emacs functions, ruby scripts, and haxe 'n jai programs.
 
 
 
