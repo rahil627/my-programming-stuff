@@ -2,14 +2,40 @@
 
 # DO NOT EXECUTE ME !!!
 
-# most useful commands in this section
+### some useful things to remember first
+
+# /.local/bin:$PATH
+#  - a common place in /user/home to put executables
+#    - NOTE: i much prefer having everything in /user/home to make it visible
+#  - might require adding to $PATH:
+#  - export PATH=$HOME/.local/bin:$PATH
+
+# usr/bin/
+#  - a common system place to put executables, or symlinks of executables
+#  - should already be in $PATH
+
+
+### most useful commands in this section
 
 # just append useful commands here
+
+# make file executable
+chmod +x /path/to/original/executable_file
+
+# reload changes to env vars
+# 'source' re-reads and executes the commands in that file
+source ~/.bashrc # or sometimes ~/.bash_profile
 
 # env var handling
 export -p # see all env vars and functions
 export BIG_WORDS=1 # NOTE: no spaces
 # may be able to do this via 'set' too..
+
+# symlink a file or dir
+# WARNING: don't use ~/, use the abs path /home/ra
+ln -s /opt/scripts/my_script.sh my_script_shortcut
+# check it: 'l' at the beginning of 'lrwxrwxrwx' signifies link
+ls -l ~/Desktop/website_data
 
 # append file to file2
 file >> file2 # TODO: NOTE: '>' operator overwrites!?
@@ -17,17 +43,33 @@ file >> file2 # TODO: NOTE: '>' operator overwrites!?
 # order entire file-system by disk size, navigate, delete
 ncdu /
 
-
-
-
 # use this to find the file, then use | to chain the command
-# no more hunting for files!
-# the search i think is automatically recursive
+# i think it searches recursively by default..
 find . -name *.ext
 find . some*text
 
 
+
+
+
+
+# arch of machine
+uname -m
+lscpu
+
+# arch of binary
+file focus-linux
+
 # end of most useful commands
+
+
+
+
+
+
+
+
+### pastebin
 
 
 # diff
