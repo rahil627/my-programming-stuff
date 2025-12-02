@@ -32,10 +32,12 @@ __pycache__
 
 [file associations]
 # Optional file associations in the format `<wildcard1> <wildcard2> ... : <language>`
+# check repo for the list of supported langs: https://github.com/focus-editor/focus/tree/main/src/langs
 # Example:
 # *.hpp *.hh *.h : cpp
 # todo.txt : todo
-
+# *.rb : ruby # no ruby :(
+# *.hx : haxe # def no haxe ;(
 
 [[settings]]
 
