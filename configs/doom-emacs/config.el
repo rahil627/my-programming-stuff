@@ -573,6 +573,7 @@
 
        ("WARNING" warning bold)
        ("BEWARE" warning bold)
+       ("DANGER" error bold)
 
        ;; FIXME
        ("ERROR" error bold)
@@ -1745,11 +1746,12 @@
    ;; chromebook reload key (f3)
    ;; TODO: could use for switch-buffer/project/workspace/frame/window(?)..
    '("<XF86Reload>" . "C-x k" ) ;; kill-buffer NOTE: thankfully triggers mini-buffer search
-   '("C-<XF86Reload>" . +workspace/close-window-or-workspace ) ;; close/quit windows, not kill (as you're not actually killing anything..)
+   ;; '("C-<XF86Reload>" . +workspace/close-window-or-workspace ) ;; close/quit windows, not kill (as you're not actually killing anything..)
+   ;;  - WARNING: DANGER: no prompt
    ;;  - quit-window
    ;;    - kills the buffer..??
    ;;'("M-<XF86Reload>" . tab-close ) ;; too confusing, just use mouse, don't want to do by accident..
-   '("M-<XF86Reload>" . +workspace/kill )
+   ;; '("M-<XF86Reload>" . +workspace/kill ) ; WARNING: DANGER: no prompt, need to add c-u
    '("C-M-<XF86Reload>" . "C-c q f" ) ;; delete-frame / doom/delete-frame-with-prompt
 
 
