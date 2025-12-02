@@ -149,6 +149,10 @@ https://fonts.adobe.com/search?query=code
 
 * current settings
 
+see [emacs config]
+  - TODO: merge from emacs config
+
+
 NOTE: the color theme of the editor effects the text's color contrast which can feel like the font-weight! (try Aura Dark (soft text) color theme in vs-code)
 
 ** windows, OLED laptop
@@ -202,10 +206,11 @@ fixed-width: roboto
 
 * current favorites
 
+see [emacs config]
+  - TODO: merge notes from emacs config
+
 TODO: need to try consolas in a lighter weight
 TODO try source code pro with a more narrow width
-
-see [emacs config]
 
 **office code pro <- hasklig (light) ~= source code pro**
   - terminal: size 10-11, weight: regular/normal
