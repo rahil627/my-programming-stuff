@@ -141,6 +141,16 @@ projects_sorting_order:                          most_recent_first  #options: mo
 
 [editors]   # <- this means that the following key combos will apply only when editing text
 
+
+# NOTE: I ADDED THESE
+# TODO: how to check functions..??
+
+# Ctrl-A                    move_to_beginning_of_line
+# Ctrl-E                    move_to_end_of_line
+#  - surely these exist.. or maybe just m-left/right?
+
+
+
 # Key combination           Action
 Alt-F4                      quit
 
