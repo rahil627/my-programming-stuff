@@ -9,9 +9,9 @@ https://insights.stackoverflow.com/survey/2020#technology-other-frameworks-libra
 
 conclusion:
 
-make web apps instead, see [web-frameworks]
+*make web apps instead*, see [web-frameworks]
 
-only after enough profit, would it make sense to deal with making native apps, and even then, i still (as of 2025) wouldn't use any existing cross-platform app frameworks. It's simpler and unlimited in potential to build two native apps (iOS and Android) directly, then to deal with yet another abstraction. Or, possibly, using haxe (or really any language with good C interops) as a single-code-base, only using the ffi for the functions you need.
+*only after enough profit, would it make sense to deal with making native apps*, and even then, i still (as of 2025) wouldn't use any existing cross-platform app frameworks (probably not even react native). It's simpler and unlimited in potential to build two native apps (iOS and Android) directly, then to deal with yet another abstraction. Also, the experience forces/gives opportunity to design well for each device/OS. And, *it's the perfect use case for haxe(!!)*, maintaining a single-code-base, only using the ffi for the functions you need.
 
 
 tl;dr:
