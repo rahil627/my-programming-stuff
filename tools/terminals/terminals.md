@@ -33,7 +33,7 @@ c-l
     - (usually just scrolls down to the end, with the cursor on top)
     - (i think emacs got the c-l idea from this..)
 
-c-fb
+c-f/b
   - bash/emacs movement
 
 c-n/p (and down/up arrow)
@@ -50,14 +50,16 @@ c-s-r
 
 
 
-# CONCLUSION:
 
+
+
+# terminal emulators / apps
+## CONCLUSION
 
 WEZZZZZZterrrrrrmmmmmm
 
 
-
-# terminal multiplexers:
+## terminal multiplexers
 wezterm
   - a terminal first, with built-in tmux features
     - [see entry under terminals]
@@ -82,23 +84,8 @@ tmux
 
 
 
-# terminals
-## "next gen", heavily reliant on ai-assistance, has more app features
-warp
-  - ai-heavy
-  - includes an ide? a terminal?
-  - closed-source, for-profit
-    - has a free tier
-  - rust
-  - released in feb 2024 for linux (and mac), windows has a waitlist
-  
-x/fig
-  - ai-heavy 
-  - acquired by Amazon (now part of 'Amazon Q', a chatbot, for $20/month), along with the team now working for AWS
-  - originally written in typescript, then ported to rust as the project went from desktop app to cli focus
-
-
-## contemporary incarnations of classic terminals:
+## terminals
+### contemporary incarnations of classic terminals:
 **wezterm**
   - **terminal with tmux features**, similar to windows terminal
     - reduces having one more config file
@@ -209,4 +196,24 @@ https://www.reddit.com/r/archlinux/comments/n9noje/alacritty_vs_kitty/
   - didn't read through much, but in general it seems kitty > alacritty
   - foot is mentioned
 
+
+  
+  
+
+### "next gen", heavily reliant on ai-assistance, has more app features
+
+seems like ai bubble garbage.. just use emacs with eshell and gptel!
+
+warp
+  - ai-heavy
+  - includes an ide? a terminal?
+  - closed-source, for-profit
+    - has a free tier
+  - rust
+  - released in feb 2024 for linux (and mac), windows has a waitlist
+  
+x/fig
+  - ai-heavy 
+  - acquired by Amazon (now part of 'Amazon Q', a chatbot, for $20/month), along with the team now working for AWS
+  - originally written in typescript, then ported to rust as the project went from desktop app to cli focus
 
