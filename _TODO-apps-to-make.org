@@ -6,6 +6,8 @@ see grad school app writings
   - TODO: merge from there
     - use org-mode powers!!
 
+see /scripts/prototypes
+  
 ordered from simplest to most complex
 
 shiiiit, i've got my work cut out for me..
@@ -19,7 +21,6 @@ shiiiit, i've got my work cut out for me..
 *MAKE GAMES FUCK THE REST.*
   - *web and ai are boring are fuck.*
   - *STICK TO REALITY: COOKING FOOD, MAKING TEA, GARDENING, THAT'S LIFE!!*
-
 
   
 * personal tools/tech/anti-productivity
