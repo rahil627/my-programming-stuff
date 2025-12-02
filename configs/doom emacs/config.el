@@ -2312,6 +2312,85 @@
         (insert org-stars " ")))))
 
 
+;; the emphasis markup in my notes are all mixed up, so have to replace 'em semi-manually
+;; (defun ra/covert-markdown-emphases-to-org (start end)
+;;   ;; simple version
+;;   "markdown: **bold** and *italic* -> org-mode: *bold* and /italic/"
+;;   (interactive "r") ;; The "r" argument makes it an interactive function that uses the region boundaries as start and end
+;;   (save-excursion
+;;     (let ((deactivate-mark nil)) ;; Keep the region highlighted while the function runs
+;;       ;; Convert Markdown bold (**...**) to Org mode bold (*...*)
+;;       ;; Search only between 'start' and 'end' points
+;;       (goto-char start)
+;;       (while (re-search-forward "\\*\\*\\([^*]+\\)\\*\\*" end t)
+;;         (replace-match "*\\1*" nil nil))
+
+;;       ;; Convert Markdown italic (*...*) to Org mode italic (/.../)
+;;       ;; We must reset point to the start of the region to search again
+;;       (goto-char start)
+;;       (while (re-search-forward "\\*\\([^ *\n\t]+\\)\\*" end t)
+;;         (replace-match "/\\1/" nil nil))
+
+;;       (message "Markdown emphasis conversion to Org mode complete for region."))
+;;     ))
+
+
+(defun ra/convert-markdown-emphases-to-org (conversion-type)
+  ;;-with-options version
+  ;; FIXME: problem when trying to convert both
+  "Convert Markdown bold and/or italics (using * or _) to Org mode syntax 
+  within the active region, ignoring Org mode headlines.
+  'Both' is selected by default."
+  (interactive 
+   (list (completing-read 
+          "Convert (bold only (** and __ -> *), italic only (* and _ -> /), or both (FIXME: BROKEN)): " 
+          '("both" "bold" "italic") 
+          nil t nil nil "both"
+          )))
+  
+  (save-excursion
+    ;; Ensure a region is active
+    (unless (use-region-p)
+      (error "A region must be active to use this function."))
+      
+    (let* ((start (region-beginning))
+           (end (region-end))
+           (deactivate-mark nil)
+           (do-bold (or (string= conversion-type "bold") (string= conversion-type "both")))
+           (do-italic (or (string= conversion-type "italic") (string= conversion-type "both"))))
+
+      (goto-char start)
+
+      ;; Helper function to check if the current line is an Org header
+      (defun my/on-org-header-line-p ()
+        (save-excursion
+          (beginning-of-line)
+          ;; Check if the line starts with one or more asterisks and a space
+          (looking-at "^\\*+[[:space:]]"))) ;;
+
+      ;; --- BOLD CONVERSION FIRST (MD: **, Org: *) ---
+      (when do-bold
+        ;; Non-greedy match for content (.*?) including spaces
+        (while (re-search-forward "\\(\\*\\*\\|__\\)\\(.+?\\)\\(\\*\\*\\|__\\)" end t)
+          ;; Check if we are on a header line *before* replacing
+          (unless (my/on-org-header-line-p)
+            (replace-match "*\\2*" nil nil)))
+        (goto-char start)) 
+
+      ;; --- ITALIC CONVERSION SECOND (MD: *, Org: /) ---
+      (when do-italic
+        ;; Non-greedy match for content (.*?) including spaces
+        (while (re-search-forward "\\(\\*\\|_\\)\\(.+?\\)\\(\\*\\|_\\)" end t)
+          ;; Check if we are on a header line *before* replacing
+          (unless (my/on-org-header-line-p)
+             (replace-match "/\\2/" nil nil)))
+        )
+      
+      (message "Emphasis conversion (%s) complete for region, ignoring headers." conversion-type)
+      )))
+
+
+
 ;; (defun ra/copy-config-to-local-install from-dir
 ;; ;;  - TODO: INCOMPLETE
 ;; ;;  - TODO: ask ai to generate this, and check against my bullshit lol
