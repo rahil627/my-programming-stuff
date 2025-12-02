@@ -114,6 +114,9 @@ z. focus, *the new notepad.exe*, to just simply write/express, *zen*, *extremely
   - a small project, written extremely well in jai, designed really well too (like a game designer)
   - *come back to this for text editor design (and programming?) ideas..*
   - def use once i get my hands on that game engine..
+n. micro, just to replace nano
+  - (only because focus doesn't work in the terminal)
+  - (and because, unfortunately, textbringer/ruby sucks at packaging programs..)
 
 d. zed (if not, vs-code), for a quick beautiful sane defaults complete ide, to focus on the work, and for ai workflows, and for multi-player
 
