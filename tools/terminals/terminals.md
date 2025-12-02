@@ -1,9 +1,22 @@
 
 
+# on terms
+
+ NOTE: i noted this elsewhere..
+
+from ai:
+"The terminal is the text-based interface, and the shell is the command-line interpreter (cli) that the terminal uses to execute user commands. The terminal sends your input to the shell, and the shell sends the results back to the terminal to be displayed.
+
+Terminal: This is the program that provides the text-based window where you can type commands. Think of it as the screen and keyboard for the command line.
+
+Shell: This is the program that takes the commands you type into the terminal and interprets them to interact with the operating system's kernel. Examples include bash and PowerShell."
+  - so, it seems cli and shells are usually the same, it's just that shells are a specific type of cli program, for the OS
+
+also see [cli-shells]
+
+
 
 # bindings
-
-also see [shells]
 
 a few common bindings:
 
