@@ -2135,6 +2135,12 @@
     '("t p" . variable-pitch-mode) ;; variable-width font/typeface aka proportional
     ;;   - v is for visible-mode (??), f for fly-check, F for full-screen
 
+    ;;; spc-w ; TODO: NOTE: inconsistent, should be on c-x, along with buffers, tabs, windows
+    ;;  - maybe c-x W for workspace (and c-x w for windows) 
+    '("w <left>" . +workspace/swap-left)
+    '("w <right>" . +workspace/swap-right)
+
+    
       ;; new key-maps
       
       ;;; spc b
