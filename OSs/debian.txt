@@ -17,11 +17,24 @@ updates sources lists
     - TODO: not sure if i need the cros-packages
   - see [[sources list]] file below
 apt update
+  - update package info
 apt upgrade --without-new-pkgs
   - do this first for a minimal upgrade first
 apt full-upgrade 
   - then the main upgrade
 apt autoremove
+  - WTF: WARNING: BEWARE
+    - make sure you read the packages being removed before agreeing!!
+    - check the damage
+      - less /var/log/apt/history.log
+
+apt upgrade
+  - then can use this as normal
+  - update all packages
+  - NOTE: this doesn't update major versions--once every two years
+
+
+
 
 extra cleaning:
 apt list '?obsolete'

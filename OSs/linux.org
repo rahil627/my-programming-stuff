@@ -13,22 +13,6 @@ CONCLUSION: forget linux, stick to windows for personal computers, and just get 
 
 TODO: surely i have more elsewhere..
 
-
-WTF: WARNING: BEWARE OF SUDO APT REMOVE
-less /var/log/apt/history.log
-  - check the damage
-
-
-update system:
-NOTE: this doesn't update major versions--once every two years
-sudo apt update
-  - update package info
-sudo apt upgrade
-  - update all packages
-
-update major version:
-see notes for each distro ([[debian]], etc.)
-
 to install an app manually:
 copy the binary to /usr/bin/ for most distros
 then you should be able to run the binary via command line
