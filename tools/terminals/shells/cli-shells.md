@@ -1,8 +1,32 @@
 
 
 # UPDATE again:
-now with ai, you can ask for it to generate what you need in either: powershell, bash/linux cli tools, and ruby/linux cli tools, and see which one's the simplest. TODO: Or maybe you can automate emacs..? emacs scripts?? LOL
 
+tl;dr:
+1. advanced text editors (emacs, helix, focus) >>>>> cli
+  - for a unified file-manager, search, window splitting, git, etc.
+    - though lf, fd, fzf, ripgrep, etc. are good on their own, it takes a gui program to bring it all together. helix is proof of that.
+
+2. general prog langs + C libs + cli binaries (any lang) >>>>> shell scripting langs
+
+thus, little is left for the use of shells
+  - executing commands
+    - that it..?
+
+TODO: can try nu-shell.. at least that's cross-platform, without an agenda!
+
+
+
+now with ai, you can ask for it to generate what you need in either: powershell _(meh)_, bash/linux cli tools _(ew)_, and ruby/C/linux cli tools _(much better!)_, and see which one's the simplest. It's also possible to just generate functions in emacs(!), as emacs has a all the shell functionality (file handling, process handling) and more!
+
+
+but then again, with ai generating everything, it just won't be maintainable, which is how i feel about my emacs config _(and def my nvim vimscript config before that! lmao)_.. it's just a mess.. instead, **i think it's much better to just stick to a general programming language, scripting or even static/systems, because even if you do use ai to generate a function, it's _readable_, _maintainable_, and actually useful for improving programming skill. you can easily edit everything, make it your own way, neatly, simply, improving over time.** in contrast, **there is nothing to learn by stringing together existing cli programs with bash; and powershell feels a bit like ruby but with clunky "cmdlets", a whole extra set of commands _(emacs is already enough!)_, and an extremely inefficient interpreter--_far_ worse than ruby!**
+
+**bash/linux cli/unix is a fucking mess. Microsoft just keeps insisting to make everything their way (.net, verbose), then _using_ the "open-source community" to make _their products_ cross-platform.** yeah.. **just stick to your fav prog langs.. and learn to use some solid C/C++ libs. this way, _you make exactly what you need, and nothing more_.**
+
+**so: just get by with whatever os-provided shell as needed, but don't bother using it for much beyond executing cli programs. don't bother config'ing it either. it's a waste of time. any emacs-like text editor is much better than a shell at everything else, and can even run shell commands from it. and any general prog lang is better than a shell scripting lang!.** 
+
+though, if there's one shell to try, it's nu-shell.. though, eshell is interesting too, lol.. combining emacs and lisp with the shell..!
 
 
 # UPDATE:
@@ -17,7 +41,7 @@ trash the rest (fish, bash, all of it)
 
 
 # conclusion:
-use any cool contemporary shell for personal use (zsh, fish, ion, etc.) but write the simplest scripts (basically just executing multiple commands and maybe a few control structures) in bash for portability, and everything else in your favorite general programming language (scripting or compiled). It's not worth adding another language to your memory, when it could be much better used toward a remembering single general programming langauge.
+use any cool contemporary shell for personal use (zsh, fish, ion, etc.) but write the simplest scripts (basically just executing multiple commands and maybe a few control structures) in bash for portability, and everything else in your favorite geneworth adding another language to your memory, when it could be much better used toward a remembering single general programming langauge.
 
 CLI shells combine a programming language ("shell scripting language") with the shell/terminal (the ability to execute commands, including running command-line programs)... However, nowadays, many programming languages come with interpreters (in addition to compiler options) and the ability to execute commands (and process handling), so, the lines are blurry, and thus, given that fact, **i think it's better to invest time in a more powerful general programming langauge, especially if it can be run just as easily as a shell script can a la '!#/usr/bin/env lang' (general "scripting languages": ruby, python, etc., and even lua), or even a *slight* bit extra code from compiled languages might be okay in cases of larger scripts. Although, for very simple things, these are still nice to have, especially to simply and quickly save/run a "batch" of commands, without any bloat, *near-instantly* (no startup time with dash), and then run *those* scripts from another process (via another script, program, or even *service*)**, leading to automation. In the end, **Bash has the power of Linux CLI programs (tons, but most are ancient), and Powershell is just an infinitely more consistent language, data-oriented (as opposed to text-stream-oriented), in addition to being as powerful as a general programming language (can even use the .net lib..), and now with the recent addition of being cross-platform, where does that leave bash..? I guess bash is still there as a simple thing to run commands.. For people that are neither a fan of .NET/CLR, however, that choice doesn't make much sense, and it is best to choose a general programming languge: for me, that's Haxe (and hscript?) and Ruby.**
 
@@ -136,6 +160,13 @@ end
 # shells
 should choose one and stick to it
 
+## cross-platform:
+there may be some newer rust stuff that's just better than even the stuff the OS folks make!
+
+see nu-shell
+  - TODO: worth trying..
+  - it honestly seems like powershell, but you know, without the microsoft crap!
+
 ## Windows:
 you have no choice, it's just powershell
 
@@ -170,7 +201,7 @@ although, you can install Linux (via WSL), and i think there's a bash shell now 
 
 
 
-Linux:
+## Linux:
 
 conclusion:
 i ended up using fish shell. It just worked. Functions were simple to create too. I didn't want to get too deep into shells compared to just using a big scripting language (ruby/python), so fish made a perfect replacement for bash. The scripting language, though wayyy better than bash, only felt like a step up and still felt old. Fish was great for it's out-of-box experience, not so much for it's advanced uses.
