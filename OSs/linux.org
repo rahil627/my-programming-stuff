@@ -6,21 +6,6 @@ less /var/log/apt/history.log
   - check the damage
 
 
- these were the notable packages removed:
-  - *ruby-dev*
-    - no problem, re-installed using mise, which handle this..
-
-  meh, ruby is all i need, i can let it re-install the rest when needed:      
-  - jre-headless, opendjdk-17-jre-headless
-  - python-pip
-    - lol, i can survive without this..
-  - perl just won't die..
-  - java-common
-
-
-
-
-
 * some random notes
 
 TODO: surely i have more elsewhere..
