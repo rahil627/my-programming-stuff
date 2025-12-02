@@ -359,8 +359,12 @@ Shift-Ctrl-F8               go_to_previous_build_error_on_the_side
 theme: default
 
 [fonts]
-font:       office code pro
-font_size:  11
+# see repo for default fonts:
+# https://github.com/focus-editor/focus/tree/main/fonts
+font:       default # d: OpenSans and FiraCodeRetina
+font_size:  14
+# font:       office code pro
+# font_size:  11
 
 [colors]
 background0:                            15212AFF
