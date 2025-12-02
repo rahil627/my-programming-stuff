@@ -1220,16 +1220,35 @@ P push
     - main/origin?
 *** dired and ibuffer
 
+TODO: why does it (dired) open a new buffer for every directory movement??
+
 mark files 'n folders or buffers, then take action
   - and remember, can use favorite emacs commands to search text in the buffer!
 
+NOTE: ibuffer is ordered by project, not workspace.. which gives an interesting, alt way to see all of the opened buffers..
+ 
 m(ark)
 u(undo)
+
+return/enter
+  - open/enter dir/file
+
+^
+  - up dir
+    - TODO: WTF: whyyyyyy
 
 capital keys for actions, for safety reasons
   - R, D
     - R is mv, use it for rename, move, cut/paste
+      - TODO: bind M
+  - F
+    - open
+    - confusing, because ret is usually used to open a single file..
+      - TODO: bind O and maybe return too
 
+NOTE: there's a seperate flag (d)elete and x to delete flagged files, which is confusing. don't use that.
+  - there's a few other dired-flag-[functions] too..
+      
 *** flycheck (syntax checker)
 
 this also includes formatters and linters
