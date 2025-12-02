@@ -1,9 +1,16 @@
 [6]  # Version number. Do not delete.
 
+
 [[workspace]]
 # These directories and files will be scanned when a workspace is opened so that search etc. works.
-C:/Users/ra/my-stuff/repos
-C:/Users/ra/Dropbox
+# Example:
+# C:/jai
+# src  # <- this would be relative to the config file location
+# C:/Users/ra/my-stuff/repos
+# C:/Users/ra/Dropbox
+/home/ra/my-stuff/repos/my-programming-stuff/  # <- the first directory in the list becomes the working directory
+/home/ra/my-stuff/repos/dragonruby/dragonruby-linux-amd64/ #mygame
+
 
 [ignore]
 # Files and directories matching the following wildcards will not be loaded or descended into
