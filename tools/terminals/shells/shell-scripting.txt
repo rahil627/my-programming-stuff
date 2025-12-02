@@ -28,30 +28,6 @@ and so, this scripts folder. Likely, i will use Haxe, but since i currently use 
 
 
 
-
-https://kddnewton.com/2016/10/11/exploring-cli-best-practices.html
-  - some cli best practices
-  - and a gem to neatly add callbacks (to anything), to use with rails
-
-
-
-
-practice:
-https://learnbyexample.github.io/books/
-  - ruby one-liners cookbook
-  - ruby regex
-  - grep/ripgrep, sed, awk
-
-
-tui frameworks:
-bubbletea
-  - a powerful little tui framework
-  - has a bunch of component libs (bubble, etc.)
-gum
-  - built on top of bubble and lip gloss
-
-
-
 how to make a script:
 https://linuxhandbook.com/run-shell-script/
 
@@ -94,6 +70,22 @@ run `systemd-path user-binaries`
 
 
 
-https://unix.stackexchange.com/questions/316765/which-distributions-have-home-local-bin-in-path
+x/tui frameworks:
+  - meh, though it makes cli interfaces more interactive, it's simpler and more portable/usable to just make a basic cli program
+bubbletea
+  - a powerful little tui framework
+  - has a bunch of component libs (bubble, etc.)
+gum
+  - built on top of bubble and lip gloss
 
+
+
+
+sources:
+https://kddnewton.com/2016/10/11/exploring-cli-best-practices.html
+  - TODO: is this still useful..??
+  - some cli best practices
+  - and a gem to neatly add callbacks (to anything), to use with rails
+
+https://unix.stackexchange.com/questions/316765/which-distributions-have-home-local-bin-in-path
 
