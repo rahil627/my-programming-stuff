@@ -1,14 +1,22 @@
 
 
-* WTF: WARNING: BEWARE OF SUDO APT REMOVE
 
-less /var/log/apt/history.log
-  - check the damage
+CONCLUSION: forget linux, stick to windows for personal computers, and just get by with emacs on linux servers
+  - also, *scoop is the best package manager i've used! portable apps all the way, and it handles setting up symlinks, start-up env vars, etc. for you!!*
+
+
+
+
 
 
 * some random notes
 
 TODO: surely i have more elsewhere..
+
+
+WTF: WARNING: BEWARE OF SUDO APT REMOVE
+less /var/log/apt/history.log
+  - check the damage
 
 
 update system:
@@ -27,15 +35,6 @@ then you should be able to run the binary via command line
   - scoop handles this crap for you
 
 
-
-* original file
-
-
-CONCLUSION: forget linux, stick to windows for personal computers, and just get by with emacs on linux servers
-  - also, *scoop is the best package manager i've used! portable apps all the way, and it handles setting up symlinks, start-up env vars, etc. for you!!*
-
-
-  
 
 * why linux (sucks)
 
