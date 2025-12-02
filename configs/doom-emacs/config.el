@@ -84,7 +84,7 @@
 ;; ⛔ Warning (org-element): ‘org-element-at-point’ cannot be used in non-Org buffer #<buffer _TODO-apps-to-make.org> (fundamental-mode)
 ;;
 ;; Undo-Fu-Session discarding: file length mismatch for "/home/ra/.emacs.d/lisp/doom-editor.el"
-;; 
+;;
 ;; Could not read ‘org-id-locations’ from /home/ra/.emacs.d/.local/cache/doom-docs-org-ids, setting it to nil
 ;; File local-variables error: (user-error Not in a valid workspace (nil))
 
@@ -97,7 +97,7 @@
 
 ;;; TODO: list
 
-;; change file associations to focus editor or textbringer
+;; change file associations (github desktop!!) to focus editor/textbringer/micro
 
 ;; ra/ vs ra- for functions and vars? then re-factor
 ;;   - i think vanilla emacs auto-added '-' for ou when you inserted a space during m-x
@@ -208,7 +208,7 @@
 
 
 
-    
+
   ;;; ERRORs and TEMPorary FIXes:
 
   ;; TODO: merge doom trouble-shooting notes from emacs.org
@@ -295,7 +295,7 @@
 
 (defun ra/init-config ()
 
-  
+
   ; turn off some shit i don't use
   ; maybe better to start a fresh config, lol..
 
@@ -325,7 +325,7 @@
   ;;   - TODO: not sure where or how to run this while this file is being executed..
 
 
-  
+
 
   ; some basic, core editor stuff
 
@@ -348,7 +348,7 @@
   ;; savehist-autosave-interval 300 ; d: 300
   ;; doom--shut-up-autosave-a  ;; lol, classic henrik
 
-  
+
   (setq display-line-numbers-type nil) ; t, nil, relative
 
   ;; (toggle-frame-fullscreen) ; ahhhh, peace and emacs.. :3
@@ -357,7 +357,7 @@
                                         ;   - prefer a pasge-like window in the middle of the screen
 
 
-  
+
   ;;(scroll-bar-mode)
   ;;   - TODO: would be nice, but looks hideous!! :/
   ;; (setq x-toolkit-scroll-bars nil) ;; nope, didn't work..
@@ -366,14 +366,14 @@
   ; workspaces seem fine too, and already bound by doom..
   ; TODO: it's just lacking a persistent display..
   ;   - i tried to display workspace in the modeline further below to no avail..
-  
+
 
   ;; (global-tab-line-mode)
   ;;   - 1 tab for each buffer
   ;;     + tiny buttons to scroll right/left
   ;;   - standard to emacs
   ;;   - tiny amount of space too..
-  
+
   ;; (global-tab-bar-mode)
     ; takes very little space.. nice!!
     ;
@@ -402,7 +402,7 @@
 
 
 
-  
+
 
     ;; these require a package/module
     ;; make sure it's not commented out in init.el
@@ -412,10 +412,10 @@
   ;; NOTE: (after! package ... ) package uses the symbol-name (un-quoted)
   (after! org
   (setq org-directory "~/my-stuff/repos/my-programming-stuff")) ; It must be set before org loads!
-                                        ; 
+                                        ;
 
 
-  
+
   ;; meow
   ;; see other vars listed in CUSTOMIZATIONS.org
   ;; meow-expand-hint-remove-delay ;; i think the number hint..
@@ -429,7 +429,7 @@
 
   (after! which-key
     (setq which-key-idle-delay 0.1) ; used by doom for key-binding pop-ups
-    
+
     ;; TODO: show all keys (instead of pages)
     (setq which-key-show-remaining-keys t) ; FIXME: nope, not doing what i want..
     )
@@ -442,21 +442,21 @@
 
 
 
-  
-  
-  
 
-  (after! doom-modeline  
+
+
+
+  (after! doom-modeline
   (setq doom-modeline-workspace-name t) ;; FIXME: hmm not working..??
   ;; (setq doom-modeline-project-name t) ;; no need, as the file-name expands
   ;; (setq doom-modeline-hud nil) ;; not sure..
   ;; (setq doom-modeline-icon nil) ;; TODO: a more classic ascii feel.. or maybe just get rid of nerd icons..
-  ;; 
+  ;;
   ;; (display-time-mode t)
   ;; (setq doom-modeline-time t) ;; FIXME: though time isn't important..
   ;; Error during redisplay: (eval (doom-modeline-segment--time)) signaled (error "Invalid image type ‘svg’")
   )
-  
+
   ;; (after! writeroom-mode
   ;; (+zen/toggle-fullscreen))
     ; NOTE: doesn't affect when run in terminal
@@ -464,14 +464,14 @@
     ; just increases font size..?? :/
     ; spc-t-z/Z
 
-  
+
 
 
   (use-package! good-scroll ; actually god-send, a HUGE difference in feeling, welcome to the 1990s, emacs!
     :init
     (setq good-scroll-duration 0.15 ; the further you step, the quicker you'll want this
           good-scroll-step 200) ; d: 80 = ~3 lines, 200 = 12 lines
-                                ; 
+                                ;
                                 ; 0.15 * 200 = EXACTLY 200 lines on my tiny touch-pad, from top to bottom!!
                                 ; NOTE: these values are for my shitty chromebook's touchpad
                                 ; BUG: WARNING: Error in post-command-hook (good-scroll--post-command): (args-out-of-range 247745 1 2103)
@@ -481,11 +481,11 @@
 
 
 
-  
+
   ;; testing centaur-tabs
   ;;  - i customized it, and now it looks like native tabs! lol
   ;;  - TODO: the icons are kinda distracting.. as with the mode-line icons..
-  
+
   (after! centaur-tabs
     (setq
      centaur-tabs-height 11
@@ -494,7 +494,7 @@
      centaur-tabs-set-bar "under" ; FIXME: "under" doesn't work, and "left"/"right" may require a minimum tab-bar-height..
     ;; TODO: add FEATURE: move most recently selected tab to the front
     ;;  -  i couldn't find this in this option in the code..
-     
+
     ;; centaur-tabs-cycle-scope "groups" ;; ohh groups, not projects.. nvm
     ;; - tabs
     ;;     Navigate through visible tabs only.
@@ -521,7 +521,7 @@
 
 
 ;;; hl-todo
-  (after! hl-todo 
+  (after! hl-todo
     ;; tags
     ;; https://orgmode.org/manual/Setting-Tags.html
     ;; C-c C-c (org-set-tags-command)
@@ -554,7 +554,7 @@
 
     ;; personal additions:
     ;; introspect vars starting with 'font-lock' to get some colors
-     
+
        ;; todo sequence
        ;; TODO
        ("PENDING" font-lock-keyword-face bold)
@@ -564,49 +564,50 @@
        ("DONE" font-lock-doc-face bold) ; likely don't need done/nvm, just delete the text
        ("NVM" font-lock-doc-face bold)
        ("FAIL" error bold)
-    
+
        ;; various todos
        ("DECIDE" font-lock-keyword-face bold)
        ("MERGE" font-lock-keyword-face bold) ; merge notes, not git
        ("TEST" font-lock-keyword-face bold) ; TRY?
-    
+       ("DESIGN" font-lock-keyword-face bold)
+
        ("WARNING" warning bold)
        ("BEWARE" warning bold)
-       
+
        ;; FIXME
        ("ERROR" error bold)
        ("PROBLEM" error bold)
-    
+
        ("TEMP" font-lock-constant-face bold) ; ~= HACK
        ("WTF" font-lock-constant-face bold)
        ("HALP" font-lock-constant-face bold)
-    
+
        ;; various notes
        ;; NOTE
        ;; ("PERSONAL NOTE" success bold) ; added to factual research notes
                                          ; TODO: TEST: overlap?
        ("CONCLUSION" success bold) ; my conclusion after researching
-    
-    
+
+
        ;; experimental / testing:
        ("KILL" error bold) ; ..?, lol. 4 emacs
        ("LOVE" font-lock-constant-face bold) ; can always use more love
        ("CUTE" font-lock-constant-face bold)
-       
+
        ;; some todos are to add something, it may help to clarify what..
        ("FEATURE" font-lock-keyword-face bold)
        ("IDEA" success bold)
        ("DREAM" success bold)
-       
+
        ("PROGRAM" success bold)
        ("PROJECT" success bold)
-       
+
        ("PULL REQUEST" font-lock-keyword-face bold)
        ("PR" font-lock-keyword-face bold)
-       
+
        ("WATCHOUT" warning bold)
        ("CAREFUL" warning bold)
-    
+
 
     nil
     ))) ; append
@@ -631,7 +632,7 @@
     ;;  NOTE: shift
     ;;  BUG: hmmmm??
     (setq org-todo-keywords '(
-                              
+
           ;; (sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
           ;;   - doom's original sequence actually makes more sense..
 
@@ -639,7 +640,7 @@
           ;;   - TEMP: keep it simple for now
           ;;   - no need for DONE, just toggle to empty
           ;;   - i use these in hl-todo, not org-mode..
-          
+
             (sequence "|" "YES" "NO" "OK" "MAYBE" "IUNNO" "KILL")
           ;;   - these came with doom emacs..
           ;;     - it's a bit wordy, and in all caps.. but i believe in emacs..
@@ -657,12 +658,12 @@
           ))
 
     ;; from inspecting org-todo-keywords
-    ;; 
+    ;;
     ;; Original Value
     ;; ((sequence "TODO" "DONE"))
     ;;   - nice 'n simple!
     ;;     - good job vanilla :)
-    ;;     
+    ;;
     ;; Value
     ;; ((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
     ;;   - i was using KILL the wrong way..
@@ -678,15 +679,15 @@
     ;;    - W for what?.. lol
     ;;  (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
 
-    
+
     (setq org-todo-keyword-faces
           '(("ERROR" . (:foreground "red" :weight bold))
             ("WARNING" . (:foreground "orange" :weight bold))
             ("FIXME" . "red")))
 
     ;; https://orgmode.org/manual/Global-TODO-list.html
-    
-    
+
+
     ) ; org-mode
 
 
@@ -698,9 +699,32 @@
 
 
 
-  
+
 ;;; non-core emacs stuff (not gui, org, etc.)
 
+
+;;; create a basic outline-mode for my personal text file mark-up
+  ;; with this, i won't need markdown anymore, just txt and org files!
+  ;; ..i think this'll end up becoming a simple reg-exp parser..
+  ;; start with headers
+  ;; TODO: then bold and italics
+  ;; TODO: see if i ever made a note of my markup anywhere
+(after! outshine
+  (defun ra/my-text-markup-mode () ; gen'd by ai
+    "Configure outshine for colon-terminated headers in text mode."
+    ;; 1. Set the outline regex (must be a buffer-local variable)
+    (make-local-variable 'outline-regexp)
+    (setq outline-regexp "\\n\\{2,\\}^.*:$")
+
+    ;; 2. Enable outshine-mode (which enables outline-minor-mode automatically)
+    (outshine-mode 1)
+
+    ;; Optional: Start with everything folded by default
+    ;; (outline-hide-body)
+    )
+
+  ;; Add this configuration to the text-mode hook
+  (add-hook 'text-mode-hook 'ra/my-text-markup-mode))
 
 
 ;;; dragonruby
@@ -709,7 +733,6 @@
   ;;   ;;  - https://discourse.doomemacs.org/t/how-to-disable-rubocop/2529
   ;; )
 
-  
 
 
 
@@ -717,9 +740,10 @@
 
 
 
-  
 
-  
+
+
+
 
 ;; TODO: move themes and fonts up, before package-related settings
 ;;   - could create a function if they're too big, unweildy..
@@ -878,7 +902,7 @@
   ;;
   ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
   ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-  ;;      
+  ;;
   ;;(setq doom-font "Fira Code") ; this works too
   ;;(setq doom-font "Fira Code-14")
   ;;
@@ -900,7 +924,7 @@
           ;;  - not bad!.. kinda CUTE actually.. <3 farrr more spaced outtt, whoaaa.. actually quite close o Monofoki..!! <3 <3 but possibly more eye-straining..?? especially at this size.. :/
           ;;    - unfortunately, either too small or too wide at 13/20.. but beautiful!
           ;;     - need about 14 or 15
-          ;;     
+          ;;
           doom-variable-pitch-font "Roboto-11" ;; NOTE: WOW WHAT A BIG FUCKING DIFFERENCE..!! this is beautiful!! this whole time i thought it was the chromebook being shitty..!!
           ;;  - if only it were monospaced.. it fucks up which-key, and punctuation is squashed together.. :/
           ;;  - TODO: try coding with it, def worth the beauty! also, it makes code very narrow!
@@ -921,13 +945,13 @@
   ;; (setq doom-font "Cousine") ; i think it falls-back to this.. especially if you're missing a font-size and use increase/decrease-font-size
   ;; (setq doom-font "DejaVu Sans Mono") ; d: 10; cute!, very wide at 11
   ;; does chromeos come with ubuntu mono?
-  
+
   ;; custom fonts
 
   ;; battle of the cute
 
   ;; (setq doom-font "AnnotationMono-11") ; d: 10, eh, something's off.. feels a bit squashed (low height, long width).. though very fun! simpsons vibes
-  
+
   ;; (setq doom-font "Agave") ; d:10 nice! very cute. though maybe too cute to read.. lol
   ;; (setq doom-font "Agave-11") ; also nice! big. funky! bolds look great!
   ;;   - can be rough reading plain text, makes me cross-eyed, otherwise got an earthbound feeling!
@@ -942,7 +966,7 @@
   ;; (setq doom-font "UbuntuMono-Bront-11")
   ;;   - TODO: to use bront version, would need to combine bront for regular font, and the original for styles
   ;;   - also has a great big X icon use by centaur-cons for close tab..!
-  
+
   ;; (setq doom-font "DejaVu Sans Mono-9") ; d: 9, GREAT! kinda cute too! very readable, VERY narrow, excellent for long code
   ;; (setq doom-font "DejaVu Sans Mono-10") ; feels too wide here..
   ;; (setq doom-font "DejaVu Sans Mono-11") ; big-mode, quite wide here, but still nice 'n comfy..
@@ -963,7 +987,7 @@
   ;; (setq doom-font "OfficeCodePro-11") ; this is GREAT too
 
 
-  
+
   ;; bitmap
   ;; NOTE: this honestly may be the way to go.. wow.. it's crisp on a shitty old chromebook!
   ;; (setq doom-font "CozetteVector-10") ; NOTE: bitmap font: limited to size 10, no styling (bold, italic)
@@ -978,7 +1002,7 @@
   ;; (setq doom-font "RedditMono-10") ; quite nice, though a bit wide, and roboty
 
   ;; TODO: try text-scale-mode since zen scales text really well..
-  
+
   ;; eval testing area (<3 emacs)
   ;;   - just use set-frame-font
   ;;     - TODO: bind this
@@ -1014,13 +1038,13 @@
   ;;   - the new chromeos default
   ;;     - (replacing arimo/tinos/cousine?)
   ;;   - default for google chrome on chromeos
-  ;;   
+  ;;
   ;; dejavu serif
   ;;   - make org-mode a bible!
   ;;
   ;; noto serif
   ;;   - quite good! only slightly serif, and like noto sans, it's very spacious, with hefty horizontal space
-  ;;   
+  ;;
   ;; carlito <- calibri
   ;;   - NOTE: maybe the best one..!
   ;;   - sans
@@ -1028,7 +1052,7 @@
   ;; caladea <- cambria
   ;;   - serif
   ;;
-  ;;   
+  ;;
   ;; (setq doom-variable-pitch-font "Google Sans-10") ; d: 11, quite wide (for a variable-width font), spacey
                                         ; 16, on google chrome..!?
                                         ; 10, line height feels squashed
@@ -1042,13 +1066,13 @@
                                         ; bold is distractingly larger than normal font here too
                                         ; i actually remember using this somwhere.. i think for writing on my ipad mini, using voice dream writer!
 
-  
+
   ;;  - children/elderly mode
   ;;  - spc-t-b - big font mode
-  ;;    - TODO: customize it! 
+  ;;    - TODO: customize it!
   ;;  - maybe can help with focus..? or maybe too big..
 
-  
+
 
 ) ; init
 
@@ -1072,7 +1096,7 @@
   ;; and i thought nvim was terrible..!!
 
 
-  
+
 
   ;; see notes in [emacs.org]
   ;; TODO: ALMOST DONE..: slowly compare 'n merge my helix bindings
@@ -1138,7 +1162,7 @@
     ;; originally X is meow-go-to-line, but it also bound to Q..
     ;;   - TODO: what the.. two bindings..?? un-bind both!!
     ;; later, i re-bind X to er/expand-region
-    
+
     ;; TODO: just unbind C-=, will never find that..!
     ;;   - is it intended for use in insert-mode..??
 
@@ -1176,32 +1200,32 @@
    ;;     - also, if you change the keyboard layout, it's a good thing, as it's mneumonic, as opposed to whatever's on the home-row
 
    ;; NOTE: can open help-with-tutorial to play with the original bindings..
-    
+
    ;; see emacs.org
 
    ;; it's a bit tempting to bind hjkl, but fuck it
    ;;   - anyway, it's notably not mneumonic
 
 
-    
+
 
    ;;; how to bind keys
    ;;
    ;; from the docs
    ;; (meow-define-keys
    ;;   'normal ;; 'STATE ; see list of states/keymaps above
-   ;;   
+   ;;
    ;;   ;; bind to a command
    ;;   '(\"a\" . meow-append)
    ;;   '("U" . undo-fu-only-undo ) ;; NOTE: TODO: use capital letter, not S-u ?? yet you can do C-S-u??
-   ;;   
+   ;;
    ;;   ;; bind to a keymap
    ;;   (cons \"x\" ctl-x-map)
    ;;   ; binds spc-x to spc-x-map
-   ;;   
+   ;;
    ;;   ;; bind to a keybinding which holds a keymap
    ;;   '(\"c\" . \"C-c\")
-   ;;   
+   ;;
    ;;   ;; bind to a keybinding which holds a command
    ;;   '(\"q\" . \"C-x C-q\"))"
    ;;
@@ -1237,7 +1261,7 @@
    ;;
    ;;'("q r" . some-function)
    ;;  - normal key-maps work fine..
-   ;;  
+   ;;
    ;;"c s" ; must be c-c c s / spc c s
    ;;"l r" ; must be c-c c l r / spc l r
    ;;  - i'm guessing these link to the original key-maps as well..
@@ -1284,7 +1308,7 @@
 
   (meow-define-keys
    'normal ; if you use 'meow-define-keys
-           ; 
+           ;
   ;; (defun ra/bind-common-key-bindings ()
   ;;(setq ra-common-key-bindings ( ;; TODO: hmmm, can't pass a list..??
 
@@ -1292,14 +1316,14 @@
    ;;; these abuse emacs defaults in normal-mode, can be confusing..
    ;; '("C-b" . "C-x b" ) ;; FIXME: somehow binds h too??
                           ;; TODO: damn, i really need this
-   
+
    ;;; a few things first..
 
    '("C-<tab>" . "C-x b" ) ;; NECESSARY,  +[search-engine]/switch-workspace-buffer
    ;;   - this works really well, organizing/restraning buffers by workspaces
 
 
-   
+
    '("M-u" . vundo ) ;; Braid
    ;;   - how could this not be bound..??
    ;;   this is very meta..
@@ -1325,7 +1349,7 @@
       ;;     - raises popup to current buffer, for better viewing
 
 
-   
+
 
 
    ;;; MOVEMENT
@@ -1341,11 +1365,11 @@
 
    ;; NOTE: shift is reserved for selection, in combination with these movement bindings
 
-      
+
    ;; single character/line movement
    ;; arrow keys = c-npfb = hjkl (vim, meow) + c-a/e
    ;;   - these all work as expected..
-   
+
    ;; a little personal binding
    ;; TODO: i quite miss this basic movement on c-j/k..
    ;;   - must fight.. the.. temptation..!!
@@ -1377,7 +1401,7 @@
    ;;   - FIXME: these require +smartparens module
    ;;   - it seems meow doesn't use these for any key-board macros..
    ;;     - BEWARE: don't confuse with meow-next-word/symbol (e/E), which are unique to meow
-   ;;    
+   ;;
    ;; m-n/p were unbound by default..
    '("M-n" . forward-paragraph ) ;; vs page-down, forward-sentence (m-e), sp-next-sexp
    '("M-p" . backward-paragraph ) ;; vs page-up, backward-sentence (m-a), sp-previous-sexp
@@ -1385,22 +1409,22 @@
    ;;   - this matches down/up arrows, which are foward/backward-paragraph by default
    ;;   - it also matches org-forward/backward-paragaph
    ;;   - also excellent with shift selection
-   ;;   
+   ;;
    '("C-<right>" . sp-forward-symbol ) ;; not even bound by default..!!
    '("C-<left>" . sp-backward-symbol )
    ;;   - FIXME: these require +smartparens module
-   ;;   - TODO: there's a forward-symbol, but no backward-symbol..?? 
+   ;;   - TODO: there's a forward-symbol, but no backward-symbol..??
    ;;   - also back instead of previous is terrible, even if it's bound to b..
-   ;;   
    ;;
-   ;;   
-   ;;   
+   ;;
+   ;;
+   ;;
    ;; m-e/a = forward/backward-sentence
    ;;   - is a really neat and unique way to move too, and puts the force the left hand
    ;;   - it skips to '.', but if it doesn't find one, continues to the begin/end of a paragraph
 
 
-   
+
    ;; drag/transpose stuff around
    ;; m-[arrow-keys] (notably no mirrored bindings here)
    ;;   - NOTE: i'm keeping the default drag-stuff for now, until i find a place for it..
@@ -1453,7 +1477,7 @@
 
 
 
-   
+
    ;; C-M-<page-down>/<page-up> scroll-left/right ;; strange binding, but useful..
    ;;  - can instead use c-x >/<
 
@@ -1465,14 +1489,14 @@
    ;;     - emacs movement is actually incredible.. incredibly smart..!
    ;;   - signifies begin/end
    ;;     - possibly the same as <home>/<end> keys
-   
 
 
-   
+
+
    ;; c/m-v
    ;;   - for the nostalgia of some past time..
 
-   
+
 
 
    ;; an extra set of movement keys added by me
@@ -1484,24 +1508,24 @@
    ;;  - these match my oft used custom helix bindings for c-hjkl
    ;;
    ;; TODO: really just need smooth scrolling with next/prev paragraph, as most gui editors do..
-   ;; 
+   ;;
    ;;  - some possibilities:
-   ;;  
+   ;;
    ;;  - page down/up is another GREAT and FAST way to move around text in general, especially in case a major-mode (org-mode..) is giving you trouble..
    ;;    - consider this the key-board alt to mouse scrolling (it's function is even named scroll..)
    ;;    - also, the defaults c/m-v are just.. antiquated
    ;;    - TODO: conceptually it belongs on m-down/up.. but it's used by drag functions by default..
    ;;    - TODO: could update the binding to move by function (m-a/e), if not, fall-back to move by page
-   ;;    
+   ;;
    ;;  - forward/backward-paragraph
    ;;    - this is a much needed alt for m-n/p, which is tough to reach on some key-boards
    ;;      - however, because this binding includes shift, it's better to use page-down/up here, as you likely aren't selecting pages of text.. or are you..??
    ;;    - there's already also m-down/up for paragraph movement
-   ;;    
+   ;;
    ;;  - M-a/e is an awesome emacs original..
    ;;    - unfortunately, it stops at '.'
    ;;      - though, even then, it's still quite interesting.. as, what other character would you stop on, within a chunk of text / paragraph?
-   ;;      - TODO: need to create an alt function.. could even replace c-a/e 
+   ;;      - TODO: need to create an alt function.. could even replace c-a/e
    ;;
    ;;
    '("C-S-j" . "C-v")
@@ -1527,19 +1551,19 @@
    ;; '("C-S-l" . "M-e")
 
 
-   
-   
+
+
    ;; END OF BASIC MOVEMENT
 
 
 
 
-   
+
    ;; # C-S-k = "kill_to_line_start"
    ;;  - don't actually have anything for this..
    ;;    - c-s-a s
 
-   
+
    ;; TODO: jump backward/forward
    ;;   - maybe not "jump".. TODO: +vertico/jump-list is really good though..
    ;;   - ask ai
@@ -1583,7 +1607,7 @@
    ;;   - meow--kbd-delete-char = C-d
    ;;'("M-d" . meow-backward-kill-word ) ;; symbol?, default: kill-word
    ;; meow-beacon-kill-delete ;; delete all selections.. not sure how it would differ from s..
-   ;; 
+   ;;
    '("C-S-d" . meow-backward-kill-symbol) ;; to match D
    ;;   - or kill-whole-line? to match c-s-<backspace>
    ;;     - nahh, keep this, i use this quite a lot now in normal-mode.. though i still need the backspace key in insert-mode..
@@ -1599,7 +1623,7 @@
    ;;     - and it's not chromeos..
    ;;   - NOTE: chrome os maps a-backspace to delete by default
    ;;   - unlike delete, backspace always goes back
-   ;;   
+   ;;
    ;; backspace = backward-delete-char-untabify ;; default
    ;; C-backspace = backward-kill-word ;; default
    ;; '("C-DEL" . meow-backward-kill-word) ;; default: backward-kill word (affects kill-ring?), alts: doom/delete-backward-word
@@ -1619,7 +1643,7 @@
 
 
 
-   
+
 
    ;; re-bind
    ;; spc-m-x is too long
@@ -1649,11 +1673,11 @@
    '("C-S-SPC" . set-mark-command) ;; d: cycle-spacing
    ;;  - a temporary re-binding..
    ;;  - seems to have an alt binding C-@.. really obscure.. maybe a bash thing..??
-   
 
 
 
-   
+
+
    ;; TODO: NOTE: now only c-h left, which still requires you to use the original key-chord (or spc-h-spc in meow)..
 
 
@@ -1689,7 +1713,7 @@
    ;; TODO: really just need more direct bindings here.. see focus editor:
    ;;   - c-p for switch buffer
    ;;   - c-w for close-buffer
-   
+
    ;; <- and -> (f1/f2)
    ;;  - NOTE: this binding is god-send.. even just for next/previous buffer
    ;;  - lol, i really like this binding.. a pair of keys work really well here.. and what a strange little pair i have here..
@@ -1716,7 +1740,7 @@
    '("C-M-<XF86Forward>" . next-window-any-frame ) ;; just here for completion (frame), i hope i don't have to open another emacs program..!!
    '("C-M-<XF86Back>" . previous-window-any-frame )
    ;;  - i normally use c-x o / c-s-o other-window to hop windows
-   
+
 
    ;; chromebook reload key (f3)
    ;; TODO: could use for switch-buffer/project/workspace/frame/window(?)..
@@ -1728,15 +1752,15 @@
    '("M-<XF86Reload>" . +workspace/kill )
    '("C-M-<XF86Reload>" . "C-c q f" ) ;; delete-frame / doom/delete-frame-with-prompt
 
-   
-   
+
+
    ;; maybe f4 for splitting..??
    ;;   - nope, chromebook's function takes over (maximize/minimize)
    ;;  - vs c-x 0/1/2/3/4
 
 
 
-   
+
    ;; a few crutches i still haven't figured out..:
    ;;   - can abuse the c-s- modifier here
    ;;     - NOTE: c-s- sometimes doesn't work.. :/
@@ -1792,14 +1816,14 @@
 
 
 
-   
+
 
   ) ;; end of ra/bind-common-key-bindings
 
 
 
 
-  
+
 
 
   ;;; TEMP: TODO: trying some shit.. delete this later, and note lisp magicks
@@ -1820,7 +1844,7 @@
   ;;    '("M-n" . writeroom-mode )
   ;;    '("M-p" . writeroom-mode )))
 
- 
+
   ;; (meow-define-keys
   ;;  'insert ; if you use 'meow-define-keys
 
@@ -1836,7 +1860,7 @@
   ;;  ;; (eval-defun)) ;; just runs the top-level defun around this point.. :/ no args needed
   ;;  ;;   - this is probably how m-x works..
   ;; )
-  
+
   ;; (meow-define-keys
   ;;  'normal ; if you use 'meow-define-keys
   ;;  ;; 'insert ; TODO: this doesn't work..
@@ -1857,8 +1881,8 @@
 
 
 
-  
-  
+
+
 
   (meow-define-keys
    'normal
@@ -1866,14 +1890,14 @@
    ;; NOTE: only define things for meow's normal-mode here, mostly letters and s-letters
    ;;   - modified keys, special keys, etc. are all defined globally further above
 
-   
+
    ;; A FEW THINGS FIRST..
 
    ;; i quite miss helix's return key functionality, it sorta just went to the beginning of the next line.. def worth trying out..
    ;; though, in emacs, if you are in the beginning or end of line, it will continue that way too.. it's smarter
    ;; you just have to rely on c-a/e
    ;;  - NOTE: unlike helix, you can actually insert stuff in normal-mode here.. mostly tabs 'n new-lines
-   
+
    ;; wtf is with the redo binding
    ;; don't touch the original emacs binding on C-/
    ;; '("u" . undo-fu-only-undo ) ;; default is meow-undo NOTE: may be a problem with undo-fu-only-undo
@@ -1911,7 +1935,7 @@
    ;;   - act on symbol/region/expression/..?
    ;;   - okay, this is kinda amazing..
    ;;     - yeah... emacs is teh shit..
-   ;;     
+   ;;
    ;; could also use / and #, both un-bound
    ;;   - should try not to use symbols for anything though..
    ;;   - NOTE: who knows, maybe major-modes actually bind these for you!!
@@ -1952,7 +1976,7 @@
    '("X" . er/expand-region ) ;; interesting.. default was meow-line (goto line)
    ;;  - HACK: hacky conditional impl:
    ;;    - if arg is < 0, contract; = 0, reset; > 0 expand
-   ;;      - this is why is it bound to - 0 =         
+   ;;      - this is why is it bound to - 0 =
    ;;    - z doesn't do anything.. this would be the ideal binding: pop-selection
    ;;      - but this would limit it to normal-mode.
    ;;    - NOTE: it's possible to write another function but..
@@ -2050,25 +2074,25 @@
 
     ;; for the moment, i'm trying to keep things consistent across normal and insert modes, so they are bound together in the same place further above..
 
-    
+
   )
 
 
 
   ;; some annoying problems first:
-  ;; 
+  ;;
   ;;'("x ESC" . nil)
   ;;'("c ESC" . nil)
   ;;   - NOTE: these work fine in meow's key-pad, it's a problem of emacs's original key-chords.. TODO: you must fix it there
   ;;   - these bindings make it hard to <escape> emacs's key-chord input handler
   ;;     - it seems to insert a meta key into the sequence..
   ;;   - TODO: how to escape emacs's key sequence input handler?
-  
 
 
 
 
-  
+
+
 
   (meow-define-keys
       'leader ; c-c / spc
@@ -2086,7 +2110,7 @@
 
     ;; so far so good... as i just discovered i was using the wrong key-chords the whole time..!! lmao
 
-    
+
     ;;'("x" . "C-x") ;; or ctl-x-map (no quotes) ;; FIXME: nope, neither solutions work
     ;;'("h" . "C-h") ;; or help-map
     ;;  - an attempt to map spc-x/h to c-x/h ? (instead of c-x/h c-?)
@@ -2110,47 +2134,46 @@
     ;;  - TODO: can get rid of these extra bindings.. the original binding was on c (c-x c-c) anyway..
     '("q Q" . nil)
     '("q K" . nil) ;; could bind to just kill-emacs (no save)
-    
+
     ;; '("q r" . doom/restart-and-restore) ;; was doom/restart
     ;; '("q R" . doom/reload) ;; or c for config
     ;;  - seems to run 'doom sync -B -e', which requires the internet.. :/
     ;;  - TODO: maybe can just add the whole c-h r key-map here..
-    
+
     ;;; spc o
 
     ;; TODO: '-' for dired-jump seems like a strange binding..?? move to f?
     ;;   - spc-o-f and spc-q-f are used for frames..
 
     (when (modulep! :term eshell)
-      '("o s" . +eshell/toggle) ; s for shell
-                                        ; though, doom likely chose e to support having multiple shell app bindings..
-
-      '("o t" . +eshell/toggle) ;t for terminal
+      ;; NOTE: doom sets e/E for eshell and t/T for vterm
+      ;; "o t" is set by ra/open-os-terminal
+      ;; '("o T" . +eshell/toggle) ;t for terminal
       )
 
     ;;; spc-t
     ;; (when (modulep! :term solaire-mode) ;; TODO: not a module..
     '("t -" . solaire-global-mode) ;; "toggle" arg?
-    
+
     '("t p" . variable-pitch-mode) ;; variable-width font/typeface aka proportional
     ;;   - v is for visible-mode (??), f for fly-check, F for full-screen
 
     ;;; spc-w ; TODO: NOTE: inconsistent, should be on c-x, along with buffers, tabs, windows
-    ;;  - maybe c-x W for workspace (and c-x w for windows) 
+    ;;  - maybe c-x W for workspace (and c-x w for windows)
     '("w <left>" . +workspace/swap-left)
     '("w <right>" . +workspace/swap-right)
 
-    
+
       ;; new key-maps
-      
+
       ;;; spc b
       ;;   - i feel this would match (spc w n/p/k/etc.), which feels quite good to press.. but i don't know if i really need a whole nother key-map for it.. as (spc x b/k) + f1/f2 are enough..
       ;;   - TODO: see evil leader map for ideas
 
 
-      
 
-      
+
+
       ;; TODO: these toggles are useful for when shit is slow, especially lsp, possibly broken tree-sitter, formatters, etc.
       ;;   - i may even prefer them off by default.. especially formatters
       ;; from helix:
@@ -2163,7 +2186,7 @@
       ;; h        = ":toggle-option lsp.display-inlay-hints"
       ;; l        = ":toggle-option lsp.enable"
 
-      
+
   ) ; meow-define-keys 'leader spc
 
 
@@ -2176,7 +2199,7 @@
 
   ;;(setq meow-keypad-start-keys "((?c . ?c) (?h . ?h) (?x . ?x))")
   ;;  TODO: must learn lisp.. :/
-  
+
   ;; Default: ='((?c . ?c) (?h . ?h) (?x . ?x))=
 
   ;; Alist of keys to begin keypad translation. For instance, given the default
@@ -2185,7 +2208,7 @@
   ;;
   ;; Alist of keys to begin keypad translation. When a key char is pressed,it's corresponding value is appended to C- and the user is prompted to finish the command.
 
-  
+
 
 
   (meow-define-keys
@@ -2194,14 +2217,14 @@
     ;; change inputs of the program?
 
     ;; '("?q" . "?q") ; TODO: is this how it works..??
-    
+
     ;; '("x" . "C-x") ; WARN: this breaks everything..
     ;; '("x" . "x") ; inserts x..
     ;; '("x" . nil) ; "without inital keys"
     ;; '("C-x" . "C-x") ; doesn't do anything..??
     ;;  - ERROR: meow-keypad-start-with: Wrong type argument: commandp, ctl-x-map
     ;;  - hmmm, yeah, i think it's for input..
-    ;;  
+    ;;
     ;;  - trying to map spc-x to c-x ? not c-x c-?
     ;;  - not sure how to do this for the first time only..
 
@@ -2341,24 +2364,22 @@
 ;;     ))
 
 
-(defun ra/convert-markdown-emphases-to-org (conversion-type)
-  ;;-with-options version
+(defun ra/convert-markdown-emphases-to-org (conversion-type) ; -with-options version
   ;; FIXME: problem when trying to convert both
-  "Convert Markdown bold and/or italics (using * or _) to Org mode syntax 
+  "Convert Markdown bold and/or italics (using * or _) to Org mode syntax
   within the active region, ignoring Org mode headlines.
   'Both' is selected by default."
-  (interactive 
-   (list (completing-read 
-          "Convert (bold only (** and __ -> *), italic only (* and _ -> /), or both (FIXME: BROKEN)): " 
-          '("both" "bold" "italic") 
-          nil t nil nil "both"
-          )))
-  
+  (interactive
+   (list (completing-read
+          "Convert (bold only (** and __ -> *), italic only (* and _ -> /), or both (FIXME: BROKEN)): "
+          '("both" "bold" "italic")
+          nil t nil nil "both")))
+
   (save-excursion
     ;; Ensure a region is active
     (unless (use-region-p)
       (error "A region must be active to use this function."))
-      
+
     (let* ((start (region-beginning))
            (end (region-end))
            (deactivate-mark nil)
@@ -2371,27 +2392,26 @@
       (defun my/on-org-header-line-p ()
         (save-excursion
           (beginning-of-line)
-          ;; Check if the line starts with one or more asterisks and a space
-          (looking-at "^\\*+[[:space:]]"))) ;;
+          (looking-at "^\\*+[[:space:]]")))
 
-      ;; --- BOLD CONVERSION FIRST (MD: **, Org: *) ---
-      (when do-bold
-        ;; Non-greedy match for content (.*?) including spaces
-        (while (re-search-forward "\\(\\*\\*\\|__\\)\\(.+?\\)\\(\\*\\*\\|__\\)" end t)
-          ;; Check if we are on a header line *before* replacing
-          (unless (my/on-org-header-line-p)
-            (replace-match "*\\2*" nil nil)))
-        (goto-char start)) 
-
-      ;; --- ITALIC CONVERSION SECOND (MD: *, Org: /) ---
+      ;; --- ITALIIC CONVERSION FIRST (MD: * or _, Org: /) ---
+      ;; Must run first to ensure single delimiters don't interfere with bold (double) delimiters
       (when do-italic
-        ;; Non-greedy match for content (.*?) including spaces
+        ;; Regex: Match single * or _, non-greedy content including spaces (.+?), then single closing * or _
         (while (re-search-forward "\\(\\*\\|_\\)\\(.+?\\)\\(\\*\\|_\\)" end t)
-          ;; Check if we are on a header line *before* replacing
           (unless (my/on-org-header-line-p)
-             (replace-match "/\\2/" nil nil)))
-        )
-      
+            ;; Check if we accidentally matched a double marker (**word**) and ignore it here
+            (unless (string-prefix-p "**" (match-string 0))
+              (replace-match "/\\2/" nil nil))))
+        (goto-char start)) ; Reset point to beginning of region after first pass
+
+      ;; --- BOLD CONVERSION SECOND (MD: ** or __, Org: *) ---
+      (when do-bold
+        ;; Regex: Match double ** or __, non-greedy content including spaces (.+?), then double closing ** or __
+        (while (re-search-forward "\\(\\*\\*\\|__\\)\\(.+?\\)\\(\\*\\*\\|__\\)" end t)
+          (unless (my/on-org-header-line-p)
+            (replace-match "*\\2*" nil nil))))
+
       (message "Emphasis conversion (%s) complete for region, ignoring headers." conversion-type)
       )))
 
@@ -2411,8 +2431,8 @@
 
 
 (defun doom/ediff-init-and-example ()
-  ;; from: https://github.com/doomemacs/doomemacs/issues/581
   "ediff the current `init.el' with the example in doom-emacs-dir"
+  ;; from: https://github.com/doomemacs/doomemacs/issues/581
   (interactive)
   (ediff-files (concat doom-user-dir "init.el")
                (concat doom-emacs-dir "static/init.example.el")))
@@ -2449,7 +2469,7 @@
                 (format "gnome-terminal --working-directory=%s &" dir-quoted)
               ;; Nested check for x-terminal-emulator, then xterm
               (if (executable-find "x-terminal-emulator") ; chromeos from crostini
-                  (format 
+                  (format
 "x-terminal-emulator --working-directory=%s &" dir-quoted)
                 (if (executable-find "xterm")
                     (format "xterm -e \"cd %s; bash\" &" dir-quoted)
@@ -2458,11 +2478,11 @@
            ;; Fallback
            (t (error "Unsupported operating system for opening external terminal")))))
 
-    
+
     ;; Use async-shell-command to run the command without blocking Emacs
     ;; (async-shell-command command)
 
-    
+
     ;; close the *async buffer* that is created
     ;; source: https://stackoverflow.com/questions/6915314/emacs-automatically-close-async-output-buffers-on-command-completion
     ;;   - ai failed me.. maybe needed to wait
@@ -2483,12 +2503,12 @@
     ;;     (message "Command sent (no buffer created).")))
 
 ))
-  
+
 (after! meow
   (meow-define-keys
       'leader
-      '("o t" . ra/open-os-terminal) ;t for terminal, or s for shell
-
+      '("o t" . ra/open-os-terminal) ; t for terminal, or s for shell
+      ;;  - TODO: DECIDE: T conflicts/overrides with vterm, but probably don't need with the os terminal function
 ))
 
 

@@ -16,6 +16,7 @@
 
 (package! good-scroll) ; >> ultra-scroll >? pixel-scroll (native)
 
+(package! outshine) ; "outshine is specifically designed to provide that 'Org-mode look-and-feel' and many of its key bindings (like TAB cycling) to buffers using outline-minor-mode"
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
