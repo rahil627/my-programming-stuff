@@ -135,7 +135,12 @@ upcoming (buggy):
 that is all.
 
 
+a related comment i made
+  - https://www.reddit.com/r/emacs/comments/1hb4om4/comment/ns0krrv/
+    - old post.. but i agree with this.. i think in the very near future, we will have the choice of helix (rust/scheme), lem (common-lisp), textbringer (ruby)--okay, lol, jk, the last one is just me :).. and who knows what else.. you really only need the most popular things to get momentum going, and a decent language.. once helix adds that plugin-system, someone will immediately re-write a new org-mode, magit, etc.. and it's over... /but emacs live on through its incarnations..!!/ :)
 
+
+  
 * the list
 
 from simplest to most feature-ful (by default/out-of-the-box)
