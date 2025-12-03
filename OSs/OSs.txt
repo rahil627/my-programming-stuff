@@ -1,35 +1,73 @@
 
 TODO: merge original file
 
-**windows**
-  - games.
+TODO: can move game/renderer-related notes out.. but it is one of the biggest factors for me.. hmm..
+
+windows
+  - UPDATE: no big update since forever, and no hardware ownership like apple, so, there's little difference from this and linux, save graphics drivers, and direct3d performance
+    - linux with contemporary display managers actually may be better..
+  - *just works*
+  - *games.*
     - gamer community
-  - graphics.
-  - powershell.
-    - the best shell
+    - directx performs really well with windows, compared to vulkan on linux
+  - *graphics.*
   - winget/scoop
+    - the best portable app package manager
     - a singular (no distros), native, secured package manager
-    - scoop may just be the best portable app package manager
   - WSL
     - a powerful native VM for linux, running at near natively-installed performance
-  - doesn't care about how the apps look! You can download anything from the internet and run it
+  - powershell.
+    - a much needed improvement over bash
+  - *doesn't care about how the apps look! You can download anything from the internet and run it*
   - phone link
   - with pro: native sandbox, bitlocker
 
+
 linux
+  - UPDATE: with the advent of better display managers (KDE plasma) and new systems devs, especially rust and C, and the lack of innovation and efficieny by corporate OSs, linux actually looks and performs better than windows!
+  - sucks for games
+    - have to run directx games (and windows apps) via emulation
+      - though, that's a problem of it being propietary, and devs targeting windows.. at least as their first platform
+      - proton/wine
+        - emulation that translates directx on-the-fly to vulkan
+        - supported by valve/steam deck
   - good for automating / building reproducible configs
-  - good to learn the ancient ways of cli
+  - good to learn the ancient ways of cli/shells
     - not sure if this is a pro..
   - non-corporate / free and open-source software (foss)-oriented community
-    - not sure if this is a pro either..
+    - this has its pros 'n cons..
+
 
 mac
-  - no games / graphics
-  - propietary crap
+  - UPDATE: *m-series made mac a big comeback*, with the m4 integrated cpu/gpu/arm thing rivaling $350 graphics cards..! yep, *they still have the best all-in-one laptop hardware*..
+    - but, as it uses ARM, only can install asahilinux, which is still new/not ready, and *most past games just weren't made/compiled for arm*
+  - x/no games / graphics
+   - metal renderer considered quite a good, as it layered api: high-level like opengl and low-level like vulkan/dx12
+   - have to run directx games (and windows apps) via emulation
+     - apple made a 'game porting toolkit' (gptk), based on wine..??
+       - crossover/whisky/steam
+         - whisky is a gui wrapper around gptk
+           - seems to be trying to copy valve's proton.. but just not there, since *apple folks just don't care about games..*
+  - *propietary stack: hardware and software!*
 	- propietary hardware
 	- propietary accessories
       - including basic cables
-    - propietary architecture
-	  - ARM, powerpc
+    - propietary architecture?
+	  - m-series, powerpc
+  - makes it difficult for devs to make apps
+    - TODO: read: https://news.ycombinator.com/item?id=30790964
+      - and it seems to have gotten worse..!!
+    - though, everyone just makes web apps now anyway..
+  - meets unix specs
+    - derives from bsd unix kernal
+      - so you still need macos binaries (elf vs mach-o)
+    - macos might not have dependencies to run the app either.. the libs are different :/
+
+
+iOS
   - makes it difficult for developers to make apps
-    - requires apps to be native-looking (and thus runs into the cross-platform ui problem)
+    - requires apps to be native-looking (and thus creates the cross-platform ui problem)
+      - which.. i'm really not mad at anymore..
+    - no at-run-time compilation (vm/interpreter)
+      - though, embedded scripting langs seem to fine..
+      - i'm also not mad at this either.. it just has to communicate with C, which is everything, and better than android..
