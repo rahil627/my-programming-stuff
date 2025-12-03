@@ -115,7 +115,7 @@ t. helix, for a snappy batteries-included terminal editor with great defaults, i
     - taking it's sweet time to do this.. but has great leaders
   - great for crafting your own key-bindings
 
-n. micro, just to replace nano
+n. micro, just to replace nano (TODO: try ruco)
   - (only because focus doesn't work in the terminal)
   - (and because, unfortunately, textbringer/ruby sucks at packaging programs..)
 
@@ -151,8 +151,14 @@ usually spear-headed by one person, in a more niche language, thus making it har
 **** 4coder
   - part of the handmade-hero movement
     - therefore written in C, and also therefore **can potentially be extended using any programming langauge**
+**** ruco
+  - nano in ruby
+    - a possible alt to micro
+      - ..but not as portable..
 
 
+
+  
 *** open-source momentum
 has the momentum of bigger language-based-dev-communities
 
