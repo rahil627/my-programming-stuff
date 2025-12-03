@@ -78,3 +78,28 @@ iOS:
     - no at-run-time compilation (vm/interpreter)
       - though, embedded scripting langs seem to fine..
       - i'm also not mad at this either.. it just has to communicate with C, which is everything, and better than android..
+
+
+
+
+history:
+
+unix:
+  - TODO: likely noted elsewhere..
+  - from https://en.wikipedia.org/wiki/Unix :
+  - made at AT&T Bell Labs research center, along with the folks that made the C language
+    - (and thus uses C, and is the first portable OS)
+  - it ran back on "minicomputers" and "mainframes" in the 1970s!
+  - promoted a *unix philosophy*
+    - "the idea that the power of a system comes more from the relationships among programs than from the programs themselves"
+    - the use of plain text for storing data
+      - including treating devices and certain types of inter-process communication (IPC) as files
+    - a hierarchical file system
+    - and the use of a large number of software tools, small programs that can be strung together through a command-line interpreter using pipes (as opposed to using a single monolithic program that includes all of the same functionality):
+      - Write programs that do one thing and do it well.
+      - Write programs to work together.
+      - Write programs to handle text streams, because that is a universal interface.
+        - inter-process communication via pipes
+        - shell scripting and command language to combines tools and create workflows
+
+
