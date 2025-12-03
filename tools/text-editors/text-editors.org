@@ -503,6 +503,29 @@ nvim:
 
 **** emacs
   - UPDATE: surprisingly efficient.. i've never seen my shitty old chromebook display 20 hours of battery life.. wtf??
+  - UPDATE: the project to replace the elisp run-time with guile has begun again in 2024..
+    - *this would unite elisp with C, scheme, javascript*, and adds the possibility to add other langs to it (common lisp)
+      - though, by then, helix may have already caught up in just a few years, with significantly less manpower, and better written, especially maintainable program
+  - PROBLEM: the only problem is see is that emacs lisp doesn't have C-ffi, limiting it's development to pure emacs-lisp
+    - it seems to have been done politically: richard stallman wanted to keep it FOSS, no chance of propietary stuff going in..
+      - TODO: see the main commenter's post:
+        - https://www.reddit.com/r/emacs/comments/701v90/guile_needs_a_community_elispemacs_needs_a/
+      - and the comments in here:
+        - https://www.reddit.com/r/emacs/comments/kibygs/how_much_has_emacs_suffered_or_been_held_back/
+        - the core problem: *emacs/elisp didn't add C modules feature until 2016, setting it wayy back*, and even then, it's not as simple as a good ffi
+        - emacs application framework as an example
+          - https://github.com/emacs-eaf/emacs-application-framework
+          - *PROBLEM: need to update qt6 to work with wayland..* so i can't run it on this ancient chromebook..
+          - looks like a glimpse of what emacs could've been..
+            - a ton of gui app plugins: including a browser, file manager, etc.! lmao.. truly an OS..
+              - i'm okay with the browser being seperate, and just using atomic/ghostedit (or whatever it's called..), and trying nyxt.. but *with emacs and an embedded browser, that really would cover 90% of all i need..!!*
+              - not sure why anyone would want to use a file manager written with vue tho..??
+            - but *instead of having the great software devs of the past, who could've written most of this stuff in C/C++ and lisp, we've now got js devs..* ;(
+          - uses qt5 gui, which itself has python bindings to script it..
+            - qtwebengine embeds chrome-based browsers..
+          - seems to have many transpilers..?? or some way to communicate..?
+            - elisp -> python -> js (and back!)
+            - elisp -> js (and back!)
   - much more than a text editor, it's often lovingly called an OS! based around the concept of text buffers
     - **this has the great benefit that everything is written in the same language, morever, the most dynamic language of all time (lisp). Otherwise, you'd have to use an entire set of tools, wherein each tool can be writtern in a different langauge, have different opinions, and just not work as seamlessly together: terminal, terminal multi-plexer, text editor, git tui, file-manager tui, knowledge-base tui, and so on.**
       - **at the moment, for me, all of the tools i use are now written in rust, which is infinitely harder to edit than lisp, let alone develop.** The language itself is complex, along with it's memory-management mode, plus, you have to compile it.. It's all a pain. Whereas with emacs, you just need to know one language, no memory-management
@@ -554,7 +577,7 @@ nvim:
       - portacle is an emacs config set up for common lisp dev
     - particularly great for other dynamic langauges too
       - ruby (python?, javascript?)
-        - LSP doesn't make use of the info via introspection..??
+        - TODO: LSP doesn't make use of the info via introspection..??
   - "m-x is godsend"
     - run any command (function?) that exists in the program
   - **meow**
@@ -590,11 +613,12 @@ nvim:
   - emacs itself is a deep pot of speghetti, and as there are no other great alternatives (that can compete with it's power/flexiblity/ease-of-extending), they get so deep into it, that there's no reason to use another tool
     - 1.7 million lines of code
       - 30% in C
-        - this is primarly for the elisp implementation, which may, in the future, be replaced by guile lisp
+        - this is primarly for the elisp implementation, which may, in the future, be replaced by guile run-time
           - which then in theory could be extended in any language
       - ~1500 primitives??
 
   https://batsov.com/articles/2024/02/27/m-x-reloaded-the-second-golden-age-of-emacs/
+    - TODO: to read?
 
 **** KILL nvim (neovim)
   - NOTE: i must have tried this soon after lua support was added, and people were still migrating, as were plugins
