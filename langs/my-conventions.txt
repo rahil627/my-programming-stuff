@@ -62,23 +62,47 @@ use easily findable tags within comments
       - depends on the language
 
 
-# git commit
+# git commit messages
 
-tiny (edits)
+can combine
+o/e/u/ mostly re-org
+
+u/ update
+e/ edit
+  - how does it differ from update?
+a/ add
+  - + (plus)
+f/ fmt/ format
+  - vs c/ clean
+o/ organize
+  - especially via org-mode
+
+could also use shell commands
+m/ mv/ move
+  - vs merge
+r/ rm/ remove
+  - - (minus)
+
+also fine to type the whole word out
+  - matches same syntax as tags
+  - todo:, note:, fix..., refactor..., merge..., etc.
+
+symbols?
+  - + = add
+  - - = remove
+  - could think about using other symbols..
+    - *nahhh, too cryptic, mneumonics is better*
+
+
+
+some slang
+tiny (a few edits, nothing major)
 nada/nothing (purely formatting, no meaningful changes, tiny cleaning up)
 cleaning/refactor
-fmt (short for formatting in a few prog-langs)
 
 multiple things
   - fix something,/; note something else
 
-same syntax as tags!
-  - todo:, note:, fix..., refactor..., merge..., etc.
-
-symbols
-  - + = add
-  - - = remove
-  - TODO: could think about using other symbols..
 
 
 
