@@ -3,8 +3,25 @@ TODO: merge original file
 
 TODO: can move game/renderer-related notes out.. but it is one of the biggest factors for me.. hmm..
 
+
+linux
+  - UPDATE: with the advent of better display managers (KDE plasma) and new systems devs, especially rust and C, and the lack of innovation and efficieny by corporate OSs, linux actually looks and performs better than windows!
+  - x/sucks for games
+    - UPDATE: big improvement since proton and vulkan, almost only 10% difference in performance!
+    - have to run directx games (and windows apps) via emulation
+      - though, that's a problem of it being propietary, and devs targeting windows.. at least as their first platform
+      - proton/wine
+        - emulation that translates directx on-the-fly to vulkan
+        - supported by valve/steam deck
+  - good for automating / building reproducible configs
+  - good to learn the ancient ways of cli/shells
+    - not sure if this is a pro..
+  - non-corporate / free and open-source software (foss)-oriented community
+    - this has its pros 'n cons..
+  - *great for devs, as there are no restrictions on what you use to make apps, lol*
+
 windows
-  - UPDATE: no big update since forever, and no hardware ownership like apple, so, there's little difference from this and linux, save graphics drivers, and direct3d performance
+  - UPDATE: no big update since forever, and no hardware ownership like apple, so, there's little difference from this and linux, save supported games, graphics drivers, and direct3d performance
     - linux with contemporary display managers actually may be better..
   - *just works*
   - *games.*
@@ -23,25 +40,11 @@ windows
   - with pro: native sandbox, bitlocker
 
 
-linux
-  - UPDATE: with the advent of better display managers (KDE plasma) and new systems devs, especially rust and C, and the lack of innovation and efficieny by corporate OSs, linux actually looks and performs better than windows!
-  - sucks for games
-    - have to run directx games (and windows apps) via emulation
-      - though, that's a problem of it being propietary, and devs targeting windows.. at least as their first platform
-      - proton/wine
-        - emulation that translates directx on-the-fly to vulkan
-        - supported by valve/steam deck
-  - good for automating / building reproducible configs
-  - good to learn the ancient ways of cli/shells
-    - not sure if this is a pro..
-  - non-corporate / free and open-source software (foss)-oriented community
-    - this has its pros 'n cons..
-
-
 mac
   - UPDATE: *m-series made mac a big comeback*, with the m4 integrated cpu/gpu/arm thing rivaling $350 graphics cards..! yep, *they still have the best all-in-one laptop hardware*..
     - but, as it uses ARM, only can install asahilinux, which is still new/not ready, and *most past games just weren't made/compiled for arm*
-  - x/no games / graphics
+  - no games / graphics
+   - UPDATE: yep, still the worst
    - metal renderer considered quite a good, as it layered api: high-level like opengl and low-level like vulkan/dx12
    - have to run directx games (and windows apps) via emulation
      - apple made a 'game porting toolkit' (gptk), based on wine..??
