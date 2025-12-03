@@ -4,7 +4,7 @@ TODO: merge original file
 TODO: can move game/renderer-related notes out.. but it is one of the biggest factors for me.. hmm..
 
 
-linux
+linux:
   - UPDATE: with the advent of better display managers (KDE plasma) and new systems devs, especially rust and C, and the lack of innovation and efficieny by corporate OSs, linux actually looks and performs better than windows!
   - x/sucks for games
     - UPDATE: big improvement since proton and vulkan, with *proton running ~90% of games (see protondb) and almost only 10% difference in performance!!*
@@ -21,7 +21,8 @@ linux
   - *great for devs, as there are no restrictions on what you use to make apps, lol*
     - *much much better to work with open-source, cross-platform tools (opengl, vulkan, qt) than propietary crap, contributing to the open-source world, as opposed to some corporation*
 
-windows
+
+windows:
   - UPDATE: no big update since forever, and no hardware ownership like apple, so, there's little difference from this and linux, save supported games, graphics drivers, and direct3d performance
     - linux with contemporary display managers actually may be better..
   - *just works*
@@ -41,7 +42,7 @@ windows
   - with pro: native sandbox, bitlocker
 
 
-mac
+mac:
   - UPDATE: *m-series made mac a big comeback*, with the m4 integrated cpu/gpu/arm thing rivaling $350 graphics cards..! yep, *they still have the best all-in-one laptop hardware*..
     - but, as it uses ARM, only can install asahilinux, which is still new/not ready, and *most past games just weren't made/compiled for arm*.. in addition to it still being the worst OS to make games and apps for..
   - no games / graphics
@@ -70,7 +71,7 @@ mac
     - macos might not have dependencies to run the app either.. the libs are different :/
 
 
-iOS
+iOS:
   - makes it difficult for developers to make apps
     - requires apps to be native-looking (and thus creates the cross-platform ui problem)
       - which.. i'm really not mad at anymore..
