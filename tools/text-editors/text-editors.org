@@ -111,7 +111,9 @@ z. focus, *the new notepad.exe*, to just simply write/express, *zen*, *extremely
 t. helix, for a snappy batteries-included terminal editor with great defaults, including great default key-bindings and key-maps
   - STATUS: on hold until the scripting / plugin system comes out
     - keep it as *the default terminal editor* for now..
-  - *has the potential and is in good position to compete with others once the scheme plugin system is out..*
+    - experimental plugin branch
+      -  https://www.reddit.com/r/HelixEditor/comments/1l11g2y/anyone_already_using_the_plugins_branch_in_your/
+    - *has the greatest potential to replac emacs once the scheme plugin system is out..*
     - taking it's sweet time to do this.. but has great leaders
   - great for crafting your own key-bindings
 
