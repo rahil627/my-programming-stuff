@@ -100,20 +100,24 @@ z. focus, *the new notepad.exe*, to just simply write/express, *zen*, *extremely
 0. emacs (doom-meow), *for everything, 4 lyfe*
   - *restrict yourself to insert-mode for a more zen experience*
     - TODO: turn off normal-mode?
+  - really just limited by it's lack of C-ffi
 
 1. text-bringer, *for the love of ruby!! <3 <3*
   - *a cute little grassroots hobby project i feel i can contribute to, really make mine, and enjoy it too!*
     - *the project's scale is perfect: vanilla emacs, terminal only*: basically helix without the modal-mode, but instead of rust/scheme, all ruby!!
       - because it uses vanilla emacs as a base, it *complements well with doom-emacs*, without having to learn/remember another set of bindings, nor altering/configuring another set
-  - would be really fun to write plugins for this.. considering its libs
-  - *actually has unlimited potential*
+  - *would be really fun to write plugins for this*.. considering its libs
+    - *this is the perfect sandbox to play with language-related ideas, and do some basic compiler-like programming*
+  - *actually has unlimited potential: completely ruby, plus C-ffi/extensions and ruby libs!*
+  - maybe it can aim to be more like focus editor, but without restrictions, modular/plugin-oriented, and for the terminal.. *do what you want with it!*
 
 t. helix, for a snappy batteries-included terminal editor with great defaults, including great default key-bindings and key-maps
   - STATUS: on hold until the scripting / plugin system comes out
     - keep it as *the default terminal editor* for now..
     - experimental plugin branch
       -  https://www.reddit.com/r/HelixEditor/comments/1l11g2y/anyone_already_using_the_plugins_branch_in_your/
-    - *has the greatest potential to replac emacs once the scheme plugin system is out..*
+    - *has the greatest potential to replace emacs once the scheme plugin system is out..*
+    - plugins are written in scheme/steel, but it does it by exposing rust functions to steel, and i think can use C libs too.. *opening a rather big world of potential: rust libs and C libs*, all via scheme!
     - taking it's sweet time to do this.. but has great leaders
   - great for crafting your own key-bindings
 
@@ -453,6 +457,10 @@ x. nvim
   - sounds like the core of it uses C.. but github shows 100% ruby.. hmmm
       - i had to take the time to build "C extensions"
         - maybe they were in seperate gems..
+  - a standard ruby impl in this case seems better than mruby too, which has a much slower interpreter, as plugins can make a big part of the code, and *the plugins themselves can use C extensions..!*
+    - *TODO: try writing a basic outline-mode, non-lsp ruby ide, etc.*
+      - *this is the perfect sandbox for language-related ideas..!!*
+    - in the future the core could still be written in C, with ruby as the scripting lang, similar to sublime text.. but *it'll eventually run into the same problem: lsp support for every lang*
   - gem install textbringer, then run txtb
 
 id actually keep this as an alt terminal text editor.. for when i just want vanilla emacs.. but in ruby. though, theres not much reason for it, as you could just execute shell commands which can be a ruby script (shell-command / m-!) or apply a ruby script on a selected region (shell-command-on-region / m-|), both which can be done in most editors including helix, or better yet, keep a buffer and repl/process open and usee the the ruby robe plugin to interact with it (eval code/region, introspective ri docs, completion based on introspection etc.). its all a bit indirect, but surely not bad.. considering you get the rest of emacs..
