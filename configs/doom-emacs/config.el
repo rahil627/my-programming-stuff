@@ -97,6 +97,11 @@
 
 ;;; TODO: list
 
+;; https://github.com/alpha22jp/atomic-chrome
+;;   - which uses ghosttext chrome extension
+;;   - use emacs to edit text on the web!
+;;     - as that's all you really need from emacs anyway: your key-bindings!
+
 ;; change file associations (github desktop!!) to focus editor/textbringer/micro
 
 ;; ra/ vs ra- for functions and vars? then re-factor
