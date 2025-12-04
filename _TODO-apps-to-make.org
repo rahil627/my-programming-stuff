@@ -50,6 +50,11 @@ just open pull requests 'n start discussions/issues as needed
     - not a general lang, solely for servers (web)
   
 ** text editors
+  - focus
+    - port aurara
+    - write a ruby lexer in jai
+      - see https://github.com/focus-editor/focus/tree/main/src/langs
+      - it seems possible even without compiler.. could give it a try and PR it, and have someone else actually test/complete it..
   - textbringer
     - ruby!
     - create basic bindings (next/previous word)
@@ -62,8 +67,6 @@ just open pull requests 'n start discussions/issues as needed
     - makes emacs more gamey, with more visual effects!
     - haxe lsp integration
       - requires re-organizing the current vs-code-oriented lsp to be modular
-  - focus
-    - port aurara
   - zed
     - download and use it again!!
       - nope.. need a real computer, lmao
