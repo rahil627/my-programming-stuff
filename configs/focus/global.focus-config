@@ -1,10 +1,16 @@
 [16]  # Version number. Do not delete.
 
 # backup config:
-# only 'move current file' command exists, no copy
+# only 'move current file' command exists, no copy, so..
 # cp ~/.config/focus-editor/global.focus-config ~/my-stuff/repos/my-programming-stuff/configs/focus/global.focus-config
 # it's also in my copy configs script:
 #  - ~/my-stuff/repos/my-programming-stuff/configs/copy-configs (symlink)
+
+# TODO: report BUG: capitalize/lowercase command doesn't save in undo history
+# TODO: report BUG: over-riding the commands on the splash screen doesn't update it (c-space)
+
+# search for MINE for my edits
+
 
 [[workspace]]
 # These directories and files will be scanned when a workspace is opened so that search etc. works.
@@ -160,7 +166,10 @@ scrollbar_fade_out_delay_seconds:                2.0   # how long the scrollbar 
 [editors]   # <- this means that the following key combos will apply only when editing text
 
 
-# NOTE: I ADDED THESE
+# MINE
+# NOTE: these over-ride the original bindings
+# NOTE: the letter must be upper-case, the rest don't seem to matter.. 
+# WARNING: don't comment the original ones below, strange things may happen..
 # GOAL: just aim to add only the most essential, bare necessities
 #   - as things will surely change over time..
 # see "actions" here:
@@ -174,6 +183,35 @@ Ctrl-E                    jump_to_line_end
 #        - doesn't work on hyphen-ated-words but works on under_scored_words..
 #          - maybe it's actually syntax dependent.. using the "config" lang syntax..!!
 #      - m-left/right ..through-word
+# Ctrl-D
+#  - hmm, i wonder if it is meant to just press another key (letter, enter, etc.) to delete stuff after selection..
+{Shift}-Ctrl-D              delete_right_char # TODO: what does {shift} do here..??
+{Shift}-Alt-D               delete_right_by_character_type
+# {shift}-ctrl-D              delete_right_by_character_type_fast # should be c-s-d
+# NOTE: missing duplicate-lines
+ 
+# defaults:
+# Ctrl-D                      select_word_or_create_another_cursor # this default is strange.. should be w, like meow..
+# Ctrl-Shift-D                duplicate_lines
+# {Shift}-Backspace           delete_left_char
+# {Shift}-Delete              delete_right_char
+# {Shift}-Alt-Backspace       delete_left_by_character_type
+# {Shift}-Alt-Delete          delete_right_by_character_type
+# {Shift}-Ctrl-Backspace      delete_left_by_character_type_fast
+# {Shift}-Ctrl-Delete         delete_right_by_character_type_fast
+#   - TODO: maybe c-w -> c-q, c-d -> c-w, then d is open for delete..
+Ctrl-W                      select_word_or_create_another_cursor # d: c-d, w(ord) matches meow
+Ctrl-Q                      close_current_editor # d: w, q(uit)
+
+Ctrl-O                      open_file_by_name # d: navigate_to_file
+Ctrl-Shift-O                navigate_to_file # vs ctrl-p(ath) vs alt-o, d: navigate_to_file_from_root
+Alt-O                       navigate_to_file_from_root # vs alt-shift-o
+
+Ctrl-SPACE                  show_commands # d: alt-x (emacs), c-s-p (vs-code)
+
+
+
+
 
 
 # Key combination           Action
