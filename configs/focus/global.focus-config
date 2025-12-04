@@ -1,4 +1,4 @@
-[6]  # Version number. Do not delete.
+[16]  # Version number. Do not delete.
 
 
 [[workspace]]
@@ -52,7 +52,7 @@ show_paste_effect:                                  true
 disable_file_open_close_animations:                 false
 double_shift_to_search_in_workspace:                false
 tab_size:                                           4
-insert_spaces_when_pressing_tab:                    true
+indent_using:                                       spaces  # options: spaces, tabs
 strip_trailing_whitespace_on_save:                  disabled  # options: all, except_lines_with_cursor, disabled
 smooth_scrolling:                                   true
 scroll_beyond_last_line:                            true
@@ -63,7 +63,7 @@ copy_whole_line_without_selection:                  false
 editor_history_size:                                1024
 line_wrap_is_on_by_default:                         true
 show_line_numbers:                                  false
-show_selected_text_length:                          false
+status_bar_show_selected_text_length:               false
 colored_titlebar:                                   true   # Windows 11+ only
 dark_titlebar:                                      false  # Windows only
 hide_mouse_when_typing:                             false
@@ -71,7 +71,7 @@ draw_indent_guides:                                 false
 auto_surround_with_brackets_and_quotes:             false
 auto_close_brackets:                                false
 prefer_system_file_dialogs:                         false  # Windows only
-show_cursors_off_screen:                            true
+status_bar_show_cursors_off_screen:                 true
 persist_local_search_results:                       false  # if true, search results will stay highlighted and you have to dismiss them using the `escape` action
 load_most_recent_project_on_start:                  false
 projects_sorting_order:                             most_recent_first
@@ -87,6 +87,18 @@ save_current_buffer_on_build:                       false
 status_bar_position:                                bottom   # options: top, bottom
 color_preview_popup:                                enabled  # options: enabled, minimized, disabled
 search_is_case_sensitive_when_uppercase_present:    true
+
+# Added after migration to version [16]
+show_ruler_at_column:                            0
+detect_indentation:                              true  # if true, existing files will be scanned to detect indentation, new files will use the `indent_using` and `tab_size` settings
+status_bar_show_indentation:                     true
+status_bar_show_line_col:                        true
+show_scrollbar_marks:                            true
+scrollbar_width_scale:                           1.0
+scrollbar_min_opacity:                           0.0   # if you want the scrollbar to be always visible, set this to 1.0
+scrollbar_max_opacity:                           1.0
+scrollbar_fade_in_sensitivity:                   10.0  # controls when the scrollbar appears as the mouse pointer gets close
+scrollbar_fade_out_delay_seconds:                2.0   # how long the scrollbar stays visible after scrolling
 
 
 
@@ -242,6 +254,15 @@ Alt-Shift-L                 toggle_line_numbers
 
 Ctrl-Shift-Alt-N            open_another_editor_instance
 
+# Added after migration to version [16]
+Ctrl-U                      change_case_cycle
+Ctrl-R                      revert_select_word_or_create_another_cursor
+Ctrl-Y                      move_selection_to_next_word
+{Shift}-Meta-ArrowLeft      move_left_through_word
+{Shift}-Meta-ArrowRight     move_right_through_word
+{Shift}-Meta-Backspace      delete_left_through_word
+{Shift}-Meta-Delete         delete_right_through_word
+
 [open file dialog]
 
 Enter                       open_entry_in_place
@@ -267,6 +288,10 @@ Shift-Enter                 move_up  # an alternative way to move
 Alt-C                       toggle_case_sensitive
 Alt-W                       toggle_whole_word
 Alt-R                       toggle_regex_search
+
+# Added after migration to version [16]
+Tab                         focus_next_ui_element
+Shift-Tab                   focus_previous_ui_element
 
 
 [common]
@@ -307,7 +332,7 @@ Escape                      escape  # combines close_dialog and remove_additiona
 
 Ctrl-Shift-L                toggle_expand
 
-Ctrl-B                      toggle_build_panel
+Ctrl-B                      build_panel_toggle
 
 F11                         toggle_fullscreen
 
@@ -322,12 +347,12 @@ F11                         toggle_fullscreen
 {Shift}-PageDown            move_down_one_page
 
 {Shift}-ArrowLeft           move_left
-{Shift}-Alt-ArrowLeft       move_left_by_word
-{Shift}-Ctrl-ArrowLeft      move_left_by_word_ends
+{Shift}-Alt-ArrowLeft       move_left_by_character_type
+{Shift}-Ctrl-ArrowLeft      move_left_through_word_throttled
 
 {Shift}-ArrowRight          move_right
-{Shift}-Alt-ArrowRight      move_right_by_word
-{Shift}-Ctrl-ArrowRight     move_right_by_word_ends
+{Shift}-Alt-ArrowRight      move_right_by_character_type
+{Shift}-Ctrl-ArrowRight     move_right_through_word_throttled
 
 {Shift}-Home                jump_to_line_start
 {Shift}-End                 jump_to_line_end
@@ -337,10 +362,10 @@ F11                         toggle_fullscreen
 
 {Shift}-Backspace           delete_left_char
 {Shift}-Delete              delete_right_char
-{Shift}-Alt-Backspace       delete_word_left_no_underscore
-{Shift}-Alt-Delete          delete_word_right_no_underscore
-{Shift}-Ctrl-Backspace      delete_word_left
-{Shift}-Ctrl-Delete         delete_word_right
+{Shift}-Alt-Backspace       delete_left_by_character_type
+{Shift}-Alt-Delete          delete_right_by_character_type
+{Shift}-Ctrl-Backspace      delete_left_by_character_type_fast
+{Shift}-Ctrl-Delete         delete_right_by_character_type_fast
 
 Ctrl-Plus                   increase_font_size
 Ctrl-Minus                  decrease_font_size
@@ -351,6 +376,11 @@ F8                          go_to_next_build_error
 Ctrl-F8                     go_to_next_build_error_on_the_side
 Shift-F8                    go_to_previous_build_error
 Shift-Ctrl-F8               go_to_previous_build_error_on_the_side
+
+# Added after migration to version [16]
+Enter                       open_entry_in_place
+Tab                         focus_next_ui_element
+Shift-Tab                   focus_previous_ui_element
 
 
 [[style]]
@@ -464,3 +494,8 @@ code_header3:                           E0AD82FF
 code_header4:                           E0AD82FF
 code_header5:                           E0AD82FF
 code_header6:                           E0AD82FF
+
+# Added after migration to version [16]
+ruler:                                  196666FF
+bracket_highlight:                      FCEDFC26
+indent_guide:                           FCEDFC26
