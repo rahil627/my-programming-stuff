@@ -349,8 +349,8 @@ Shift-Tab                   focus_previous_ui_element
 # Common key combos may be used as a fallback if they are not defined in more specific sections.
 # For example, if "move_up" is not defined in [editors], the one in the [common] section will be matched.
 
-Alt-X                       show_commands
-Ctrl-Shift-P                show_commands
+# Alt-X                       show_commands # TEMP: BUG: just commented it out to show my binding on the splash screen..
+# Ctrl-Shift-P                show_commands
 
 Ctrl-Alt-P                  switch_to_project
 
@@ -358,9 +358,9 @@ Ctrl-F                      search_in_buffer
 Alt-F                       search_in_buffer_dropdown_mode
 Ctrl-Shift-F                search_in_project
 
-Ctrl-P                      open_file_by_name
-Ctrl-O                      navigate_to_file
-Ctrl-Shift-O                navigate_to_file_from_root
+# Ctrl-P                      open_file_by_name
+# Ctrl-O                      navigate_to_file
+# Ctrl-Shift-O                navigate_to_file_from_root
 Ctrl-Tab                    switch_between_open_files
 
 Ctrl-G                      go_to_line
