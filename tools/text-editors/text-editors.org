@@ -3,9 +3,9 @@
 * what i want
 sane defaults
   - don't want to waste time configing all day, need to focus! (focus, textbringer)
-  - if not, have a tasteful, un-bloated shared config set-up (doom)
+  - if not, have a tasteful, non-bloated shared config set-up (doom)
 inuititive learning experience
-  - quick to re-learn and jump deep into again (focus)
+  - quick to re-learn and jump deep into again (focus, textbringer)
 a good non-modal editing experience
   - if modal, a useful main editing/insert mode (*angry face at helix*)
 not slow / heavy
@@ -15,13 +15,14 @@ not slow / heavy
 
 extra:
 a simple way to write extensions
-  - (hmm, this may limit it to dynamic langs..)
+  - (hmm, *this may limit it to dynamic langs.. or at least an embedded scripting lang*)
   - (well, kakoune found an indirect way..)
   - if not perhaps provide running a shell command on the region
   - at least provide running a reg-ex replacement/substitution, interactive
 uses a highly dynamic/interactive scripting language
-  - bonus points if it's ruby, being the best and most ideal dynamic lang
+  - *bonus points if it's ruby, being the best and most ideal dynamic lang of all-time*
 unrestrictive
+  - (except in the case of minimalist/simple text editors)
   - see the "four pillars" below
 
 a decent community?
@@ -65,7 +66,7 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
     these generally pass the four pillars, even the fifth(!):
     1. **textbringer**
        - *passes all pillars*
-       - *the program itself is entirely written in ruby*, though certain libs/gems may use "C extensions" for high-performance bits (and just plain solid libs?)
+       - *the program itself is entirely written in ruby*, though certain libs/gems may use "C extensions" for high-performance bits (and just plain solid systems libs)
        - has the wild potential of ruby libs
        - has the vast potential of C libs
          - TODO: C ffi vs C extensions?
@@ -93,12 +94,15 @@ https://www.reddit.com/r/emacs/comments/124eyh6/things_your_editor_should_have_w
 * conclusion
 
 z. focus, *the new notepad.exe*, to just simply write/express, *zen*, *extremely fast*, *zero cognitive load*, and has *the most innovative design ideas*
-  - a small project, written extremely well in jai, designed really well too (like a game designer)
-  - *come back to this for text editor design (and programming?) ideas..*
+  - a very good editor to start with to create your own /simple/, /essential/ key-bindings (without modes!)
+  - a small project, programmed extremely well in jai, designed even better (like a game designer)
+    - *come back to this often for gathering some new text editor design (and programming?) ideas..*
   - def use once i get my hands on that game engine..
 
 0. emacs (doom-meow), *for everything, 4 lyfe*
-  - *restrict yourself to insert-mode for a more zen experience*
+  - *the beast, the classic*
+    - *experience the unlimited potential of the greatest text editor*
+  - *NOTE: try restrict yourself to insert-mode for a more zen, focus-editor-like experience*
     - TODO: turn off normal-mode?
   - really just limited by it's lack of C-ffi
 
@@ -110,6 +114,7 @@ z. focus, *the new notepad.exe*, to just simply write/express, *zen*, *extremely
     - *this is the perfect sandbox to play with language-related ideas, and do some basic compiler-like programming*
   - *actually has unlimited potential: completely ruby, plus C-ffi/extensions and ruby libs!*
   - maybe it can aim to be more like focus editor, but without restrictions, modular/plugin-oriented, and for the terminal.. *do what you want with it!*
+  - *if you are using ruby, then you can add all of your personal scripts, functions, modules, etc. directly into the run-time, as needed, and really make this your own thing*
 
 t. helix, for a snappy batteries-included terminal editor with great defaults, including great default key-bindings and key-maps
   - STATUS: on hold until the scripting / plugin system comes out
@@ -121,19 +126,21 @@ t. helix, for a snappy batteries-included terminal editor with great defaults, i
     - taking it's sweet time to do this.. but has great leaders
   - great for crafting your own key-bindings
 
-n. micro, just to replace nano (TODO: try ruco)
+n. micro, just to replace nano
+  - TODO: try ruco
   - (only because focus doesn't work in the terminal)
   - (and because, unfortunately, textbringer/ruby sucks at packaging programs..)
 
-d. zed (if not, vs-code), for a quick beautiful sane defaults complete ide, to focus on the work, and for ai workflows, and for multi-player
+d. zed (if not, vs-code), for a quick beautiful sane defaults complete ide, to focus on the work, and for *ai workflows*, and for *multi-player*
 
 
 upcoming (buggy):
- lem, if you want to help re-make emacs in common lisp, or just *to try cl*
+ lem, *to try common-lisp*, and to see what emacs could've been in a different timeline, or if you want to help re-make emacs in cl.. 
   - *has great potential.. with a good amount of contributers..*
   - it's also completely written completely in common lisp, likely making for a much cleaner code-base
   - unfortunately, i don't feel there's enough reason to create yet another lisp editor..
     - though, surely, the lisp people know better of the benefits of common lisp over emacs lisp than me..
+    - also, *i just much prefer working with ruby*
 
 
 that is all.
