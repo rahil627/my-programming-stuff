@@ -1,5 +1,10 @@
 [16]  # Version number. Do not delete.
 
+# backup config:
+# only 'move current file' command exists, no copy
+# cp ~/.config/focus-editor/global.focus-config ~/my-stuff/repos/my-programming-stuff/configs/focus/global.focus-config
+# it's also in my copy configs script:
+#  - ~/my-stuff/repos/my-programming-stuff/configs/copy-configs (symlink)
 
 [[workspace]]
 # These directories and files will be scanned when a workspace is opened so that search etc. works.
