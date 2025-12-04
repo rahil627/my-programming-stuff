@@ -156,12 +156,19 @@ scrollbar_fade_out_delay_seconds:                2.0   # how long the scrollbar 
 
 
 # NOTE: I ADDED THESE
-# TODO: how to check functions..??
-
-# Ctrl-A                    move_to_beginning_of_line
-# Ctrl-E                    move_to_end_of_line
-#  - surely these exist.. or maybe just m-left/right?
-
+# GOAL: just aim to add only the most essential, bare necessities
+#   - as things will surely change over time..
+# see "actions" here:
+#  - https://github.com/focus-editor/focus/blob/main/src/actions.jai
+# hot-reload changes is so sick..
+Ctrl-A                    jump_to_line_start # d: s-home/end
+Ctrl-E                    jump_to_line_end
+#  - TODO: surely there's some way to get there with the default config..?
+#    - defaults:
+#      - c-left/right ..through-word-throttled == symbol
+#        - doesn't work on hyphen-ated-words but works on under_scored_words..
+#          - maybe it's actually syntax dependent.. using the "config" lang syntax..!!
+#      - m-left/right ..through-word
 
 
 # Key combination           Action
