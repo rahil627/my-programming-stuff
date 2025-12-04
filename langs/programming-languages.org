@@ -1747,7 +1747,9 @@ embeds into a lua program..?
 
 
 *** YES Ruby
-  - CONCLUSION: *certainly the best syntax (and the hardest to parse), the main thing really holding it back is that dynamic-checking and run-time changes, which require a vm impl, simply hits performance limits* (julia offer a solution for this). In addition, it suffers from dependency-hell and lack of binary/compilation (though, so do all other scripting langs..). *It just seems run-time manipulation is not worth the trade-off*, though, *if there was any language that went all-in for the dynamic/run-time magic, this is it!* It is indeed, *a very special gem.. perhaps moreso for the experience and memory using it*
+  - CONCLUSION: *certainly the best syntax (and the hardest to parse), the main thing really holding it back is the "everything is an obect" design--especially for primitive data types--and dynamic/run-time-checking, which forces it to require a interpreter/vm impl, which hits performance limits for simple math execution.. and compiler development is at its limits too* (in contrast, julia has basic built-in types, in addition to optimizing virtual/dynamic method lookup--itself surely at another cost..). In addition, it suffers from dependency-hell and lack of binary/compilation (though, so do all other scripting langs..). *Primitive data types as objects for hacking reasons def wasn't worth the trade-off*, though, *if there was any language that went all-in for the dynamic/run-time magic, this is it!* It is indeed, *a very special gem.. perhaps moreso for the experience and memory using it <3*
+    - UPDATE: *the code running github always reminds me how neat the lang is*
+      - short scripts, modules, blocks, it just all works so well together!!
   - a scripting language that people seem to really *love*
     - **my fav scripting language, and possibly my favorite language overall :o**
     - the community is built around the love for it and the community, which is healthy
