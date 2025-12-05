@@ -1,12 +1,6 @@
 #+title: Todo Programs To Make
 
 
-merged from elsewhere:
-setup heaps and imgui
-try imgui with ruby!
-  - https://github.com/vaiorabbit/ruby-imgui
-
-
 see personal notebooks and other writings
 see grad school app writings
   - TODO: merge from there
@@ -180,7 +174,7 @@ just open pull requests 'n start discussions/issues as needed
 
 ** langs
 
-these languages are so far developed, so complex, i don't think i could ever help.. :/
+these languages are so far developed, so complex, i don't think i could ever help..
 
   1. haxe
   2. jai
@@ -217,17 +211,31 @@ these languages are so far developed, so complex, i don't think i could ever hel
     - download and use it again!!
       - nope.. need a real computer, lmao
     - can focus on making shit!!
+** TODO gui?
+
+basic css ("classless") vs generated web (streamlit, nicegui) vs imgui?
+
+TEMP: TODO: merged from elsewhere:
+setup heaps and imgui
+try imgui with ruby!
+  - https://github.com/vaiorabbit/ruby-imgui
+
 
   
 
-* scraper
+* apps / tech
+
+NOTE: there's a TON of ideas here that i could easily generate using ai.. and most of them can be done via simple ruby web apps
+  - this is great, broad, PRACTICE
+
+** scraper apps
   - jobs
     - NOTE: currently for personal use only
     - "junior ruby", "game community", "game support", "ruby support"
       - can use emacs to search/filter/grep regex data.. :D
         - emacs as the ultimate data (text) editor
   - *game data*
-    - for game archive site
+    1. for game archive site
       - though it uses phoenix, can run as seperate ruby scripts..
   - *cooking recipes/site without the crap*
     - TODO: is this legal?
@@ -255,13 +263,13 @@ these languages are so far developed, so complex, i don't think i could ever hel
 #  - yeah... i just need to make shit... i can think of a billion ideas!
 
 
-* map
+** map apps
 
   - roda
   -> can visualize with a js data viz lib,.. or a js game framework (haxe->js!!) :D
   -> leads to AR app
 
-** mapping basics
+*** mapping basics
   - start with a simple map using census data
     - could already get advanced, once it goes to other countries..!
     - could show migrations by using historical data (+time)
@@ -270,12 +278,12 @@ these languages are so far developed, so complex, i don't think i could ever hel
     - zones for suburban strip-mall hell-holes vs places like ocean beach, SF, NYC
       - detected by analyzing google maps..?
 
-** mapping responsibility/acccountability
+*** mapping responsibility/acccountability
   - then can try other data
     - judge/police/prosecutor names/locations/info
       - link to people convicted
 
-** mapping hope
+*** mapping hope
   - then create map apps that allow users to add/update various points of interest
     - squatting, public and private vending locations, farmer's markets, handicraft markets, camping (car, tent, hammock), public restrooms, public libraries, guerilla gardening/farming, etc.
     - vegetarian/vegan restaurants, locally-owned businesses
@@ -287,16 +295,15 @@ these languages are so far developed, so complex, i don't think i could ever hel
 
 
 
-* technology to see history
-
-** history image AR app
+** tech to see history
+*** history image AR app
   - scrape photos related to your location
     - or chosen location
   - display them at same coordinate
   - can it be done via web..?
     - sure! just allow access to geolocation sensor
 
-* technology to connect people
+** tech to connect people
   - a new craigslist (classifieds posting)
     - a new job site
   - *a new room and room-mate finder*
@@ -304,7 +311,7 @@ these languages are so far developed, so complex, i don't think i could ever hel
   - a sharing site
     - tools, house, land, property: commodities
 
-* technology to find great art/products/ideas/things
+** tech to find great art/products/ideas/things
 
 this is turning out to be a *documentation* project: document and organize the world
 
@@ -316,9 +323,9 @@ a simple product diplay website
       - could be whatever i'm passionate about
       - NOTE: possible to make $$$ here.. very easily with a new car site..
 
-** games
+*** games
 - see [game archive]
-** motorcycles
+*** motorcycles
 - really does need a better database/wiki
   - scrape from all sources
   - scrape from motorcycle forums, discord, wikis, etc.
@@ -326,7 +333,7 @@ a simple product diplay website
     - link to existing wiki?
   - could also make it pretty like letterboxd
     - allow reviews, user photos, etc.
-** weed
+*** weed
 - could easily make the best weed website!
   - search based on effects, inherited strains, etc.
 - scrape databases
@@ -337,20 +344,19 @@ a simple product diplay website
   - can start with a roda PWA..? or phoenix-live-view?
     - some funky node-based diagram in space, with the images of buds, with lines connected those with relationships
   - should show tree, branch, flower/bud, and then scrape more nice photos of it, when the user asks for it
-** tea
+*** tea
 - now that's a bit more sober than weed..!! :)
-** alcohol
+*** alcohol
 - *big $$ here*
-** programming languages
+*** programming languages
 - single page, features matrix, editable
   - might as well use wikipedia instead for this..
-** art
+*** art
 - documenting all art is kinda insane..
   - what is art?? lol
 - ...but considering how poorly games are documented, surely all arts suffer form poor documentation.. and amazing unknown artists
 
-
-* tech for language/cultural preserveration
+** tech for language/cultural preserveration
 indigenous languages
 a digital visualization of all languages, and how they're connected
   - sounds/phenomes?, vocabulary, etc.
@@ -367,18 +373,18 @@ farming
 games
 etc.
 
-* tech for nature preservation
+** tech for nature preservation
 easily see a map of all real nature ("old growth"), fake nature (cut and re-planted)
 
-* plants, herbs, food
+** tech about plants, herbs, food
 tech that links plants to herbal and food recipes
   - pharmacology?
 
-* responsiblity
-** tech to calculate the people/govs responsible killing the planet the most
+** tech for responsiblity
+*** tech to calculate the people/govs responsible killing the planet the most
 this'll be interesting to build an equation for.. ecological damage
 
 also a good visualization
 
-*** tech to calculate the people/govs reponsible for killing other people the most
+**** tech to calculate the people/govs reponsible for killing other people the most
 deadliest people
