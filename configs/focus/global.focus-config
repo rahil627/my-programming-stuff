@@ -6,8 +6,11 @@
 # it's also in my copy configs script:
 #  - ~/my-stuff/repos/my-programming-stuff/configs/copy-configs (symlink)
 
-# TODO: report BUG: capitalize/lowercase command doesn't save in undo history
-# TODO: report BUG: over-riding the commands on the splash screen doesn't update it (c-space)
+# BUG: over-riding the commands on the splash screen doesn't update it (c-space)
+#  - https://github.com/focus-editor/focus/issues/623
+# BUG: change_case_style doesn't save in undo history
+#  - https://github.com/focus-editor/focus/issues/624
+# TODO: BUG: save file file-name ended with a carriage return..??
 
 # search for MINE for my edits
 
