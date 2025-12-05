@@ -11,6 +11,7 @@
 # BUG: change_case_style doesn't save in undo history
 #  - https://github.com/focus-editor/focus/issues/624
 # TODO: BUG: save file file-name ended with a carriage return..??
+# TODO: report BUG: non mono-spaced fonts not working..
 
 # search for MINE for my edits
 
@@ -443,10 +444,14 @@ theme: default
 [fonts]
 # see repo for default fonts:
 # https://github.com/focus-editor/focus/tree/main/fonts
-font:       default # d: OpenSans and FiraCodeRetina
+font:       default # d: default (FiraCodeRetina) and OpenSans
 font_size:  14
-# font:       office code pro
-# font_size:  11
+#  - opensans is very seriphy, tough to read prose
+# font:       roboto # BUG: non mono-spaced fonts not working..
+# font_size:  13
+# font:       office code pro # ubuntu sans mono
+# font_size:  14
+
 
 [colors]
 background0:                            15212AFF
