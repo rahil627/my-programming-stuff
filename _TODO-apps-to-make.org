@@ -1,6 +1,12 @@
 #+title:  Todo Apps To Make
 
 
+merged from elsewhere:
+setup heaps and imgui
+try imgui with ruby!
+  - https://github.com/vaiorabbit/ruby-imgui
+
+
 see personal notebooks and other writings
 see grad school app writings
   - TODO: merge from there
@@ -29,30 +35,33 @@ just open pull requests 'n start discussions/issues as needed
 
 ** game/media/io engines
   - let others handle this..
-  - though, i can def help with documentation/tutorials/book, as dragonruby and heaps severely need it!!
+  - though, i can def help with documentation/tutorials/book, as dragonruby, heaps, and luxe all severely need it!!
     
-  1. dragonruby
-  2. heaps
-  x. (sorry luxe!)
-     - though, maybe could try again without using the ECS/game editor..: love2d/dragonruby style!
-  3. jon blow's engine
+  t. luxe
+     - TODO: though, maybe could try again without using the ECS/game editor.. love2d/dragonruby style!
+  1. heaps
+  2. jon blow's engine
+  $. dragonruby
 
 ** langs
-  - these languages are so far developed, so complex, i don't think i could ever help.. :/
+
+these languages are so far developed, so complex, i don't think i could ever help.. :/
 
   1. haxe
+  2. jai
   s. (ruby)
     - (particularly its performance-oriented embedded variants)
       - (mruby?)
-        2. dragonruby
-  3. jai
-  x. elixir
-    - not a general lang, solely for servers (web)
+        $?. dragonruby
+          - surely this is the most performant one.. mruby/C and picoruby seem like the just aim for low memory (to fit on an embedded device), not high-performance..
+          - not sure if it's available for public-use..
+            - TODO: see licensing
+          - TODO: not sure if the langauge is seperate from the game engine..
   
 ** text editors
   - focus
     - port aurara
-    - write a ruby lexer in jai
+    - PROJECT: write ruby and haxe lexers in jai
       - see https://github.com/focus-editor/focus/tree/main/src/langs
       - it seems possible even without compiler.. could give it a try and PR it, and have someone else actually test/complete it..
   - textbringer
@@ -65,21 +74,14 @@ just open pull requests 'n start discussions/issues as needed
   - emacs
     - port aurara
     - makes emacs more gamey, with more visual effects!
+    - set-up emacs for touch-input
+      - PROJECT: design emacs for touch-input
     - haxe lsp integration
-      - requires re-organizing the current vs-code-oriented lsp to be modular
+      - PROJECT: requires re-organizing the current vs-code-oriented lsp to be modular
   - zed
     - download and use it again!!
       - nope.. need a real computer, lmao
     - can focus on making shit!!
-
-
-merged from elsewhere:
-setup heaps and imgui
-try imgui with ruby!
-  - https://github.com/vaiorabbit/ruby-imgui
-
-
-
 
   
 
