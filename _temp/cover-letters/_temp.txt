@@ -1,3 +1,31 @@
+
+TODO: add an out-line mode for these kind of files too
+
+
+because my personal tech experience mostly dealt with small 'n artsy games, i lack the contemporary large-scale web app experience most jobs want, so i'm only left with these rare support roles (product and engi support). Of the skills listed on this job post, i'm mainly missing the dev-ops experience: containers (docker), container orchestration (kubernetes, ansible), advanced ci/cd. I just never worked on such a big project that would need such techs. Next, i don't have rails experience either: i discovered ruby through jekyll 'n github pages, and i only really got into ruby with dragonruby, a mruby game engine. In fact, dragonruby is my favorite game engine, something i spent a long time searching for, after having gone through several other game engines written in various other languages. For my own web app ideas, i'm skipping rails for phoenix/elixir. I missed the rails hey-day.
+
+From what i gather from the job post, it seems an ideal job for a tech generalist, on track towards tools dev / devops, which is the tech route i want to try (along with product roles).
+
+
+at this moment in life, as i'm just getting back into pro tech work, i don't mind getting dirty and doing some grunt work, for the purpose of learning contemporary web tech and honing core programming skill. Design is the simple 'n natural part for me, programming is just the necessary means. When making games solo, both design and programming are so intertwined it's difficult to seperate the two jobs: the program is the design, and the design is the program; So i always feel i must master both.
+
+ Another reason is that the headquarters is in SF, which i'm quite familiar with and can easily re-locate to in case i need to be in office.. though, the SF i came back to def resembled a more post-gold-rush ghost-town..
+
+
+at least in this very generalist sense, for the sake of / designing good tools for making games, which goes from programming langauge, game engine, simple C libs, and just an interest of many programming concepts in general..
+
+If this is a job where i can build up personal and internal tools in ruby, as the jobs necessitates, it would truly be awesome! 
+
+
+I recently finished my trip exploring the coast of Cali, workin' my way back up the coast, livin' in SD and LA, now
+
+
+His sense of programming AND design is just light-years ahead of anyone else (though nelua looks good too..).
+
+--
+
+
+
 NYC was my school!
 
 
