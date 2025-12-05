@@ -9,6 +9,8 @@ GOAL: for the most part, should just keep the TODOs in the file, where the thoug
   - TODO: i haven't even got to this..!!
 
 
+* list
+  
 set-up ai for emacs
   - (likely also in the emacs todo list..)
     - but IMPORTANT!
@@ -27,3 +29,76 @@ create a repo in home folder, ignoring everything except my emacs and focus conf
   - see https://stackoverflow.com/questions/21266948/use-git-to-manage-home-directory
   - x/or file-watchers to update my catch-all repo..
     - git makes more sense.. as you don't want a bunch of file-watchers running all the time..
+
+
+** set-up offline-dev
+GOAL: *should aim to put everything you need into source repo*
+
+devdocs.io
+  - click on or enable the languages you need
+    - NOTE: doesn't have docs for external libs
+  - download them to use offline
+    - devdocs.io/offline
+
+download learn x in y minutes for each lang?
+
+TODO: surely there's some cheat-sheet web-site..
+  - zenspider.com/ruby/quickref.html
+    - TODO: download this!
+    - nice!
+
+ai
+  - no offline ai..
+    - LLM would require too much compute power
+    - though, it would provide privacy..! and not participate in giving data to the ai..
+
+
+
+*** haxe
+
+just download the docs / web-site / manual / cookbook
+download heaps web-site
+std lib is really good, simple enough to immediately use!
+ 
+*** ruby
+
+
+still seems best to just use ai to auto-generate some boiler-plate code, and work from there..
+
+ri
+  - ruby comes with it..
+  - maybe have to run it once..?
+  - seems to grep docs straight from the code..
+    - can search objects, functions, possibly vars
+  - TODO: not sure how to browse objects though..
+  - f/b to move down/up
+  - q to quit
+
+pry
+  - how does this differ from ri?
+  
+github.com/khusnetdinov/rub.fundamental
+  - patterns, principles, structures, threads
+
+
+
+**** install some gems
+
+gems come with docs, and sometimes even provide examples
+
+dragonruby
+  - *incredible samples*..
+    - simple, no modules, classes, or anything fancy
+    - *nothing beats learning via game-dev!*
+
+rails
+  - gem install rails
+    - *just installing this will get you most of the web gems you'd ever need..*
+  - see /guides/
+
+roda
+  - gem install roda
+  - gitlab.com/fiachetti/mastering-roda
+    - *NOTE: an incredible example of a single, giant .org file*
+
+
