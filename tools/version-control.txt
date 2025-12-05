@@ -47,7 +47,49 @@ github desktop
 
 
 
-version control software
+source forges:
+
+
+github vs gitlab
+    - https://www.reddit.com/r/AskProgramming/comments/1cn560y/comment/l3cic5k/
+      - OP, the right answer is Gitlab.
+
+        Have always offered private repositories (Github didn't for a long time)
+        
+        Provide a hefty number of features for free which *really* help structurate a project if you're ready to invest some elbow grease (do not that many things related to advanced continuous integration and testing require a paid subscription AFAIR, but everything is explicit on their website anyways).
+        
+        DOESN'T GIVE ALL YOUR DATA FOR COPILOT TO USE.
+        
+        Continously improves Gitlab in every aspect (and those are not just cosmetic things, there are real new features actually useful, if only for a subset of high-level automation) AND regularly pushes back those innovations in free version (I don't understand in detail how they balance free vs paid for new features but I did witness that anyways).
+        
+        Github provides a bit more visibility because many more projects around and historically the first share git repository, but unless you're a new developer just trying some repository to drop basic (but well written!) projects to sell him/herself to employers, it's reaaaally not worth tying yourself up with Microsoft."
+    - https://www.reddit.com/r/git/comments/1os4now/gitlab_vs_github/
+      - open-source
+      - better ci/cd
+      - can self-host (without a paid edition..)
+      - "Gitlab is simpler and more integrated. Github has better interface and features."
+      - "Github is owned by Microsoft. This gives them access to Azure Infrastructure, integrations with VSCode etc. but also means their strategy is now all about AI and copilot."
+    - welp, that's that..
+
+
+
+bitbucket
+  - allowed private repos at a time when github did not
+  - read it sucks..
+  
+sourceforge
+  - what up OG
+
+
+
+
+
+
+
+
+
+
+version control software:
 
 https://www.reddit.com/r/gamedev/comments/1bsptek/what_should_i_use_for_source_control_and_why_in/
   - for games, the problem is non-code files: binaries and size limit (5gb)
