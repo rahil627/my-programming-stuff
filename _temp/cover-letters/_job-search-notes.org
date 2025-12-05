@@ -76,6 +76,84 @@ see goals in [uni-job-search]
 https://www.reddit.com/r/gamedev/comments/16u6kbn/would_you_ever_leave_the_gaming_industry_and_work/
 
 
+* which cog in a big company?
+
+*NOTE: gitlab recruits world-wise, so the competition is impossible*
+  - https://about.gitlab.com/company/team/
+    - possibly the largest all-remote company.. at just ~3000 workers
+
+gitlab is a really good source to figure out which job/role in a big company fits you best..
+
+potential paths:
+1. support engineer -> product designer -> product manager
+  - probably the only path i could tolerate for a long period of time..
+2. support engineer -> devops engineer? (+ai/python +back-end web?/ruby!) -> systems engineer
+
+https://about.gitlab.com/jobs/all-jobs/
+  - positions not listed still show under the joining the talent pool
+    - product
+      - (product manager)
+      - product designer!
+      - technical writer
+      - user experience researcher
+
+https://handbook.gitlab.com
+  - *VERY WELL DOCUMENTED, tells how each job is, including internal tools, external tools (apps), and even useful browser extensions*
+  - very good knowledge/tool sharing!
+    - TODO: explainshell
+    - TODO: expanso
+      - snippets for typing prose text
+    - insomnia
+      - api dev tool
+    - obsidian
+      - nooooooooo!!, markdoqn > org-mode ;(
+    - mostly little macos date/time tools..
+
+  
+https://about.gitlab.com/blog/what-its-like-to-interview-at-gitlab/
+  
+  - gitlab
+    - associate support engineer <-- STARTING-POINT
+      -> support engineer
+        - https://handbook.gitlab.com/handbook/support/engineering/
+          - "As a Support Engineer at GitLab, the majority of your time will be focused on helping customers solve problems. This happens mostly through tickets, but can also happen through issues, screen sharing calls, and emergencies."
+        -> assigned support engineer
+        -> manager, support engineering
+    - potential paths:
+      - this is a really good way to see which jobs fits, as it's in ruby/rails..
+    - *product manager*
+      - obviously, the most fitting/ideal, as it's just a bunch of communication!
+        - see the activity of this senior product manager
+          - https://gitlab.com/users/dashaadu/activity
+      - Senior Product Manager, Dedicated (the paid version)
+      - Senior Product Manager, Plan
+    - *devops engineering*
+      - not as broad as i hoped.. but who knows, this is a humongous rails app..!
+      - intermediate backend engineer (ruby on rails), plan: knowledge
+        - hmmm, seems to be mostly graphql/query/db/redis stuff.. maybe too specific..
+      - even the ci functions / go lang devops job sounds better.., as it's just plain programming..
+      - intermediate backend engineer (ruby), plan: project management
+        - doesn't seem too different.. though more power/managerial than just queries, handling a whole feature (the planning workflow)
+    - *ai engi*
+      - surprisingly, along with web, the most interesting one!
+      - Intermediate Backend Engineer (Ruby), AI Engineering, Custom Models
+      - Intermediate Fullstack Engineer (TypeScript), AI Engineering: Editor Extensions – Multi-Platform
+      - Senior Backend Engineer (Python), AI Engineering: Agent Foundations
+      - Staff Backend Engineer, AI Engineering: Code Creation (Ruby and Python)
+        - very interesting
+      - Staff Fullstack Engineer (Python/Vue.js), AI Engineering: Duo Chat
+        - probably also interesting..
+        - https://about.gitlab.com/blog/gitlab-duo-chat-gets-agentic-ai-makeover/
+          - TODO: see video of workflow here..
+    - sec engi?
+      - probably not.. just judging by the titles..
+    - data engi?
+      - nope, not from those titles!
+    - marketing
+      - fullstack engineer, contributor success
+        - https://job-boards.greenhouse.io/gitlab/jobs/8219920002
+
+
 * TEMP restaurants 'n tea shops to work at
 
 ** NO long beach
