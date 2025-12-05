@@ -10,10 +10,12 @@
 #  - https://github.com/focus-editor/focus/issues/623
 # BUG: change_case_style doesn't save in undo history
 #  - https://github.com/focus-editor/focus/issues/624
-# TODO: BUG: save file file-name ended with a carriage return..??
+# TODO: report BUG: save file file-name ended with a carriage return..??
 # TODO: report BUG: non mono-spaced fonts not working..
 
 # search for MINE for my edits
+
+# NOTE: this is a very good editor to start with to create your own *simple*, *essential* key-bindings (without modes!)
 
 
 [[workspace]]
@@ -69,7 +71,7 @@ double_shift_to_search_in_workspace:                false
 tab_size:                                           4
 indent_using:                                       spaces  # options: spaces, tabs
 strip_trailing_whitespace_on_save:                  disabled  # options: all, except_lines_with_cursor, disabled
-smooth_scrolling:                                   true
+smooth_scrolling:                                   true # OPTIMIZE? no difference (visually and cpu) on old chromebook..
 scroll_beyond_last_line:                            true
 line_height_scale_percent:                          120
 max_editor_width:                                   -1
@@ -181,19 +183,23 @@ scrollbar_fade_out_delay_seconds:                2.0   # how long the scrollbar 
 # hot-reload changes is so sick..
 Ctrl-A                    jump_to_line_start # d: s-home/end
 Ctrl-E                    jump_to_line_end
+#  - NOTE: don't need {Shift}- because select_line (ctrl-l)
 #  - TODO: surely there's some way to get there with the default config..?
 #    - defaults:
 #      - c-left/right ..through-word-throttled == symbol
 #        - doesn't work on hyphen-ated-words but works on under_scored_words..
 #          - maybe it's actually syntax dependent.. using the "config" lang syntax..!!
 #      - m-left/right ..through-word
+#
+# TODO: i'm quite missing the next/prev sentence function, or find next/prev letter..
+#
 # Ctrl-D
 #  - hmm, i wonder if it is meant to just press another key (letter, enter, etc.) to delete stuff after selection..
 {Shift}-Ctrl-D              delete_right_char # TODO: what does {shift} do here..??
 {Shift}-Alt-D               delete_right_by_character_type
 # {shift}-ctrl-D              delete_right_by_character_type_fast # should be c-s-d
 # NOTE: missing duplicate-lines
- 
+# TODO: missing Alt-D scroll_viewport_down_fast
 # defaults:
 # Ctrl-D                      select_word_or_create_another_cursor # this default is strange.. should be w, like meow..
 # Ctrl-Shift-D                duplicate_lines
@@ -353,7 +359,7 @@ Shift-Tab                   focus_previous_ui_element
 # Common key combos may be used as a fallback if they are not defined in more specific sections.
 # For example, if "move_up" is not defined in [editors], the one in the [common] section will be matched.
 
-# Alt-X                       show_commands # TEMP: BUG: just commented it out to show my binding on the splash screen..
+# Alt-X                       show_commands # TEMPFIX: BUG: just commented it out to show my binding on the splash screen..
 # Ctrl-Shift-P                show_commands
 
 Ctrl-Alt-P                  switch_to_project
