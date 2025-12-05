@@ -3,11 +3,18 @@ a general catch-all file for TODOs related to programming..
 
 ..for the few things i don't do in emacs..
   - (though it surely can do it..!)
+  - (there's a seperate todo list in the config file for that..)
 
 GOAL: for the most part, should just keep the TODOs in the file, where the thought came from, and search/grep (dir) them via emacs
   - TODO: i haven't even got to this..!!
 
 
+set-up ai for emacs
+  - (likely also in the emacs todo list..)
+    - but IMPORTANT!
+  -> quickly generate app ideas (in ruby)
+    - see [programs-to-make#apps]
+  -> quickly make simple 2d game ideas (in dragonruby)
 
 migrate from github (m$) to gitlab
   - TODO: uh oh.. may have created two accounts..??
@@ -15,8 +22,8 @@ migrate from github (m$) to gitlab
     - try forgot password..?
   - see reasons in [version-control]
 
-TODO: create a repo in home folder, ignoring everything except my emacs and focus configs
-  - TEMP: for the moment i just created a copy-configs script in /configs/copy-configs (symlink)
+create a repo in home folder, ignoring everything except my emacs and focus configs
+  - TEMPFIX: for the moment i just created a copy-configs script in /configs/copy-configs (symlink)
   - see https://stackoverflow.com/questions/21266948/use-git-to-manage-home-directory
   - x/or file-watchers to update my catch-all repo..
     - git makes more sense.. as you don't want a bunch of file-watchers running all the time..
