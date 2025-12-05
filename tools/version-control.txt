@@ -49,7 +49,22 @@ github desktop
 
 source forges:
 
+github
+  - *to share public projects*
+    - *but if you plan to share, might as well put it on codeberg..*
+  - 420 million vs gitlabs' 5 million repos
+  - *m$ bought it for strategic purposes..*
+    - *co-pilot/ai data storage being the main problem..*
 
+*gitlab*
+  - *for private (and public!) projects*
+    - it's just maybe that people will search this forge less than github.. but otherwise, i see no reason why github is better..
+  1. self-hosted
+  2. public-hosted
+  
+  
+
+TODO: merge with above
 github vs gitlab
     - https://www.reddit.com/r/AskProgramming/comments/1cn560y/comment/l3cic5k/
       - OP, the right answer is Gitlab.
@@ -73,13 +88,39 @@ github vs gitlab
 
 
 
+codeburg
+  - *non-profit, privacy-focused*
+  - *restricts non-FOSS code*
+    - https://docs.codeberg.org/getting-started/faq/#how-about-private-repositories%3F
+      - Codeberg's mission is to promote free/libre software. Keeping software private is obviously not our primary use case, but we acknowledge that private repositories are useful or necessary at times.
+      ...The rules of thumb are:... If you are a contributor to free/libre software projects, we allow up to 100 MB of private content for your convenience. Use it for your personal notes, your side project or any other you want to keep private.
+      ...then have to send a requrest to get more space..
+  - third after github and gitlab..?
+
+forgejo
+  - the open-source fork of gitea, after some politics
+    - "Forgejo was initially created in December 2022 as a fork of Gitea. The fork occurred after a for-profit limited corporation ran by the lead maintainer of the project, Lunny Xiao, silently transferred Gitea's trademarks and operations to the company and began to establish an open-core model."
+  - "Codeberg, one of the major forges using Gitea at the time, migrated to Forgejo and has become the de jure lead maintainers of the project"
+
+gitea
+  - rip
+
 bitbucket
   - allowed private repos at a time when github did not
   - read it sucks..
+  - owned by atlassian
+    - *seems to be a strategy to tie it to it's own products for integration*, much like microsoft's strategy with github..
+    - atlassian product suite?
+      - Jira = top notch product
+      - Bitbucket = worse than github
+      - Bamboo = worse than Jenkins, TeamCity
+      - Confluence = 90's UI
+      - https://www.reddit.com/r/devops/comments/5o8xy8/comment/dcht697/
+        - a comment from 9 years ago..
   
 sourceforge
   - what up OG
-
+  - now owned by slashdot
 
 
 
