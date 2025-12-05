@@ -15,6 +15,8 @@
 ;; (package! ef-themes)
 
 (package! good-scroll) ; >> ultra-scroll >? pixel-scroll (native)
+                       ; WARNING: CPU-intensive
+                       ; disabled (~30%), good-scroll (30-80%/~40%avg with config) ultra-scroll (>100% without config), pixel-scroll (>100% without config)
 
 (package! outshine) ; "outshine is specifically designed to provide that 'Org-mode look-and-feel' and many of its key bindings (like TAB cycling) to buffers using outline-minor-mode"
 
