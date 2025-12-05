@@ -28,6 +28,141 @@ shiiiit, i've got my work cut out for me..
   - *web and ai are boring are fuck.*
   - *STICK TO REALITY: COOKING FOOD, MAKING TEA, GARDENING, THAT'S LIFE!!*
 
+* games
+
+i've def written this down in some notebook somewhere..
+
+the fighting games however should be in the fighting game project repo
+
+** setup dev / engine / etc.
+
+1. dragonruby
+   - if 2d, low-performance
+2. heaps/haxe
+   - 2d high-performance or 3d
+3. j-blow's engine/jai
+   - very-high-performance
+
+** port/finish all old, simple mostly touch-tablet ideas
+
+these can all be done via dragonruby
+  - push it to it's limits!
+  - master it!
+
+deployment order:
+  1. web
+     - if it can be done on web, no reason to do on others..??
+  2. android
+     - $
+  3. ios
+     - $$
+
+NOTE: the first three are battle games, and maybe even the fourth counts!
+  - (crystal brawl is a sports game)
+  - (pinkes up is a party game)
+  
+*** laser shmup
+
+top-down, slow-moving lasers, portals..
+
+bomberman with smash-like settings, but without the block-based sprites
+
+some progressive elements of difficulty:
+  - enclosing area/stage
+  - speed up/down
+    - slow-mo ability? for hard times
+  - various objects:
+    - reflector
+    - mirror (an immovable portal)
+    - cutter
+    - etc.
+
+*** horse / finger skating/dancing
+
+one player performs a "dance" with their fingers, another tries to follow it, then the first player must repeat it to get a point
+
+some progressive elements of difficulty:
+  - maybe can add/allow more touch inputs as time goes on..
+  - also can speed up/down time..
+
+*** kite fighting
+
+*** doodle tangle
+
+top-down movement, but using fingers, various 2d levels
+
+*** finish old games
+
+port these to a contemporary framework?
+
+**** pinkies up
+  - requires gamekit/bluetooth for mobile devices..
+    - in this case, native/cocos2d was actually a good, long-term choice..
+**** crystal brawl
+  - web, switch
+    - maybe construct actually got better.. could just update the construct engine and re-build it..
+
+** harvest moon / stardew valley / earthbound (without the battle system) small-town JRPG love / a 2d animal crossing! that takes place in TW! <3
+
+ART IMITATES LIFE
+
+ART AS IDEAL LIFE
+
+  - top-down (stardew valley) vs perspective (ragnarok online)
+    - TODO: try proto-typing both, see what works with either my own hand-drawn graphics/animations or ai-gen graphics/animations
+  - covers 2d top down / JRPG
+    - requires tiling, etc.
+      - this has been a done a million times, why again?
+        - see that one haxe tool for level/map-making..
+  - bike around, explore waterfalls, hot springs, mountain valleys, etc.
+  - TW
+    - east coast
+      - valley towns
+        - trains
+      - coastal towns
+    - tapiei / generic big city
+    - pingdong / generic farm town
+    - tribal village
+  - build, eat, talk : live
+  - forage, farm
+  - vend
+    - while i vend in real life
+      - art imitates life
+      - or art as ideal lifestyle
+
+** battle game makers
+  - TODO: see my fighting game anarchy repo..
+
+CONCEPTUAL SANDBOX GAME-MAKERS
+  
+platformer / side-view
+  - super smash bros
+  - all traditional "2d fighters"
+
+top-down / angled
+  - that one game that simon liked..
+    - hyperlight drifter!
+  - that 3v1 game.. crawl?
+    - tight, fast, funky
+  - fat princess?
+  - final fantasy tactics?
+    - this one was beautiful for a 2d game.. full of seasons, geography, characters..
+  - super mario rpg
+    - how was this not 3d..?
+
+2.5d / perspective
+  - ragnarok online
+    - not so much for the battle system, but for how incredible 2d can look!
+      - though, the battle system was fine too, lol... just an impossible grind by default
+  - diablo 1/2
+
+??
+  - fez
+  
+3d
+  - that one samurai game
+    - didn't have to be 3d.. just one-hit, tight
+
   
 * personal tools/tech/anti-productivity
 
