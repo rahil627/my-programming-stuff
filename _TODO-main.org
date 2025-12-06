@@ -1,6 +1,21 @@
 
 this serves as a todo list during travel using/learning the ways of (doom) emacs
 
+hmm, i quite like this single single todo file.. lol..
+  - looks great in org-mode..!
+
+TODO: see TODOs, try using org-mode agenda, lol
+
+
+
+move
+- *to santa barbara / coast*
+  - survive the winter
+    - do any job there!
+      - *able hang out at the cs/engineering department?*
+      - *or just some cs/engineering students?*
+    - setup a mobile home
+
 
 (* TODO ASAP)
 0. CHECK BANK ACCOUNT FRAUD!!
@@ -15,7 +30,7 @@ this serves as a todo list during travel using/learning the ways of (doom) emacs
    - thursday, or whenever it warms up again
    - map out all tea 'n cafe shops on the way   
 
-TODO: main
+(* TODO: main)
   - a numbered todo list seems nice... priority is good. can only do so much at a time
 0. unemployment
 1. motorcycle insurance
@@ -45,24 +60,6 @@ n. map out next hostel/place to stay
 - charles schwab
   - password
   - transfer money
-
-
-* TODO merged from elsewhere
-TODO: hmm, maybe need to merge to a single todo file.. lol..
-  - i like this though, looks great in org-mode..!
-
-** TODO move
-- *to santa barbara / coast*
-  - survive the winter
-    - do any job there!
-      - *able hang out at the cs/engineering department?*
-      - *or just some cs/engineering students?*
-    - setup a mobile home
-
-** TODO todo
-- see TODOs, try using org-mode agenda, lol
-
-
 
 
 * TEMP reply to reddit (no internet)
