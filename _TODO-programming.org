@@ -18,11 +18,38 @@ set-up ai for emacs
     - see [programs-to-make#apps]
   -> quickly make simple 2d game ideas (in dragonruby)
 
-migrate from github (m$) to gitlab
-  - TODO: uh oh.. may have created two accounts..??
-    - try logging in via github.com..??
-    - try forgot password..?
+p/migrate from github (m$) to gitlab
   - see reasons in [version-control]
+  - uh oh.. may have created two accounts..??
+    - try logging in via github.com..?
+    - try forgot password..??
+  - p/import from github
+    - go through each one
+      - delete some
+        - NOTE: deleted 'important facebook feed', one of my first programming/digital ideas
+      - skim and delete some
+        - old game prototypes
+          - actually, can keep some of them, as the engines i chose are timeless..
+      - merge some
+      - star some
+        - may have to keep github for bookmarking repos..
+        - or can port ones with MIT license, adding it to an archive group
+  - gitlab has "groups", so i can neatly categorize it into my own idea(l)s(!!)
+    - rahil627?
+    - rathewolf
+      - mostly private
+      - my web-site (ssg'd via jekyll)
+      - my notes
+      - personal game projects
+    - willowolf
+      - public
+      - ideal directions:
+        - game anarchy
+          - game-archive? (or whatever i call this project..)
+          - open-source game sandboxes/frameworks
+        - nature's guardian's
+        - experimental games(?)
+        - etc.
 
 create a repo in home folder, ignoring everything except my emacs and focus configs
   - TEMPFIX: for the moment i just created a copy-configs script in /configs/copy-configs (symlink)
