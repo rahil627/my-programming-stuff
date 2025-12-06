@@ -8,16 +8,24 @@ a general catch-all file for TODOs related to programming..
 GOAL: for the most part, should just keep the TODOs in the file, where the thought came from, and search/grep (dir) them via emacs
   - TODO: i haven't even got to this..!!
 
+    
+also see [_TODO-programs-to-make]
 
-* list
+
+* main list
+
+org all app ideas (on me)
+
+org all game ideas (on me)
   
 set-up ai for emacs
   - (likely also in the emacs todo list..)
     - but IMPORTANT!
+  - try various llm`s
   -> quickly generate app ideas (in ruby)
     - see [programs-to-make#apps]
   -> quickly make simple 2d game ideas (in dragonruby)
-
+  
 p/migrate from github (m$) to gitlab
   - see reasons in [version-control]
   - uh oh.. may have created two accounts..??

@@ -1,27 +1,24 @@
 
 
-* TODO lists:
 see goals in [uni-job-search]
-
-
-** TODO job search
 - UPDATE: *FORGET about university jobs, switch to private jobs*
   - unis are too slow, too bureaucratic, too fake, like governments
   - *AIM FOR SUPPORT ENGINEER AT SMALL STARTUPS*
     -> then slowly learn and do everything as needed
   - and use whatever tech they use!
     - see [tools...]
-    - *web startups: ruby/rails, elixir/phoenix, js/react, js/node*
-    - *ai/ml startups: python*
-      - *MASTER THESE*
+    - web startups: ruby/rails, elixir/phoenix, js/react, js/node
+    - ai/ml startups: python
+    - orrrrrr, maybe not.. *just do some real systems programming via jai making games*
   -> *make a few friends here, and stick to them for work, create a team*
     - *FIND SAM!!*
       - *only he could mentor me through the mess of contemporary tech..*
 - *otta.com seems really good.. stick to that!*
   - can fallback to the other one..
 - try discord and twitch again (game social tools)
+  - discord is primarily js/node, i think.. though with a good amount of elixir for sure..
 
-** TODO resume
+* TODO resume
 - get another domain
   - update server addresses on github pages
 - update resume on jobs i applied to
@@ -32,7 +29,8 @@ see goals in [uni-job-search]
     - add videos
   - add a photo?
 
-* merged from elsewhere
+
+* TODO merged from elsewhere
 https://www.reddit.com/r/gamedev/comments/16u6kbn/would_you_ever_leave_the_gaming_industry_and_work/
 
 

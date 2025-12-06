@@ -27,11 +27,13 @@ shiiiit, i've got my work cut out for me..
   - *web and ai are boring are fuck.*
   - *STICK TO REALITY: COOKING FOOD, MAKING TEA, GARDENING, THAT'S LIFE!!*
 
+  
 * games
 
 i've def written this down in some notebook somewhere..
 
 the fighting games however should be in the fighting game project repo
+
 
 ** setup dev / engine / etc.
 
@@ -168,8 +170,8 @@ top-down / angled
 just open pull requests 'n start discussions/issues as needed
 
 ** game/media/io engines
-  - let others handle this..
-  - though, i can def help with documentation/tutorials/book, as dragonruby, heaps, and luxe all severely need it!!
+
+let others handle this.. though, i can def help with documentation/tutorials/book, as dragonruby, heaps, and luxe all severely need it!!
     
   t. luxe
      - TODO: though, maybe could try again without using the ECS/game editor.. love2d/dragonruby style!
@@ -201,9 +203,9 @@ these languages are so far developed, so complex, i don't think i could ever hel
   - textbringer
     - ruby!
     - create basic bindings (next/previous word)
-      - download wezterm, may just be a terminal problem..
+      - FAIL: download wezterm, may just be a terminal problem..
         - computer fail.
-          - TODO: alacritty? foot! lol
+          - TODO: alacritty? foot! lol, ghostty
     - make it generally more usable
   - emacs
     - port aurara
