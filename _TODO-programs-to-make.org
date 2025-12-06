@@ -19,6 +19,11 @@ shiiiit, i've got my work cut out for me..
   - without all teh crap, bare-bones, craigslist style
 
 *MAKE GAMES FUCK THE REST.*
+  - continue making small games with dragonruby (or haxe or jai)
+  - this would be the simplest thing to do to get back into programming, especially core systems programming
+    - making games with dragonruby would force to me make game systems and really architect games
+    - it would also force me to learn ruby inside out
+    - the main problem is that a bit of dragonruby is closed source, but it sounds like the portion most useful to game makers is public..
   - *web and ai are boring are fuck.*
   - *STICK TO REALITY: COOKING FOOD, MAKING TEA, GARDENING, THAT'S LIFE!!*
 
@@ -228,6 +233,13 @@ try imgui with ruby!
 NOTE: there's a TON of ideas here that i could easily generate using ai.. and most of them can be done via simple ruby web apps
   - this is great, broad, PRACTICE
 
+it's boring, but should be simple, and now with ai, really quick! plus it'll force me to learn how the web works, especially contemporary web
+
+web tool waterfall:
+(sinatra? ->) roda -> (rails? ->) phoenix
+  - NOTE: writing ruby in a functional style would make it easy to port to phoenix
+    
+  
 ** scraper apps
   - jobs
     - NOTE: currently for personal use only

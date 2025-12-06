@@ -42,21 +42,6 @@ see goals in [uni-job-search]
   - can fallback to the other one..
 - try discord and twitch again (game social tools)
 
-** TODO programming
-1. setup ai with emacs
-  - try gihub co-pilot trial?
-    - or just use a free one..
-    -> github co-pilot agent!! 5/2025
-2. continue making web apps with it
-   - make all the small ones
-     - sinatra? -> roda -> rails
-     - boring, but should be simple, and force me to learn how the web works, especially contemporary web
-2. continue making small games/prototypes with dragonruby (and/or haxe, jai)
-   - this would be the simplest thing to do to get back into programming, especially core systems programming
-     - making games with dragonruby would force to me make game systems and really architect games
-     - it would also force me to learn ruby inside out
-     - the main problem is that a bit of dragonruby is closed source, but it sounds like the portion most useful to game makers is public..
-
 ** TODO resume
 - get another domain
   - update server addresses on github pages
