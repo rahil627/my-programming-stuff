@@ -2,11 +2,17 @@
 this serves as a todo list during travel using/learning the ways of (doom) emacs
 
 
+0. CHECK BANK ACCOUNT FRAUD!!
+
+   
+0. change oil
+0. unemployment?
+0. ebt/etc.
 
 1. apply to a few jobs via otta.com
 2. head to SB
    - thursday, or whenever it warms up again
-   
+   - map out all tea 'n cafe shops on the way   
 
 TODO: main
   - a numbered todo list seems nice... priority is good. can only do so much at a time
