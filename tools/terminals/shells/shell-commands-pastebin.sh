@@ -65,6 +65,14 @@ lscpu
 # arch of binary
 file focus-linux
 
+# make a ssh key
+ssh-keygen -t ed25519 -C "your_email@example.com"
+# asks where to save (~/.ssh/id_ed25519)
+# asks to add a passphrase
+#  - can be blank
+cat ~/.ssh/id_ed25519.pub
+# then can add the public key to whatever program or web-site (a source forge)
+
 # end of most useful commands
 
 
