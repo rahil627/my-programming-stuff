@@ -2,6 +2,7 @@
 this serves as a todo list during travel using/learning the ways of (doom) emacs
 
 
+(* TODO ASAP)
 0. CHECK BANK ACCOUNT FRAUD!!
 
    
@@ -29,6 +30,38 @@ n. map out next hostel/place to stay
     - Charles Schwab
   - work
     - UCB
+
+* TODO: merge with above
+- change oil / maintenance
+- see doctor for left arm/shoulder-blade?
+- see doctor for left foot :/
+- change CA address back to 1520 harmon st..??
+  - TODO: ask sam for an address..
+- phone
+  - check status through website
+- passport
+  - renew it..?? shit..
+- wells fargo debit card
+- charles schwab
+  - password
+  - transfer money
+
+
+* TODO merged from elsewhere
+TODO: hmm, maybe need to merge to a single todo file.. lol..
+  - i like this though, looks great in org-mode..!
+
+** TODO move
+- *to santa barbara / coast*
+  - survive the winter
+    - do any job there!
+      - *able hang out at the cs/engineering department?*
+      - *or just some cs/engineering students?*
+    - setup a mobile home
+
+** TODO todo
+- see TODOs, try using org-mode agenda, lol
+
 
 
 

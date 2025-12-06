@@ -3,27 +3,6 @@
 * TODO lists:
 see goals in [uni-job-search]
 
-** TODO ASAP
-- change oil / maintenance
-- see doctor for left arm/shoulder-blade?
-- change CA address back to 1520 harmon st..??
-  - TODO: ask sam for an address..
-- phone
-  - check status through website
-- passport
-  - renew it..?? shit..
-- wells fargo debit card
-- charles schwab
-  - password
-  - transfer money
-
-** TODO move
-- *to santa barbara / coast*
-  - survive the winter
-    - do any job there!
-      - *able hang out at the cs/engineering department?*
-      - *or just some cs/engineering students?*
-    - setup a mobile home
 
 ** TODO job search
 - UPDATE: *FORGET about university jobs, switch to private jobs*
@@ -52,10 +31,6 @@ see goals in [uni-job-search]
   - rewrite the babycastles portion
     - add videos
   - add a photo?
-
-** TODO todo
-- see TODOs, try using org-mode agenda, lol
-
 
 * merged from elsewhere
 https://www.reddit.com/r/gamedev/comments/16u6kbn/would_you_ever_leave_the_gaming_industry_and_work/
